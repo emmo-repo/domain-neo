@@ -135,6 +135,14 @@
 # 
 # http://w3id.org/emmo-lite#Persistence
 # 
+# http://w3id.org/emmo-lite#PhysicalEntity
+# 
+# http://w3id.org/emmo-lite#PhysicalObject
+# 
+# http://w3id.org/emmo-lite#PhysicalParticle
+# 
+# http://w3id.org/emmo-lite#PhysicalPhenomenon
+# 
 # http://w3id.org/emmo-lite#Process
 # 
 # http://w3id.org/emmo-lite#Property
@@ -142,6 +150,8 @@
 # http://w3id.org/emmo-lite#Role
 # 
 # http://w3id.org/emmo-lite#Semiotic
+# 
+# http://w3id.org/emmo-lite#Sign
 # 
 # http://w3id.org/emmo-lite#StringData
 # 
@@ -210,17 +220,23 @@
   rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_ebc9e62c_5dc4_44db_9060_7923740bdf78> .
 
 :isBehaviourOf a owl:ObjectProperty;
-  rdfs:subPropertyOf :isTemporalPartOf .
+  rdfs:subPropertyOf :isTemporalPartOf;
+  rdfs:domain :Process;
+  rdfs:range :Object .
 
 :isCauseOf a owl:ObjectProperty;
   rdfs:subPropertyOf owl:topObjectProperty;
   rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_d67ee67e_4fac_4676_82c9_aec361dba698> .
 
 :isConstituentOf a owl:ObjectProperty;
-  rdfs:subPropertyOf :isSpatialPartOf .
+  rdfs:subPropertyOf :isSpatialPartOf;
+  rdfs:domain :Object;
+  rdfs:range :Object .
 
 :isConstitutiveProcessOf a owl:ObjectProperty;
-  rdfs:subPropertyOf :isSpatialPartOf .
+  rdfs:subPropertyOf :isSpatialPartOf;
+  rdfs:domain :Process;
+  rdfs:range :Object .
 
 :isInputOf a owl:ObjectProperty;
   rdfs:subPropertyOf :properOverlaps;
@@ -238,7 +254,9 @@
   rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_a8bd7094_6b40_47af_b1f4_a69d81a3afbd> .
 
 :isParticipantOf a owl:ObjectProperty;
-  rdfs:subPropertyOf :isSpatialPartOf .
+  rdfs:subPropertyOf :isSpatialPartOf;
+  rdfs:domain :Object;
+  rdfs:range :Process .
 
 :isPropertyOf a owl:ObjectProperty;
   rdfs:subPropertyOf :isSignOf;
@@ -253,7 +271,8 @@
   rdfs:subPropertyOf owl:topObjectProperty .
 
 :isSignOf a owl:ObjectProperty;
-  rdfs:subPropertyOf :isSemioticallyRelatedTo .
+  rdfs:subPropertyOf :isSemioticallyRelatedTo;
+  rdfs:domain :Sign .
 
 :isSpatialPartOf a owl:ObjectProperty;
   rdfs:subPropertyOf :isPartOf .
@@ -263,16 +282,24 @@
   rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_54d0d0f4_d9fa_4179_a9b5_4110c49dafff> .
 
 :isStageOf a owl:ObjectProperty;
-  rdfs:subPropertyOf :isTemporalPartOf .
+  rdfs:subPropertyOf :isTemporalPartOf;
+  rdfs:domain :Process;
+  rdfs:range :Process .
 
 :isStatusOf a owl:ObjectProperty;
-  rdfs:subPropertyOf :isTemporalPartOf .
+  rdfs:subPropertyOf :isTemporalPartOf;
+  rdfs:domain :Object;
+  rdfs:range :Process .
 
 :isSubObjectOf a owl:ObjectProperty;
-  rdfs:subPropertyOf :isTemporalPartOf .
+  rdfs:subPropertyOf :isTemporalPartOf;
+  rdfs:domain :Object;
+  rdfs:range :Object .
 
 :isSubProcessOf a owl:ObjectProperty;
-  rdfs:subPropertyOf :isSpatialPartOf .
+  rdfs:subPropertyOf :isSpatialPartOf;
+  rdfs:domain :Process;
+  rdfs:range :Process .
 
 :isTemporalPartOf a owl:ObjectProperty;
   rdfs:subPropertyOf :isPartOf .
@@ -308,8 +335,7 @@ _:genid1 a owl:Restriction;
   owl:onProperty :isConstituentOf .
 
 :Data a owl:Class;
-  rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_3e7add3d_e6ed_489a_a796_8e31fef9b490>;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Data"@en .
+  rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_3e7add3d_e6ed_489a_a796_8e31fef9b490> .
 
 :DateTimeData a owl:Class;
   rdfs:subClassOf :SymbolicData .
@@ -336,12 +362,27 @@ _:genid1 a owl:Restriction;
 :Persistence a owl:Class;
   rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_e04884d9_eda6_487e_93d5_7722d7eda96b> .
 
+:PhysicalEntity a owl:Class;
+  rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_c5ddfdba_c074_4aa4_ad6b_1ac4942d300d> .
+
+:PhysicalObject a owl:Class;
+  rdfs:subClassOf :PhysicalEntity;
+  rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_38b579de_4331_40e0_803d_09efa298e726> .
+
+:PhysicalParticle a owl:Class;
+  rdfs:subClassOf :PhysicalObject;
+  rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_a15cea10_9946_4d2b_95c5_cfc333fd2abb> .
+
+:PhysicalPhenomenon a owl:Class;
+  rdfs:subClassOf :PhysicalEntity;
+  rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_5cc4e111_3eb1_44a3_9369_5af3846cf605> .
+
 :Process a owl:Class;
   rdfs:subClassOf :Persistence;
   rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_43e9a05d_98af_41b4_92f6_00f79a09bfce> .
 
 :Property a owl:Class;
-  rdfs:subClassOf :Semiotic;
+  rdfs:subClassOf :Sign;
   rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_b7bcff25_ffc3_474e_9ab5_01b1664bd4ba> .
 
 :Role a owl:Class;
@@ -350,6 +391,9 @@ _:genid1 a owl:Restriction;
 
 :Semiotic a owl:Class;
   rdfs:isDefinedBy <https://w3id.org/emmo#EMMO_8bb6b688_812a_4cb9_b76c_d5a058928719> .
+
+:Sign a owl:Class;
+  rdfs:subClassOf :Semiotic .
 
 :StringData a owl:Class;
   rdfs:subClassOf :SymbolicData .

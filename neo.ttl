@@ -229,7 +229,12 @@ Note 3 to entry: The reactor protection system (RPS) imposes actions on several 
 
 ###  http://w3id.org/emmo/domain/neo#R70ALPF758Xyidhnwjti86x
 :R70ALPF758Xyidhnwjti86x rdf:type owl:Class ;
-                         rdfs:subClassOf :R7Z0T126p23eNAE1CkhAPXZ ;
+                         rdfs:subClassOf :R7Z0T126p23eNAE1CkhAPXZ ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty [ owl:inverseOf elite:isInputOf
+                                                          ] ;
+                                           owl:someValuesFrom :RDS0g8UekSMDWjEgBp6z2sP
+                                         ] ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FastInducedFission"@en .
 
 
@@ -263,7 +268,7 @@ pressure and two low pressure systems."""@en ;
                          rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/loss-of-coolant-accident-loca.html> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "LOCA"@en ,
                                                                         "LossOfReactorCoolingFunction"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "accident in which a breach in a reactor’s pressure boundary causes the coolant water to rush out of the reactor faster than makeup water can be added back in"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Accident in which a breach in a reactor’s pressure boundary causes the coolant water to rush out of the reactor faster than makeup water can be added back in"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfCoolantAccident"@en .
 
 
@@ -677,7 +682,12 @@ The secondary side water volume of the isolation condenser (both trains together
 
 ###  http://w3id.org/emmo/domain/neo#R81QzLfYKssKKQ25a1Ibyv7
 :R81QzLfYKssKKQ25a1Ibyv7 rdf:type owl:Class ;
-                         rdfs:subClassOf :R7Z0T126p23eNAE1CkhAPXZ ;
+                         rdfs:subClassOf :R7Z0T126p23eNAE1CkhAPXZ ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty [ owl:inverseOf elite:isInputOf
+                                                          ] ;
+                                           owl:someValuesFrom :R9s3bSmQntRAaUAzg5iKhyy
+                                         ] ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ThermalInducedFission"@en .
 
 
@@ -1207,6 +1217,11 @@ and Radiation Protection, 2018 Edition """ ;
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isSubProcessOf ;
                                            owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty [ owl:inverseOf elite:isOutputOf
+                                                          ] ;
+                                           owl:someValuesFrom :RDGsX7GTlCOL8Jlk3fXBK7U
                                          ] ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en:term:3.2.2> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """splitting of a nucleus into fission fragments, either spontaneously or as a result of the impact of a particle, usually with an associated release of energy
@@ -1231,13 +1246,6 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Barrier"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "One or several barrier elements that are designed to prevent unintended flow of formation fluid﻿."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPBarrier"@en .
-
-
-###  http://w3id.org/emmo/domain/neo#R9gsFfT5FLjX6PRmAqXPKfl
-:R9gsFfT5FLjX6PRmAqXPKfl rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ;
-                         rdfs:seeAlso "EMMO" ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Particle"@en .
 
 
 ###  http://w3id.org/emmo/domain/neo#R9j7jE0NWQS6xBqDD8iJRbf
@@ -1266,10 +1274,6 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
 :R9s3bSmQntRAaUAzg5iKhyy rdf:type owl:Class ;
                          rdfs:subClassOf elite:Role ,
                                          :RBfqFRty5Hp4V4caVtEvWdD ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:isInputOf ;
-                                           owl:someValuesFrom :R7tsY17A1s9DZ7gbZrjbVt6
-                                         ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isInputOf ;
                                            owl:someValuesFrom :R81QzLfYKssKKQ25a1Ibyv7
@@ -1394,6 +1398,11 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isAddedTo ;
                                            owl:someValuesFrom :R7ASmNcKrlRjzYHkUz3vfQT
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty [ owl:inverseOf elite:isSubProcessOf
+                                                          ] ;
+                                           owl:someValuesFrom :R7tsY17A1s9DZ7gbZrjbVt6
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The process for producing energy from nuclear sources, in a reactor core of a nuclear power plant."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoreEnergyProduction"@en .
@@ -1457,7 +1466,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  http://w3id.org/emmo/domain/neo#RBfqFRty5Hp4V4caVtEvWdD
 :RBfqFRty5Hp4V4caVtEvWdD rdf:type owl:Class ;
-                         rdfs:subClassOf :R9gsFfT5FLjX6PRmAqXPKfl ;
+                         rdfs:subClassOf elite:PhysicalParticle ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:39794:-16:ed-1:v1:en:term:3.52> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """subatomic particles used for neutron imaging (3.41) (NI) purposes by the neutron attenuation process in a similar fashion to X-rays (3.76)
 Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abundance that can be correlated with the post-mortem (3.57) interval, i.e. the time that has elapsed since a person has died."""@en ;
@@ -1956,15 +1965,10 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                          :R7qv2nUGxSNZRvXyF3CXPTr ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isOutputOf ;
-                                           owl:someValuesFrom :R7tsY17A1s9DZ7gbZrjbVt6
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:isOutputOf ;
                                            owl:someValuesFrom :R9ZCvqvWWCWSwBxX7K82iwL
                                          ] ;
                          rdfs:comment "Used in contexts where the radiation emitted by the radionuclide is the potential hazard."@en ;
-                         rdfs:isDefinedBy """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
-and Radiation Protection, 2018 Edition """@en ;
+                         rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition "@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A radionuclide produced by nuclear fission."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FissionProduct"@en .
 
@@ -2034,15 +2038,13 @@ Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                          rdfs:subClassOf elite:Role ,
                                          :RBfqFRty5Hp4V4caVtEvWdD ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:isInputOf ;
-                                           owl:someValuesFrom :R70ALPF758Xyidhnwjti86x
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isOutputOf ;
                                            owl:someValuesFrom :R9ZCvqvWWCWSwBxX7K82iwL
                                          ] ;
+                         :RR3uD2d7YfhHohfv2Nm6sX """Fast neutrons are considered as such in the context of a fission nuclear reactor, where the average neutron energy emerging from fission is about 2 MeV, before being slowed down by collisions. 
+While in some textbooks you can find a defnition of fast neutron as a neutron with E > 50 keV, there is not a clear definition of the range within which a neutron can be considered \"fast\"."""@en ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.5.1> ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "neutron with kinetic energy greater than its surroundings when released during fission"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "A neutron with kinetic energy greater than its surroundings when released during fission."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FastNeutron"@en .
 
 
@@ -2766,7 +2768,7 @@ operational states and, for some barriers, in accident conditions"""@en ;
                                           owl:onProperty elite:isStageOf ;
                                           owl:someValuesFrom :RCP7vIugzt8V7rXL11buOZH
                                         ] ;
-                        <http://www.w3.org/2004/02/skos/core#definition> "It is the lastevent, in temporary order, of the sequence of the events in a nuclear accident" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "It is the last event, in temporary order, of the sequence of the events in a nuclear accident"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearAccidentFinalEvent"@en .
 
 
