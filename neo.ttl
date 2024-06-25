@@ -4,12 +4,12 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix elite: <http://w3id.org/emmo-lite#> .
+@prefix elite: <http://w3id.org/emmo/emmo-lite#> .
 @base <http://w3id.org/emmo/domain/neo#> .
 
 <http://w3id.org/emmo/domain/neo/neo> rdf:type owl:Ontology ;
                                        owl:versionIRI <http://w3id.org/emmo/domain/neo/0.0.1/neo> ;
-                                       owl:imports <http://w3id.org/emmo-lite/0.0.1> ;
+                                       owl:imports <http://w3id.org/emmo/emmo-lite> ;
                                        <http://purl.org/dc/terms/contributor> "Anna Anchini"@en ,
                                                                               "Dario Rimondini"@it ,
                                                                               "Francesco Antonio Zaccarini"@it ,
