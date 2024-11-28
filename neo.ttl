@@ -1,15 +1,15 @@
-@prefix : <http://w3id.org/emmo/domain/neo#> .
+@prefix : <https://w3id.org/emmo/domain/neo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix elite: <http://w3id.org/emmo/emmo-lite#> .
-@base <http://w3id.org/emmo/domain/neo#> .
+@prefix elite: <https://w3id.org/emmo/emmo-lite#> .
+@base <https://w3id.org/emmo/domain/neo#> .
 
-<http://w3id.org/emmo/domain/neo/neo> rdf:type owl:Ontology ;
-                                       owl:versionIRI <http://w3id.org/emmo/domain/neo/0.0.1/neo> ;
-                                       owl:imports <http://w3id.org/emmo/emmo-lite> ;
+<https://w3id.org/emmo/domain/neo/neo> rdf:type owl:Ontology ;
+                                       owl:versionIRI <https://w3id.org/emmo/domain/neo/0.0.1/neo> ;
+                                       owl:imports <https://w3id.org/emmo/emmo-lite> ;
                                        <http://purl.org/dc/terms/contributor> "Anna Anchini"@en ,
                                                                               "Dario Rimondini"@it ,
                                                                               "Francesco Antonio Zaccarini"@it ,
@@ -52,21 +52,21 @@ The ontology is still in development phase and provides a partial cover of the n
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
-###  http://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV
+###  https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV
 :R8xx0dhbEh1tjGMDwNZfckV rdf:type owl:AnnotationProperty ;
                          :R8xx0dhbEh1tjGMDwNZfckV "A short explanation aimed to guide the reader towards the intended interpretation of the ontological concept."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "definition"@en ;
                          rdfs:subPropertyOf rdfs:comment .
 
 
-###  http://w3id.org/emmo/domain/neo#R9Q7fCgWnAkzqnVMtRJ4WDv
+###  https://w3id.org/emmo/domain/neo#R9Q7fCgWnAkzqnVMtRJ4WDv
 :R9Q7fCgWnAkzqnVMtRJ4WDv rdf:type owl:AnnotationProperty ;
                          :R8xx0dhbEh1tjGMDwNZfckV "A reference to real entities aimed to explain the intended interpretation for the ontological concept."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "example"@en ;
                          rdfs:subPropertyOf rdfs:comment .
 
 
-###  http://w3id.org/emmo/domain/neo#RR3uD2d7YfhHohfv2Nm6sX
+###  https://w3id.org/emmo/domain/neo#RR3uD2d7YfhHohfv2Nm6sX
 :RR3uD2d7YfhHohfv2Nm6sX rdf:type owl:AnnotationProperty ;
                         :R8xx0dhbEh1tjGMDwNZfckV "Additional text aimed to explain the conceptual choices of the authors."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "comment"@en ;
@@ -103,7 +103,7 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c
+###  https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c
 :RB4rNlczhggIx7lqdEK2d9c rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf elite:isConstituentOf ;
                          rdfs:comment "Defines the position of an object in a Nuclear Power Plant."@en ;
@@ -111,7 +111,7 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "isContainedBy"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBbSkE1mWA7Oq2RnEiKiOzM
+###  https://w3id.org/emmo/domain/neo#RBbSkE1mWA7Oq2RnEiKiOzM
 :RBbSkE1mWA7Oq2RnEiKiOzM rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
                          rdfs:domain :RDZtzLsQmngV2BtJvmS5pbg ;
@@ -123,7 +123,7 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  http://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
+###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
 :R0N27qMQzeRjM0vSOeAvUT rdf:type owl:Class ;
                         rdfs:subClassOf elite:Object ;
                         rdfs:comment "Nuclear power plant is a nuclear reactor or reactors together with all structures, systems and components necessary for safety and for the production of power, i.e. heat or electricity (ISO 12749-5:2018)."@en ;
@@ -134,7 +134,7 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPowerPlant"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R0ZnwwPdidaBfZOg6tgZJr
+###  https://w3id.org/emmo/domain/neo#R0ZnwwPdidaBfZOg6tgZJr
 :R0ZnwwPdidaBfZOg6tgZJr rdf:type owl:Class ;
                         rdfs:subClassOf :R8hTHDGsCdkEbILOuzUhlEr ;
                         rdfs:comment "On the IAEA report is called \"reactor building\""@en ;
@@ -144,7 +144,7 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ContainmentBuilding"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R1DAH32q3UDTp3GZGqe5Re
+###  https://w3id.org/emmo/domain/neo#R1DAH32q3UDTp3GZGqe5Re
 :R1DAH32q3UDTp3GZGqe5Re rdf:type owl:Class ;
                         rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                         rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Shutdown> ;
@@ -152,7 +152,7 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPShutdown"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R1bLylxOI5EPBIWCiqLVQv
+###  https://w3id.org/emmo/domain/neo#R1bLylxOI5EPBIWCiqLVQv
 :R1bLylxOI5EPBIWCiqLVQv rdf:type owl:Class ;
                         rdfs:subClassOf :R9p0u8Gh9Tup5P416Wl32S7 ,
                                         [ rdf:type owl:Restriction ;
@@ -169,7 +169,7 @@ further decays, the event is referred to as inelastic scattering."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearInelasticScattering"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R1pzLL39gf2pPU0vtkTmnm
+###  https://w3id.org/emmo/domain/neo#R1pzLL39gf2pPU0vtkTmnm
 :R1pzLL39gf2pPU0vtkTmnm rdf:type owl:Class ;
                         rdfs:subClassOf :RC9Vnqc96TS4VVdygnxu8UP ,
                                         [ rdf:type owl:Restriction ;
@@ -181,7 +181,7 @@ further decays, the event is referred to as inelastic scattering."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "AutomaticReactorDepressurization"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R2eIY10Bw0mNaYfKDcCmDd
+###  https://w3id.org/emmo/domain/neo#R2eIY10Bw0mNaYfKDcCmDd
 :R2eIY10Bw0mNaYfKDcCmDd rdf:type owl:Class ;
                         rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                         [ rdf:type owl:Restriction ;
@@ -196,7 +196,7 @@ further decays, the event is referred to as inelastic scattering."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "MakeUpWaterCondensateSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R2sZehPfJJ1VHSqzgnHkJX
+###  https://w3id.org/emmo/domain/neo#R2sZehPfJJ1VHSqzgnHkJX
 :R2sZehPfJJ1VHSqzgnHkJX rdf:type owl:Class ;
                         rdfs:subClassOf :R83A2MMCcbIwrdyWy2Q6clL ;
                         rdfs:comment """Se mettiamo un processo tipo separazione o scollegamento possiamo poi creare una relazione \"from\" turbine.
@@ -212,7 +212,7 @@ ISO 18246:2023(en), 3.4.12"""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ProtectiveSeparation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R6dO6yatvM1kcW0Iuf8Z0R
+###  https://w3id.org/emmo/domain/neo#R6dO6yatvM1kcW0Iuf8Z0R
 :R6dO6yatvM1kcW0Iuf8Z0R rdf:type owl:Class ;
                         rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ;
                         rdfs:isDefinedBy "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors" ;
@@ -227,7 +227,7 @@ Note 3 to entry: The reactor protection system (RPS) imposes actions on several 
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorProtectionSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R70ALPF758Xyidhnwjti86x
+###  https://w3id.org/emmo/domain/neo#R70ALPF758Xyidhnwjti86x
 :R70ALPF758Xyidhnwjti86x rdf:type owl:Class ;
                          rdfs:subClassOf :R7Z0T126p23eNAE1CkhAPXZ ,
                                          [ rdf:type owl:Restriction ;
@@ -238,7 +238,7 @@ Note 3 to entry: The reactor protection system (RPS) imposes actions on several 
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FastInducedFission"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R70ZOvZxdVYhbMrv2o1bK8I
+###  https://w3id.org/emmo/domain/neo#R70ZOvZxdVYhbMrv2o1bK8I
 :R70ZOvZxdVYhbMrv2o1bK8I rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
@@ -248,7 +248,7 @@ Note 3 to entry: The reactor protection system (RPS) imposes actions on several 
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCavity"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R71VApFUw4RxU2SFxCwNxMd
+###  https://w3id.org/emmo/domain/neo#R71VApFUw4RxU2SFxCwNxMd
 :R71VApFUw4RxU2SFxCwNxMd rdf:type owl:Class ;
                          rdfs:subClassOf :R9DvBOiqnlOM3kdfemfLOhd ,
                                          [ rdf:type owl:Restriction ;
@@ -262,7 +262,7 @@ pressure and two low pressure systems."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ECCSOperation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R75fZKWD5XTzNF0Lht4vvWr
+###  https://w3id.org/emmo/domain/neo#R75fZKWD5XTzNF0Lht4vvWr
 :R75fZKWD5XTzNF0Lht4vvWr rdf:type owl:Class ;
                          rdfs:subClassOf :RapiFOXlLXIKxdiWW4ljdc ;
                          rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/loss-of-coolant-accident-loca.html> ;
@@ -272,7 +272,7 @@ pressure and two low pressure systems."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfCoolantAccident"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R76QRzIQVjwDFrNAttIw9RF
+###  https://w3id.org/emmo/domain/neo#R76QRzIQVjwDFrNAttIw9RF
 :R76QRzIQVjwDFrNAttIw9RF rdf:type owl:Class ;
                          rdfs:subClassOf :R1DAH32q3UDTp3GZGqe5Re ,
                                          :R8MPIXNWSb8RCelrAeGNxMc ,
@@ -286,14 +286,14 @@ pressure and two low pressure systems."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyInjection"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R78r8gHpSEIS6CD3QqneUoR
+###  https://w3id.org/emmo/domain/neo#R78r8gHpSEIS6CD3QqneUoR
 :R78r8gHpSEIS6CD3QqneUoR rdf:type owl:Class ;
                          rdfs:subClassOf :RBtkzbuLn6g0vdtDU3mijH0 ;
                          rdfs:seeAlso "INTERNATIONAL ATOMIC ENERGY AGENCY, Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulateMultipleFaiulureEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R78xqY4QQFGfjRzx8MpzQWe
+###  https://w3id.org/emmo/domain/neo#R78xqY4QQFGfjRzx8MpzQWe
 :R78xqY4QQFGfjRzx8MpzQWe rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML0707/ML070710376.pdf> ;
@@ -305,7 +305,7 @@ all offsite power.""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "AnticipatedOperationalOccurrence"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R79WXwPF5ZWjRPArxbbVAgU
+###  https://w3id.org/emmo/domain/neo#R79WXwPF5ZWjRPArxbbVAgU
 :R79WXwPF5ZWjRPArxbbVAgU rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ;
                          rdfs:comment "controlled" ;
@@ -313,7 +313,7 @@ all offsite power.""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "IntentionalProcess"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7ASmNcKrlRjzYHkUz3vfQT
+###  https://w3id.org/emmo/domain/neo#R7ASmNcKrlRjzYHkUz3vfQT
 :R7ASmNcKrlRjzYHkUz3vfQT rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:13273:-1:ed-1:v1:en:term:3.4.8> ;
@@ -322,7 +322,7 @@ all offsite power.""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "EnergyEfficiencyServiceCompany"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7Jf7CRh5B3US0yNBl08EK7
+###  https://w3id.org/emmo/domain/neo#R7Jf7CRh5B3US0yNBl08EK7
 :R7Jf7CRh5B3US0yNBl08EK7 rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ,
                                          [ rdf:type owl:Restriction ;
@@ -337,7 +337,7 @@ all offsite power.""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MainControlRoom"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7KAfaev0soZNlAXHICHSJd
+###  https://w3id.org/emmo/domain/neo#R7KAfaev0soZNlAXHICHSJd
 :R7KAfaev0soZNlAXHICHSJd rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
@@ -353,7 +353,7 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ControlRodGroup"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7MjWOBoCnDd3BD1IBHjlRe
+###  https://w3id.org/emmo/domain/neo#R7MjWOBoCnDd3BD1IBHjlRe
 :R7MjWOBoCnDd3BD1IBHjlRe rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ,
                                          [ rdf:type owl:Restriction ;
@@ -367,7 +367,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "EmergencyManagementOrganization"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7NYEyrtAsNuF6n0QNOFmHm
+###  https://w3id.org/emmo/domain/neo#R7NYEyrtAsNuF6n0QNOFmHm
 :R7NYEyrtAsNuF6n0QNOFmHm rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:3977:-1:ed-1:v1:en:term:2.16> ;
@@ -375,7 +375,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Turbine"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7QpMP9Mf1mRrRVeMT7UcIX
+###  https://w3id.org/emmo/domain/neo#R7QpMP9Mf1mRrRVeMT7UcIX
 :R7QpMP9Mf1mRrRVeMT7UcIX rdf:type owl:Class ;
                          rdfs:subClassOf :R9PjB5mvpVfreaI0pbTQFj6 ,
                                          :RtX7ESf673Z9eYoseycPyl ,
@@ -396,7 +396,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPActivationProduct"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7Ss5qBF98KBgXN3rhg0rEl
+###  https://w3id.org/emmo/domain/neo#R7Ss5qBF98KBgXN3rhg0rEl
 :R7Ss5qBF98KBgXN3rhg0rEl rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ,
                                          [ rdf:type owl:Restriction ;
@@ -414,7 +414,7 @@ Note 1 to entry: This location can either be an atmospheric outlet or the connec
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetySystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7VGQozOvQbYzOvcFQCwv8P
+###  https://w3id.org/emmo/domain/neo#R7VGQozOvQbYzOvcFQCwv8P
 :R7VGQozOvQbYzOvcFQCwv8P rdf:type owl:Class ;
                          rdfs:subClassOf :RBp2yVTrXRyb55JnYdvAGux ,
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
@@ -428,7 +428,7 @@ The low pressure coolant injection mode of the residual heat removal system prov
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "LowPressureEmergencyCoreCoolingSystems"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7Z0T126p23eNAE1CkhAPXZ
+###  https://w3id.org/emmo/domain/neo#R7Z0T126p23eNAE1CkhAPXZ
 :R7Z0T126p23eNAE1CkhAPXZ rdf:type owl:Class ;
                          rdfs:subClassOf :R9ZCvqvWWCWSwBxX7K82iwL ,
                                          [ rdf:type owl:Restriction ;
@@ -441,7 +441,7 @@ Note 1 to entry: The absorption of the external colliding particle, usually a ne
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NeutronInducedFission"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7bsMx2CiGpSWjcw2VdBxqs
+###  https://w3id.org/emmo/domain/neo#R7bsMx2CiGpSWjcw2VdBxqs
 :R7bsMx2CiGpSWjcw2VdBxqs rdf:type owl:Class ;
                          rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ,
                                          :R7i2YiNCalwlsxcsL7AR3VF ,
@@ -456,7 +456,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MobileRadiationMonitor"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7e7zmzKt5Jl3O9HFQImLAV
+###  https://w3id.org/emmo/domain/neo#R7e7zmzKt5Jl3O9HFQImLAV
 :R7e7zmzKt5Jl3O9HFQImLAV rdf:type owl:Class ;
                          rdfs:subClassOf :RBnyfPxRohc9STM4mfSMMFq ;
                          rdfs:isDefinedBy """ISO 11999-1:2015(en) 
@@ -466,7 +466,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FullFaceMask"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7f91MxYlPSe16WDD1Wtw5E
+###  https://w3id.org/emmo/domain/neo#R7f91MxYlPSe16WDD1Wtw5E
 :R7f91MxYlPSe16WDD1Wtw5E rdf:type owl:Class ;
                          rdfs:subClassOf :R80RaxHVqr4QPiv8ASxXxi3 ;
                          rdfs:comment "automatic function which ensures that a protective measure (3.36) is initiated if the ability of the SRP/CS to perform a function is diminished, or if the process conditions are changed such that hazards are generated"@en ;
@@ -475,7 +475,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "AutomaticMonitoring"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7fkBdyMeKQvQzm3yRgM2iz
+###  https://w3id.org/emmo/domain/neo#R7fkBdyMeKQvQzm3yRgM2iz
 :R7fkBdyMeKQvQzm3yRgM2iz rdf:type owl:Class ;
                          rdfs:subClassOf :Rryk3Z5XNZ11ZiiLuT5M8Q ;
                          :R8xx0dhbEh1tjGMDwNZfckV "Plant procedures that direct operators' actions necessary to mitigate the consequences of transients and accidents that have caused plant parameters to exceed reactor protection system set points or engineered safety feature set points, or other established limits."@en ;
@@ -484,13 +484,13 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "EmergencyOperationProcedures"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7gZLWyPCimwGhHTueSRPhd
+###  https://w3id.org/emmo/domain/neo#R7gZLWyPCimwGhHTueSRPhd
 :R7gZLWyPCimwGhHTueSRPhd rdf:type owl:Class ;
                          rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorPreventiveSystems"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7hYLnBucjQ8XgAj5RsQvpF
+###  https://w3id.org/emmo/domain/neo#R7hYLnBucjQ8XgAj5RsQvpF
 :R7hYLnBucjQ8XgAj5RsQvpF rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ,
                                          [ rdf:type owl:Restriction ;
@@ -503,14 +503,14 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PowerSupplySystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7i2YiNCalwlsxcsL7AR3VF
+###  https://w3id.org/emmo/domain/neo#R7i2YiNCalwlsxcsL7AR3VF
 :R7i2YiNCalwlsxcsL7AR3VF rdf:type owl:Class ;
                          rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ;
                          rdfs:comment "This term refers all the devices used to measure parameters and properties  about system."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetySensors"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7lNdF3mOkJN1rq1wQCfwG3
+###  https://w3id.org/emmo/domain/neo#R7lNdF3mOkJN1rq1wQCfwG3
 :R7lNdF3mOkJN1rq1wQCfwG3 rdf:type owl:Class ;
                          rdfs:subClassOf :R7QpMP9Mf1mRrRVeMT7UcIX ,
                                          :RPURhpVoxOOYoC2J28Rgfd ,
@@ -523,7 +523,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearSpentFuel"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7oHlh8OgEkyG3XXGpiYlC5
+###  https://w3id.org/emmo/domain/neo#R7oHlh8OgEkyG3XXGpiYlC5
 :R7oHlh8OgEkyG3XXGpiYlC5 rdf:type owl:Class ;
                          rdfs:subClassOf :R7pKuzitkkIAgc5NxDlqfH4 ,
                                          :R7s6BZ18NYlgydAQozd7POd ,
@@ -541,7 +541,7 @@ perform its intended safety functions.""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ObjectFailure"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7pKuzitkkIAgc5NxDlqfH4
+###  https://w3id.org/emmo/domain/neo#R7pKuzitkkIAgc5NxDlqfH4
 :R7pKuzitkkIAgc5NxDlqfH4 rdf:type owl:Class ;
                          rdfs:subClassOf :RDP6jdP3MdBK59hhoDGY0Vw ;
                          :RR3uD2d7YfhHohfv2Nm6sX "qualcosa che conduce ad una deviazione, a prescidere da chi lo ha fatto e perchè" ;
@@ -551,7 +551,7 @@ perform its intended safety functions.""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "UnintendedEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7pvNIWMyFBzmeL9EcH58g8
+###  https://w3id.org/emmo/domain/neo#R7pvNIWMyFBzmeL9EcH58g8
 :R7pvNIWMyFBzmeL9EcH58g8 rdf:type owl:Class ;
                          rdfs:subClassOf :REnnyld9FmnAjLpeDyUsnv ;
                          rdfs:isDefinedBy "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors " ;
@@ -561,7 +561,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BoilingWaterReactor"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7qSTtjQZPRR80bVjivshI8
+###  https://w3id.org/emmo/domain/neo#R7qSTtjQZPRR80bVjivshI8
 :R7qSTtjQZPRR80bVjivshI8 rdf:type owl:Class ;
                          rdfs:subClassOf :R7gZLWyPCimwGhHTueSRPhd ,
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
@@ -575,7 +575,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorShieldCoolingSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7qv2nUGxSNZRvXyF3CXPTr
+###  https://w3id.org/emmo/domain/neo#R7qv2nUGxSNZRvXyF3CXPTr
 :R7qv2nUGxSNZRvXyF3CXPTr rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-2:ed-1:v1:en:term:3.1.21> ;
@@ -583,7 +583,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ChemicalElement"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7s6BZ18NYlgydAQozd7POd
+###  https://w3id.org/emmo/domain/neo#R7s6BZ18NYlgydAQozd7POd
 :R7s6BZ18NYlgydAQozd7POd rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ,
                                          [ rdf:type owl:Restriction ;
@@ -597,7 +597,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Damage"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7t1vs1VKDAzHkcQsFbt9JC
+###  https://w3id.org/emmo/domain/neo#R7t1vs1VKDAzHkcQsFbt9JC
 :R7t1vs1VKDAzHkcQsFbt9JC rdf:type owl:Class ;
                          rdfs:subClassOf :RC9Vnqc96TS4VVdygnxu8UP ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1125/ML11258A365.pdf> ;
@@ -607,7 +607,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "HPCIOperation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7tsY17A1s9DZ7gbZrjbVt6
+###  https://w3id.org/emmo/domain/neo#R7tsY17A1s9DZ7gbZrjbVt6
 :R7tsY17A1s9DZ7gbZrjbVt6 rdf:type owl:Class ;
                          rdfs:subClassOf elite:Whole ,
                                          :R9p0u8Gh9Tup5P416Wl32S7 ,
@@ -620,7 +620,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearChainReaction"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7twPwtQmmXFTKrDWM3POCD
+###  https://w3id.org/emmo/domain/neo#R7twPwtQmmXFTKrDWM3POCD
 :R7twPwtQmmXFTKrDWM3POCD rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ;
                          rdfs:comment """In the Unit 1 design, there were two separate and redundant isolation condenser loops.
@@ -633,7 +633,7 @@ The secondary side water volume of the isolation condenser (both trains together
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "IsolationCondenserSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7uMg3wtcrU3GAUhIRZUQ8m
+###  https://w3id.org/emmo/domain/neo#R7uMg3wtcrU3GAUhIRZUQ8m
 :R7uMg3wtcrU3GAUhIRZUQ8m rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          :Rw4mCgviqd6HTitZEzST6w ,
@@ -652,7 +652,7 @@ The secondary side water volume of the isolation condenser (both trains together
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "UltimateHeatSink"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7unkqShg3WHoE9WWDhuPJE
+###  https://w3id.org/emmo/domain/neo#R7unkqShg3WHoE9WWDhuPJE
 :R7unkqShg3WHoE9WWDhuPJE rdf:type owl:Class ;
                          rdfs:subClassOf :R8KlSYQnSKI6PoJZNIdhwNI ,
                                          [ rdf:type owl:Restriction ;
@@ -662,7 +662,7 @@ The secondary side water volume of the isolation condenser (both trains together
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BoratedWater"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R80L6MpJJVkL4hoNB7thCRV
+###  https://w3id.org/emmo/domain/neo#R80L6MpJJVkL4hoNB7thCRV
 :R80L6MpJJVkL4hoNB7thCRV rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                          rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/startup.html> ;
@@ -670,7 +670,7 @@ The secondary side water volume of the isolation condenser (both trains together
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPStartUpPhase"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R80RaxHVqr4QPiv8ASxXxi3
+###  https://w3id.org/emmo/domain/neo#R80RaxHVqr4QPiv8ASxXxi3
 :R80RaxHVqr4QPiv8ASxXxi3 rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:11072:ed-1:v1:en:term:2.6.5> ;
@@ -680,7 +680,7 @@ The secondary side water volume of the isolation condenser (both trains together
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Controlling"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R81QzLfYKssKKQ25a1Ibyv7
+###  https://w3id.org/emmo/domain/neo#R81QzLfYKssKKQ25a1Ibyv7
 :R81QzLfYKssKKQ25a1Ibyv7 rdf:type owl:Class ;
                          rdfs:subClassOf :R7Z0T126p23eNAE1CkhAPXZ ,
                                          [ rdf:type owl:Restriction ;
@@ -691,7 +691,7 @@ The secondary side water volume of the isolation condenser (both trains together
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ThermalInducedFission"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R83A2MMCcbIwrdyWy2Q6clL
+###  https://w3id.org/emmo/domain/neo#R83A2MMCcbIwrdyWy2Q6clL
 :R83A2MMCcbIwrdyWy2Q6clL rdf:type owl:Class ;
                          rdfs:subClassOf :RtdecAtZ9C9xUJNtjefY4D ;
                          rdfs:comment "No off-site radiological impact or only minor radiological impact"@en ,
@@ -707,7 +707,7 @@ important feature at this level."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPProtection"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R84TLuFmfSZMhgSh0uL0LXk
+###  https://w3id.org/emmo/domain/neo#R84TLuFmfSZMhgSh0uL0LXk
 :R84TLuFmfSZMhgSh0uL0LXk rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                          rdfs:isDefinedBy """ISO 44001:2017(en)
@@ -716,7 +716,7 @@ Collaborative business relationship management systems — Requirements and fram
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Measurement"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R85FFwLPHIursWfa6K6sKK9
+###  https://w3id.org/emmo/domain/neo#R85FFwLPHIursWfa6K6sKK9
 :R85FFwLPHIursWfa6K6sKK9 rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
@@ -729,7 +729,7 @@ Collaborative business relationship management systems — Requirements and fram
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PrimaryContainmentVessel"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R86VrLeGdKN00eQd0A9HjPc
+###  https://w3id.org/emmo/domain/neo#R86VrLeGdKN00eQd0A9HjPc
 :R86VrLeGdKN00eQd0A9HjPc rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
@@ -744,7 +744,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "IsolationCondenserTank"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R89Yy2V18LstH4xGXyNb9XN
+###  https://w3id.org/emmo/domain/neo#R89Yy2V18LstH4xGXyNb9XN
 :R89Yy2V18LstH4xGXyNb9XN rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ,
                                          [ rdf:type owl:Restriction ;
@@ -754,7 +754,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "TurbineBuildingContents"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8CzBJHXymJx05c6sDhbspt
+###  https://w3id.org/emmo/domain/neo#R8CzBJHXymJx05c6sDhbspt
 :R8CzBJHXymJx05c6sDhbspt rdf:type owl:Class ;
                          rdfs:subClassOf :R8hTHDGsCdkEbILOuzUhlEr ;
                          rdfs:comment <https://en.wikipedia.org/wiki/Turbine_hall> ;
@@ -764,7 +764,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "TurbineBuilding"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8FmlobZiHsCZi4CHKxgtMg
+###  https://w3id.org/emmo/domain/neo#R8FmlobZiHsCZi4CHKxgtMg
 :R8FmlobZiHsCZi4CHKxgtMg rdf:type owl:Class ;
                          rdfs:subClassOf :R83A2MMCcbIwrdyWy2Q6clL ,
                                          [ rdf:type owl:Restriction ;
@@ -781,13 +781,13 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PrimaryContainmentVentilation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8HV58d46m6thaiYmxePBRu
+###  https://w3id.org/emmo/domain/neo#R8HV58d46m6thaiYmxePBRu
 :R8HV58d46m6thaiYmxePBRu rdf:type owl:Class ;
                          rdfs:subClassOf :R8KlSYQnSKI6PoJZNIdhwNI ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SeaWater"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8Jjvo3bjpE389mPpX0uOxQ
+###  https://w3id.org/emmo/domain/neo#R8Jjvo3bjpE389mPpX0uOxQ
 :R8Jjvo3bjpE389mPpX0uOxQ rdf:type owl:Class ;
                          rdfs:subClassOf :RC9Vnqc96TS4VVdygnxu8UP ;
                          rdfs:isDefinedBy <https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf> ;
@@ -795,7 +795,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Remediation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8KlSYQnSKI6PoJZNIdhwNI
+###  https://w3id.org/emmo/domain/neo#R8KlSYQnSKI6PoJZNIdhwNI
 :R8KlSYQnSKI6PoJZNIdhwNI rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40> ;
@@ -803,7 +803,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Water﻿"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8MGsTLlqoWXKEU5FfQd71X
+###  https://w3id.org/emmo/domain/neo#R8MGsTLlqoWXKEU5FfQd71X
 :R8MGsTLlqoWXKEU5FfQd71X rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
@@ -817,7 +817,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RecirculationPumps"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8MPIXNWSb8RCelrAeGNxMc
+###  https://w3id.org/emmo/domain/neo#R8MPIXNWSb8RCelrAeGNxMc
 :R8MPIXNWSb8RCelrAeGNxMc rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                          rdfs:isDefinedBy <https://dictionary.cambridge.org/it/dizionario/inglese/injection> ;
@@ -826,7 +826,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MaterialInjection"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8O2O7mng5QSpkSaLJGAPbi
+###  https://w3id.org/emmo/domain/neo#R8O2O7mng5QSpkSaLJGAPbi
 :R8O2O7mng5QSpkSaLJGAPbi rdf:type owl:Class ;
                          rdfs:subClassOf :R80RaxHVqr4QPiv8ASxXxi3 ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:1213:-1:ed-3:v1:en:term:11.1.7> ;
@@ -836,7 +836,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RemoteControlling"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8PAMnGRP5NOBTguHsOmRSl
+###  https://w3id.org/emmo/domain/neo#R8PAMnGRP5NOBTguHsOmRSl
 :R8PAMnGRP5NOBTguHsOmRSl rdf:type owl:Class ;
                          rdfs:subClassOf :RtdecAtZ9C9xUJNtjefY4D ,
                                          [ rdf:type owl:Restriction ;
@@ -853,7 +853,7 @@ be considered. The possible need to support mobile means might also be considere
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SevereAccidentManagement"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8RC4XINR1dcZ29MVHcvtI2
+###  https://w3id.org/emmo/domain/neo#R8RC4XINR1dcZ29MVHcvtI2
 :R8RC4XINR1dcZ29MVHcvtI2 rdf:type owl:Class ;
                          rdfs:subClassOf :R89Yy2V18LstH4xGXyNb9XN ,
                                          [ rdf:type owl:Restriction ;
@@ -864,7 +864,7 @@ be considered. The possible need to support mobile means might also be considere
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "CirculatingWaterPump"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8SUtkHvWQxLIC7oGi7FZGx
+###  https://w3id.org/emmo/domain/neo#R8SUtkHvWQxLIC7oGi7FZGx
 :R8SUtkHvWQxLIC7oGi7FZGx rdf:type owl:Class ;
                          rdfs:subClassOf :R6dO6yatvM1kcW0Iuf8Z0R ,
                                          :R7NYEyrtAsNuF6n0QNOFmHm ,
@@ -879,7 +879,7 @@ be considered. The possible need to support mobile means might also be considere
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICTurbine"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8XKJXm7vS0D4Y1OEvOkXde
+###  https://w3id.org/emmo/domain/neo#R8XKJXm7vS0D4Y1OEvOkXde
 :R8XKJXm7vS0D4Y1OEvOkXde rdf:type owl:Class ;
                          rdfs:subClassOf :RCP7vIugzt8V7rXL11buOZH ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.1> ;
@@ -888,7 +888,7 @@ be considered. The possible need to support mobile means might also be considere
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DesignBasisAccident"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8bUZpp1yY81qmfgGNH0TyF
+###  https://w3id.org/emmo/domain/neo#R8bUZpp1yY81qmfgGNH0TyF
 :R8bUZpp1yY81qmfgGNH0TyF rdf:type owl:Class ;
                          rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ,
                                          [ rdf:type owl:Restriction ;
@@ -898,7 +898,7 @@ be considered. The possible need to support mobile means might also be considere
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Closing"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8baDZRwKkBRaeQKFoM4Z4N
+###  https://w3id.org/emmo/domain/neo#R8baDZRwKkBRaeQKFoM4Z4N
 :R8baDZRwKkBRaeQKFoM4Z4N rdf:type owl:Class ;
                          rdfs:subClassOf :R8lgbjRv5CeOJ43GygJ143n ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:37100:ed-1:v1:en:term:3.1.14> ;
@@ -906,7 +906,7 @@ be considered. The possible need to support mobile means might also be considere
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NaturalDisaster"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8hTHDGsCdkEbILOuzUhlEr
+###  https://w3id.org/emmo/domain/neo#R8hTHDGsCdkEbILOuzUhlEr
 :R8hTHDGsCdkEbILOuzUhlEr rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ,
                                          [ rdf:type owl:Restriction ;
@@ -919,7 +919,7 @@ be considered. The possible need to support mobile means might also be considere
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPowerPlantBuilding"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8lgbjRv5CeOJ43GygJ143n
+###  https://w3id.org/emmo/domain/neo#R8lgbjRv5CeOJ43GygJ143n
 :R8lgbjRv5CeOJ43GygJ143n rdf:type owl:Class ;
                          rdfs:subClassOf :RDP6jdP3MdBK59hhoDGY0Vw ;
                          rdfs:comment "It is not controlled and created by natural phenomena" ;
@@ -928,7 +928,7 @@ be considered. The possible need to support mobile means might also be considere
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NaturalEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8nenqdCSaU473TbSbvjjvz
+###  https://w3id.org/emmo/domain/neo#R8nenqdCSaU473TbSbvjjvz
 :R8nenqdCSaU473TbSbvjjvz rdf:type owl:Class ;
                          rdfs:subClassOf :R9p0u8Gh9Tup5P416Wl32S7 ,
                                          [ rdf:type owl:Restriction ;
@@ -943,7 +943,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearElasticScattering"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8qKVAw3v5SZK2O6Y8cyDEr
+###  https://w3id.org/emmo/domain/neo#R8qKVAw3v5SZK2O6Y8cyDEr
 :R8qKVAw3v5SZK2O6Y8cyDEr rdf:type owl:Class ;
                          rdfs:subClassOf :R7QpMP9Mf1mRrRVeMT7UcIX ;
                          rdfs:isDefinedBy "https://aris.iaea.org/sites/Glossary.html Glossary of Terms in ARIS Reports"@en ;
@@ -952,7 +952,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorNuclearModerator"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8rcf1IQoRtZq8YkEpiByPn
+###  https://w3id.org/emmo/domain/neo#R8rcf1IQoRtZq8YkEpiByPn
 :R8rcf1IQoRtZq8YkEpiByPn rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ,
                                          [ rdf:type owl:Restriction ;
@@ -964,7 +964,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Regulation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8sjiaUqifg1oq1iJBb45A6
+###  https://w3id.org/emmo/domain/neo#R8sjiaUqifg1oq1iJBb45A6
 :R8sjiaUqifg1oq1iJBb45A6 rdf:type owl:Class ;
                          rdfs:subClassOf :R9TI5UbsBXnAYSIi17pJARr ,
                                          [ rdf:type owl:Restriction ;
@@ -979,7 +979,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearAccidentInitialEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8uIjbM4VtJ8beM5k0lze7B
+###  https://w3id.org/emmo/domain/neo#R8uIjbM4VtJ8beM5k0lze7B
 :R8uIjbM4VtJ8beM5k0lze7B rdf:type owl:Class ;
                          rdfs:subClassOf :R7oHlh8OgEkyG3XXGpiYlC5 ,
                                          :RRxSYO9r2FD1rHmRPugfob ;
@@ -991,7 +991,7 @@ system to perform its intended function."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "CommonModeFailureEvents"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8yJFxRXki6jB3lgKxV6thW
+###  https://w3id.org/emmo/domain/neo#R8yJFxRXki6jB3lgKxV6thW
 :R8yJFxRXki6jB3lgKxV6thW rdf:type owl:Class ;
                          rdfs:subClassOf :R84TLuFmfSZMhgSh0uL0LXk ,
                                          :RBv35jM3VSFKKxtWNVyDILw ;
@@ -1001,7 +1001,7 @@ system to perform its intended function."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ContaminationMeasurement"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8ym94st1azekRHdt3ayDq5
+###  https://w3id.org/emmo/domain/neo#R8ym94st1azekRHdt3ayDq5
 :R8ym94st1azekRHdt3ayDq5 rdf:type owl:Class ;
                          rdfs:subClassOf :R7pKuzitkkIAgc5NxDlqfH4 ,
                                          [ rdf:type owl:Restriction ;
@@ -1026,7 +1026,7 @@ Nuclear energy — Vocabulary — Part 1: General terminology""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RadiologicalContamination"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8zYURIM0mP33CaMTE6iACV
+###  https://w3id.org/emmo/domain/neo#R8zYURIM0mP33CaMTE6iACV
 :R8zYURIM0mP33CaMTE6iACV rdf:type owl:Class ;
                          rdfs:subClassOf :R7hYLnBucjQ8XgAj5RsQvpF ,
                                          [ rdf:type owl:Restriction ;
@@ -1038,7 +1038,7 @@ Nuclear energy — Vocabulary — Part 1: General terminology""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "StorageBattery"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R91s5ihcKvYBOzeCaNlNVVK
+###  https://w3id.org/emmo/domain/neo#R91s5ihcKvYBOzeCaNlNVVK
 :R91s5ihcKvYBOzeCaNlNVVK rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-227:ed-2:v1:en:term:3.3.27> ;
@@ -1046,7 +1046,7 @@ Nuclear energy — Vocabulary — Part 1: General terminology""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Material"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R94o7o1nZqxzHLLqTyhHY08
+###  https://w3id.org/emmo/domain/neo#R94o7o1nZqxzHLLqTyhHY08
 :R94o7o1nZqxzHLLqTyhHY08 rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                          rdfs:comment "any periodic or unplanned support and verification operations designed to keep premises and equipment in proper working condition" ;
@@ -1055,7 +1055,7 @@ Nuclear energy — Vocabulary — Part 1: General terminology""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReactorMaintanance"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R95M6reIX3ya776PtOPLGmY
+###  https://w3id.org/emmo/domain/neo#R95M6reIX3ya776PtOPLGmY
 :R95M6reIX3ya776PtOPLGmY rdf:type owl:Class ;
                          rdfs:subClassOf :RCP7vIugzt8V7rXL11buOZH ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.2> ;
@@ -1064,7 +1064,7 @@ Nuclear energy — Vocabulary — Part 1: General terminology""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BeyondDesignBasisAccident"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R98XsS8Lh28DOd8LW80vc2w
+###  https://w3id.org/emmo/domain/neo#R98XsS8Lh28DOd8LW80vc2w
 :R98XsS8Lh28DOd8LW80vc2w rdf:type owl:Class ;
                          rdfs:subClassOf elite:Whole ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML0707/ML070710376.pdf> ;
@@ -1076,7 +1076,7 @@ all offsite power."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPlantAOO"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R99rf4ECHdvdIhjRSeggwHm
+###  https://w3id.org/emmo/domain/neo#R99rf4ECHdvdIhjRSeggwHm
 :R99rf4ECHdvdIhjRSeggwHm rdf:type owl:Class ;
                          rdfs:subClassOf :RLEjSGGgoWOVMGjQsskCsb ,
                                          [ rdf:type owl:Restriction ;
@@ -1086,7 +1086,7 @@ all offsite power."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPOperatorError"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9BGIwbHOtd3ACG5ZuCdHJP
+###  https://w3id.org/emmo/domain/neo#R9BGIwbHOtd3ACG5ZuCdHJP
 :R9BGIwbHOtd3ACG5ZuCdHJP rdf:type owl:Class ;
                          rdfs:subClassOf :R7qv2nUGxSNZRvXyF3CXPTr ,
                                          [ rdf:type owl:Restriction ;
@@ -1104,7 +1104,7 @@ and Radiation Protection, 2018 Edition """ ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Radionuclide"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9DvBOiqnlOM3kdfemfLOhd
+###  https://w3id.org/emmo/domain/neo#R9DvBOiqnlOM3kdfemfLOhd
 :R9DvBOiqnlOM3kdfemfLOhd rdf:type owl:Class ;
                          rdfs:subClassOf :R8PAMnGRP5NOBTguHsOmRSl ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20> ;
@@ -1112,7 +1112,7 @@ and Radiation Protection, 2018 Edition """ ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitigation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9Hn7TrsF0nNCCTri5RWDXP
+###  https://w3id.org/emmo/domain/neo#R9Hn7TrsF0nNCCTri5RWDXP
 :R9Hn7TrsF0nNCCTri5RWDXP rdf:type owl:Class ;
                          rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ;
                          rdfs:isDefinedBy """ISO 14313:2007(en)
@@ -1121,7 +1121,7 @@ Petroleum and natural gas industries — Pipeline transportation systems — Pip
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Open"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9Iwkpvro1luxgrYOcKzuPX
+###  https://w3id.org/emmo/domain/neo#R9Iwkpvro1luxgrYOcKzuPX
 :R9Iwkpvro1luxgrYOcKzuPX rdf:type owl:Class ;
                          rdfs:subClassOf :Rw4mCgviqd6HTitZEzST6w ;
                          rdfs:comment <https://www.nra.go.jp/data/000292313.pdf> ,
@@ -1135,7 +1135,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ContainmentAtmosphericMonitoringSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9LQGc8WSd4vzQtq1aNhNEq
+###  https://w3id.org/emmo/domain/neo#R9LQGc8WSd4vzQtq1aNhNEq
 :R9LQGc8WSd4vzQtq1aNhNEq rdf:type owl:Class ;
                          rdfs:subClassOf :R7oHlh8OgEkyG3XXGpiYlC5 ;
                          rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
@@ -1143,7 +1143,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "StructureFailure"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9MK7U9YLf7RtEpfQTDDr1q
+###  https://w3id.org/emmo/domain/neo#R9MK7U9YLf7RtEpfQTDDr1q
 :R9MK7U9YLf7RtEpfQTDDr1q rdf:type owl:Class ;
                          rdfs:subClassOf :R6dO6yatvM1kcW0Iuf8Z0R ,
                                          :RBsAUchYFBwAtcVUeFr8EFq ,
@@ -1166,7 +1166,7 @@ The MSIVs are engineered safety features designed to limit the consequences of a
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MainSteamIsolationValve"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9OmYzkYNkqi6kwcE7kNZkF
+###  https://w3id.org/emmo/domain/neo#R9OmYzkYNkqi6kwcE7kNZkF
 :R9OmYzkYNkqi6kwcE7kNZkF rdf:type owl:Class ;
                          rdfs:subClassOf :R7oHlh8OgEkyG3XXGpiYlC5 ,
                                          :RRxSYO9r2FD1rHmRPugfob ;
@@ -1176,7 +1176,7 @@ perform its intended safety functions."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SingleFailureEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9PjB5mvpVfreaI0pbTQFj6
+###  https://w3id.org/emmo/domain/neo#R9PjB5mvpVfreaI0pbTQFj6
 :R9PjB5mvpVfreaI0pbTQFj6 rdf:type owl:Class ;
                          rdfs:subClassOf :R91s5ihcKvYBOzeCaNlNVVK ;
                          rdfs:comment "Material designated in national law or by a regulatory body as being  subject to regulatory control because of its radioactivity."@en ,
@@ -1195,13 +1195,13 @@ and Radiation Protection, 2018 Edition """ ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RadioactiveMaterials"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9Q7QurACY7OmMRPPPbDU7J
+###  https://w3id.org/emmo/domain/neo#R9Q7QurACY7OmMRPPPbDU7J
 :R9Q7QurACY7OmMRPPPbDU7J rdf:type owl:Class ;
                          rdfs:subClassOf :RC5Uc3vBrAsYC8gCNkTsLH ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ContinuosInjection"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9TI5UbsBXnAYSIi17pJARr
+###  https://w3id.org/emmo/domain/neo#R9TI5UbsBXnAYSIi17pJARr
 :R9TI5UbsBXnAYSIi17pJARr rdf:type owl:Class ;
                          rdfs:subClassOf elite:Role ;
                          rdfs:seeAlso <http://www-ns.iaea.org/downloads/ni/training/specific_expert_knowledge/psa-level1/III1_1_A%20%20Initiating%20Event%20Analysis.pdf> ;
@@ -1210,7 +1210,7 @@ and Radiation Protection, 2018 Edition """ ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "HazardousNuclearEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9ZCvqvWWCWSwBxX7K82iwL
+###  https://w3id.org/emmo/domain/neo#R9ZCvqvWWCWSwBxX7K82iwL
 :R9ZCvqvWWCWSwBxX7K82iwL rdf:type owl:Class ;
                          rdfs:subClassOf elite:Role ,
                                          :R9p0u8Gh9Tup5P416Wl32S7 ,
@@ -1230,7 +1230,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearFission"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9aF6fIPWPEzkHdmnDKNorP
+###  https://w3id.org/emmo/domain/neo#R9aF6fIPWPEzkHdmnDKNorP
 :R9aF6fIPWPEzkHdmnDKNorP rdf:type owl:Class ;
                          rdfs:subClassOf :R83A2MMCcbIwrdyWy2Q6clL ;
                          rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/scram.html> ;
@@ -1239,7 +1239,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SCRAM"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9fLBLIc534UvSEEJ2pDkuM
+###  https://w3id.org/emmo/domain/neo#R9fLBLIc534UvSEEJ2pDkuM
 :R9fLBLIc534UvSEEJ2pDkuM rdf:type owl:Class ;
                          rdfs:subClassOf :R7gZLWyPCimwGhHTueSRPhd ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:13628:-7:ed-1:v1:en:term:3.1.7> ;
@@ -1248,7 +1248,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPBarrier"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9j7jE0NWQS6xBqDD8iJRbf
+###  https://w3id.org/emmo/domain/neo#R9j7jE0NWQS6xBqDD8iJRbf
 :R9j7jE0NWQS6xBqDD8iJRbf rdf:type owl:Class ;
                          rdfs:subClassOf :R6dO6yatvM1kcW0Iuf8Z0R ,
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
@@ -1262,7 +1262,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoreIsolationCoolingSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9p0u8Gh9Tup5P416Wl32S7
+###  https://w3id.org/emmo/domain/neo#R9p0u8Gh9Tup5P416Wl32S7
 :R9p0u8Gh9Tup5P416Wl32S7 rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ;
                          rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Nuclear_reaction> ;
@@ -1270,7 +1270,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReaction"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9s3bSmQntRAaUAzg5iKhyy
+###  https://w3id.org/emmo/domain/neo#R9s3bSmQntRAaUAzg5iKhyy
 :R9s3bSmQntRAaUAzg5iKhyy rdf:type owl:Class ;
                          rdfs:subClassOf elite:Role ,
                                          :RBfqFRty5Hp4V4caVtEvWdD ,
@@ -1287,7 +1287,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ThermalNeutron"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9zZ4RQWyUSCDicHqv3X2B8
+###  https://w3id.org/emmo/domain/neo#R9zZ4RQWyUSCDicHqv3X2B8
 :R9zZ4RQWyUSCDicHqv3X2B8 rdf:type owl:Class ;
                          rdfs:subClassOf :R89Yy2V18LstH4xGXyNb9XN ,
                                          [ rdf:type owl:Restriction ;
@@ -1300,7 +1300,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SteamCondenser"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RB5vIXZFuMYcHWSzNAPjPtF
+###  https://w3id.org/emmo/domain/neo#RB5vIXZFuMYcHWSzNAPjPtF
 :RB5vIXZFuMYcHWSzNAPjPtF rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                          rdfs:comment """Residual heat transfer systems include systems designed to transfer heat from the residual heat removal systems to the ultimate heat sink.
@@ -1308,7 +1308,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RHROperation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RB8FKmPNbcy1ViUT2RE8alB
+###  https://w3id.org/emmo/domain/neo#RB8FKmPNbcy1ViUT2RE8alB
 :RB8FKmPNbcy1ViUT2RE8alB rdf:type owl:Class ;
                          rdfs:subClassOf :R89Yy2V18LstH4xGXyNb9XN ,
                                          :RBsAUchYFBwAtcVUeFr8EFq ,
@@ -1322,7 +1322,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BypassValve"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RB8nGLKVMobwZ43LOnPJsjS
+###  https://w3id.org/emmo/domain/neo#RB8nGLKVMobwZ43LOnPJsjS
 :RB8nGLKVMobwZ43LOnPJsjS rdf:type owl:Class ;
                          rdfs:subClassOf :RBUlm53v3Y42xdxWXvJZvzy ,
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
@@ -1338,7 +1338,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "StandbyLiquidControlSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBA8h87iH1lIFBwAyDriYiS
+###  https://w3id.org/emmo/domain/neo#RBA8h87iH1lIFBwAyDriYiS
 :RBA8h87iH1lIFBwAyDriYiS rdf:type owl:Class ;
                          rdfs:subClassOf :R84TLuFmfSZMhgSh0uL0LXk ;
                          rdfs:isDefinedBy <https://www.chemeurope.com/en/encyclopedia/Neutron_detection.html> ;
@@ -1346,7 +1346,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NeutronDetection"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBBzyqSEv3bIRXZvqAVCF4x
+###  https://w3id.org/emmo/domain/neo#RBBzyqSEv3bIRXZvqAVCF4x
 :RBBzyqSEv3bIRXZvqAVCF4x rdf:type owl:Class ;
                          rdfs:subClassOf :RLEjSGGgoWOVMGjQsskCsb ;
                          rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Power_outage> ;
@@ -1354,7 +1354,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPPowerLoss"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBHWfELWZVXyLNJa8MflI25
+###  https://w3id.org/emmo/domain/neo#RBHWfELWZVXyLNJa8MflI25
 :RBHWfELWZVXyLNJa8MflI25 rdf:type owl:Class ;
                          rdfs:subClassOf :RBp2yVTrXRyb55JnYdvAGux ,
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
@@ -1370,7 +1370,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "HighPressureCoolantInjectionSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBJevCDiVa5kURep7JQX4ti
+###  https://w3id.org/emmo/domain/neo#RBJevCDiVa5kURep7JQX4ti
 :RBJevCDiVa5kURep7JQX4ti rdf:type owl:Class ;
                          rdfs:subClassOf :R9p0u8Gh9Tup5P416Wl32S7 ;
                          rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/activation.html> ;
@@ -1378,7 +1378,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearActivation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBPz6UINahiYOAyy7SWLOIs
+###  https://w3id.org/emmo/domain/neo#RBPz6UINahiYOAyy7SWLOIs
 :RBPz6UINahiYOAyy7SWLOIs rdf:type owl:Class ;
                          rdfs:subClassOf :R6dO6yatvM1kcW0Iuf8Z0R ,
                                          [ rdf:type owl:Restriction ;
@@ -1392,7 +1392,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BackupPowerSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBU28e2pgiTqsaTCPWnAJ6y
+###  https://w3id.org/emmo/domain/neo#RBU28e2pgiTqsaTCPWnAJ6y
 :RBU28e2pgiTqsaTCPWnAJ6y rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ,
                                          [ rdf:type owl:Restriction ;
@@ -1408,14 +1408,14 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoreEnergyProduction"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBUlm53v3Y42xdxWXvJZvzy
+###  https://w3id.org/emmo/domain/neo#RBUlm53v3Y42xdxWXvJZvzy
 :RBUlm53v3Y42xdxWXvJZvzy rdf:type owl:Class ;
                          rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ,
                                          :RBzruvoEUI9hIHVtX34kGJu ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyInjectionSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBW32C4x3sn1YahVG7uYVun
+###  https://w3id.org/emmo/domain/neo#RBW32C4x3sn1YahVG7uYVun
 :RBW32C4x3sn1YahVG7uYVun rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ,
                                          [ rdf:type owl:Restriction ;
@@ -1427,7 +1427,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReactor"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBXC5sM9ZUESVnrsgaqxqxy
+###  https://w3id.org/emmo/domain/neo#RBXC5sM9ZUESVnrsgaqxqxy
 :RBXC5sM9ZUESVnrsgaqxqxy rdf:type owl:Class ;
                          rdfs:subClassOf :R7gZLWyPCimwGhHTueSRPhd ,
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
@@ -1447,14 +1447,14 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ResidualHeatRemovalSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBabRZaZUznmBkL7QrHJTkR
+###  https://w3id.org/emmo/domain/neo#RBabRZaZUznmBkL7QrHJTkR
 :RBabRZaZUznmBkL7QrHJTkR rdf:type owl:Class ;
                          rdfs:subClassOf :R8hTHDGsCdkEbILOuzUhlEr ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "MainReactorAdminstratorBuilding" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MainAdminstratorBuilding"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBeV8ftYy9jGBHA6rECN3Gx
+###  https://w3id.org/emmo/domain/neo#RBeV8ftYy9jGBHA6rECN3Gx
 :RBeV8ftYy9jGBHA6rECN3Gx rdf:type owl:Class ;
                          rdfs:subClassOf :RBzruvoEUI9hIHVtX34kGJu ,
                                          :Rw4mCgviqd6HTitZEzST6w ;
@@ -1464,7 +1464,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FireEngine"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBfqFRty5Hp4V4caVtEvWdD
+###  https://w3id.org/emmo/domain/neo#RBfqFRty5Hp4V4caVtEvWdD
 :RBfqFRty5Hp4V4caVtEvWdD rdf:type owl:Class ;
                          rdfs:subClassOf elite:PhysicalParticle ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:39794:-16:ed-1:v1:en:term:3.52> ;
@@ -1473,7 +1473,7 @@ Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abund
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBimLTlArOY8mxOSFe6qiEZ
+###  https://w3id.org/emmo/domain/neo#RBimLTlArOY8mxOSFe6qiEZ
 :RBimLTlArOY8mxOSFe6qiEZ rdf:type owl:Class ;
                          rdfs:subClassOf :Rw4mCgviqd6HTitZEzST6w ,
                                          [ rdf:type owl:Restriction ;
@@ -1490,7 +1490,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "StandbyGasTreatmentSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBnyfPxRohc9STM4mfSMMFq
+###  https://w3id.org/emmo/domain/neo#RBnyfPxRohc9STM4mfSMMFq
 :RBnyfPxRohc9STM4mfSMMFq rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:14224:ed-3:v2:en:term:3.84> ;
@@ -1498,7 +1498,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyCriticalEquipment"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBp2yVTrXRyb55JnYdvAGux
+###  https://w3id.org/emmo/domain/neo#RBp2yVTrXRyb55JnYdvAGux
 :RBp2yVTrXRyb55JnYdvAGux rdf:type owl:Class ;
                          rdfs:subClassOf :RBzruvoEUI9hIHVtX34kGJu ,
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
@@ -1507,7 +1507,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorMitigationCoolingSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBq5QrucFPH0MIg2wnaVaMD
+###  https://w3id.org/emmo/domain/neo#RBq5QrucFPH0MIg2wnaVaMD
 :RBq5QrucFPH0MIg2wnaVaMD rdf:type owl:Class ;
                          rdfs:subClassOf :R7s6BZ18NYlgydAQozd7POd ;
                          rdfs:isDefinedBy """ISO 14624-5:2023(en)
@@ -1516,7 +1516,7 @@ Space systems — Safety and compatibility of materials — Part 5: Determinatio
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Degradation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBq9x5WmblYOc4D7eFlfpdJ
+###  https://w3id.org/emmo/domain/neo#RBq9x5WmblYOc4D7eFlfpdJ
 :RBq9x5WmblYOc4D7eFlfpdJ rdf:type owl:Class ;
                          rdfs:subClassOf :R7pKuzitkkIAgc5NxDlqfH4 ;
                          rdfs:isDefinedBy <https://www.collinsdictionary.com/dictionary/english/explosion#:~:text=explosion%20in%20Chemical%20Engineering&text=An%20explosion%20is%20a%20sudden%20catastrophic%20release%20of%20energy%2C%20causing,container%20of%20pressurized%20gas%20ruptures.> ;
@@ -1525,7 +1525,7 @@ Space systems — Safety and compatibility of materials — Part 5: Determinatio
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Explosion"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBr5qtxSEMQ2oYZd1frAYZL
+###  https://w3id.org/emmo/domain/neo#RBr5qtxSEMQ2oYZd1frAYZL
 :RBr5qtxSEMQ2oYZd1frAYZL rdf:type owl:Class ;
                          rdfs:subClassOf :R80RaxHVqr4QPiv8ASxXxi3 ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:iwa:33:-1:ed-1:v1:en:term:11.6.1.3> ;
@@ -1535,7 +1535,7 @@ Space systems — Safety and compatibility of materials — Part 5: Determinatio
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ManualControlling"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq
+###  https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq
 :RBsAUchYFBwAtcVUeFr8EFq rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:23551:-1:ed-2:v1:en:term:3.101.1> ;
@@ -1544,7 +1544,7 @@ Note 1 to entry: The actuation can be done by gas pressure, electrical, hydrauli
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Valve"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBtkzbuLn6g0vdtDU3mijH0
+###  https://w3id.org/emmo/domain/neo#RBtkzbuLn6g0vdtDU3mijH0
 :RBtkzbuLn6g0vdtDU3mijH0 rdf:type owl:Class ;
                          rdfs:subClassOf :RLEjSGGgoWOVMGjQsskCsb ,
                                          :RRxSYO9r2FD1rHmRPugfob ,
@@ -1559,7 +1559,7 @@ Note 1 to entry: The actuation can be done by gas pressure, electrical, hydrauli
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearAccidentInitiatingEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBuKou8LHvh6qFQkn5YcvzK
+###  https://w3id.org/emmo/domain/neo#RBuKou8LHvh6qFQkn5YcvzK
 :RBuKou8LHvh6qFQkn5YcvzK rdf:type owl:Class ;
                          rdfs:subClassOf :R0N27qMQzeRjM0vSOeAvUT ;
                          rdfs:comment "The nuclear reactors and the electric production lines can be either almost identical or different between them, though usually sharing various support or auxiliary installations, systems and/or supplies (ISO 12749-5:2018)"@en ;
@@ -1570,7 +1570,7 @@ Note 1 to entry: The actuation can be done by gas pressure, electrical, hydrauli
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MultipleUnitNuclearPowerPlant"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBv35jM3VSFKKxtWNVyDILw
+###  https://w3id.org/emmo/domain/neo#RBv35jM3VSFKKxtWNVyDILw
 :RBv35jM3VSFKKxtWNVyDILw rdf:type owl:Class ;
                          rdfs:subClassOf :Rryk3Z5XNZ11ZiiLuT5M8Q ;
                          rdfs:isDefinedBy <https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf> ;
@@ -1579,7 +1579,7 @@ Note 1 to entry: The actuation can be done by gas pressure, electrical, hydrauli
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RadioactivityAssessment"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBvFxrHecZjciXe2qvDn2vv
+###  https://w3id.org/emmo/domain/neo#RBvFxrHecZjciXe2qvDn2vv
 :RBvFxrHecZjciXe2qvDn2vv rdf:type owl:Class ;
                          rdfs:subClassOf :RRxSYO9r2FD1rHmRPugfob ,
                                          [ rdf:type owl:Restriction ;
@@ -1591,13 +1591,13 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "AnticipatedOperationalOccurrenceEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBwST6x27zdyWBgBunjc2Q9
+###  https://w3id.org/emmo/domain/neo#RBwST6x27zdyWBgBunjc2Q9
 :RBwST6x27zdyWBgBunjc2Q9 rdf:type owl:Class ;
                          rdfs:subClassOf :R1DAH32q3UDTp3GZGqe5Re ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ControlRodInsertion"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBzruvoEUI9hIHVtX34kGJu
+###  https://w3id.org/emmo/domain/neo#RBzruvoEUI9hIHVtX34kGJu
 :RBzruvoEUI9hIHVtX34kGJu rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ,
                                          [ rdf:type owl:Restriction ;
@@ -1609,7 +1609,7 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectionSystems"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RC1aeRG1szxYdt4kTKUUOvO
+###  https://w3id.org/emmo/domain/neo#RC1aeRG1szxYdt4kTKUUOvO
 :RC1aeRG1szxYdt4kTKUUOvO rdf:type owl:Class ;
                          rdfs:subClassOf :R8MPIXNWSb8RCelrAeGNxMc ,
                                          [ rdf:type owl:Restriction ;
@@ -1622,14 +1622,14 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SprayInjection"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RC5Uc3vBrAsYC8gCNkTsLH
+###  https://w3id.org/emmo/domain/neo#RC5Uc3vBrAsYC8gCNkTsLH
 :RC5Uc3vBrAsYC8gCNkTsLH rdf:type owl:Class ;
                         rdfs:subClassOf :R8MPIXNWSb8RCelrAeGNxMc ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Material Injection following a well defined cycle without alterations."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RegularInjection"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RC5rdqmZ9FmptamkomAjr4J
+###  https://w3id.org/emmo/domain/neo#RC5rdqmZ9FmptamkomAjr4J
 :RC5rdqmZ9FmptamkomAjr4J rdf:type owl:Class ;
                          rdfs:subClassOf :R7QpMP9Mf1mRrRVeMT7UcIX ;
                          :RR3uD2d7YfhHohfv2Nm6sX "Fission products and actinides produced by neutron absorption of nuclear fuel itself are normally referred to by those specific names, and activation product reserved for products of neutron capture by other materials, such as structural components of the nuclear reactor or nuclear bomb, the reactor coolant, control rods or other neutron poisons, or materials in the environment. All of these, however, need to be handled as radioactive waste. Some nuclides originate in more than one way, as activation products or fission products."@en ;
@@ -1638,7 +1638,7 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ActivatedMaterial"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RC9Vnqc96TS4VVdygnxu8UP
+###  https://w3id.org/emmo/domain/neo#RC9Vnqc96TS4VVdygnxu8UP
 :RC9Vnqc96TS4VVdygnxu8UP rdf:type owl:Class ;
                          rdfs:subClassOf :RtdecAtZ9C9xUJNtjefY4D ;
                          rdfs:comment """Conditions of normal operation that are expected to occur one or
@@ -1664,7 +1664,7 @@ from control."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "AOOControl"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCAHezyl4VRbtyt3dbnxBUb
+###  https://w3id.org/emmo/domain/neo#RCAHezyl4VRbtyt3dbnxBUb
 :RCAHezyl4VRbtyt3dbnxBUb rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
@@ -1677,7 +1677,7 @@ from control."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ThermalProtectionSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCDLrZ9KyXAspBK0GpRfHxG
+###  https://w3id.org/emmo/domain/neo#RCDLrZ9KyXAspBK0GpRfHxG
 :RCDLrZ9KyXAspBK0GpRfHxG rdf:type owl:Class ;
                          rdfs:subClassOf :R6dO6yatvM1kcW0Iuf8Z0R ,
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
@@ -1699,7 +1699,7 @@ from control."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ControlRodDriveSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCEdHiyMqhUSNg53tLciXxW
+###  https://w3id.org/emmo/domain/neo#RCEdHiyMqhUSNg53tLciXxW
 :RCEdHiyMqhUSNg53tLciXxW rdf:type owl:Class ;
                          rdfs:subClassOf :RC9Vnqc96TS4VVdygnxu8UP ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1125/ML11258A312.pdf> ;
@@ -1709,7 +1709,7 @@ the condensate and feedwater system is not available."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICOperation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCJLElMudONs6LAhEPd8PjG
+###  https://w3id.org/emmo/domain/neo#RCJLElMudONs6LAhEPd8PjG
 :RCJLElMudONs6LAhEPd8PjG rdf:type owl:Class ;
                          rdfs:subClassOf :Rw4mCgviqd6HTitZEzST6w ,
                                          [ rdf:type owl:Restriction ;
@@ -1725,7 +1725,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BackwashValvePit"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCJhKs4unBpoZD0uMgxsvJh
+###  https://w3id.org/emmo/domain/neo#RCJhKs4unBpoZD0uMgxsvJh
 :RCJhKs4unBpoZD0uMgxsvJh rdf:type owl:Class ;
                          rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ;
                          rdfs:comment "in an electric circuit" ;
@@ -1734,7 +1734,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Switching"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCJyL3ZfDUXJeZ2m8EwYQO9
+###  https://w3id.org/emmo/domain/neo#RCJyL3ZfDUXJeZ2m8EwYQO9
 :RCJyL3ZfDUXJeZ2m8EwYQO9 rdf:type owl:Class ;
                          rdfs:subClassOf :R7oHlh8OgEkyG3XXGpiYlC5 ;
                          rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
@@ -1742,7 +1742,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemFailure"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCNShAJHX3mIvlEif02qYJZ
+###  https://w3id.org/emmo/domain/neo#RCNShAJHX3mIvlEif02qYJZ
 :RCNShAJHX3mIvlEif02qYJZ rdf:type owl:Class ;
                          rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:tr:27923:ed-1:v1:en:term:3.22> ;
@@ -1751,7 +1751,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPDecommissioning" .
 
 
-###  http://w3id.org/emmo/domain/neo#RCP7vIugzt8V7rXL11buOZH
+###  https://w3id.org/emmo/domain/neo#RCP7vIugzt8V7rXL11buOZH
 :RCP7vIugzt8V7rXL11buOZH rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ,
                                          elite:Whole ;
@@ -1762,7 +1762,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPlantAccident"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCPFRkyBbFadwcQUuWavdPl
+###  https://w3id.org/emmo/domain/neo#RCPFRkyBbFadwcQUuWavdPl
 :RCPFRkyBbFadwcQUuWavdPl rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          :Rw4mCgviqd6HTitZEzST6w ;
@@ -1775,14 +1775,14 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorContainmentSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCPsVMpkrs5EqK8G9HKv71m
+###  https://w3id.org/emmo/domain/neo#RCPsVMpkrs5EqK8G9HKv71m
 :RCPsVMpkrs5EqK8G9HKv71m rdf:type owl:Class ;
                          rdfs:subClassOf :R8hTHDGsCdkEbILOuzUhlEr ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearSeismicallyIsolatedBuilding﻿"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SeismicallyIsolatedBuilding"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCRVu2hmIevYnx0eZzyJEPs
+###  https://w3id.org/emmo/domain/neo#RCRVu2hmIevYnx0eZzyJEPs
 :RCRVu2hmIevYnx0eZzyJEPs rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
@@ -1799,21 +1799,21 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorPressureVessel"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCV3rrs00sLryJLTlXR60QN
+###  https://w3id.org/emmo/domain/neo#RCV3rrs00sLryJLTlXR60QN
 :RCV3rrs00sLryJLTlXR60QN rdf:type owl:Class ;
                          rdfs:subClassOf :R8hTHDGsCdkEbILOuzUhlEr ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorDieselGeneratorBuilding﻿"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DieselGeneratorBuilding"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCY8ddT8JW7G3WicejAxkmn
+###  https://w3id.org/emmo/domain/neo#RCY8ddT8JW7G3WicejAxkmn
 :RCY8ddT8JW7G3WicejAxkmn rdf:type owl:Class ;
                          rdfs:subClassOf :RCJhKs4unBpoZD0uMgxsvJh ;
                          <http://www.w3.org/2004/02/skos/core#comment> "from off to on" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SwitchingOn"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCZ2I1XktaR3DBBEbLjHwOz
+###  https://w3id.org/emmo/domain/neo#RCZ2I1XktaR3DBBEbLjHwOz
 :RCZ2I1XktaR3DBBEbLjHwOz rdf:type owl:Class ;
                          rdfs:subClassOf :R7MjWOBoCnDd3BD1IBHjlRe ,
                                          [ rdf:type owl:Restriction ;
@@ -1827,7 +1827,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "EmergencyResponseCentres"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCcdLHL2BqdRJQkmiKL4MDW
+###  https://w3id.org/emmo/domain/neo#RCcdLHL2BqdRJQkmiKL4MDW
 :RCcdLHL2BqdRJQkmiKL4MDW rdf:type owl:Class ;
                          rdfs:subClassOf :R8lgbjRv5CeOJ43GygJ143n ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:22328:-3:ed-1:v1:en:term:3.2> ;
@@ -1835,7 +1835,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Earthquake"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCembrpB4dbduwWjlJOBBMK
+###  https://w3id.org/emmo/domain/neo#RCembrpB4dbduwWjlJOBBMK
 :RCembrpB4dbduwWjlJOBBMK rdf:type owl:Class ;
                          rdfs:subClassOf :RC9Vnqc96TS4VVdygnxu8UP ;
                          rdfs:comment """Confinement is closely related in meaning to containment, but confinement is
@@ -1858,7 +1858,7 @@ in operation or in accidents."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Confinement"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCfqimjBP1uypJVnd32xcTB
+###  https://w3id.org/emmo/domain/neo#RCfqimjBP1uypJVnd32xcTB
 :RCfqimjBP1uypJVnd32xcTB rdf:type owl:Class ;
                          rdfs:subClassOf :RLEjSGGgoWOVMGjQsskCsb ,
                                          [ rdf:type owl:Restriction ;
@@ -1870,7 +1870,7 @@ in operation or in accidents."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfSeaWaterCooling"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCh38CRTgX4tnzCoB8auwPC
+###  https://w3id.org/emmo/domain/neo#RCh38CRTgX4tnzCoB8auwPC
 :RCh38CRTgX4tnzCoB8auwPC rdf:type owl:Class ;
                          rdfs:subClassOf :R7hYLnBucjQ8XgAj5RsQvpF ,
                                          [ rdf:type owl:Restriction ;
@@ -1883,7 +1883,7 @@ power for a nuclear plant in the event that all off-site power sources are lost.
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DieselGenerator"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCsCw5Imj0XgbP0uOlzcQNe
+###  https://w3id.org/emmo/domain/neo#RCsCw5Imj0XgbP0uOlzcQNe
 :RCsCw5Imj0XgbP0uOlzcQNe rdf:type owl:Class ;
                          rdfs:subClassOf :RBnyfPxRohc9STM4mfSMMFq ;
                          rdfs:isDefinedBy "ISO 11675:2005(en)  Textile machinery and accessories — Flatbed knitting machines — Vocabulary " ;
@@ -1892,14 +1892,14 @@ power for a nuclear plant in the event that all off-site power sources are lost.
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ProtectiveGear"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCuTNyDF6kWFazFqJVIvww9
+###  https://w3id.org/emmo/domain/neo#RCuTNyDF6kWFazFqJVIvww9
 :RCuTNyDF6kWFazFqJVIvww9 rdf:type owl:Class ;
                          rdfs:subClassOf :RCJhKs4unBpoZD0uMgxsvJh ;
                          rdfs:comment "from on to off" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SwitchingOff"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCzybo2ACvDW8XnRRQcoQTg
+###  https://w3id.org/emmo/domain/neo#RCzybo2ACvDW8XnRRQcoQTg
 :RCzybo2ACvDW8XnRRQcoQTg rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
@@ -1913,7 +1913,7 @@ subsequently removed from a reactor core as a single unit."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FuelAssembly"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDA28A6LQxSBpe6UXyS1BwW
+###  https://w3id.org/emmo/domain/neo#RDA28A6LQxSBpe6UXyS1BwW
 :RDA28A6LQxSBpe6UXyS1BwW rdf:type owl:Class ;
                          rdfs:subClassOf :R89Yy2V18LstH4xGXyNb9XN ,
                                          [ rdf:type owl:Restriction ;
@@ -1924,7 +1924,7 @@ subsequently removed from a reactor core as a single unit."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FeedwaterPump"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDCVLkjId3erZ4ajIA6nHzM
+###  https://w3id.org/emmo/domain/neo#RDCVLkjId3erZ4ajIA6nHzM
 :RDCVLkjId3erZ4ajIA6nHzM rdf:type owl:Class ;
                          rdfs:subClassOf :R7NYEyrtAsNuF6n0QNOFmHm ,
                                          :R89Yy2V18LstH4xGXyNb9XN ,
@@ -1938,7 +1938,7 @@ subsequently removed from a reactor core as a single unit."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PowerTurbine"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDDFiZC2RFaE7RrTNF0CrtA
+###  https://w3id.org/emmo/domain/neo#RDDFiZC2RFaE7RrTNF0CrtA
 :RDDFiZC2RFaE7RrTNF0CrtA rdf:type owl:Class ;
                          rdfs:subClassOf :Rw4mCgviqd6HTitZEzST6w ;
                          rdfs:comment """The fire protection system was designed primarily for fire suppression and flooding of the containment vessel, not for
@@ -1950,7 +1950,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FireProtectionSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDGBzCkWozL4RpG1CuIzwPi
+###  https://w3id.org/emmo/domain/neo#RDGBzCkWozL4RpG1CuIzwPi
 :RDGBzCkWozL4RpG1CuIzwPi rdf:type owl:Class ;
                          rdfs:subClassOf :R7pKuzitkkIAgc5NxDlqfH4 ,
                                          :RDpEA8qdRk99FAT0xSGZgGS ;
@@ -1959,7 +1959,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "GasRelease"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDGsX7GTlCOL8Jlk3fXBK7U
+###  https://w3id.org/emmo/domain/neo#RDGsX7GTlCOL8Jlk3fXBK7U
 :RDGsX7GTlCOL8Jlk3fXBK7U rdf:type owl:Class ;
                          rdfs:subClassOf elite:Role ,
                                          :R7qv2nUGxSNZRvXyF3CXPTr ,
@@ -1973,7 +1973,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FissionProduct"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDLYlpbjx3Rhwa0uGxFNWzC
+###  https://w3id.org/emmo/domain/neo#RDLYlpbjx3Rhwa0uGxFNWzC
 :RDLYlpbjx3Rhwa0uGxFNWzC rdf:type owl:Class ;
                          rdfs:subClassOf :R7hYLnBucjQ8XgAj5RsQvpF ;
                          rdfs:comment "On the IAEA report is called \"Trasmission system\"."@en ;
@@ -1982,7 +1982,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ElectricityGrid"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDM3Wmp5f6fMXTDpEK3Dmsx
+###  https://w3id.org/emmo/domain/neo#RDM3Wmp5f6fMXTDpEK3Dmsx
 :RDM3Wmp5f6fMXTDpEK3Dmsx rdf:type owl:Class ;
                          rdfs:subClassOf :R7gZLWyPCimwGhHTueSRPhd ,
                                          :RBsAUchYFBwAtcVUeFr8EFq ,
@@ -2000,7 +2000,7 @@ Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PressureReliefValve"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDN44xs0tgwZS1p11BPMMKr
+###  https://w3id.org/emmo/domain/neo#RDN44xs0tgwZS1p11BPMMKr
 :RDN44xs0tgwZS1p11BPMMKr rdf:type owl:Class ;
                          rdfs:subClassOf :RBBzyqSEv3bIRXZvqAVCF4x ,
                                          [ rdf:type owl:Restriction ;
@@ -2013,7 +2013,7 @@ Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfAllACPower"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDNjoQuhLLxChWFzUtzeUrj
+###  https://w3id.org/emmo/domain/neo#RDNjoQuhLLxChWFzUtzeUrj
 :RDNjoQuhLLxChWFzUtzeUrj rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
@@ -2026,14 +2026,14 @@ Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "WetWell"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDP6jdP3MdBK59hhoDGY0Vw
+###  https://w3id.org/emmo/domain/neo#RDP6jdP3MdBK59hhoDGY0Vw
 :RDP6jdP3MdBK59hhoDGY0Vw rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A thing that happens or takes place, with a well defined beginning and end, a clear specificity and relevance with respect to the surrounding environment."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDS0g8UekSMDWjEgBp6z2sP
+###  https://w3id.org/emmo/domain/neo#RDS0g8UekSMDWjEgBp6z2sP
 :RDS0g8UekSMDWjEgBp6z2sP rdf:type owl:Class ;
                          rdfs:subClassOf elite:Role ,
                                          :RBfqFRty5Hp4V4caVtEvWdD ,
@@ -2048,7 +2048,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FastNeutron"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDT2hV6YibqdGN2HMXay4hK
+###  https://w3id.org/emmo/domain/neo#RDT2hV6YibqdGN2HMXay4hK
 :RDT2hV6YibqdGN2HMXay4hK rdf:type owl:Class ;
                          rdfs:subClassOf :R9ZCvqvWWCWSwBxX7K82iwL ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.1.2> ;
@@ -2056,7 +2056,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SpontaneousNuclearFission"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDTfhSry7c6TzIENETvIs1U
+###  https://w3id.org/emmo/domain/neo#RDTfhSry7c6TzIENETvIs1U
 :RDTfhSry7c6TzIENETvIs1U rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
@@ -2085,7 +2085,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ControlRod"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDTtg7PlU70nX1AN6XHiAwK
+###  https://w3id.org/emmo/domain/neo#RDTtg7PlU70nX1AN6XHiAwK
 :RDTtg7PlU70nX1AN6XHiAwK rdf:type owl:Class ;
                          rdfs:subClassOf :R89Yy2V18LstH4xGXyNb9XN ,
                                          :RBsAUchYFBwAtcVUeFr8EFq ,
@@ -2100,7 +2100,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "TurbineValve"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDZtzLsQmngV2BtJvmS5pbg
+###  https://w3id.org/emmo/domain/neo#RDZtzLsQmngV2BtJvmS5pbg
 :RDZtzLsQmngV2BtJvmS5pbg rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ,
                                          elite:Role ;
@@ -2110,7 +2110,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPlantWorker"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDdFdbRqtigD5ry1nrSpxkb
+###  https://w3id.org/emmo/domain/neo#RDdFdbRqtigD5ry1nrSpxkb
 :RDdFdbRqtigD5ry1nrSpxkb rdf:type owl:Class ;
                          rdfs:subClassOf :R7oHlh8OgEkyG3XXGpiYlC5 ;
                          rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
@@ -2118,7 +2118,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ComponentFailure"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDh3zL6vQwm8NRNsC9Eo3Sa
+###  https://w3id.org/emmo/domain/neo#RDh3zL6vQwm8NRNsC9Eo3Sa
 :RDh3zL6vQwm8NRNsC9Eo3Sa rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
@@ -2131,7 +2131,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SpentFuelPool"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDi09Rm801Kr3SGc3oyRzVc
+###  https://w3id.org/emmo/domain/neo#RDi09Rm801Kr3SGc3oyRzVc
 :RDi09Rm801Kr3SGc3oyRzVc rdf:type owl:Class ;
                          rdfs:subClassOf :RdPoUW04SB1jvKPJcXoVCW ,
                                          [ rdf:type owl:Restriction ;
@@ -2145,7 +2145,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "CoreMeltdown"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDoeQzvUClmOY7fNhDvK0L1
+###  https://w3id.org/emmo/domain/neo#RDoeQzvUClmOY7fNhDvK0L1
 :RDoeQzvUClmOY7fNhDvK0L1 rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ,
                                          [ rdf:type owl:Restriction ;
@@ -2163,7 +2163,7 @@ Note 1 to entry: This includes floors, walls, beams, columns, doors, and penetra
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorBuildingContents"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDpEA8qdRk99FAT0xSGZgGS
+###  https://w3id.org/emmo/domain/neo#RDpEA8qdRk99FAT0xSGZgGS
 :RDpEA8qdRk99FAT0xSGZgGS rdf:type owl:Class ;
                          rdfs:subClassOf :RtdecAtZ9C9xUJNtjefY4D ,
                                          [ rdf:type owl:Restriction ;
@@ -2185,7 +2185,7 @@ undetected failures can be lower."""@en ,
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDqGoUzaBPNiIDtLS6qlo3t
+###  https://w3id.org/emmo/domain/neo#RDqGoUzaBPNiIDtLS6qlo3t
 :RDqGoUzaBPNiIDtLS6qlo3t rdf:type owl:Class ;
                          rdfs:subClassOf :R80RaxHVqr4QPiv8ASxXxi3 ;
                          rdfs:isDefinedBy "INTERNATIONAL ATOMIC ENERGY AGENCY, Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018) p.12" ;
@@ -2197,7 +2197,7 @@ from control."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ControlOfDeviations"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDqxw9842TBP5U24ILrY1bb
+###  https://w3id.org/emmo/domain/neo#RDqxw9842TBP5U24ILrY1bb
 :RDqxw9842TBP5U24ILrY1bb rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                          rdfs:comment "onsite replacement power facilities"@en ,
@@ -2207,7 +2207,7 @@ from control."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Replacement"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDuDSbKh236WI6rqMad7Ar4
+###  https://w3id.org/emmo/domain/neo#RDuDSbKh236WI6rqMad7Ar4
 :RDuDSbKh236WI6rqMad7Ar4 rdf:type owl:Class ;
                          rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ,
                                          [ rdf:type owl:Restriction ;
@@ -2250,7 +2250,7 @@ from control."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Activation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDv6FAzzuS81VzIfTO1Wkef
+###  https://w3id.org/emmo/domain/neo#RDv6FAzzuS81VzIfTO1Wkef
 :RDv6FAzzuS81VzIfTO1Wkef rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ,
                                          [ rdf:type owl:Restriction ;
@@ -2263,7 +2263,7 @@ from control."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DryCaskStorageBuilding"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#REnnyld9FmnAjLpeDyUsnv
+###  https://w3id.org/emmo/domain/neo#REnnyld9FmnAjLpeDyUsnv
 :REnnyld9FmnAjLpeDyUsnv rdf:type owl:Class ;
                         rdfs:subClassOf :RBW32C4x3sn1YahVG7uYVun ,
                                         [ rdf:type owl:Restriction ;
@@ -2275,7 +2275,7 @@ from control."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "LightWaterReactor"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#REwjatmwMA4xgNq0mpx6LO
+###  https://w3id.org/emmo/domain/neo#REwjatmwMA4xgNq0mpx6LO
 :REwjatmwMA4xgNq0mpx6LO rdf:type owl:Class ;
                         rdfs:subClassOf :R89Yy2V18LstH4xGXyNb9XN ,
                                         [ rdf:type owl:Restriction ;
@@ -2286,7 +2286,7 @@ from control."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SeaWaterPump"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RG2TvkBghAiQkHQc4GNU8e
+###  https://w3id.org/emmo/domain/neo#RG2TvkBghAiQkHQc4GNU8e
 :RG2TvkBghAiQkHQc4GNU8e rdf:type owl:Class ;
                         rdfs:subClassOf :R7gZLWyPCimwGhHTueSRPhd ,
                                         :RBsAUchYFBwAtcVUeFr8EFq ,
@@ -2303,7 +2303,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "HeadVentNozzle"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RG42cv992jX3Deeh35WKwu
+###  https://w3id.org/emmo/domain/neo#RG42cv992jX3Deeh35WKwu
 :RG42cv992jX3Deeh35WKwu rdf:type owl:Class ;
                         rdfs:subClassOf :RLEjSGGgoWOVMGjQsskCsb ;
                         rdfs:isDefinedBy """ISO 24513:2019(en)
@@ -2312,7 +2312,7 @@ Service activities relating to drinking water supply, wastewater and stormwater 
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PlantFloodingAccident"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RGNf2JfOQS4CiKraFgzrIc
+###  https://w3id.org/emmo/domain/neo#RGNf2JfOQS4CiKraFgzrIc
 :RGNf2JfOQS4CiKraFgzrIc rdf:type owl:Class ;
                         rdfs:subClassOf :RRcoLavbFREtzVcprEzyrY ;
                         rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Rupture_disc> ;
@@ -2320,7 +2320,7 @@ Service activities relating to drinking water supply, wastewater and stormwater 
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "BurstOfRuptureDisc"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RHQniV2VTxSsHQobdf4d6d
+###  https://w3id.org/emmo/domain/neo#RHQniV2VTxSsHQobdf4d6d
 :RHQniV2VTxSsHQobdf4d6d rdf:type owl:Class ;
                         rdfs:subClassOf :RBBzyqSEv3bIRXZvqAVCF4x ,
                                         [ rdf:type owl:Restriction ;
@@ -2334,7 +2334,7 @@ Service activities relating to drinking water supply, wastewater and stormwater 
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfOffSitePower"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RJmt9cNm88D71RlMOkJ6WM
+###  https://w3id.org/emmo/domain/neo#RJmt9cNm88D71RlMOkJ6WM
 :RJmt9cNm88D71RlMOkJ6WM rdf:type owl:Class ;
                         rdfs:subClassOf :R7QpMP9Mf1mRrRVeMT7UcIX ;
                         rdfs:isDefinedBy """https://aris.iaea.org/sites/Glossary.html 
@@ -2343,7 +2343,7 @@ Glossary of Terms in ARIS Reports""" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoolant"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RLEjSGGgoWOVMGjQsskCsb
+###  https://w3id.org/emmo/domain/neo#RLEjSGGgoWOVMGjQsskCsb
 :RLEjSGGgoWOVMGjQsskCsb rdf:type owl:Class ;
                         rdfs:subClassOf :R7pKuzitkkIAgc5NxDlqfH4 ,
                                         [ rdf:type owl:Restriction ;
@@ -2361,7 +2361,7 @@ negligible from the point of view of protection and safety of a Nuclear power pl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPUnintendedEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RMiSxLtLOMDcYH1jWDJO1b
+###  https://w3id.org/emmo/domain/neo#RMiSxLtLOMDcYH1jWDJO1b
 :RMiSxLtLOMDcYH1jWDJO1b rdf:type owl:Class ;
                         rdfs:subClassOf :R8hTHDGsCdkEbILOuzUhlEr ;
                         rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition﻿" ;
@@ -2369,7 +2369,7 @@ negligible from the point of view of protection and safety of a Nuclear power pl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "CommonSpentFuelBuilding"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RNNqkJui2M9zYKvBkz3iQ
+###  https://w3id.org/emmo/domain/neo#RNNqkJui2M9zYKvBkz3iQ
 :RNNqkJui2M9zYKvBkz3iQ rdf:type owl:Class ;
                        rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                        [ rdf:type owl:Restriction ;
@@ -2384,7 +2384,7 @@ and Radiation Protection, 2018 Edition """ ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "FuelElement"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RPURhpVoxOOYoC2J28Rgfd
+###  https://w3id.org/emmo/domain/neo#RPURhpVoxOOYoC2J28Rgfd
 :RPURhpVoxOOYoC2J28Rgfd rdf:type owl:Class ;
                         rdfs:subClassOf :R9PjB5mvpVfreaI0pbTQFj6 ,
                                         :RtX7ESf673Z9eYoseycPyl ;
@@ -2395,7 +2395,7 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en 
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "﻿NuclearFuel"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RRKk7nTYd2pj3LFUG4j9yj
+###  https://w3id.org/emmo/domain/neo#RRKk7nTYd2pj3LFUG4j9yj
 :RRKk7nTYd2pj3LFUG4j9yj rdf:type owl:Class ;
                         rdfs:subClassOf elite:Object ,
                                         [ rdf:type owl:Restriction ;
@@ -2410,7 +2410,7 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en 
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPowerPlantUnit"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RRPYBSdeHQObrzQD5UT74I
+###  https://w3id.org/emmo/domain/neo#RRPYBSdeHQObrzQD5UT74I
 :RRPYBSdeHQObrzQD5UT74I rdf:type owl:Class ;
                         rdfs:subClassOf :R8MPIXNWSb8RCelrAeGNxMc ;
                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:7967:-11:ed-2:v1:en:term:3.3.69> ;
@@ -2418,7 +2418,7 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en 
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "IrregularInjection"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RRVTDj2E9x5cjit7EQ9Dkx
+###  https://w3id.org/emmo/domain/neo#RRVTDj2E9x5cjit7EQ9Dkx
 :RRVTDj2E9x5cjit7EQ9Dkx rdf:type owl:Class ;
                         rdfs:subClassOf :R7hYLnBucjQ8XgAj5RsQvpF ,
                                         [ rdf:type owl:Restriction ;
@@ -2432,7 +2432,7 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en 
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "DCOperationalPowerSource"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RRcoLavbFREtzVcprEzyrY
+###  https://w3id.org/emmo/domain/neo#RRcoLavbFREtzVcprEzyrY
 :RRcoLavbFREtzVcprEzyrY rdf:type owl:Class ;
                         rdfs:subClassOf :R7s6BZ18NYlgydAQozd7POd ;
                         rdfs:isDefinedBy <https://www.britannica.com/dictionary/destruction> ;
@@ -2440,7 +2440,7 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en 
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Destruction"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RRxSYO9r2FD1rHmRPugfob
+###  https://w3id.org/emmo/domain/neo#RRxSYO9r2FD1rHmRPugfob
 :RRxSYO9r2FD1rHmRPugfob rdf:type owl:Class ;
                         rdfs:subClassOf :R9TI5UbsBXnAYSIi17pJARr ,
                                         [ rdf:type owl:Restriction ;
@@ -2455,7 +2455,7 @@ include a subset of severe accidents."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulatedInitiatingEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RSvx83QCmkRfOzQUtOkIeS
+###  https://w3id.org/emmo/domain/neo#RSvx83QCmkRfOzQUtOkIeS
 :RSvx83QCmkRfOzQUtOkIeS rdf:type owl:Class ;
                         rdfs:subClassOf :R7fkBdyMeKQvQzm3yRgM2iz ;
                         rdfs:isDefinedBy """ISO/TS 22330:2018(en)
@@ -2464,7 +2464,7 @@ Security and resilience — Business continuity management systems — Guideline
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ShelterInPlace"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RTywWKZwkjxu5ChUU9jvyq
+###  https://w3id.org/emmo/domain/neo#RTywWKZwkjxu5ChUU9jvyq
 :RTywWKZwkjxu5ChUU9jvyq rdf:type owl:Class ;
                         rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ,
                                         [ rdf:type owl:Restriction ;
@@ -2476,7 +2476,7 @@ Security and resilience — Business continuity management systems — Guideline
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPRefueling"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RUfmPQytgoT4sAaWFKoKAG
+###  https://w3id.org/emmo/domain/neo#RUfmPQytgoT4sAaWFKoKAG
 :RUfmPQytgoT4sAaWFKoKAG rdf:type owl:Class ;
                         rdfs:subClassOf :R7fkBdyMeKQvQzm3yRgM2iz ;
                         rdfs:isDefinedBy """ISO/TR 24188:2022(en)
@@ -2485,7 +2485,7 @@ Large outdoor fires and the built environment — Global overview of different a
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Evacuation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RY81DSQhpDKzGrzvuAjU5m
+###  https://w3id.org/emmo/domain/neo#RY81DSQhpDKzGrzvuAjU5m
 :RY81DSQhpDKzGrzvuAjU5m rdf:type owl:Class ;
                         rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                         :Rw4mCgviqd6HTitZEzST6w ,
@@ -2500,7 +2500,7 @@ Large outdoor fires and the built environment — Global overview of different a
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SuppressionChamber"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RZ7eQ19CTPh8iKBmvqWp16
+###  https://w3id.org/emmo/domain/neo#RZ7eQ19CTPh8iKBmvqWp16
 :RZ7eQ19CTPh8iKBmvqWp16 rdf:type owl:Class ;
                         rdfs:subClassOf :R9TI5UbsBXnAYSIi17pJARr ,
                                         [ rdf:type owl:Restriction ;
@@ -2515,7 +2515,7 @@ Large outdoor fires and the built environment — Global overview of different a
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearAccidentIntermediateEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RZtNAG3BL7lDm8L77EbEBd
+###  https://w3id.org/emmo/domain/neo#RZtNAG3BL7lDm8L77EbEBd
 :RZtNAG3BL7lDm8L77EbEBd rdf:type owl:Class ;
                         rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                         [ rdf:type owl:Restriction ;
@@ -2528,7 +2528,7 @@ Large outdoor fires and the built environment — Global overview of different a
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "DryWell"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#Ra61ijkU0v73woMBs0urSn
+###  https://w3id.org/emmo/domain/neo#Ra61ijkU0v73woMBs0urSn
 :Ra61ijkU0v73woMBs0urSn rdf:type owl:Class ;
                         rdfs:subClassOf :RPURhpVoxOOYoC2J28Rgfd ,
                                         [ rdf:type owl:Restriction ;
@@ -2540,14 +2540,14 @@ Large outdoor fires and the built environment — Global overview of different a
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear﻿FreshFuel"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RaEj4uH02jwi8e78Nr9PvH
+###  https://w3id.org/emmo/domain/neo#RaEj4uH02jwi8e78Nr9PvH
 :RaEj4uH02jwi8e78Nr9PvH rdf:type owl:Class ;
                         rdfs:subClassOf :RBtkzbuLn6g0vdtDU3mijH0 ;
                         rdfs:seeAlso "INTERNATIONAL ATOMIC ENERGY AGENCY, Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulatedSingleEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RaKxhZBSqtO6ceVm10Ca6Y
+###  https://w3id.org/emmo/domain/neo#RaKxhZBSqtO6ceVm10Ca6Y
 :RaKxhZBSqtO6ceVm10Ca6Y rdf:type owl:Class ;
                         rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ,
                                         [ rdf:type owl:Restriction ;
@@ -2563,7 +2563,7 @@ Large outdoor fires and the built environment — Global overview of different a
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PublicAddressSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RapiFOXlLXIKxdiWW4ljdc
+###  https://w3id.org/emmo/domain/neo#RapiFOXlLXIKxdiWW4ljdc
 :RapiFOXlLXIKxdiWW4ljdc rdf:type owl:Class ;
                         rdfs:subClassOf :RBtkzbuLn6g0vdtDU3mijH0 ;
                         rdfs:isDefinedBy <https://www.nrc.gov/docs/ML0707/ML070710376.pdf> ;
@@ -2573,7 +2573,7 @@ Postulated accidents are also known as Condition IV events.""" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulatedAccident"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#Rba6gbJ70iyZgFOVY5Z6Vo
+###  https://w3id.org/emmo/domain/neo#Rba6gbJ70iyZgFOVY5Z6Vo
 :Rba6gbJ70iyZgFOVY5Z6Vo rdf:type owl:Class ;
                         rdfs:subClassOf :RBBzyqSEv3bIRXZvqAVCF4x ,
                                         [ rdf:type owl:Restriction ;
@@ -2586,7 +2586,7 @@ Postulated accidents are also known as Condition IV events.""" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfDCPower"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RbscqwUSgWtKWJZrcgSNr9
+###  https://w3id.org/emmo/domain/neo#RbscqwUSgWtKWJZrcgSNr9
 :RbscqwUSgWtKWJZrcgSNr9 rdf:type owl:Class ;
                         rdfs:subClassOf :R91s5ihcKvYBOzeCaNlNVVK ;
                         rdfs:comment """The exact definition of ‘significant amounts’ would be a regulatory decision.
@@ -2598,7 +2598,7 @@ and Radiation Protection, 2018 Edition """ ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NaturallyOccurringRadioactiveMaterial"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RdPoUW04SB1jvKPJcXoVCW
+###  https://w3id.org/emmo/domain/neo#RdPoUW04SB1jvKPJcXoVCW
 :RdPoUW04SB1jvKPJcXoVCW rdf:type owl:Class ;
                         rdfs:subClassOf :R95M6reIX3ya776PtOPLGmY ;
                         rdfs:isDefinedBy """ISO 26802:2010(en)
@@ -2608,7 +2608,7 @@ Nuclear facilities — Criteria for the design and the operation of containment 
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearSevereAccident"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#ReAOaKplsxuu3rxqPb4Jz4
+###  https://w3id.org/emmo/domain/neo#ReAOaKplsxuu3rxqPb4Jz4
 :ReAOaKplsxuu3rxqPb4Jz4 rdf:type owl:Class ;
                         rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                         rdfs:isDefinedBy """ISO 3977-9:1999(en)
@@ -2617,7 +2617,7 @@ Gas turbines — Procurement — Part 9: Reliability, availability, maintainabil
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "MaintenanceOutage"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#Rff5M43GHvSXYByyfZSSyk
+###  https://w3id.org/emmo/domain/neo#Rff5M43GHvSXYByyfZSSyk
 :Rff5M43GHvSXYByyfZSSyk rdf:type owl:Class ;
                         rdfs:subClassOf :R0N27qMQzeRjM0vSOeAvUT ;
                         rdfs:isDefinedBy <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.1.1> ;
@@ -2627,7 +2627,7 @@ Gas turbines — Procurement — Part 9: Reliability, availability, maintainabil
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SingleUnitNuclearPowerPlant"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RgAy137nXA9FNxJLdXeh2G
+###  https://w3id.org/emmo/domain/neo#RgAy137nXA9FNxJLdXeh2G
 :RgAy137nXA9FNxJLdXeh2G rdf:type owl:Class ;
                         rdfs:subClassOf :Rryk3Z5XNZ11ZiiLuT5M8Q ;
                         rdfs:isDefinedBy """ISO 20043-1:2021(en)
@@ -2637,7 +2637,7 @@ Measurement of radioactivity in the environment — Guidelines for effective dos
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RadioactiveDischarging"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RiaJiI8PAvV7grwixkMCcr
+###  https://w3id.org/emmo/domain/neo#RiaJiI8PAvV7grwixkMCcr
 :RiaJiI8PAvV7grwixkMCcr rdf:type owl:Class ;
                         rdfs:subClassOf elite:Object ,
                                         [ rdf:type owl:Restriction ;
@@ -2650,7 +2650,7 @@ Measurement of radioactivity in the environment — Guidelines for effective dos
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearIsland"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RlYMwSSvmqekLRLzmf5IzV
+###  https://w3id.org/emmo/domain/neo#RlYMwSSvmqekLRLzmf5IzV
 :RlYMwSSvmqekLRLzmf5IzV rdf:type owl:Class ;
                         rdfs:subClassOf :R79WXwPF5ZWjRPArxbbVAgU ;
                         rdfs:isDefinedBy "ttps://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf" ;
@@ -2660,7 +2660,7 @@ constructed"""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Operation"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#Rld2UEpLG7yzdQrBtq6RPL
+###  https://w3id.org/emmo/domain/neo#Rld2UEpLG7yzdQrBtq6RPL
 :Rld2UEpLG7yzdQrBtq6RPL rdf:type owl:Class ;
                         rdfs:subClassOf :R7qv2nUGxSNZRvXyF3CXPTr ,
                                         [ rdf:type owl:Restriction ;
@@ -2672,7 +2672,7 @@ constructed"""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Hydrogen"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RnTowd9AGtNiJRicoarsyr
+###  https://w3id.org/emmo/domain/neo#RnTowd9AGtNiJRicoarsyr
 :RnTowd9AGtNiJRicoarsyr rdf:type owl:Class ;
                         rdfs:subClassOf :R7ASmNcKrlRjzYHkUz3vfQT ;
                         rdfs:comment """The company has 3 nuclear power plants which in the past had provided up to 40% of the electricity needed by TEPCO and therefore Tokyo and its region:
@@ -2686,7 +2686,7 @@ Fukushima Dai-ni,"""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "TokyoElectricPowerCompany"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RoO35j2Hgqm540PRLDF9Jy
+###  https://w3id.org/emmo/domain/neo#RoO35j2Hgqm540PRLDF9Jy
 :RoO35j2Hgqm540PRLDF9Jy rdf:type owl:Class ;
                         rdfs:subClassOf :R89Yy2V18LstH4xGXyNb9XN ,
                                         [ rdf:type owl:Restriction ;
@@ -2699,7 +2699,7 @@ Fukushima Dai-ni,"""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Generator"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RrfuHy45DxsWTOKgkP9TFG
+###  https://w3id.org/emmo/domain/neo#RrfuHy45DxsWTOKgkP9TFG
 :RrfuHy45DxsWTOKgkP9TFG rdf:type owl:Class ;
                         rdfs:subClassOf :RRPYBSdeHQObrzQD5UT74I ;
                         rdfs:isDefinedBy """ISO 7967-11:2022(en)
@@ -2708,7 +2708,7 @@ Reciprocating internal combustion engines — Vocabulary of components and syste
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "IntermittentInjection"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#Rryk3Z5XNZ11ZiiLuT5M8Q
+###  https://w3id.org/emmo/domain/neo#Rryk3Z5XNZ11ZiiLuT5M8Q
 :Rryk3Z5XNZ11ZiiLuT5M8Q rdf:type owl:Class ;
                         rdfs:subClassOf :RtdecAtZ9C9xUJNtjefY4D ;
                         rdfs:isDefinedBy "INTERNATIONAL ATOMIC ENERGY AGENCY, Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018) p.12" ;
@@ -2720,7 +2720,7 @@ I&C architecture."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "EmergencyManagement"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RtX7ESf673Z9eYoseycPyl
+###  https://w3id.org/emmo/domain/neo#RtX7ESf673Z9eYoseycPyl
 :RtX7ESf673Z9eYoseycPyl rdf:type owl:Class ;
                         rdfs:subClassOf elite:Role ,
                                         [ rdf:type owl:Restriction ;
@@ -2731,7 +2731,7 @@ I&C architecture."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoreMaterial"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RtdecAtZ9C9xUJNtjefY4D
+###  https://w3id.org/emmo/domain/neo#RtdecAtZ9C9xUJNtjefY4D
 :RtdecAtZ9C9xUJNtjefY4D rdf:type owl:Class ;
                         rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ,
                                         [ rdf:type owl:Restriction ;
@@ -2747,7 +2747,7 @@ operational states and, for some barriers, in accident conditions"""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "DefenceinDepthProcedures"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#Rtq4tb3S29hdhJZtzFB2Bg
+###  https://w3id.org/emmo/domain/neo#Rtq4tb3S29hdhJZtzFB2Bg
 :Rtq4tb3S29hdhJZtzFB2Bg rdf:type owl:Class ;
                         rdfs:subClassOf :R84TLuFmfSZMhgSh0uL0LXk ;
                         rdfs:isDefinedBy <https://www.britannica.com/technology/radiation-measurement> ;
@@ -2755,13 +2755,13 @@ operational states and, for some barriers, in accident conditions"""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RadiationMeasurements"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RvBQlxDEMRtFxiHtMstrYY
+###  https://w3id.org/emmo/domain/neo#RvBQlxDEMRtFxiHtMstrYY
 :RvBQlxDEMRtFxiHtMstrYY rdf:type owl:Class ;
                         rdfs:subClassOf :R7gZLWyPCimwGhHTueSRPhd ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SeaWaterCoolingSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RvJRwvUJjnFg7pvJ4yXd69
+###  https://w3id.org/emmo/domain/neo#RvJRwvUJjnFg7pvJ4yXd69
 :RvJRwvUJjnFg7pvJ4yXd69 rdf:type owl:Class ;
                         rdfs:subClassOf :R9TI5UbsBXnAYSIi17pJARr ,
                                         [ rdf:type owl:Restriction ;
@@ -2772,7 +2772,7 @@ operational states and, for some barriers, in accident conditions"""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearAccidentFinalEvent"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RvsRWyrgBeZBDE8PCeQpFd
+###  https://w3id.org/emmo/domain/neo#RvsRWyrgBeZBDE8PCeQpFd
 :RvsRWyrgBeZBDE8PCeQpFd rdf:type owl:Class ;
                         rdfs:subClassOf :RBzruvoEUI9hIHVtX34kGJu ,
                                         :Rw4mCgviqd6HTitZEzST6w ,
@@ -2789,7 +2789,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "FireProtectionWaterInjectionPort"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RvstZtdRQckXTqUl1UK5Is
+###  https://w3id.org/emmo/domain/neo#RvstZtdRQckXTqUl1UK5Is
 :RvstZtdRQckXTqUl1UK5Is rdf:type owl:Class ;
                         rdfs:subClassOf :R8lgbjRv5CeOJ43GygJ143n ;
                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:21650:ed-1:v1:en:term:2.76> ;
@@ -2797,7 +2797,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Tsunami"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#Rw4mCgviqd6HTitZEzST6w
+###  https://w3id.org/emmo/domain/neo#Rw4mCgviqd6HTitZEzST6w
 :Rw4mCgviqd6HTitZEzST6w rdf:type owl:Class ;
                         rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ,
                                         [ rdf:type owl:Restriction ;
@@ -2810,7 +2810,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorMitigationSystem"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RxnLc7O29Jiy2Z0qg7iTh6
+###  https://w3id.org/emmo/domain/neo#RxnLc7O29Jiy2Z0qg7iTh6
 :RxnLc7O29Jiy2Z0qg7iTh6 rdf:type owl:Class ;
                         rdfs:subClassOf :R84TLuFmfSZMhgSh0uL0LXk ;
                         rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Pressure_measurement> ;
@@ -2818,14 +2818,14 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PressureMeasurement"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RyLZ508FsJKMTIHvSNuJZk
+###  https://w3id.org/emmo/domain/neo#RyLZ508FsJKMTIHvSNuJZk
 :RyLZ508FsJKMTIHvSNuJZk rdf:type owl:Class ;
                         rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ;
                         <http://www.w3.org/2004/02/skos/core#definition> "The global process of manage the operation of a nuclear power plant, considering the design procedures" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPOperationManagement"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RyMmVkVf9zClluOSgfr1Rh
+###  https://w3id.org/emmo/domain/neo#RyMmVkVf9zClluOSgfr1Rh
 :RyMmVkVf9zClluOSgfr1Rh rdf:type owl:Class ;
                         rdfs:subClassOf elite:Whole ,
                                         :RDoeQzvUClmOY7fNhDvK0L1 ,
@@ -2847,14 +2847,14 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 #    Individuals
 #################################################################
 
-###  http://w3id.org/emmo/domain/neo#R4UMKMNvIkmVZ4OSRIQ6Qv
+###  https://w3id.org/emmo/domain/neo#R4UMKMNvIkmVZ4OSRIQ6Qv
 :R4UMKMNvIkmVZ4OSRIQ6Qv rdf:type owl:NamedIndividual ,
                                  :RDuDSbKh236WI6rqMad7Ar4 ;
                         elite:isConstitutiveProcessOf :R7uvG224iPqEldlfFwndlKr ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICActivation_unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R56puCaUpuR7eQFm7rEWOv
+###  https://w3id.org/emmo/domain/neo#R56puCaUpuR7eQFm7rEWOv
 :R56puCaUpuR7eQFm7rEWOv rdf:type owl:NamedIndividual ,
                                  :RBwST6x27zdyWBgBunjc2Q9 ;
                         elite:hasNext :R7RRzaczCz4wVsf2ZSE3cz5 ;
@@ -2862,7 +2862,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R5vADU834XOdmmbqErqMjD
+###  https://w3id.org/emmo/domain/neo#R5vADU834XOdmmbqErqMjD
 :R5vADU834XOdmmbqErqMjD rdf:type owl:NamedIndividual ,
                                  :Rba6gbJ70iyZgFOVY5Z6Vo ;
                         elite:hasNext :R8BzCYxsJkpBVMzHmrLDfBN ;
@@ -2870,7 +2870,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit4"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R71kogAKcOnrzKRRvJYzEnf
+###  https://w3id.org/emmo/domain/neo#R71kogAKcOnrzKRRvJYzEnf
 :R71kogAKcOnrzKRRvJYzEnf rdf:type owl:NamedIndividual ,
                                   :RC5Uc3vBrAsYC8gCNkTsLH ;
                          elite:hasNext :RCZSMiyXPZ1w9KtBMir31du ;
@@ -2878,14 +2878,14 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "regularWaterInjection_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7MYrOmgGBYZ0JwNSP9CKGJ
+###  https://w3id.org/emmo/domain/neo#R7MYrOmgGBYZ0JwNSP9CKGJ
 :R7MYrOmgGBYZ0JwNSP9CKGJ rdf:type owl:NamedIndividual ,
                                   :R9j7jE0NWQS6xBqDD8iJRbf ;
                          elite:hasNext :R8SCvSsZInboPn0aMi5hJ2b ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICSystem_unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7MkAFLocpCOTpR1W4846Wv
+###  https://w3id.org/emmo/domain/neo#R7MkAFLocpCOTpR1W4846Wv
 :R7MkAFLocpCOTpR1W4846Wv rdf:type owl:NamedIndividual ,
                                   :RDN44xs0tgwZS1p11BPMMKr ;
                          elite:hasNext :R5vADU834XOdmmbqErqMjD ;
@@ -2893,7 +2893,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit4"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7OojlUGWcg81Y4DnKKUYtE
+###  https://w3id.org/emmo/domain/neo#R7OojlUGWcg81Y4DnKKUYtE
 :R7OojlUGWcg81Y4DnKKUYtE rdf:type owl:NamedIndividual ,
                                   :R8bUZpp1yY81qmfgGNH0TyF ;
                          elite:hasNext :RBnZe6rQs3iQOzfyrY5AKRG ;
@@ -2902,7 +2902,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit4"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7RRzaczCz4wVsf2ZSE3cz5
+###  https://w3id.org/emmo/domain/neo#R7RRzaczCz4wVsf2ZSE3cz5
 :R7RRzaczCz4wVsf2ZSE3cz5 rdf:type owl:NamedIndividual ;
                          elite:affects :R7uvG224iPqEldlfFwndlKr ,
                                        :R8nP70kb2tjsTW1qDOmrdbC ,
@@ -2915,7 +2915,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfOffSitePower_Fukushima"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7RYQTRTJpydcZySPvfj97U
+###  https://w3id.org/emmo/domain/neo#R7RYQTRTJpydcZySPvfj97U
 :R7RYQTRTJpydcZySPvfj97U rdf:type owl:NamedIndividual ,
                                   :RBwST6x27zdyWBgBunjc2Q9 ;
                          elite:hasNext :R7RRzaczCz4wVsf2ZSE3cz5 ;
@@ -2923,7 +2923,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7TeIrUcoeFIohoZFYT6oHo
+###  https://w3id.org/emmo/domain/neo#R7TeIrUcoeFIohoZFYT6oHo
 :R7TeIrUcoeFIohoZFYT6oHo rdf:type owl:NamedIndividual ,
                                   :R7t1vs1VKDAzHkcQsFbt9JC ;
                          elite:hasNext :R71kogAKcOnrzKRRvJYzEnf ,
@@ -2932,7 +2932,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "HPCIOperation_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7UHidTtMLlwJsXw3LunBVr
+###  https://w3id.org/emmo/domain/neo#R7UHidTtMLlwJsXw3LunBVr
 :R7UHidTtMLlwJsXw3LunBVr rdf:type owl:NamedIndividual ,
                                   :Rba6gbJ70iyZgFOVY5Z6Vo ;
                          elite:hasNext :R9ci3rSU9PmVM9hDoObI7GN ,
@@ -2941,7 +2941,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7c6WbN81RxcJpHXeGHXv8
+###  https://w3id.org/emmo/domain/neo#R7c6WbN81RxcJpHXeGHXv8
 :R7c6WbN81RxcJpHXeGHXv8 rdf:type owl:NamedIndividual ,
                                  :RB5vIXZFuMYcHWSzNAPjPtF ;
                         elite:hasNext :RBKxneXt3UWJzKxOD5Inibz ;
@@ -2949,19 +2949,19 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr
+###  https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr
 :R7uvG224iPqEldlfFwndlKr rdf:type owl:NamedIndividual ,
                                   :RRKk7nTYd2pj3LFUG4j9yj ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "unit_2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R7xpEdKwbxANkjtrQrh0ep
+###  https://w3id.org/emmo/domain/neo#R7xpEdKwbxANkjtrQrh0ep
 :R7xpEdKwbxANkjtrQrh0ep rdf:type owl:NamedIndividual ,
                                  :RCh38CRTgX4tnzCoB8auwPC ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "dieselGenerator_Fukushima"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8BzCYxsJkpBVMzHmrLDfBN
+###  https://w3id.org/emmo/domain/neo#R8BzCYxsJkpBVMzHmrLDfBN
 :R8BzCYxsJkpBVMzHmrLDfBN rdf:type owl:NamedIndividual ,
                                   :RBq9x5WmblYOc4D7eFlfpdJ ;
                          elite:isBehaviourOf :R8nP70kb2tjsTW1qDOmrdbC ,
@@ -2969,20 +2969,20 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "explosionOfReactorBuilding_unit4"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8MEESkThrtwrxXoXG6Fhjm
+###  https://w3id.org/emmo/domain/neo#R8MEESkThrtwrxXoXG6Fhjm
 :R8MEESkThrtwrxXoXG6Fhjm rdf:type owl:NamedIndividual ,
                                   :R9MK7U9YLf7RtEpfQTDDr1q ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8NisCJkeUXZCMxKr9tKNJq
+###  https://w3id.org/emmo/domain/neo#R8NisCJkeUXZCMxKr9tKNJq
 :R8NisCJkeUXZCMxKr9tKNJq rdf:type owl:NamedIndividual ,
                                   :RCRVu2hmIevYnx0eZzyJEPs ;
                          elite:isConstituentOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "reactor_1_vessel"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8SCvSsZInboPn0aMi5hJ2b
+###  https://w3id.org/emmo/domain/neo#R8SCvSsZInboPn0aMi5hJ2b
 :R8SCvSsZInboPn0aMi5hJ2b rdf:type owl:NamedIndividual ,
                                   :RvstZtdRQckXTqUl1UK5Is ;
                          elite:affects :R7uvG224iPqEldlfFwndlKr ,
@@ -2996,7 +2996,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "tohokuTzunami"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8Yr6YUUe0lh5UU0KHqF8Or
+###  https://w3id.org/emmo/domain/neo#R8Yr6YUUe0lh5UU0KHqF8Or
 :R8Yr6YUUe0lh5UU0KHqF8Or rdf:type owl:NamedIndividual ,
                                   :RlYMwSSvmqekLRLzmf5IzV ;
                          elite:hasNext :R4UMKMNvIkmVZ4OSRIQ6Qv ;
@@ -3004,13 +3004,13 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "repeatedlyOpeningClosing_SRV_unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC
+###  https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC
 :R8nP70kb2tjsTW1qDOmrdbC rdf:type owl:NamedIndividual ,
                                   :RRKk7nTYd2pj3LFUG4j9yj ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "unit_4"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R8wL8gWueAFQTEzJ4Rj2QKI
+###  https://w3id.org/emmo/domain/neo#R8wL8gWueAFQTEzJ4Rj2QKI
 :R8wL8gWueAFQTEzJ4Rj2QKI rdf:type owl:NamedIndividual ,
                                   :R9MK7U9YLf7RtEpfQTDDr1q ,
                                   [ rdf:type owl:Restriction ;
@@ -3024,7 +3024,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9Iwyc5qtHhh0QHOXsiris3
+###  https://w3id.org/emmo/domain/neo#R9Iwyc5qtHhh0QHOXsiris3
 :R9Iwyc5qtHhh0QHOXsiris3 rdf:type owl:NamedIndividual ,
                                   :RDpEA8qdRk99FAT0xSGZgGS ;
                          elite:hasNext :RBHjDlLwaPMxKKtjq16Lw1c ;
@@ -3032,7 +3032,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9L3ykUI6w5qe20x5hVL2mK
+###  https://w3id.org/emmo/domain/neo#R9L3ykUI6w5qe20x5hVL2mK
 :R9L3ykUI6w5qe20x5hVL2mK rdf:type owl:NamedIndividual ,
                                   :RDuDSbKh236WI6rqMad7Ar4 ;
                          elite:hasNext :R7TeIrUcoeFIohoZFYT6oHo ;
@@ -3040,7 +3040,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICActivation_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9ci3rSU9PmVM9hDoObI7GN
+###  https://w3id.org/emmo/domain/neo#R9ci3rSU9PmVM9hDoObI7GN
 :R9ci3rSU9PmVM9hDoObI7GN rdf:type owl:NamedIndividual ,
                                   :RC5Uc3vBrAsYC8gCNkTsLH ;
                          elite:hasNext :RPcjVut6ArBpfKG9sYPMsM ;
@@ -3048,7 +3048,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "regularWaterInjection_unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9d1EKHudbhPmfvQxlND3Wr
+###  https://w3id.org/emmo/domain/neo#R9d1EKHudbhPmfvQxlND3Wr
 :R9d1EKHudbhPmfvQxlND3Wr rdf:type owl:NamedIndividual ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty elite:isBehaviourOf ;
@@ -3059,13 +3059,13 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW
+###  https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW
 :R9icMA5hIFg4wyRyuVCUEYW rdf:type owl:NamedIndividual ,
                                   :RRKk7nTYd2pj3LFUG4j9yj ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "unit_1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9lguEUksKNv9gLzWkqBDJ4
+###  https://w3id.org/emmo/domain/neo#R9lguEUksKNv9gLzWkqBDJ4
 :R9lguEUksKNv9gLzWkqBDJ4 rdf:type owl:NamedIndividual ,
                                   :RDN44xs0tgwZS1p11BPMMKr ;
                          elite:hasNext :R9L3ykUI6w5qe20x5hVL2mK ;
@@ -3073,7 +3073,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9om4FPZlN1Gg2qFReIfI60
+###  https://w3id.org/emmo/domain/neo#R9om4FPZlN1Gg2qFReIfI60
 :R9om4FPZlN1Gg2qFReIfI60 rdf:type owl:NamedIndividual ,
                                   :RB5vIXZFuMYcHWSzNAPjPtF ;
                          elite:hasNext :R9lguEUksKNv9gLzWkqBDJ4 ;
@@ -3081,7 +3081,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9t3qBNc7hgSJ9CltHNvCc4
+###  https://w3id.org/emmo/domain/neo#R9t3qBNc7hgSJ9CltHNvCc4
 :R9t3qBNc7hgSJ9CltHNvCc4 rdf:type owl:NamedIndividual ,
                                   :R8FmlobZiHsCZi4CHKxgtMg ;
                          elite:hasNext :RPcjVut6ArBpfKG9sYPMsM ;
@@ -3089,7 +3089,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SCVentilation_unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#R9ww5067sycKsLf6pU7vT06
+###  https://w3id.org/emmo/domain/neo#R9ww5067sycKsLf6pU7vT06
 :R9ww5067sycKsLf6pU7vT06 rdf:type owl:NamedIndividual ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
@@ -3098,7 +3098,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SRV_unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RB4janzOcDoxSfpU6974nab
+###  https://w3id.org/emmo/domain/neo#RB4janzOcDoxSfpU6974nab
 :RB4janzOcDoxSfpU6974nab rdf:type owl:NamedIndividual ,
                                   :R7pKuzitkkIAgc5NxDlqfH4 ;
                          elite:hasNext :R8Yr6YUUe0lh5UU0KHqF8Or ;
@@ -3106,7 +3106,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RB9SU6UpAJ8MygM1uCXbEzt
+###  https://w3id.org/emmo/domain/neo#RB9SU6UpAJ8MygM1uCXbEzt
 :RB9SU6UpAJ8MygM1uCXbEzt rdf:type owl:NamedIndividual ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty elite:isConstitutiveProcessOf ;
@@ -3117,14 +3117,14 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBEpkkG2mXF3wnnZPT5lDoa
+###  https://w3id.org/emmo/domain/neo#RBEpkkG2mXF3wnnZPT5lDoa
 :RBEpkkG2mXF3wnnZPT5lDoa rdf:type owl:NamedIndividual ,
                                   :RDGBzCkWozL4RpG1CuIzwPi ;
                          elite:hasNext :R8BzCYxsJkpBVMzHmrLDfBN ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "HydrogenRelease_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBHjDlLwaPMxKKtjq16Lw1c
+###  https://w3id.org/emmo/domain/neo#RBHjDlLwaPMxKKtjq16Lw1c
 :RBHjDlLwaPMxKKtjq16Lw1c rdf:type owl:NamedIndividual ,
                                   :RCcdLHL2BqdRJQkmiKL4MDW ;
                          elite:affects :R7uvG224iPqEldlfFwndlKr ,
@@ -3138,7 +3138,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "tohokuEarthquake"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBKxneXt3UWJzKxOD5Inibz
+###  https://w3id.org/emmo/domain/neo#RBKxneXt3UWJzKxOD5Inibz
 :RBKxneXt3UWJzKxOD5Inibz rdf:type owl:NamedIndividual ,
                                   :RDN44xs0tgwZS1p11BPMMKr ;
                          elite:hasNext :R7UHidTtMLlwJsXw3LunBVr ;
@@ -3146,7 +3146,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBc3mI1yVMSGjTWyWdVvMiP
+###  https://w3id.org/emmo/domain/neo#RBc3mI1yVMSGjTWyWdVvMiP
 :RBc3mI1yVMSGjTWyWdVvMiP rdf:type owl:NamedIndividual ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty elite:isBehaviourOf ;
@@ -3158,7 +3158,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBfahJ7XEvDRY0I74gA4EhW
+###  https://w3id.org/emmo/domain/neo#RBfahJ7XEvDRY0I74gA4EhW
 :RBfahJ7XEvDRY0I74gA4EhW rdf:type owl:NamedIndividual ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty elite:isBehaviourOf ;
@@ -3170,7 +3170,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBnZe6rQs3iQOzfyrY5AKRG
+###  https://w3id.org/emmo/domain/neo#RBnZe6rQs3iQOzfyrY5AKRG
 :RBnZe6rQs3iQOzfyrY5AKRG rdf:type owl:NamedIndividual ,
                                   :RDuDSbKh236WI6rqMad7Ar4 ;
                          elite:affects :R7uvG224iPqEldlfFwndlKr ,
@@ -3185,7 +3185,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "dieselGeneratorActivation_Fukushima"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RBrcoh6pN7tToFnM1m59yXl
+###  https://w3id.org/emmo/domain/neo#RBrcoh6pN7tToFnM1m59yXl
 :RBrcoh6pN7tToFnM1m59yXl rdf:type owl:NamedIndividual ,
                                   :R9MK7U9YLf7RtEpfQTDDr1q ,
                                   [ rdf:type owl:Restriction ;
@@ -3199,7 +3199,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RC2M3wEsCROuuDC6Bjz9TLz
+###  https://w3id.org/emmo/domain/neo#RC2M3wEsCROuuDC6Bjz9TLz
 :RC2M3wEsCROuuDC6Bjz9TLz rdf:type owl:NamedIndividual ,
                                   :R7pKuzitkkIAgc5NxDlqfH4 ;
                          elite:hasNext :RCSOjPEJEBrRfStCCjfidCL ;
@@ -3207,26 +3207,26 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RC6oDea7metjydM6Dr1mJsi
+###  https://w3id.org/emmo/domain/neo#RC6oDea7metjydM6Dr1mJsi
 :RC6oDea7metjydM6Dr1mJsi rdf:type owl:NamedIndividual ;
                          elite:hasNext :RFvEhkHbiPwVuY8AasDXll ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCGLvp3oNj6WAo2tvVy7DeU
+###  https://w3id.org/emmo/domain/neo#RCGLvp3oNj6WAo2tvVy7DeU
 :RCGLvp3oNj6WAo2tvVy7DeU rdf:type owl:NamedIndividual ,
                                   :R7twPwtQmmXFTKrDWM3POCD ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ICSystem_unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCGk9WIE1u7wKk5PswM0eOU
+###  https://w3id.org/emmo/domain/neo#RCGk9WIE1u7wKk5PswM0eOU
 :RCGk9WIE1u7wKk5PswM0eOU rdf:type owl:NamedIndividual ,
                                   :R0ZnwwPdidaBfZOg6tgZJr ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "reactorBuilding_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCIQAmGtY5oJHuuVHp7Y9OF
+###  https://w3id.org/emmo/domain/neo#RCIQAmGtY5oJHuuVHp7Y9OF
 :RCIQAmGtY5oJHuuVHp7Y9OF rdf:type owl:NamedIndividual ,
                                   :R8FmlobZiHsCZi4CHKxgtMg ;
                          elite:hasNext :RBEpkkG2mXF3wnnZPT5lDoa ,
@@ -3235,7 +3235,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SCVentilation_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCJ4sUQgpXReJhv2l3TNlPt
+###  https://w3id.org/emmo/domain/neo#RCJ4sUQgpXReJhv2l3TNlPt
 :RCJ4sUQgpXReJhv2l3TNlPt rdf:type owl:NamedIndividual ,
                                   :R8bUZpp1yY81qmfgGNH0TyF ;
                          elite:hasNext :RBnZe6rQs3iQOzfyrY5AKRG ;
@@ -3244,14 +3244,14 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCOfDWUyHIup4OUW4FsBUNW
+###  https://w3id.org/emmo/domain/neo#RCOfDWUyHIup4OUW4FsBUNW
 :RCOfDWUyHIup4OUW4FsBUNW rdf:type owl:NamedIndividual ,
                                   :RDM3Wmp5f6fMXTDpEK3Dmsx ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "SafetyReliefValve_unit3" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SRV_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCSOjPEJEBrRfStCCjfidCL
+###  https://w3id.org/emmo/domain/neo#RCSOjPEJEBrRfStCCjfidCL
 :RCSOjPEJEBrRfStCCjfidCL rdf:type owl:NamedIndividual ,
                                   :RDuDSbKh236WI6rqMad7Ar4 ;
                          elite:hasNext :R8SCvSsZInboPn0aMi5hJ2b ;
@@ -3260,7 +3260,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ICActivation_unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RCZSMiyXPZ1w9KtBMir31du
+###  https://w3id.org/emmo/domain/neo#RCZSMiyXPZ1w9KtBMir31du
 :RCZSMiyXPZ1w9KtBMir31du rdf:type owl:NamedIndividual ,
                                   :RBq9x5WmblYOc4D7eFlfpdJ ;
                          elite:hasNext :Rld8nnNRbLNp5DMRfVK1Hs ;
@@ -3269,14 +3269,14 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "explosionOfReactorBuilding_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDAWOe94vcv6aVGTD0p8Rh6
+###  https://w3id.org/emmo/domain/neo#RDAWOe94vcv6aVGTD0p8Rh6
 :RDAWOe94vcv6aVGTD0p8Rh6 rdf:type owl:NamedIndividual ,
                                   :RRPYBSdeHQObrzQD5UT74I ;
                          elite:isConstitutiveProcessOf :R7uvG224iPqEldlfFwndlKr ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "irregularWaterInjection_unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDNEIxMazl0JpSeCgw0Nxqo
+###  https://w3id.org/emmo/domain/neo#RDNEIxMazl0JpSeCgw0Nxqo
 :RDNEIxMazl0JpSeCgw0Nxqo rdf:type owl:NamedIndividual ,
                                   :RDpEA8qdRk99FAT0xSGZgGS ;
                          elite:hasNext :RBHjDlLwaPMxKKtjq16Lw1c ;
@@ -3284,13 +3284,13 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperation_noFuel"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDQ6WRHz0rKpRxnQ9WLdTh9
+###  https://w3id.org/emmo/domain/neo#RDQ6WRHz0rKpRxnQ9WLdTh9
 :RDQ6WRHz0rKpRxnQ9WLdTh9 rdf:type owl:NamedIndividual ,
                                   :R0ZnwwPdidaBfZOg6tgZJr ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "reactorBuilding_unit4"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RDmRDuXNQJPOriCxkLUlrUE
+###  https://w3id.org/emmo/domain/neo#RDmRDuXNQJPOriCxkLUlrUE
 :RDmRDuXNQJPOriCxkLUlrUE rdf:type owl:NamedIndividual ,
                                   :RBwST6x27zdyWBgBunjc2Q9 ;
                          elite:hasNext :R7RRzaczCz4wVsf2ZSE3cz5 ;
@@ -3298,7 +3298,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RFvEhkHbiPwVuY8AasDXll
+###  https://w3id.org/emmo/domain/neo#RFvEhkHbiPwVuY8AasDXll
 :RFvEhkHbiPwVuY8AasDXll rdf:type owl:NamedIndividual ,
                                  :RlYMwSSvmqekLRLzmf5IzV ;
                         elite:hasNext :R9L3ykUI6w5qe20x5hVL2mK ;
@@ -3306,7 +3306,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "repeatedlyOpeningClosing_SRV_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RMp5GbDdB45DJyWFDXk4qT
+###  https://w3id.org/emmo/domain/neo#RMp5GbDdB45DJyWFDXk4qT
 :RMp5GbDdB45DJyWFDXk4qT rdf:type owl:NamedIndividual ,
                                  :RB5vIXZFuMYcHWSzNAPjPtF ;
                         elite:hasNext :RVDTdBhCWWXCt9qvBB5o8o ;
@@ -3314,7 +3314,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RPcjVut6ArBpfKG9sYPMsM
+###  https://w3id.org/emmo/domain/neo#RPcjVut6ArBpfKG9sYPMsM
 :RPcjVut6ArBpfKG9sYPMsM rdf:type owl:NamedIndividual ,
                                  :RBq9x5WmblYOc4D7eFlfpdJ ;
                         elite:hasNext :RXcgBdYtloBN8Exe0yyXMw ;
@@ -3323,7 +3323,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "explosionOfReactorBuilding_unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RPlulHioiJxZgZC1QMUgOL
+###  https://w3id.org/emmo/domain/neo#RPlulHioiJxZgZC1QMUgOL
 :RPlulHioiJxZgZC1QMUgOL rdf:type owl:NamedIndividual ,
                                  :R9j7jE0NWQS6xBqDD8iJRbf ,
                                  [ rdf:type owl:Restriction ;
@@ -3334,33 +3334,33 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICSystem_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RTiXMunsU6yEXKeRVxMuQV
+###  https://w3id.org/emmo/domain/neo#RTiXMunsU6yEXKeRVxMuQV
 :RTiXMunsU6yEXKeRVxMuQV rdf:type owl:NamedIndividual ,
                                  :R9MK7U9YLf7RtEpfQTDDr1q ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit4"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RUsOGEERLNgPu3mgta5Sm1
+###  https://w3id.org/emmo/domain/neo#RUsOGEERLNgPu3mgta5Sm1
 :RUsOGEERLNgPu3mgta5Sm1 rdf:type owl:NamedIndividual ,
                                  :R0ZnwwPdidaBfZOg6tgZJr ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "reactorBuilding_unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RVDTdBhCWWXCt9qvBB5o8o
+###  https://w3id.org/emmo/domain/neo#RVDTdBhCWWXCt9qvBB5o8o
 :RVDTdBhCWWXCt9qvBB5o8o rdf:type owl:NamedIndividual ;
                         elite:hasNext :R4UMKMNvIkmVZ4OSRIQ6Qv ;
                         elite:isBehaviourOf :R7uvG224iPqEldlfFwndlKr ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit2"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RXcgBdYtloBN8Exe0yyXMw
+###  https://w3id.org/emmo/domain/neo#RXcgBdYtloBN8Exe0yyXMw
 :RXcgBdYtloBN8Exe0yyXMw rdf:type owl:NamedIndividual ,
                                  :RRPYBSdeHQObrzQD5UT74I ;
                         elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "irregularWaterInjection_unit1"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RaHh8VTYDHA1krUVvo6jGG
+###  https://w3id.org/emmo/domain/neo#RaHh8VTYDHA1krUVvo6jGG
 :RaHh8VTYDHA1krUVvo6jGG rdf:type owl:NamedIndividual ,
                                  :RRKk7nTYd2pj3LFUG4j9yj ;
                         elite:hasNext :RBHjDlLwaPMxKKtjq16Lw1c ;
@@ -3368,20 +3368,20 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit3" .
 
 
-###  http://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9
+###  https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9
 :Rb5hP2Q5XG2czxqOFu5nb9 rdf:type owl:NamedIndividual ,
                                  :RRKk7nTYd2pj3LFUG4j9yj ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "unit_3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#Rld8nnNRbLNp5DMRfVK1Hs
+###  https://w3id.org/emmo/domain/neo#Rld8nnNRbLNp5DMRfVK1Hs
 :Rld8nnNRbLNp5DMRfVK1Hs rdf:type owl:NamedIndividual ,
                                  :RRPYBSdeHQObrzQD5UT74I ;
                         elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "irregularWaterInjection_unit3"@en .
 
 
-###  http://w3id.org/emmo/domain/neo#RsZEl0qfySUbopX7Z6mlXE
+###  https://w3id.org/emmo/domain/neo#RsZEl0qfySUbopX7Z6mlXE
 :RsZEl0qfySUbopX7Z6mlXE rdf:type owl:NamedIndividual ,
                                  :RB5vIXZFuMYcHWSzNAPjPtF ;
                         elite:hasNext :R7MkAFLocpCOTpR1W4846Wv ;
