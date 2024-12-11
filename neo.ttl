@@ -8,15 +8,16 @@
 @base <https://w3id.org/emmo/domain/neo#> .
 
 <https://w3id.org/emmo/domain/neo/neo> rdf:type owl:Ontology ;
-                                       owl:versionIRI <https://w3id.org/emmo/domain/neo/0.0.1/neo> ;
-                                       owl:imports <https://w3id.org/emmo/emmo-lite/0.0.2> ;
-                                       <http://purl.org/dc/terms/contributor> "Anna Anchini"@en ,
-                                                                              "Dario Rimondini"@it ,
-                                                                              "Francesco Antonio Zaccarini"@it ,
-                                                                              "Ilaria Maria Paponetti"@it ,
-                                                                              "Samuele Baldini"@it ,
-                                                                              "Saverio Quaranta"@it ,
-                                                                              """The Nuclear Energy Ontology (NEO) is a domain ontology developed under the EMMO framework for the representation of concepts in the field of nuclear energy. It is based on commonly used standardization vocabularies, such as:
+                                        owl:versionIRI <https://w3id.org/emmo/domain/neo/0.0.1/neo> ;
+                                        owl:imports <https://w3id.org/emmo/emmo-lite/0.0.2> ;
+                                        <http://purl.org/dc/terms/contributor> "Anna Anchini"@en ,
+                                                                               "Dario Rimondini"@it ,
+                                                                               "Francesco Antonio Zaccarini"@it ,
+                                                                               "Ilaria Maria Paponetti"@it ,
+                                                                               "Samuele Baldini"@it ,
+                                                                               "Saverio Quaranta"@it ;
+                                        <http://purl.org/dc/terms/creator> "Emanuele Ghedini"@it ;
+                                        <http://purl.org/dc/terms/description> """The Nuclear Energy Ontology (NEO) is a domain ontology developed under the EMMO framework for the representation of concepts in the field of nuclear energy. It is based on commonly used standardization vocabularies, such as:
     - ISO 12749 - Nuclear energy, nuclear technologies, and radiological protection
     - \"Construction Technologies for Nuclear Power Plants\", IAEA Nuclear Energy Series, No. NP-T-2.5, IAEA, Vienna (AU), 2011
     - IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition.
@@ -24,9 +25,8 @@
 It includes the representation of the Fukushima Daichi accident, based on the official IAEA report: \"The Fukushima Daiichi accident - Technical Volume 1: Description and Context of the Accident\", IAEA, Vienna (AU), 2015, STI/PUB/1710, ISBN 978–92–0–107015–9
 
 The ontology is still in development phase and provides a partial cover of the nuclear engineering domain and Fukushima Daichi accident report."""@en ;
-                                       <http://purl.org/dc/terms/creator> "Emanuele Ghedini"@it ;
-                                       <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/legalcode"^^xsd:anyURI ;
-                                       <http://purl.org/dc/terms/title> "Nuclear Energy Ontology"@en .
+                                        <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/legalcode"^^xsd:anyURI ;
+                                        <http://purl.org/dc/terms/title> "Nuclear Energy Ontology"@en .
 
 #################################################################
 #    Annotation properties
@@ -44,33 +44,16 @@ The ontology is still in development phase and provides a partial cover of the n
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV
-:R8xx0dhbEh1tjGMDwNZfckV rdf:type owl:AnnotationProperty ;
-                         :R8xx0dhbEh1tjGMDwNZfckV "A short explanation aimed to guide the reader towards the intended interpretation of the ontological concept."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "definition"@en ;
-                         rdfs:subPropertyOf rdfs:comment .
-
-
-###  https://w3id.org/emmo/domain/neo#R9Q7fCgWnAkzqnVMtRJ4WDv
-:R9Q7fCgWnAkzqnVMtRJ4WDv rdf:type owl:AnnotationProperty ;
-                         :R8xx0dhbEh1tjGMDwNZfckV "A reference to real entities aimed to explain the intended interpretation for the ontological concept."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "example"@en ;
-                         rdfs:subPropertyOf rdfs:comment .
-
-
-###  https://w3id.org/emmo/domain/neo#RR3uD2d7YfhHohfv2Nm6sX
-:RR3uD2d7YfhHohfv2Nm6sX rdf:type owl:AnnotationProperty ;
-                        :R8xx0dhbEh1tjGMDwNZfckV "Additional text aimed to explain the conceptual choices of the authors."@en ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "comment"@en ;
-                        rdfs:subPropertyOf rdfs:comment .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#comment
@@ -97,6 +80,27 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 <http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty ;
                                                 rdfs:subPropertyOf rdfs:label .
+
+
+###  https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV
+:R8xx0dhbEh1tjGMDwNZfckV rdf:type owl:AnnotationProperty ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "definition"@en ;
+                         :R8xx0dhbEh1tjGMDwNZfckV "A short explanation aimed to guide the reader towards the intended interpretation of the ontological concept."@en ;
+                         rdfs:subPropertyOf rdfs:comment .
+
+
+###  https://w3id.org/emmo/domain/neo#R9Q7fCgWnAkzqnVMtRJ4WDv
+:R9Q7fCgWnAkzqnVMtRJ4WDv rdf:type owl:AnnotationProperty ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "example"@en ;
+                         :R8xx0dhbEh1tjGMDwNZfckV "A reference to real entities aimed to explain the intended interpretation for the ontological concept."@en ;
+                         rdfs:subPropertyOf rdfs:comment .
+
+
+###  https://w3id.org/emmo/domain/neo#RR3uD2d7YfhHohfv2Nm6sX
+:RR3uD2d7YfhHohfv2Nm6sX rdf:type owl:AnnotationProperty ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "comment"@en ;
+                        :R8xx0dhbEh1tjGMDwNZfckV "Additional text aimed to explain the conceptual choices of the authors."@en ;
+                        rdfs:subPropertyOf rdfs:comment .
 
 
 #################################################################
@@ -280,10 +284,10 @@ pressure and two low pressure systems."""@en ;
                                            owl:onProperty elite:isConstitutiveProcessOf ;
                                            owl:someValuesFrom :RB8nGLKVMobwZ43LOnPJsjS
                                          ] ;
-                         :R8xx0dhbEh1tjGMDwNZfckV "The rapid insertion of a chemically soluble neutron poison (such as boric acid) into the reactor coolant system to ensure reactor shutdown."@en ;
                          rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/safety-injection.html> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearPoisonInjection"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyInjection"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyInjection"@en ;
+                         :R8xx0dhbEh1tjGMDwNZfckV "The rapid insertion of a chemically soluble neutron poison (such as boric acid) into the reactor coolant system to ensure reactor shutdown."@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R78r8gHpSEIS6CD3QqneUoR
@@ -478,10 +482,10 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
 ###  https://w3id.org/emmo/domain/neo#R7fkBdyMeKQvQzm3yRgM2iz
 :R7fkBdyMeKQvQzm3yRgM2iz rdf:type owl:Class ;
                          rdfs:subClassOf :Rryk3Z5XNZ11ZiiLuT5M8Q ;
-                         :R8xx0dhbEh1tjGMDwNZfckV "Plant procedures that direct operators' actions necessary to mitigate the consequences of transients and accidents that have caused plant parameters to exceed reactor protection system set points or engineered safety feature set points, or other established limits."@en ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1025/ML102560007.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "EOP"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "EmergencyOperationProcedures"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "EmergencyOperationProcedures"@en ;
+                         :R8xx0dhbEh1tjGMDwNZfckV "Plant procedures that direct operators' actions necessary to mitigate the consequences of transients and accidents that have caused plant parameters to exceed reactor protection system set points or engineered safety feature set points, or other established limits."@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7gZLWyPCimwGhHTueSRPhd
@@ -544,11 +548,11 @@ perform its intended safety functions.""" ;
 ###  https://w3id.org/emmo/domain/neo#R7pKuzitkkIAgc5NxDlqfH4
 :R7pKuzitkkIAgc5NxDlqfH4 rdf:type owl:Class ;
                          rdfs:subClassOf :RDP6jdP3MdBK59hhoDGY0Vw ;
-                         :RR3uD2d7YfhHohfv2Nm6sX "qualcosa che conduce ad una deviazione, a prescidere da chi lo ha fatto e perchè" ;
                          rdfs:comment "It is an event that can occur due to human error or the failure of artificial or industrial structures or phenomena."@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "UnexpectedEvent" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "An unintended event is any casual occurrence, not controlled that can lead to hazardous condition to the surrounding environment where it takes place"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "UnintendedEvent"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "UnintendedEvent"@en ;
+                         :RR3uD2d7YfhHohfv2Nm6sX "qualcosa che conduce ad una deviazione, a prescidere da chi lo ha fatto e perchè" .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7pvNIWMyFBzmeL9EcH58g8
@@ -609,8 +613,8 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
 
 ###  https://w3id.org/emmo/domain/neo#R7tsY17A1s9DZ7gbZrjbVt6
 :R7tsY17A1s9DZ7gbZrjbVt6 rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Whole ,
-                                         :R9p0u8Gh9Tup5P416Wl32S7 ,
+                         rdfs:subClassOf :R9p0u8Gh9Tup5P416Wl32S7 ,
+                                         elite:Whole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isSubProcessOf ;
                                            owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
@@ -638,12 +642,12 @@ The secondary side water volume of the isolation condenser (both trains together
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          :Rw4mCgviqd6HTitZEzST6w ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:isOutputOf ;
-                                           owl:someValuesFrom :RB5vIXZFuMYcHWSzNAPjPtF
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isOutputOf ;
+                                           owl:someValuesFrom :RB5vIXZFuMYcHWSzNAPjPtF
                                          ] ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1410/ML14107A411.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorUltimateHeatSink"@en ,
@@ -995,10 +999,10 @@ system to perform its intended function."""@en ;
 :R8yJFxRXki6jB3lgKxV6thW rdf:type owl:Class ;
                          rdfs:subClassOf :R84TLuFmfSZMhgSh0uL0LXk ,
                                          :RBv35jM3VSFKKxtWNVyDILw ;
-                         :R8xx0dhbEh1tjGMDwNZfckV "Measurement of dose or contamination for the purpose of the assessment or control of exposure to radiation or radioactive material, and the interpretation of the results."@en ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:20553:ed-1:v1:en:term:3.15> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ContaminationMonitoring"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ContaminationMeasurement"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ContaminationMeasurement"@en ;
+                         :R8xx0dhbEh1tjGMDwNZfckV "Measurement of dose or contamination for the purpose of the assessment or control of exposure to radiation or radioactive material, and the interpretation of the results."@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8ym94st1azekRHdt3ayDq5
@@ -1179,13 +1183,13 @@ perform its intended safety functions."""@en ;
 ###  https://w3id.org/emmo/domain/neo#R9PjB5mvpVfreaI0pbTQFj6
 :R9PjB5mvpVfreaI0pbTQFj6 rdf:type owl:Class ;
                          rdfs:subClassOf :R91s5ihcKvYBOzeCaNlNVVK ;
-                         rdfs:comment "Material designated in national law or by a regulatory body as being  subject to regulatory control because of its radioactivity."@en ,
+                         rdfs:comment """Any material containing radionuclides where both the activity
+concentration and the total activity in the consignment exceed the values specified
+in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ,
+                                      "Material designated in national law or by a regulatory body as being  subject to regulatory control because of its radioactivity."@en ,
                                       """This is the ‘regulatory’ meaning of radioactive (2), and should not be confused with
 the ‘scientific’ meaning of radioactive (1): ‘exhibiting radioactivity; emitting or
-relating to the emission of ionizing radiation or particles’."""@en ,
-                                      """Any material containing radionuclides where both the activity
-concentration and the total activity in the consignment exceed the values specified
-in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ;
+relating to the emission of ionizing radiation or particles’."""@en ;
                          rdfs:isDefinedBy <https://www.undrr.org/understanding-disaster-risk/terminology/hips/tl0002> ;
                          rdfs:seeAlso """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
 and Radiation Protection, 2018 Edition """ ;
@@ -1212,8 +1216,8 @@ and Radiation Protection, 2018 Edition """ ;
 
 ###  https://w3id.org/emmo/domain/neo#R9ZCvqvWWCWSwBxX7K82iwL
 :R9ZCvqvWWCWSwBxX7K82iwL rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Role ,
-                                         :R9p0u8Gh9Tup5P416Wl32S7 ,
+                         rdfs:subClassOf :R9p0u8Gh9Tup5P416Wl32S7 ,
+                                         elite:Role ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isSubProcessOf ;
                                            owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
@@ -1272,8 +1276,8 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
 
 ###  https://w3id.org/emmo/domain/neo#R9s3bSmQntRAaUAzg5iKhyy
 :R9s3bSmQntRAaUAzg5iKhyy rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Role ,
-                                         :RBfqFRty5Hp4V4caVtEvWdD ,
+                         rdfs:subClassOf :RBfqFRty5Hp4V4caVtEvWdD ,
+                                         elite:Role ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isInputOf ;
                                            owl:someValuesFrom :R81QzLfYKssKKQ25a1Ibyv7
@@ -1432,12 +1436,12 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          rdfs:subClassOf :R7gZLWyPCimwGhHTueSRPhd ,
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:isInputOf ;
-                                           owl:someValuesFrom :RB5vIXZFuMYcHWSzNAPjPtF
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isInputOf ;
+                                           owl:someValuesFrom :RB5vIXZFuMYcHWSzNAPjPtF
                                          ] ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "DecayHeatRemoval"@en ,
@@ -1616,10 +1620,10 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
                                            owl:onProperty elite:isConstitutiveProcessOf ;
                                            owl:someValuesFrom :RBp2yVTrXRyb55JnYdvAGux
                                          ] ;
-                         :R8xx0dhbEh1tjGMDwNZfckV "Activation of the Core Spray System in which coolant is sent through the discharge path to the core spray sparger using core spray pumps."@en ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1125/ML11258A368.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CoreSpray"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SprayInjection"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SprayInjection"@en ;
+                         :R8xx0dhbEh1tjGMDwNZfckV "Activation of the Core Spray System in which coolant is sent through the discharge path to the core spray sparger using core spray pumps."@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#RC5Uc3vBrAsYC8gCNkTsLH
@@ -1632,10 +1636,10 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
 ###  https://w3id.org/emmo/domain/neo#RC5rdqmZ9FmptamkomAjr4J
 :RC5rdqmZ9FmptamkomAjr4J rdf:type owl:Class ;
                          rdfs:subClassOf :R7QpMP9Mf1mRrRVeMT7UcIX ;
-                         :RR3uD2d7YfhHohfv2Nm6sX "Fission products and actinides produced by neutron absorption of nuclear fuel itself are normally referred to by those specific names, and activation product reserved for products of neutron capture by other materials, such as structural components of the nuclear reactor or nuclear bomb, the reactor coolant, control rods or other neutron poisons, or materials in the environment. All of these, however, need to be handled as radioactive waste. Some nuclides originate in more than one way, as activation products or fission products."@en ;
                          rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Activation_product> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "An activation product is a material that has been made radioactive by the process of neutron activation."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ActivatedMaterial"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ActivatedMaterial"@en ;
+                         :RR3uD2d7YfhHohfv2Nm6sX "Fission products and actinides produced by neutron absorption of nuclear fuel itself are normally referred to by those specific names, and activation product reserved for products of neutron capture by other materials, such as structural components of the nuclear reactor or nuclear bomb, the reactor coolant, control rods or other neutron poisons, or materials in the environment. All of these, however, need to be handled as radioactive waste. Some nuclides originate in more than one way, as activation products or fission products."@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#RC9Vnqc96TS4VVdygnxu8UP
@@ -1682,16 +1686,16 @@ from control."""@en ;
                          rdfs:subClassOf :R6dO6yatvM1kcW0Iuf8Z0R ,
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
+                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
+                                           owl:someValuesFrom :R70ZOvZxdVYhbMrv2o1bK8I
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isInputOf ;
                                            owl:someValuesFrom :R1DAH32q3UDTp3GZGqe5Re
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isInputOf ;
                                            owl:someValuesFrom :R80L6MpJJVkL4hoNB7thCRV
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                           owl:someValuesFrom :R70ZOvZxdVYhbMrv2o1bK8I
                                          ] ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1125/ML11258A305.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CRD﻿"@en ;
@@ -1961,8 +1965,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RDGsX7GTlCOL8Jlk3fXBK7U
 :RDGsX7GTlCOL8Jlk3fXBK7U rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Role ,
-                                         :R7qv2nUGxSNZRvXyF3CXPTr ,
+                         rdfs:subClassOf :R7qv2nUGxSNZRvXyF3CXPTr ,
+                                         elite:Role ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isOutputOf ;
                                            owl:someValuesFrom :R9ZCvqvWWCWSwBxX7K82iwL
@@ -2020,10 +2024,10 @@ Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R85FFwLPHIursWfa6K6sKK9
                                          ] ;
-                         :R8xx0dhbEh1tjGMDwNZfckV "chamber, below ground level in a pumping installation that receives water to be pumped "@en ;
                          rdfs:isDefinedBy "ISO 6107:2021(en) Water quality — Vocabulary " ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorWetWell"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "WetWell"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "WetWell"@en ;
+                         :R8xx0dhbEh1tjGMDwNZfckV "chamber, below ground level in a pumping installation that receives water to be pumped "@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDP6jdP3MdBK59hhoDGY0Vw
@@ -2035,17 +2039,17 @@ Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#RDS0g8UekSMDWjEgBp6z2sP
 :RDS0g8UekSMDWjEgBp6z2sP rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Role ,
-                                         :RBfqFRty5Hp4V4caVtEvWdD ,
+                         rdfs:subClassOf :RBfqFRty5Hp4V4caVtEvWdD ,
+                                         elite:Role ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isOutputOf ;
                                            owl:someValuesFrom :R9ZCvqvWWCWSwBxX7K82iwL
                                          ] ;
-                         :RR3uD2d7YfhHohfv2Nm6sX """Fast neutrons are considered as such in the context of a fission nuclear reactor, where the average neutron energy emerging from fission is about 2 MeV, before being slowed down by collisions. 
-While in some textbooks you can find a defnition of fast neutron as a neutron with E > 50 keV, there is not a clear definition of the range within which a neutron can be considered \"fast\"."""@en ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.5.1> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A neutron with kinetic energy greater than its surroundings when released during fission."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "FastNeutron"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "FastNeutron"@en ;
+                         :RR3uD2d7YfhHohfv2Nm6sX """Fast neutrons are considered as such in the context of a fission nuclear reactor, where the average neutron energy emerging from fission is about 2 MeV, before being slowed down by collisions. 
+While in some textbooks you can find a defnition of fast neutron as a neutron with E > 50 keV, there is not a clear definition of the range within which a neutron can be considered \"fast\"."""@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDT2hV6YibqdGN2HMXay4hK
@@ -2149,12 +2153,12 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 :RDoeQzvUClmOY7fNhDvK0L1 rdf:type owl:Class ;
                          rdfs:subClassOf elite:Object ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:isConstituentOf ;
-                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isConstituentOf ;
+                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:24679:-1:ed-1:v1:en:term:3.1> ;
                          <http://www.w3.org/2004/02/skos/core#comment> """They are distinguished from elements as integral part of a built environment
@@ -2170,7 +2174,6 @@ Note 1 to entry: This includes floors, walls, beams, columns, doors, and penetra
                                            owl:onProperty elite:isConstitutiveProcessOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
-                         :RR3uD2d7YfhHohfv2Nm6sX "No off-site radiological impact (bounded by regulatory operating limits for discharge)"@en ;
                          rdfs:comment "Level 1 of Defense in depth: Plant control under normal conditions"@en ,
                                       "StandardOperatingProcedures (SOP)"@en ,
                                       """The prevention of system failures and deviations from normal operations. This is a continuous and largely
@@ -2182,7 +2185,8 @@ undetected failures can be lower."""@en ,
                          rdfs:seeAlso "INTERNATIONAL ATOMIC ENERGY AGENCY, Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NPPPreventiveOperation"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Operation within specified operational limits and conditions. This includes startup, power operation, shutting down, shutdown, maintenance, testing and refuelling"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperation"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperation"@en ;
+                         :RR3uD2d7YfhHohfv2Nm6sX "No off-site radiological impact (bounded by regulatory operating limits for discharge)"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDqGoUzaBPNiIDtLS6qlo3t
@@ -2350,7 +2354,6 @@ Glossary of Terms in ARIS Reports""" ;
                                           owl:onProperty elite:hasNext ;
                                           owl:someValuesFrom :R9TI5UbsBXnAYSIi17pJARr
                                         ] ;
-                        :RR3uD2d7YfhHohfv2Nm6sX "Possiamo dire che un unintened event è un evento le cui conseguenze possono mettere a rischio le condizioni operative del reattore fino a portare ad un danneggiamento"@it ;
                         rdfs:comment """An unintended event is any occurrence unintended
 by the operator, including operating error, equipment failure or other mishap, and deliberate
 action on the part of others, the consequences or potential consequences of which are not
@@ -2358,7 +2361,8 @@ negligible from the point of view of protection and safety"""@en ;
                         rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
                         <http://www.w3.org/2004/02/skos/core#definition> """Is any occurrence that can lead to potential consequences that are not
 negligible from the point of view of protection and safety of a Nuclear power plant"""@en ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPUnintendedEvent"@en .
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPUnintendedEvent"@en ;
+                        :RR3uD2d7YfhHohfv2Nm6sX "Possiamo dire che un unintened event è un evento le cui conseguenze possono mettere a rischio le condizioni operative del reattore fino a portare ad un danneggiamento"@it .
 
 
 ###  https://w3id.org/emmo/domain/neo#RMiSxLtLOMDcYH1jWDJO1b
@@ -2580,10 +2584,10 @@ Postulated accidents are also known as Condition IV events.""" ;
                                           owl:onProperty elite:isBehaviourOf ;
                                           owl:someValuesFrom :RRVTDj2E9x5cjit7EQ9Dkx
                                         ] ;
-                        :R8xx0dhbEh1tjGMDwNZfckV "Loss of those devices like batteries and solar panel that during SBO conditions are required to power a minimum set of critical equipment important to safety, as well as critical instrumentation for monitoring of plant parameters, and emergency lighting"@en ;
                         rdfs:isDefinedBy <https://www-pub.iaea.org/MTCD/Publications/PDF/TE-1770_web.pdf> ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Loss of those devices like batteries and solar panel that during SBO conditions are required to power a minimum set of critical equipment important to safety, as well as critical instrumentation for monitoring of plant parameters, and emergency lighting"@en ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfDCPower"@en .
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfDCPower"@en ;
+                        :R8xx0dhbEh1tjGMDwNZfckV "Loss of those devices like batteries and solar panel that during SBO conditions are required to power a minimum set of critical equipment important to safety, as well as critical instrumentation for monitoring of plant parameters, and emergency lighting"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#RbscqwUSgWtKWJZrcgSNr9
@@ -2827,15 +2831,15 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RyMmVkVf9zClluOSgfr1Rh
 :RyMmVkVf9zClluOSgfr1Rh rdf:type owl:Class ;
-                        rdfs:subClassOf elite:Whole ,
-                                        :RDoeQzvUClmOY7fNhDvK0L1 ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty elite:isConstituentOf ;
-                                          owl:someValuesFrom :RBW32C4x3sn1YahVG7uYVun
-                                        ] ,
+                        rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
+                                        elite:Whole ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                           owl:someValuesFrom :RCRVu2hmIevYnx0eZzyJEPs
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty elite:isConstituentOf ;
+                                          owl:someValuesFrom :RBW32C4x3sn1YahVG7uYVun
                                         ] ;
                         rdfs:isDefinedBy "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors" ;
                         <http://www.w3.org/2004/02/skos/core#definition> """part of a nuclear reactor (3.1.22), where the fissionable nuclides (3.1.2) sustaining the fission chain are located
@@ -3389,4 +3393,4 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit4"@en .
 
 
-###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
