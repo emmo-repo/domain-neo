@@ -127,6 +127,11 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
+###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
+:NuclearEnergyObject rdf:type owl:Class ;
+                     rdfs:subClassOf elite:Object .
+
+
 ###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
 :R0N27qMQzeRjM0vSOeAvUT rdf:type owl:Class ;
                         rdfs:subClassOf :NuclearEnergyObject ;
@@ -381,8 +386,8 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 
 ###  https://w3id.org/emmo/domain/neo#R7QpMP9Mf1mRrRVeMT7UcIX
 :R7QpMP9Mf1mRrRVeMT7UcIX rdf:type owl:Class ;
-                         rdfs:subClassOf :R9PjB5mvpVfreaI0pbTQFj6 ,
-                                         :RtX7ESf673Z9eYoseycPyl ,
+                         rdfs:subClassOf :RtX7ESf673Z9eYoseycPyl ,
+                                         :ArtificialRadioactiveMaterial ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :RyMmVkVf9zClluOSgfr1Rh
@@ -949,7 +954,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
 
 ###  https://w3id.org/emmo/domain/neo#R8qKVAw3v5SZK2O6Y8cyDEr
 :R8qKVAw3v5SZK2O6Y8cyDEr rdf:type owl:Class ;
-                         rdfs:subClassOf :R7QpMP9Mf1mRrRVeMT7UcIX ;
+                         rdfs:subClassOf elite:Role ;
                          rdfs:isDefinedBy "https://aris.iaea.org/sites/Glossary.html Glossary of Terms in ARIS Reports"@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Moderator" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A material that is used to decrease the speed of the fast neutron produced during a fission even and thus sustaining a chain reaction."@en ;
@@ -1040,14 +1045,6 @@ Nuclear energy — Vocabulary — Part 1: General terminology""" ;
                          rdfs:isDefinedBy "IWA 33-1:2019(en) Technical guidelines for the development of small hydropower plants — Part 1: Vocabulary "@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "DC power source equipment transforming electric energy into chemical energy for storage"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "StorageBattery"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R91s5ihcKvYBOzeCaNlNVVK
-:R91s5ihcKvYBOzeCaNlNVVK rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyObject ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-227:ed-2:v1:en:term:3.3.27> ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "a quantity of matter"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Material"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R94o7o1nZqxzHLLqTyhHY08
@@ -1182,7 +1179,7 @@ perform its intended safety functions."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#R9PjB5mvpVfreaI0pbTQFj6
 :R9PjB5mvpVfreaI0pbTQFj6 rdf:type owl:Class ;
-                         rdfs:subClassOf :R91s5ihcKvYBOzeCaNlNVVK ;
+                         rdfs:subClassOf elite:Material ;
                          rdfs:comment "Material designated in national law or by a regulatory body as being  subject to regulatory control because of its radioactivity."@en ,
                                       """This is the ‘regulatory’ meaning of radioactive (2), and should not be confused with
 the ‘scientific’ meaning of radioactive (1): ‘exhibiting radioactivity; emitting or
@@ -1196,7 +1193,7 @@ and Radiation Protection, 2018 Edition """ ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearMaterial" ,
                                                                         "NuclearReactorMaterial" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A radioactive material is a substance or a material emitting, or related to the emission of, ionising radiation (either in the form of electromagnetic waves or particle radiation) (IAEA, 2018)."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RadioactiveMaterials"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RadioactiveMaterial"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R9Q7QurACY7OmMRPPPbDU7J
@@ -1399,10 +1396,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#RBU28e2pgiTqsaTCPWnAJ6y
 :RBU28e2pgiTqsaTCPWnAJ6y rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:isAddedTo ;
-                                           owl:someValuesFrom :R7ASmNcKrlRjzYHkUz3vfQT
-                                         ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty [ owl:inverseOf elite:isSubProcessOf
                                                           ] ;
@@ -2340,7 +2333,7 @@ Service activities relating to drinking water supply, wastewater and stormwater 
 
 ###  https://w3id.org/emmo/domain/neo#RJmt9cNm88D71RlMOkJ6WM
 :RJmt9cNm88D71RlMOkJ6WM rdf:type owl:Class ;
-                        rdfs:subClassOf :R7QpMP9Mf1mRrRVeMT7UcIX ;
+                        rdfs:subClassOf elite:Role ;
                         rdfs:isDefinedBy """https://aris.iaea.org/sites/Glossary.html 
 Glossary of Terms in ARIS Reports""" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "A substance that is used to remove or transfer heat from the reactor core. Common coolants include light water, heavy water, air, carbon dioxide, helium, liquid sodium, and a sodium-potassium alloy."@en ;
@@ -2592,14 +2585,15 @@ Postulated accidents are also known as Condition IV events.""" ;
 
 ###  https://w3id.org/emmo/domain/neo#RbscqwUSgWtKWJZrcgSNr9
 :RbscqwUSgWtKWJZrcgSNr9 rdf:type owl:Class ;
-                        rdfs:subClassOf :R91s5ihcKvYBOzeCaNlNVVK ;
+                        rdfs:subClassOf :RadiactiveMaterialByOccurence ;
+                        owl:disjointWith :ArtificialRadioactiveMaterial ;
                         rdfs:comment """The exact definition of ‘significant amounts’ would be a regulatory decision.
 Material in which the activity concentrations of the naturally occurring radionuclides have been changed by a process is included in naturally occurring radioactive material (NORM).
  Naturally occurring radioactive material or NORM should be used in the singular unless reference is explicitly being made to various materials."""@en ;
                         rdfs:isDefinedBy """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
 and Radiation Protection, 2018 Edition """ ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Radioactive material containing no significant amounts of radionuclides other than naturally occurring radionuclides.﻿"@en ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NaturallyOccurringRadioactiveMaterial"@en .
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NaturallyRadioactiveMaterial"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#RdPoUW04SB1jvKPJcXoVCW
@@ -2847,9 +2841,15 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCore"@en .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#NuclearEnergyObject
-:NuclearEnergyObject rdf:type owl:Class ;
-                     rdfs:subClassOf elite:Object .
+###  https://w3id.org/emmo/domain/neo/neo#ArtificialRadioactiveMaterial
+:ArtificialRadioactiveMaterial rdf:type owl:Class ;
+                               rdfs:subClassOf :RadiactiveMaterialByOccurence .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#RadiactiveMaterialByOccurence
+:RadiactiveMaterialByOccurence rdf:type owl:Class ;
+                               rdfs:subClassOf :R9PjB5mvpVfreaI0pbTQFj6 ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "The superclass for categorisation of nuclear materials according to their occurence, natural or artificial."@en .
 
 
 #################################################################
@@ -2918,9 +2918,9 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                        :R9icMA5hIFg4wyRyuVCUEYW ,
                                        :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          elite:foregoes :R7OojlUGWcg81Y4DnKKUYtE ,
-                                       :RBc3mI1yVMSGjTWyWdVvMiP ,
-                                       :RBfahJ7XEvDRY0I74gA4EhW ,
-                                       :RCJ4sUQgpXReJhv2l3TNlPt ;
+                                        :RBc3mI1yVMSGjTWyWdVvMiP ,
+                                        :RBfahJ7XEvDRY0I74gA4EhW ,
+                                        :RCJ4sUQgpXReJhv2l3TNlPt ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfOffSitePower_Fukushima"@en .
 
 
@@ -2936,7 +2936,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 :R7TeIrUcoeFIohoZFYT6oHo rdf:type owl:NamedIndividual ,
                                   :R7t1vs1VKDAzHkcQsFbt9JC ;
                          elite:foregoes :R71kogAKcOnrzKRRvJYzEnf ,
-                                       :RCIQAmGtY5oJHuuVHp7Y9OF ;
+                                        :RCIQAmGtY5oJHuuVHp7Y9OF ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "HPCIOperation_unit3"@en .
 
@@ -2945,7 +2945,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 :R7UHidTtMLlwJsXw3LunBVr rdf:type owl:NamedIndividual ,
                                   :Rba6gbJ70iyZgFOVY5Z6Vo ;
                          elite:foregoes :R9ci3rSU9PmVM9hDoObI7GN ,
-                                       :R9t3qBNc7hgSJ9CltHNvCc4 ;
+                                        :R9t3qBNc7hgSJ9CltHNvCc4 ;
                          elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit1"@en .
 
@@ -2999,9 +2999,9 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                        :R9icMA5hIFg4wyRyuVCUEYW ,
                                        :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          elite:foregoes :R7c6WbN81RxcJpHXeGHXv8 ,
-                                       :R9om4FPZlN1Gg2qFReIfI60 ,
-                                       :RMp5GbDdB45DJyWFDXk4qT ,
-                                       :RsZEl0qfySUbopX7Z6mlXE ;
+                                        :R9om4FPZlN1Gg2qFReIfI60 ,
+                                        :RMp5GbDdB45DJyWFDXk4qT ,
+                                        :RsZEl0qfySUbopX7Z6mlXE ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "tohokuTzunami"@en .
 
 
@@ -3141,9 +3141,9 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                        :R9icMA5hIFg4wyRyuVCUEYW ,
                                        :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          elite:foregoes :R56puCaUpuR7eQFm7rEWOv ,
-                                       :R7RRzaczCz4wVsf2ZSE3cz5 ,
-                                       :R7RYQTRTJpydcZySPvfj97U ,
-                                       :RDmRDuXNQJPOriCxkLUlrUE ;
+                                        :R7RRzaczCz4wVsf2ZSE3cz5 ,
+                                        :R7RYQTRTJpydcZySPvfj97U ,
+                                        :RDmRDuXNQJPOriCxkLUlrUE ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "tohokuEarthquake"@en .
 
 
@@ -3187,9 +3187,9 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                        :R9icMA5hIFg4wyRyuVCUEYW ,
                                        :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          elite:foregoes :R8SCvSsZInboPn0aMi5hJ2b ,
-                                       :RB4janzOcDoxSfpU6974nab ,
-                                       :RC2M3wEsCROuuDC6Bjz9TLz ,
-                                       :RC6oDea7metjydM6Dr1mJsi ;
+                                        :RB4janzOcDoxSfpU6974nab ,
+                                        :RC2M3wEsCROuuDC6Bjz9TLz ,
+                                        :RC6oDea7metjydM6Dr1mJsi ;
                          elite:isBehaviourOf :R7xpEdKwbxANkjtrQrh0ep ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "dieselGeneratorActivation_Fukushima"@en .
 
@@ -3239,7 +3239,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 :RCIQAmGtY5oJHuuVHp7Y9OF rdf:type owl:NamedIndividual ,
                                   :R8FmlobZiHsCZi4CHKxgtMg ;
                          elite:foregoes :RBEpkkG2mXF3wnnZPT5lDoa ,
-                                       :RCZSMiyXPZ1w9KtBMir31du ;
+                                        :RCZSMiyXPZ1w9KtBMir31du ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SCVentilation_unit3"@en .
 
