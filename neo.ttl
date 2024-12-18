@@ -532,7 +532,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
                          rdfs:subClassOf :R7pKuzitkkIAgc5NxDlqfH4 ,
                                          :R7s6BZ18NYlgydAQozd7POd ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:hasNext ;
+                                           owl:onProperty elite:foregoes ;
                                            owl:someValuesFrom :R9TI5UbsBXnAYSIi17pJARr
                                          ] ;
                          rdfs:comment """An occurrence that results in a component’s loss of capability to
@@ -972,7 +972,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
 :R8sjiaUqifg1oq1iJBb45A6 rdf:type owl:Class ;
                          rdfs:subClassOf :R9TI5UbsBXnAYSIi17pJARr ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:hasNext ;
+                                           owl:onProperty elite:foregoes ;
                                            owl:someValuesFrom :RZ7eQ19CTPh8iKBmvqWp16
                                          ] ,
                                          [ rdf:type owl:Restriction ;
@@ -1553,7 +1553,7 @@ Note 1 to entry: The actuation can be done by gas pressure, electrical, hydrauli
                          rdfs:subClassOf :RLEjSGGgoWOVMGjQsskCsb ,
                                          :RRxSYO9r2FD1rHmRPugfob ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:hasNext ;
+                                           owl:onProperty elite:foregoes ;
                                            owl:someValuesFrom :RCP7vIugzt8V7rXL11buOZH
                                          ] ;
                          rdfs:comment "here there are all the events that can lead to the degradation of the core," ;
@@ -1587,7 +1587,7 @@ Note 1 to entry: The actuation can be done by gas pressure, electrical, hydrauli
 :RBvFxrHecZjciXe2qvDn2vv rdf:type owl:Class ;
                          rdfs:subClassOf :RRxSYO9r2FD1rHmRPugfob ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:hasNext ;
+                                           owl:onProperty elite:foregoes ;
                                            owl:someValuesFrom :RC9Vnqc96TS4VVdygnxu8UP
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#definition> """A PIE Is an event identified in the
@@ -2351,7 +2351,7 @@ Glossary of Terms in ARIS Reports""" ;
 :RLEjSGGgoWOVMGjQsskCsb rdf:type owl:Class ;
                         rdfs:subClassOf :R7pKuzitkkIAgc5NxDlqfH4 ,
                                         [ rdf:type owl:Restriction ;
-                                          owl:onProperty elite:hasNext ;
+                                          owl:onProperty elite:foregoes ;
                                           owl:someValuesFrom :R9TI5UbsBXnAYSIi17pJARr
                                         ] ;
                         rdfs:comment """An unintended event is any occurrence unintended
@@ -2448,7 +2448,7 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en 
 :RRxSYO9r2FD1rHmRPugfob rdf:type owl:Class ;
                         rdfs:subClassOf :R9TI5UbsBXnAYSIi17pJARr ,
                                         [ rdf:type owl:Restriction ;
-                                          owl:onProperty elite:hasNext ;
+                                          owl:onProperty elite:foregoes ;
                                           owl:someValuesFrom :RC9Vnqc96TS4VVdygnxu8UP
                                         ] ;
                         rdfs:isDefinedBy <https://www.nrc.gov/docs/ML2031/ML20318A171.pdf> ;
@@ -2508,7 +2508,7 @@ Large outdoor fires and the built environment — Global overview of different a
 :RZ7eQ19CTPh8iKBmvqWp16 rdf:type owl:Class ;
                         rdfs:subClassOf :R9TI5UbsBXnAYSIi17pJARr ,
                                         [ rdf:type owl:Restriction ;
-                                          owl:onProperty elite:hasNext ;
+                                          owl:onProperty elite:foregoes ;
                                           owl:someValuesFrom :RvJRwvUJjnFg7pvJ4yXd69
                                         ] ,
                                         [ rdf:type owl:Restriction ;
@@ -2866,7 +2866,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R56puCaUpuR7eQFm7rEWOv
 :R56puCaUpuR7eQFm7rEWOv rdf:type owl:NamedIndividual ,
                                  :RBwST6x27zdyWBgBunjc2Q9 ;
-                        elite:hasNext :R7RRzaczCz4wVsf2ZSE3cz5 ;
+                        elite:foregoes :R7RRzaczCz4wVsf2ZSE3cz5 ;
                         elite:isConstitutiveProcessOf :R7uvG224iPqEldlfFwndlKr ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit2"@en .
 
@@ -2874,7 +2874,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R5vADU834XOdmmbqErqMjD
 :R5vADU834XOdmmbqErqMjD rdf:type owl:NamedIndividual ,
                                  :Rba6gbJ70iyZgFOVY5Z6Vo ;
-                        elite:hasNext :R8BzCYxsJkpBVMzHmrLDfBN ;
+                        elite:foregoes :R8BzCYxsJkpBVMzHmrLDfBN ;
                         elite:isBehaviourOf :R8nP70kb2tjsTW1qDOmrdbC ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit4"@en .
 
@@ -2882,7 +2882,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R71kogAKcOnrzKRRvJYzEnf
 :R71kogAKcOnrzKRRvJYzEnf rdf:type owl:NamedIndividual ,
                                   :RC5Uc3vBrAsYC8gCNkTsLH ;
-                         elite:hasNext :RCZSMiyXPZ1w9KtBMir31du ;
+                         elite:foregoes :RCZSMiyXPZ1w9KtBMir31du ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "regularWaterInjection_unit3"@en .
 
@@ -2890,14 +2890,14 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R7MYrOmgGBYZ0JwNSP9CKGJ
 :R7MYrOmgGBYZ0JwNSP9CKGJ rdf:type owl:NamedIndividual ,
                                   :R9j7jE0NWQS6xBqDD8iJRbf ;
-                         elite:hasNext :R8SCvSsZInboPn0aMi5hJ2b ;
+                         elite:foregoes :R8SCvSsZInboPn0aMi5hJ2b ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICSystem_unit2"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7MkAFLocpCOTpR1W4846Wv
 :R7MkAFLocpCOTpR1W4846Wv rdf:type owl:NamedIndividual ,
                                   :RDN44xs0tgwZS1p11BPMMKr ;
-                         elite:hasNext :R5vADU834XOdmmbqErqMjD ;
+                         elite:foregoes :R5vADU834XOdmmbqErqMjD ;
                          elite:isBehaviourOf :R8nP70kb2tjsTW1qDOmrdbC ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit4"@en .
 
@@ -2905,7 +2905,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R7OojlUGWcg81Y4DnKKUYtE
 :R7OojlUGWcg81Y4DnKKUYtE rdf:type owl:NamedIndividual ,
                                   :R8bUZpp1yY81qmfgGNH0TyF ;
-                         elite:hasNext :RBnZe6rQs3iQOzfyrY5AKRG ;
+                         elite:foregoes :RBnZe6rQs3iQOzfyrY5AKRG ;
                          elite:isBehaviourOf :RTiXMunsU6yEXKeRVxMuQV ;
                          elite:isConstitutiveProcessOf :R8nP70kb2tjsTW1qDOmrdbC ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit4"@en .
@@ -2917,7 +2917,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                        :R8nP70kb2tjsTW1qDOmrdbC ,
                                        :R9icMA5hIFg4wyRyuVCUEYW ,
                                        :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         elite:hasNext :R7OojlUGWcg81Y4DnKKUYtE ,
+                         elite:foregoes :R7OojlUGWcg81Y4DnKKUYtE ,
                                        :RBc3mI1yVMSGjTWyWdVvMiP ,
                                        :RBfahJ7XEvDRY0I74gA4EhW ,
                                        :RCJ4sUQgpXReJhv2l3TNlPt ;
@@ -2927,7 +2927,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R7RYQTRTJpydcZySPvfj97U
 :R7RYQTRTJpydcZySPvfj97U rdf:type owl:NamedIndividual ,
                                   :RBwST6x27zdyWBgBunjc2Q9 ;
-                         elite:hasNext :R7RRzaczCz4wVsf2ZSE3cz5 ;
+                         elite:foregoes :R7RRzaczCz4wVsf2ZSE3cz5 ;
                          elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit1"@en .
 
@@ -2935,7 +2935,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R7TeIrUcoeFIohoZFYT6oHo
 :R7TeIrUcoeFIohoZFYT6oHo rdf:type owl:NamedIndividual ,
                                   :R7t1vs1VKDAzHkcQsFbt9JC ;
-                         elite:hasNext :R71kogAKcOnrzKRRvJYzEnf ,
+                         elite:foregoes :R71kogAKcOnrzKRRvJYzEnf ,
                                        :RCIQAmGtY5oJHuuVHp7Y9OF ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "HPCIOperation_unit3"@en .
@@ -2944,7 +2944,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R7UHidTtMLlwJsXw3LunBVr
 :R7UHidTtMLlwJsXw3LunBVr rdf:type owl:NamedIndividual ,
                                   :Rba6gbJ70iyZgFOVY5Z6Vo ;
-                         elite:hasNext :R9ci3rSU9PmVM9hDoObI7GN ,
+                         elite:foregoes :R9ci3rSU9PmVM9hDoObI7GN ,
                                        :R9t3qBNc7hgSJ9CltHNvCc4 ;
                          elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit1"@en .
@@ -2953,7 +2953,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R7c6WbN81RxcJpHXeGHXv8
 :R7c6WbN81RxcJpHXeGHXv8 rdf:type owl:NamedIndividual ,
                                  :RB5vIXZFuMYcHWSzNAPjPtF ;
-                        elite:hasNext :RBKxneXt3UWJzKxOD5Inibz ;
+                        elite:foregoes :RBKxneXt3UWJzKxOD5Inibz ;
                         elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit1"@en .
 
@@ -2998,7 +2998,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                        :R8nP70kb2tjsTW1qDOmrdbC ,
                                        :R9icMA5hIFg4wyRyuVCUEYW ,
                                        :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         elite:hasNext :R7c6WbN81RxcJpHXeGHXv8 ,
+                         elite:foregoes :R7c6WbN81RxcJpHXeGHXv8 ,
                                        :R9om4FPZlN1Gg2qFReIfI60 ,
                                        :RMp5GbDdB45DJyWFDXk4qT ,
                                        :RsZEl0qfySUbopX7Z6mlXE ;
@@ -3008,7 +3008,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R8Yr6YUUe0lh5UU0KHqF8Or
 :R8Yr6YUUe0lh5UU0KHqF8Or rdf:type owl:NamedIndividual ,
                                   :RlYMwSSvmqekLRLzmf5IzV ;
-                         elite:hasNext :R4UMKMNvIkmVZ4OSRIQ6Qv ;
+                         elite:foregoes :R4UMKMNvIkmVZ4OSRIQ6Qv ;
                          elite:isBehaviourOf :R9ww5067sycKsLf6pU7vT06 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "repeatedlyOpeningClosing_SRV_unit2"@en .
 
@@ -3036,7 +3036,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R9Iwyc5qtHhh0QHOXsiris3
 :R9Iwyc5qtHhh0QHOXsiris3 rdf:type owl:NamedIndividual ,
                                   :RDpEA8qdRk99FAT0xSGZgGS ;
-                         elite:hasNext :RBHjDlLwaPMxKKtjq16Lw1c ;
+                         elite:foregoes :RBHjDlLwaPMxKKtjq16Lw1c ;
                          elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit1"@en .
 
@@ -3044,7 +3044,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R9L3ykUI6w5qe20x5hVL2mK
 :R9L3ykUI6w5qe20x5hVL2mK rdf:type owl:NamedIndividual ,
                                   :RDuDSbKh236WI6rqMad7Ar4 ;
-                         elite:hasNext :R7TeIrUcoeFIohoZFYT6oHo ;
+                         elite:foregoes :R7TeIrUcoeFIohoZFYT6oHo ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICActivation_unit3"@en .
 
@@ -3052,7 +3052,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R9ci3rSU9PmVM9hDoObI7GN
 :R9ci3rSU9PmVM9hDoObI7GN rdf:type owl:NamedIndividual ,
                                   :RC5Uc3vBrAsYC8gCNkTsLH ;
-                         elite:hasNext :RPcjVut6ArBpfKG9sYPMsM ;
+                         elite:foregoes :RPcjVut6ArBpfKG9sYPMsM ;
                          elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "regularWaterInjection_unit1"@en .
 
@@ -3063,7 +3063,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                     owl:onProperty elite:isBehaviourOf ;
                                     owl:someValuesFrom :RRVTDj2E9x5cjit7EQ9Dkx
                                   ] ;
-                         elite:hasNext :RDAWOe94vcv6aVGTD0p8Rh6 ;
+                         elite:foregoes :RDAWOe94vcv6aVGTD0p8Rh6 ;
                          elite:isBehaviourOf :R7uvG224iPqEldlfFwndlKr ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit2"@en .
 
@@ -3077,7 +3077,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R9lguEUksKNv9gLzWkqBDJ4
 :R9lguEUksKNv9gLzWkqBDJ4 rdf:type owl:NamedIndividual ,
                                   :RDN44xs0tgwZS1p11BPMMKr ;
-                         elite:hasNext :R9L3ykUI6w5qe20x5hVL2mK ;
+                         elite:foregoes :R9L3ykUI6w5qe20x5hVL2mK ;
                          elite:isBehaviourOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit3"@en .
 
@@ -3085,7 +3085,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R9om4FPZlN1Gg2qFReIfI60
 :R9om4FPZlN1Gg2qFReIfI60 rdf:type owl:NamedIndividual ,
                                   :RB5vIXZFuMYcHWSzNAPjPtF ;
-                         elite:hasNext :R9lguEUksKNv9gLzWkqBDJ4 ;
+                         elite:foregoes :R9lguEUksKNv9gLzWkqBDJ4 ;
                          elite:isBehaviourOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit3"@en .
 
@@ -3093,7 +3093,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R9t3qBNc7hgSJ9CltHNvCc4
 :R9t3qBNc7hgSJ9CltHNvCc4 rdf:type owl:NamedIndividual ,
                                   :R8FmlobZiHsCZi4CHKxgtMg ;
-                         elite:hasNext :RPcjVut6ArBpfKG9sYPMsM ;
+                         elite:foregoes :RPcjVut6ArBpfKG9sYPMsM ;
                          elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SCVentilation_unit1"@en .
 
@@ -3110,7 +3110,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RB4janzOcDoxSfpU6974nab
 :RB4janzOcDoxSfpU6974nab rdf:type owl:NamedIndividual ,
                                   :R7pKuzitkkIAgc5NxDlqfH4 ;
-                         elite:hasNext :R8Yr6YUUe0lh5UU0KHqF8Or ;
+                         elite:foregoes :R8Yr6YUUe0lh5UU0KHqF8Or ;
                          elite:isConstitutiveProcessOf :R7uvG224iPqEldlfFwndlKr ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit2"@en .
 
@@ -3121,7 +3121,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                     owl:onProperty elite:isConstitutiveProcessOf ;
                                     owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                   ] ;
-                         elite:hasNext :RBHjDlLwaPMxKKtjq16Lw1c ;
+                         elite:foregoes :RBHjDlLwaPMxKKtjq16Lw1c ;
                          elite:isBehaviourOf :R7uvG224iPqEldlfFwndlKr ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit2"@en .
 
@@ -3129,7 +3129,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RBEpkkG2mXF3wnnZPT5lDoa
 :RBEpkkG2mXF3wnnZPT5lDoa rdf:type owl:NamedIndividual ,
                                   :RDGBzCkWozL4RpG1CuIzwPi ;
-                         elite:hasNext :R8BzCYxsJkpBVMzHmrLDfBN ;
+                         elite:foregoes :R8BzCYxsJkpBVMzHmrLDfBN ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "HydrogenRelease_unit3"@en .
 
 
@@ -3140,7 +3140,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                        :R8nP70kb2tjsTW1qDOmrdbC ,
                                        :R9icMA5hIFg4wyRyuVCUEYW ,
                                        :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         elite:hasNext :R56puCaUpuR7eQFm7rEWOv ,
+                         elite:foregoes :R56puCaUpuR7eQFm7rEWOv ,
                                        :R7RRzaczCz4wVsf2ZSE3cz5 ,
                                        :R7RYQTRTJpydcZySPvfj97U ,
                                        :RDmRDuXNQJPOriCxkLUlrUE ;
@@ -3150,7 +3150,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RBKxneXt3UWJzKxOD5Inibz
 :RBKxneXt3UWJzKxOD5Inibz rdf:type owl:NamedIndividual ,
                                   :RDN44xs0tgwZS1p11BPMMKr ;
-                         elite:hasNext :R7UHidTtMLlwJsXw3LunBVr ;
+                         elite:foregoes :R7UHidTtMLlwJsXw3LunBVr ;
                          elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit1"@en .
 
@@ -3161,7 +3161,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                     owl:onProperty elite:isBehaviourOf ;
                                     owl:someValuesFrom :RBsAUchYFBwAtcVUeFr8EFq
                                   ] ;
-                         elite:hasNext :RBnZe6rQs3iQOzfyrY5AKRG ;
+                         elite:foregoes :RBnZe6rQs3iQOzfyrY5AKRG ;
                          elite:isBehaviourOf :RBrcoh6pN7tToFnM1m59yXl ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit3"@en .
@@ -3173,7 +3173,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                     owl:onProperty elite:isBehaviourOf ;
                                     owl:someValuesFrom :RBsAUchYFBwAtcVUeFr8EFq
                                   ] ;
-                         elite:hasNext :RBnZe6rQs3iQOzfyrY5AKRG ;
+                         elite:foregoes :RBnZe6rQs3iQOzfyrY5AKRG ;
                          elite:isBehaviourOf :R8wL8gWueAFQTEzJ4Rj2QKI ;
                          elite:isConstitutiveProcessOf :R7uvG224iPqEldlfFwndlKr ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit2"@en .
@@ -3186,7 +3186,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                        :R8nP70kb2tjsTW1qDOmrdbC ,
                                        :R9icMA5hIFg4wyRyuVCUEYW ,
                                        :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         elite:hasNext :R8SCvSsZInboPn0aMi5hJ2b ,
+                         elite:foregoes :R8SCvSsZInboPn0aMi5hJ2b ,
                                        :RB4janzOcDoxSfpU6974nab ,
                                        :RC2M3wEsCROuuDC6Bjz9TLz ,
                                        :RC6oDea7metjydM6Dr1mJsi ;
@@ -3211,14 +3211,14 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RC2M3wEsCROuuDC6Bjz9TLz
 :RC2M3wEsCROuuDC6Bjz9TLz rdf:type owl:NamedIndividual ,
                                   :R7pKuzitkkIAgc5NxDlqfH4 ;
-                         elite:hasNext :RCSOjPEJEBrRfStCCjfidCL ;
+                         elite:foregoes :RCSOjPEJEBrRfStCCjfidCL ;
                          elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit1"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#RC6oDea7metjydM6Dr1mJsi
 :RC6oDea7metjydM6Dr1mJsi rdf:type owl:NamedIndividual ;
-                         elite:hasNext :RFvEhkHbiPwVuY8AasDXll ;
+                         elite:foregoes :RFvEhkHbiPwVuY8AasDXll ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit3"@en .
 
@@ -3238,7 +3238,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RCIQAmGtY5oJHuuVHp7Y9OF
 :RCIQAmGtY5oJHuuVHp7Y9OF rdf:type owl:NamedIndividual ,
                                   :R8FmlobZiHsCZi4CHKxgtMg ;
-                         elite:hasNext :RBEpkkG2mXF3wnnZPT5lDoa ,
+                         elite:foregoes :RBEpkkG2mXF3wnnZPT5lDoa ,
                                        :RCZSMiyXPZ1w9KtBMir31du ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SCVentilation_unit3"@en .
@@ -3247,7 +3247,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RCJ4sUQgpXReJhv2l3TNlPt
 :RCJ4sUQgpXReJhv2l3TNlPt rdf:type owl:NamedIndividual ,
                                   :R8bUZpp1yY81qmfgGNH0TyF ;
-                         elite:hasNext :RBnZe6rQs3iQOzfyrY5AKRG ;
+                         elite:foregoes :RBnZe6rQs3iQOzfyrY5AKRG ;
                          elite:isBehaviourOf :R8MEESkThrtwrxXoXG6Fhjm ;
                          elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit1"@en .
@@ -3263,7 +3263,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RCSOjPEJEBrRfStCCjfidCL
 :RCSOjPEJEBrRfStCCjfidCL rdf:type owl:NamedIndividual ,
                                   :RDuDSbKh236WI6rqMad7Ar4 ;
-                         elite:hasNext :R8SCvSsZInboPn0aMi5hJ2b ;
+                         elite:foregoes :R8SCvSsZInboPn0aMi5hJ2b ;
                          elite:isBehaviourOf :RCGLvp3oNj6WAo2tvVy7DeU ;
                          elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ICActivation_unit1"@en .
@@ -3272,7 +3272,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RCZSMiyXPZ1w9KtBMir31du
 :RCZSMiyXPZ1w9KtBMir31du rdf:type owl:NamedIndividual ,
                                   :RBq9x5WmblYOc4D7eFlfpdJ ;
-                         elite:hasNext :Rld8nnNRbLNp5DMRfVK1Hs ;
+                         elite:foregoes :Rld8nnNRbLNp5DMRfVK1Hs ;
                          elite:isBehaviourOf :RCGk9WIE1u7wKk5PswM0eOU ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "explosionOfReactorBuilding_unit3"@en .
@@ -3288,7 +3288,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RDNEIxMazl0JpSeCgw0Nxqo
 :RDNEIxMazl0JpSeCgw0Nxqo rdf:type owl:NamedIndividual ,
                                   :RDpEA8qdRk99FAT0xSGZgGS ;
-                         elite:hasNext :RBHjDlLwaPMxKKtjq16Lw1c ;
+                         elite:foregoes :RBHjDlLwaPMxKKtjq16Lw1c ;
                          elite:isBehaviourOf :R8nP70kb2tjsTW1qDOmrdbC ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperation_noFuel"@en .
 
@@ -3302,7 +3302,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RDmRDuXNQJPOriCxkLUlrUE
 :RDmRDuXNQJPOriCxkLUlrUE rdf:type owl:NamedIndividual ,
                                   :RBwST6x27zdyWBgBunjc2Q9 ;
-                         elite:hasNext :R7RRzaczCz4wVsf2ZSE3cz5 ;
+                         elite:foregoes :R7RRzaczCz4wVsf2ZSE3cz5 ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit3"@en .
 
@@ -3310,7 +3310,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RFvEhkHbiPwVuY8AasDXll
 :RFvEhkHbiPwVuY8AasDXll rdf:type owl:NamedIndividual ,
                                  :RlYMwSSvmqekLRLzmf5IzV ;
-                        elite:hasNext :R9L3ykUI6w5qe20x5hVL2mK ;
+                        elite:foregoes :R9L3ykUI6w5qe20x5hVL2mK ;
                         elite:isBehaviourOf :RCOfDWUyHIup4OUW4FsBUNW ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "repeatedlyOpeningClosing_SRV_unit3"@en .
 
@@ -3318,7 +3318,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RMp5GbDdB45DJyWFDXk4qT
 :RMp5GbDdB45DJyWFDXk4qT rdf:type owl:NamedIndividual ,
                                  :RB5vIXZFuMYcHWSzNAPjPtF ;
-                        elite:hasNext :RVDTdBhCWWXCt9qvBB5o8o ;
+                        elite:foregoes :RVDTdBhCWWXCt9qvBB5o8o ;
                         elite:isBehaviourOf :R7uvG224iPqEldlfFwndlKr ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit2"@en .
 
@@ -3326,7 +3326,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RPcjVut6ArBpfKG9sYPMsM
 :RPcjVut6ArBpfKG9sYPMsM rdf:type owl:NamedIndividual ,
                                  :RBq9x5WmblYOc4D7eFlfpdJ ;
-                        elite:hasNext :RXcgBdYtloBN8Exe0yyXMw ;
+                        elite:foregoes :RXcgBdYtloBN8Exe0yyXMw ;
                         elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ,
                                             :RUsOGEERLNgPu3mgta5Sm1 ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "explosionOfReactorBuilding_unit1"@en .
@@ -3339,7 +3339,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                    owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                    owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                  ] ;
-                        elite:hasNext :R8SCvSsZInboPn0aMi5hJ2b ;
+                        elite:foregoes :R8SCvSsZInboPn0aMi5hJ2b ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICSystem_unit3"@en .
 
 
@@ -3357,7 +3357,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 
 ###  https://w3id.org/emmo/domain/neo#RVDTdBhCWWXCt9qvBB5o8o
 :RVDTdBhCWWXCt9qvBB5o8o rdf:type owl:NamedIndividual ;
-                        elite:hasNext :R4UMKMNvIkmVZ4OSRIQ6Qv ;
+                        elite:foregoes :R4UMKMNvIkmVZ4OSRIQ6Qv ;
                         elite:isBehaviourOf :R7uvG224iPqEldlfFwndlKr ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit2"@en .
 
@@ -3372,7 +3372,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RaHh8VTYDHA1krUVvo6jGG
 :RaHh8VTYDHA1krUVvo6jGG rdf:type owl:NamedIndividual ,
                                  :RRKk7nTYd2pj3LFUG4j9yj ;
-                        elite:hasNext :RBHjDlLwaPMxKKtjq16Lw1c ;
+                        elite:foregoes :RBHjDlLwaPMxKKtjq16Lw1c ;
                         elite:isBehaviourOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit3" .
 
@@ -3393,7 +3393,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RsZEl0qfySUbopX7Z6mlXE
 :RsZEl0qfySUbopX7Z6mlXE rdf:type owl:NamedIndividual ,
                                  :RB5vIXZFuMYcHWSzNAPjPtF ;
-                        elite:hasNext :R7MkAFLocpCOTpR1W4846Wv ;
+                        elite:foregoes :R7MkAFLocpCOTpR1W4846Wv ;
                         elite:isBehaviourOf :R8nP70kb2tjsTW1qDOmrdbC ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit4"@en .
 
