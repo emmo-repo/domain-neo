@@ -129,7 +129,7 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
 :R0N27qMQzeRjM0vSOeAvUT rdf:type owl:Class ;
-                        rdfs:subClassOf elite:Object ;
+                        rdfs:subClassOf :NuclearEnergyObject ;
                         rdfs:comment "Nuclear power plant is a nuclear reactor or reactors together with all structures, systems and components necessary for safety and for the production of power, i.e. heat or electricity (ISO 12749-5:2018)."@en ;
                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.5> ;
                         rdfs:seeAlso <https://en.wikipedia.org/wiki/Nuclear_power_plant> ;
@@ -319,7 +319,7 @@ all offsite power.""" ;
 
 ###  https://w3id.org/emmo/domain/neo#R7ASmNcKrlRjzYHkUz3vfQT
 :R7ASmNcKrlRjzYHkUz3vfQT rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:13273:-1:ed-1:v1:en:term:3.4.8> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """organization that delivers energy efficiency services (3.4.5)
 [SOURCE: CEN-CLC/TR 16103:2010, 4.6.4, modified – The term “entity” was changed to “organization” in the definition and the Note was deleted.]"""@en ;
@@ -328,7 +328,7 @@ all offsite power.""" ;
 
 ###  https://w3id.org/emmo/domain/neo#R7Jf7CRh5B3US0yNBl08EK7
 :R7Jf7CRh5B3US0yNBl08EK7 rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ,
+                         rdfs:subClassOf :NuclearEnergyObject ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :RRKk7nTYd2pj3LFUG4j9yj
@@ -359,7 +359,7 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
 
 ###  https://w3id.org/emmo/domain/neo#R7MjWOBoCnDd3BD1IBHjlRe
 :R7MjWOBoCnDd3BD1IBHjlRe rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ,
+                         rdfs:subClassOf :NuclearEnergyObject ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isParticipantOf ;
                                            owl:someValuesFrom :Rryk3Z5XNZ11ZiiLuT5M8Q
@@ -373,7 +373,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 
 ###  https://w3id.org/emmo/domain/neo#R7NYEyrtAsNuF6n0QNOFmHm
 :R7NYEyrtAsNuF6n0QNOFmHm rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:3977:-1:ed-1:v1:en:term:2.16> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Term which when used alone refers to the turbine action only. It is that component of the gas turbine which produces power from expansion of the working fluid."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Turbine"@en .
@@ -402,7 +402,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 
 ###  https://w3id.org/emmo/domain/neo#R7Ss5qBF98KBgXN3rhg0rEl
 :R7Ss5qBF98KBgXN3rhg0rEl rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ,
+                         rdfs:subClassOf :NuclearEnergyObject ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -496,7 +496,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
 
 ###  https://w3id.org/emmo/domain/neo#R7hYLnBucjQ8XgAj5RsQvpF
 :R7hYLnBucjQ8XgAj5RsQvpF rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ,
+                         rdfs:subClassOf :NuclearEnergyObject ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -581,7 +581,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
 
 ###  https://w3id.org/emmo/domain/neo#R7qv2nUGxSNZRvXyF3CXPTr
 :R7qv2nUGxSNZRvXyF3CXPTr rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-2:ed-1:v1:en:term:3.1.21> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "type of substance that cannot be divided or changed into different substances by ordinary chemical methods"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ChemicalElement"@en .
@@ -750,7 +750,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#R89Yy2V18LstH4xGXyNb9XN
 :R89Yy2V18LstH4xGXyNb9XN rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ,
+                         rdfs:subClassOf :NuclearEnergyObject ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -801,7 +801,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#R8KlSYQnSKI6PoJZNIdhwNI
 :R8KlSYQnSKI6PoJZNIdhwNI rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "water used for water supply"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Water﻿"@en .
@@ -912,7 +912,7 @@ be considered. The possible need to support mobile means might also be considere
 
 ###  https://w3id.org/emmo/domain/neo#R8hTHDGsCdkEbILOuzUhlEr
 :R8hTHDGsCdkEbILOuzUhlEr rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ,
+                         rdfs:subClassOf :NuclearEnergyObject ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -1044,7 +1044,7 @@ Nuclear energy — Vocabulary — Part 1: General terminology""" ;
 
 ###  https://w3id.org/emmo/domain/neo#R91s5ihcKvYBOzeCaNlNVVK
 :R91s5ihcKvYBOzeCaNlNVVK rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-227:ed-2:v1:en:term:3.3.27> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "a quantity of matter"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Material"@en .
@@ -1183,13 +1183,13 @@ perform its intended safety functions."""@en ;
 ###  https://w3id.org/emmo/domain/neo#R9PjB5mvpVfreaI0pbTQFj6
 :R9PjB5mvpVfreaI0pbTQFj6 rdf:type owl:Class ;
                          rdfs:subClassOf :R91s5ihcKvYBOzeCaNlNVVK ;
-                         rdfs:comment """Any material containing radionuclides where both the activity
-concentration and the total activity in the consignment exceed the values specified
-in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ,
-                                      "Material designated in national law or by a regulatory body as being  subject to regulatory control because of its radioactivity."@en ,
+                         rdfs:comment "Material designated in national law or by a regulatory body as being  subject to regulatory control because of its radioactivity."@en ,
                                       """This is the ‘regulatory’ meaning of radioactive (2), and should not be confused with
 the ‘scientific’ meaning of radioactive (1): ‘exhibiting radioactivity; emitting or
-relating to the emission of ionizing radiation or particles’."""@en ;
+relating to the emission of ionizing radiation or particles’."""@en ,
+                                      """Any material containing radionuclides where both the activity
+concentration and the total activity in the consignment exceed the values specified
+in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ;
                          rdfs:isDefinedBy <https://www.undrr.org/understanding-disaster-risk/terminology/hips/tl0002> ;
                          rdfs:seeAlso """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
 and Radiation Protection, 2018 Edition """ ;
@@ -1421,7 +1421,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RBW32C4x3sn1YahVG7uYVun
 :RBW32C4x3sn1YahVG7uYVun rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ,
+                         rdfs:subClassOf :NuclearEnergyObject ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -1496,7 +1496,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RBnyfPxRohc9STM4mfSMMFq
 :RBnyfPxRohc9STM4mfSMMFq rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:14224:ed-3:v2:en:term:3.84> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "equipment and items of permanent, temporary and portable equipment playing an important role in safety systems/functions"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyCriticalEquipment"@en .
@@ -1541,7 +1541,7 @@ Space systems — Safety and compatibility of materials — Part 5: Determinatio
 
 ###  https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq
 :RBsAUchYFBwAtcVUeFr8EFq rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:23551:-1:ed-2:v1:en:term:3.101.1> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """device consisting essentially of a valve body, closure member, and actuator that controls the flow of gas
 Note 1 to entry: The actuation can be done by gas pressure, electrical, hydraulic, manual or pneumatic energy."""@en ;
@@ -1603,7 +1603,7 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
 
 ###  https://w3id.org/emmo/domain/neo#RBzruvoEUI9hIHVtX34kGJu
 :RBzruvoEUI9hIHVtX34kGJu rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ,
+                         rdfs:subClassOf :NuclearEnergyObject ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R8MPIXNWSb8RCelrAeGNxMc
@@ -2106,7 +2106,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 
 ###  https://w3id.org/emmo/domain/neo#RDZtzLsQmngV2BtJvmS5pbg
 :RDZtzLsQmngV2BtJvmS5pbg rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ,
+                         rdfs:subClassOf :NuclearEnergyObject ,
                                          elite:Role ;
                          rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NppEmployes"@en ;
@@ -2151,7 +2151,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 
 ###  https://w3id.org/emmo/domain/neo#RDoeQzvUClmOY7fNhDvK0L1
 :RDoeQzvUClmOY7fNhDvK0L1 rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ,
+                         rdfs:subClassOf :NuclearEnergyObject ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
@@ -2256,7 +2256,7 @@ from control."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#RDv6FAzzuS81VzIfTO1Wkef
 :RDv6FAzzuS81VzIfTO1Wkef rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Object ,
+                         rdfs:subClassOf :NuclearEnergyObject ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -2401,7 +2401,7 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en 
 
 ###  https://w3id.org/emmo/domain/neo#RRKk7nTYd2pj3LFUG4j9yj
 :RRKk7nTYd2pj3LFUG4j9yj rdf:type owl:Class ;
-                        rdfs:subClassOf elite:Object ,
+                        rdfs:subClassOf :NuclearEnergyObject ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -2643,7 +2643,7 @@ Measurement of radioactivity in the environment — Guidelines for effective dos
 
 ###  https://w3id.org/emmo/domain/neo#RiaJiI8PAvV7grwixkMCcr
 :RiaJiI8PAvV7grwixkMCcr rdf:type owl:Class ;
-                        rdfs:subClassOf elite:Object ,
+                        rdfs:subClassOf :NuclearEnergyObject ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -2845,6 +2845,11 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                         <http://www.w3.org/2004/02/skos/core#definition> """part of a nuclear reactor (3.1.22), where the fissionable nuclides (3.1.2) sustaining the fission chain are located
 Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also included in the reactor core (3.1.23.1)."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCore"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#NuclearEnergyObject
+:NuclearEnergyObject rdf:type owl:Class ;
+                     rdfs:subClassOf elite:Object .
 
 
 #################################################################
