@@ -2566,7 +2566,7 @@ Large outdoor fires and the built environment — Global overview of different a
 ###  https://w3id.org/emmo/domain/neo#RadiactiveMaterialByOccurence
 :RadiactiveMaterialByOccurence rdf:type owl:Class ;
                                rdfs:subClassOf :R9PjB5mvpVfreaI0pbTQFj6 ;
-                               <http://www.w3.org/2004/02/skos/core#definition> "The superclass for categorisation of nuclear materials according to their occurence, natural or artificial."@en .
+                               <http://www.w3.org/2004/02/skos/core#definition> "The superclass for categorisation of nuclear materials according to their occurence, natural or artificial"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#RapiFOXlLXIKxdiWW4ljdc
