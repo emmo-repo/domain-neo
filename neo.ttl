@@ -127,6 +127,12 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
+###  https://w3id.org/emmo/domain/neo#ArtificialRadioactiveMaterial
+:ArtificialRadioactiveMaterial rdf:type owl:Class ;
+                               rdfs:subClassOf :RadiactiveMaterialByOccurence ;
+                               owl:disjointWith :RbscqwUSgWtKWJZrcgSNr9 .
+
+
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
                      rdfs:subClassOf elite:Object .
@@ -386,8 +392,8 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 
 ###  https://w3id.org/emmo/domain/neo#R7QpMP9Mf1mRrRVeMT7UcIX
 :R7QpMP9Mf1mRrRVeMT7UcIX rdf:type owl:Class ;
-                         rdfs:subClassOf :RtX7ESf673Z9eYoseycPyl ,
-                                         :ArtificialRadioactiveMaterial ,
+                         rdfs:subClassOf :ArtificialRadioactiveMaterial ,
+                                         :RtX7ESf673Z9eYoseycPyl ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :RyMmVkVf9zClluOSgfr1Rh
@@ -586,8 +592,9 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
 
 ###  https://w3id.org/emmo/domain/neo#R7qv2nUGxSNZRvXyF3CXPTr
 :R7qv2nUGxSNZRvXyF3CXPTr rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyObject ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-2:ed-1:v1:en:term:3.1.21> ;
+                         rdfs:subClassOf elite:Substance ;
+                         rdfs:isDefinedBy <https://doi.org/10.1351/goldbook.C01022> ,
+                                          <https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-2:ed-1:v1:en:term:3.1.21> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "type of substance that cannot be divided or changed into different substances by ordinary chemical methods"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ChemicalElement"@en .
 
@@ -1214,11 +1221,7 @@ and Radiation Protection, 2018 Edition """ ;
 ###  https://w3id.org/emmo/domain/neo#R9ZCvqvWWCWSwBxX7K82iwL
 :R9ZCvqvWWCWSwBxX7K82iwL rdf:type owl:Class ;
                          rdfs:subClassOf :R9p0u8Gh9Tup5P416Wl32S7 ,
-                                         elite:Role ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:isSubProcessOf ;
-                                           owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
-                                         ] ,
+                                         elite:Process ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty [ owl:inverseOf elite:isOutputOf
                                                           ] ;
@@ -1464,7 +1467,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#RBfqFRty5Hp4V4caVtEvWdD
 :RBfqFRty5Hp4V4caVtEvWdD rdf:type owl:Class ;
                          rdfs:subClassOf elite:PhysicalParticle ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:39794:-16:ed-1:v1:en:term:3.52> ;
+                         rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:39794:-16:ed-1:v1:en:term:3.52> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """subatomic particles used for neutron imaging (3.41) (NI) purposes by the neutron attenuation process in a similar fashion to X-rays (3.76)
 Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abundance that can be correlated with the post-mortem (3.57) interval, i.e. the time that has elapsed since a person has died."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron"@en .
@@ -2560,6 +2563,12 @@ Large outdoor fires and the built environment — Global overview of different a
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PublicAddressSystem"@en .
 
 
+###  https://w3id.org/emmo/domain/neo#RadiactiveMaterialByOccurence
+:RadiactiveMaterialByOccurence rdf:type owl:Class ;
+                               rdfs:subClassOf :R9PjB5mvpVfreaI0pbTQFj6 ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "The superclass for categorisation of nuclear materials according to their occurence, natural or artificial."@en .
+
+
 ###  https://w3id.org/emmo/domain/neo#RapiFOXlLXIKxdiWW4ljdc
 :RapiFOXlLXIKxdiWW4ljdc rdf:type owl:Class ;
                         rdfs:subClassOf :RBtkzbuLn6g0vdtDU3mijH0 ;
@@ -2586,7 +2595,6 @@ Postulated accidents are also known as Condition IV events.""" ;
 ###  https://w3id.org/emmo/domain/neo#RbscqwUSgWtKWJZrcgSNr9
 :RbscqwUSgWtKWJZrcgSNr9 rdf:type owl:Class ;
                         rdfs:subClassOf :RadiactiveMaterialByOccurence ;
-                        owl:disjointWith :ArtificialRadioactiveMaterial ;
                         rdfs:comment """The exact definition of ‘significant amounts’ would be a regulatory decision.
 Material in which the activity concentrations of the naturally occurring radionuclides have been changed by a process is included in naturally occurring radioactive material (NORM).
  Naturally occurring radioactive material or NORM should be used in the singular unless reference is explicitly being made to various materials."""@en ;
@@ -2839,17 +2847,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                         <http://www.w3.org/2004/02/skos/core#definition> """part of a nuclear reactor (3.1.22), where the fissionable nuclides (3.1.2) sustaining the fission chain are located
 Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also included in the reactor core (3.1.23.1)."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCore"@en .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#ArtificialRadioactiveMaterial
-:ArtificialRadioactiveMaterial rdf:type owl:Class ;
-                               rdfs:subClassOf :RadiactiveMaterialByOccurence .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#RadiactiveMaterialByOccurence
-:RadiactiveMaterialByOccurence rdf:type owl:Class ;
-                               rdfs:subClassOf :R9PjB5mvpVfreaI0pbTQFj6 ;
-                               <http://www.w3.org/2004/02/skos/core#definition> "The superclass for categorisation of nuclear materials according to their occurence, natural or artificial."@en .
 
 
 #################################################################
