@@ -139,7 +139,8 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                      rdfs:comment "Add the definitions" ,
                                   """for each class we need to add Definition, sources (is defined by) that are  mandatory.
 Alt label, see also, comment are not mandatory.""" ;
-                     :R8xx0dhbEh1tjGMDwNZfckV "It's mandatory" .
+                     :R8xx0dhbEh1tjGMDwNZfckV "It's mandatory" ;
+                     :R9Q7fCgWnAkzqnVMtRJ4WDv "They are not mandatory." .
 
 
 ###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
