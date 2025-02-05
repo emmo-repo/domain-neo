@@ -136,7 +136,9 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
                      rdfs:subClassOf elite:Object ;
-                     rdfs:comment "Add the definitions" .
+                     rdfs:comment "Add the definitions" ,
+                                  """for each class we need to add Definition, sources (is defined by) that are  mandatory.
+Alt label, see also, comment are not mandatory.""" .
 
 
 ###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
