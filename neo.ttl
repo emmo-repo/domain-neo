@@ -142,6 +142,13 @@ Alt label, see also, comment are not mandatory.""" ;
                      :R8xx0dhbEh1tjGMDwNZfckV "It's mandatory" ;
                      :R9Q7fCgWnAkzqnVMtRJ4WDv "They are not mandatory." .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :NuclearEnergyObject ;
+   owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
+   owl:annotatedTarget "It's mandatory" ;
+   rdfs:isDefinedBy "iso-standard"
+ ] .
+
 
 ###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
 :R0N27qMQzeRjM0vSOeAvUT rdf:type owl:Class ;
