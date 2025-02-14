@@ -140,6 +140,7 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                                   "comment" ,
                                   """for each class we need to add Definition, sources (is defined by) that are  mandatory.
 Alt label, see also, comment are not mandatory.""" ;
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearDomainObject" ;
                      :R8xx0dhbEh1tjGMDwNZfckV "It's mandatory" ;
                      :R9Q7fCgWnAkzqnVMtRJ4WDv "They are not mandatory." ;
                      :RR3uD2d7YfhHohfv2Nm6sX "Tentativo" .
@@ -2276,6 +2277,7 @@ from control."""@en ;
                                          ] ;
                          rdfs:comment "Dry cask storage is a method of storing high-level radioactive waste, such as spent nuclear fuel that has already been cooled in the spent fuel pool for at least one year and often as much as ten years. Casks are typically steel cylinders that are either welded or bolted closed. The fuel rods inside are surrounded by inert gas. Ideally, the steel cylinder provides leak-tight containment of the spent fuel. Each cylinder is surrounded by additional steel, concrete, or other material to provide radiation shielding to workers and members of the public."@en ;
                          rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Dry_cask_storage> ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearCooledWasteStorageBuilding" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "It is a building used for dry cask storage."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DryCaskStorageBuilding"@en .
 
