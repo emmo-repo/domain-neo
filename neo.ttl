@@ -945,7 +945,7 @@ be considered. The possible need to support mobile means might also be considere
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:19883:ed-1:v1:en:term:3.15> ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "Building"@en ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "NPPBuilding"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "structure that has a roof and walls, with the similar function as a container (3.14) for a hydrogen PSA system or the components of a hydrogen PSA system"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPowerPlantBuilding"@en .
 
