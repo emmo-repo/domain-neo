@@ -400,6 +400,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 ###  https://w3id.org/emmo/domain/neo#R7NYEyrtAsNuF6n0QNOFmHm
 :R7NYEyrtAsNuF6n0QNOFmHm rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ;
+                         rdfs:comment "Change the taxonomy or change the label" ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:3977:-1:ed-1:v1:en:term:2.16> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Term which when used alone refers to the turbine action only. It is that component of the gas turbine which produces power from expansion of the working fluid."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Turbine"@en .
@@ -829,6 +830,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R8KlSYQnSKI6PoJZNIdhwNI
 :R8KlSYQnSKI6PoJZNIdhwNI rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ;
+                         rdfs:comment "Change the taxonomy or change the label" ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "water used for water supply"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Water﻿"@en .
@@ -1555,6 +1557,7 @@ Space systems — Safety and compatibility of materials — Part 5: Determinatio
 ###  https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq
 :RBsAUchYFBwAtcVUeFr8EFq rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ;
+                         rdfs:comment "Change the taxonomy or the change the label" ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:23551:-1:ed-2:v1:en:term:3.101.1> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """device consisting essentially of a valve body, closure member, and actuator that controls the flow of gas
 Note 1 to entry: The actuation can be done by gas pressure, electrical, hydraulic, manual or pneumatic energy."""@en ;
