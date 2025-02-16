@@ -375,6 +375,7 @@ all offsite power.""" ;
                                            owl:someValuesFrom :RCRVu2hmIevYnx0eZzyJEPs
                                          ] ;
                          rdfs:isDefinedBy "ISO 18077:2022(en) Reload startup physics tests for pressurized water reactors." ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Possible altLabel: ControlRodBank" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """One or more rods that are inserted or withdrawn simultaneously 
 
 Note 1 to entry: The term “all control rod groups” means all safety and regulating control rod groups. This term may also be shortened to simply “rod group.” 
@@ -454,6 +455,8 @@ Note 1 to entry: This location can either be an atmospheric outlet or the connec
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf> ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "LPECCS" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Change the taxonomy, repetition" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """The low pressure emergency core cooling systems consist of two separate and independent systems, the core spray system and the low pressure coolant injection (LPCI) mode of the residual heat removal system. The core spray system consists of two separate and independent pumping loops, each capable of pumping water from the suppression pool into the reactor vessel. Core cooling is accomplished by spraying water on top of the fuel assemblies.
 The low pressure coolant injection mode of the residual heat removal system provides makeup water to the reactor vessel for core cooling under loss of coolant accident conditions. The residual heat removal system is a multipurpose system with several operational modes, each utilizing the same major pieces of equipment. The low pressure coolant injection mode is the dominant mode and normal valve lineup configuration of the residual heat removal system. The low pressure coolant injection mode operates automatically to restore and, if necessary, maintain the reactor vessel coolant inventory to preclude fuel cladding temperatures in excess of 2200EF. During low pressure coolant injection operation, the residual heat removal pumps take water from the suppression pool and discharge to the reactor vessel."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "LowPressureEmergencyCoreCoolingSystems"@en .
@@ -847,6 +850,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CoreRecirculationPumps"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Possible altLabel: RecirculationInjectionPump and RIP or RP" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RecirculationPumps"@en .
 
 
@@ -1156,7 +1160,7 @@ levels inside the containment had increased substantially ..."""@en ;
                          rdfs:seeAlso """Pag 28, The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf."""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CAMS"@en ,
-                                                                        "NPP ContainmentAtmosphericMonitoringSystem"@en ;
+                                                                        "NPPContainmentAtmosphericMonitoringSystem"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ContainmentAtmosphericMonitoringSystem"@en .
 
 
@@ -1316,7 +1320,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                                            owl:someValuesFrom :R8CzBJHXymJx05c6sDhbspt
                                          ] ;
                          rdfs:isDefinedBy "ISO 12749-5:2018(en)  Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors "@en ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "NppSteamCondenser "@en ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "NPPSteamCondenser "@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "equipment in a steam turbine BOP (3.4.1.3), aimed at receiving the exhausting low-pressure turbine steam, bringing this fluid into the liquid state by massive cooling "@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SteamCondenser"@en .
 
@@ -1387,6 +1391,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
                          <http://www.w3.org/2004/02/skos/core#altLabel> "HPCI"@en ,
                                                                         "HighPressureEmergency CoreCoolingSystems"@en ,
                                                                         "ReactorHighPressureCoolantInjectionSystem"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Change the taxonomy, repetition" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The high pressure coolant injection (HPCI) system is an independent emergency core cooling system requiring no auxiliary ac power, plant air systems, or external cooling water systems to perform its purpose of providing make up water to the reactor vessel for core cooling under small and intermediate size loss of coolant accidents. The high pressure coolant injection system can supply make up water to the reactor vessel from above rated reactor pressure to a reactor pressure below that at which the low pressure emergency core cooling systems can inject."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "HighPressureCoolantInjectionSystem"@en .
 
@@ -1458,7 +1463,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:someValuesFrom :RB5vIXZFuMYcHWSzNAPjPtF
                                          ] ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf> ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "DecayHeatRemoval"@en ,
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "DecayHeatRemovalSystem"@en ,
                                                                         "RHR"@en ,
                                                                         "ReactorResidualHeatRemovalSystem"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Heat is removed during normal power operation by generating steam in the reactor vessel and then using that steam to generate electrical energy. When the reactor is shutdown, the core will still continue to generate decay heat. The heat is removed by bypassing the turbine and dumping the steam directly to the condenser. The shutdown cooling mode of the residual heat removal (RHR) system is used to complete the cooldown process when pressure decreases to approximately 50 psig. Water is pumped from the reactor recirculation loop through a heat exchanger and back to the reactor via the recirculation loop. The recirculation loop is used to limit the number of penetrations into the reactor vessel."@en ;
@@ -1469,6 +1474,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 :RBabRZaZUznmBkL7QrHJTkR rdf:type owl:Class ;
                          rdfs:subClassOf :R8hTHDGsCdkEbILOuzUhlEr ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "MainReactorAdminstratorBuilding" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Possible altLabel: MainNPPAdministratorBuilding" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MainAdminstratorBuilding"@en .
 
 
@@ -1502,7 +1508,7 @@ Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abund
                          rdfs:seeAlso <https://www.tepco.co.jp/en/nu/fukushima-np/images/handouts_110827_02-e.pdf> ,
                                       """pag 74,The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf""" ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "EmergencyGasTreatmentsystem"@en ,
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "EmergencyGasTreatmentSystem"@en ,
                                                                         "ReactorStandbyGasTreatmentSystem"@en ,
                                                                         "SGTS"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "StandbyGasTreatmentSystem"@en .
@@ -1625,6 +1631,7 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R8MPIXNWSb8RCelrAeGNxMc
                                          ] ;
+                         rdfs:comment "Change the taxonomy or change the label" ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:6877:ed-3:v1:en:term:3.11> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "instrument designed to obturate a root canal with thermoplasticized injection material (3.9) using an injection equipment or device"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectionSystems"@en .
@@ -1799,7 +1806,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#RCPsVMpkrs5EqK8G9HKv71m
 :RCPsVMpkrs5EqK8G9HKv71m rdf:type owl:Class ;
                          rdfs:subClassOf :R8hTHDGsCdkEbILOuzUhlEr ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearSeismicallyIsolatedBuilding﻿"@en ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "SeismicallyIsolatedNuclearBuilding﻿"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SeismicallyIsolatedBuilding"@en .
 
 
@@ -1812,6 +1819,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                          ] ;
                          rdfs:isDefinedBy "﻿ISO 21347:2005(en)  Space systems — Fracture and damage control﻿"@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "RPV"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Possible altLabel: Vessel" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """container designed primarily for the storage of pressurized fluid, which fulfils at least one of the following criteria:
 
     a) contains gas or liquid with high energy level;
@@ -1942,6 +1950,7 @@ subsequently removed from a reactor core as a single unit."""@en ;
                                            owl:someValuesFrom :R8CzBJHXymJx05c6sDhbspt
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NPPFeedwaterPump"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Possible altLabel: FWP" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FeedwaterPump"@en .
 
 
@@ -1954,7 +1963,7 @@ subsequently removed from a reactor core as a single unit."""@en ;
                                            owl:someValuesFrom :R8CzBJHXymJx05c6sDhbspt
                                          ] ;
                          rdfs:isDefinedBy "ISO 11086:1996(en) Gas turbines — Vocabulary " ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "NppPowerTurbine"@en ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "NPPPowerTurbine"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Turbine which is driven by the gases from a gas generator, producing power output from the gas turbine through an independent shaft."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PowerTurbine"@en .
 
@@ -2016,6 +2025,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          rdfs:isDefinedBy "ISO 21843:2023(en) Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels " ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "PRV"@en ,
                                                                         "ReactorPressureReliefValve"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Possible altLabel: SafetyReliefValve and SRV" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """pressure-activated valve intended to limit pressure rise to a specified value
 Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PressureReliefValve"@en .
@@ -2293,6 +2303,7 @@ from control."""@en ;
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                         ] ;
                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.4.2> ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Possible altLabel: LWR" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "thermal nuclear reactor (3.1.22) cooled and moderated by light water" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "LightWaterReactor"@en .
 
@@ -2304,7 +2315,7 @@ from control."""@en ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :RvBQlxDEMRtFxiHtMstrYY
                                         ] ;
-                        <http://www.w3.org/2004/02/skos/core#altLabel> "NppSeaWaterPump"@en ;
+                        <http://www.w3.org/2004/02/skos/core#altLabel> "NPPSeaWaterPump"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SeaWaterPump"@en .
 
 
@@ -2518,6 +2529,7 @@ Large outdoor fires and the built environment — Global overview of different a
                         rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1215/ML12159A162.pdf> ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorSuppressionChamber"@en ,
                                                                        "SC"@en ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Possible altLabel: SuppressionPool" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "The suppression chamber consists of a steel pressure vessel with a toroidal shape (sometimes referred to as torus) and a large body of water inside the suppression chamber (referred to as the suppression pool). The purposes of the suppression chamber are to condense steam released from a LOCA and to prevent radioactive materials from passing through this portion of the primary containment boundary.  ﻿"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SuppressionChamber"@en .
 
@@ -2723,6 +2735,7 @@ Fukushima Dai-ni,"""@en ;
                                         ] ;
                         rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Electric_generator> ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "NPPGenerator"@en ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Possible altLabel: ElectricalGenerator" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "In electricity generation, a generator is a device that converts motion-based power (potential and kinetic energy) or fuel-based power (chemical energy) into electric power for use in an external circuit. "@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Generator"@en .
 
