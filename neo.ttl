@@ -246,6 +246,7 @@ ISO 18246:2023(en), 3.4.12"""@en ;
                         rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ;
                         rdfs:isDefinedBy "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "RPS"@en ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Non c'è il link della fonte, ma solo il nome" ;
                         <http://www.w3.org/2004/02/skos/core#definition> """system that monitors the operation (3.9.1) of a reactor and which, on sensing an abnormal condition, automatically initiates actions to prevent an unsafe or potentially unsafe condition 
 
 Note 1 to entry: This use of the term protection refers to protection of the plant; the system in this case encompasses all electrical and mechanical devices and circuitry, from sensors to actuation device input terminals. 
@@ -274,6 +275,7 @@ Note 3 to entry: The reactor protection system (RPS) imposes actions on several 
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R85FFwLPHIursWfa6K6sKK9
                                          ] ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il link" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCavity"@en .
 
 
@@ -374,6 +376,7 @@ all offsite power.""" ;
                                            owl:someValuesFrom :RCRVu2hmIevYnx0eZzyJEPs
                                          ] ;
                          rdfs:isDefinedBy "ISO 18077:2022(en) Reload startup physics tests for pressurized water reactors." ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Controllare se va bene senza link" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """One or more rods that are inserted or withdrawn simultaneously 
 
 Note 1 to entry: The term “all control rod groups” means all safety and regulating control rod groups. This term may also be shortened to simply “rod group.” 
@@ -422,6 +425,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
                                          ] ;
                          rdfs:comment "Fission products and actinides produced by neutron absorption of nuclear fuel itself are normally referred to by those specific names, and activation product reserved for products of neutron capture by other materials, such as structural components of the nuclear reactor or nuclear bomb, the reactor coolant, control rods or other neutron poisons, or materials in the environment. All of these, however, need to be handled as radioactive waste. Some nuclides originate in more than one way, as activation products or fission products."@en ;
                          rdfs:seeAlso <https://en.wikipedia.org/wiki/Activation_product> ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Controllare se va bene senza il define by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPActivationProduct"@en .
 
 
@@ -482,6 +486,7 @@ Note 1 to entry: The absorption of the external colliding particle, usually a ne
 door, although the measurements at the radiation monitoring post near the site’s main gate did not show any anomaly to indicate a release from RPV or PCV at 04:00."""@en ;
                          rdfs:seeAlso """pag 29,The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf""" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MobileRadiationMonitor"@en .
 
 
@@ -491,6 +496,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          rdfs:isDefinedBy """ISO 11999-1:2015(en) 
 PPE for firefighters — Test methods and requirements for PPE used by firefighters who are at risk of exposure to high levels of heat and/or flame while fighting fires occurring in structures — Part 1: General """ ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NPPFullFaceMask"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il link della fonte, c'è solo il nome" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Facepiece which covers the eyes, nose, mouth, and chin and provides adequate sealing on the face of the wearer of a respiratory protective device against the ambient atmosphere "@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FullFaceMask"@en .
 
@@ -516,6 +522,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
 ###  https://w3id.org/emmo/domain/neo#R7gZLWyPCimwGhHTueSRPhd
 :R7gZLWyPCimwGhHTueSRPhd rdf:type owl:Class ;
                          rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorPreventiveSystems"@en .
 
 
@@ -536,6 +543,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
 :R7i2YiNCalwlsxcsL7AR3VF rdf:type owl:Class ;
                          rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ;
                          rdfs:comment "This term refers all the devices used to measure parameters and properties  about system."@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetySensors"@en .
 
 
@@ -548,6 +556,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
                                            owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
                                          ] ;
                          rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link, ma direttamente il nome della risorsa" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Nuclear fuel removed from a reactor following irradiation that is no longer usable in its present form because of depletion of fissile material, poison buildup or radiation damage."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearSpentFuel"@en .
 
@@ -600,6 +609,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
                                          ] ;
                          rdfs:isDefinedBy "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors " ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "SCS"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Non c'è il link della fonte, ma solo il nome" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "plant system (3.7.2) designed to cool the main parts of the reactor shield in order to maintain reasonable values of temperature in all the main shield parts, especially under normal on-power conditions "@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorShieldCoolingSystem"@en .
 
@@ -689,6 +699,7 @@ The secondary side water volume of the isolation condenser (both trains together
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R76QRzIQVjwDFrNAttIw9RF
                                          ] ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BoratedWater"@en .
 
 
@@ -771,6 +782,7 @@ Collaborative business relationship management systems — Requirements and fram
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "IsolatioCondenserPool"@en ,
                                                                         "ReactorIsolationCondenserTank"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Controllare se va bene senza il define by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "IsolationCondenserTank"@en .
 
 
@@ -844,6 +856,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CoreRecirculationPumps"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RecirculationPumps"@en .
 
 
@@ -1154,6 +1167,7 @@ levels inside the containment had increased substantially ..."""@en ;
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf."""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CAMS"@en ,
                                                                         "NPP ContainmentAtmosphericMonitoringSystem"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ContainmentAtmosphericMonitoringSystem"@en .
 
 
@@ -1407,6 +1421,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
                                       "They flooded the primary and backup power systems and equipment, as well as the ultimate heat sink systems and structures, of all six units on the site"@en ;
                          rdfs:seeAlso """Pag 2 , The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf""" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BackupPowerSystem"@en .
 
 
@@ -1427,6 +1442,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ,
                                          :RBzruvoEUI9hIHVtX34kGJu ;
                          rdfs:comment "the source is missing" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyInjectionSystem"@en .
 
 
@@ -1476,6 +1492,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          rdfs:comment "This report outlines the use of fire engines in an attempt to inject water into the reactors at Fukushima Daiichi. After the tsunami, much of the cooling function on-site was lost. The slides below document what fire engines were on site at what time, and what sources of water were injected where. Later research shows that little of the injected water made it to the reactors due to the lack of backflow valves in the fire line systems"@en ;
                          rdfs:seeAlso <https://fdada.info/develop/docs/pdf/ES-Unit123-04.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NPPFireEngine"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FireEngine"@en .
 
 
@@ -1502,6 +1519,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#altLabel> "EmergencyGasTreatmentsystem"@en ,
                                                                         "ReactorStandbyGasTreatmentSystem"@en ,
                                                                         "SGTS"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "StandbyGasTreatmentSystem"@en .
 
 
@@ -1519,6 +1537,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          :Rw4mCgviqd6HTitZEzST6w ;
                          rdfs:comment "the sources is missing" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "devices that aim to the limitation of any negative consequence (3.6) of a particular event, injecting refrigerants with the aim of decrease the temperature of the core and the pressure inside the Vessel"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorMitigationCoolingSystem"@en .
 
@@ -1690,6 +1709,7 @@ from control."""@en ;
                                          ] ;
                          rdfs:isDefinedBy "ISO 21843:2023(en) Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorThermalProtectionSystem"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "protection afforded to the vessel to reduce the rate of heat transfer from the fire to the vessel, throughout the period of exposure to fire, including any protection materials together with any encasement (such as a jacket), and supporting system (such as mesh reinforcement or a framing system) and any specified primer and top coat if applicable."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ThermalProtectionSystem"@en .
 
@@ -1739,6 +1759,7 @@ the condensate and feedwater system is not available."""@en ;
                                       """Pag 21, The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReverseCleaningValvePit"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BackwashValvePit"@en .
 
 
@@ -1788,6 +1809,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 2.The Primary Containment consists of a drywell which encloses the reactor vessel and recirculation system, a pressure suppression chamber which stores a large volume of water, a connecting vent system between the drywell and the suppression chamber, isolation valves and containment atmosphere control systems. (https://www.nrc.gov/docs/ML1215/ML12159A162.pdf)"""@en ;
                          rdfs:isDefinedBy "ISO 17873:2004(en) Nuclear facilities — Criteria for the design and operation of ventilation systems for nuclear installations other than nuclear reactors ﻿" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorShieldCoolingSystem "@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "C'è direttamente il nome del file" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "System constituted by a coherent set of physical barriers and/or auxiliary dynamic systems intended to confine radioactive substances in order to ensure the safety of the workers and the public and the protection of the environment ."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorContainmentSystem"@en .
 
@@ -1808,6 +1830,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                          ] ;
                          rdfs:isDefinedBy "﻿ISO 21347:2005(en)  Space systems — Fracture and damage control﻿"@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "RPV"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """container designed primarily for the storage of pressurized fluid, which fulfils at least one of the following criteria:
 
     a) contains gas or liquid with high energy level;
@@ -1884,6 +1907,7 @@ in operation or in accidents."""@en ;
                                          ] ;
                          rdfs:comment "Seawater injection into Unit 1 was ready to be resumed upon the refilling of the backwash valve pit, but all activities, including the ongoing seawater injection into the Unit 3 reactor, had to stop because of an explosion in Unit 3 (Par. 1.1.3.21., pp 26-27)"@en ;
                          rdfs:seeAlso "Pub1710-TV1-Web.pdf"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfSeaWaterCooling"@en .
 
 
@@ -1905,6 +1929,7 @@ power for a nuclear plant in the event that all off-site power sources are lost.
                          rdfs:subClassOf :RBnyfPxRohc9STM4mfSMMFq ;
                          rdfs:isDefinedBy "ISO 11675:2005(en)  Textile machinery and accessories — Flatbed knitting machines — Vocabulary " ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NppProtectiveGear﻿"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il link della fonte, è solo riportato il nome" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Gear for the prevention of accidents "@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ProtectiveGear"@en .
 
@@ -1925,6 +1950,7 @@ power for a nuclear plant in the event that all off-site power sources are lost.
                                          ] ;
                          rdfs:isDefinedBy """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
 and Radiation Protection, 2018 Edition """ ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Controllare se va bene senza link" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """A set of fuel elements and associated components which are loaded into and
 subsequently removed from a reactor core as a single unit."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FuelAssembly"@en .
@@ -1964,6 +1990,7 @@ injection of water into the reactor."""@en ;
                                       """Pag 17, The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NPPFireProtectionSystem"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FireProtectionSystem"@en .
 
 
@@ -2012,6 +2039,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          rdfs:isDefinedBy "ISO 21843:2023(en) Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels " ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "PRV"@en ,
                                                                         "ReactorPressureReliefValve"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Non c'è il link della fonte, ma solo il nome" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """pressure-activated valve intended to limit pressure rise to a specified value
 Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PressureReliefValve"@en .
@@ -2039,6 +2067,7 @@ Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                                          ] ;
                          rdfs:isDefinedBy "ISO 6107:2021(en) Water quality — Vocabulary " ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorWetWell"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "WetWell"@en ;
                          :R8xx0dhbEh1tjGMDwNZfckV "chamber, below ground level in a pumping installation that receives water to be pumped "@en .
 
@@ -2175,7 +2204,8 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                                          ] ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:24679:-1:ed-1:v1:en:term:3.1> ;
                          <http://www.w3.org/2004/02/skos/core#comment> """They are distinguished from elements as integral part of a built environment
-Note 1 to entry: This includes floors, walls, beams, columns, doors, and penetrations, but does not include contents."""@en ;
+Note 1 to entry: This includes floors, walls, beams, columns, doors, and penetrations, but does not include contents."""@en ,
+                                                                       "Check del link, si trova su see also e non define by" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Elements that are contained in a Reactor Building"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorBuildingContents"@en .
 
@@ -2300,6 +2330,7 @@ from control."""@en ;
                                           owl:someValuesFrom :RvBQlxDEMRtFxiHtMstrYY
                                         ] ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "NppSeaWaterPump"@en ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SeaWaterPump"@en .
 
 
@@ -2316,6 +2347,8 @@ from control."""@en ;
                         rdfs:seeAlso """Pag 124, The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf""" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "HeadVentValve"@en ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Controllare se va bene senza il define by" ,
+                                                                      "Manca defined by" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "It is a valve on the Reactor Pressure Vessel﻿"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "HeadVentNozzle"@en .
 
@@ -2397,6 +2430,7 @@ negligible from the point of view of protection and safety of a Nuclear power pl
                        rdfs:isDefinedBy """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
 and Radiation Protection, 2018 Edition """ ;
                        <http://www.w3.org/2004/02/skos/core#altLabel> "FuelRod"@en ;
+                       <http://www.w3.org/2004/02/skos/core#comment> "Controllare se va bene senza link" ;
                        <http://www.w3.org/2004/02/skos/core#definition> "A rod of nuclear fuel, its cladding and any associated components necessary to form a structural entity.﻿"@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "FuelElement"@en .
 
@@ -2407,6 +2441,7 @@ and Radiation Protection, 2018 Edition """ ;
                                         :RtX7ESf673Z9eYoseycPyl ;
                         rdfs:isDefinedBy """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
 and Radiation Protection, 2018 Edition """ ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                         <http://www.w3.org/2004/02/skos/core#definition> """Fissionable nuclear material in the form of fabricated elements for loading
 into the reactor core of a civil nuclear power plant or research reactor."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "﻿NuclearFuel"@en .
@@ -2541,6 +2576,7 @@ Large outdoor fires and the built environment — Global overview of different a
                                         ] ;
                         rdfs:isDefinedBy "ISO 6107:2021(en) Water quality — Vocabulary ﻿" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorDryWell﻿"@en ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Controllare se va bene senza link" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Chamber, below ground level, that remains dry, and houses pumping apparatus with its associated pipework and equipment."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "DryWell"@en .
 
@@ -2553,6 +2589,7 @@ Large outdoor fires and the built environment — Global overview of different a
                                           owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
                                         ] ;
                         rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition"@en ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "New fuel or unirradiated fuel, including fuel fabricated from fissionable material recovered by reprocessing previously irradiated fuel." ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear﻿FreshFuel"@en .
 
@@ -2576,6 +2613,7 @@ Large outdoor fires and the built environment — Global overview of different a
                                                                        "PASystem"@en ,
                                                                        "SoundReinforcementSystem"@en ,
                                                                        "SpeechReinforcementSystem"@en ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Non c'è il link della fonte, ma solo il nome" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "system (3.5.2.17) that amplifies sound (3.5.2.22)"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PublicAddressSystem"@en .
 
@@ -2750,6 +2788,7 @@ I&C architecture."""@en ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :RyMmVkVf9zClluOSgfr1Rh
                                         ] ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link della fonte" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Any material that takes a part of a nuclear Core"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoreMaterial"@en .
 
@@ -2781,6 +2820,7 @@ operational states and, for some barriers, in accident conditions"""@en ;
 ###  https://w3id.org/emmo/domain/neo#RvBQlxDEMRtFxiHtMstrYY
 :RvBQlxDEMRtFxiHtMstrYY rdf:type owl:Class ;
                         rdfs:subClassOf :R7gZLWyPCimwGhHTueSRPhd ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Non c'è il link della fonte, ma solo il nome" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SeaWaterCoolingSystem"@en .
 
 
@@ -2809,6 +2849,7 @@ port outside the TB, which had been installed in the previous year as a fire pro
                                      """Pag 19,  The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorFireProtectionWaterInjectionPort"@en ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "FireProtectionWaterInjectionPort"@en .
 
 
@@ -2829,6 +2870,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                         ] ;
                         rdfs:comment "They fulfill their function as soon as the accident happened"@en ;
                         rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20> ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "devices that aim to the limitation of any negative consequence (3.6) of a particular event"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorMitigationSystem"@en .
 
@@ -2861,6 +2903,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                           owl:someValuesFrom :RBW32C4x3sn1YahVG7uYVun
                                         ] ;
                         rdfs:isDefinedBy "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors" ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link, ma solo il nome della risorsa" ;
                         <http://www.w3.org/2004/02/skos/core#definition> """part of a nuclear reactor (3.1.22), where the fissionable nuclides (3.1.2) sustaining the fission chain are located
 Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also included in the reactor core (3.1.23.1)."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCore"@en .
