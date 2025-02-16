@@ -274,6 +274,7 @@ Note 3 to entry: The reactor protection system (RPS) imposes actions on several 
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R85FFwLPHIursWfa6K6sKK9
                                          ] ;
+                         rdfs:comment "Manca la definizione" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCavity"@en .
 
 
@@ -373,6 +374,7 @@ all offsite power.""" ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :RCRVu2hmIevYnx0eZzyJEPs
                                          ] ;
+                         rdfs:comment "Check definition" ;
                          rdfs:isDefinedBy "ISO 18077:2022(en) Reload startup physics tests for pressurized water reactors." ;
                          <http://www.w3.org/2004/02/skos/core#definition> """One or more rods that are inserted or withdrawn simultaneously 
 
@@ -479,7 +481,8 @@ Note 1 to entry: The absorption of the external colliding particle, usually a ne
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
                          rdfs:comment """Meanwhile, an attempt to enter the Unit 1 RB to conduct radiation measurements at 03:45 on 12 March was abandoned, when the team encountered white fog-like steam upon opening the airlock
-door, although the measurements at the radiation monitoring post near the site’s main gate did not show any anomaly to indicate a release from RPV or PCV at 04:00."""@en ;
+door, although the measurements at the radiation monitoring post near the site’s main gate did not show any anomaly to indicate a release from RPV or PCV at 04:00."""@en ,
+                                      "Manca la definizione" ;
                          rdfs:seeAlso """pag 29,The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MobileRadiationMonitor"@en .
@@ -516,6 +519,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
 ###  https://w3id.org/emmo/domain/neo#R7gZLWyPCimwGhHTueSRPhd
 :R7gZLWyPCimwGhHTueSRPhd rdf:type owl:Class ;
                          rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ;
+                         rdfs:comment "Manca la definizione" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorPreventiveSystems"@en .
 
 
@@ -535,7 +539,8 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
 ###  https://w3id.org/emmo/domain/neo#R7i2YiNCalwlsxcsL7AR3VF
 :R7i2YiNCalwlsxcsL7AR3VF rdf:type owl:Class ;
                          rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ;
-                         rdfs:comment "This term refers all the devices used to measure parameters and properties  about system."@en ;
+                         rdfs:comment "This term refers all the devices used to measure parameters and properties  about system."@en ,
+                                      "Manca la definizione, il commento già presente potrebbe essere una definizione" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetySensors"@en .
 
 
@@ -766,7 +771,8 @@ Collaborative business relationship management systems — Requirements and fram
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R7twPwtQmmXFTKrDWM3POCD
                                          ] ;
-                         rdfs:comment "In the Unit 1 design, there were two separate and redundant isolation condenser loops. In these closed loops, the primary side of the isolation condenser received steam generated in the reactor and condensed it by cooling inside the heat exchanger tubes that were submerged in colder water tanks (isolation condenser pools) located outside the primary containment vessel."@en ;
+                         rdfs:comment "In the Unit 1 design, there were two separate and redundant isolation condenser loops. In these closed loops, the primary side of the isolation condenser received steam generated in the reactor and condensed it by cooling inside the heat exchanger tubes that were submerged in colder water tanks (isolation condenser pools) located outside the primary containment vessel."@en ,
+                                      "manca la definizione,il commento presente,opportunamente modificato potrebbe essere una definizione" ;
                          rdfs:seeAlso """Box 1.1–2. Systems for cooling the core when the reactor is isolated from the turbines. The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "IsolatioCondenserPool"@en ,
@@ -840,6 +846,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R85FFwLPHIursWfa6K6sKK9
                                          ] ;
+                         rdfs:comment "Manca la definizione" ;
                          rdfs:seeAlso """Box 1.1–1. Boiling water reactors
 The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
@@ -1149,7 +1156,8 @@ Petroleum and natural gas industries — Pipeline transportation systems — Pip
                          rdfs:comment <https://www.nra.go.jp/data/000292313.pdf> ,
                                       """At around 21:55 on 14 March, the recently restored containment atmospheric monitoring system
 (CAMS) — the radiation monitoring equipment inside the Unit 2 RPV — indicated that the radiation
-levels inside the containment had increased substantially ..."""@en ;
+levels inside the containment had increased substantially ..."""@en ,
+                                      "Manca la definizione" ;
                          rdfs:seeAlso """Pag 28, The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf."""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CAMS"@en ,
@@ -1404,7 +1412,8 @@ The standby liquid control system consists of a heated storage tank, two positiv
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
                          rdfs:comment "It is a label used within the Fukushima report to represent the entire system used in case of an emergency to restore power (electricity) in a Nuclear Power Plant."@en ,
-                                      "They flooded the primary and backup power systems and equipment, as well as the ultimate heat sink systems and structures, of all six units on the site"@en ;
+                                      "They flooded the primary and backup power systems and equipment, as well as the ultimate heat sink systems and structures, of all six units on the site"@en ,
+                                      "Manca la definizione,il commetnto già presente potrebbe essere la definizione" ;
                          rdfs:seeAlso """Pag 2 , The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BackupPowerSystem"@en .
@@ -1426,7 +1435,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 :RBUlm53v3Y42xdxWXvJZvzy rdf:type owl:Class ;
                          rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ,
                                          :RBzruvoEUI9hIHVtX34kGJu ;
-                         rdfs:comment "the source is missing" ;
+                         rdfs:comment "Manca la definizione" ,
+                                      "the source is missing" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyInjectionSystem"@en .
 
 
@@ -1473,7 +1483,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 :RBeV8ftYy9jGBHA6rECN3Gx rdf:type owl:Class ;
                          rdfs:subClassOf :RBzruvoEUI9hIHVtX34kGJu ,
                                          :Rw4mCgviqd6HTitZEzST6w ;
-                         rdfs:comment "This report outlines the use of fire engines in an attempt to inject water into the reactors at Fukushima Daiichi. After the tsunami, much of the cooling function on-site was lost. The slides below document what fire engines were on site at what time, and what sources of water were injected where. Later research shows that little of the injected water made it to the reactors due to the lack of backflow valves in the fire line systems"@en ;
+                         rdfs:comment "This report outlines the use of fire engines in an attempt to inject water into the reactors at Fukushima Daiichi. After the tsunami, much of the cooling function on-site was lost. The slides below document what fire engines were on site at what time, and what sources of water were injected where. Later research shows that little of the injected water made it to the reactors due to the lack of backflow valves in the fire line systems"@en ,
+                                      "Manca la definizione" ;
                          rdfs:seeAlso <https://fdada.info/develop/docs/pdf/ES-Unit123-04.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NPPFireEngine"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FireEngine"@en .
@@ -1495,7 +1506,8 @@ Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abund
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
-                         rdfs:comment "The RB surrounds the primary containment and provides the second fission product barrier and is commonly called as secondary containment. In case of an accident, the standby gas treatment system (SGTS), which needs AC power for operation, filters the gases and keeps the inside pressure below the atmospheric pressure to prevent radioactive materials release."@en ;
+                         rdfs:comment "The RB surrounds the primary containment and provides the second fission product barrier and is commonly called as secondary containment. In case of an accident, the standby gas treatment system (SGTS), which needs AC power for operation, filters the gases and keeps the inside pressure below the atmospheric pressure to prevent radioactive materials release."@en ,
+                                      "Manca la definizione,il commento già presente ,opportunamente modificato,potrebbe essere una definizione" ;
                          rdfs:seeAlso <https://www.tepco.co.jp/en/nu/fukushima-np/images/handouts_110827_02-e.pdf> ,
                                       """pag 74,The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf""" ;
@@ -1734,7 +1746,8 @@ the condensate and feedwater system is not available."""@en ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
                          rdfs:comment "A water injection line was installed by connecting 3 fire engines in series and using the Unit 3 reverse cleaning valve pit as water source, to start seawater injection to Unit 1 at 19:04."@en ,
-                                      "The Site Superintendent then decided to inject seawater into the Unit 1 reactor from the Unit 3 backwash valve pit, where seawater had pooled after the tsunami, as it was the only available source of water at that time."@en ;
+                                      "The Site Superintendent then decided to inject seawater into the Unit 1 reactor from the Unit 3 backwash valve pit, where seawater had pooled after the tsunami, as it was the only available source of water at that time."@en ,
+                                      "Manca la definizione" ;
                          rdfs:seeAlso <https://fdada.info/develop/docs/pdf/ES-Unit123-04.pdf> ,
                                       """Pag 21, The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
@@ -1959,7 +1972,8 @@ subsequently removed from a reactor core as a single unit."""@en ;
 :RDDFiZC2RFaE7RrTNF0CrtA rdf:type owl:Class ;
                          rdfs:subClassOf :Rw4mCgviqd6HTitZEzST6w ;
                          rdfs:comment """The fire protection system was designed primarily for fire suppression and flooding of the containment vessel, not for
-injection of water into the reactor."""@en ;
+injection of water into the reactor."""@en ,
+                                      "Manca la definizione" ;
                          rdfs:seeAlso <https://fdada.info/develop/docs/pdf/ES-Unit123-04.pdf> ,
                                       """Pag 17, The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
@@ -2037,6 +2051,7 @@ Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R85FFwLPHIursWfa6K6sKK9
                                          ] ;
+                         rdfs:comment "Manca la definizione" ;
                          rdfs:isDefinedBy "ISO 6107:2021(en) Water quality — Vocabulary " ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorWetWell"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "WetWell"@en ;
@@ -2142,7 +2157,8 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :RMiSxLtLOMDcYH1jWDJO1b
                                          ] ;
-                         rdfs:comment "Spent fuel pools (SFP) are storage pools for spent fuel from nuclear reactors. They are typically 40 or more feet (12 m) deep, with the bottom 14 feet (4.3 m) equipped with storage racks designed to hold fuel assemblies removed from reactors. A reactor's local pool is specially designed for the reactor in which the fuel was used and is situated at the reactor site. Such pools are used for short-term cooling of the fuel rods. This allows short-lived isotopes to decay and thus reduces the ionizing radiation and decay heat emanating from the rods. The water cools the fuel and provides radiological protection from its radiation."@en ;
+                         rdfs:comment "Spent fuel pools (SFP) are storage pools for spent fuel from nuclear reactors. They are typically 40 or more feet (12 m) deep, with the bottom 14 feet (4.3 m) equipped with storage racks designed to hold fuel assemblies removed from reactors. A reactor's local pool is specially designed for the reactor in which the fuel was used and is situated at the reactor site. Such pools are used for short-term cooling of the fuel rods. This allows short-lived isotopes to decay and thus reduces the ionizing radiation and decay heat emanating from the rods. The water cools the fuel and provides radiological protection from its radiation."@en ,
+                                      "Manca la definizione,il commento presente potrebbe essere una definizione" ;
                          rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Spent_fuel_pool> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "SFP"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SpentFuelPool"@en .
@@ -2781,6 +2797,7 @@ operational states and, for some barriers, in accident conditions"""@en ;
 ###  https://w3id.org/emmo/domain/neo#RvBQlxDEMRtFxiHtMstrYY
 :RvBQlxDEMRtFxiHtMstrYY rdf:type owl:Class ;
                         rdfs:subClassOf :R7gZLWyPCimwGhHTueSRPhd ;
+                        rdfs:comment "Manca la definizione" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SeaWaterCoolingSystem"@en .
 
 
@@ -2804,7 +2821,8 @@ operational states and, for some barriers, in accident conditions"""@en ;
                                           owl:someValuesFrom :RDDFiZC2RFaE7RrTNF0CrtA
                                         ] ;
                         rdfs:comment """The alternative, using fire trucks connected to the FP water injection
-port outside the TB, which had been installed in the previous year as a fire protection measure based on the experience of the Niigata-Chuetsu-Oki earthquake, was put into action."""@en ;
+port outside the TB, which had been installed in the previous year as a fire protection measure based on the experience of the Niigata-Chuetsu-Oki earthquake, was put into action."""@en ,
+                                     "Manca la definizione" ;
                         rdfs:seeAlso <https://fdada.info/develop/docs/pdf/ES-Unit123-04.pdf﻿> ,
                                      """Pag 19,  The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
