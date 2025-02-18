@@ -136,11 +136,11 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
                      rdfs:subClassOf elite:Object ;
-                     rdfs:comment "Add the definitions" ,
-                                  "comment" ,
+                     rdfs:comment "Object and people used in the production of energy from nuclear source and other sources" ,
                                   """for each class we need to add Definition, sources (is defined by) that are  mandatory.
 Alt label, see also, comment are not mandatory.""" ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearDomainObject" ;
+                     <http://www.w3.org/2004/02/skos/core#comment> "nuclear related energy object and people" ;
                      :R8xx0dhbEh1tjGMDwNZfckV "It's mandatory" ;
                      :R9Q7fCgWnAkzqnVMtRJ4WDv "They are not mandatory." ;
                      :RR3uD2d7YfhHohfv2Nm6sX "Tentativo" .
@@ -950,10 +950,24 @@ be considered. The possible need to support mobile means might also be considere
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:19883:ed-1:v1:en:term:3.15> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NPPBuilding"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "structure that has a roof and walls, with the similar function as a container (3.14) for a hydrogen PSA system or the components of a hydrogen PSA system"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "structure that has a roof and walls, with the similar function as a container (3.14) for a hydrogen PSA system or the components of a hydrogen PSA system"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "structure that has a roof and walls, with the similar function as a container (3.14)" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPowerPlantBuilding"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R8hTHDGsCdkEbILOuzUhlEr ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
+   owl:annotatedTarget "structure that has a roof and walls, with the similar function as a container (3.14) for a hydrogen PSA system or the components of a hydrogen PSA system"@en ;
+   rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:19883:ed-1:v1:en:term:3.15>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R8hTHDGsCdkEbILOuzUhlEr ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "structure that has a roof and walls, with the similar function as a container (3.14)" ;
+   rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:19883:ed-1:v1:en:term:3.15>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8lgbjRv5CeOJ43GygJ143n
@@ -1631,10 +1645,18 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R8MPIXNWSb8RCelrAeGNxMc
                                          ] ;
-                         rdfs:comment "Change the taxonomy or change the label" ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:6877:ed-3:v1:en:term:3.11> ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "instrument designed to obturate a root canal with thermoplasticized injection material (3.9) using an injection equipment or device"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectionSystems"@en .
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "MaterialInjectionSystem" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "instrument designed to obturate a root canal with thermoplasticized injection material (3.9) using an injection equipment or device"@en ,
+                                                                       "we have to define a class to define things for the injection of a m,aterial for a particulare scope" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectionSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RBzruvoEUI9hIHVtX34kGJu ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
+   owl:annotatedTarget "instrument designed to obturate a root canal with thermoplasticized injection material (3.9) using an injection equipment or device"@en ;
+   rdfs:comment "too specific"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RC1aeRG1szxYdt4kTKUUOvO
@@ -2283,16 +2305,22 @@ from control."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#RDv6FAzzuS81VzIfTO1Wkef
 :RDv6FAzzuS81VzIfTO1Wkef rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyObject ,
+                         rdfs:subClassOf :R8hTHDGsCdkEbILOuzUhlEr ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
                          rdfs:comment "Dry cask storage is a method of storing high-level radioactive waste, such as spent nuclear fuel that has already been cooled in the spent fuel pool for at least one year and often as much as ten years. Casks are typically steel cylinders that are either welded or bolted closed. The fuel rods inside are surrounded by inert gas. Ideally, the steel cylinder provides leak-tight containment of the spent fuel. Each cylinder is surrounded by additional steel, concrete, or other material to provide radiation shielding to workers and members of the public."@en ;
-                         rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Dry_cask_storage> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearCooledWasteStorageBuilding" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "It is a building used for dry cask storage."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DryCaskStorageBuilding"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDv6FAzzuS81VzIfTO1Wkef ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "It is a building used for dry cask storage."@en ;
+   rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Dry_cask_storage>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#REnnyld9FmnAjLpeDyUsnv
@@ -3430,4 +3458,4 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit4"@en .
 
 
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
