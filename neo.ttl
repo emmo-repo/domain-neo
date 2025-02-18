@@ -133,6 +133,11 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                                owl:disjointWith :RbscqwUSgWtKWJZrcgSNr9 .
 
 
+###  https://w3id.org/emmo/domain/neo#BoratedWaterInjectionSystem
+:BoratedWaterInjectionSystem rdf:type owl:Class ;
+                             rdfs:subClassOf :WaterInjectionSystem .
+
+
 ###  https://w3id.org/emmo/domain/neo#InjectedMaterial
 :InjectedMaterial rdf:type owl:Class ;
                   rdfs:subClassOf :NuclearEnergyObject ;
@@ -149,21 +154,9 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
                      rdfs:subClassOf elite:Object ;
-                     rdfs:comment "Object and people used in the production of energy from nuclear source and other sources" ,
-                                  """for each class we need to add Definition, sources (is defined by) that are  mandatory.
-Alt label, see also, comment are not mandatory.""" ;
+                     rdfs:comment "Finding a definition together" ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearDomainObject" ;
-                     <http://www.w3.org/2004/02/skos/core#comment> "nuclear related energy object and people" ;
-                     :R8xx0dhbEh1tjGMDwNZfckV "It's mandatory" ;
-                     :R9Q7fCgWnAkzqnVMtRJ4WDv "They are not mandatory." ;
-                     :RR3uD2d7YfhHohfv2Nm6sX "Tentativo" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NuclearEnergyObject ;
-   owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
-   owl:annotatedTarget "It's mandatory" ;
-   rdfs:isDefinedBy "iso-standard"
- ] .
+                     <http://www.w3.org/2004/02/skos/core#comment> "nuclear related energy object and people" .
 
 
 ###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
@@ -405,11 +398,19 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
                                            owl:onProperty elite:isParticipantOf ;
                                            owl:someValuesFrom :Rryk3Z5XNZ11ZiiLuT5M8Q
                                          ] ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:tr:19083:-1:ed-1:v1:en:term:3.12> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """group of people that has its own functions with responsibilities, authorities and relationships to the overall approach preventing and managing emergencies that might occur
 Note 1 to entry: In general, emergency management utilizes a risk management approach to prevention, preparedness, response and recovery before, during and after potentially destabilizing or disruptive events.
 [SOURCE: ISO 22320:2011, 3.35 modified]"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "EmergencyManagementOrganization"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R7MjWOBoCnDd3BD1IBHjlRe ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """group of people that has its own functions with responsibilities, authorities and relationships to the overall approach preventing and managing emergencies that might occur
+Note 1 to entry: In general, emergency management utilizes a risk management approach to prevention, preparedness, response and recovery before, during and after potentially destabilizing or disruptive events.
+[SOURCE: ISO 22320:2011, 3.35 modified]"""@en ;
+   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:tr:19083:-1:ed-1:v1:en:term:3.12>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7NYEyrtAsNuF6n0QNOFmHm
@@ -1389,8 +1390,8 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
 
 ###  https://w3id.org/emmo/domain/neo#RB8nGLKVMobwZ43LOnPJsjS
 :RB8nGLKVMobwZ43LOnPJsjS rdf:type owl:Class ;
-                         rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
-                                         :BoratedWaterInjectionSystem ,
+                         rdfs:subClassOf :BoratedWaterInjectionSystem ,
+                                         :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
@@ -1900,11 +1901,17 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :RCPsVMpkrs5EqK8G9HKv71m
                                          ] ;
-                         rdfs:isDefinedBy <https://ec.europa.eu/echo/files/media/publications/2013/ERC_en.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ERCs"@en ,
                                                                         "NppEmergencyResponseCentres"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The Emergency Response Centre (ERC) is the operational heart of the EU Civil Protection Mechanism. It enables the European Union to respond to overwhelming natural and man-made disasters quickly and efficiently, both inside and outside Europe. "@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "EmergencyResponseCentres"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RCZ2I1XktaR3DBBEbLjHwOz ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The Emergency Response Centre (ERC) is the operational heart of the EU Civil Protection Mechanism. It enables the European Union to respond to overwhelming natural and man-made disasters quickly and efficiently, both inside and outside Europe. "@en ;
+   rdfs:isDefinedBy <https://ec.europa.eu/echo/files/media/publications/2013/ERC_en.pdf>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RCcdLHL2BqdRJQkmiKL4MDW
@@ -2961,12 +2968,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCore"@en .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#BoratedWaterInjectionSystem
-:BoratedWaterInjectionSystem rdf:type owl:Class ;
-                             rdfs:subClassOf :WaterInjectionSystem .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#WaterInjectionSystem
+###  https://w3id.org/emmo/domain/neo#WaterInjectionSystem
 :WaterInjectionSystem rdf:type owl:Class ;
                       rdfs:subClassOf :RBzruvoEUI9hIHVtX34kGJu .
 
