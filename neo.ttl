@@ -140,7 +140,11 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/emmo/domain/neo#InjectedMaterial
 :InjectedMaterial rdf:type owl:Class ;
-                  rdfs:subClassOf :NuclearEnergyObject ;
+                  rdfs:subClassOf :NuclearEnergyObject ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty elite:partakesIn ;
+                                    owl:someValuesFrom :RBzruvoEUI9hIHVtX34kGJu
+                                  ] ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Material used for material supplying" .
 
 [ rdf:type owl:Axiom ;
@@ -288,7 +292,15 @@ Note 3 to entry: The reactor protection system (RPS) imposes actions on several 
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R85FFwLPHIursWfa6K6sKK9
                                          ] ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "A nuclear reactor is described which includes: a reactor vessel having a plurality of nozzles, a thick concrete primary shield surrounding the reactor vessel, a reactor cavity comprising a small spacing provided between the reactor vessel and the concrete primary shield" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCavity"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R70ZOvZxdVYhbMrv2o1bK8I ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
+   owl:annotatedTarget "A nuclear reactor is described which includes: a reactor vessel having a plurality of nozzles, a thick concrete primary shield surrounding the reactor vessel, a reactor cavity comprising a small spacing provided between the reactor vessel and the concrete primary shield" ;
+   rdfs:seeAlso "https://inis.iaea.org/records/q9ajx-f6396"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R71VApFUw4RxU2SFxCwNxMd
@@ -869,7 +881,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R8HV58d46m6thaiYmxePBRu
 :R8HV58d46m6thaiYmxePBRu rdf:type owl:Class ;
                          rdfs:subClassOf :R8KlSYQnSKI6PoJZNIdhwNI ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SeaWater"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectedSeaWater"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8Jjvo3bjpE389mPpX0uOxQ
@@ -883,7 +895,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R8KlSYQnSKI6PoJZNIdhwNI
 :R8KlSYQnSKI6PoJZNIdhwNI rdf:type owl:Class ;
                          rdfs:subClassOf :InjectedMaterial ;
-                         rdfs:comment "Change the taxonomy or change the label" ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "SupplyWater" ,
                                                                         "Water" ;
@@ -1661,11 +1672,17 @@ Note 1 to entry: The actuation can be done by gas pressure, electrical, hydrauli
                          rdfs:subClassOf :R0N27qMQzeRjM0vSOeAvUT ;
                          rdfs:comment "The nuclear reactors and the electric production lines can be either almost identical or different between them, though usually sharing various support or auxiliary installations, systems and/or supplies (ISO 12749-5:2018)"@en ,
                                       "change the order" ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.1.2> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "MultipleUnitNPP"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Nuclear power plant  having on a common site, two or more electric production lines (ISO 12749-5:2018)"@en ;
                          <http://www.w3.org/2004/02/skos/core#example> "Tennessee Valley Authority Browns Ferry Nuclear Plant (Athens, Alabama, United States)"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MultipleUnitNuclearPowerPlant"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RBuKou8LHvh6qFQkn5YcvzK ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Nuclear power plant  having on a common site, two or more electric production lines (ISO 12749-5:2018)"@en ;
+   rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.1.2>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RBv35jM3VSFKKxtWNVyDILw
@@ -2775,11 +2792,17 @@ Gas turbines — Procurement — Part 9: Reliability, availability, maintainabil
 ###  https://w3id.org/emmo/domain/neo#Rff5M43GHvSXYByyfZSSyk
 :Rff5M43GHvSXYByyfZSSyk rdf:type owl:Class ;
                         rdfs:subClassOf :R0N27qMQzeRjM0vSOeAvUT ;
-                        rdfs:isDefinedBy <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.1.1> ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "SingleUnitNPP"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Nuclear power plant having a single electric production line (ISO 12749-5:2018)"@en ;
                         <http://www.w3.org/2004/02/skos/core#example> "Emsland Nuclear Power Plant (Lingen, Germany)"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SingleUnitNuclearPowerPlant"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Rff5M43GHvSXYByyfZSSyk ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Nuclear power plant having a single electric production line (ISO 12749-5:2018)"@en ;
+   rdfs:isDefinedBy <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.1.1>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RgAy137nXA9FNxJLdXeh2G
