@@ -133,6 +133,19 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                                owl:disjointWith :RbscqwUSgWtKWJZrcgSNr9 .
 
 
+###  https://w3id.org/emmo/domain/neo#InjectedMaterial
+:InjectedMaterial rdf:type owl:Class ;
+                  rdfs:subClassOf :NuclearEnergyObject ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Material used for material supplying" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :InjectedMaterial ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Material used for material supplying" ;
+   rdfs:seeAlso "https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40"
+ ] .
+
+
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
                      rdfs:subClassOf elite:Object ;
@@ -845,9 +858,10 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          rdfs:subClassOf :InjectedMaterial ;
                          rdfs:comment "Change the taxonomy or change the label" ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40> ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "SupplyWater" ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "SupplyWater" ,
+                                                                        "Water" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "water used for water supply"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Water"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectedWater"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8MGsTLlqoWXKEU5FfQd71X
@@ -1375,8 +1389,8 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
 
 ###  https://w3id.org/emmo/domain/neo#RB8nGLKVMobwZ43LOnPJsjS
 :RB8nGLKVMobwZ43LOnPJsjS rdf:type owl:Class ;
-                         rdfs:subClassOf :RBUlm53v3Y42xdxWXvJZvzy ,
-                                         :RDoeQzvUClmOY7fNhDvK0L1 ,
+                         rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
+                                         :BoratedWaterInjectionSystem ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
@@ -1458,14 +1472,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoreEnergyProduction"@en .
 
 
-###  https://w3id.org/emmo/domain/neo#RBUlm53v3Y42xdxWXvJZvzy
-:RBUlm53v3Y42xdxWXvJZvzy rdf:type owl:Class ;
-                         rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ,
-                                         :RBzruvoEUI9hIHVtX34kGJu ;
-                         rdfs:comment "the source is missing" ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyInjectionSystem"@en .
-
-
 ###  https://w3id.org/emmo/domain/neo#RBW32C4x3sn1YahVG7uYVun
 :RBW32C4x3sn1YahVG7uYVun rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
@@ -1508,8 +1514,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RBeV8ftYy9jGBHA6rECN3Gx
 :RBeV8ftYy9jGBHA6rECN3Gx rdf:type owl:Class ;
-                         rdfs:subClassOf :RBzruvoEUI9hIHVtX34kGJu ,
-                                         :Rw4mCgviqd6HTitZEzST6w ;
+                         rdfs:subClassOf :Rw4mCgviqd6HTitZEzST6w ,
+                                         :WaterInjectionSystem ;
                          rdfs:comment "This report outlines the use of fire engines in an attempt to inject water into the reactors at Fukushima Daiichi. After the tsunami, much of the cooling function on-site was lost. The slides below document what fire engines were on site at what time, and what sources of water were injected where. Later research shows that little of the injected water made it to the reactors due to the lack of backflow valves in the fire line systems"@en ,
                                       "Manca la definizione" ;
                          rdfs:seeAlso <https://fdada.info/develop/docs/pdf/ES-Unit123-04.pdf> ;
@@ -1556,9 +1562,9 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RBp2yVTrXRyb55JnYdvAGux
 :RBp2yVTrXRyb55JnYdvAGux rdf:type owl:Class ;
-                         rdfs:subClassOf :RBzruvoEUI9hIHVtX34kGJu ,
-                                         :RDoeQzvUClmOY7fNhDvK0L1 ,
-                                         :Rw4mCgviqd6HTitZEzST6w ;
+                         rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
+                                         :Rw4mCgviqd6HTitZEzST6w ,
+                                         :WaterInjectionSystem ;
                          rdfs:comment "the sources is missing" ;
                          <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "devices that aim to the limitation of any negative consequence (3.6) of a particular event, injecting refrigerants with the aim of decrease the temperature of the core and the pressure inside the Vessel"@en ;
@@ -1665,7 +1671,8 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
                                            owl:someValuesFrom :R8MPIXNWSb8RCelrAeGNxMc
                                          ] ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:6877:ed-3:v1:en:term:3.11> ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "MaterialInjectionSystem" ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "MaterialInjectionSystem" ,
+                                                                        "SafetyInjectionSystem" ;
                          <http://www.w3.org/2004/02/skos/core#comment> "instrument designed to obturate a root canal with thermoplasticized injection material (3.9) using an injection equipment or device"@en ,
                                                                        "we have to define a class to define things for the injection of a m,aterial for a particulare scope" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectionSystem"@en .
@@ -2881,8 +2888,8 @@ operational states and, for some barriers, in accident conditions"""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#RvsRWyrgBeZBDE8PCeQpFd
 :RvsRWyrgBeZBDE8PCeQpFd rdf:type owl:Class ;
-                        rdfs:subClassOf :RBzruvoEUI9hIHVtX34kGJu ,
-                                        :Rw4mCgviqd6HTitZEzST6w ,
+                        rdfs:subClassOf :Rw4mCgviqd6HTitZEzST6w ,
+                                        :WaterInjectionSystem ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :RDDFiZC2RFaE7RrTNF0CrtA
@@ -2954,17 +2961,14 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCore"@en .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#InjectedMaterial
-:InjectedMaterial rdf:type owl:Class ;
-                  rdfs:subClassOf :NuclearEnergyObject ;
-                  <http://www.w3.org/2004/02/skos/core#definition> "Material used for material supplying" .
+###  https://w3id.org/emmo/domain/neo/neo#BoratedWaterInjectionSystem
+:BoratedWaterInjectionSystem rdf:type owl:Class ;
+                             rdfs:subClassOf :WaterInjectionSystem .
 
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :InjectedMaterial ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Material used for material supplying" ;
-   rdfs:seeAlso "https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40"
- ] .
+
+###  https://w3id.org/emmo/domain/neo/neo#WaterInjectionSystem
+:WaterInjectionSystem rdf:type owl:Class ;
+                      rdfs:subClassOf :RBzruvoEUI9hIHVtX34kGJu .
 
 
 #################################################################
@@ -3513,4 +3517,4 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit4"@en .
 
 
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
