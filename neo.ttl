@@ -163,11 +163,17 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 :R0N27qMQzeRjM0vSOeAvUT rdf:type owl:Class ;
                         rdfs:subClassOf :NuclearEnergyObject ;
                         rdfs:comment "Nuclear power plant is a nuclear reactor or reactors together with all structures, systems and components necessary for safety and for the production of power, i.e. heat or electricity (ISO 12749-5:2018)."@en ;
-                        rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.5> ;
                         rdfs:seeAlso <https://en.wikipedia.org/wiki/Nuclear_power_plant> ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "NPP"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "A nuclear reactor installation that produces electrical and/or heat energy (ISO 12749-5:2018)."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPowerPlant"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R0N27qMQzeRjM0vSOeAvUT ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A nuclear reactor installation that produces electrical and/or heat energy (ISO 12749-5:2018)."@en ;
+   rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.5>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R0ZnwwPdidaBfZOg6tgZJr
@@ -353,10 +359,17 @@ all offsite power.""" ;
 ###  https://w3id.org/emmo/domain/neo#R7ASmNcKrlRjzYHkUz3vfQT
 :R7ASmNcKrlRjzYHkUz3vfQT rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:13273:-1:ed-1:v1:en:term:3.4.8> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """organization that delivers energy efficiency services (3.4.5)
 [SOURCE: CEN-CLC/TR 16103:2010, 4.6.4, modified – The term “entity” was changed to “organization” in the definition and the Note was deleted.]"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "EnergyEfficiencyServiceCompany"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R7ASmNcKrlRjzYHkUz3vfQT ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """organization that delivers energy efficiency services (3.4.5)
+[SOURCE: CEN-CLC/TR 16103:2010, 4.6.4, modified – The term “entity” was changed to “organization” in the definition and the Note was deleted.]"""@en ;
+   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:13273:-1:ed-1:v1:en:term:3.4.8>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7Jf7CRh5B3US0yNBl08EK7
@@ -366,12 +379,18 @@ all offsite power.""" ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :RRKk7nTYd2pj3LFUG4j9yj
                                          ] ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:iwa:33:-1:ed-1:v1:en:term:7.5.9> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ControlRoom"@en ,
                                                                         "MCR"@en ,
                                                                         "MainReactorControlRoom"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "structure required for accommodating the instruments, devices and computers for monitoring and controlling all types of mechanical and electrical equipment for the whole plant"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MainControlRoom"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R7Jf7CRh5B3US0yNBl08EK7 ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "structure required for accommodating the instruments, devices and computers for monitoring and controlling all types of mechanical and electrical equipment for the whole plant"@en ;
+   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:iwa:33:-1:ed-1:v1:en:term:7.5.9>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7KAfaev0soZNlAXHICHSJd
@@ -470,12 +489,19 @@ Note 1 to entry: This location can either be an atmospheric outlet or the connec
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
-                         rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "LPECCS" ;
                          <http://www.w3.org/2004/02/skos/core#comment> "Change the taxonomy, repetition" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """The low pressure emergency core cooling systems consist of two separate and independent systems, the core spray system and the low pressure coolant injection (LPCI) mode of the residual heat removal system. The core spray system consists of two separate and independent pumping loops, each capable of pumping water from the suppression pool into the reactor vessel. Core cooling is accomplished by spraying water on top of the fuel assemblies.
 The low pressure coolant injection mode of the residual heat removal system provides makeup water to the reactor vessel for core cooling under loss of coolant accident conditions. The residual heat removal system is a multipurpose system with several operational modes, each utilizing the same major pieces of equipment. The low pressure coolant injection mode is the dominant mode and normal valve lineup configuration of the residual heat removal system. The low pressure coolant injection mode operates automatically to restore and, if necessary, maintain the reactor vessel coolant inventory to preclude fuel cladding temperatures in excess of 2200EF. During low pressure coolant injection operation, the residual heat removal pumps take water from the suppression pool and discharge to the reactor vessel."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "LowPressureEmergencyCoreCoolingSystems"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R7VGQozOvQbYzOvcFQCwv8P ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """The low pressure emergency core cooling systems consist of two separate and independent systems, the core spray system and the low pressure coolant injection (LPCI) mode of the residual heat removal system. The core spray system consists of two separate and independent pumping loops, each capable of pumping water from the suppression pool into the reactor vessel. Core cooling is accomplished by spraying water on top of the fuel assemblies.
+The low pressure coolant injection mode of the residual heat removal system provides makeup water to the reactor vessel for core cooling under loss of coolant accident conditions. The residual heat removal system is a multipurpose system with several operational modes, each utilizing the same major pieces of equipment. The low pressure coolant injection mode is the dominant mode and normal valve lineup configuration of the residual heat removal system. The low pressure coolant injection mode operates automatically to restore and, if necessary, maintain the reactor vessel coolant inventory to preclude fuel cladding temperatures in excess of 2200EF. During low pressure coolant injection operation, the residual heat removal pumps take water from the suppression pool and discharge to the reactor vessel."""@en ;
+   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7Z0T126p23eNAE1CkhAPXZ
@@ -1428,13 +1454,19 @@ The standby liquid control system consists of a heated storage tank, two positiv
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
-                         rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/students/for-educators/03.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "HPCI"@en ,
                                                                         "HighPressureEmergency CoreCoolingSystems"@en ,
                                                                         "ReactorHighPressureCoolantInjectionSystem"@en ;
                          <http://www.w3.org/2004/02/skos/core#comment> "Change the taxonomy, repetition" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The high pressure coolant injection (HPCI) system is an independent emergency core cooling system requiring no auxiliary ac power, plant air systems, or external cooling water systems to perform its purpose of providing make up water to the reactor vessel for core cooling under small and intermediate size loss of coolant accidents. The high pressure coolant injection system can supply make up water to the reactor vessel from above rated reactor pressure to a reactor pressure below that at which the low pressure emergency core cooling systems can inject."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "HighPressureCoolantInjectionSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RBHWfELWZVXyLNJa8MflI25 ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The high pressure coolant injection (HPCI) system is an independent emergency core cooling system requiring no auxiliary ac power, plant air systems, or external cooling water systems to perform its purpose of providing make up water to the reactor vessel for core cooling under small and intermediate size loss of coolant accidents. The high pressure coolant injection system can supply make up water to the reactor vessel from above rated reactor pressure to a reactor pressure below that at which the low pressure emergency core cooling systems can inject."@en ;
+   rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/students/for-educators/03.pdf>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RBJevCDiVa5kURep7JQX4ti
@@ -1567,7 +1599,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                          :Rw4mCgviqd6HTitZEzST6w ,
                                          :WaterInjectionSystem ;
                          rdfs:comment "the sources is missing" ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "devices that aim to the limitation of any negative consequence (3.6) of a particular event, injecting refrigerants with the aim of decrease the temperature of the core and the pressure inside the Vessel"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorMitigationCoolingSystem"@en .
 
@@ -1671,7 +1702,6 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R8MPIXNWSb8RCelrAeGNxMc
                                          ] ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:6877:ed-3:v1:en:term:3.11> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "MaterialInjectionSystem" ,
                                                                         "SafetyInjectionSystem" ;
                          <http://www.w3.org/2004/02/skos/core#comment> "instrument designed to obturate a root canal with thermoplasticized injection material (3.9) using an injection equipment or device"@en ,
@@ -1682,7 +1712,7 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
    owl:annotatedSource :RBzruvoEUI9hIHVtX34kGJu ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
    owl:annotatedTarget "instrument designed to obturate a root canal with thermoplasticized injection material (3.9) using an injection equipment or device"@en ;
-   rdfs:comment "too specific"
+   rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:6877:ed-3:v1:en:term:3.11>
  ] .
 
 
@@ -2199,10 +2229,16 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 :RDZtzLsQmngV2BtJvmS5pbg rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
                                          elite:Role ;
-                         rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NppEmployes"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Any person who works, whether full time, part time or temporarily, for an employer and who has recognized rights and duties in relation to occupational radiation protection."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPlantWorker"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDZtzLsQmngV2BtJvmS5pbg ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Any person who works, whether full time, part time or temporarily, for an employer and who has recognized rights and duties in relation to occupational radiation protection."@en ;
+   rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDdFdbRqtigD5ry1nrSpxkb
@@ -2763,10 +2799,16 @@ Measurement of radioactivity in the environment — Guidelines for effective dos
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                         ] ;
-                        rdfs:isDefinedBy <https://www-pub.iaea.org/MTCD/Publications/PDF/P1526_Web.pdf> ,
-                                         <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.23> ;
+                        rdfs:isDefinedBy <https://www-pub.iaea.org/MTCD/Publications/PDF/P1526_Web.pdf> ;
                         <http://www.w3.org/2004/02/skos/core#definition> "A part of the nuclear power plant that consists of the containment, auxiliary and fuel building."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearIsland"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RiaJiI8PAvV7grwixkMCcr ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A part of the nuclear power plant that consists of the containment, auxiliary and fuel building."@en ;
+   rdfs:isDefinedBy <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.23>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RlYMwSSvmqekLRLzmf5IzV
@@ -2902,14 +2944,19 @@ operational states and, for some barriers, in accident conditions"""@en ;
                                           owl:someValuesFrom :RDDFiZC2RFaE7RrTNF0CrtA
                                         ] ;
                         rdfs:comment """The alternative, using fire trucks connected to the FP water injection
-port outside the TB, which had been installed in the previous year as a fire protection measure based on the experience of the Niigata-Chuetsu-Oki earthquake, was put into action."""@en ,
-                                     "Manca la definizione" ;
-                        rdfs:seeAlso <https://fdada.info/develop/docs/pdf/ES-Unit123-04.pdf﻿> ,
-                                     """Pag 19,  The Fukushima Daiichi Accident Technical Volume 1/5 
-link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
+port outside the TB, which had been installed in the previous year as a fire protection measure based on the experience of the Niigata-Chuetsu-Oki earthquake, was put into action."""@en ;
+                        rdfs:seeAlso <https://fdada.info/develop/docs/pdf/ES-Unit123-04.pdf﻿> ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorFireProtectionWaterInjectionPort"@en ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "FireProtectionWaterInjectionPort"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RvsRWyrgBeZBDE8PCeQpFd ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """The alternative, using fire trucks connected to the FP water injection
+port outside the TB, which had been installed in the previous year as a fire protection measure based on the experience of the Niigata-Chuetsu-Oki earthquake, was put into action."""@en ;
+   rdfs:seeAlso """Pag 19,  The Fukushima Daiichi Accident Technical Volume 1/5 
+link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RvstZtdRQckXTqUl1UK5Is
