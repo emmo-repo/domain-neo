@@ -741,11 +741,17 @@ The secondary side water volume of the isolation condenser (both trains together
                                            owl:onProperty elite:isOutputOf ;
                                            owl:someValuesFrom :RB5vIXZFuMYcHWSzNAPjPtF
                                          ] ;
-                         rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1410/ML14107A411.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorUltimateHeatSink"@en ,
                                                                         "UHS"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The UHS is the system of structures and components and associated assured water supply and atmospheric condition(s) credited for functioning as a heat sink to absorb reactor residual heat and essential station heat loads after a normal reactor shutdown or a shutdown following an accident or transient including a loss-of-coolant accident (LOCA). "@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "UltimateHeatSink"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R7uMg3wtcrU3GAUhIRZUQ8m ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The UHS is the system of structures and components and associated assured water supply and atmospheric condition(s) credited for functioning as a heat sink to absorb reactor residual heat and essential station heat loads after a normal reactor shutdown or a shutdown following an accident or transient including a loss-of-coolant accident (LOCA). "@en ;
+   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1410/ML14107A411.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7unkqShg3WHoE9WWDhuPJE
@@ -1643,16 +1649,22 @@ Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abund
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
-                         rdfs:comment "The RB surrounds the primary containment and provides the second fission product barrier and is commonly called as secondary containment. In case of an accident, the standby gas treatment system (SGTS), which needs AC power for operation, filters the gases and keeps the inside pressure below the atmospheric pressure to prevent radioactive materials release."@en ,
-                                      "Manca la definizione,il commento già presente ,opportunamente modificato,potrebbe essere una definizione" ;
+                         rdfs:comment "The RB surrounds the primary containment and provides the second fission product barrier and is commonly called as secondary containment. In case of an accident, the standby gas treatment system (SGTS), which needs AC power for operation, filters the gases and keeps the inside pressure below the atmospheric pressure to prevent radioactive materials release."@en ;
                          rdfs:seeAlso <https://www.tepco.co.jp/en/nu/fukushima-np/images/handouts_110827_02-e.pdf> ,
                                       """pag 74,The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf""" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "EmergencyGasTreatmentSystem"@en ,
                                                                         "ReactorStandbyGasTreatmentSystem"@en ,
                                                                         "SGTS"@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "The Standby Gas Treatment system processes exhaust air from the secondary containment under accident conditions to limit radiation dose rates to less than 10 CFR 100 limits. The Standby Gas Treatment system is also used to purge the primary containment and leak test the secondary containment." ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "StandbyGasTreatmentSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RBimLTlArOY8mxOSFe6qiEZ ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The Standby Gas Treatment system processes exhaust air from the secondary containment under accident conditions to limit radiation dose rates to less than 10 CFR 100 limits. The Standby Gas Treatment system is also used to purge the primary containment and leak test the secondary containment." ;
+   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1215/ML12159A162.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RBnyfPxRohc9STM4mfSMMFq
@@ -1963,11 +1975,16 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          rdfs:comment """1.On the IAEA report is called \"primary containment system\".
 
 2.The Primary Containment consists of a drywell which encloses the reactor vessel and recirculation system, a pressure suppression chamber which stores a large volume of water, a connecting vent system between the drywell and the suppression chamber, isolation valves and containment atmosphere control systems. (https://www.nrc.gov/docs/ML1215/ML12159A162.pdf)"""@en ;
-                         rdfs:isDefinedBy "ISO 17873:2004(en) Nuclear facilities — Criteria for the design and operation of ventilation systems for nuclear installations other than nuclear reactors ﻿" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorShieldCoolingSystem "@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "C'è direttamente il nome del file" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "System constituted by a coherent set of physical barriers and/or auxiliary dynamic systems intended to confine radioactive substances in order to ensure the safety of the workers and the public and the protection of the environment ."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorContainmentSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RCPFRkyBbFadwcQUuWavdPl ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "System constituted by a coherent set of physical barriers and/or auxiliary dynamic systems intended to confine radioactive substances in order to ensure the safety of the workers and the public and the protection of the environment ."@en ;
+   rdfs:isDefinedBy "https://www.iso.org/obp/ui/#iso:std:iso:17873:ed-1:v1:en"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RCPsVMpkrs5EqK8G9HKv71m
@@ -2147,14 +2164,20 @@ subsequently removed from a reactor core as a single unit."""@en ;
 :RDDFiZC2RFaE7RrTNF0CrtA rdf:type owl:Class ;
                          rdfs:subClassOf :Rw4mCgviqd6HTitZEzST6w ;
                          rdfs:comment """The fire protection system was designed primarily for fire suppression and flooding of the containment vessel, not for
-injection of water into the reactor."""@en ,
-                                      "Manca la definizione" ;
+injection of water into the reactor."""@en ;
                          rdfs:seeAlso <https://fdada.info/develop/docs/pdf/ES-Unit123-04.pdf> ,
                                       """Pag 17, The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NPPFireProtectionSystem"@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "fire protection material together with any supporting system including mesh reinforcement as tested" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FireProtectionSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDDFiZC2RFaE7RrTNF0CrtA ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "fire protection material together with any supporting system including mesh reinforcement as tested" ;
+   rdfs:isDefinedBy "https://www.iso.org/obp/ui/#iso:std:iso:834:-14:ed-1:v1:en:term:3.2"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDGBzCkWozL4RpG1CuIzwPi
@@ -2517,11 +2540,18 @@ from control."""@en ;
                         rdfs:comment "For depressurizing the reactor, the on-site ERC and the MRC staff decided to use the nitrogen operated head vent nozzle (a small valve at top of the RPV) as an alternative method to depressurize the reactor because DC power was available from the 250 V emergency batteries for this purpose."@en ;
                         rdfs:seeAlso """Pag 124, The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf""" ;
-                        <http://www.w3.org/2004/02/skos/core#altLabel> "HeadVentValve"@en ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Controllare se va bene senza il define by" ,
-                                                                      "Manca defined by" ;
+                        <http://www.w3.org/2004/02/skos/core#altLabel> "HeadVentValve"@en ,
+                                                                       "VentValve" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "It is a valve on the Reactor Pressure Vessel﻿"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "HeadVentNozzle"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RG2TvkBghAiQkHQc4GNU8e ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget "VentValve" ;
+   rdfs:isDefinedBy """device used to expel air from a compressed air system
+https://www.iso.org/obp/ui/#iso:std:iso:24478:ed-1:v2:en:term:3.10.8.2"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RG42cv992jX3Deeh35WKwu
@@ -2716,12 +2746,18 @@ Large outdoor fires and the built environment — Global overview of different a
                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                           owl:someValuesFrom :R85FFwLPHIursWfa6K6sKK9
                                         ] ;
-                        rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1215/ML12159A162.pdf> ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorSuppressionChamber"@en ,
                                                                        "SC"@en ;
                         <http://www.w3.org/2004/02/skos/core#comment> "Possible altLabel: SuppressionPool" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "The suppression chamber consists of a steel pressure vessel with a toroidal shape (sometimes referred to as torus) and a large body of water inside the suppression chamber (referred to as the suppression pool). The purposes of the suppression chamber are to condense steam released from a LOCA and to prevent radioactive materials from passing through this portion of the primary containment boundary.  ﻿"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SuppressionChamber"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RY81DSQhpDKzGrzvuAjU5m ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The suppression chamber consists of a steel pressure vessel with a toroidal shape (sometimes referred to as torus) and a large body of water inside the suppression chamber (referred to as the suppression pool). The purposes of the suppression chamber are to condense steam released from a LOCA and to prevent radioactive materials from passing through this portion of the primary containment boundary.  ﻿"@en ;
+   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1215/ML12159A162.pdf>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RZ7eQ19CTPh8iKBmvqWp16
@@ -2780,13 +2816,19 @@ Large outdoor fires and the built environment — Global overview of different a
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                         ] ;
-                        rdfs:isDefinedBy "ISO 20539:2023(en) Translation, interpreting and related technology — Vocabulary" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "NppPublicAddressSystem"@en ,
                                                                        "PASystem"@en ,
                                                                        "SoundReinforcementSystem"@en ,
                                                                        "SpeechReinforcementSystem"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "system (3.5.2.17) that amplifies sound (3.5.2.22)"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PublicAddressSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RaKxhZBSqtO6ceVm10Ca6Y ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "system (3.5.2.17) that amplifies sound (3.5.2.22)"@en ;
+   rdfs:isDefinedBy "https://www.iso.org/obp/ui/#iso:std:iso:20539:ed-2:v1:en:term:3.2.2"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RadiactiveMaterialByOccurence
