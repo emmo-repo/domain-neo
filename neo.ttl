@@ -265,10 +265,11 @@ ISO 18246:2023(en), 3.4.12"""@en ;
 ###  https://w3id.org/emmo/domain/neo#R6dO6yatvM1kcW0Iuf8Z0R
 :R6dO6yatvM1kcW0Iuf8Z0R rdf:type owl:Class ;
                         rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ;
-                        rdfs:isDefinedBy "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors" ;
+                        rdfs:isDefinedBy """https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en
+Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors
+ISO 12749-5:2018(en)""" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "RPS"@en ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Non c'è il link della fonte, ma solo il nome" ;
-                        <http://www.w3.org/2004/02/skos/core#definition> """system that monitors the operation (3.9.1) of a reactor and which, on sensing an abnormal condition, automatically initiates actions to prevent an unsafe or potentially unsafe condition 
+                        <http://www.w3.org/2004/02/skos/core#definition> """System that monitors the operation (3.9.1) of a reactor and which, on sensing an abnormal condition, automatically initiates actions to prevent an unsafe or potentially unsafe condition 
 
 Note 1 to entry: This use of the term protection refers to protection of the plant; the system in this case encompasses all electrical and mechanical devices and circuitry, from sensors to actuation device input terminals. 
 
@@ -535,8 +536,9 @@ Note 1 to entry: The absorption of the external colliding particle, usually a ne
                                          ] ;
                          rdfs:comment """Meanwhile, an attempt to enter the Unit 1 RB to conduct radiation measurements at 03:45 on 12 March was abandoned, when the team encountered white fog-like steam upon opening the airlock
 door, although the measurements at the radiation monitoring post near the site’s main gate did not show any anomaly to indicate a release from RPV or PCV at 04:00."""@en ;
-                         rdfs:seeAlso """pag 29,The Fukushima Daiichi Accident Technical Volume 1/5 
-link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf""" ;
+                         rdfs:seeAlso """https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf
+The Fukushima Daiichi Accident Technical Volume 1/5 
+Pag 29""" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A Radiation Monitor is a device used to detect and measure radiation fields in the vicinity of a radiation source, evaluate radiation contamination of patients, equipment, or the environment, and measure surface contamination and airborne radioactivity." ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MobileRadiationMonitor"@en .
 
@@ -599,7 +601,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
 ###  https://w3id.org/emmo/domain/neo#R7i2YiNCalwlsxcsL7AR3VF
 :R7i2YiNCalwlsxcsL7AR3VF rdf:type owl:Class ;
                          rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ;
-                         rdfs:comment "This term refers all the devices used to measure parameters and properties  about system."@en ;
+                         rdfs:comment "This term refers all the devices used to measure parameters and properties about system."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetySensors"@en .
 
 
@@ -663,10 +665,11 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
-                         rdfs:isDefinedBy "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors " ;
+                         rdfs:isDefinedBy """https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en
+Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors 
+ISO 12749-5:2018(en)""" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "SCS"@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Non c'è il link della fonte, ma solo il nome" ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "plant system (3.7.2) designed to cool the main parts of the reactor shield in order to maintain reasonable values of temperature in all the main shield parts, especially under normal on-power conditions "@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Plant system (3.7.2) designed to cool the main parts of the reactor shield in order to maintain reasonable values of temperature in all the main shield parts, especially under normal on-power conditions "@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorShieldCoolingSystem"@en .
 
 
@@ -1017,7 +1020,7 @@ be considered. The possible need to support mobile means might also be considere
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R9j7jE0NWQS6xBqDD8iJRbf
                                          ] ;
-                         rdfs:comment "It is inside th RCIC"@en ;
+                         rdfs:comment "It's inside th RCIC"@en ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1125/ML11258A311.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The RCIC turbine is designed to rapidly accelerate from standby to the full load condition within 30 seconds. The RCIC turbine is a horizontally mounted radial re-entry, non-condensing Terry turbine. The RCIC turbine is designed to operate with a steam supply pressure ranging from 150 to 1135 psig. The RCIC turbine exhausts to the suppression pool under water."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICTurbine"@en .
@@ -1548,13 +1551,15 @@ The standby liquid control system consists of a heated storage tank, two positiv
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
-                         rdfs:comment "It is a label used within the Fukushima report to represent the entire system used in case of an emergency to restore power (electricity) in a Nuclear Power Plant."@en ,
-                                      "They flooded the primary and backup power systems and equipment, as well as the ultimate heat sink systems and structures, of all six units on the site"@en ,
-                                      "Manca la definizione,il commetnto già presente potrebbe essere la definizione" ;
-                         rdfs:seeAlso """Pag 2 , The Fukushima Daiichi Accident Technical Volume 1/5 
-link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf""" ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "BackupPowerSystem"@en .
+                         rdfs:comment "They flooded the primary and backup power systems and equipment, as well as the ultimate heat sink systems and structures, of all six units on the site"@en ;
+                         rdfs:isDefinedBy """https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf
+The Fukushima Daiichi Accident Technical Volume 1/5
+Pag 2""" ;
+                         rdfs:seeAlso """EmergencyPowerSupply is defined by:
+https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf""" ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "EmergencyPowerSupply" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "BackupPowerSystem"@en ;
+                         :R8xx0dhbEh1tjGMDwNZfckV "It's a label used within the Fukushima report to represent the entire system used in case of an emergency to restore electrical power in a NuclearPowerPlant" .
 
 
 ###  https://w3id.org/emmo/domain/neo#RBU28e2pgiTqsaTCPWnAJ6y
@@ -1881,7 +1886,10 @@ from control."""@en ;
                                          ] ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1125/ML11258A305.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CRD﻿"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "PURPOSES: To make changes in core reactivity by positioning control rods in response to the Reactor Manual Control System (RMCS) signals. To rapidly insert all control rods to shutdown the reactor in response to the Reactor Protection System (RPS) signals.  To provide cooling water for the reactor recirculation and reactor water cleanup pump seals."@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> """Purpuses:
+To make changes in core reactivity by positioning control rods in response to the Reactor Manual Control System (RMCS) signals. 
+To rapidly insert all control rods to shutdown the reactor in response to the Reactor Protection System (RPS) signals. 
+To provide cooling water for the reactor recirculation and reactor water cleanup pump seals."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ControlRodDriveSystem"@en .
 
 
@@ -2199,10 +2207,12 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
                          rdfs:comment "On the IAEA report is called \"safety relief valve (SRV)\"."@en ;
-                         rdfs:isDefinedBy "ISO 21843:2023(en) Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels " ;
+                         rdfs:isDefinedBy """https://www.iso.org/obp/ui/en/#iso:std:iso:21843:ed-2:v1:en 
+Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels 
+ISO 21843:2023(en)""" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "PRV"@en ,
                                                                         "ReactorPressureReliefValve"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> """pressure-activated valve intended to limit pressure rise to a specified value
+                         <http://www.w3.org/2004/02/skos/core#definition> """Pressure-activated valve intended to limit pressure rise to a specified value
 Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PressureReliefValve"@en .
 
@@ -2992,6 +3002,10 @@ operational states and, for some barriers, in accident conditions"""@en ;
 ###  https://w3id.org/emmo/domain/neo#RvBQlxDEMRtFxiHtMstrYY
 :RvBQlxDEMRtFxiHtMstrYY rdf:type owl:Class ;
                         rdfs:subClassOf :R7gZLWyPCimwGhHTueSRPhd ;
+                        rdfs:seeAlso """Informations about the use of seawater during the Fukushima Daiichi accident
+https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf
+The Fukushima Daiichi Accident Technical Volume 1/5
+Chapters: 1.1.3 - 1.1.4""" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SeaWaterCoolingSystem"@en .
 
 

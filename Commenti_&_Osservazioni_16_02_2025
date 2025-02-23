@@ -1,0 +1,16 @@
+Commenti & Osservazioni 16/02/2025
+--------------------------------------------------------------
+- NuclearPowerPlantUnit è parte di NuclearPowerPlant? 
+Proposta:
+>NuclearPowerPlant
+>>NuclearPowerPlantUnit
+>>MultipleUnitNuclearPowerPlant
+>>SingleUnitNuclearPowerPlant
+--------------------------------------------------------------
+- ReactorCavity (manca tutto, non ci convince molto)
+--------------------------------------------------------------
+- altlabel di ReactorContainmentSystem
+Proposta: 
+"PrimaryContainmentSystem"
+--------------------------------------------------------------
+
