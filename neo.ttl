@@ -155,6 +155,7 @@ elite:isOutputOf rdfs:subPropertyOf elite:partakesIn .
 ###  https://w3id.org/emmo/domain/neo#InjectedMaterial
 :InjectedMaterial rdf:type owl:Class ;
                   rdfs:subClassOf :NuclearEnergyObject ;
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "SuppliedMaterial" ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Material used for material supplying" .
 
 [ rdf:type owl:Axiom ;
@@ -824,7 +825,7 @@ The secondary side water volume of the isolation condenser (both trains together
 
 ###  https://w3id.org/emmo/domain/neo#R7unkqShg3WHoE9WWDhuPJE
 :R7unkqShg3WHoE9WWDhuPJE rdf:type owl:Class ;
-                         rdfs:subClassOf :R8KlSYQnSKI6PoJZNIdhwNI ,
+                         rdfs:subClassOf :InjectedMaterial ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:partakesIn ;
                                            owl:someValuesFrom :RBp2yVTrXRyb55JnYdvAGux
@@ -987,13 +988,13 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:someValuesFrom :REwjatmwMA4xgNq0mpx6LO
                                          ] ;
                          rdfs:seeAlso "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull19-1/19105982126.pdf" ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "Seawater  is water from a sea or ocean." ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SeaWater"@en .
+                         <http://www.w3.org/2004/02/skos/core#definition> "Seawater is water from a sea or ocean." ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectedSeaWater"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R8HV58d46m6thaiYmxePBRu ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Seawater  is water from a sea or ocean." ;
+   owl:annotatedTarget "Seawater is water from a sea or ocean." ;
    rdfs:isDefinedBy "https://en.wikipedia.org/wiki/Seawater#"
  ] .
 
@@ -1013,7 +1014,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :WaterInjectionSystem
                                          ] ;
-                         rdfs:comment "Change the taxonomy or change the label" ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "SupplyWater" ,
                                                                         "Water" ;
@@ -1604,12 +1604,19 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
-                         rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorStandbyLiquidControlSystem"@en ,
                                                                         "SLC"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> """The standby liquid control system injects a neutron poison (boron) into the reactor vessel to shutdown the chain reaction, independent of the control rods, and maintains the reactor shutdown as the plant is cooled to maintenance temperatures.
 The standby liquid control system consists of a heated storage tank, two positive displacement pumps, two explosive valves, and the piping necessary to inject the neutron absorbing solution into the reactor vessel. The standby liquid control system is manually initiated and provides the operator with a relatively slow method of achieving reactor shutdown conditions."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "StandbyLiquidControlSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RB8nGLKVMobwZ43LOnPJsjS ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """The standby liquid control system injects a neutron poison (boron) into the reactor vessel to shutdown the chain reaction, independent of the control rods, and maintains the reactor shutdown as the plant is cooled to maintenance temperatures.
+The standby liquid control system consists of a heated storage tank, two positive displacement pumps, two explosive valves, and the piping necessary to inject the neutron absorbing solution into the reactor vessel. The standby liquid control system is manually initiated and provides the operator with a relatively slow method of achieving reactor shutdown conditions."""@en ;
+   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RBA8h87iH1lIFBwAyDriYiS
@@ -2731,7 +2738,15 @@ from control."""@en ;
 :REwjatmwMA4xgNq0mpx6LO rdf:type owl:Class ;
                         rdfs:subClassOf :R89Yy2V18LstH4xGXyNb9XN ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "NppSeaWaterPump"@en ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "In addition, an ordinary or emergency cooling facility in the nuclear power plant is constituted such that sea water in the cavity is supplied by a sea water pump." ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SeaWaterPump"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :REwjatmwMA4xgNq0mpx6LO ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "In addition, an ordinary or emergency cooling facility in the nuclear power plant is constituted such that sea water in the cavity is supplied by a sea water pump." ;
+   rdfs:isDefinedBy "https://inis.iaea.org/records/k5ahh-5w896"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RG2TvkBghAiQkHQc4GNU8e
@@ -3183,10 +3198,16 @@ constructed"""@en ;
 Kashiwazaki Kariwa,
 Fukushima Dai-ichi.
 Fukushima Dai-ni,"""@en ;
-                        rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Tokyo_Electric_Power_Company> ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "TEPCO"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Tokyo Electric Power Company (東京電力株式会社?, Tōkyō Denryoku Kabushiki-gaisha), also known as Tōden (東電?) or TEPCO, is Japan's largest electric power company. Serving the Kantō region.﻿"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "TokyoElectricPowerCompany"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RnTowd9AGtNiJRicoarsyr ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Tokyo Electric Power Company (東京電力株式会社?, Tōkyō Denryoku Kabushiki-gaisha), also known as Tōden (東電?) or TEPCO, is Japan's largest electric power company. Serving the Kantō region.﻿"@en ;
+   rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Tokyo_Electric_Power_Company>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RoO35j2Hgqm540PRLDF9Jy
@@ -3374,11 +3395,11 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 :WaterInjectionSystem rdf:type owl:Class ;
                       rdfs:subClassOf :RBzruvoEUI9hIHVtX34kGJu ;
                       rdfs:label "WaterInjectionSystem" ;
-                      <http://www.w3.org/2004/02/skos/core#definition> "Water from the filtrated water tanks and raw water underground tanks can be injected by the electric pumps, fire engines, or alternatively by concrete pumper." .
+                      <http://www.w3.org/2004/02/skos/core#comment> "Water from the filtrated water tanks and raw water underground tanks can be injected by the electric pumps, fire engines, or alternatively by concrete pumper." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :WaterInjectionSystem ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
    owl:annotatedTarget "Water from the filtrated water tanks and raw water underground tanks can be injected by the electric pumps, fire engines, or alternatively by concrete pumper." ;
    rdfs:seeAlso "https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"
  ] .
