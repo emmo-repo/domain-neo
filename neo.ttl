@@ -168,9 +168,17 @@ elite:isOutputOf rdfs:subPropertyOf elite:partakesIn .
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
                      rdfs:subClassOf elite:Object ;
-                     rdfs:comment "Finding a definition together" ;
+                     rdfs:comment "Nuclear energy is a form of heat energy that can be released via reactions involving nuclear fusion or fission taking place between neutrons and protons in the nucleus of an atom. Electricity can be produced when a large amount of heat energy released is applied to generate steam from turbines (Fig. 1.4). Uranium-235, an isotope of uranium, is the most commonly used element in industrial nuclear power generators." ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearDomainObject" ;
-                     <http://www.w3.org/2004/02/skos/core#comment> "nuclear related energy object and people" .
+                     <http://www.w3.org/2004/02/skos/core#comment> "nuclear related energy object and people" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "It is an object involved in the nuclear energy production, management and control." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :NuclearEnergyObject ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Nuclear energy is a form of heat energy that can be released via reactions involving nuclear fusion or fission taking place between neutrons and protons in the nucleus of an atom. Electricity can be produced when a large amount of heat energy released is applied to generate steam from turbines (Fig. 1.4). Uranium-235, an isotope of uranium, is the most commonly used element in industrial nuclear power generators." ;
+   rdfs:seeAlso "https://www.sciencedirect.com/topics/engineering/nuclear-energy"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
@@ -1323,13 +1331,21 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:someValuesFrom :RZtNAG3BL7lDm8L77EbEBd
                                          ] ;
                          rdfs:comment "here are detailed descriptions for both BWR and PWR in this document.﻿"@en ;
-                         rdfs:isDefinedBy <https://inis.iaea.org/collection/NCLCollectionStore/_Public/27/051/27051618.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "MSIV"@en ,
                                                                         "ReactorMainSteamIsolationValve"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> """The MSIVs are engineered safety features designed to limit the release of radioactive materials to the environment and to minimize reactor vessel inventory loss during a Design Basis Accident Redundant valves are located on each main steam line: one inside the drywell and one in the steam tunnel in the auxiliary building. The MSIVs are air- and spring-operated valves — air to open, air and spring to close .... (BWR)
 
 The MSIVs are engineered safety features designed to limit the consequences of a steam line break. In the event of a steam line break inside containment, the MSIVs must close within 5 seconds to isolate the reverse steam flow from the intact SG to limit containment pressure below its design limits. The reverse steam flow is the result of the intact SG's feeding the steam line break through the pressure-equalizing header located in the turbine building. The containment is designed to accommodate only one SG blowdown... (PWR)"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MainSteamIsolationValve"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R9MK7U9YLf7RtEpfQTDDr1q ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """The MSIVs are engineered safety features designed to limit the release of radioactive materials to the environment and to minimize reactor vessel inventory loss during a Design Basis Accident Redundant valves are located on each main steam line: one inside the drywell and one in the steam tunnel in the auxiliary building. The MSIVs are air- and spring-operated valves — air to open, air and spring to close .... (BWR)
+
+The MSIVs are engineered safety features designed to limit the consequences of a steam line break. In the event of a steam line break inside containment, the MSIVs must close within 5 seconds to isolate the reverse steam flow from the intact SG to limit containment pressure below its design limits. The reverse steam flow is the result of the intact SG's feeding the steam line break through the pressure-equalizing header located in the turbine building. The containment is designed to accommodate only one SG blowdown... (PWR)"""@en ;
+   rdfs:isDefinedBy "https://inis.iaea.org/collection/NCLCollectionStore/_Public/27/051/27051618.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R9OmYzkYNkqi6kwcE7kNZkF
@@ -1478,10 +1494,16 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R8CzBJHXymJx05c6sDhbspt
                                          ] ;
-                         rdfs:isDefinedBy "ISO 17536-1:2015(en) Road vehicles — Aerosol separator performance test for internal combustion engines — Part 1: General" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearBypassValve﻿"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Device to direct a portion of the flow around a separation device due to pressure difference, usually venting downstream of the bypassed separation device."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BypassValve"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RB8FKmPNbcy1ViUT2RE8alB ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Device to direct a portion of the flow around a separation device due to pressure difference, usually venting downstream of the bypassed separation device."@en ;
+   rdfs:isDefinedBy "ISO 17536-1:2015(en) Road vehicles — Aerosol separator performance test for internal combustion engines — Part 1: General"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RB8nGLKVMobwZ43LOnPJsjS
@@ -1725,11 +1747,18 @@ Space systems — Safety and compatibility of materials — Part 5: Determinatio
 ###  https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq
 :RBsAUchYFBwAtcVUeFr8EFq rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ;
-                         rdfs:comment "Change the taxonomy or the change the label" ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:23551:-1:ed-2:v1:en:term:3.101.1> ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "Valve" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """device consisting essentially of a valve body, closure member, and actuator that controls the flow of gas
 Note 1 to entry: The actuation can be done by gas pressure, electrical, hydraulic, manual or pneumatic energy."""@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Valve"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PipePlantValve"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RBsAUchYFBwAtcVUeFr8EFq ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """device consisting essentially of a valve body, closure member, and actuator that controls the flow of gas
+Note 1 to entry: The actuation can be done by gas pressure, electrical, hydraulic, manual or pneumatic energy."""@en ;
+   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:23551:-1:ed-2:v1:en:term:3.101.1>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RBtkzbuLn6g0vdtDU3mijH0
@@ -2154,10 +2183,16 @@ subsequently removed from a reactor core as a single unit."""@en ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R8CzBJHXymJx05c6sDhbspt
                                          ] ;
-                         rdfs:isDefinedBy "ISO 11086:1996(en) Gas turbines — Vocabulary " ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NPPPowerTurbine"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Turbine which is driven by the gases from a gas generator, producing power output from the gas turbine through an independent shaft."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PowerTurbine"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDCVLkjId3erZ4ajIA6nHzM ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Turbine which is driven by the gases from a gas generator, producing power output from the gas turbine through an independent shaft."@en ;
+   rdfs:isDefinedBy "ISO 11086:1996(en) Gas turbines — Vocabulary "
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDDFiZC2RFaE7RrTNF0CrtA
@@ -2222,12 +2257,19 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
                          rdfs:comment "On the IAEA report is called \"safety relief valve (SRV)\"."@en ;
-                         rdfs:isDefinedBy "ISO 21843:2023(en) Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels " ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "PRV"@en ,
                                                                         "ReactorPressureReliefValve"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> """pressure-activated valve intended to limit pressure rise to a specified value
 Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PressureReliefValve"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDM3Wmp5f6fMXTDpEK3Dmsx ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """pressure-activated valve intended to limit pressure rise to a specified value
+Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
+   rdfs:isDefinedBy "ISO 21843:2023(en) Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels "
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDN44xs0tgwZS1p11BPMMKr
@@ -2325,11 +2367,17 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R8CzBJHXymJx05c6sDhbspt
                                          ] ;
-                         rdfs:isDefinedBy <https://inis.iaea.org/collection/NCLCollectionStore/_Public/27/051/27051618.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearTurbineValve"@en ,
                                                                         "StopValve"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "The main turbine is an 1800 rpm, tandem compound machine consisting of one high-pressure turbine and three lowpressure turbines. The steam enters the middle of the high-pressure section and works its way toward each end, dissipating its energy to the turbine blades which are attached to a common shaft. Steam exiting the high-pressure turbine passes through moisture separators where entrained moisture, which could damage the turbine blades, is removed prior to entering the low-pressure turbine (BWR description)"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "The main turbine is an 1800 rpm, tandem compound machine consisting of one high-pressure turbine and three lowpressure turbines. The steam enters the middle of the high-pressure section and works its way toward each end, dissipating its energy to the turbine blades which are attached to a common shaft. Steam exiting the high-pressure turbine passes through moisture separators where entrained moisture, which could damage the turbine blades, is removed prior to entering the low-pressure turbine (BWR description)"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "TurbineValve"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDTtg7PlU70nX1AN6XHiAwK ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
+   owl:annotatedTarget "The main turbine is an 1800 rpm, tandem compound machine consisting of one high-pressure turbine and three lowpressure turbines. The steam enters the middle of the high-pressure section and works its way toward each end, dissipating its energy to the turbine blades which are attached to a common shaft. Steam exiting the high-pressure turbine passes through moisture separators where entrained moisture, which could damage the turbine blades, is removed prior to entering the low-pressure turbine (BWR description)"@en ;
+   rdfs:seeAlso "https://inis.iaea.org/collection/NCLCollectionStore/_Public/27/051/27051618.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDZtzLsQmngV2BtJvmS5pbg
@@ -2538,12 +2586,18 @@ from control."""@en ;
                                           owl:someValuesFrom :RCRVu2hmIevYnx0eZzyJEPs
                                         ] ;
                         rdfs:comment "For depressurizing the reactor, the on-site ERC and the MRC staff decided to use the nitrogen operated head vent nozzle (a small valve at top of the RPV) as an alternative method to depressurize the reactor because DC power was available from the 250 V emergency batteries for this purpose."@en ;
-                        rdfs:seeAlso """Pag 124, The Fukushima Daiichi Accident Technical Volume 1/5 
-link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf""" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "HeadVentValve"@en ,
                                                                        "VentValve" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "It is a valve on the Reactor Pressure Vessel﻿"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "HeadVentNozzle"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RG2TvkBghAiQkHQc4GNU8e ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "For depressurizing the reactor, the on-site ERC and the MRC staff decided to use the nitrogen operated head vent nozzle (a small valve at top of the RPV) as an alternative method to depressurize the reactor because DC power was available from the 250 V emergency batteries for this purpose."@en ;
+   rdfs:seeAlso """Pag 124, The Fukushima Daiichi Accident Technical Volume 1/5 
+link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""
+ ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :RG2TvkBghAiQkHQc4GNU8e ;
@@ -2967,9 +3021,9 @@ Fukushima Dai-ni,"""@en ;
                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                           owl:someValuesFrom :R8CzBJHXymJx05c6sDhbspt
                                         ] ;
-                        rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Electric_generator> ;
-                        <http://www.w3.org/2004/02/skos/core#altLabel> "NPPGenerator"@en ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Possible altLabel: ElectricalGenerator" ;
+                        rdfs:isDefinedBy <> ;
+                        <http://www.w3.org/2004/02/skos/core#altLabel> "NPPGenerator"@en ,
+                                                                       "ElectricalGenerator" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "In electricity generation, a generator is a device that converts motion-based power (potential and kinetic energy) or fuel-based power (chemical energy) into electric power for use in an external circuit. "@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Generator"@en .
 
@@ -3695,4 +3749,4 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit4"@en .
 
 
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
