@@ -246,12 +246,18 @@ further decays, the event is referred to as inelastic scattering."""@en ;
                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                           owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                         ] ;
-                        rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf> ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "MUWC"@en ,
                                                                        "ReactorMakeUpWaterCondensateSystem"@en ,
                                                                        "ReactorWaterCleanupSystem"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "The purpose of the reactor water cleanup system (RWCU) is to maintain a high reactor water quality by removing fission products, corrosion products, and other soluble and insoluble impurities. The reactor water cleanup pump takes water from the recirculation system and the vessel bottom head and pumps the water through heat exchangers to cool the flow. The water is then sent through filter/demineralizers for cleanup. After cleanup, the water is returned to the reactor vessel via the feedwater piping."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "MakeUpWaterCondensateSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R2eIY10Bw0mNaYfKDcCmDd ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The purpose of the reactor water cleanup system (RWCU) is to maintain a high reactor water quality by removing fission products, corrosion products, and other soluble and insoluble impurities. The reactor water cleanup pump takes water from the recirculation system and the vessel bottom head and pumps the water through heat exchangers to cool the flow. The water is then sent through filter/demineralizers for cleanup. After cleanup, the water is returned to the reactor vessel via the feedwater piping."@en ;
+   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R2sZehPfJJ1VHSqzgnHkJX
@@ -306,16 +312,6 @@ Note 3 to entry: The reactor protection system (RPS) imposes actions on several 
                                            owl:someValuesFrom :RDS0g8UekSMDWjEgBp6z2sP
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FastInducedFission"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R70ZOvZxdVYhbMrv2o1bK8I
-:R70ZOvZxdVYhbMrv2o1bK8I rdf:type owl:Class ;
-                         rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                           owl:someValuesFrom :R85FFwLPHIursWfa6K6sKK9
-                                         ] ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCavity"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R71VApFUw4RxU2SFxCwNxMd
@@ -638,10 +634,16 @@ among the preventive measures employed in reactor design""" ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:81346:-10:ed-1:v1:en:term:3.9> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "EPGS"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "system representing a process for conversion, transmission and/or distribution of energy"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PowerSupplySystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R7hYLnBucjQ8XgAj5RsQvpF ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "system representing a process for conversion, transmission and/or distribution of energy"@en ;
+   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:81346:-10:ed-1:v1:en:term:3.9>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7i2YiNCalwlsxcsL7AR3VF
@@ -783,10 +785,16 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
 In these closed loops, the primary side of the isolation condenser received steam generated in the reactor and condensed it by cooling inside the heat exchanger tubes that were submerged in colder water tanks (isolation condenser pools) located outside the primary containment vessel. Condensed steam was then sent as cold water back to the reactor by gravity (see the diagram below). 
 Without mixing with the radioactive primary side water, the secondary side water in the isolation condenser pools boiled, and the evaporated steam was vented to the atmosphere, which served as the heat sink. 
 The secondary side water volume of the isolation condenser (both trains together) was sufficient for eight hours of cooling before requiring replenishment from a dedicated water source."""@en ;
-                         rdfs:isDefinedBy "https://nrcoe.inl.gov/SysStudy/IC.aspx"@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "IC"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The IC is used in older boiling water reactor designs. The IC system transfers residual and decay heat from the reactor coolant to the water in the shell side of the heat exchanger resulting in steam generation. The steam generated in the shell side of the heat exchanger is then vented to the outside atmosphere. The system employs natural circulation as the driving head from the reactor steam side, through the isolation condenser tubes, and back to the reactor."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "IsolationCondenserSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R7twPwtQmmXFTKrDWM3POCD ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The IC is used in older boiling water reactor designs. The IC system transfers residual and decay heat from the reactor coolant to the water in the shell side of the heat exchanger resulting in steam generation. The steam generated in the shell side of the heat exchanger is then vented to the outside atmosphere. The system employs natural circulation as the driving head from the reactor steam side, through the isolation condenser tubes, and back to the reactor."@en ;
+   rdfs:isDefinedBy "https://nrcoe.inl.gov/SysStudy/IC.aspx"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7uMg3wtcrU3GAUhIRZUQ8m
@@ -902,10 +910,16 @@ Collaborative business relationship management systems — Requirements and fram
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :RBW32C4x3sn1YahVG7uYVun
                                          ] ;
-                         rdfs:isDefinedBy <https://www.tepco.co.jp/en/decommision/planaction/images/140127_01.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "PCV"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Steel vessel containing the Reactor Pressure Vessel (RPV) and other main reactor facilities"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PrimaryContainmentVessel"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R85FFwLPHIursWfa6K6sKK9 ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Steel vessel containing the Reactor Pressure Vessel (RPV) and other main reactor facilities"@en ;
+   rdfs:isDefinedBy <https://www.tepco.co.jp/en/decommision/planaction/images/140127_01.pdf>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R86VrLeGdKN00eQd0A9HjPc
@@ -915,13 +929,11 @@ Collaborative business relationship management systems — Requirements and fram
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R7twPwtQmmXFTKrDWM3POCD
                                          ] ;
-                         rdfs:comment "In the Unit 1 design, there were two separate and redundant isolation condenser loops. In these closed loops, the primary side of the isolation condenser received steam generated in the reactor and condensed it by cooling inside the heat exchanger tubes that were submerged in colder water tanks (isolation condenser pools) located outside the primary containment vessel."@en ,
-                                      "manca la definizione,il commento presente,opportunamente modificato potrebbe essere una definizione" ;
+                         rdfs:comment "In the Unit 1 design, there were two separate and redundant isolation condenser loops. In these closed loops, the primary side of the isolation condenser received steam generated in the reactor and condensed it by cooling inside the heat exchanger tubes that were submerged in colder water tanks (isolation condenser pools) located outside the primary containment vessel."@en ;
                          rdfs:seeAlso """Box 1.1–2. Systems for cooling the core when the reactor is isolated from the turbines. The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "IsolatioCondenserPool"@en ,
                                                                         "ReactorIsolationCondenserTank"@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Controllare se va bene senza il define by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "IsolationCondenserTank"@en .
 
 
@@ -1260,9 +1272,15 @@ Nuclear energy — Vocabulary — Part 1: General terminology""" ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :RRVTDj2E9x5cjit7EQ9Dkx
                                          ] ;
-                         rdfs:isDefinedBy "IWA 33-1:2019(en) Technical guidelines for the development of small hydropower plants — Part 1: Vocabulary "@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "DC power source equipment transforming electric energy into chemical energy for storage"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "StorageBattery"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R8zYURIM0mP33CaMTE6iACV ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "DC power source equipment transforming electric energy into chemical energy for storage"@en ;
+   rdfs:isDefinedBy "IWA 33-1:2019(en) Technical guidelines for the development of small hydropower plants — Part 1: Vocabulary "
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R94o7o1nZqxzHLLqTyhHY08
@@ -1385,7 +1403,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :RZtNAG3BL7lDm8L77EbEBd
                                          ] ;
-                         rdfs:comment "here are detailed descriptions for both BWR and PWR in this document.﻿"@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "MSIV"@en ,
                                                                         "ReactorMainSteamIsolationValve"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> """The MSIVs are engineered safety features designed to limit the release of radioactive materials to the environment and to minimize reactor vessel inventory loss during a Design Basis Accident Redundant valves are located on each main steam line: one inside the drywell and one in the steam tunnel in the auxiliary building. The MSIVs are air- and spring-operated valves — air to open, air and spring to close .... (BWR)
@@ -1992,21 +2009,23 @@ from control."""@en ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
-                         rdfs:isDefinedBy "ISO 21843:2023(en) Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorThermalProtectionSystem"@en ;
                          <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "protection afforded to the vessel to reduce the rate of heat transfer from the fire to the vessel, throughout the period of exposure to fire, including any protection materials together with any encasement (such as a jacket), and supporting system (such as mesh reinforcement or a framing system) and any specified primer and top coat if applicable."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ThermalProtectionSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RCAHezyl4VRbtyt3dbnxBUb ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "protection afforded to the vessel to reduce the rate of heat transfer from the fire to the vessel, throughout the period of exposure to fire, including any protection materials together with any encasement (such as a jacket), and supporting system (such as mesh reinforcement or a framing system) and any specified primer and top coat if applicable."@en ;
+   rdfs:isDefinedBy "ISO 21843:2023(en) Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RCDLrZ9KyXAspBK0GpRfHxG
 :RCDLrZ9KyXAspBK0GpRfHxG rdf:type owl:Class ;
                          rdfs:subClassOf :R6dO6yatvM1kcW0Iuf8Z0R ,
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                           owl:someValuesFrom :R70ZOvZxdVYhbMrv2o1bK8I
-                                         ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isInputOf ;
                                            owl:someValuesFrom :R1DAH32q3UDTp3GZGqe5Re
@@ -2131,7 +2150,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R85FFwLPHIursWfa6K6sKK9
                                          ] ;
-                         rdfs:isDefinedBy "﻿ISO 21347:2005(en)  Space systems — Fracture and damage control﻿"@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "RPV"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> """container designed primarily for the storage of pressurized fluid, which fulfils at least one of the following criteria:
 
@@ -2139,6 +2157,17 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
     b) contains gas or liquid which will create a mishap (accident) if released;
     c) contains gas or liquid with high pressure level﻿"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorPressureVessel"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RCRVu2hmIevYnx0eZzyJEPs ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """container designed primarily for the storage of pressurized fluid, which fulfils at least one of the following criteria:
+
+    a) contains gas or liquid with high energy level;
+    b) contains gas or liquid which will create a mishap (accident) if released;
+    c) contains gas or liquid with high pressure level﻿"""@en ;
+   rdfs:isDefinedBy "﻿ISO 21347:2005(en)  Space systems — Fracture and damage control﻿"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RCV3rrs00sLryJLTlXR60QN
@@ -2222,10 +2251,17 @@ in operation or in accidents."""@en ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :RCV3rrs00sLryJLTlXR60QN
                                          ] ;
-                         rdfs:isDefinedBy <https://inis.iaea.org/collection/NCLCollectionStore/_Public/26/044/26044983.pdf?r=1> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """Emergency Diesel Generators (EDGs) provide on-site emergency alternating current (ac) electric
 power for a nuclear plant in the event that all off-site power sources are lost.""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DieselGenerator"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RCh38CRTgX4tnzCoB8auwPC ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """Emergency Diesel Generators (EDGs) provide on-site emergency alternating current (ac) electric
+power for a nuclear plant in the event that all off-site power sources are lost.""" ;
+   rdfs:isDefinedBy <https://inis.iaea.org/collection/NCLCollectionStore/_Public/26/044/26044983.pdf?r=1>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RCsCw5Imj0XgbP0uOlzcQNe
@@ -2350,9 +2386,15 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 :RDLYlpbjx3Rhwa0uGxFNWzC rdf:type owl:Class ;
                          rdfs:subClassOf :R7hYLnBucjQ8XgAj5RsQvpF ;
                          rdfs:comment "On the IAEA report is called \"Trasmission system\"."@en ;
-                         rdfs:isDefinedBy "ISO 52000-1:2017(en) Energy performance of buildings — Overarching EPB assessment — Part 1: General framework and procedures ﻿."@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Public electricity network .﻿"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ElectricityGrid"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDLYlpbjx3Rhwa0uGxFNWzC ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Public electricity network .﻿"@en ;
+   rdfs:isDefinedBy "ISO 52000-1:2017(en) Energy performance of buildings — Overarching EPB assessment — Part 1: General framework and procedures ﻿."
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDM3Wmp5f6fMXTDpEK3Dmsx
@@ -2403,9 +2445,15 @@ Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                          rdfs:comment "Manca la definizione" ;
                          rdfs:isDefinedBy "ISO 6107:2021(en) Water quality — Vocabulary " ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorWetWell"@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "WetWell"@en ;
                          :R8xx0dhbEh1tjGMDwNZfckV "chamber, below ground level in a pumping installation that receives water to be pumped "@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDNjoQuhLLxChWFzUtzeUrj ;
+   owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
+   owl:annotatedTarget "chamber, below ground level in a pumping installation that receives water to be pumped "@en ;
+   rdfs:isDefinedBy "ISO 6107:2021(en) Water quality — Vocabulary"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDP6jdP3MdBK59hhoDGY0Vw
@@ -2825,11 +2873,17 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en 
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                         ] ;
                         rdfs:comment "The NPP unit includes the nuclear reactor plus all its associated systems and buildings not shared by other nuclear reactors (ISO 12749-5:2018)"@en ;
-                        rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.3> ,
-                                         "IAEA “Construction technologies for nuclear power plants”. IAEA Nuclear Energy Series No. NP-T-2.5. IAEA, Vienna, 2011. p. 190" ;
+                        rdfs:isDefinedBy "IAEA “Construction technologies for nuclear power plants”. IAEA Nuclear Energy Series No. NP-T-2.5. IAEA, Vienna, 2011. p. 190" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "NPPUnit"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "part of the NPP implementing NPP´s functions with the scope specified in the NPP´s design basis (ISO 12749-5:2018)"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPowerPlantUnit"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RRKk7nTYd2pj3LFUG4j9yj ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "part of the NPP implementing NPP´s functions with the scope specified in the NPP´s design basis (ISO 12749-5:2018)"@en ;
+   rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.3>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RRPYBSdeHQObrzQD5UT74I
@@ -2848,10 +2902,16 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en 
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                         ] ;
                         rdfs:comment "On the IAEA report is called \"DC Power system\".﻿"@en ;
-                        rdfs:isDefinedBy "IWA 33-1:2019(en) Technical guidelines for the development of small hydropower plants — Part 1: Vocabulary ﻿" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "DCPowerSystem﻿"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "DC power source supplying power to control, signal and automatic devices, as well as relay protection, tripping and closing coils of switching devices and emergency lighting﻿."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "DCOperationalPowerSource"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RRVTDj2E9x5cjit7EQ9Dkx ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "DC power source supplying power to control, signal and automatic devices, as well as relay protection, tripping and closing coils of switching devices and emergency lighting﻿."@en ;
+   rdfs:isDefinedBy "IWA 33-1:2019(en) Technical guidelines for the development of small hydropower plants — Part 1: Vocabulary ﻿"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RRcoLavbFREtzVcprEzyrY
@@ -3297,11 +3357,17 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :RBW32C4x3sn1YahVG7uYVun
                                         ] ;
-                        rdfs:isDefinedBy "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors" ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link, ma solo il nome della risorsa" ;
                         <http://www.w3.org/2004/02/skos/core#definition> """part of a nuclear reactor (3.1.22), where the fissionable nuclides (3.1.2) sustaining the fission chain are located
 Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also included in the reactor core (3.1.23.1)."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCore"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RyMmVkVf9zClluOSgfr1Rh ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """part of a nuclear reactor (3.1.22), where the fissionable nuclides (3.1.2) sustaining the fission chain are located
+Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also included in the reactor core (3.1.23.1)."""@en ;
+   rdfs:isDefinedBy "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#WaterInjectionSystem
