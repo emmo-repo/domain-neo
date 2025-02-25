@@ -756,11 +756,11 @@ The secondary side water volume of the isolation condenser (both trains together
                          rdfs:subClassOf :R8KlSYQnSKI6PoJZNIdhwNI ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:partakesIn ;
-                                           owl:someValuesFrom :RBp2yVTrXRyb55JnYdvAGux
+                                           owl:someValuesFrom :BoratedWaterInjectionSystem
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:participatesTo ;
-                                           owl:someValuesFrom :BoratedWaterInjectionSystem
+                                           owl:onProperty elite:partakesIn ;
+                                           owl:someValuesFrom :RBp2yVTrXRyb55JnYdvAGux
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:participatesTo ;
@@ -937,6 +937,11 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R8KlSYQnSKI6PoJZNIdhwNI
 :R8KlSYQnSKI6PoJZNIdhwNI rdf:type owl:Class ;
                          rdfs:subClassOf :InjectedMaterial ,
+                                         elite:Fluid ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:partakesIn ;
+                                           owl:someValuesFrom :WaterInjectionSystem
+                                         ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :WaterInjectionSystem
@@ -1281,18 +1286,18 @@ Petroleum and natural gas industries — Pipeline transportation systems — Pip
                          rdfs:comment <https://www.nra.go.jp/data/000292313.pdf> ,
                                       """At around 21:55 on 14 March, the recently restored containment atmospheric monitoring system
 (CAMS) — the radiation monitoring equipment inside the Unit 2 RPV — indicated that the radiation
-levels inside the containment had increased substantially ..."""@en ,
-                                      "the radiation monitoring equipment" ;
+levels inside the containment had increased substantially ..."""@en ;
                          rdfs:seeAlso """Pag 28, The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf."""@en ,
                                       "https://inis.iaea.org/records/an804-p7682" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CAMS"@en ,
                                                                         "NPP ContainmentAtmosphericMonitoringSystem"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "the radiation monitoring equipment" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ContainmentAtmosphericMonitoringSystem"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R9Iwkpvro1luxgrYOcKzuPX ;
-   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "the radiation monitoring equipment" ;
    rdfs:isDefinedBy """pag 28,The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""
@@ -1676,7 +1681,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                          :WaterInjectionSystem ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "EmergencyCoreCoolingSystem" ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "devices that aim to the limitation of any negative consequence (3.6) of a particular event, injecting refrigerants with the aim of decrease the temperature of the core and the pressure inside the Vessel"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "devices that aim to the limitation of any negative consequence (3.6) of a particular event, injecting refrigerants with the aim of decrease the temperature of the core and the pressure inside the Vessel"@en ,
+                                                                       "adding definition from link" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorMitigationCoolingSystem"@en .
 
 [ rdf:type owl:Axiom ;
@@ -3045,13 +3051,6 @@ port outside the TB, which had been installed in the previous year as a fire pro
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""
  ] .
 
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :RvsRWyrgBeZBDE8PCeQpFd ;
-   owl:annotatedProperty rdfs:seeAlso ;
-   owl:annotatedTarget <https://fdada.info/develop/docs/pdf/ES-Unit123-04.pdf﻿> ;
-   rdfs:comment "check link, doesn't work"
- ] .
-
 
 ###  https://w3id.org/emmo/domain/neo#RvstZtdRQckXTqUl1UK5Is
 :RvstZtdRQckXTqUl1UK5Is rdf:type owl:Class ;
@@ -3111,12 +3110,12 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#WaterInjectionSystem
 :WaterInjectionSystem rdf:type owl:Class ;
                       rdfs:subClassOf :RBzruvoEUI9hIHVtX34kGJu ;
-                      rdfs:label "WaterInjectionSystem" ;
-                      <http://www.w3.org/2004/02/skos/core#definition> "Water from the filtrated water tanks and raw water underground tanks can be injected by the electric pumps, fire engines, or alternatively by concrete pumper." .
+                      rdfs:label "FluidInjectionSystem" ;
+                      <http://www.w3.org/2004/02/skos/core#comment> "Water from the filtrated water tanks and raw water underground tanks can be injected by the electric pumps, fire engines, or alternatively by concrete pumper." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :WaterInjectionSystem ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
    owl:annotatedTarget "Water from the filtrated water tanks and raw water underground tanks can be injected by the electric pumps, fire engines, or alternatively by concrete pumper." ;
    rdfs:seeAlso "https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"
  ] .
@@ -3666,6 +3665,19 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                         elite:foregoes :R7MkAFLocpCOTpR1W4846Wv ;
                         elite:isBehaviourOf :R8nP70kb2tjsTW1qDOmrdbC ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit4"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :R8KlSYQnSKI6PoJZNIdhwNI
+                elite:Gas
+                elite:Liquid
+                elite:Plasma
+              )
+] .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
