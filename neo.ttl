@@ -1864,8 +1864,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                          :WaterInjectionSystem ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "EmergencyCoreCoolingSystem" ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "devices that aim to the limitation of any negative consequence (3.6) of a particular event, injecting refrigerants with the aim of decrease the temperature of the core and the pressure inside the Vessel"@en ,
-                                                                       "adding definition from link" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "devices that aim to the limitation of any negative consequence (3.6) of a particular event, injecting refrigerants with the aim of decrease the temperature of the core and the pressure inside the Vessel"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorMitigationCoolingSystem"@en .
 
 [ rdf:type owl:Axiom ;
@@ -2065,7 +2064,6 @@ from control."""@en ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorThermalProtectionSystem"@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "protection afforded to the vessel to reduce the rate of heat transfer from the fire to the vessel, throughout the period of exposure to fire, including any protection materials together with any encasement (such as a jacket), and supporting system (such as mesh reinforcement or a framing system) and any specified primer and top coat if applicable."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ThermalProtectionSystem"@en .
 
@@ -2503,8 +2501,6 @@ ISO 21843:2023(en)"""
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R85FFwLPHIursWfa6K6sKK9
                                          ] ;
-                         rdfs:comment "Manca la definizione" ;
-                         rdfs:isDefinedBy "ISO 6107:2021(en) Water quality — Vocabulary " ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorWetWell"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "WetWell"@en ;
                          :R8xx0dhbEh1tjGMDwNZfckV "chamber, below ground level in a pumping installation that receives water to be pumped "@en .
@@ -2634,8 +2630,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :RMiSxLtLOMDcYH1jWDJO1b
                                          ] ;
-                         rdfs:comment "Spent fuel pools (SFP) are storage pools for spent fuel from nuclear reactors. They are typically 40 or more feet (12 m) deep, with the bottom 14 feet (4.3 m) equipped with storage racks designed to hold fuel assemblies removed from reactors. A reactor's local pool is specially designed for the reactor in which the fuel was used and is situated at the reactor site. Such pools are used for short-term cooling of the fuel rods. This allows short-lived isotopes to decay and thus reduces the ionizing radiation and decay heat emanating from the rods. The water cools the fuel and provides radiological protection from its radiation."@en ,
-                                      "Manca la definizione,il commento presente potrebbe essere una definizione" ;
+                         rdfs:comment "Spent fuel pools (SFP) are storage pools for spent fuel from nuclear reactors. They are typically 40 or more feet (12 m) deep, with the bottom 14 feet (4.3 m) equipped with storage racks designed to hold fuel assemblies removed from reactors. A reactor's local pool is specially designed for the reactor in which the fuel was used and is situated at the reactor site. Such pools are used for short-term cooling of the fuel rods. This allows short-lived isotopes to decay and thus reduces the ionizing radiation and decay heat emanating from the rods. The water cools the fuel and provides radiological protection from its radiation."@en ;
                          rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Spent_fuel_pool> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "SFP"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SpentFuelPool"@en .
@@ -3057,8 +3052,8 @@ Large outdoor fires and the built environment — Global overview of different a
                                           owl:someValuesFrom :R85FFwLPHIursWfa6K6sKK9
                                         ] ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorSuppressionChamber"@en ,
-                                                                       "SC"@en ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Possible altLabel: SuppressionPool" ;
+                                                                       "SC"@en ,
+                                                                       "SuppressionPool" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "The suppression chamber consists of a steel pressure vessel with a toroidal shape (sometimes referred to as torus) and a large body of water inside the suppression chamber (referred to as the suppression pool). The purposes of the suppression chamber are to condense steam released from a LOCA and to prevent radioactive materials from passing through this portion of the primary containment boundary.  ﻿"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SuppressionChamber"@en .
 
