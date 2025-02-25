@@ -956,6 +956,11 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 :R8KlSYQnSKI6PoJZNIdhwNI rdf:type owl:Class ;
                          rdfs:subClassOf :InjectedMaterial ,
                                          elite:Fluid ,
+                                         elite:Role ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isParticipantOf ;
+                                           owl:someValuesFrom :R8MPIXNWSb8RCelrAeGNxMc
+                                         ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:partakesIn ;
                                            owl:someValuesFrom :WaterInjectionSystem
@@ -990,7 +995,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#R8MPIXNWSb8RCelrAeGNxMc
 :R8MPIXNWSb8RCelrAeGNxMc rdf:type owl:Class ;
-                         rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
+                         rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ,
+                                         elite:Whole ;
                          rdfs:isDefinedBy <https://dictionary.cambridge.org/it/dizionario/inglese/injection> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Injection"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The introduction of something new that is necessary or helpful to a situation or process."@en ;
