@@ -203,10 +203,16 @@ elite:isOutputOf rdfs:subPropertyOf elite:partakesIn .
 :R0ZnwwPdidaBfZOg6tgZJr rdf:type owl:Class ;
                         rdfs:subClassOf :R8hTHDGsCdkEbILOuzUhlEr ;
                         rdfs:comment "On the IAEA report is called \"reactor building\""@en ;
-                        rdfs:isDefinedBy <https://aris.iaea.org/sites/Glossary.html> ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorBuilding"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "A hermetically sealed building which houses the nuclear reactor core and other systems that could potentially release fission products to the atmosphere during an accident."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ContainmentBuilding"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R0ZnwwPdidaBfZOg6tgZJr ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A hermetically sealed building which houses the nuclear reactor core and other systems that could potentially release fission products to the atmosphere during an accident."@en ;
+   rdfs:isDefinedBy <https://aris.iaea.org/sites/Glossary.html>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R1DAH32q3UDTp3GZGqe5Re
@@ -433,13 +439,23 @@ all offsite power.""" ;
                                            owl:someValuesFrom :RCRVu2hmIevYnx0eZzyJEPs
                                          ] ;
                          rdfs:comment "Check definition" ;
-                         rdfs:isDefinedBy "ISO 18077:2022(en) Reload startup physics tests for pressurized water reactors." ;
                          <http://www.w3.org/2004/02/skos/core#definition> """One or more rods that are inserted or withdrawn simultaneously 
 
 Note 1 to entry: The term “all control rod groups” means all safety and regulating control rod groups. This term may also be shortened to simply “rod group.” 
 
 Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A control rod bank is the same as a control rod group."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ControlRodGroup"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R7KAfaev0soZNlAXHICHSJd ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """One or more rods that are inserted or withdrawn simultaneously 
+
+Note 1 to entry: The term “all control rod groups” means all safety and regulating control rod groups. This term may also be shortened to simply “rod group.” 
+
+Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A control rod bank is the same as a control rod group."""@en ;
+   rdfs:isDefinedBy "ISO 18077:2022(en) Reload startup physics tests for pressurized water reactors."
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7MjWOBoCnDd3BD1IBHjlRe
@@ -468,7 +484,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 :R7NYEyrtAsNuF6n0QNOFmHm rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ;
                          rdfs:comment "Change the taxonomy or change the label" ;
-                         rdfs:isDefinedBy <> ;
+                         rdfs:isDefinedBy <https://w3id.org/emmo/domain/neo> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Term which when used alone refers to the turbine action only. It is that component of the gas turbine which produces power from expansion of the working fluid."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PlantTurbine"@en .
 
@@ -523,7 +539,6 @@ Note 1 to entry: This location can either be an atmospheric outlet or the connec
 ###  https://w3id.org/emmo/domain/neo#R7VGQozOvQbYzOvcFQCwv8P
 :R7VGQozOvQbYzOvcFQCwv8P rdf:type owl:Class ;
                          rdfs:subClassOf :RBp2yVTrXRyb55JnYdvAGux ,
-                                         :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
@@ -836,7 +851,7 @@ The secondary side water volume of the isolation condenser (both trains together
 
 ###  https://w3id.org/emmo/domain/neo#R7unkqShg3WHoE9WWDhuPJE
 :R7unkqShg3WHoE9WWDhuPJE rdf:type owl:Class ;
-                         rdfs:subClassOf :InjectedMaterial ,
+                         rdfs:subClassOf :R8KlSYQnSKI6PoJZNIdhwNI ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:partakesIn ;
                                            owl:someValuesFrom :BoratedWaterInjectionSystem
@@ -850,6 +865,7 @@ The secondary side water volume of the isolation condenser (both trains together
                                            owl:someValuesFrom :R76QRzIQVjwDFrNAttIw9RF
                                          ] ;
                          rdfs:seeAlso "https://www.columbuschemical.com/MSDS/SDS/Borated%20Water%200881.pdf" ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "InjectedBoratedWater" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Boron, often in the form of boric acid or sodium borate, is combined with water where it acts as a coolant to remove heat from the reactor core and transfers the heat to a secondary circuit." ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BoratedWater"@en .
 
@@ -1661,7 +1677,6 @@ The standby liquid control system consists of a heated storage tank, two positiv
 ###  https://w3id.org/emmo/domain/neo#RBHWfELWZVXyLNJa8MflI25
 :RBHWfELWZVXyLNJa8MflI25 rdf:type owl:Class ;
                          rdfs:subClassOf :RBp2yVTrXRyb55JnYdvAGux ,
-                                         :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
@@ -1669,7 +1684,6 @@ The standby liquid control system consists of a heated storage tank, two positiv
                          <http://www.w3.org/2004/02/skos/core#altLabel> "HPCI"@en ,
                                                                         "HighPressureEmergency CoreCoolingSystems"@en ,
                                                                         "ReactorHighPressureCoolantInjectionSystem"@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Change the taxonomy, repetition" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The high pressure coolant injection (HPCI) system is an independent emergency core cooling system requiring no auxiliary ac power, plant air systems, or external cooling water systems to perform its purpose of providing make up water to the reactor vessel for core cooling under small and intermediate size loss of coolant accidents. The high pressure coolant injection system can supply make up water to the reactor vessel from above rated reactor pressure to a reactor pressure below that at which the low pressure emergency core cooling systems can inject."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "HighPressureCoolantInjectionSystem"@en .
 
@@ -1928,11 +1942,17 @@ Note 1 to entry: The actuation can be done by gas pressure, electrical, hydrauli
                          rdfs:subClassOf :R0N27qMQzeRjM0vSOeAvUT ;
                          rdfs:comment "The nuclear reactors and the electric production lines can be either almost identical or different between them, though usually sharing various support or auxiliary installations, systems and/or supplies (ISO 12749-5:2018)"@en ,
                                       "change the order" ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.1.2> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "MultipleUnitNPP"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Nuclear power plant  having on a common site, two or more electric production lines (ISO 12749-5:2018)"@en ;
                          <http://www.w3.org/2004/02/skos/core#example> "Tennessee Valley Authority Browns Ferry Nuclear Plant (Athens, Alabama, United States)"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MultipleUnitNuclearPowerPlant"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RBuKou8LHvh6qFQkn5YcvzK ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Nuclear power plant  having on a common site, two or more electric production lines (ISO 12749-5:2018)"@en ;
+   rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.1.2>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RBv35jM3VSFKKxtWNVyDILw
@@ -2070,7 +2090,8 @@ from control."""@en ;
                                            owl:someValuesFrom :R80L6MpJJVkL4hoNB7thCRV
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CRD﻿"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> """Purpuses:
+                         <http://www.w3.org/2004/02/skos/core#definition> "PURPOSES: To make changes in core reactivity by positioning control rods in response to the Reactor Manual Control System (RMCS) signals. To rapidly insert all control rods to shutdown the reactor in response to the Reactor Protection System (RPS) signals.  To provide cooling water for the reactor recirculation and reactor water cleanup pump seals."@en ,
+                                                                          """Purpuses:
 To make changes in core reactivity by positioning control rods in response to the Reactor Manual Control System (RMCS) signals. 
 To rapidly insert all control rods to shutdown the reactor in response to the Reactor Protection System (RPS) signals. 
 To provide cooling water for the reactor recirculation and reactor water cleanup pump seals."""@en ;
@@ -2549,10 +2570,16 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R9aF6fIPWPEzkHdmnDKNorP
                                          ] ;
-                         rdfs:isDefinedBy <https://aris.iaea.org/sites/Glossary.html> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CR"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A rode/plate/tube that is used to absorb the neutrons in the reactor core. These help to control the number of fission events and thus the power of the nuclear reactor. "@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ControlRod"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDTfhSry7c6TzIENETvIs1U ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A rode/plate/tube that is used to absorb the neutrons in the reactor core. These help to control the number of fission events and thus the power of the nuclear reactor. "@en ;
+   rdfs:isDefinedBy <https://aris.iaea.org/sites/Glossary.html>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDTtg7PlU70nX1AN6XHiAwK
@@ -3065,11 +3092,16 @@ Large outdoor fires and the built environment — Global overview of different a
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :R85FFwLPHIursWfa6K6sKK9
                                         ] ;
-                        rdfs:isDefinedBy "ISO 6107:2021(en) Water quality — Vocabulary ﻿" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorDryWell﻿"@en ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Controllare se va bene senza link" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Chamber, below ground level, that remains dry, and houses pumping apparatus with its associated pipework and equipment."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "DryWell"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RZtNAG3BL7lDm8L77EbEBd ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Chamber, below ground level, that remains dry, and houses pumping apparatus with its associated pipework and equipment."@en ;
+   rdfs:isDefinedBy "ISO 6107:2021(en) Water quality — Vocabulary ﻿"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#Ra61ijkU0v73woMBs0urSn
@@ -3177,11 +3209,17 @@ Gas turbines — Procurement — Part 9: Reliability, availability, maintainabil
 ###  https://w3id.org/emmo/domain/neo#Rff5M43GHvSXYByyfZSSyk
 :Rff5M43GHvSXYByyfZSSyk rdf:type owl:Class ;
                         rdfs:subClassOf :R0N27qMQzeRjM0vSOeAvUT ;
-                        rdfs:isDefinedBy <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.1.1> ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "SingleUnitNPP"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Nuclear power plant having a single electric production line (ISO 12749-5:2018)"@en ;
                         <http://www.w3.org/2004/02/skos/core#example> "Emsland Nuclear Power Plant (Lingen, Germany)"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SingleUnitNuclearPowerPlant"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Rff5M43GHvSXYByyfZSSyk ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Nuclear power plant having a single electric production line (ISO 12749-5:2018)"@en ;
+   rdfs:isDefinedBy <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.1.1>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RgAy137nXA9FNxJLdXeh2G
@@ -4006,4 +4044,4 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ] .
 
 
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
