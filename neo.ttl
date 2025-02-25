@@ -265,9 +265,6 @@ ISO 18246:2023(en), 3.4.12"""@en ;
 ###  https://w3id.org/emmo/domain/neo#R6dO6yatvM1kcW0Iuf8Z0R
 :R6dO6yatvM1kcW0Iuf8Z0R rdf:type owl:Class ;
                         rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ;
-                        rdfs:isDefinedBy """https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en
-Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors
-ISO 12749-5:2018(en)""" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "RPS"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> """System that monitors the operation (3.9.1) of a reactor and which, on sensing an abnormal condition, automatically initiates actions to prevent an unsafe or potentially unsafe condition 
 
@@ -277,6 +274,21 @@ Note 2 to entry: The reactor protection system (RPS) provides protection against
 
 Note 3 to entry: The reactor protection system (RPS) imposes actions on several systems, especially, the reactor regulation system (3.7.2.1.2) (RRS), the reactor shutdown system (3.8.16.1) (SDS) and the emergency core cooling system (3.8.16.2) (ECCS). ﻿"""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorProtectionSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R6dO6yatvM1kcW0Iuf8Z0R ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """System that monitors the operation (3.9.1) of a reactor and which, on sensing an abnormal condition, automatically initiates actions to prevent an unsafe or potentially unsafe condition 
+
+Note 1 to entry: This use of the term protection refers to protection of the plant; the system in this case encompasses all electrical and mechanical devices and circuitry, from sensors to actuation device input terminals. 
+
+Note 2 to entry: The reactor protection system (RPS) provides protection against abnormal conditions such as reactor over-power, too fast neutron (3.1.5.1) flux increase, high reactor inlet temperature, primary heat transport system (3.7.2.5) over-pressure, etc. 
+
+Note 3 to entry: The reactor protection system (RPS) imposes actions on several systems, especially, the reactor regulation system (3.7.2.1.2) (RRS), the reactor shutdown system (3.8.16.1) (SDS) and the emergency core cooling system (3.8.16.2) (ECCS). ﻿"""@en ;
+   rdfs:isDefinedBy """https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en
+Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors
+ISO 12749-5:2018(en)"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R70ALPF758Xyidhnwjti86x
@@ -665,12 +677,18 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
-                         rdfs:isDefinedBy """https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en
-Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors 
-ISO 12749-5:2018(en)""" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "SCS"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Plant system (3.7.2) designed to cool the main parts of the reactor shield in order to maintain reasonable values of temperature in all the main shield parts, especially under normal on-power conditions "@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorShieldCoolingSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R7qSTtjQZPRR80bVjivshI8 ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Plant system (3.7.2) designed to cool the main parts of the reactor shield in order to maintain reasonable values of temperature in all the main shield parts, especially under normal on-power conditions "@en ;
+   rdfs:isDefinedBy """https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en
+Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors 
+ISO 12749-5:2018(en)"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7qv2nUGxSNZRvXyF3CXPTr
@@ -1027,9 +1045,15 @@ be considered. The possible need to support mobile means might also be considere
                                            owl:someValuesFrom :R9j7jE0NWQS6xBqDD8iJRbf
                                          ] ;
                          rdfs:comment "It's inside th RCIC"@en ;
-                         rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1125/ML11258A311.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The RCIC turbine is designed to rapidly accelerate from standby to the full load condition within 30 seconds. The RCIC turbine is a horizontally mounted radial re-entry, non-condensing Terry turbine. The RCIC turbine is designed to operate with a steam supply pressure ranging from 150 to 1135 psig. The RCIC turbine exhausts to the suppression pool under water."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICTurbine"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R8SUtkHvWQxLIC7oGi7FZGx ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The RCIC turbine is designed to rapidly accelerate from standby to the full load condition within 30 seconds. The RCIC turbine is a horizontally mounted radial re-entry, non-condensing Terry turbine. The RCIC turbine is designed to operate with a steam supply pressure ranging from 150 to 1135 psig. The RCIC turbine exhausts to the suppression pool under water."@en ;
+   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1125/ML11258A311.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8XKJXm7vS0D4Y1OEvOkXde
@@ -1326,13 +1350,21 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:someValuesFrom :RZtNAG3BL7lDm8L77EbEBd
                                          ] ;
                          rdfs:comment "here are detailed descriptions for both BWR and PWR in this document.﻿"@en ;
-                         rdfs:isDefinedBy <https://inis.iaea.org/collection/NCLCollectionStore/_Public/27/051/27051618.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "MSIV"@en ,
                                                                         "ReactorMainSteamIsolationValve"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> """The MSIVs are engineered safety features designed to limit the release of radioactive materials to the environment and to minimize reactor vessel inventory loss during a Design Basis Accident Redundant valves are located on each main steam line: one inside the drywell and one in the steam tunnel in the auxiliary building. The MSIVs are air- and spring-operated valves — air to open, air and spring to close .... (BWR)
 
 The MSIVs are engineered safety features designed to limit the consequences of a steam line break. In the event of a steam line break inside containment, the MSIVs must close within 5 seconds to isolate the reverse steam flow from the intact SG to limit containment pressure below its design limits. The reverse steam flow is the result of the intact SG's feeding the steam line break through the pressure-equalizing header located in the turbine building. The containment is designed to accommodate only one SG blowdown... (PWR)"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MainSteamIsolationValve"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R9MK7U9YLf7RtEpfQTDDr1q ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """The MSIVs are engineered safety features designed to limit the release of radioactive materials to the environment and to minimize reactor vessel inventory loss during a Design Basis Accident Redundant valves are located on each main steam line: one inside the drywell and one in the steam tunnel in the auxiliary building. The MSIVs are air- and spring-operated valves — air to open, air and spring to close .... (BWR)
+
+The MSIVs are engineered safety features designed to limit the consequences of a steam line break. In the event of a steam line break inside containment, the MSIVs must close within 5 seconds to isolate the reverse steam flow from the intact SG to limit containment pressure below its design limits. The reverse steam flow is the result of the intact SG's feeding the steam line break through the pressure-equalizing header located in the turbine building. The containment is designed to accommodate only one SG blowdown... (PWR)"""@en ;
+   rdfs:isDefinedBy "https://inis.iaea.org/collection/NCLCollectionStore/_Public/27/051/27051618.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R9OmYzkYNkqi6kwcE7kNZkF
@@ -1421,10 +1453,16 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
-                         rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "RCIC"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The reactor core isolation cooling (RCIC) system provides makeup water to the reactor vessel for core cooling when the main steam lines are isolated and the normal supply of water to the reactor vessel is lost. The RCIC system consists of a turbine-driven pump, piping, and valves necessary to deliver water to the reactor vessel at operating conditions. "@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoreIsolationCoolingSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R9j7jE0NWQS6xBqDD8iJRbf ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The reactor core isolation cooling (RCIC) system provides makeup water to the reactor vessel for core cooling when the main steam lines are isolated and the normal supply of water to the reactor vessel is lost. The RCIC system consists of a turbine-driven pump, piping, and valves necessary to deliver water to the reactor vessel at operating conditions. "@en ;
+   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R9p0u8Gh9Tup5P416Wl32S7
@@ -1561,11 +1599,17 @@ The standby liquid control system consists of a heated storage tank, two positiv
                          rdfs:isDefinedBy """https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf
 The Fukushima Daiichi Accident Technical Volume 1/5
 Pag 2""" ;
-                         rdfs:seeAlso """EmergencyPowerSupply is defined by:
-https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf""" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "EmergencyPowerSupply" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BackupPowerSystem"@en ;
                          :R8xx0dhbEh1tjGMDwNZfckV "It's a label used within the Fukushima report to represent the entire system used in case of an emergency to restore electrical power in a NuclearPowerPlant" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RBPz6UINahiYOAyy7SWLOIs ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget "EmergencyPowerSupply" ;
+   rdfs:isDefinedBy """EmergencyPowerSupply is defined by:
+https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RBU28e2pgiTqsaTCPWnAJ6y
@@ -2214,14 +2258,21 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
                          rdfs:comment "On the IAEA report is called \"safety relief valve (SRV)\"."@en ;
-                         rdfs:isDefinedBy """https://www.iso.org/obp/ui/en/#iso:std:iso:21843:ed-2:v1:en 
-Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels 
-ISO 21843:2023(en)""" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "PRV"@en ,
                                                                         "ReactorPressureReliefValve"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> """Pressure-activated valve intended to limit pressure rise to a specified value
 Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PressureReliefValve"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDM3Wmp5f6fMXTDpEK3Dmsx ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """Pressure-activated valve intended to limit pressure rise to a specified value
+Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
+   rdfs:isDefinedBy """https://www.iso.org/obp/ui/en/#iso:std:iso:21843:ed-2:v1:en 
+Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels 
+ISO 21843:2023(en)"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDN44xs0tgwZS1p11BPMMKr
