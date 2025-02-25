@@ -766,7 +766,7 @@ The secondary side water volume of the isolation condenser (both trains together
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R76QRzIQVjwDFrNAttIw9RF
                                          ] ;
-                         rdfs:isDefinedBy "https://en.wikipedia.org/wiki/Nuclear_reactor_coolant" ;
+                         rdfs:seeAlso "https://www.columbuschemical.com/MSDS/SDS/Borated%20Water%200881.pdf" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Boron, often in the form of boric acid or sodium borate, is combined with water where it acts as a coolant to remove heat from the reactor core and transfers the heat to a secondary circuit." ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "BoratedWater"@en .
 
@@ -774,7 +774,7 @@ The secondary side water volume of the isolation condenser (both trains together
    owl:annotatedSource :R7unkqShg3WHoE9WWDhuPJE ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Boron, often in the form of boric acid or sodium borate, is combined with water where it acts as a coolant to remove heat from the reactor core and transfers the heat to a secondary circuit." ;
-   rdfs:seeAlso "https://www.columbuschemical.com/MSDS/SDS/Borated%20Water%200881.pdf"
+   rdfs:isDefinedBy "https://en.wikipedia.org/wiki/Nuclear_reactor_coolant"
  ] .
 
 
@@ -943,10 +943,11 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                          ] ;
                          rdfs:comment "Change the taxonomy or change the label" ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40> ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "SupplyWater" ,
-                                                                        "Water" ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "Fluid" ,
+                                                                        "SupplyFluid" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Change definition" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "water used for water supply"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectedWater"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectedFluid"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8MGsTLlqoWXKEU5FfQd71X
