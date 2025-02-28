@@ -184,7 +184,15 @@ elite:isOutputOf rdfs:subPropertyOf elite:partakesIn .
 
 ###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
 :R0N27qMQzeRjM0vSOeAvUT rdf:type owl:Class ;
-                        rdfs:subClassOf :NuclearEnergyObject ;
+                        rdfs:subClassOf :NuclearEnergyObject ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty elite:participatesTo ;
+                                          owl:someValuesFrom :R7s6BZ18NYlgydAQozd7POd
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty elite:participatesTo ;
+                                          owl:someValuesFrom :RDP6jdP3MdBK59hhoDGY0Vw
+                                        ] ;
                         rdfs:comment "Nuclear power plant is a nuclear reactor or reactors together with all structures, systems and components necessary for safety and for the production of power, i.e. heat or electricity (ISO 12749-5:2018)."@en ;
                         rdfs:seeAlso <https://en.wikipedia.org/wiki/Nuclear_power_plant> ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "NPP"@en ;
@@ -448,6 +456,10 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isParticipantOf ;
                                            owl:someValuesFrom :Rryk3Z5XNZ11ZiiLuT5M8Q
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isProperPartOF ;
+                                           owl:someValuesFrom :RDP6jdP3MdBK59hhoDGY0Vw
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#definition> """group of people that has its own functions with responsibilities, authorities and relationships to the overall approach preventing and managing emergencies that might occur
 Note 1 to entry: In general, emergency management utilizes a risk management approach to prevention, preparedness, response and recovery before, during and after potentially destabilizing or disruptive events.
@@ -466,9 +478,17 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 
 ###  https://w3id.org/emmo/domain/neo#R7NYEyrtAsNuF6n0QNOFmHm
 :R7NYEyrtAsNuF6n0QNOFmHm rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyObject ;
+                         rdfs:subClassOf :NuclearEnergyObject ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R7s6BZ18NYlgydAQozd7POd
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :RDP6jdP3MdBK59hhoDGY0Vw
+                                         ] ;
                          rdfs:comment "Change the taxonomy or change the label" ;
-                         rdfs:isDefinedBy <> ;
+                         rdfs:isDefinedBy <https://w3id.org/emmo/domain/neo> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Term which when used alone refers to the turbine action only. It is that component of the gas turbine which produces power from expansion of the working fluid."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PlantTurbine"@en .
 
@@ -505,6 +525,10 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R83A2MMCcbIwrdyWy2Q6clL
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :RDP6jdP3MdBK59hhoDGY0Vw
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "SafetyElements"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> """system including the safety devices and the interconnections between the equipment to be protected and any discharge connection to the nearest location of a safe disposal place
@@ -562,6 +586,10 @@ Note 1 to entry: The absorption of the external colliding particle, usually a ne
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R8ym94st1azekRHdt3ayDq5
                                          ] ;
                          rdfs:comment """Meanwhile, an attempt to enter the Unit 1 RB to conduct radiation measurements at 03:45 on 12 March was abandoned, when the team encountered white fog-like steam upon opening the airlock
 door, although the measurements at the radiation monitoring post near the site’s main gate did not show any anomaly to indicate a release from RPV or PCV at 04:00."""@en ;
@@ -643,6 +671,14 @@ among the preventive measures employed in reactor design""" ;
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R7s6BZ18NYlgydAQozd7POd
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :RDP6jdP3MdBK59hhoDGY0Vw
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "EPGS"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "system representing a process for conversion, transmission and/or distribution of energy"@en ;
@@ -658,7 +694,11 @@ among the preventive measures employed in reactor design""" ;
 
 ###  https://w3id.org/emmo/domain/neo#R7i2YiNCalwlsxcsL7AR3VF
 :R7i2YiNCalwlsxcsL7AR3VF rdf:type owl:Class ;
-                         rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ;
+                         rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R8ym94st1azekRHdt3ayDq5
+                                         ] ;
                          rdfs:comment "This term refers all the devices used to measure parameters and properties about system."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetySensors"@en .
 
@@ -848,6 +888,10 @@ The secondary side water volume of the isolation condenser (both trains together
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R76QRzIQVjwDFrNAttIw9RF
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :RBtkzbuLn6g0vdtDU3mijH0
                                          ] ;
                          rdfs:seeAlso "https://www.columbuschemical.com/MSDS/SDS/Borated%20Water%200881.pdf" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Boron, often in the form of boric acid or sodium borate, is combined with water where it acts as a coolant to remove heat from the reactor core and transfers the heat to a secondary circuit." ;
@@ -955,6 +999,14 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R7s6BZ18NYlgydAQozd7POd
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :RDP6jdP3MdBK59hhoDGY0Vw
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#definition> "elements contained in the turbine building" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "TurbineBuildingContents"@en .
@@ -1160,6 +1212,14 @@ be considered. The possible need to support mobile means might also be considere
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R7s6BZ18NYlgydAQozd7POd
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :RDP6jdP3MdBK59hhoDGY0Vw
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NPPBuilding"@en ;
                          <http://www.w3.org/2004/02/skos/core#comment> "structure that has a roof and walls, with the similar function as a container (3.14) for a hydrogen PSA system or the components of a hydrogen PSA system"@en ;
@@ -1731,6 +1791,14 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R7s6BZ18NYlgydAQozd7POd
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :RDP6jdP3MdBK59hhoDGY0Vw
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The central part of the a nuclear power plant in which the nuclear core is located and the fission reaction takes place"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReactor"@en .
@@ -1780,7 +1848,15 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
 ###  https://w3id.org/emmo/domain/neo#RBeV8ftYy9jGBHA6rECN3Gx
 :RBeV8ftYy9jGBHA6rECN3Gx rdf:type owl:Class ;
                          rdfs:subClassOf :Rw4mCgviqd6HTitZEzST6w ,
-                                         :WaterInjectionSystem ;
+                                         :WaterInjectionSystem ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R8lgbjRv5CeOJ43GygJ143n
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :RBq9x5WmblYOc4D7eFlfpdJ
+                                         ] ;
                          rdfs:comment "This report outlines the use of fire engines in an attempt to inject water into the reactors at Fukushima Daiichi. After the tsunami, much of the cooling function on-site was lost. The slides below document what fire engines were on site at what time, and what sources of water were injected where. Later research shows that little of the injected water made it to the reactors due to the lack of backflow valves in the fire line systems"@en ;
                          rdfs:seeAlso <https://fdada.info/develop/docs/pdf/ES-Unit123-04.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NPPFireEngine"@en ;
@@ -1831,7 +1907,11 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RBnyfPxRohc9STM4mfSMMFq
 :RBnyfPxRohc9STM4mfSMMFq rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyObject ;
+                         rdfs:subClassOf :NuclearEnergyObject ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :RDP6jdP3MdBK59hhoDGY0Vw
+                                         ] ;
                          <http://www.w3.org/2004/02/skos/core#definition> "equipment and items of permanent, temporary and portable equipment playing an important role in safety systems/functions"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyCriticalEquipment"@en .
 
@@ -1847,7 +1927,11 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 :RBp2yVTrXRyb55JnYdvAGux rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          :Rw4mCgviqd6HTitZEzST6w ,
-                                         :WaterInjectionSystem ;
+                                         :WaterInjectionSystem ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :RBtkzbuLn6g0vdtDU3mijH0
+                                         ] ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "EmergencyCoreCoolingSystem" ;
                          <http://www.w3.org/2004/02/skos/core#comment> "devices that aim to the limitation of any negative consequence (3.6) of a particular event, injecting refrigerants with the aim of decrease the temperature of the core and the pressure inside the Vessel"@en ,
@@ -1893,7 +1977,11 @@ Space systems — Safety and compatibility of materials — Part 5: Determinatio
 
 ###  https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq
 :RBsAUchYFBwAtcVUeFr8EFq rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyObject ;
+                         rdfs:subClassOf :NuclearEnergyObject ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R7oHlh8OgEkyG3XXGpiYlC5
+                                         ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Valve" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """device consisting essentially of a valve body, closure member, and actuator that controls the flow of gas
 Note 1 to entry: The actuation can be done by gas pressure, electrical, hydraulic, manual or pneumatic energy."""@en ;
@@ -2070,7 +2158,8 @@ from control."""@en ;
                                            owl:someValuesFrom :R80L6MpJJVkL4hoNB7thCRV
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CRD﻿"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> """Purpuses:
+                         <http://www.w3.org/2004/02/skos/core#definition> "PURPOSES: To make changes in core reactivity by positioning control rods in response to the Reactor Manual Control System (RMCS) signals. To rapidly insert all control rods to shutdown the reactor in response to the Reactor Protection System (RPS) signals.  To provide cooling water for the reactor recirculation and reactor water cleanup pump seals."@en ,
+                                                                          """Purpuses:
 To make changes in core reactivity by positioning control rods in response to the Reactor Manual Control System (RMCS) signals. 
 To rapidly insert all control rods to shutdown the reactor in response to the Reactor Protection System (RPS) signals. 
 To provide cooling water for the reactor recirculation and reactor water cleanup pump seals."""@en ;
@@ -2579,7 +2668,23 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 ###  https://w3id.org/emmo/domain/neo#RDZtzLsQmngV2BtJvmS5pbg
 :RDZtzLsQmngV2BtJvmS5pbg rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         elite:Role ;
+                                         elite:Role ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R7oHlh8OgEkyG3XXGpiYlC5
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R7pKuzitkkIAgc5NxDlqfH4
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R7s6BZ18NYlgydAQozd7POd
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R8ym94st1azekRHdt3ayDq5
+                                         ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NppEmployes"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Any person who works, whether full time, part time or temporarily, for an employer and who has recognized rights and duties in relation to occupational radiation protection."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPlantWorker"@en .
@@ -2638,6 +2743,14 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :R7s6BZ18NYlgydAQozd7POd
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:participatesTo ;
+                                           owl:someValuesFrom :RDP6jdP3MdBK59hhoDGY0Vw
                                          ] ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:24679:-1:ed-1:v1:en:term:3.1> ;
                          <http://www.w3.org/2004/02/skos/core#comment> """They are distinguished from elements as integral part of a built environment
@@ -3098,6 +3211,10 @@ Large outdoor fires and the built environment — Global overview of different a
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty elite:participatesTo ;
+                                          owl:someValuesFrom :R7pKuzitkkIAgc5NxDlqfH4
                                         ] ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "NppPublicAddressSystem"@en ,
                                                                        "PASystem"@en ,
@@ -3200,6 +3317,14 @@ Measurement of radioactivity in the environment — Guidelines for effective dos
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty elite:participatesTo ;
+                                          owl:someValuesFrom :R7s6BZ18NYlgydAQozd7POd
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty elite:participatesTo ;
+                                          owl:someValuesFrom :RDP6jdP3MdBK59hhoDGY0Vw
                                         ] ;
                         rdfs:isDefinedBy <https://www-pub.iaea.org/MTCD/Publications/PDF/P1526_Web.pdf> ,
                                          <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.23> ;
@@ -3348,6 +3473,14 @@ Chapters: 1.1.3 - 1.1.4""" ;
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :RDDFiZC2RFaE7RrTNF0CrtA
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty elite:participatesTo ;
+                                          owl:someValuesFrom :R8lgbjRv5CeOJ43GygJ143n
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty elite:participatesTo ;
+                                          owl:someValuesFrom :RBq9x5WmblYOc4D7eFlfpdJ
                                         ] ;
                         rdfs:comment """The alternative, using fire trucks connected to the FP water injection
 port outside the TB, which had been installed in the previous year as a fire protection measure based on the experience of the Niigata-Chuetsu-Oki earthquake, was put into action."""@en ;
