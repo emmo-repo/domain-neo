@@ -468,7 +468,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 :R7NYEyrtAsNuF6n0QNOFmHm rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ;
                          rdfs:comment "Change the taxonomy or change the label" ;
-                         rdfs:isDefinedBy <> ;
+                         rdfs:isDefinedBy <https://w3id.org/emmo/domain/neo> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Term which when used alone refers to the turbine action only. It is that component of the gas turbine which produces power from expansion of the working fluid."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PlantTurbine"@en .
 
@@ -562,6 +562,10 @@ Note 1 to entry: The absorption of the external colliding particle, usually a ne
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isConstitutiveProcessOf ;
+                                           owl:someValuesFrom :Rtq4tb3S29hdhJZtzFB2Bg
                                          ] ;
                          rdfs:comment """Meanwhile, an attempt to enter the Unit 1 RB to conduct radiation measurements at 03:45 on 12 March was abandoned, when the team encountered white fog-like steam upon opening the airlock
 door, although the measurements at the radiation monitoring post near the site’s main gate did not show any anomaly to indicate a release from RPV or PCV at 04:00."""@en ;
@@ -1061,7 +1065,11 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R8MPIXNWSb8RCelrAeGNxMc
 :R8MPIXNWSb8RCelrAeGNxMc rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ,
-                                         elite:Whole ;
+                                         elite:Whole ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isConstitutiveProcessOf ;
+                                           owl:someValuesFrom :RBzruvoEUI9hIHVtX34kGJu
+                                         ] ;
                          rdfs:isDefinedBy <https://dictionary.cambridge.org/it/dizionario/inglese/injection> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Injection"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The introduction of something new that is necessary or helpful to a situation or process."@en ;
@@ -1256,7 +1264,11 @@ system to perform its intended function."""@en ;
 ###  https://w3id.org/emmo/domain/neo#R8yJFxRXki6jB3lgKxV6thW
 :R8yJFxRXki6jB3lgKxV6thW rdf:type owl:Class ;
                          rdfs:subClassOf :R84TLuFmfSZMhgSh0uL0LXk ,
-                                         :RBv35jM3VSFKKxtWNVyDILw ;
+                                         :RBv35jM3VSFKKxtWNVyDILw ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isConstitutiveProcessOf ;
+                                           owl:someValuesFrom :R7i2YiNCalwlsxcsL7AR3VF
+                                         ] ;
                          rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:20553:ed-1:v1:en:term:3.15> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ContaminationMonitoring"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ContaminationMeasurement"@en ;
@@ -1644,7 +1656,11 @@ The standby liquid control system consists of a heated storage tank, two positiv
 
 ###  https://w3id.org/emmo/domain/neo#RBA8h87iH1lIFBwAyDriYiS
 :RBA8h87iH1lIFBwAyDriYiS rdf:type owl:Class ;
-                         rdfs:subClassOf :R84TLuFmfSZMhgSh0uL0LXk ;
+                         rdfs:subClassOf :R84TLuFmfSZMhgSh0uL0LXk ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isConstitutiveProcessOf ;
+                                           owl:someValuesFrom :R7i2YiNCalwlsxcsL7AR3VF
+                                         ] ;
                          rdfs:isDefinedBy <https://www.chemeurope.com/en/encyclopedia/Neutron_detection.html> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Effective detection of neutrons entering a well-positioned detector"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NeutronDetection"@en .
@@ -2070,7 +2086,8 @@ from control."""@en ;
                                            owl:someValuesFrom :R80L6MpJJVkL4hoNB7thCRV
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CRD﻿"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> """Purpuses:
+                         <http://www.w3.org/2004/02/skos/core#definition> "PURPOSES: To make changes in core reactivity by positioning control rods in response to the Reactor Manual Control System (RMCS) signals. To rapidly insert all control rods to shutdown the reactor in response to the Reactor Protection System (RPS) signals.  To provide cooling water for the reactor recirculation and reactor water cleanup pump seals."@en ,
+                                                                          """Purpuses:
 To make changes in core reactivity by positioning control rods in response to the Reactor Manual Control System (RMCS) signals. 
 To rapidly insert all control rods to shutdown the reactor in response to the Reactor Protection System (RPS) signals. 
 To provide cooling water for the reactor recirculation and reactor water cleanup pump seals."""@en ;
@@ -2579,7 +2596,11 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 ###  https://w3id.org/emmo/domain/neo#RDZtzLsQmngV2BtJvmS5pbg
 :RDZtzLsQmngV2BtJvmS5pbg rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         elite:Role ;
+                                         elite:Role ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isParticipantOf ;
+                                           owl:someValuesFrom :RBr5qtxSEMQ2oYZd1frAYZL
+                                         ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NppEmployes"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Any person who works, whether full time, part time or temporarily, for an employer and who has recognized rights and duties in relation to occupational radiation protection."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPlantWorker"@en .
@@ -3395,7 +3416,11 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RxnLc7O29Jiy2Z0qg7iTh6
 :RxnLc7O29Jiy2Z0qg7iTh6 rdf:type owl:Class ;
-                        rdfs:subClassOf :R84TLuFmfSZMhgSh0uL0LXk ;
+                        rdfs:subClassOf :R84TLuFmfSZMhgSh0uL0LXk ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty elite:isConstitutiveProcessOf ;
+                                          owl:someValuesFrom :RDM3Wmp5f6fMXTDpEK3Dmsx
+                                        ] ;
                         rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Pressure_measurement> ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Pressure measurement is the measurement of an applied force by a fluid (liquid or gas) on a surface"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PressureMeasurement"@en .
