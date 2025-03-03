@@ -187,11 +187,7 @@ elite:isOutputOf rdfs:subPropertyOf elite:partakesIn .
                         rdfs:subClassOf :NuclearEnergyObject ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:participatesTo ;
-                                          owl:someValuesFrom :R7s6BZ18NYlgydAQozd7POd
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty elite:participatesTo ;
-                                          owl:someValuesFrom :RDP6jdP3MdBK59hhoDGY0Vw
+                                          owl:someValuesFrom :RyLZ508FsJKMTIHvSNuJZk
                                         ] ;
                         rdfs:comment "Nuclear power plant is a nuclear reactor or reactors together with all structures, systems and components necessary for safety and for the production of power, i.e. heat or electricity (ISO 12749-5:2018)."@en ;
                         rdfs:seeAlso <https://en.wikipedia.org/wiki/Nuclear_power_plant> ;
