@@ -711,7 +711,8 @@ perform its intended safety functions.""" ;
 
 ###  https://w3id.org/emmo/domain/neo#R7pvNIWMyFBzmeL9EcH58g8
 :R7pvNIWMyFBzmeL9EcH58g8 rdf:type owl:Class ;
-                         rdfs:subClassOf :REnnyld9FmnAjLpeDyUsnv ;
+                         rdfs:subClassOf :REnnyld9FmnAjLpeDyUsnv ,
+                                         elite:Whole ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "BWR"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> """nuclear reactor (3.1.22) with water as a coolant and as a moderator (3.1.23.1.2), boiling in the core 
 Note 1 to entry: In a boiling water reactor the generated heat is removed from the core by evaporation. """@en ;
@@ -956,11 +957,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R89Yy2V18LstH4xGXyNb9XN
 :R89Yy2V18LstH4xGXyNb9XN rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         elite:Role ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:isConstituentOf ;
-                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
-                                         ] ;
+                                         elite:Role ;
                          <http://www.w3.org/2004/02/skos/core#definition> "elements contained in the turbine building" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "TurbineBuildingContents"@en .
 
@@ -2369,7 +2366,6 @@ and Radiation Protection, 2018 Edition """
 :RDCVLkjId3erZ4ajIA6nHzM rdf:type owl:Class ;
                          rdfs:subClassOf :R7NYEyrtAsNuF6n0QNOFmHm ,
                                          :R89Yy2V18LstH4xGXyNb9XN ,
-                                         elite:Role ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :R8CzBJHXymJx05c6sDhbspt
@@ -2647,7 +2643,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
-                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
+                                           owl:someValuesFrom :R7pvNIWMyFBzmeL9EcH58g8
                                          ] ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:24679:-1:ed-1:v1:en:term:3.1> ;
                          <http://www.w3.org/2004/02/skos/core#comment> """They are distinguished from elements as integral part of a built environment
