@@ -285,6 +285,7 @@ separation of one electric circuit from another by means of:
 [SOURCE: IEC 61140:2016, 3.24]
 ISO 18246:2023(en), 3.4.12"""@en ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "MainLineSeparation" ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ProtectiveSeparation"@en .
 
 
@@ -325,6 +326,8 @@ ISO 12749-5:2018(en)"""
                                                           ] ;
                                            owl:someValuesFrom :RDS0g8UekSMDWjEgBp6z2sP
                                          ] ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ,
+                                                                       "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.22.2485" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FastInducedFission"@en .
 
 
@@ -370,6 +373,8 @@ pressure and two low pressure systems."""@en ;
 :R78r8gHpSEIS6CD3QqneUoR rdf:type owl:Class ;
                          rdfs:subClassOf :RBtkzbuLn6g0vdtDU3mijH0 ;
                          rdfs:seeAlso "INTERNATIONAL ATOMIC ENERGY AGENCY, Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ,
+                                                                       "Missed definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulateMultipleFaiulureEvent"@en .
 
 
@@ -388,8 +393,9 @@ all offsite power.""" ;
 ###  https://w3id.org/emmo/domain/neo#R79WXwPF5ZWjRPArxbbVAgU
 :R79WXwPF5ZWjRPArxbbVAgU rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ;
-                         rdfs:comment "controlled" ;
+                         rdfs:comment "Missed definition" ;
                          rdfs:seeAlso "EMMO" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "IntentionalProcess"@en .
 
 
@@ -627,6 +633,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
                          rdfs:comment "automatic function which ensures that a protective measure (3.36) is initiated if the ability of the SRP/CS to perform a function is diminished, or if the process conditions are changed such that hazards are generated"@en ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:25119:-1:ed-2:v1:en:term:3.33> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "AutomaticManipulation"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "AutomaticMonitoring"@en .
 
 
@@ -726,9 +733,17 @@ perform its intended safety functions.""" ;
                          rdfs:subClassOf :RDP6jdP3MdBK59hhoDGY0Vw ;
                          rdfs:comment "It is an event that can occur due to human error or the failure of artificial or industrial structures or phenomena."@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "UnexpectedEvent" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "An unintended event is any casual occurrence, not controlled that can lead to hazardous condition to the surrounding environment where it takes place"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "UnintendedEvent"@en ;
                          :RR3uD2d7YfhHohfv2Nm6sX "qualcosa che conduce ad una deviazione, a prescidere da chi lo ha fatto e perchè" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R7pKuzitkkIAgc5NxDlqfH4 ;
+   owl:annotatedProperty :RR3uD2d7YfhHohfv2Nm6sX ;
+   owl:annotatedTarget "qualcosa che conduce ad una deviazione, a prescidere da chi lo ha fatto e perchè" ;
+   rdfs:comment "Check this comment"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7pvNIWMyFBzmeL9EcH58g8
@@ -906,7 +921,8 @@ The secondary side water volume of the isolation condenser (both trains together
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:11072:ed-1:v1:en:term:2.6.5> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Manipulation"@en ,
                                                                         "Monitoring"@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "A process which accesses and changes the contents of data elements."@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "A process which accesses and changes the contents of data elements."@en ,
+                                                                       "Missed DefinedBy and definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Controlling"@en .
 
 
@@ -918,6 +934,7 @@ The secondary side water volume of the isolation condenser (both trains together
                                                           ] ;
                                            owl:someValuesFrom :R9s3bSmQntRAaUAzg5iKhyy
                                          ] ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ThermalInducedFission"@en .
 
 
@@ -1170,6 +1187,8 @@ be considered. The possible need to support mobile means might also be considere
                                            owl:onProperty elite:isBehaviourOf ;
                                            owl:someValuesFrom :RBsAUchYFBwAtcVUeFr8EFq
                                          ] ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ,
+                                                                       "Missed definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Closing"@en .
 
 
@@ -1228,6 +1247,7 @@ be considered. The possible need to support mobile means might also be considere
 Note 1 to entry: See inelastic scattering (4.2).
 Note 2 to entry: In elastic scattering interactions, the moving particle can be deflected through angles of up to 180°."""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "BinaryElasticScattering" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "collision between a neutron and a nucleus in which the total kinetic energy (3.35) and the total momentum are conserved"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearElasticScattering"@en .
 
@@ -1342,6 +1362,7 @@ Nuclear energy — Vocabulary — Part 1: General terminology""" ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                          rdfs:comment "any periodic or unplanned support and verification operations designed to keep premises and equipment in proper working condition" ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:22716:ed-1:v2:en:term:2.19> ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "any periodic or unplanned support and verification operations designed to keep premises and equipment in proper working condition in a nuclear reactor" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReactorMaintanance"@en .
 
@@ -1374,6 +1395,8 @@ all offsite power."""@en ;
                                            owl:onProperty elite:isBehaviourOf ;
                                            owl:someValuesFrom :RDZtzLsQmngV2BtJvmS5pbg
                                          ] ;
+                         rdfs:seeAlso "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull29-4/29405042730.pdf" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPOperatorError"@en .
 
 
@@ -1440,6 +1463,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 :R9LQGc8WSd4vzQtq1aNhNEq rdf:type owl:Class ;
                          rdfs:subClassOf :R7oHlh8OgEkyG3XXGpiYlC5 ;
                          rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Loss of the ability of a structure to function within acceptance criteria. The structure is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "StructureFailure"@en .
 
@@ -1506,6 +1530,7 @@ and Radiation Protection, 2018 Edition """ ;
 ###  https://w3id.org/emmo/domain/neo#R9Q7QurACY7OmMRPPPbDU7J
 :R9Q7QurACY7OmMRPPPbDU7J rdf:type owl:Class ;
                          rdfs:subClassOf :RC5Uc3vBrAsYC8gCNkTsLH ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ContinuosInjection"@en .
 
 
@@ -1643,6 +1668,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                          rdfs:comment """Residual heat transfer systems include systems designed to transfer heat from the residual heat removal systems to the ultimate heat sink.
  The capabilities to discharge residual heat to the ultimate heat sink are based on at least one heat sink and one heat transfer chain always being available for the different shutdown conditions."""@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RHROperation"@en .
 
 
@@ -1772,6 +1798,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
                                                           ] ;
                                            owl:someValuesFrom :R7tsY17A1s9DZ7gbZrjbVt6
                                          ] ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The process for producing energy from nuclear sources, in a reactor core of a nuclear power plant."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoreEnergyProduction"@en .
 
@@ -2020,6 +2047,7 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
                                            owl:onProperty elite:isStageOf ;
                                            owl:someValuesFrom :R9aF6fIPWPEzkHdmnDKNorP
                                          ] ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ControlRodInsertion"@en .
 
 
@@ -2060,6 +2088,7 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
 ###  https://w3id.org/emmo/domain/neo#RC5Uc3vBrAsYC8gCNkTsLH
 :RC5Uc3vBrAsYC8gCNkTsLH rdf:type owl:Class ;
                         rdfs:subClassOf :R8MPIXNWSb8RCelrAeGNxMc ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Material Injection following a well defined cycle without alterations."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RegularInjection"@en .
 
@@ -2194,6 +2223,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 :RCJyL3ZfDUXJeZ2m8EwYQO9 rdf:type owl:Class ;
                          rdfs:subClassOf :R7oHlh8OgEkyG3XXGpiYlC5 ;
                          rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Loss of the ability of a system to function within acceptance criteria. The system is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemFailure"@en .
 
@@ -2214,6 +2244,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          rdfs:comment "Any accident involving facilities or activities from which a release of radioactive material occurs or is likely to occur and which has resulted or may result in an international significant transboundary release that could be of radiological safety significance for another State"@en ,
                                       "This is not explicitly stated to be a definition of nuclear accident, but it is derived from the statement of the scope of application in Article 1 of the Convention on Early Notification of a Nuclear Accident. However, this Convention has a limited scope of application, and it is unreasonable to consider a nuclear accident to be only an accident that results or may result in an international significant transboundary release"@en ;
                          rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Nuclear Plant Accident are any accident involving nuclear plant causing a radioactivity release. Depending on the magnitude of radioactive release there are different type of Nuclear Accident." ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPlantAccident"@en .
 
@@ -2281,7 +2312,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#RCY8ddT8JW7G3WicejAxkmn
 :RCY8ddT8JW7G3WicejAxkmn rdf:type owl:Class ;
                          rdfs:subClassOf :RCJhKs4unBpoZD0uMgxsvJh ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "from off to on" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ,
+                                                                       "from off to on" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SwitchingOn"@en .
 
 
@@ -2341,7 +2373,7 @@ in operation or in accidents."""@en ;
                          rdfs:subClassOf :RLEjSGGgoWOVMGjQsskCsb ;
                          rdfs:comment "Seawater injection into Unit 1 was ready to be resumed upon the refilling of the backwash valve pit, but all activities, including the ongoing seawater injection into the Unit 3 reactor, had to stop because of an explosion in Unit 3 (Par. 1.1.3.21., pp 26-27)"@en ;
                          rdfs:seeAlso "Pub1710-TV1-Web.pdf"@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Manca il defined by" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfSeaWaterCooling"@en .
 
 
@@ -2384,6 +2416,7 @@ power for a nuclear plant in the event that all off-site power sources are lost.
 :RCuTNyDF6kWFazFqJVIvww9 rdf:type owl:Class ;
                          rdfs:subClassOf :RCJhKs4unBpoZD0uMgxsvJh ;
                          rdfs:comment "from on to off" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SwitchingOff"@en .
 
 
@@ -2471,6 +2504,13 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          rdfs:isDefinedBy "ISO 21009-2:2015(en), 3.7" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "escape of gas due to operating conditions, or to malfunctions that cannot be reasonably excluded"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "GasRelease"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDGBzCkWozL4RpG1CuIzwPi ;
+   owl:annotatedProperty rdfs:isDefinedBy ;
+   owl:annotatedTarget "ISO 21009-2:2015(en), 3.7" ;
+   <http://www.w3.org/2004/02/skos/core#comment> "https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDGsX7GTlCOL8Jlk3fXBK7U
@@ -2566,8 +2606,16 @@ ISO 21843:2023(en)"""
 ###  https://w3id.org/emmo/domain/neo#RDP6jdP3MdBK59hhoDGY0Vw
 :RDP6jdP3MdBK59hhoDGY0Vw rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A thing that happens or takes place, with a well defined beginning and end, a clear specificity and relevance with respect to the surrounding environment."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDP6jdP3MdBK59hhoDGY0Vw ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
+   owl:annotatedTarget "Missed DefinedBy" ;
+   <http://www.w3.org/2004/02/skos/core#comment> "See: https://en.wikipedia.org/wiki/Event"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDS0g8UekSMDWjEgBp6z2sP
@@ -2667,6 +2715,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 :RDdFdbRqtigD5ry1nrSpxkb rdf:type owl:Class ;
                          rdfs:subClassOf :R7oHlh8OgEkyG3XXGpiYlC5 ;
                          rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Missed definition" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Loss of the ability of a component to function within acceptance criteria. The component is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ComponentFailure"@en .
 
@@ -2809,6 +2858,7 @@ from control."""@en ;
                          rdfs:isDefinedBy <https://www.collinsdictionary.com/dictionary/english/start> ,
                                           <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Starting"@en ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "Check the definitions and the DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "initiation of a selected function of an object"@en ,
                                                                           "it takes place from a particular time"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Activation"@en .
@@ -2952,10 +3002,18 @@ by the operator, including operating error, equipment failure or other mishap, a
 action on the part of others, the consequences or potential consequences of which are not
 negligible from the point of view of protection and safety"""@en ;
                         rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                         <http://www.w3.org/2004/02/skos/core#definition> """Is any occurrence that can lead to potential consequences that are not
 negligible from the point of view of protection and safety of a Nuclear power plant"""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPUnintendedEvent"@en ;
                         :RR3uD2d7YfhHohfv2Nm6sX "Possiamo dire che un unintened event è un evento le cui conseguenze possono mettere a rischio le condizioni operative del reattore fino a portare ad un danneggiamento"@it .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RLEjSGGgoWOVMGjQsskCsb ;
+   owl:annotatedProperty :RR3uD2d7YfhHohfv2Nm6sX ;
+   owl:annotatedTarget "Possiamo dire che un unintened event è un evento le cui conseguenze possono mettere a rischio le condizioni operative del reattore fino a portare ad un danneggiamento"@it ;
+   rdfs:comment "Check"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RMiSxLtLOMDcYH1jWDJO1b
@@ -3177,6 +3235,8 @@ Large outdoor fires and the built environment — Global overview of different a
 :RaEj4uH02jwi8e78Nr9PvH rdf:type owl:Class ;
                         rdfs:subClassOf :RBtkzbuLn6g0vdtDU3mijH0 ;
                         rdfs:seeAlso "INTERNATIONAL ATOMIC ENERGY AGENCY, Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)" ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ,
+                                                                      "Missed definition" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulatedSingleEvent"@en .
 
 
@@ -3497,6 +3557,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#RyLZ508FsJKMTIHvSNuJZk
 :RyLZ508FsJKMTIHvSNuJZk rdf:type owl:Class ;
                         rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "The global process of manage the operation of a nuclear power plant, considering the design procedures" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPOperationManagement"@en .
 
