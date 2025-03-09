@@ -246,9 +246,15 @@ further decays, the event is referred to as inelastic scattering."""@en ;
                                           owl:onProperty elite:affects ;
                                           owl:someValuesFrom :R7VGQozOvQbYzOvcFQCwv8P
                                         ] ;
-                        rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1125/ML11258A366.pdf> ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Rapidly lower reactor pressure to allow low pressure injection sources to maintain reactor water level above the Top of Active Fuel."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "AutomaticReactorDepressurization"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R1pzLL39gf2pPU0vtkTmnm ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Rapidly lower reactor pressure to allow low pressure injection sources to maintain reactor water level above the Top of Active Fuel."@en ;
+   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1125/ML11258A366.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R2eIY10Bw0mNaYfKDcCmDd
@@ -388,13 +394,23 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
 ###  https://w3id.org/emmo/domain/neo#R78xqY4QQFGfjRzx8MpzQWe
 :R78xqY4QQFGfjRzx8MpzQWe rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
-                         rdfs:isDefinedBy <https://www.nrc.gov/docs/ML0707/ML070710376.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """Conditions of normal operation that are expected to occur one or
 more times during the life of the nuclear power unit and include but
 are not limited to loss of power to all recirculation pumps, tripping of
 the turbine generator set, isolation of the main condenser, and loss of
 all offsite power.""" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "AnticipatedOperationalOccurrence"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R78xqY4QQFGfjRzx8MpzQWe ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """Conditions of normal operation that are expected to occur one or
+more times during the life of the nuclear power unit and include but
+are not limited to loss of power to all recirculation pumps, tripping of
+the turbine generator set, isolation of the main condenser, and loss of
+all offsite power.""" ;
+   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R79WXwPF5ZWjRPArxbbVAgU
@@ -637,7 +653,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
 ###  https://w3id.org/emmo/domain/neo#R7f91MxYlPSe16WDD1Wtw5E
 :R7f91MxYlPSe16WDD1Wtw5E rdf:type owl:Class ;
                          rdfs:subClassOf :R80RaxHVqr4QPiv8ASxXxi3 ;
-                         rdfs:comment "automatic function which ensures that a protective measure (3.36) is initiated if the ability of the SRP/CS to perform a function is diminished, or if the process conditions are changed such that hazards are generated"@en ;
+                         rdfs:comment "Automatic function which ensures that a protective measure (3.36) is initiated if the ability of the SRP/CS to perform a function is diminished, or if the process conditions are changed such that hazards are generated"@en ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:25119:-1:ed-2:v1:en:term:3.33> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "AutomaticManipulation"@en ;
                          <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
@@ -647,10 +663,16 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
 ###  https://w3id.org/emmo/domain/neo#R7fkBdyMeKQvQzm3yRgM2iz
 :R7fkBdyMeKQvQzm3yRgM2iz rdf:type owl:Class ;
                          rdfs:subClassOf :Rryk3Z5XNZ11ZiiLuT5M8Q ;
-                         rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1025/ML102560007.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "EOP"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "EmergencyOperationProcedures"@en ;
-                         :R8xx0dhbEh1tjGMDwNZfckV "Plant procedures that direct operators' actions necessary to mitigate the consequences of transients and accidents that have caused plant parameters to exceed reactor protection system set points or engineered safety feature set points, or other established limits."@en .
+                         <http://www.w3.org/2004/02/skos/core#definition> "Plant procedures that direct operators' actions necessary to mitigate the consequences of transients and accidents that have caused plant parameters to exceed reactor protection system set points or engineered safety feature set points, or other established limits." ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "EmergencyOperationProcedures"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R7fkBdyMeKQvQzm3yRgM2iz ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Plant procedures that direct operators' actions necessary to mitigate the consequences of transients and accidents that have caused plant parameters to exceed reactor protection system set points or engineered safety feature set points, or other established limits." ;
+   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1025/ML102560007.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7gZLWyPCimwGhHTueSRPhd
@@ -831,11 +853,19 @@ ISO 12749-5:2018(en)"""
 ###  https://w3id.org/emmo/domain/neo#R7t1vs1VKDAzHkcQsFbt9JC
 :R7t1vs1VKDAzHkcQsFbt9JC rdf:type owl:Class ;
                          rdfs:subClassOf :RC9Vnqc96TS4VVdygnxu8UP ;
-                         rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1125/ML11258A365.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """Maintain adequate reactor vessel inventory – For core cooling – On small break LOCAs On small break LOCAs
  Depressurize the reactor vessel – To allow low pressure ECCSs to inject – On intermediate break LOCAs
  Backup RCIC when reactor vessel isolated"""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "HPCIOperation"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R7t1vs1VKDAzHkcQsFbt9JC ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """Maintain adequate reactor vessel inventory – For core cooling – On small break LOCAs On small break LOCAs
+ Depressurize the reactor vessel – To allow low pressure ECCSs to inject – On intermediate break LOCAs
+ Backup RCIC when reactor vessel isolated"""@en ;
+   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1125/ML11258A365.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7tsY17A1s9DZ7gbZrjbVt6
@@ -940,9 +970,16 @@ The secondary side water volume of the isolation condenser (both trains together
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:11072:ed-1:v1:en:term:2.6.5> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Manipulation"@en ,
                                                                         "Monitoring"@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "A process which accesses and changes the contents of data elements."@en ,
-                                                                       "Missed DefinedBy and definition" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "A process which accesses and changes the contents of data elements."@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Having or attempting to exert control" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Controlling"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R80RaxHVqr4QPiv8ASxXxi3 ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Having or attempting to exert control" ;
+   rdfs:isDefinedBy "https://www.collinsdictionary.com/dictionary/english/controlling"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R81QzLfYKssKKQ25a1Ibyv7
@@ -1077,9 +1114,15 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R8Jjvo3bjpE389mPpX0uOxQ
 :R8Jjvo3bjpE389mPpX0uOxQ rdf:type owl:Class ;
                          rdfs:subClassOf :RC9Vnqc96TS4VVdygnxu8UP ;
-                         rdfs:isDefinedBy <https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Any measures that may be carried out to reduce the radiation exposure due to existing contamination of land areas through actions applied to the contamination itself (the source) or to the exposure pathways to humans."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Remediation"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R8Jjvo3bjpE389mPpX0uOxQ ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Any measures that may be carried out to reduce the radiation exposure due to existing contamination of land areas through actions applied to the contamination itself (the source) or to the exposure pathways to humans."@en ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8KlSYQnSKI6PoJZNIdhwNI
@@ -1134,11 +1177,17 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R8O2O7mng5QSpkSaLJGAPbi
 :R8O2O7mng5QSpkSaLJGAPbi rdf:type owl:Class ;
                          rdfs:subClassOf :R80RaxHVqr4QPiv8ASxXxi3 ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:1213:-1:ed-3:v1:en:term:11.1.7> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "RemoteControl"@en ,
                                                                         "RemoteManipulation"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "initiation of control operations for a process or machine at a point remote from the motive power"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Initiation of control operations for a process or machine at a point remote from the motive power"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RemoteControlling"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R8O2O7mng5QSpkSaLJGAPbi ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Initiation of control operations for a process or machine at a point remote from the motive power"@en ;
+   rdfs:isDefinedBy "https://www.iso.org/obp/ui/en/#iso:std:iso:1213:-1:ed-3:v1:en:term:11.1.7"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8PAMnGRP5NOBTguHsOmRSl
@@ -1206,9 +1255,16 @@ be considered. The possible need to support mobile means might also be considere
                                            owl:onProperty elite:isBehaviourOf ;
                                            owl:someValuesFrom :RBsAUchYFBwAtcVUeFr8EFq
                                          ] ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ,
-                                                                       "Missed definition" ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "Closure" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Closing"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R8bUZpp1yY81qmfgGNH0TyF ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget "Closure" ;
+   rdfs:isDefinedBy "https://www.collinsdictionary.com/dictionary/english/close" ;
+   <http://www.w3.org/2004/02/skos/core#definition> "Shutting or completing"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8baDZRwKkBRaeQKFoM4Z4N
@@ -1349,10 +1405,16 @@ system to perform its intended function."""@en ;
                                            owl:onProperty elite:isConstitutiveProcessOf ;
                                            owl:someValuesFrom :R7i2YiNCalwlsxcsL7AR3VF
                                          ] ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:20553:ed-1:v1:en:term:3.15> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ContaminationMonitoring"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ContaminationMeasurement"@en ;
-                         :R8xx0dhbEh1tjGMDwNZfckV "Measurement of dose or contamination for the purpose of the assessment or control of exposure to radiation or radioactive material, and the interpretation of the results."@en .
+                         <http://www.w3.org/2004/02/skos/core#definition> "Measurement of dose or contamination for the purpose of the assessment or control of exposure to radiation or radioactive material, and the interpretation of the results." ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ContaminationMeasurement"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R8yJFxRXki6jB3lgKxV6thW ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Measurement of dose or contamination for the purpose of the assessment or control of exposure to radiation or radioactive material, and the interpretation of the results." ;
+   rdfs:isDefinedBy "https://www.iso.org/obp/ui/en/#iso:std:iso:20553:ed-1:v1:en:term:3.15"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8ym94st1azekRHdt3ayDq5
@@ -2044,11 +2106,17 @@ ISO 14624-5:2023(en)"""
 ###  https://w3id.org/emmo/domain/neo#RBr5qtxSEMQ2oYZd1frAYZL
 :RBr5qtxSEMQ2oYZd1frAYZL rdf:type owl:Class ;
                          rdfs:subClassOf :R80RaxHVqr4QPiv8ASxXxi3 ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:iwa:33:-1:ed-1:v1:en:term:11.6.1.3> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ManualControl"@en ,
                                                                         "ManualManipulation"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Control in which the system or main device, whether direct or power-aided in operation, is directly controlled by an operator"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ManualControlling"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RBr5qtxSEMQ2oYZd1frAYZL ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Control in which the system or main device, whether direct or power-aided in operation, is directly controlled by an operator"@en ;
+   rdfs:isDefinedBy "https://www.iso.org/obp/ui/en/#iso:std:iso:iwa:33:-1:ed-1:v1:en:term:11.6.1.3"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq
@@ -2108,10 +2176,16 @@ http://www-ns.iaea.org/downloads/ni/training/specific_expert_knowledge/psa-level
 ###  https://w3id.org/emmo/domain/neo#RBv35jM3VSFKKxtWNVyDILw
 :RBv35jM3VSFKKxtWNVyDILw rdf:type owl:Class ;
                          rdfs:subClassOf :Rryk3Z5XNZ11ZiiLuT5M8Q ;
-                         rdfs:isDefinedBy <https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Assessment"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The process, and the result, of analysing systematically and evaluating the hazards associated with sources and practices, and associated protection and safety measures."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RadioactivityAssessment"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RBv35jM3VSFKKxtWNVyDILw ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The process, and the result, of analysing systematically and evaluating the hazards associated with sources and practices, and associated protection and safety measures."@en ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RBvFxrHecZjciXe2qvDn2vv
@@ -2203,9 +2277,9 @@ all offsite power."""@en ,
 def IAEA)     A deviation of an operational process from normal operation that is expected to occur at least once during the operating lifetime of a facility but which, in view of appropriate design provisions, does not cause any significant damage to items important to safety or lead to accident conditions"""@en ;
                          rdfs:isDefinedBy """ISO 23552-1:2007(en)
 Safety and control devices for gas and/or oil burners and gas and/or oil appliances — Particular requirements — Part 1: Fuel/air ratio controls, electronic type
-
+https://www.iso.org/obp/ui/en/#iso:std:iso:23552:-1:ed-1:v1:en""" ;
+                         rdfs:seeAlso """Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)
 https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf""" ;
-                         rdfs:seeAlso "INTERNATIONAL ATOMIC ENERGY AGENCY, Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "DiDLevel2"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> """Control of deviations from normal operating states to prevent anticipated operational occurrences from
 escalating to accident conditions. This can be provided both by electronic means and by operator intervention,
@@ -2265,11 +2339,19 @@ To provide cooling water for the reactor recirculation and reactor water cleanup
 ###  https://w3id.org/emmo/domain/neo#RCEdHiyMqhUSNg53tLciXxW
 :RCEdHiyMqhUSNg53tLciXxW rdf:type owl:Class ;
                          rdfs:subClassOf :RC9Vnqc96TS4VVdygnxu8UP ;
-                         rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1125/ML11258A312.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """Provide makeup water to the reactor vessel for core cooling when:
 the main steam lines are isolated
 the condensate and feedwater system is not available."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICOperation"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RCEdHiyMqhUSNg53tLciXxW ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """Provide makeup water to the reactor vessel for core cooling when:
+the main steam lines are isolated
+the condensate and feedwater system is not available."""@en ;
+   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1125/ML11258A312.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RCJLElMudONs6LAhEPd8PjG
@@ -2461,10 +2543,17 @@ Regulations [2], in the form of confinement system and containment system), and
 the usages of containment are (it seems) conceptually consistent, but the usages
 of confinement are not. Confinement in nuclear safety is the safety function that is
 performed by the containment."""@en ;
-                         rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf p" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """Prevention or control of releases of radioactive material to the environment
 in operation or in accidents."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Confinement"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RCembrpB4dbduwWjlJOBBMK ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """Prevention or control of releases of radioactive material to the environment
+in operation or in accidents."""@en ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RCfqimjBP1uypJVnd32xcTB
@@ -2902,24 +2991,41 @@ repetitive process. The algorithms used are very different from those of protect
 with the system functionality may be gained in every clock cycle. Also, the potential development of
 undetected failures can be lower."""@en ,
                                       "there are not failures in the plant"@en ;
-                         rdfs:isDefinedBy <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
-                         rdfs:seeAlso "INTERNATIONAL ATOMIC ENERGY AGENCY, Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NPPPreventiveOperation"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Operation within specified operational limits and conditions. This includes startup, power operation, shutting down, shutdown, maintenance, testing and refuelling"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperation"@en ;
                          :RR3uD2d7YfhHohfv2Nm6sX "No off-site radiological impact (bounded by regulatory operating limits for discharge)"@en .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDpEA8qdRk99FAT0xSGZgGS ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Operation within specified operational limits and conditions. This includes startup, power operation, shutting down, shutdown, maintenance, testing and refuelling"@en ;
+   rdfs:isDefinedBy "https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf" ;
+   rdfs:seeAlso """Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)
+https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
+ ] .
+
 
 ###  https://w3id.org/emmo/domain/neo#RDqGoUzaBPNiIDtLS6qlo3t
 :RDqGoUzaBPNiIDtLS6qlo3t rdf:type owl:Class ;
                          rdfs:subClassOf :R80RaxHVqr4QPiv8ASxXxi3 ;
-                         rdfs:isDefinedBy "INTERNATIONAL ATOMIC ENERGY AGENCY, Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018) p.12" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Level2DiD" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """Control of deviations from normal operating states to prevent anticipated operational occurrences from
 escalating to accident conditions. This can be provided both by electronic means and by operator intervention,
 if there is enough time and information for such actions to be credited. The algorithms used are different
 from control."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ControlOfDeviations"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDqGoUzaBPNiIDtLS6qlo3t ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """Control of deviations from normal operating states to prevent anticipated operational occurrences from
+escalating to accident conditions. This can be provided both by electronic means and by operator intervention,
+if there is enough time and information for such actions to be credited. The algorithms used are different
+from control."""@en ;
+   rdfs:isDefinedBy """Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018) p.12
+https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDqxw9842TBP5U24ILrY1bb
@@ -2971,13 +3077,26 @@ from control."""@en ;
                                            owl:onProperty elite:isBehaviourOf ;
                                            owl:someValuesFrom :RCh38CRTgX4tnzCoB8auwPC
                                          ] ;
-                         rdfs:isDefinedBy <https://www.collinsdictionary.com/dictionary/english/start> ,
-                                          <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Starting"@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Check the definitions and the DefinedBy" ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "initiation of a selected function of an object"@en ,
-                                                                          "it takes place from a particular time"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Initiation of a selected function of an object"@en ,
+                                                                          "It takes place from a particular time"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Activation"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDuDSbKh236WI6rqMad7Ar4 ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget "Starting"@en ;
+   rdfs:isDefinedBy "https://www.collinsdictionary.com/dictionary/english/start" ;
+   <http://www.w3.org/2004/02/skos/core#definition> "It takes place from a particular time"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDuDSbKh236WI6rqMad7Ar4 ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Initiation of a selected function of an object"@en ;
+   rdfs:isDefinedBy """ISO/IEC TR 11580:2007(en)
+https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDv6FAzzuS81VzIfTO1Wkef
@@ -3277,10 +3396,17 @@ include a subset of severe accidents."""@en ;
 ###  https://w3id.org/emmo/domain/neo#RSvx83QCmkRfOzQUtOkIeS
 :RSvx83QCmkRfOzQUtOkIeS rdf:type owl:Class ;
                         rdfs:subClassOf :R7fkBdyMeKQvQzm3yRgM2iz ;
-                        rdfs:isDefinedBy """ISO/TS 22330:2018(en)
-Security and resilience — Business continuity management systems — Guidelines for people aspects of business continuity""" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Action to move people to predetermined areas inside the building/site in order to protect them from external dangers during an incident."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ShelterInPlace"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RSvx83QCmkRfOzQUtOkIeS ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Action to move people to predetermined areas inside the building/site in order to protect them from external dangers during an incident."@en ;
+   rdfs:isDefinedBy """ISO/TS 22330:2018(en)
+Security and resilience — Business continuity management systems — Guidelines for people aspects of business continuity
+https://www.iso.org/obp/ui/#iso:std:iso:ts:22330:ed-1:v1:en"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RTywWKZwkjxu5ChUU9jvyq
@@ -3302,10 +3428,17 @@ Security and resilience — Business continuity management systems — Guideline
 ###  https://w3id.org/emmo/domain/neo#RUfmPQytgoT4sAaWFKoKAG
 :RUfmPQytgoT4sAaWFKoKAG rdf:type owl:Class ;
                         rdfs:subClassOf :R7fkBdyMeKQvQzm3yRgM2iz ;
-                        rdfs:isDefinedBy """ISO/TR 24188:2022(en)
-Large outdoor fires and the built environment — Global overview of different approaches to standardization""" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Dispersal or removal of people from dangerous areas and their arrival at a place of relative safety."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Evacuation"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RUfmPQytgoT4sAaWFKoKAG ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Dispersal or removal of people from dangerous areas and their arrival at a place of relative safety."@en ;
+   rdfs:isDefinedBy """ISO/TR 24188:2022(en)
+Large outdoor fires and the built environment — Global overview of different approaches to standardization
+https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RY81DSQhpDKzGrzvuAjU5m
@@ -3490,11 +3623,18 @@ Gas turbines — Procurement — Part 9: Reliability, availability, maintainabil
 ###  https://w3id.org/emmo/domain/neo#RgAy137nXA9FNxJLdXeh2G
 :RgAy137nXA9FNxJLdXeh2G rdf:type owl:Class ;
                         rdfs:subClassOf :Rryk3Z5XNZ11ZiiLuT5M8Q ;
-                        rdfs:isDefinedBy """ISO 20043-1:2021(en)
-Measurement of radioactivity in the environment — Guidelines for effective dose assessment using environmental monitoring data — Part 1: Planned and existing exposure situation""" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "RadioactiveRelease"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Radioactive substances arising from a source (3.22) within a practice (3.13) which are discharged as gases, aerosols, liquids or solids to the environment, generally with the purpose of dilution and dispersion or disposal."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RadioactiveDischarging"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RgAy137nXA9FNxJLdXeh2G ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Radioactive substances arising from a source (3.22) within a practice (3.13) which are discharged as gases, aerosols, liquids or solids to the environment, generally with the purpose of dilution and dispersion or disposal."@en ;
+   rdfs:isDefinedBy """ISO 20043-1:2021(en)
+Measurement of radioactivity in the environment — Guidelines for effective dose assessment using environmental monitoring data — Part 1: Planned and existing exposure situation
+https://www.iso.org/obp/ui/#iso:std:iso:20043:-1:ed-1:v1:en"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RiaJiI8PAvV7grwixkMCcr
@@ -3514,11 +3654,18 @@ Measurement of radioactivity in the environment — Guidelines for effective dos
 ###  https://w3id.org/emmo/domain/neo#RlYMwSSvmqekLRLzmf5IzV
 :RlYMwSSvmqekLRLzmf5IzV rdf:type owl:Class ;
                         rdfs:subClassOf :R79WXwPF5ZWjRPArxbbVAgU ;
-                        rdfs:isDefinedBy "ttps://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "FacilitiesOperation" ;
                         <http://www.w3.org/2004/02/skos/core#definition> """All activities performed to achieve the purpose for which an authorized facility was
 constructed"""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Operation"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RlYMwSSvmqekLRLzmf5IzV ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """All activities performed to achieve the purpose for which an authorized facility was
+constructed"""@en ;
+   rdfs:isDefinedBy "https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#Rld2UEpLG7yzdQrBtq6RPL
@@ -3579,13 +3726,23 @@ Reciprocating internal combustion engines — Vocabulary of components and syste
 ###  https://w3id.org/emmo/domain/neo#Rryk3Z5XNZ11ZiiLuT5M8Q
 :Rryk3Z5XNZ11ZiiLuT5M8Q rdf:type owl:Class ;
                         rdfs:subClassOf :RtdecAtZ9C9xUJNtjefY4D ;
-                        rdfs:isDefinedBy "INTERNATIONAL ATOMIC ENERGY AGENCY, Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018) p.12" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "Level5DiD"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> """Emergency management (e.g. monitoring of radioactive releases) to mitigate the consequences of radioactive
 release. For this, the main functions are to understand what radiological materials are being released and in
 which direction. Many of these functions may be, and perhaps need to be, entirely separate from the overall
 I&C architecture."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "EmergencyManagement"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Rryk3Z5XNZ11ZiiLuT5M8Q ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """Emergency management (e.g. monitoring of radioactive releases) to mitigate the consequences of radioactive
+release. For this, the main functions are to understand what radiological materials are being released and in
+which direction. Many of these functions may be, and perhaps need to be, entirely separate from the overall
+I&C architecture."""@en ;
+   rdfs:isDefinedBy """Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018) p.12
+https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RtX7ESf673Z9eYoseycPyl
@@ -3607,13 +3764,23 @@ I&C architecture."""@en ;
                                           owl:onProperty elite:isSubProcessOf ;
                                           owl:someValuesFrom :RyLZ508FsJKMTIHvSNuJZk
                                         ] ;
-                        rdfs:isDefinedBy """INTERNATIONAL ATOMIC ENERGY AGENCY, IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation
-Protection, 2018 Edition, IAEA, Vienna (in press).""" ;
                         <http://www.w3.org/2004/02/skos/core#definition> """A hierarchical deployment of different levels of diverse equipment and procedures to prevent the escalation
 of anticipated operational occurrences and to maintain the effectiveness of physical barriers placed between
 a radiation source or radioactive material and workers, members of the public or the environment, in
 operational states and, for some barriers, in accident conditions"""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "DefenceinDepthProcedures"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RtdecAtZ9C9xUJNtjefY4D ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """A hierarchical deployment of different levels of diverse equipment and procedures to prevent the escalation
+of anticipated operational occurrences and to maintain the effectiveness of physical barriers placed between
+a radiation source or radioactive material and workers, members of the public or the environment, in
+operational states and, for some barriers, in accident conditions"""@en ;
+   rdfs:isDefinedBy """IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation
+Protection, 2018 Edition, IAEA, Vienna (in press).
+https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf"""
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#Rtq4tb3S29hdhJZtzFB2Bg
