@@ -1183,8 +1183,9 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R8Jjvo3bjpE389mPpX0uOxQ
 :R8Jjvo3bjpE389mPpX0uOxQ rdf:type owl:Class ;
                          rdfs:subClassOf :RC9Vnqc96TS4VVdygnxu8UP ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "Remediation"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Any measures that may be carried out to reduce the radiation exposure due to existing contamination of land areas through actions applied to the contamination itself (the source) or to the exposure pathways to humans."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Remediation"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RadiationExposureReduction" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R8Jjvo3bjpE389mPpX0uOxQ ;
@@ -1346,13 +1347,13 @@ be considered. The possible need to support mobile means might also be considere
                                            owl:onProperty elite:isBehaviourOf ;
                                            owl:someValuesFrom :RBsAUchYFBwAtcVUeFr8EFq
                                          ] ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "Closure" ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Closing"@en .
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "SystemClosure" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemClosing"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R8bUZpp1yY81qmfgGNH0TyF ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
-   owl:annotatedTarget "Closure" ;
+   owl:annotatedTarget "SystemClosure" ;
    rdfs:isDefinedBy "https://www.collinsdictionary.com/dictionary/english/close" ;
    <http://www.w3.org/2004/02/skos/core#definition> "Shutting or completing"
  ] .
@@ -1649,7 +1650,7 @@ and Radiation Protection, 2018 Edition """ ;
 :R9Hn7TrsF0nNCCTri5RWDXP rdf:type owl:Class ;
                          rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ;
                          <http://www.w3.org/2004/02/skos/core#definition> "To unobstruct an opening"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Open"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemOpening"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R9Hn7TrsF0nNCCTri5RWDXP ;
@@ -2564,7 +2565,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#RCNShAJHX3mIvlEif02qYJZ
 :RCNShAJHX3mIvlEif02qYJZ rdf:type owl:Class ;
                          rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> <NPPDesmantling> ,
+                         <http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/emmo/domain/NPPDesmantling> ,
                                                                         "NuclearReactorDecommissioning"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "take an engineered system or component out of service, render it inoperative, dismantle and decontaminate it"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPDecommissioning" .
@@ -2709,9 +2710,10 @@ Regulations [2], in the form of confinement system and containment system), and
 the usages of containment are (it seems) conceptually consistent, but the usages
 of confinement are not. Confinement in nuclear safety is the safety function that is
 performed by the containment."""@en ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "Containment" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """Prevention or control of releases of radioactive material to the environment
 in operation or in accidents."""@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Confinement"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReleaseConfinement"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :RCembrpB4dbduwWjlJOBBMK ;
@@ -3255,18 +3257,10 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
                                            owl:onProperty elite:isBehaviourOf ;
                                            owl:someValuesFrom :RCh38CRTgX4tnzCoB8auwPC
                                          ] ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "Starting"@en ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "SystemActivation"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Initiation of a selected function of an object"@en ,
                                                                           "It takes place from a particular time"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Activation"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :RDuDSbKh236WI6rqMad7Ar4 ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
-   owl:annotatedTarget "Starting"@en ;
-   rdfs:isDefinedBy "https://www.collinsdictionary.com/dictionary/english/start" ;
-   <http://www.w3.org/2004/02/skos/core#definition> "It takes place from a particular time"
- ] .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemStarting"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :RDuDSbKh236WI6rqMad7Ar4 ;
@@ -3274,6 +3268,14 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
    owl:annotatedTarget "Initiation of a selected function of an object"@en ;
    rdfs:isDefinedBy """ISO/IEC TR 11580:2007(en)
 https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RDuDSbKh236WI6rqMad7Ar4 ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+   owl:annotatedTarget "SystemStarting"@en ;
+   rdfs:isDefinedBy "https://www.collinsdictionary.com/dictionary/english/start" ;
+   <http://www.w3.org/2004/02/skos/core#definition> "It takes place from a particular time"
  ] .
 
 
@@ -3437,15 +3439,7 @@ negligible from the point of view of protection and safety"""@en ;
                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                         <http://www.w3.org/2004/02/skos/core#definition> """Is any occurrence that can lead to potential consequences that are not
 negligible from the point of view of protection and safety of a Nuclear power plant"""@en ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPUnintendedEvent"@en ;
-                        :RR3uD2d7YfhHohfv2Nm6sX "Possiamo dire che un unintened event è un evento le cui conseguenze possono mettere a rischio le condizioni operative del reattore fino a portare ad un danneggiamento"@it .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :RLEjSGGgoWOVMGjQsskCsb ;
-   owl:annotatedProperty :RR3uD2d7YfhHohfv2Nm6sX ;
-   owl:annotatedTarget "Possiamo dire che un unintened event è un evento le cui conseguenze possono mettere a rischio le condizioni operative del reattore fino a portare ad un danneggiamento"@it ;
-   rdfs:comment "Check"
- ] .
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPUnintendedEvent"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#RMiSxLtLOMDcYH1jWDJO1b
@@ -3604,7 +3598,7 @@ https://www.iso.org/obp/ui/#iso:std:iso:ts:22330:ed-1:v1:en"""
                                           owl:onProperty elite:isSubProcessOf ;
                                           owl:someValuesFrom :R94o7o1nZqxzHLLqTyhHY08
                                         ] ;
-                        <http://www.w3.org/2004/02/skos/core#altLabel> <Refueling> ;
+                        <http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/emmo/domain/Refueling> ;
                         <http://www.w3.org/2004/02/skos/core#definition> "The process of removing older fuel and loading new fuel. These actions are all performed underwater to supply continuous cooling for the fuel and provide shielding from the radioactive spent fuel."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPRefueling"@en .
 
@@ -3620,7 +3614,7 @@ https://www.iso.org/obp/ui/#iso:std:iso:ts:22330:ed-1:v1:en"""
 :RUfmPQytgoT4sAaWFKoKAG rdf:type owl:Class ;
                         rdfs:subClassOf :R7fkBdyMeKQvQzm3yRgM2iz ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Dispersal or removal of people from dangerous areas and their arrival at a place of relative safety."@en ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Evacuation"@en .
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "AreaEvacuation"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :RUfmPQytgoT4sAaWFKoKAG ;
