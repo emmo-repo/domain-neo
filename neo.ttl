@@ -1448,7 +1448,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
                                            owl:someValuesFrom :R7MjWOBoCnDd3BD1IBHjlRe
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Process of the promulgation, monitoring, and enforcement of rules defined in 'regulation (document)', established by primary and/or delegated legislation"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Regulation"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RuleRegulation"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R8rcf1IQoRtZq8YkEpiByPn ;
@@ -2564,7 +2564,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#RCNShAJHX3mIvlEif02qYJZ
 :RCNShAJHX3mIvlEif02qYJZ rdf:type owl:Class ;
                          rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> <NPPDesmantling> ,
+                         <http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/emmo/domain/NPPDesmantling> ,
                                                                         "NuclearReactorDecommissioning"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "take an engineered system or component out of service, render it inoperative, dismantle and decontaminate it"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPDecommissioning" .
@@ -3604,7 +3604,7 @@ https://www.iso.org/obp/ui/#iso:std:iso:ts:22330:ed-1:v1:en"""
                                           owl:onProperty elite:isSubProcessOf ;
                                           owl:someValuesFrom :R94o7o1nZqxzHLLqTyhHY08
                                         ] ;
-                        <http://www.w3.org/2004/02/skos/core#altLabel> <Refueling> ;
+                        <http://www.w3.org/2004/02/skos/core#altLabel> "Refueling" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "The process of removing older fuel and loading new fuel. These actions are all performed underwater to supply continuous cooling for the fuel and provide shielding from the radioactive spent fuel."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPRefueling"@en .
 
@@ -3801,14 +3801,14 @@ Nuclear facilities — Criteria for the design and the operation of containment 
 ###  https://w3id.org/emmo/domain/neo#ReAOaKplsxuu3rxqPb4Jz4
 :ReAOaKplsxuu3rxqPb4Jz4 rdf:type owl:Class ;
                         rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
-                        <http://www.w3.org/2004/02/skos/core#definition> "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "MaintenanceOutage"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :ReAOaKplsxuu3rxqPb4Jz4 ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
    owl:annotatedTarget "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
-   rdfs:isDefinedBy """ISO 3977-9:1999(en)
+   rdfs:seeAlso """ISO 3977-9:1999(en)
 Gas turbines — Procurement — Part 9: Reliability, availability, maintainability and safety"""
  ] .
 
