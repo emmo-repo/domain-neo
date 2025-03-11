@@ -1183,10 +1183,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R8Jjvo3bjpE389mPpX0uOxQ
 :R8Jjvo3bjpE389mPpX0uOxQ rdf:type owl:Class ;
                          rdfs:subClassOf :RC9Vnqc96TS4VVdygnxu8UP ;
-<<<<<<< HEAD
-=======
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Remediation"@en ;
->>>>>>> origin/CheckProcessDefinitions
                          <http://www.w3.org/2004/02/skos/core#definition> "Any measures that may be carried out to reduce the radiation exposure due to existing contamination of land areas through actions applied to the contamination itself (the source) or to the exposure pathways to humans."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RadiationExposureReduction" .
 
@@ -1197,12 +1194,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
  ] .
 
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :R8Jjvo3bjpE389mPpX0uOxQ ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Any measures that may be carried out to reduce the radiation exposure due to existing contamination of land areas through actions applied to the contamination itself (the source) or to the exposure pathways to humans."@en ;
-   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
- ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8KlSYQnSKI6PoJZNIdhwNI
@@ -1357,10 +1348,8 @@ be considered. The possible need to support mobile means might also be considere
                                            owl:onProperty elite:isBehaviourOf ;
                                            owl:someValuesFrom :RBsAUchYFBwAtcVUeFr8EFq
                                          ] ;
-<<<<<<< HEAD
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "Closure" ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Closing"@en .
-=======
+
+
                          <http://www.w3.org/2004/02/skos/core#altLabel> "SystemClosure" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemClosing"@en .
 
@@ -1371,15 +1360,7 @@ be considered. The possible need to support mobile means might also be considere
    rdfs:isDefinedBy "https://www.collinsdictionary.com/dictionary/english/close" ;
    <http://www.w3.org/2004/02/skos/core#definition> "Shutting or completing"
  ] .
->>>>>>> origin/CheckProcessDefinitions
 
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :R8bUZpp1yY81qmfgGNH0TyF ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
-   owl:annotatedTarget "Closure" ;
-   rdfs:isDefinedBy "https://www.collinsdictionary.com/dictionary/english/close" ;
-   <http://www.w3.org/2004/02/skos/core#definition> "Shutting or completing"
- ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8baDZRwKkBRaeQKFoM4Z4N
@@ -2740,18 +2721,14 @@ material, whereas containment refers to the means for achieving that function.
  ! The Transport Regulations [2] adopt a different distinction between confinement
 and containment, namely that confinement relates to preventing criticality and
 containment to preventing releases of radioactive material (see confinement system
-and containment system).
-	The main issue here is the differences in usage between the safety of nuclear
+and containment system). The main issue here is the differences in usage between the safety of nuclear
 installations and safety in the transport of radioactive material. Both terms,
 containment and confinement, are used in both areas (in the Transport
 Regulations [2], in the form of confinement system and containment system), and
 the usages of containment are (it seems) conceptually consistent, but the usages
 of confinement are not. Confinement in nuclear safety is the safety function that is
 performed by the containment."""@en ;
-<<<<<<< HEAD
-=======
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "Containment" ;
->>>>>>> origin/CheckProcessDefinitions
+
                          <http://www.w3.org/2004/02/skos/core#definition> """Prevention or control of releases of radioactive material to the environment
 in operation or in accidents."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReleaseConfinement"@en .
@@ -3306,33 +3283,12 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
                                            owl:onProperty elite:isBehaviourOf ;
                                            owl:someValuesFrom :RCh38CRTgX4tnzCoB8auwPC
                                          ] ;
-<<<<<<< HEAD
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "Starting"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "Initiation of a selected function of an object"@en ,
-                                                                          "It takes place from a particular time"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Activation"@en .
-=======
+
                          <http://www.w3.org/2004/02/skos/core#altLabel> "SystemActivation"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Initiation of a selected function of an object"@en ,
                                                                           "It takes place from a particular time"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemStarting"@en .
 
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :RDuDSbKh236WI6rqMad7Ar4 ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Initiation of a selected function of an object"@en ;
-   rdfs:isDefinedBy """ISO/IEC TR 11580:2007(en)
-https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :RDuDSbKh236WI6rqMad7Ar4 ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#prefLabel> ;
-   owl:annotatedTarget "SystemStarting"@en ;
-   rdfs:isDefinedBy "https://www.collinsdictionary.com/dictionary/english/start" ;
-   <http://www.w3.org/2004/02/skos/core#definition> "It takes place from a particular time"
- ] .
->>>>>>> origin/CheckProcessDefinitions
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :RDuDSbKh236WI6rqMad7Ar4 ;
@@ -3670,11 +3626,7 @@ https://www.iso.org/obp/ui/#iso:std:iso:ts:22330:ed-1:v1:en"""
                                           owl:onProperty elite:isSubProcessOf ;
                                           owl:someValuesFrom :R94o7o1nZqxzHLLqTyhHY08
                                         ] ;
-<<<<<<< HEAD
-                        <http://www.w3.org/2004/02/skos/core#altLabel> "Refueling" ;
-=======
                         <http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/emmo/domain/Refueling> ;
->>>>>>> origin/CheckProcessDefinitions
                         <http://www.w3.org/2004/02/skos/core#definition> "The process of removing older fuel and loading new fuel. These actions are all performed underwater to supply continuous cooling for the fuel and provide shielding from the radioactive spent fuel."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPRefueling"@en .
 
@@ -3684,7 +3636,6 @@ https://www.iso.org/obp/ui/#iso:std:iso:ts:22330:ed-1:v1:en"""
    owl:annotatedTarget "The process of removing older fuel and loading new fuel. These actions are all performed underwater to supply continuous cooling for the fuel and provide shielding from the radioactive spent fuel."@en ;
    rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/refueling.html>
  ] .
-
 
 ###  https://w3id.org/emmo/domain/neo#RUfmPQytgoT4sAaWFKoKAG
 :RUfmPQytgoT4sAaWFKoKAG rdf:type owl:Class ;
@@ -3878,28 +3829,20 @@ Nuclear facilities — Criteria for the design and the operation of containment 
 
 
 ###  https://w3id.org/emmo/domain/neo#ReAOaKplsxuu3rxqPb4Jz4
+
 :ReAOaKplsxuu3rxqPb4Jz4 rdf:type owl:Class ;
-                        rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
-<<<<<<< HEAD
-                        <http://www.w3.org/2004/02/skos/core#comment> "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
-=======
-                        <http://www.w3.org/2004/02/skos/core#definition> "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
->>>>>>> origin/CheckProcessDefinitions
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "MaintenanceOutage"@en .
+                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
+                          <http://www.w3.org/2004/02/skos/core#comment> "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MaintenanceOutage"@en .
+
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :ReAOaKplsxuu3rxqPb4Jz4 ;
-<<<<<<< HEAD
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
    owl:annotatedTarget "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
    rdfs:seeAlso """ISO 3977-9:1999(en)
-=======
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
-   rdfs:isDefinedBy """ISO 3977-9:1999(en)
->>>>>>> origin/CheckProcessDefinitions
-Gas turbines — Procurement — Part 9: Reliability, availability, maintainability and safety"""
- ] .
+   Gas turbines — Procurement — Part 9: Reliability, availability, maintainability and safety"""
+] .
 
 
 ###  https://w3id.org/emmo/domain/neo#Rff5M43GHvSXYByyfZSSyk
