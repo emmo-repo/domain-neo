@@ -1211,7 +1211,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
  ] .
 
 
-
 ###  https://w3id.org/emmo/domain/neo#R8KlSYQnSKI6PoJZNIdhwNI
 :R8KlSYQnSKI6PoJZNIdhwNI rdf:type owl:Class ;
                          rdfs:subClassOf :InjectedMaterial ,
@@ -1364,8 +1363,6 @@ be considered. The possible need to support mobile means might also be considere
                                            owl:onProperty elite:isBehaviourOf ;
                                            owl:someValuesFrom :RBsAUchYFBwAtcVUeFr8EFq
                                          ] ;
-
-
                          <http://www.w3.org/2004/02/skos/core#altLabel> "SystemClosure" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemClosing"@en .
 
@@ -1376,7 +1373,6 @@ be considered. The possible need to support mobile means might also be considere
    rdfs:isDefinedBy "https://www.collinsdictionary.com/dictionary/english/close" ;
    <http://www.w3.org/2004/02/skos/core#definition> "Shutting or completing"
  ] .
-
 
 
 ###  https://w3id.org/emmo/domain/neo#R8baDZRwKkBRaeQKFoM4Z4N
@@ -1470,13 +1466,6 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Process of the promulgation, monitoring, and enforcement of rules defined in 'regulation (document)', established by primary and/or delegated legislation"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RuleRegulation"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :R8rcf1IQoRtZq8YkEpiByPn ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Process of the promulgation, monitoring, and enforcement of rules defined in 'regulation (document)', established by primary and/or delegated legislation"@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:17419:ed-1:v1:en:term:3.29>
- ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R8rcf1IQoRtZq8YkEpiByPn ;
@@ -1678,14 +1667,6 @@ and Radiation Protection, 2018 Edition """ ;
                          rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ;
                          <http://www.w3.org/2004/02/skos/core#definition> "To unobstruct an opening"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemOpening"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :R9Hn7TrsF0nNCCTri5RWDXP ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "To unobstruct an opening"@en ;
-   rdfs:isDefinedBy """ISO 14313:2007(en)
-Petroleum and natural gas industries — Pipeline transportation systems — Pipeline valves"""
- ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R9Hn7TrsF0nNCCTri5RWDXP ;
@@ -2746,18 +2727,9 @@ Regulations [2], in the form of confinement system and containment system), and
 the usages of containment are (it seems) conceptually consistent, but the usages
 of confinement are not. Confinement in nuclear safety is the safety function that is
 performed by the containment."""@en ;
-
                          <http://www.w3.org/2004/02/skos/core#definition> """Prevention or control of releases of radioactive material to the environment
 in operation or in accidents."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReleaseConfinement"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :RCembrpB4dbduwWjlJOBBMK ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """Prevention or control of releases of radioactive material to the environment
-in operation or in accidents."""@en ;
-   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
- ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :RCembrpB4dbduwWjlJOBBMK ;
@@ -3304,12 +3276,11 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
                                            owl:onProperty elite:isBehaviourOf ;
                                            owl:someValuesFrom :RCh38CRTgX4tnzCoB8auwPC
                                          ] ;
-
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "SystemActivation"@en ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "Starting"@en ,
+                                                                        "SystemActivation"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Initiation of a selected function of an object"@en ,
                                                                           "It takes place from a particular time"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemStarting"@en .
-
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :RDuDSbKh236WI6rqMad7Ar4 ;
@@ -3658,20 +3629,12 @@ https://www.iso.org/obp/ui/#iso:std:iso:ts:22330:ed-1:v1:en"""
    rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/refueling.html>
  ] .
 
+
 ###  https://w3id.org/emmo/domain/neo#RUfmPQytgoT4sAaWFKoKAG
 :RUfmPQytgoT4sAaWFKoKAG rdf:type owl:Class ;
                         rdfs:subClassOf :R7fkBdyMeKQvQzm3yRgM2iz ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Dispersal or removal of people from dangerous areas and their arrival at a place of relative safety."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "AreaEvacuation"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :RUfmPQytgoT4sAaWFKoKAG ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Dispersal or removal of people from dangerous areas and their arrival at a place of relative safety."@en ;
-   rdfs:isDefinedBy """ISO/TR 24188:2022(en)
-Large outdoor fires and the built environment — Global overview of different approaches to standardization
-https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""
- ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :RUfmPQytgoT4sAaWFKoKAG ;
@@ -3855,12 +3818,10 @@ Nuclear facilities — Criteria for the design and the operation of containment 
 
 
 ###  https://w3id.org/emmo/domain/neo#ReAOaKplsxuu3rxqPb4Jz4
-
 :ReAOaKplsxuu3rxqPb4Jz4 rdf:type owl:Class ;
-                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
-                          <http://www.w3.org/2004/02/skos/core#comment> "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
-                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MaintenanceOutage"@en .
-
+                        rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
+                        <http://www.w3.org/2004/02/skos/core#comment> "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "MaintenanceOutage"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :ReAOaKplsxuu3rxqPb4Jz4 ;
@@ -3868,7 +3829,7 @@ Nuclear facilities — Criteria for the design and the operation of containment 
    owl:annotatedTarget "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
    rdfs:seeAlso """ISO 3977-9:1999(en)
    Gas turbines — Procurement — Part 9: Reliability, availability, maintainability and safety"""
-] .
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#Rff5M43GHvSXYByyfZSSyk
@@ -4293,6 +4254,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R7RYQTRTJpydcZySPvfj97U
 :R7RYQTRTJpydcZySPvfj97U rdf:type owl:NamedIndividual ,
                                   :RBwST6x27zdyWBgBunjc2Q9 ;
+                         elite:follows :RBHjDlLwaPMxKKtjq16Lw1c ;
                          elite:foregoes :R7RRzaczCz4wVsf2ZSE3cz5 ;
                          elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit1"@en .
@@ -4310,6 +4272,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R7UHidTtMLlwJsXw3LunBVr
 :R7UHidTtMLlwJsXw3LunBVr rdf:type owl:NamedIndividual ,
                                   :Rba6gbJ70iyZgFOVY5Z6Vo ;
+                         elite:follows :R8SCvSsZInboPn0aMi5hJ2b ;
                          elite:foregoes :R9ci3rSU9PmVM9hDoObI7GN ,
                                         :R9t3qBNc7hgSJ9CltHNvCc4 ;
                          elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ;
@@ -4461,6 +4424,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                   :R8FmlobZiHsCZi4CHKxgtMg ;
                          elite:foregoes :RPcjVut6ArBpfKG9sYPMsM ;
                          elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
+                         elite:successorOf :RC2M3wEsCROuuDC6Bjz9TLz ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SCVentilation_unit1"@en .
 
 
@@ -4516,6 +4480,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RBKxneXt3UWJzKxOD5Inibz
 :RBKxneXt3UWJzKxOD5Inibz rdf:type owl:NamedIndividual ,
                                   :RDN44xs0tgwZS1p11BPMMKr ;
+                         elite:follows :R8SCvSsZInboPn0aMi5hJ2b ;
                          elite:foregoes :R7UHidTtMLlwJsXw3LunBVr ;
                          elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit1"@en .
@@ -4579,6 +4544,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                   :R7pKuzitkkIAgc5NxDlqfH4 ;
                          elite:foregoes :RCSOjPEJEBrRfStCCjfidCL ;
                          elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
+                         elite:successorOf :RCJ4sUQgpXReJhv2l3TNlPt ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit1"@en .
 
 
@@ -4632,6 +4598,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          elite:foregoes :R8SCvSsZInboPn0aMi5hJ2b ;
                          elite:isBehaviourOf :RCGLvp3oNj6WAo2tvVy7DeU ;
                          elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
+                         elite:successorOf :RC2M3wEsCROuuDC6Bjz9TLz ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ICActivation_unit1"@en .
 
 
@@ -4777,4 +4744,4 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ] .
 
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
