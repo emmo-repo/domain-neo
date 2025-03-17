@@ -4186,6 +4186,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R4UMKMNvIkmVZ4OSRIQ6Qv
 :R4UMKMNvIkmVZ4OSRIQ6Qv rdf:type owl:NamedIndividual ,
                                  :RDuDSbKh236WI6rqMad7Ar4 ;
+                        elite:isBehaviourOf :R7MYrOmgGBYZ0JwNSP9CKGJ ;
                         elite:isConstitutiveProcessOf :R7uvG224iPqEldlfFwndlKr ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICActivation_unit2"@en .
 
@@ -4690,7 +4691,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 
 ###  https://w3id.org/emmo/domain/neo#RVDTdBhCWWXCt9qvBB5o8o
 :RVDTdBhCWWXCt9qvBB5o8o rdf:type owl:NamedIndividual ;
-                        elite:foregoes :R4UMKMNvIkmVZ4OSRIQ6Qv ;
+                        elite:foregoes :R9d1EKHudbhPmfvQxlND3Wr ;
                         elite:isBehaviourOf :R7uvG224iPqEldlfFwndlKr ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit2"@en .
 
