@@ -4210,6 +4210,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#R71kogAKcOnrzKRRvJYzEnf
 :R71kogAKcOnrzKRRvJYzEnf rdf:type owl:NamedIndividual ,
                                   :RC5Uc3vBrAsYC8gCNkTsLH ;
+                         elite:coexistsWith :RCIQAmGtY5oJHuuVHp7Y9OF ;
                          elite:foregoes :RCZSMiyXPZ1w9KtBMir31du ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "regularWaterInjection_unit3"@en .
@@ -4375,6 +4376,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 :R9L3ykUI6w5qe20x5hVL2mK rdf:type owl:NamedIndividual ,
                                   :RDuDSbKh236WI6rqMad7Ar4 ;
                          elite:foregoes :R7TeIrUcoeFIohoZFYT6oHo ;
+                         elite:hasBehaviour :RPlulHioiJxZgZC1QMUgOL ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICActivation_unit3"@en .
 
@@ -4525,6 +4527,13 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                          elite:isBehaviourOf :R7xpEdKwbxANkjtrQrh0ep ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "dieselGeneratorActivation_Fukushima"@en .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RBnZe6rQs3iQOzfyrY5AKRG ;
+   owl:annotatedProperty elite:foregoes ;
+   owl:annotatedTarget :R8SCvSsZInboPn0aMi5hJ2b ;
+   <http://www.w3.org/2004/02/skos/core#comment> "Check this one"
+ ] .
+
 
 ###  https://w3id.org/emmo/domain/neo#RBrcoh6pN7tToFnM1m59yXl
 :RBrcoh6pN7tToFnM1m59yXl rdf:type owl:NamedIndividual ,
@@ -4551,6 +4560,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 
 ###  https://w3id.org/emmo/domain/neo#RC6oDea7metjydM6Dr1mJsi
 :RC6oDea7metjydM6Dr1mJsi rdf:type owl:NamedIndividual ;
+                         elite:affects :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          elite:foregoes :RFvEhkHbiPwVuY8AasDXll ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit3"@en .
@@ -4571,6 +4581,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#RCIQAmGtY5oJHuuVHp7Y9OF
 :RCIQAmGtY5oJHuuVHp7Y9OF rdf:type owl:NamedIndividual ,
                                   :R8FmlobZiHsCZi4CHKxgtMg ;
+                         elite:coexistsWith :R71kogAKcOnrzKRRvJYzEnf ;
                          elite:foregoes :RBEpkkG2mXF3wnnZPT5lDoa ,
                                         :RCZSMiyXPZ1w9KtBMir31du ;
                          elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
@@ -4674,6 +4685,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                    owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                  ] ;
                         elite:foregoes :R8SCvSsZInboPn0aMi5hJ2b ;
+                        elite:hasConstitutiveProcess :Rb5hP2Q5XG2czxqOFu5nb9 ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICSystem_unit3"@en .
 
 
