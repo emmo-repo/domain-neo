@@ -4694,6 +4694,13 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
                                  :R9MK7U9YLf7RtEpfQTDDr1q ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit4"@en .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RTiXMunsU6yEXKeRVxMuQV ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget :R9MK7U9YLf7RtEpfQTDDr1q ;
+   <http://www.w3.org/2004/02/skos/core#comment> "add anay relations linke unit 2 and 3?"
+ ] .
+
 
 ###  https://w3id.org/emmo/domain/neo#RUsOGEERLNgPu3mgta5Sm1
 :RUsOGEERLNgPu3mgta5Sm1 rdf:type owl:NamedIndividual ,
