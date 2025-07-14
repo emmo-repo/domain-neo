@@ -27,3 +27,250 @@ It includes the representation of the Fukushima Daichi accident, based on the of
 The ontology is still in development phase and provides a partial cover of the nuclear engineering domain and Fukushima Daichi accident report."""@en ;
                                         <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/legalcode"^^xsd:anyURI ;
                                         <http://purl.org/dc/terms/title> "Nuclear Energy Ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/emmo/domain/neo/neo#Containment
+:Containment rdf:type owl:Class ;
+             rdfs:subClassOf elite:Process ;
+             rdfs:comment """methods or physical structures designed to prevent or control the release
+and the dispersion of radioactive substances.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Containment ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """methods or physical structures designed to prevent or control the release
+and the dispersion of radioactive substances.""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#Cutting
+:Cutting rdf:type owl:Class ;
+         rdfs:subClassOf elite:Process ;
+         rdfs:comment """the act of separating or dividing structures, systems, components or waste using
+force or energy to divide the material.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Cutting ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """the act of separating or dividing structures, systems, components or waste using
+force or energy to divide the material.""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#Decommissioning
+:Decommissioning rdf:type owl:Class ;
+                 rdfs:subClassOf elite:Process ;
+                 rdfs:comment """the set of administrative and technical actions taken to allow the
+removal of some or all of the regulatory controls from a facility. This does not apply for that part of a disposal facility in which radioactive waste is emplaced.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Decommissioning ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """the set of administrative and technical actions taken to allow the
+removal of some or all of the regulatory controls from a facility. This does not apply for that part of a disposal facility in which radioactive waste is emplaced.""" ;
+   rdfs:isDefinedBy "IAEA-TECDOC-2029,Taxonomyfordecommissiong"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#DecommissioningPlanning
+:DecommissioningPlanning rdf:type owl:Class ;
+                         rdfs:subClassOf elite:Process ;
+                         rdfs:comment """the preparation and maintenance (throughout the facility
+lifetime) of a plan and supporting documents –- to show how decommissioning can safely achieve
+the defined end state, in accordance with regulatory requirements.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :DecommissioningPlanning ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """the preparation and maintenance (throughout the facility
+lifetime) of a plan and supporting documents –- to show how decommissioning can safely achieve
+the defined end state, in accordance with regulatory requirements.""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#Decontamination
+:Decontamination rdf:type owl:Class ;
+                 rdfs:subClassOf elite:Process ;
+                 rdfs:comment """the complete or partial removal of contamination by a deliberate
+physical, chemical or biological process.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Decontamination ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """the complete or partial removal of contamination by a deliberate
+physical, chemical or biological process.""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#Dismantling
+:Dismantling rdf:type owl:Class ;
+             rdfs:subClassOf elite:Process ;
+             rdfs:comment """the taking apart, disassembling and tearing down of the structures, systems
+and components of a facility (within a radiologically controlled area) for the purposes of
+decommissioning.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Dismantling ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """the taking apart, disassembling and tearing down of the structures, systems
+and components of a facility (within a radiologically controlled area) for the purposes of
+decommissioning.""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#FacilityReconfiguration
+:FacilityReconfiguration rdf:type owl:Class ;
+                         rdfs:subClassOf elite:Process ;
+                         rdfs:comment """the modification of structures, systems, components and access
+routes within the facility to support decommissioning activities, including where necessary the
+provision of safe enclosure(s).""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :FacilityReconfiguration ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """the modification of structures, systems, components and access
+routes within the facility to support decommissioning activities, including where necessary the
+provision of safe enclosure(s).""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#FinancingDecommissioning
+:FinancingDecommissioning rdf:type owl:Class ;
+                          rdfs:subClassOf elite:Process ;
+                          rdfs:comment """all activities required to ensure adequate financial resources are available
+when necessary for safe decommissioning.""" ,
+                                       "is part of preparationoofdecommissioning" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :FinancingDecommissioning ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """all activities required to ensure adequate financial resources are available
+when necessary for safe decommissioning.""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#LogisticReconfiguration
+:LogisticReconfiguration rdf:type owl:Class ;
+                         rdfs:subClassOf elite:Process ;
+                         rdfs:comment """the modification of logistics facilities and services to enable
+decommissioning activities.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :LogisticReconfiguration ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """the modification of logistics facilities and services to enable
+decommissioning activities.""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#ManagementSystem
+:ManagementSystem rdf:type owl:Class ;
+                  rdfs:subClassOf elite:Process ;
+                  rdfs:comment """a set of interrelated or interacting elements (system) for
+establishing policies and objectives and enabling the objectives to be achieved in an efficient and
+effective manner.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :ManagementSystem ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """a set of interrelated or interacting elements (system) for
+establishing policies and objectives and enabling the objectives to be achieved in an efficient and
+effective manner.""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#PostOperation
+:PostOperation rdf:type owl:Class ;
+               rdfs:subClassOf elite:Process ;
+               rdfs:comment """all activities relating to the permanent cessation of operation of a nuclear
+facility.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :PostOperation ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """all activities relating to the permanent cessation of operation of a nuclear
+facility.""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#PostShutDownActivities
+:PostShutDownActivities rdf:type owl:Class ;
+                        rdfs:subClassOf :PostOperation ;
+                        rdfs:comment """activities undertaken following permanent shutdown of a
+nuclear facility to reduce hazards and prepare the facility for immediate or deferred dismantling.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :PostShutDownActivities ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """activities undertaken following permanent shutdown of a
+nuclear facility to reduce hazards and prepare the facility for immediate or deferred dismantling.""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#PreparationForDecommissioning
+:PreparationForDecommissioning rdf:type owl:Class ;
+                               rdfs:subClassOf elite:Process ;
+                               rdfs:comment """all activities required for authorization of
+decommissioning.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :PreparationForDecommissioning ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """all activities required for authorization of
+decommissioning.""" ;
+   rdfs:isDefinedBy "IAEA-TECDOC-2029,Taxonomyfordecommissiong"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#RadioactiveWaste
+:RadioactiveWaste rdf:type owl:Class ;
+                  rdfs:subClassOf elite:Object .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#SpentFuelRemoval
+:SpentFuelRemoval rdf:type owl:Class ;
+                  rdfs:subClassOf :PostOperation ;
+                  rdfs:comment """the removal of spent fuel from a reactor core and transfer of fuel to
+spent fuel storage.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :SpentFuelRemoval ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """the removal of spent fuel from a reactor core and transfer of fuel to
+spent fuel storage.""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#WasteClassification
+:WasteClassification rdf:type owl:Class ;
+                     rdfs:subClassOf elite:Process .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
