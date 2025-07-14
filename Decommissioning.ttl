@@ -1,32 +1,15 @@
-@prefix : <https://w3id.org/emmo/domain/neo#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix elite: <https://w3id.org/emmo/emmo-lite#> .
-@base <https://w3id.org/emmo/domain/neo#> .
+@prefix :       <https://w3id.org/emmo/domain/decommissioning#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix elite:   <https://w3id.org/emmo/emmo-lite#> .
 
-<https://w3id.org/emmo/domain/neo/neo> rdf:type owl:Ontology ;
-                                        owl:versionIRI <https://w3id.org/emmo/domain/neo/0.0.1/neo> ;
-                                        owl:imports <https://w3id.org/emmo/emmo-lite/0.0.3> ;
-                                        <http://purl.org/dc/terms/contributor> "Anna Anchini"@en ,
-                                                                               "Dario Rimondini"@it ,
-                                                                               "Francesco Antonio Zaccarini"@it ,
-                                                                               "Ilaria Maria Paponetti"@it ,
-                                                                               "Samuele Baldini"@it ,
-                                                                               "Saverio Quaranta"@it ;
-                                        <http://purl.org/dc/terms/creator> "Emanuele Ghedini"@it ;
-                                        <http://purl.org/dc/terms/description> """The Nuclear Energy Ontology (NEO) is a domain ontology developed under the EMMO framework for the representation of concepts in the field of nuclear energy. It is based on commonly used standardization vocabularies, such as:
-    - ISO 12749 - Nuclear energy, nuclear technologies, and radiological protection
-    - \"Construction Technologies for Nuclear Power Plants\", IAEA Nuclear Energy Series, No. NP-T-2.5, IAEA, Vienna (AU), 2011
-    - IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition.
-
-It includes the representation of the Fukushima Daichi accident, based on the official IAEA report: \"The Fukushima Daiichi accident - Technical Volume 1: Description and Context of the Accident\", IAEA, Vienna (AU), 2015, STI/PUB/1710, ISBN 978–92–0–107015–9
-
-The ontology is still in development phase and provides a partial cover of the nuclear engineering domain and Fukushima Daichi accident report."""@en ;
-                                        <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/legalcode"^^xsd:anyURI ;
-                                        <http://purl.org/dc/terms/title> "Nuclear Energy Ontology"@en .
+<https://w3id.org/emmo/domain/decommissioning>
+    a   owl:Ontology ;
+    rdfs:comment "Ontologia di decommissioning che estende NEO"@it ;
+    # importa NEO (che a sua volta importa EMMO‑light / elite)
+    owl:imports <https://w3id.org/emmo/domain/neo/neo> .
 
 #################################################################
 #    Annotation properties
