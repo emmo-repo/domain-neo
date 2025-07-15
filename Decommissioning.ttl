@@ -1,15 +1,15 @@
-@prefix :       <https://w3id.org/emmo/domain/decommissioning#> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-@prefix elite:   <https://w3id.org/emmo/emmo-lite#> .
+@prefix : <https://w3id.org/emmo/domain/decommissioning#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix elite: <https://w3id.org/emmo/emmo-lite#> .
+@base <https://w3id.org/emmo/domain/decommissioning#> .
 
-<https://w3id.org/emmo/domain/decommissioning>
-    a   owl:Ontology ;
-    rdfs:comment "Ontologia di decommissioning che estende NEO"@it ;
-    # importa NEO (che a sua volta importa EMMO‑light / elite)
-    owl:imports <https://w3id.org/emmo/domain/neo/neo> .
+<https://w3id.org/emmo/domain/decommissioning> rdf:type owl:Ontology ;
+                                                owl:imports <https://w3id.org/emmo/domain/neo/neo> ;
+                                                rdfs:comment "Ontologia di decommissioning che estende NEO"@it .
 
 #################################################################
 #    Annotation properties
@@ -27,22 +27,22 @@
 #    Classes
 #################################################################
 
-###  https://w3id.org/emmo/domain/neo/neo#Containment
+###  https://w3id.org/emmo/domain/decommissioning#Containment
 :Containment rdf:type owl:Class ;
              rdfs:subClassOf elite:Process ;
-             rdfs:comment """methods or physical structures designed to prevent or control the release
+             <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """methods or physical structures designed to prevent or control the release
 and the dispersion of radioactive substances.""" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :Containment ;
-   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
    owl:annotatedTarget """methods or physical structures designed to prevent or control the release
 and the dispersion of radioactive substances.""" ;
    rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Cutting
+###  https://w3id.org/emmo/domain/decommissioning#Cutting
 :Cutting rdf:type owl:Class ;
          rdfs:subClassOf elite:Process ;
          rdfs:comment """the act of separating or dividing structures, systems, components or waste using
@@ -57,7 +57,7 @@ force or energy to divide the material.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Decommissioning
+###  https://w3id.org/emmo/domain/decommissioning#Decommissioning
 :Decommissioning rdf:type owl:Class ;
                  rdfs:subClassOf elite:Process ;
                  rdfs:comment """the set of administrative and technical actions taken to allow the
@@ -72,7 +72,7 @@ removal of some or all of the regulatory controls from a facility. This does not
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#DecommissioningPlanning
+###  https://w3id.org/emmo/domain/decommissioning#DecommissioningPlanning
 :DecommissioningPlanning rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ;
                          rdfs:comment """the preparation and maintenance (throughout the facility
@@ -89,7 +89,7 @@ the defined end state, in accordance with regulatory requirements.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Decontamination
+###  https://w3id.org/emmo/domain/decommissioning#Decontamination
 :Decontamination rdf:type owl:Class ;
                  rdfs:subClassOf elite:Process ;
                  rdfs:comment """the complete or partial removal of contamination by a deliberate
@@ -104,7 +104,7 @@ physical, chemical or biological process.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Dismantling
+###  https://w3id.org/emmo/domain/decommissioning#Dismantling
 :Dismantling rdf:type owl:Class ;
              rdfs:subClassOf elite:Process ;
              rdfs:comment """the taking apart, disassembling and tearing down of the structures, systems
@@ -121,7 +121,7 @@ decommissioning.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#FacilityReconfiguration
+###  https://w3id.org/emmo/domain/decommissioning#FacilityReconfiguration
 :FacilityReconfiguration rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ;
                          rdfs:comment """the modification of structures, systems, components and access
@@ -138,7 +138,7 @@ provision of safe enclosure(s).""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#FinancingDecommissioning
+###  https://w3id.org/emmo/domain/decommissioning#FinancingDecommissioning
 :FinancingDecommissioning rdf:type owl:Class ;
                           rdfs:subClassOf elite:Process ;
                           rdfs:comment """all activities required to ensure adequate financial resources are available
@@ -154,7 +154,7 @@ when necessary for safe decommissioning.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#LogisticReconfiguration
+###  https://w3id.org/emmo/domain/decommissioning#LogisticReconfiguration
 :LogisticReconfiguration rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ;
                          rdfs:comment """the modification of logistics facilities and services to enable
@@ -169,7 +169,7 @@ decommissioning activities.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#ManagementSystem
+###  https://w3id.org/emmo/domain/decommissioning#ManagementSystem
 :ManagementSystem rdf:type owl:Class ;
                   rdfs:subClassOf elite:Process ;
                   rdfs:comment """a set of interrelated or interacting elements (system) for
@@ -186,7 +186,7 @@ effective manner.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#PostOperation
+###  https://w3id.org/emmo/domain/decommissioning#PostOperation
 :PostOperation rdf:type owl:Class ;
                rdfs:subClassOf elite:Process ;
                rdfs:comment """all activities relating to the permanent cessation of operation of a nuclear
@@ -201,7 +201,7 @@ facility.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#PostShutDownActivities
+###  https://w3id.org/emmo/domain/decommissioning#PostShutDownActivities
 :PostShutDownActivities rdf:type owl:Class ;
                         rdfs:subClassOf :PostOperation ;
                         rdfs:comment """activities undertaken following permanent shutdown of a
@@ -216,7 +216,7 @@ nuclear facility to reduce hazards and prepare the facility for immediate or def
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#PreparationForDecommissioning
+###  https://w3id.org/emmo/domain/decommissioning#PreparationForDecommissioning
 :PreparationForDecommissioning rdf:type owl:Class ;
                                rdfs:subClassOf elite:Process ;
                                rdfs:comment """all activities required for authorization of
@@ -231,12 +231,27 @@ decommissioning.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#RadioactiveWaste
+###  https://w3id.org/emmo/domain/decommissioning#RadioactiveWaste
 :RadioactiveWaste rdf:type owl:Class ;
                   rdfs:subClassOf elite:Object .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#SpentFuelRemoval
+###  https://w3id.org/emmo/domain/decommissioning#RemoteOperation
+:RemoteOperation rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/emmo/domain/neo#RlYMwSSvmqekLRLzmf5IzV> ;
+                 <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the ability to perform activities that are physically distant from an
+operator""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RemoteOperation ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """the ability to perform activities that are physically distant from an
+operator""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#SpentFuelRemoval
 :SpentFuelRemoval rdf:type owl:Class ;
                   rdfs:subClassOf :PostOperation ;
                   rdfs:comment """the removal of spent fuel from a reactor core and transfer of fuel to
@@ -251,7 +266,7 @@ spent fuel storage.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#WasteClassification
+###  https://w3id.org/emmo/domain/decommissioning#WasteClassification
 :WasteClassification rdf:type owl:Class ;
                      rdfs:subClassOf elite:Process .
 
