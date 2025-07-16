@@ -9,6 +9,121 @@
 
 <https://w3id.org/emmo/domain/WasteManagement> rdf:type owl:Ontology ;
                                                 owl:imports <https://w3id.org/emmo/domain/neo/neo> ;
-                                                rdfs:comment "Ontologia di decommissioning che estende NEO"@it ;
+                                                rdfs:comment "Ontologia di Radioactive Waste classes che estende NEO"@it ;
                                                 rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-Waste-management-and-waste-classification-for-nuclear-facilities" .
 
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/emmo/domain/WasteManagement#ActivityContent
+:ActivityContent rdf:type owl:Class ;
+                 rdfs:subClassOf elite:Property .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#EW
+:EW rdf:type owl:Class ;
+    rdfs:subClassOf :Waste ;
+    <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Waste that meets the criteria for clearance,
+exemption or exclusion from regulatory control for radiation protection
+purposes as described in Ref. [6].""" .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#HLW
+:HLW rdf:type owl:Class ;
+     rdfs:subClassOf :RadioactiveWaste ;
+     <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Waste with levels of activity concentration high
+enough to generate significant quantities of heat by the radioactive decay
+process or waste with large amounts of long lived radionuclides that need
+to be considered in the design of a disposal facility for such waste.
+Disposal in deep, stable geological formations usually several hundred
+metres or more below the surface is the generally recognized option for
+disposal of HLW.""" .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#HalfLife
+:HalfLife rdf:type owl:Class ;
+          rdfs:subClassOf elite:Property .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#ILW
+:ILW rdf:type owl:Class ;
+     rdfs:subClassOf :RadioactiveWaste ;
+     <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Waste that, because of its content,
+particularly of long lived radionuclides, requires a greater degree of
+containment and isolation than that provided by near surface disposal.
+However, ILW needs no provision, or only limited provision, for heat
+dissipation during its storage and disposal. ILW may contain long lived
+radionuclides, in particular, alpha emitting radionuclides that will not
+decay to a level of activity concentration acceptable for near surface
+disposal during the time for which institutional controls can be relied
+upon. Therefore, waste in this class requires disposal at greater depths, of
+the order of tens of metres to a few hundred metres.""" .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#LLW
+:LLW rdf:type owl:Class ;
+     rdfs:subClassOf :RadioactiveWaste ;
+     <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Waste that is above clearance levels, but with
+limited amounts of long lived radionuclides. Such waste requires robust
+isolation and containment for periods of up to a few hundred years and is
+suitable for disposal in engineered near surface facilities. This class covers
+a very broad range of waste. LLW may include short lived radionuclides
+at higher levels of activity concentration, and also long lived
+radionuclides, but only at relatively low levels of activity concentration.""" .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#RadioactiveWaste
+:RadioactiveWaste rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/emmo/domain/neo#NuclearEnergyObject> .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#VLLW
+:VLLW rdf:type owl:Class ;
+      rdfs:subClassOf :RadioactiveWaste ;
+      <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Waste that does not necessarily meet the
+criteria of EW, but that does not need a high level of containment and
+isolation and, therefore, is suitable for disposal in near surface landfill
+type facilities with limited regulatory control. Such landfill type facilities
+may also contain other hazardous waste. Typical waste in this class
+includes soil and rubble with low levels of activity concentration.
+Concentrations of longer lived radionuclides in VLLW are generally very
+limited.""" .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#VSLW
+:VSLW rdf:type owl:Class ;
+      rdfs:subClassOf :RadioactiveWaste ;
+      <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Waste that can be stored for decay over a
+limited period of up to a few years and subsequently cleared from
+regulatory control according to arrangements approved by the regulatory
+body, for uncontrolled disposal, use or discharge. This class includes waste
+containing primarily radionuclides with very short half-lives often used
+for research and medical purposes""" .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#Waste
+:Waste rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/emmo/domain/neo#NuclearEnergyObject> .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteVolume
+:WasteVolume rdf:type owl:Class ;
+             rdfs:subClassOf elite:Property .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :HLW
+                :ILW
+                :LLW
+                :VLLW
+                :VSLW
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
