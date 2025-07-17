@@ -10,18 +10,144 @@
 <https://w3id.org/emmo/domain/WasteManagement> rdf:type owl:Ontology ;
                                                 owl:imports <https://w3id.org/emmo/domain/neo/neo> ;
                                                 rdfs:comment "Ontologia di Radioactive Waste classes che estende NEO"@it ;
-                                                rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-Waste-management-and-waste-classification-for-nuclear-facilities" .
+                                                rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/TE-1901web.pdf" ,
+                                                                 "https://www.iaea.org/publications/8154/classification-of-radioactive-waste" .
 
 #################################################################
 #    Classes
 #################################################################
 
-###  https://w3id.org/emmo/domain/WasteManagement#ActivityContent
-:ActivityContent rdf:type owl:Class ;
-                 rdfs:subClassOf elite:Property .
+###  https://w3id.org/emmo/domain/WasteManagement#BoreholeDisposal
+:BoreholeDisposal rdf:type owl:Class ;
+                  rdfs:subClassOf :WasteFinalDestination .
 
 
-###  https://w3id.org/emmo/domain/WasteManagement#EW
+###  https://w3id.org/emmo/domain/WasteManagement#FreeRelease
+:FreeRelease rdf:type owl:Class ;
+             rdfs:subClassOf :WasteFinalDestination .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#HLW_Geological
+:HLW_Geological rdf:type owl:Class ;
+                rdfs:subClassOf :WasteFinalDestination .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#ILW_MediumDepth
+:ILW_MediumDepth rdf:type owl:Class ;
+                 rdfs:subClassOf :WasteFinalDestination .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#LLW_NearSurface
+:LLW_NearSurface rdf:type owl:Class ;
+                 rdfs:subClassOf :WasteFinalDestination .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#MiningWasteDisposal
+:MiningWasteDisposal rdf:type owl:Class ;
+                     rdfs:subClassOf :WasteFinalDestination .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#RawWaste
+:RawWaste rdf:type owl:Class ;
+          rdfs:subClassOf :WasteState .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#TreatedWaste
+:TreatedWaste rdf:type owl:Class ;
+              rdfs:subClassOf :WasteState .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#VLLW_Landfill
+:VLLW_Landfill rdf:type owl:Class ;
+               rdfs:subClassOf :WasteFinalDestination .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteCharacterization
+:WasteCharacterization rdf:type owl:Class ;
+                       rdfs:subClassOf :WasteManagementPhases .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteCharacterizationTime
+:WasteCharacterizationTime rdf:type owl:Class ;
+                           rdfs:subClassOf :WasteProperty .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteClassification
+:WasteClassification rdf:type owl:Class ;
+                     rdfs:subClassOf :WasteManagementPhases .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteConditioning
+:WasteConditioning rdf:type owl:Class ;
+                   rdfs:subClassOf :WasteManagementPhases .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteDisposal
+:WasteDisposal rdf:type owl:Class ;
+               rdfs:subClassOf :WasteManagementPhases .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteFinalDestination
+:WasteFinalDestination rdf:type owl:Class ;
+                       rdfs:subClassOf <https://w3id.org/emmo/domain/neo#NuclearEnergyObject> .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteForm
+:WasteForm rdf:type owl:Class ;
+           rdfs:subClassOf :WasteState .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteGeneration
+:WasteGeneration rdf:type owl:Class ;
+                 rdfs:subClassOf :WasteManagementPhases .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteHistory
+:WasteHistory rdf:type owl:Class ;
+              rdfs:subClassOf :WasteProperty .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteManagementPhases
+:WasteManagementPhases rdf:type owl:Class ;
+                       rdfs:subClassOf elite:Process .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteOrigin
+:WasteOrigin rdf:type owl:Class ;
+             rdfs:subClassOf :WasteProperty .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WastePackaging
+:WastePackaging rdf:type owl:Class ;
+                rdfs:subClassOf :WasteManagementPhases .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WastePretreatment
+:WastePretreatment rdf:type owl:Class ;
+                   rdfs:subClassOf :WasteManagementPhases .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteProperty
+:WasteProperty rdf:type owl:Class ;
+               rdfs:subClassOf elite:Property .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteState
+:WasteState rdf:type owl:Class ;
+            rdfs:subClassOf :WasteProperty .
+
+
+###  https://w3id.org/emmo/domain/WasteManagement#WasteTreatment
+:WasteTreatment rdf:type owl:Class ;
+                rdfs:subClassOf :WasteManagementPhases .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#ActivityConcentration
+:ActivityConcentration rdf:type owl:Class ;
+                       rdfs:subClassOf :WasteProperty .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#EW
 :EW rdf:type owl:Class ;
     rdfs:subClassOf :Waste ;
     <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Waste that meets the criteria for clearance,
@@ -29,7 +155,7 @@ exemption or exclusion from regulatory control for radiation protection
 purposes as described in Ref. [6].""" .
 
 
-###  https://w3id.org/emmo/domain/WasteManagement#HLW
+###  https://w3id.org/emmo/domain/decommissioning#HLW
 :HLW rdf:type owl:Class ;
      rdfs:subClassOf :RadioactiveWaste ;
      <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Waste with levels of activity concentration high
@@ -41,12 +167,12 @@ metres or more below the surface is the generally recognized option for
 disposal of HLW.""" .
 
 
-###  https://w3id.org/emmo/domain/WasteManagement#HalfLife
+###  https://w3id.org/emmo/domain/decommissioning#HalfLife
 :HalfLife rdf:type owl:Class ;
           rdfs:subClassOf elite:Property .
 
 
-###  https://w3id.org/emmo/domain/WasteManagement#ILW
+###  https://w3id.org/emmo/domain/decommissioning#ILW
 :ILW rdf:type owl:Class ;
      rdfs:subClassOf :RadioactiveWaste ;
      <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Waste that, because of its content,
@@ -61,7 +187,7 @@ upon. Therefore, waste in this class requires disposal at greater depths, of
 the order of tens of metres to a few hundred metres.""" .
 
 
-###  https://w3id.org/emmo/domain/WasteManagement#LLW
+###  https://w3id.org/emmo/domain/decommissioning#LLW
 :LLW rdf:type owl:Class ;
      rdfs:subClassOf :RadioactiveWaste ;
      <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Waste that is above clearance levels, but with
@@ -73,12 +199,12 @@ at higher levels of activity concentration, and also long lived
 radionuclides, but only at relatively low levels of activity concentration.""" .
 
 
-###  https://w3id.org/emmo/domain/WasteManagement#RadioactiveWaste
+###  https://w3id.org/emmo/domain/decommissioning#RadioactiveWaste
 :RadioactiveWaste rdf:type owl:Class ;
                   rdfs:subClassOf <https://w3id.org/emmo/domain/neo#NuclearEnergyObject> .
 
 
-###  https://w3id.org/emmo/domain/WasteManagement#VLLW
+###  https://w3id.org/emmo/domain/decommissioning#VLLW
 :VLLW rdf:type owl:Class ;
       rdfs:subClassOf :RadioactiveWaste ;
       <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Waste that does not necessarily meet the
@@ -91,7 +217,7 @@ Concentrations of longer lived radionuclides in VLLW are generally very
 limited.""" .
 
 
-###  https://w3id.org/emmo/domain/WasteManagement#VSLW
+###  https://w3id.org/emmo/domain/decommissioning#VSLW
 :VSLW rdf:type owl:Class ;
       rdfs:subClassOf :RadioactiveWaste ;
       <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Waste that can be stored for decay over a
@@ -102,19 +228,31 @@ containing primarily radionuclides with very short half-lives often used
 for research and medical purposes""" .
 
 
-###  https://w3id.org/emmo/domain/WasteManagement#Waste
+###  https://w3id.org/emmo/domain/decommissioning#Waste
 :Waste rdf:type owl:Class ;
        rdfs:subClassOf <https://w3id.org/emmo/domain/neo#NuclearEnergyObject> .
 
 
-###  https://w3id.org/emmo/domain/WasteManagement#WasteVolume
+###  https://w3id.org/emmo/domain/decommissioning#WasteVolume
 :WasteVolume rdf:type owl:Class ;
-             rdfs:subClassOf elite:Property .
+             rdfs:subClassOf :WasteProperty .
 
 
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BoreholeDisposal
+                :FreeRelease
+                :HLW_Geological
+                :ILW_MediumDepth
+                :LLW_NearSurface
+                :MiningWasteDisposal
+                :VLLW_Landfill
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :HLW
