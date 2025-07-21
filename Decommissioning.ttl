@@ -393,7 +393,6 @@ or disposal.""" .
                 :Decontamination
                 :Demolition
                 :Dismantling
-                :FacilityCharacterization
                 :FacilityManagement
                 :FacilityRadiationSurvey
                 :FacilityReconfiguration
@@ -405,24 +404,10 @@ or disposal.""" .
                 :PostDecommissioningArrangements
                 :PostOperation
                 :PreparationForDecommissioning
-                :SiteCharacterization
                 :SiteSecurity
                 :TerminationOfAuthorization
-                :WasteCharacterization
                 :WasteClassification
-                <https://w3id.org/emmo/domain/neo#R79WXwPF5ZWjRPArxbbVAgU>
-                <https://w3id.org/emmo/domain/neo#R7s6BZ18NYlgydAQozd7POd>
-                <https://w3id.org/emmo/domain/neo#R9ZCvqvWWCWSwBxX7K82iwL>
-                <https://w3id.org/emmo/domain/neo#R9p0u8Gh9Tup5P416Wl32S7>
-                <https://w3id.org/emmo/domain/neo#RBU28e2pgiTqsaTCPWnAJ6y>
-                <https://w3id.org/emmo/domain/neo#RCP7vIugzt8V7rXL11buOZH>
-                <https://w3id.org/emmo/domain/neo#RDP6jdP3MdBK59hhoDGY0Vw>
-                elite:Behaviour
-                elite:ConstitutiveProcess
-                elite:IntentionalAgency
-                elite:Semiosis
-                elite:Stage
-                elite:SubProcess
+
               )
 ] .
 
