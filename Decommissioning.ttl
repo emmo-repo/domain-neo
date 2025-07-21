@@ -9,7 +9,8 @@
 
 <https://w3id.org/emmo/domain/decommissioning> rdf:type owl:Ontology ;
                                                 owl:imports <https://w3id.org/emmo/domain/neo/neo> ;
-                                                rdfs:comment "Ontologia di decommissioning che estende NEO"@it ;
+                                                rdfs:comment "Ontologia di decommissioning che estende NEO"@it ,
+                                                             "Manca inserire le relazioni e le referenze per ogni classe" ;
                                                 rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities" .
 
 #################################################################
@@ -407,7 +408,6 @@ or disposal.""" .
                 :SiteSecurity
                 :TerminationOfAuthorization
                 :WasteClassification
-
               )
 ] .
 
