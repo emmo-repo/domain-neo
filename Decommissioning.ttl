@@ -35,23 +35,54 @@
                   <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the determination of the physical, chemical and radiological nature of
 something for the purpose of informing activities and decisions.""" .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Characterization ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """the determination of the physical, chemical and radiological nature of
+something for the purpose of informing activities and decisions.""" ;
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities 2.2.9."
+ ] .
+
 
 ###  https://w3id.org/emmo/domain/decommissioning#CleanUp
 :CleanUp rdf:type owl:Class ;
-         rdfs:subClassOf elite:Process ;
+         rdfs:subClassOf elite:Process ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty elite:isSubProcessOf ;
+                           owl:someValuesFrom :Decommissioning
+                         ] ;
          <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the removal of contaminated soil and other materials from an area within the
 authorized boundary of a facility, typically performed under the authorization for
 decommissioning for the purpose of reaching the defined end state.""" .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :CleanUp ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """the removal of contaminated soil and other materials from an area within the
+authorized boundary of a facility, typically performed under the authorization for
+decommissioning for the purpose of reaching the defined end state.""" ;
+   rdfs:isDefinedBy "IAEA-TECDOC-2029,Taxonomyfordecommissiong 2.2.6."
+ ] .
 
-###  https://w3id.org/emmo/domain/decommissioning#Containment
-:Containment rdf:type owl:Class ;
-             rdfs:subClassOf elite:Process ;
-             <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """methods or physical structures designed to prevent or control the release
+
+###  https://w3id.org/emmo/domain/decommissioning#Clereance
+:Clereance rdf:type owl:Class ;
+           rdfs:subClassOf elite:Object .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#ContainerForTransportation
+:ContainerForTransportation rdf:type owl:Class ;
+                            rdfs:subClassOf elite:Process ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty elite:isSubProcessOf ;
+                                              owl:someValuesFrom :Dismantling
+                                            ] ;
+                            <http://www.w3.org/2004/02/skos/core#altLabel> "Containment" ;
+                            <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """methods or physical structures designed to prevent or control the release
 and the dispersion of radioactive substances.""" .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Containment ;
+   owl:annotatedSource :ContainerForTransportation ;
    owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
    owl:annotatedTarget """methods or physical structures designed to prevent or control the release
 and the dispersion of radioactive substances.""" ;
@@ -59,9 +90,22 @@ and the dispersion of radioactive substances.""" ;
  ] .
 
 
+###  https://w3id.org/emmo/domain/decommissioning#ControlledArea
+:ControlledArea rdf:type owl:Class ;
+                rdfs:subClassOf elite:Object .
+
+
 ###  https://w3id.org/emmo/domain/decommissioning#Cutting
 :Cutting rdf:type owl:Class ;
-         rdfs:subClassOf elite:Process ;
+         rdfs:subClassOf elite:Process ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty elite:isBefore ;
+                           owl:someValuesFrom :ContainerForTransportation
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty elite:isSubProcessOf ;
+                           owl:someValuesFrom :Dismantling
+                         ] ;
          <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the act of separating or dividing structures, systems, components or waste using
 force or energy to divide the material.""" .
 
@@ -85,13 +129,18 @@ removal of some or all of the regulatory controls from a facility. This does not
    owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
    owl:annotatedTarget """the set of administrative and technical actions taken to allow the
 removal of some or all of the regulatory controls from a facility. This does not apply for that part of a disposal facility in which radioactive waste is emplaced.""" ;
-   rdfs:isDefinedBy "IAEA-TECDOC-2029,Taxonomyfordecommissiong"
+   rdfs:isDefinedBy """IAEA-TECDOC-2029,Taxonomyfordecommissiong
+2.2.1.Decommissioning"""
  ] .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#DecommissioningPlanning
 :DecommissioningPlanning rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Process ;
+                         rdfs:subClassOf elite:Process ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isSubProcessOf ;
+                                           owl:someValuesFrom :PreparationForDecommissioning
+                                         ] ;
                          <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the preparation and maintenance (throughout the facility
 lifetime) of a plan and supporting documents –- to show how decommissioning can safely achieve
 the defined end state, in accordance with regulatory requirements.""" .
@@ -108,7 +157,11 @@ the defined end state, in accordance with regulatory requirements.""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#Decontamination
 :Decontamination rdf:type owl:Class ;
-                 rdfs:subClassOf elite:Process ;
+                 rdfs:subClassOf elite:Process ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty elite:isBefore ;
+                                   owl:someValuesFrom :Dismantling
+                                 ] ;
                  <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the complete or partial removal of contamination by a deliberate
 physical, chemical or biological process.""" .
 
@@ -123,10 +176,23 @@ physical, chemical or biological process.""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#Demolition
 :Demolition rdf:type owl:Class ;
-            rdfs:subClassOf elite:Process ;
+            rdfs:subClassOf elite:Process ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty elite:isSubProcessOf ;
+                              owl:someValuesFrom :Dismantling
+                            ] ;
             <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the taking apart, disassembling and tearing down of the structures, systems
 and components of a facility (outside of a radiologically controlled area) for the purposes of
 decommissioning""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Demolition ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """the taking apart, disassembling and tearing down of the structures, systems
+and components of a facility (outside of a radiologically controlled area) for the purposes of
+decommissioning""" ;
+   rdfs:comment "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities 2.2.5."
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#Dismantling
@@ -142,7 +208,7 @@ decommissioning.""" .
    owl:annotatedTarget """the taking apart, disassembling and tearing down of the structures, systems
 and components of a facility (within a radiologically controlled area) for the purposes of
 decommissioning.""" ;
-   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities 2.2.4."
  ] .
 
 
@@ -172,7 +238,19 @@ achieved.""" .
 
 ###  https://w3id.org/emmo/domain/decommissioning#FacilityReconfiguration
 :FacilityReconfiguration rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Process ;
+                         rdfs:subClassOf elite:Process ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isBefore ;
+                                           owl:someValuesFrom :Cutting
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isBefore ;
+                                           owl:someValuesFrom :ResidualVolumeReduction
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isSubProcessOf ;
+                                           owl:someValuesFrom :Dismantling
+                                         ] ;
                          <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the modification of structures, systems, components and access
 routes within the facility to support decommissioning activities, including where necessary the
 provision of safe enclosure(s).""" .
@@ -189,7 +267,11 @@ provision of safe enclosure(s).""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#FinancingDecommissioning
 :FinancingDecommissioning rdf:type owl:Class ;
-                          rdfs:subClassOf elite:Process ;
+                          rdfs:subClassOf elite:Process ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty elite:isSubProcessOf ;
+                                            owl:someValuesFrom :PreparationForDecommissioning
+                                          ] ;
                           rdfs:comment "is part of preparationoofdecommissioning" ;
                           <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """all activities required to ensure adequate financial resources are available
 when necessary for safe decommissioning.""" .
@@ -203,6 +285,11 @@ when necessary for safe decommissioning.""" ;
  ] .
 
 
+###  https://w3id.org/emmo/domain/decommissioning#FuelRemoval
+:FuelRemoval rdf:type owl:Class ;
+             rdfs:subClassOf :PostOperation .
+
+
 ###  https://w3id.org/emmo/domain/decommissioning#Inspection
 :Inspection rdf:type owl:Class ;
             rdfs:subClassOf elite:Process ;
@@ -213,7 +300,11 @@ technical processes, organizational processes, procedures and personnel competen
 
 ###  https://w3id.org/emmo/domain/decommissioning#LogisticReconfiguration
 :LogisticReconfiguration rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Process ;
+                         rdfs:subClassOf elite:Process ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isSubProcessOf ;
+                                           owl:someValuesFrom :PreparationForDecommissioning
+                                         ] ;
                          <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the modification of logistics facilities and services to enable
 decommissioning activities.""" .
 
@@ -236,7 +327,11 @@ corrective (or repair) aspects.""" .
 
 ###  https://w3id.org/emmo/domain/decommissioning#ManagementSystem
 :ManagementSystem rdf:type owl:Class ;
-                  rdfs:subClassOf elite:Process ;
+                  rdfs:subClassOf elite:Process ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty elite:isSubProcessOf ;
+                                    owl:someValuesFrom :PreparationForDecommissioning
+                                  ] ;
                   <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """a set of interrelated or interacting elements (system) for
 establishing policies and objectives and enabling the objectives to be achieved in an efficient and
 effective manner.""" .
@@ -251,6 +346,21 @@ effective manner.""" ;
  ] .
 
 
+###  https://w3id.org/emmo/domain/decommissioning#MaterialManagement
+:MaterialManagement rdf:type owl:Class ;
+                    rdfs:subClassOf elite:Process ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty elite:isSubProcessOf ;
+                                      owl:someValuesFrom :Dismantling
+                                    ] ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "sepration of different materials" .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#PermanentDisposal
+:PermanentDisposal rdf:type owl:Class ;
+                   rdfs:subClassOf elite:Object .
+
+
 ###  https://w3id.org/emmo/domain/decommissioning#PostDecommissioningArrangements
 :PostDecommissioningArrangements rdf:type owl:Class ;
                                  rdfs:subClassOf elite:Process ;
@@ -260,7 +370,11 @@ remaining authorized responsibilities are adequately discharged.""" .
 
 ###  https://w3id.org/emmo/domain/decommissioning#PostOperation
 :PostOperation rdf:type owl:Class ;
-               rdfs:subClassOf elite:Process ;
+               rdfs:subClassOf elite:Process ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty elite:isBefore ;
+                                 owl:someValuesFrom :Decommissioning
+                               ] ;
                <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """all activities relating to the permanent cessation of operation of a nuclear
 facility.""" .
 
@@ -269,7 +383,7 @@ facility.""" .
    owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
    owl:annotatedTarget """all activities relating to the permanent cessation of operation of a nuclear
 facility.""" ;
-   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+   rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities 2.2.3."
  ] .
 
 
@@ -290,7 +404,11 @@ nuclear facility to reduce hazards and prepare the facility for immediate or def
 
 ###  https://w3id.org/emmo/domain/decommissioning#PreparationForDecommissioning
 :PreparationForDecommissioning rdf:type owl:Class ;
-                               rdfs:subClassOf elite:Process ;
+                               rdfs:subClassOf elite:Process ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty elite:isSubProcessOf ;
+                                                 owl:someValuesFrom :Decommissioning
+                                               ] ;
                                <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """all activities required for authorization of
 decommissioning.""" .
 
@@ -299,8 +417,13 @@ decommissioning.""" .
    owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
    owl:annotatedTarget """all activities required for authorization of
 decommissioning.""" ;
-   rdfs:isDefinedBy "IAEA-TECDOC-2029,Taxonomyfordecommissiong"
+   rdfs:isDefinedBy "IAEA-TECDOC-2029,Taxonomyfordecommissiong 2.2.2."
  ] .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#PrimaryResidual
+:PrimaryResidual rdf:type owl:Class ;
+                 rdfs:subClassOf elite:Object .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#RadioactiveWaste
@@ -321,6 +444,30 @@ operator""" .
 operator""" ;
    rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
  ] .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#ResidualClassification
+:ResidualClassification rdf:type owl:Class ;
+                        rdfs:subClassOf elite:Process .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#ResidualVolumeReduction
+:ResidualVolumeReduction rdf:type owl:Class ;
+                         rdfs:subClassOf elite:Process ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isBefore ;
+                                           owl:someValuesFrom :ContainerForTransportation
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty elite:isSubProcessOf ;
+                                           owl:someValuesFrom :Dismantling
+                                         ] .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#SecondaryResidual
+:SecondaryResidual rdf:type owl:Class ;
+                   rdfs:subClassOf elite:Object ;
+                   <http://www.w3.org/2004/02/skos/core#comment> "help Susanne" .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#SiteCharacterization
@@ -354,12 +501,36 @@ spent fuel storage.""" ;
  ] .
 
 
+###  https://w3id.org/emmo/domain/decommissioning#SurvaillanceArea
+:SurvaillanceArea rdf:type owl:Class ;
+                  rdfs:subClassOf elite:Object .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#TemporaryDisposal
+:TemporaryDisposal rdf:type owl:Class ;
+                   rdfs:subClassOf elite:Object .
+
+
 ###  https://w3id.org/emmo/domain/decommissioning#TerminationOfAuthorization
 :TerminationOfAuthorization rdf:type owl:Class ;
                             rdfs:subClassOf elite:Process ;
                             <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the termination of the nuclear decommissioning
 authorization or license for the facility, either unconditionally or with stipulated conditions on the
 future use of the facility site.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :TerminationOfAuthorization ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """the termination of the nuclear decommissioning
+authorization or license for the facility, either unconditionally or with stipulated conditions on the
+future use of the facility site.""" ;
+   rdfs:isDefinedBy "IAEA-TECDOC-2029,Taxonomyfordecommissiong 2.2.7."
+ ] .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#UncontrolledArea
+:UncontrolledArea rdf:type owl:Class ;
+                  rdfs:subClassOf elite:Object .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#WasteCharacterization
@@ -371,9 +542,6 @@ adjustment, treatment or conditioning, or its suitability for further handling, 
 or disposal.""" .
 
 
-###  https://w3id.org/emmo/domain/decommissioning#WasteClassification
-:WasteClassification rdf:type owl:Class ;
-                     rdfs:subClassOf elite:Process .
 
 
 ###  https://w3id.org/emmo/domain/neo#RCNShAJHX3mIvlEif02qYJZ
@@ -387,7 +555,7 @@ or disposal.""" .
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Characterization
                 :CleanUp
-                :Containment
+                :ContainerForTransportation
                 :Cutting
                 :Decommissioning
                 :DecommissioningPlanning
@@ -405,9 +573,10 @@ or disposal.""" .
                 :PostDecommissioningArrangements
                 :PostOperation
                 :PreparationForDecommissioning
+                :ResidualClassification
                 :SiteSecurity
                 :TerminationOfAuthorization
-                :WasteClassification
+                
               )
 ] .
 
