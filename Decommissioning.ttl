@@ -65,9 +65,9 @@ decommissioning for the purpose of reaching the defined end state.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/decommissioning#Clereance
-:Clereance rdf:type owl:Class ;
-           rdfs:subClassOf elite:Object .
+###  https://w3id.org/emmo/domain/decommissioning#ClearanceVerification
+:ClearanceVerification rdf:type owl:Class ;
+                       rdfs:subClassOf elite:Process .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#ContainerForTransportation
@@ -92,7 +92,19 @@ and the dispersion of radioactive substances.""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#ControlledArea
 :ControlledArea rdf:type owl:Class ;
-                rdfs:subClassOf elite:Object .
+                rdfs:subClassOf elite:Object ;
+                <http://www.w3.org/2004/02/skos/core#definition> """area in which specific protection measures and safety provisions are or could be required for:
+a) controlling normal exposures or preventing the spread of contamination during normal working conditions;
+b) preventing or limiting the extent of potential exposures.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :ControlledArea ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """area in which specific protection measures and safety provisions are or could be required for:
+a) controlling normal exposures or preventing the spread of contamination during normal working conditions;
+b) preventing or limiting the extent of potential exposures.""" ;
+   rdfs:isDefinedBy "[SOURCE:IAEA Safety Series No.115:1996]"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#Cutting
@@ -121,6 +133,8 @@ force or energy to divide the material.""" ;
 ###  https://w3id.org/emmo/domain/decommissioning#Decommissioning
 :Decommissioning rdf:type owl:Class ;
                  rdfs:subClassOf elite:Process ;
+                 rdfs:comment """The use of the term decommissioning implies that no further use of the facility (or
+part thereof) for its existing purpose is foreseen""" ;
                  <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the set of administrative and technical actions taken to allow the
 removal of some or all of the regulatory controls from a facility. This does not apply for that part of a disposal facility in which radioactive waste is emplaced.""" .
 
@@ -171,6 +185,29 @@ physical, chemical or biological process.""" .
    owl:annotatedTarget """the complete or partial removal of contamination by a deliberate
 physical, chemical or biological process.""" ;
    rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#DeferredDismantling
+:DeferredDismantling rdf:type owl:Class ;
+                     rdfs:subClassOf :Dismantling ;
+                     <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Deferred dismantling is deferred after permanent shutdown. For
+a nuclear installation, the nuclear fuel is first removed. Part or all
+of a facility containing radioactive material is either processed or
+put in such a condition that it can be put into storage. The facility
+is maintained until it can subsequently be decontaminated and/or
+dismantled""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :DeferredDismantling ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """Deferred dismantling is deferred after permanent shutdown. For
+a nuclear installation, the nuclear fuel is first removed. Part or all
+of a facility containing radioactive material is either processed or
+put in such a condition that it can be put into storage. The facility
+is maintained until it can subsequently be decontaminated and/or
+dismantled""" ;
+   rdfs:seeAlso "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
  ] .
 
 
@@ -288,6 +325,29 @@ when necessary for safe decommissioning.""" ;
 ###  https://w3id.org/emmo/domain/decommissioning#FuelRemoval
 :FuelRemoval rdf:type owl:Class ;
              rdfs:subClassOf :PostOperation .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#ImmediateDismantling
+:ImmediateDismantling rdf:type owl:Class ;
+                      rdfs:subClassOf :Dismantling ;
+                      <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Immediate dismantling begins shortly after permanent shutdown.
+Equipment and the structures, systems and components of a
+facility containing radioactive material are removed and/or are
+decontaminated to a level that permits the removal of regulatory
+control from the facility and its release, either for unrestricted use or
+with restrictions on its future use.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :ImmediateDismantling ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """Immediate dismantling begins shortly after permanent shutdown.
+Equipment and the structures, systems and components of a
+facility containing radioactive material are removed and/or are
+decontaminated to a level that permits the removal of regulatory
+control from the facility and its release, either for unrestricted use or
+with restrictions on its future use.""" ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#Inspection
@@ -421,9 +481,9 @@ decommissioning.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/decommissioning#PrimaryResidual
-:PrimaryResidual rdf:type owl:Class ;
-                 rdfs:subClassOf elite:Object .
+###  https://w3id.org/emmo/domain/decommissioning#PrimaryResidue
+:PrimaryResidue rdf:type owl:Class ;
+                rdfs:subClassOf :Residue .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#RadioactiveWaste
@@ -461,13 +521,26 @@ operator""" ;
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isSubProcessOf ;
                                            owl:someValuesFrom :Dismantling
-                                         ] .
+                                         ] ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "step or steps taken to reduce (3.2.6) the volume of radioactive waste (3.2.1)" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :ResidualVolumeReduction ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "step or steps taken to reduce (3.2.6) the volume of radioactive waste (3.2.1)" ;
+   rdfs:isDefinedBy "https://www.iso.org/obp/ui/en/#iso:std:iso:24389:-1:ed-1:v1:en:term:3.2.1"
+ ] .
 
 
-###  https://w3id.org/emmo/domain/decommissioning#SecondaryResidual
-:SecondaryResidual rdf:type owl:Class ;
-                   rdfs:subClassOf elite:Object ;
-                   <http://www.w3.org/2004/02/skos/core#comment> "help Susanne" .
+###  https://w3id.org/emmo/domain/decommissioning#Residue
+:Residue rdf:type owl:Class ;
+         rdfs:subClassOf elite:Object .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#SecondaryResidue
+:SecondaryResidue rdf:type owl:Class ;
+                  rdfs:subClassOf :Residue ;
+                  <http://www.w3.org/2004/02/skos/core#comment> "help Susanne" .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#SiteCharacterization
@@ -501,9 +574,18 @@ spent fuel storage.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/decommissioning#SurvaillanceArea
-:SurvaillanceArea rdf:type owl:Class ;
-                  rdfs:subClassOf elite:Object .
+###  https://w3id.org/emmo/domain/decommissioning#SupervisedArea
+:SupervisedArea rdf:type owl:Class ;
+                rdfs:subClassOf elite:Object ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "MonitoredArea" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "defined area not designated as a controlled area (3.6.5) but for which occupational exposure (3.3.31) conditions are kept under review, even though specific protection measures or safety provisions are not normally needed" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :SupervisedArea ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "defined area not designated as a controlled area (3.6.5) but for which occupational exposure (3.3.31) conditions are kept under review, even though specific protection measures or safety provisions are not normally needed" ;
+   rdfs:isDefinedBy "[SOURCE:IAEA. IAEA safety glossary: 2018 edition. Vienna: IAEA, 2019. p. 278]"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#TemporaryDisposal
@@ -530,18 +612,34 @@ future use of the facility site.""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#UncontrolledArea
 :UncontrolledArea rdf:type owl:Class ;
-                  rdfs:subClassOf elite:Object .
+                  rdfs:subClassOf elite:Object ;
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "OffsiteArea" .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#Waste
+:Waste rdf:type owl:Class ;
+       rdfs:subClassOf elite:Object ;
+       <http://www.w3.org/2004/02/skos/core#definition> "any residue of a production operation, transformation or use, any substance, material, product that its holder intends for disposal" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Waste ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "any residue of a production operation, transformation or use, any substance, material, product that its holder intends for disposal" ;
+   rdfs:isDefinedBy "ISO 22716:2007(en), 2.36"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#WasteCharacterization
 :WasteCharacterization rdf:type owl:Class ;
-                       rdfs:subClassOf :Characterization ;
+                       rdfs:subClassOf :Characterization ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty elite:isBefore ;
+                                         owl:someValuesFrom :ClearanceVerification
+                                       ] ;
                        <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the determination of the physical, mechanical, chemical,
 radiological and biological properties of radioactive waste to establish the need for further
 adjustment, treatment or conditioning, or its suitability for further handling, processing, storage
 or disposal.""" .
-
-
 
 
 ###  https://w3id.org/emmo/domain/neo#RCNShAJHX3mIvlEif02qYJZ
@@ -576,7 +674,6 @@ or disposal.""" .
                 :ResidualClassification
                 :SiteSecurity
                 :TerminationOfAuthorization
-                
               )
 ] .
 
