@@ -9,8 +9,7 @@
 
 <https://w3id.org/emmo/domain/decommissioning> rdf:type owl:Ontology ;
                                                 owl:imports <https://w3id.org/emmo/domain/neo/neo> ;
-                                                rdfs:comment "Ontologia di decommissioning che estende NEO"@it ,
-                                                             "Manca inserire le relazioni e le referenze per ogni classe" ;
+                                                rdfs:comment "Ontologia di decommissioning che estende NEO"@it ;
                                                 rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities" .
 
 #################################################################
@@ -249,6 +248,43 @@ decommissioning.""" ;
  ] .
 
 
+###  https://w3id.org/emmo/domain/decommissioning#Disposal
+:Disposal rdf:type owl:Class ;
+          rdfs:subClassOf elite:Object ;
+          <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """	In some States, the term disposal is used to include discharges of effluents to the
+environment.
+	In some States, the term disposal is used administratively in such a way as to include,
+for example, incineration of waste or the transfer of waste between operators.""" .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#ExemptWaste
+:ExemptWaste rdf:type owl:Class ;
+             rdfs:subClassOf :Waste ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty elite:partakesIn ;
+                               owl:someValuesFrom :UncontrolledArea
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty elite:participatesTo ;
+                               owl:someValuesFrom :ClearanceVerification
+                             ] ;
+             owl:disjointWith :RadioactiveWaste ;
+             <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """has such a low concentration of radioactive nuclides that it can be
+cleared from further regulatory control in accordance with the criteria to be defined by the
+regulator [12], as it does not require provisions for radiation protection. There are no
+radiological restrictions for disposal in conventional landfills or recycling;""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :ExemptWaste ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """has such a low concentration of radioactive nuclides that it can be
+cleared from further regulatory control in accordance with the criteria to be defined by the
+regulator [12], as it does not require provisions for radiation protection. There are no
+radiological restrictions for disposal in conventional landfills or recycling;""" ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/TE-1901web.pdf"
+ ] .
+
+
 ###  https://w3id.org/emmo/domain/decommissioning#FacilityCharacterization
 :FacilityCharacterization rdf:type owl:Class ;
                           rdfs:subClassOf :Characterization ;
@@ -327,6 +363,51 @@ when necessary for safe decommissioning.""" ;
              rdfs:subClassOf :PostOperation .
 
 
+###  https://w3id.org/emmo/domain/decommissioning#HighLevelWaste
+:HighLevelWaste rdf:type owl:Class ;
+                rdfs:subClassOf :RadioactiveWaste ;
+                <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """is described as waste with long-lived radionuclide
+concentrations exceeding the limitations for short-lived Low and Intermediate Level Waste
+(LILW). HLW requires a higher degree of isolation from the environment for long periods
+of time. HLW typically has levels of activity concentration in the range of 104  to 106
+TBq/m3
+ (e.g. for spent fuel directly after removal from power reactor core, which some
+States consider radioactive waste). HLW includes conditioned waste arising from the
+reprocessing [19] of spent fuel together with any other waste requiring a comparable degree
+of containment and isolation. At the time of disposal, following a few decades of cooling
+time, waste containing such mixed fission products typically has levels of activity
+concentration of around 104
+ TBq/m3
+, and a significant heat output, by the radioactive
+decay. These characteristics need to be considered in the disposal facility for such waste,
+which needs to be located in deep, stable geological formations several hundred meters or
+more below the surface, considering surrounding geothermal conditions and barrier
+performance of the facility.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :HighLevelWaste ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """is described as waste with long-lived radionuclide
+concentrations exceeding the limitations for short-lived Low and Intermediate Level Waste
+(LILW). HLW requires a higher degree of isolation from the environment for long periods
+of time. HLW typically has levels of activity concentration in the range of 104  to 106
+TBq/m3
+ (e.g. for spent fuel directly after removal from power reactor core, which some
+States consider radioactive waste). HLW includes conditioned waste arising from the
+reprocessing [19] of spent fuel together with any other waste requiring a comparable degree
+of containment and isolation. At the time of disposal, following a few decades of cooling
+time, waste containing such mixed fission products typically has levels of activity
+concentration of around 104
+ TBq/m3
+, and a significant heat output, by the radioactive
+decay. These characteristics need to be considered in the disposal facility for such waste,
+which needs to be located in deep, stable geological formations several hundred meters or
+more below the surface, considering surrounding geothermal conditions and barrier
+performance of the facility.""" ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/TE-1901web.pdf"
+ ] .
+
+
 ###  https://w3id.org/emmo/domain/decommissioning#ImmediateDismantling
 :ImmediateDismantling rdf:type owl:Class ;
                       rdfs:subClassOf :Dismantling ;
@@ -358,6 +439,27 @@ to assess structures, systems and components and materials, as well as operation
 technical processes, organizational processes, procedures and personnel competence.""" .
 
 
+###  https://w3id.org/emmo/domain/decommissioning#IntermediateLevelWaste
+:IntermediateLevelWaste rdf:type owl:Class ;
+                        rdfs:subClassOf :RadioactiveWaste ;
+                        <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """contains amounts of long-lived (half-life > 30 years)
+radionuclides making it unsuitable for engineered near surface disposal. Disposal in
+facilities at greater depth than near surface facilities, i.e. in the order of tens of meters to a
+few hundred meters is necessary for ILW. However, ILW needs no provision, or only
+limited provision, for heat dissipation by radioactive decay during its storage and disposal;""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :IntermediateLevelWaste ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """contains amounts of long-lived (half-life > 30 years)
+radionuclides making it unsuitable for engineered near surface disposal. Disposal in
+facilities at greater depth than near surface facilities, i.e. in the order of tens of meters to a
+few hundred meters is necessary for ILW. However, ILW needs no provision, or only
+limited provision, for heat dissipation by radioactive decay during its storage and disposal;""" ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/TE-1901web.pdf"
+ ] .
+
+
 ###  https://w3id.org/emmo/domain/decommissioning#LogisticReconfiguration
 :LogisticReconfiguration rdf:type owl:Class ;
                          rdfs:subClassOf elite:Process ,
@@ -374,6 +476,37 @@ decommissioning activities.""" .
    owl:annotatedTarget """the modification of logistics facilities and services to enable
 decommissioning activities.""" ;
    rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#LowLevelWaste
+:LowLevelWaste rdf:type owl:Class ;
+               rdfs:subClassOf :Waste ;
+               <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """exceeds exemption status but contains primarily short lived
+radionuclides (half-life < 30 years) with limited amounts of long lived radionuclides (halflife > 30 years). Some countries [16–18] limit the amount of long-lived alpha emitters (e.g.
+239Pu, 241Am) to 4000 Bq/g in individual waste packages (or to an overall average of
+400 Bq/g), but for long-lived gamma and beta emitting radionuclides (e.g. 14C, 36Cl, 63Ni,
+93Zr, 94Nb, 99Tc and 129I) the allowable activity may be up to tens of kBq/g. LLW covers a
+wide range of activity concentrations: It can have an activity level just above that for
+VLLW not requiring shielding, isolation and containment, up to levels of activity
+concentration that requires shielding, robust isolation and containment for periods up a few
+hundred years. LLW is generally suitable for disposal in engineered near surface disposal
+facilities;""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :LowLevelWaste ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """exceeds exemption status but contains primarily short lived
+radionuclides (half-life < 30 years) with limited amounts of long lived radionuclides (halflife > 30 years). Some countries [16–18] limit the amount of long-lived alpha emitters (e.g.
+239Pu, 241Am) to 4000 Bq/g in individual waste packages (or to an overall average of
+400 Bq/g), but for long-lived gamma and beta emitting radionuclides (e.g. 14C, 36Cl, 63Ni,
+93Zr, 94Nb, 99Tc and 129I) the allowable activity may be up to tens of kBq/g. LLW covers a
+wide range of activity concentrations: It can have an activity level just above that for
+VLLW not requiring shielding, isolation and containment, up to levels of activity
+concentration that requires shielding, robust isolation and containment for periods up a few
+hundred years. LLW is generally suitable for disposal in engineered near surface disposal
+facilities;""" ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/TE-1901web.pdf"
  ] .
 
 
@@ -418,7 +551,7 @@ effective manner.""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#PermanentDisposal
 :PermanentDisposal rdf:type owl:Class ;
-                   rdfs:subClassOf elite:Object .
+                   rdfs:subClassOf :Disposal .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#PostDecommissioningArrangements
@@ -481,14 +614,9 @@ decommissioning.""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/decommissioning#PrimaryResidue
-:PrimaryResidue rdf:type owl:Class ;
-                rdfs:subClassOf :Residue .
-
-
 ###  https://w3id.org/emmo/domain/decommissioning#RadioactiveWaste
 :RadioactiveWaste rdf:type owl:Class ;
-                  rdfs:subClassOf elite:Object .
+                  rdfs:subClassOf :Waste .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#RemoteOperation
@@ -532,15 +660,10 @@ operator""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/decommissioning#Residue
-:Residue rdf:type owl:Class ;
-         rdfs:subClassOf elite:Object .
-
-
-###  https://w3id.org/emmo/domain/decommissioning#SecondaryResidue
-:SecondaryResidue rdf:type owl:Class ;
-                  rdfs:subClassOf :Residue ;
-                  <http://www.w3.org/2004/02/skos/core#comment> "help Susanne" .
+###  https://w3id.org/emmo/domain/decommissioning#Restsoff
+:Restsoff rdf:type owl:Class ;
+          rdfs:subClassOf elite:Object ;
+          <https://w3id.org/emmo/domain/neo#R9Q7fCgWnAkzqnVMtRJ4WDv> "something that can be recycled, upcycled or disposed." .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#SiteCharacterization
@@ -590,7 +713,12 @@ spent fuel storage.""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#TemporaryDisposal
 :TemporaryDisposal rdf:type owl:Class ;
-                   rdfs:subClassOf elite:Object .
+                   rdfs:subClassOf :Disposal .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#TemporaryStorage
+:TemporaryStorage rdf:type owl:Class ;
+                  rdfs:subClassOf elite:Object .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#TerminationOfAuthorization
@@ -616,9 +744,63 @@ future use of the facility site.""" ;
                   <http://www.w3.org/2004/02/skos/core#altLabel> "OffsiteArea" .
 
 
+###  https://w3id.org/emmo/domain/decommissioning#VeryLowLevelWaste
+:VeryLowLevelWaste rdf:type owl:Class ;
+                   rdfs:subClassOf :Waste ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty elite:partakesIn ;
+                                     owl:someValuesFrom :SupervisedArea
+                                   ] ;
+                   <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """does not comply with clearance criteria of exempt waste
+and can contain radionuclide levels one to two orders of magnitude above these criteria but
+does not need a high level of containment and isolation and, therefore, is suitable for
+disposal in engineered near surface landfill type facilities with limited regulatory control.
+Examples of VLLW are wastes from operation and decommissioning of nuclear facilities
+[13–15] with levels of activity slightly above the clearance level or residuals from mining
+and milling;""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :VeryLowLevelWaste ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """does not comply with clearance criteria of exempt waste
+and can contain radionuclide levels one to two orders of magnitude above these criteria but
+does not need a high level of containment and isolation and, therefore, is suitable for
+disposal in engineered near surface landfill type facilities with limited regulatory control.
+Examples of VLLW are wastes from operation and decommissioning of nuclear facilities
+[13–15] with levels of activity slightly above the clearance level or residuals from mining
+and milling;""" ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/TE-1901web.pdf"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#VeryShortLivedWaste
+:VeryShortLivedWaste rdf:type owl:Class ;
+                     rdfs:subClassOf :Waste ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty elite:isBefore ;
+                                       owl:someValuesFrom :ExemptWaste
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty elite:partakesIn ;
+                                       owl:someValuesFrom :SupervisedArea
+                                     ] ;
+                     <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """is waste containing primarily radionuclides that decay to
+insignificant levels within a period of up to a few years, and that can be stored for decay at the nuclear facility and subsequently cleared from regulatory control for uncontrolled
+disposal, i.e. become exempt waste;""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :VeryShortLivedWaste ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """is waste containing primarily radionuclides that decay to
+insignificant levels within a period of up to a few years, and that can be stored for decay at the nuclear facility and subsequently cleared from regulatory control for uncontrolled
+disposal, i.e. become exempt waste;""" ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/TE-1901web.pdf"
+ ] .
+
+
 ###  https://w3id.org/emmo/domain/decommissioning#Waste
 :Waste rdf:type owl:Class ;
-       rdfs:subClassOf elite:Object ;
+       rdfs:subClassOf :Restsoff ;
        <http://www.w3.org/2004/02/skos/core#definition> "any residue of a production operation, transformation or use, any substance, material, product that its holder intends for disposal" .
 
 [ rdf:type owl:Axiom ;
@@ -643,7 +825,24 @@ or disposal.""" .
 
 
 ###  https://w3id.org/emmo/domain/neo#RCNShAJHX3mIvlEif02qYJZ
-<https://w3id.org/emmo/domain/neo#RCNShAJHX3mIvlEif02qYJZ> rdfs:subClassOf :Decommissioning .
+<https://w3id.org/emmo/domain/neo#RCNShAJHX3mIvlEif02qYJZ> rdf:type owl:Class ;
+                                                           rdfs:subClassOf :Decommissioning .
+
+
+###  https://w3id.org/emmo/domain/neo#RlYMwSSvmqekLRLzmf5IzV
+<https://w3id.org/emmo/domain/neo#RlYMwSSvmqekLRLzmf5IzV> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/emmo-lite#Characterisation
+elite:Characterisation rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/emmo-lite#Object
+elite:Object rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/emmo-lite#Process
+elite:Process rdf:type owl:Class .
 
 
 #################################################################
@@ -674,6 +873,18 @@ or disposal.""" .
                 :ResidualClassification
                 :SiteSecurity
                 :TerminationOfAuthorization
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ExemptWaste
+                :HighLevelWaste
+                :IntermediateLevelWaste
+                :LowLevelWaste
+                :RadioactiveWaste
+                :VeryLowLevelWaste
+                :VeryShortLivedWaste
               )
 ] .
 
