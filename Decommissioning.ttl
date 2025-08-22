@@ -251,10 +251,24 @@ decommissioning.""" ;
 ###  https://w3id.org/emmo/domain/decommissioning#Disposal
 :Disposal rdf:type owl:Class ;
           rdfs:subClassOf elite:Object ;
-          <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """	In some States, the term disposal is used to include discharges of effluents to the
+          <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Emplacement of waste in an appropriate facility without the intention of
+retrieval.
+	In some States, the term disposal is used to include discharges of effluents to the
 environment.
 	In some States, the term disposal is used administratively in such a way as to include,
 for example, incineration of waste or the transfer of waste between operators.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Disposal ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """Emplacement of waste in an appropriate facility without the intention of
+retrieval.
+	In some States, the term disposal is used to include discharges of effluents to the
+environment.
+	In some States, the term disposal is used administratively in such a way as to include,
+for example, incineration of waste or the transfer of waste between operators.""" ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#ExemptWaste
@@ -363,6 +377,19 @@ when necessary for safe decommissioning.""" ;
              rdfs:subClassOf :PostOperation .
 
 
+###  https://w3id.org/emmo/domain/decommissioning#GeologicalDisposal
+:GeologicalDisposal rdf:type owl:Class ;
+                    rdfs:subClassOf :Disposal ;
+                    <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ". Disposal in a geological disposal facility." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :GeologicalDisposal ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget ". Disposal in a geological disposal facility." ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
+ ] .
+
+
 ###  https://w3id.org/emmo/domain/decommissioning#HighLevelWaste
 :HighLevelWaste rdf:type owl:Class ;
                 rdfs:subClassOf :RadioactiveWaste ;
@@ -437,6 +464,23 @@ with restrictions on its future use.""" ;
             <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the examination, observation, surveillance, measurement or tests undertaken
 to assess structures, systems and components and materials, as well as operational activities,
 technical processes, organizational processes, procedures and personnel competence.""" .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#IntermediateDepthDisposal
+:IntermediateDepthDisposal rdf:type owl:Class ;
+                           rdfs:subClassOf :Disposal ;
+                           <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """’ is sometimes used for the disposal of low
+level waste and intermediate level waste, for example in boreholes (i.e. between
+near surface disposal and geological disposal).""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :IntermediateDepthDisposal ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """’ is sometimes used for the disposal of low
+level waste and intermediate level waste, for example in boreholes (i.e. between
+near surface disposal and geological disposal).""" ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#IntermediateLevelWaste
@@ -549,11 +593,6 @@ effective manner.""" ;
                     <http://www.w3.org/2004/02/skos/core#definition> "sepration of different materials" .
 
 
-###  https://w3id.org/emmo/domain/decommissioning#PermanentDisposal
-:PermanentDisposal rdf:type owl:Class ;
-                   rdfs:subClassOf :Disposal .
-
-
 ###  https://w3id.org/emmo/domain/decommissioning#PostDecommissioningArrangements
 :PostDecommissioningArrangements rdf:type owl:Class ;
                                  rdfs:subClassOf elite:Process ;
@@ -663,6 +702,7 @@ operator""" ;
 ###  https://w3id.org/emmo/domain/decommissioning#Restsoff
 :Restsoff rdf:type owl:Class ;
           rdfs:subClassOf elite:Object ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> ""@de ;
           <https://w3id.org/emmo/domain/neo#R9Q7fCgWnAkzqnVMtRJ4WDv> "something that can be recycled, upcycled or disposed." .
 
 
@@ -709,16 +749,6 @@ spent fuel storage.""" ;
    owl:annotatedTarget "defined area not designated as a controlled area (3.6.5) but for which occupational exposure (3.3.31) conditions are kept under review, even though specific protection measures or safety provisions are not normally needed" ;
    rdfs:isDefinedBy "[SOURCE:IAEA. IAEA safety glossary: 2018 edition. Vienna: IAEA, 2019. p. 278]"
  ] .
-
-
-###  https://w3id.org/emmo/domain/decommissioning#TemporaryDisposal
-:TemporaryDisposal rdf:type owl:Class ;
-                   rdfs:subClassOf :Disposal .
-
-
-###  https://w3id.org/emmo/domain/decommissioning#TemporaryStorage
-:TemporaryStorage rdf:type owl:Class ;
-                  rdfs:subClassOf elite:Object .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#TerminationOfAuthorization
@@ -800,7 +830,7 @@ disposal, i.e. become exempt waste;""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#Waste
 :Waste rdf:type owl:Class ;
-       rdfs:subClassOf :Restsoff ;
+       rdfs:subClassOf elite:Object ;
        <http://www.w3.org/2004/02/skos/core#definition> "any residue of a production operation, transformation or use, any substance, material, product that its holder intends for disposal" .
 
 [ rdf:type owl:Axiom ;
