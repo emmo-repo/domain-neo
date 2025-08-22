@@ -66,7 +66,15 @@ decommissioning for the purpose of reaching the defined end state.""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#ClearanceVerification
 :ClearanceVerification rdf:type owl:Class ;
-                       rdfs:subClassOf elite:Process .
+                       rdfs:subClassOf elite:Process ;
+                       <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> "Clearance is an administrative act effecting the release of radioactive substances from nuclear supervision. It is regulated by the Radiation Protection Ordinance. Clearance ensures that the effective dose that might occur for individuals would only be in the range of 0.01 millisievert (10 microsievert) per year." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :ClearanceVerification ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget "Clearance is an administrative act effecting the release of radioactive substances from nuclear supervision. It is regulated by the Radiation Protection Ordinance. Clearance ensures that the effective dose that might occur for individuals would only be in the range of 0.01 millisievert (10 microsievert) per year." ;
+   rdfs:isDefinedBy "https://www.base.bund.de/en/nuclear-safety/dismantling/waste-management/waste-management.html"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#ContainerForTransportation
@@ -170,11 +178,7 @@ the defined end state, in accordance with regulatory requirements.""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#Decontamination
 :Decontamination rdf:type owl:Class ;
-                 rdfs:subClassOf elite:Process ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty elite:isBefore ;
-                                   owl:someValuesFrom :Dismantling
-                                 ] ;
+                 rdfs:subClassOf elite:Process ;
                  <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """the complete or partial removal of contamination by a deliberate
 physical, chemical or biological process.""" .
 
@@ -250,7 +254,7 @@ decommissioning.""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#Disposal
 :Disposal rdf:type owl:Class ;
-          rdfs:subClassOf elite:Object ;
+          rdfs:subClassOf elite:Process ;
           <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """Emplacement of waste in an appropriate facility without the intention of
 retrieval.
 	In some States, the term disposal is used to include discharges of effluents to the
@@ -490,7 +494,7 @@ near surface disposal and geological disposal).""" ;
 radionuclides making it unsuitable for engineered near surface disposal. Disposal in
 facilities at greater depth than near surface facilities, i.e. in the order of tens of meters to a
 few hundred meters is necessary for ILW. However, ILW needs no provision, or only
-limited provision, for heat dissipation by radioactive decay during its storage and disposal;""" .
+limited provision, for heat dissipation by radioactive decay during its storage and disposal""" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :IntermediateLevelWaste ;
@@ -499,7 +503,7 @@ limited provision, for heat dissipation by radioactive decay during its storage 
 radionuclides making it unsuitable for engineered near surface disposal. Disposal in
 facilities at greater depth than near surface facilities, i.e. in the order of tens of meters to a
 few hundred meters is necessary for ILW. However, ILW needs no provision, or only
-limited provision, for heat dissipation by radioactive decay during its storage and disposal;""" ;
+limited provision, for heat dissipation by radioactive decay during its storage and disposal""" ;
    rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/TE-1901web.pdf"
  ] .
 
@@ -655,7 +659,86 @@ decommissioning.""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#RadioactiveWaste
 :RadioactiveWaste rdf:type owl:Class ;
-                  rdfs:subClassOf :Waste .
+                  rdfs:subClassOf :Waste ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty elite:participatesTo ;
+                                    owl:someValuesFrom :Disposal
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty elite:participatesTo ;
+                                    owl:someValuesFrom :WasteImmobilisation
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty elite:participatesTo ;
+                                    owl:someValuesFrom :WastePackaging
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty elite:participatesTo ;
+                                    owl:someValuesFrom :WasteProcessing
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty elite:participatesTo ;
+                                    owl:someValuesFrom :WasteStorage
+                                  ] ;
+                  <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """For legal and regulatory purposes, material for which no further use
+is foreseen that contains, or is contaminated with, radionuclides at activity
+concentrations greater than clearance levels as established by the regulatory
+body.
+	In effect, radioactive material in gaseous, liquid or solid form for which no further
+use is foreseen.
+ ! It should be recognized that this definition is purely for regulatory purposes, and
+that material with activity concentrations equal to or less than clearance levels is
+radioactive from a physical viewpoint, although the associated radiological hazards
+are considered negligible. 
+See also radioactive, radioactive material and radioactive substance.
+	Waste should be used in the singular unless reference is expressly being made to the
+presence of various types of waste.
+2. [Radioactive material in gaseous, liquid or solid form for which no
+further use is foreseen by the Contracting Party or by a natural or legal person
+whose decision is accepted by the Contracting Party, and which is controlled
+as radioactive waste by a regulatory body under the legislative and regulatory
+framework of the Contracting Party.] (See Ref. [5].)""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RadioactiveWaste ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """For legal and regulatory purposes, material for which no further use
+is foreseen that contains, or is contaminated with, radionuclides at activity
+concentrations greater than clearance levels as established by the regulatory
+body.
+	In effect, radioactive material in gaseous, liquid or solid form for which no further
+use is foreseen.
+ ! It should be recognized that this definition is purely for regulatory purposes, and
+that material with activity concentrations equal to or less than clearance levels is
+radioactive from a physical viewpoint, although the associated radiological hazards
+are considered negligible. 
+See also radioactive, radioactive material and radioactive substance.
+	Waste should be used in the singular unless reference is expressly being made to the
+presence of various types of waste.
+2. [Radioactive material in gaseous, liquid or solid form for which no
+further use is foreseen by the Contracting Party or by a natural or legal person
+whose decision is accepted by the Contracting Party, and which is controlled
+as radioactive waste by a regulatory body under the legislative and regulatory
+framework of the Contracting Party.] (See Ref. [5].)""" ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#RadioactiveWasteManagement
+:RadioactiveWasteManagement rdf:type owl:Class ;
+                            rdfs:subClassOf elite:Process ;
+                            <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """All administrative and operational activities involved in the handling,
+pretreatment, treatment, conditioning, transport, storage and disposal of
+radioactive waste.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RadioactiveWasteManagement ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """All administrative and operational activities involved in the handling,
+pretreatment, treatment, conditioning, transport, storage and disposal of
+radioactive waste.""" ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#RemoteOperation
@@ -671,11 +754,6 @@ operator""" .
 operator""" ;
    rdfs:isDefinedBy "https://www.iaea.org/publications/15456/a-taxonomy-for-the-decommissioning-of-nuclear-facilities"
  ] .
-
-
-###  https://w3id.org/emmo/domain/decommissioning#ResidualClassification
-:ResidualClassification rdf:type owl:Class ;
-                        rdfs:subClassOf elite:Process .
 
 
 ###  https://w3id.org/emmo/domain/decommissioning#ResidualVolumeReduction
@@ -701,7 +779,11 @@ operator""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#Restsoff
 :Restsoff rdf:type owl:Class ;
-          rdfs:subClassOf elite:Object ;
+          rdfs:subClassOf elite:Object ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty elite:isInputOf ;
+                            owl:someValuesFrom :Characterization
+                          ] ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> ""@de ;
           <https://w3id.org/emmo/domain/neo#R9Q7fCgWnAkzqnVMtRJ4WDv> "something that can be recycled, upcycled or disposed." .
 
@@ -830,7 +912,11 @@ disposal, i.e. become exempt waste;""" ;
 
 ###  https://w3id.org/emmo/domain/decommissioning#Waste
 :Waste rdf:type owl:Class ;
-       rdfs:subClassOf elite:Object ;
+       rdfs:subClassOf elite:Object ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty elite:participatesTo ;
+                         owl:someValuesFrom :WasteCharacterization
+                       ] ;
        <http://www.w3.org/2004/02/skos/core#definition> "any residue of a production operation, transformation or use, any substance, material, product that its holder intends for disposal" .
 
 [ rdf:type owl:Axiom ;
@@ -852,6 +938,100 @@ disposal, i.e. become exempt waste;""" ;
 radiological and biological properties of radioactive waste to establish the need for further
 adjustment, treatment or conditioning, or its suitability for further handling, processing, storage
 or disposal.""" .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#WasteImmobilisation
+:WasteImmobilisation rdf:type owl:Class ;
+                     rdfs:subClassOf elite:Process ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty elite:isSubProcessOf ;
+                                       owl:someValuesFrom :RadioactiveWasteManagement
+                                     ] .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#WastePackaging
+:WastePackaging rdf:type owl:Class ;
+                rdfs:subClassOf elite:Process ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty elite:isSubProcessOf ;
+                                  owl:someValuesFrom :RadioactiveWasteManagement
+                                ] .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#WasteProcessing
+:WasteProcessing rdf:type owl:Class ;
+                 rdfs:subClassOf elite:Process ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty elite:isBefore ;
+                                   owl:someValuesFrom :WasteStorage
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty elite:isSubProcessOf ;
+                                   owl:someValuesFrom :RadioactiveWasteManagement
+                                 ] .
+
+
+###  https://w3id.org/emmo/domain/decommissioning#WasteStorage
+:WasteStorage rdf:type owl:Class ;
+              rdfs:subClassOf elite:Process ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty elite:isBefore ;
+                                owl:someValuesFrom :Disposal
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty elite:isSubProcessOf ;
+                                owl:someValuesFrom :RadioactiveWasteManagement
+                              ] ;
+              <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> """The holding of radioactive sources, radioactive material, spent fuel or
+radioactive waste in a facility that provides for their/its containment, with the
+intention of retrieval.
+	Generalized from the Joint Convention on the Safety of Spent Fuel Management and
+on the Safety of Radioactive Waste Management [5], the Code of Conduct on the
+Safety and Security of Radioactive Sources [14] and GSR Part 5 [56].
+ ! Storage is by definition an interim measure, and the term [interim storage] would
+therefore be appropriate only to refer to short term temporary storage when
+contrasting this with the longer term fate of the waste.
+ ! Storage as defined above should not be described as interim storage.
+ ! In many cases, the only element of this definition that is important is the distinction
+between disposal (with no intent to retrieve) and storage (with intent to retrieve).
+	In such cases, a definition is not necessary; the distinction can be made in the form
+of a footnote at the first use of the term disposal or storage (e.g. “Use of the term
+disposal indicates that there is no intention to retrieve the waste. If retrieval of the
+waste at any time in the future is intended, the term storage is used.”).
+	For storage in a combined storage and disposal facility, for which a decision may
+be made at the time of its closure whether to remove the waste stored during the
+operation of the storage facility or to dispose of it by encasing it in concrete, the
+question of intention of retrieval may be left open until the time of closure of the
+facility.
+	Contrasted with disposal.""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :WasteStorage ;
+   owl:annotatedProperty <https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV> ;
+   owl:annotatedTarget """The holding of radioactive sources, radioactive material, spent fuel or
+radioactive waste in a facility that provides for their/its containment, with the
+intention of retrieval.
+	Generalized from the Joint Convention on the Safety of Spent Fuel Management and
+on the Safety of Radioactive Waste Management [5], the Code of Conduct on the
+Safety and Security of Radioactive Sources [14] and GSR Part 5 [56].
+ ! Storage is by definition an interim measure, and the term [interim storage] would
+therefore be appropriate only to refer to short term temporary storage when
+contrasting this with the longer term fate of the waste.
+ ! Storage as defined above should not be described as interim storage.
+ ! In many cases, the only element of this definition that is important is the distinction
+between disposal (with no intent to retrieve) and storage (with intent to retrieve).
+	In such cases, a definition is not necessary; the distinction can be made in the form
+of a footnote at the first use of the term disposal or storage (e.g. “Use of the term
+disposal indicates that there is no intention to retrieve the waste. If retrieval of the
+waste at any time in the future is intended, the term storage is used.”).
+	For storage in a combined storage and disposal facility, for which a decision may
+be made at the time of its closure whether to remove the waste stored during the
+operation of the storage facility or to dispose of it by encasing it in concrete, the
+question of intention of retrieval may be left open until the time of closure of the
+facility.
+	Contrasted with disposal.""" ;
+   rdfs:isDefinedBy "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1830_web.pdf"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RCNShAJHX3mIvlEif02qYJZ
@@ -880,37 +1060,7 @@ elite:Process rdf:type owl:Class .
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Characterization
-                :CleanUp
-                :ContainerForTransportation
-                :Cutting
-                :Decommissioning
-                :DecommissioningPlanning
-                :Decontamination
-                :Demolition
-                :Dismantling
-                :FacilityManagement
-                :FacilityRadiationSurvey
-                :FacilityReconfiguration
-                :FinancingDecommissioning
-                :Inspection
-                :LogisticReconfiguration
-                :Maintanance
-                :ManagementSystem
-                :PostDecommissioningArrangements
-                :PostOperation
-                :PreparationForDecommissioning
-                :ResidualClassification
-                :SiteSecurity
-                :TerminationOfAuthorization
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :ExemptWaste
-                :HighLevelWaste
-                :IntermediateLevelWaste
                 :LowLevelWaste
                 :RadioactiveWaste
                 :VeryLowLevelWaste
