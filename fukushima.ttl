@@ -1,0 +1,760 @@
+@prefix : <http://www.semanticweb.org/emanuele/ontologies/2026/2/untitled-ontology-110/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/emanuele/ontologies/2026/2/untitled-ontology-110/> .
+
+<https://w3id.org/emmo/domain/neo/fukushima> rdf:type owl:Ontology ;
+owl:imports <https://w3id.org/emmo/domain/neo/neo> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#comment
+<http://www.w3.org/2004/02/skos/core#comment> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/emmo/emmo-lite#affects
+<https://w3id.org/emmo/emmo-lite#affects> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/emmo/emmo-lite#coexistsWith
+<https://w3id.org/emmo/emmo-lite#coexistsWith> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/emmo/emmo-lite#follows
+<https://w3id.org/emmo/emmo-lite#follows> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/emmo/emmo-lite#foregoes
+<https://w3id.org/emmo/emmo-lite#foregoes> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/emmo/emmo-lite#hasBehaviour
+<https://w3id.org/emmo/emmo-lite#hasBehaviour> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/emmo/emmo-lite#hasConstitutiveProcess
+<https://w3id.org/emmo/emmo-lite#hasConstitutiveProcess> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/emmo/emmo-lite#successorOf
+<https://w3id.org/emmo/emmo-lite#successorOf> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c
+<https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/emmo-lite#isConstituentOf
+<https://w3id.org/emmo/emmo-lite#isConstituentOf> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
+<https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#R0ZnwwPdidaBfZOg6tgZJr
+<https://w3id.org/emmo/domain/neo#R0ZnwwPdidaBfZOg6tgZJr> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#R7pKuzitkkIAgc5NxDlqfH4
+<https://w3id.org/emmo/domain/neo#R7pKuzitkkIAgc5NxDlqfH4> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#R7t1vs1VKDAzHkcQsFbt9JC
+<https://w3id.org/emmo/domain/neo#R7t1vs1VKDAzHkcQsFbt9JC> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#R7twPwtQmmXFTKrDWM3POCD
+<https://w3id.org/emmo/domain/neo#R7twPwtQmmXFTKrDWM3POCD> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#R8FmlobZiHsCZi4CHKxgtMg
+<https://w3id.org/emmo/domain/neo#R8FmlobZiHsCZi4CHKxgtMg> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#R8bUZpp1yY81qmfgGNH0TyF
+<https://w3id.org/emmo/domain/neo#R8bUZpp1yY81qmfgGNH0TyF> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#R9MK7U9YLf7RtEpfQTDDr1q
+<https://w3id.org/emmo/domain/neo#R9MK7U9YLf7RtEpfQTDDr1q> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#R9j7jE0NWQS6xBqDD8iJRbf
+<https://w3id.org/emmo/domain/neo#R9j7jE0NWQS6xBqDD8iJRbf> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RB5vIXZFuMYcHWSzNAPjPtF
+<https://w3id.org/emmo/domain/neo#RB5vIXZFuMYcHWSzNAPjPtF> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RBq9x5WmblYOc4D7eFlfpdJ
+<https://w3id.org/emmo/domain/neo#RBq9x5WmblYOc4D7eFlfpdJ> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq
+<https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RBwST6x27zdyWBgBunjc2Q9
+<https://w3id.org/emmo/domain/neo#RBwST6x27zdyWBgBunjc2Q9> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RC5Uc3vBrAsYC8gCNkTsLH
+<https://w3id.org/emmo/domain/neo#RC5Uc3vBrAsYC8gCNkTsLH> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RCRVu2hmIevYnx0eZzyJEPs
+<https://w3id.org/emmo/domain/neo#RCRVu2hmIevYnx0eZzyJEPs> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RCcdLHL2BqdRJQkmiKL4MDW
+<https://w3id.org/emmo/domain/neo#RCcdLHL2BqdRJQkmiKL4MDW> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RCh38CRTgX4tnzCoB8auwPC
+<https://w3id.org/emmo/domain/neo#RCh38CRTgX4tnzCoB8auwPC> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RDGBzCkWozL4RpG1CuIzwPi
+<https://w3id.org/emmo/domain/neo#RDGBzCkWozL4RpG1CuIzwPi> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RDM3Wmp5f6fMXTDpEK3Dmsx
+<https://w3id.org/emmo/domain/neo#RDM3Wmp5f6fMXTDpEK3Dmsx> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RDN44xs0tgwZS1p11BPMMKr
+<https://w3id.org/emmo/domain/neo#RDN44xs0tgwZS1p11BPMMKr> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RDpEA8qdRk99FAT0xSGZgGS
+<https://w3id.org/emmo/domain/neo#RDpEA8qdRk99FAT0xSGZgGS> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RDuDSbKh236WI6rqMad7Ar4
+<https://w3id.org/emmo/domain/neo#RDuDSbKh236WI6rqMad7Ar4> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RRKk7nTYd2pj3LFUG4j9yj
+<https://w3id.org/emmo/domain/neo#RRKk7nTYd2pj3LFUG4j9yj> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RRPYBSdeHQObrzQD5UT74I
+<https://w3id.org/emmo/domain/neo#RRPYBSdeHQObrzQD5UT74I> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RRVTDj2E9x5cjit7EQ9Dkx
+<https://w3id.org/emmo/domain/neo#RRVTDj2E9x5cjit7EQ9Dkx> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RZtNAG3BL7lDm8L77EbEBd
+<https://w3id.org/emmo/domain/neo#RZtNAG3BL7lDm8L77EbEBd> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#Rba6gbJ70iyZgFOVY5Z6Vo
+<https://w3id.org/emmo/domain/neo#Rba6gbJ70iyZgFOVY5Z6Vo> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RlYMwSSvmqekLRLzmf5IzV
+<https://w3id.org/emmo/domain/neo#RlYMwSSvmqekLRLzmf5IzV> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#RvstZtdRQckXTqUl1UK5Is
+<https://w3id.org/emmo/domain/neo#RvstZtdRQckXTqUl1UK5Is> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/emmo/domain/neo#R4UMKMNvIkmVZ4OSRIQ6Qv
+<https://w3id.org/emmo/domain/neo#R4UMKMNvIkmVZ4OSRIQ6Qv> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#RDuDSbKh236WI6rqMad7Ar4> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICActivation_unit2"@en ;
+                                                          <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R7MYrOmgGBYZ0JwNSP9CKGJ> ;
+                                                          <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> .
+
+
+###  https://w3id.org/emmo/domain/neo#R56puCaUpuR7eQFm7rEWOv
+<https://w3id.org/emmo/domain/neo#R56puCaUpuR7eQFm7rEWOv> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#RBwST6x27zdyWBgBunjc2Q9> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit2"@en ;
+                                                          <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R7RRzaczCz4wVsf2ZSE3cz5> ;
+                                                          <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> .
+
+
+###  https://w3id.org/emmo/domain/neo#R5vADU834XOdmmbqErqMjD
+<https://w3id.org/emmo/domain/neo#R5vADU834XOdmmbqErqMjD> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#Rba6gbJ70iyZgFOVY5Z6Vo> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit4"@en ;
+                                                          <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R8BzCYxsJkpBVMzHmrLDfBN> ;
+                                                          <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC> .
+
+
+###  https://w3id.org/emmo/domain/neo#R71kogAKcOnrzKRRvJYzEnf
+<https://w3id.org/emmo/domain/neo#R71kogAKcOnrzKRRvJYzEnf> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RC5Uc3vBrAsYC8gCNkTsLH> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "regularWaterInjection_unit3"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#coexistsWith> <https://w3id.org/emmo/domain/neo#RCIQAmGtY5oJHuuVHp7Y9OF> ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RCZSMiyXPZ1w9KtBMir31du> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#R7MYrOmgGBYZ0JwNSP9CKGJ
+<https://w3id.org/emmo/domain/neo#R7MYrOmgGBYZ0JwNSP9CKGJ> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R9j7jE0NWQS6xBqDD8iJRbf> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICSystem_unit2"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R8SCvSsZInboPn0aMi5hJ2b> .
+
+
+###  https://w3id.org/emmo/domain/neo#R7MkAFLocpCOTpR1W4846Wv
+<https://w3id.org/emmo/domain/neo#R7MkAFLocpCOTpR1W4846Wv> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RDN44xs0tgwZS1p11BPMMKr> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit4"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R5vADU834XOdmmbqErqMjD> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC> .
+
+
+###  https://w3id.org/emmo/domain/neo#R7OojlUGWcg81Y4DnKKUYtE
+<https://w3id.org/emmo/domain/neo#R7OojlUGWcg81Y4DnKKUYtE> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R8bUZpp1yY81qmfgGNH0TyF> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit4"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RBnZe6rQs3iQOzfyrY5AKRG> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#RTiXMunsU6yEXKeRVxMuQV> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC> .
+
+
+###  https://w3id.org/emmo/domain/neo#R7RRzaczCz4wVsf2ZSE3cz5
+<https://w3id.org/emmo/domain/neo#R7RRzaczCz4wVsf2ZSE3cz5> rdf:type owl:NamedIndividual ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfOffSitePower_Fukushima"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#affects> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> ,
+                                                                                                     <https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC> ,
+                                                                                                     <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> ,
+                                                                                                     <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R7OojlUGWcg81Y4DnKKUYtE> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#RBc3mI1yVMSGjTWyWdVvMiP> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#RBfahJ7XEvDRY0I74gA4EhW> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#RCJ4sUQgpXReJhv2l3TNlPt> .
+
+
+###  https://w3id.org/emmo/domain/neo#R7RYQTRTJpydcZySPvfj97U
+<https://w3id.org/emmo/domain/neo#R7RYQTRTJpydcZySPvfj97U> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RBwST6x27zdyWBgBunjc2Q9> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit1"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#follows> <https://w3id.org/emmo/domain/neo#RBHjDlLwaPMxKKtjq16Lw1c> ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R7RRzaczCz4wVsf2ZSE3cz5> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> .
+
+
+###  https://w3id.org/emmo/domain/neo#R7TeIrUcoeFIohoZFYT6oHo
+<https://w3id.org/emmo/domain/neo#R7TeIrUcoeFIohoZFYT6oHo> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R7t1vs1VKDAzHkcQsFbt9JC> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "HPCIOperation_unit3"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R71kogAKcOnrzKRRvJYzEnf> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#RCIQAmGtY5oJHuuVHp7Y9OF> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#R7UHidTtMLlwJsXw3LunBVr
+<https://w3id.org/emmo/domain/neo#R7UHidTtMLlwJsXw3LunBVr> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#Rba6gbJ70iyZgFOVY5Z6Vo> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit1"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#follows> <https://w3id.org/emmo/domain/neo#R8SCvSsZInboPn0aMi5hJ2b> ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R9ci3rSU9PmVM9hDoObI7GN> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#R9t3qBNc7hgSJ9CltHNvCc4> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> .
+
+
+###  https://w3id.org/emmo/domain/neo#R7c6WbN81RxcJpHXeGHXv8
+<https://w3id.org/emmo/domain/neo#R7c6WbN81RxcJpHXeGHXv8> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#RB5vIXZFuMYcHWSzNAPjPtF> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit1"@en ;
+                                                          <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RBKxneXt3UWJzKxOD5Inibz> ;
+                                                          <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> .
+
+
+###  https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr
+<https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RRKk7nTYd2pj3LFUG4j9yj> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "unit_2"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#R7xpEdKwbxANkjtrQrh0ep
+<https://w3id.org/emmo/domain/neo#R7xpEdKwbxANkjtrQrh0ep> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#RCh38CRTgX4tnzCoB8auwPC> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "dieselGenerator_Fukushima"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#R8BzCYxsJkpBVMzHmrLDfBN
+<https://w3id.org/emmo/domain/neo#R8BzCYxsJkpBVMzHmrLDfBN> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RBq9x5WmblYOc4D7eFlfpdJ> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "explosionOfReactorBuilding_unit4"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC> ,
+                                                                                                           <https://w3id.org/emmo/domain/neo#RDQ6WRHz0rKpRxnQ9WLdTh9> .
+
+
+###  https://w3id.org/emmo/domain/neo#R8MEESkThrtwrxXoXG6Fhjm
+<https://w3id.org/emmo/domain/neo#R8MEESkThrtwrxXoXG6Fhjm> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R9MK7U9YLf7RtEpfQTDDr1q> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit1"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#R8NisCJkeUXZCMxKr9tKNJq
+<https://w3id.org/emmo/domain/neo#R8NisCJkeUXZCMxKr9tKNJq> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RCRVu2hmIevYnx0eZzyJEPs> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstituentOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "reactor_1_vessel"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#R8SCvSsZInboPn0aMi5hJ2b
+<https://w3id.org/emmo/domain/neo#R8SCvSsZInboPn0aMi5hJ2b> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RvstZtdRQckXTqUl1UK5Is> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "tohokuTzunami"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#affects> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> ,
+                                                                                                     <https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC> ,
+                                                                                                     <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> ,
+                                                                                                     <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R7c6WbN81RxcJpHXeGHXv8> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#R9om4FPZlN1Gg2qFReIfI60> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#RMp5GbDdB45DJyWFDXk4qT> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#RsZEl0qfySUbopX7Z6mlXE> .
+
+
+###  https://w3id.org/emmo/domain/neo#R8Yr6YUUe0lh5UU0KHqF8Or
+<https://w3id.org/emmo/domain/neo#R8Yr6YUUe0lh5UU0KHqF8Or> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RlYMwSSvmqekLRLzmf5IzV> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "repeatedlyOpeningClosing_SRV_unit2"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R4UMKMNvIkmVZ4OSRIQ6Qv> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R9ww5067sycKsLf6pU7vT06> .
+
+
+###  https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC
+<https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RRKk7nTYd2pj3LFUG4j9yj> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "unit_4"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#R8wL8gWueAFQTEzJ4Rj2QKI
+<https://w3id.org/emmo/domain/neo#R8wL8gWueAFQTEzJ4Rj2QKI> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R9MK7U9YLf7RtEpfQTDDr1q> ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c> ;
+                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#R0ZnwwPdidaBfZOg6tgZJr>
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c> ;
+                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#RZtNAG3BL7lDm8L77EbEBd>
+                                                                    ] ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit2"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#R9Iwyc5qtHhh0QHOXsiris3
+<https://w3id.org/emmo/domain/neo#R9Iwyc5qtHhh0QHOXsiris3> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RDpEA8qdRk99FAT0xSGZgGS> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit1"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RBHjDlLwaPMxKKtjq16Lw1c> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> .
+
+
+###  https://w3id.org/emmo/domain/neo#R9L3ykUI6w5qe20x5hVL2mK
+<https://w3id.org/emmo/domain/neo#R9L3ykUI6w5qe20x5hVL2mK> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RDuDSbKh236WI6rqMad7Ar4> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICActivation_unit3"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R7TeIrUcoeFIohoZFYT6oHo> ;
+                                                           <https://w3id.org/emmo/emmo-lite#hasBehaviour> <https://w3id.org/emmo/domain/neo#RPlulHioiJxZgZC1QMUgOL> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#R9ci3rSU9PmVM9hDoObI7GN
+<https://w3id.org/emmo/domain/neo#R9ci3rSU9PmVM9hDoObI7GN> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RC5Uc3vBrAsYC8gCNkTsLH> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "regularWaterInjection_unit1"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RPcjVut6ArBpfKG9sYPMsM> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> .
+
+
+###  https://w3id.org/emmo/domain/neo#R9d1EKHudbhPmfvQxlND3Wr
+<https://w3id.org/emmo/domain/neo#R9d1EKHudbhPmfvQxlND3Wr> rdf:type owl:NamedIndividual ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/emmo/emmo-lite#isBehaviourOf> ;
+                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#RRVTDj2E9x5cjit7EQ9Dkx>
+                                                                    ] ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit2"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RDAWOe94vcv6aVGTD0p8Rh6> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> .
+
+
+###  https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW
+<https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RRKk7nTYd2pj3LFUG4j9yj> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "unit_1"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#R9lguEUksKNv9gLzWkqBDJ4
+<https://w3id.org/emmo/domain/neo#R9lguEUksKNv9gLzWkqBDJ4> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RDN44xs0tgwZS1p11BPMMKr> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit3"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R9L3ykUI6w5qe20x5hVL2mK> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#R9om4FPZlN1Gg2qFReIfI60
+<https://w3id.org/emmo/domain/neo#R9om4FPZlN1Gg2qFReIfI60> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RB5vIXZFuMYcHWSzNAPjPtF> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit3"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R9lguEUksKNv9gLzWkqBDJ4> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#R9t3qBNc7hgSJ9CltHNvCc4
+<https://w3id.org/emmo/domain/neo#R9t3qBNc7hgSJ9CltHNvCc4> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R8FmlobZiHsCZi4CHKxgtMg> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "SCVentilation_unit1"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RPcjVut6ArBpfKG9sYPMsM> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> ;
+                                                           <https://w3id.org/emmo/emmo-lite#successorOf> <https://w3id.org/emmo/domain/neo#RC2M3wEsCROuuDC6Bjz9TLz> .
+
+
+###  https://w3id.org/emmo/domain/neo#R9ww5067sycKsLf6pU7vT06
+<https://w3id.org/emmo/domain/neo#R9ww5067sycKsLf6pU7vT06> rdf:type owl:NamedIndividual ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c> ;
+                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#R0ZnwwPdidaBfZOg6tgZJr>
+                                                                    ] ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "SRV_unit2"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#RB4janzOcDoxSfpU6974nab
+<https://w3id.org/emmo/domain/neo#RB4janzOcDoxSfpU6974nab> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R7pKuzitkkIAgc5NxDlqfH4> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit2"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R8Yr6YUUe0lh5UU0KHqF8Or> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> .
+
+
+###  https://w3id.org/emmo/domain/neo#RB9SU6UpAJ8MygM1uCXbEzt
+<https://w3id.org/emmo/domain/neo#RB9SU6UpAJ8MygM1uCXbEzt> rdf:type owl:NamedIndividual ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> ;
+                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT>
+                                                                    ] ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit2"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RBHjDlLwaPMxKKtjq16Lw1c> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> .
+
+
+###  https://w3id.org/emmo/domain/neo#RBEpkkG2mXF3wnnZPT5lDoa
+<https://w3id.org/emmo/domain/neo#RBEpkkG2mXF3wnnZPT5lDoa> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RDGBzCkWozL4RpG1CuIzwPi> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "HydrogenRelease_unit3"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R8BzCYxsJkpBVMzHmrLDfBN> .
+
+
+###  https://w3id.org/emmo/domain/neo#RBHjDlLwaPMxKKtjq16Lw1c
+<https://w3id.org/emmo/domain/neo#RBHjDlLwaPMxKKtjq16Lw1c> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RCcdLHL2BqdRJQkmiKL4MDW> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "tohokuEarthquake"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#affects> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> ,
+                                                                                                     <https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC> ,
+                                                                                                     <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> ,
+                                                                                                     <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R56puCaUpuR7eQFm7rEWOv> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#R7RRzaczCz4wVsf2ZSE3cz5> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#R7RYQTRTJpydcZySPvfj97U> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#RDmRDuXNQJPOriCxkLUlrUE> .
+
+
+###  https://w3id.org/emmo/domain/neo#RBKxneXt3UWJzKxOD5Inibz
+<https://w3id.org/emmo/domain/neo#RBKxneXt3UWJzKxOD5Inibz> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RDN44xs0tgwZS1p11BPMMKr> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit1"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#follows> <https://w3id.org/emmo/domain/neo#R8SCvSsZInboPn0aMi5hJ2b> ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R7UHidTtMLlwJsXw3LunBVr> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> .
+
+
+###  https://w3id.org/emmo/domain/neo#RBc3mI1yVMSGjTWyWdVvMiP
+<https://w3id.org/emmo/domain/neo#RBc3mI1yVMSGjTWyWdVvMiP> rdf:type owl:NamedIndividual ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/emmo/emmo-lite#isBehaviourOf> ;
+                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq>
+                                                                    ] ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit3"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RBnZe6rQs3iQOzfyrY5AKRG> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#RBrcoh6pN7tToFnM1m59yXl> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#RBfahJ7XEvDRY0I74gA4EhW
+<https://w3id.org/emmo/domain/neo#RBfahJ7XEvDRY0I74gA4EhW> rdf:type owl:NamedIndividual ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/emmo/emmo-lite#isBehaviourOf> ;
+                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq>
+                                                                    ] ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit2"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RBnZe6rQs3iQOzfyrY5AKRG> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R8wL8gWueAFQTEzJ4Rj2QKI> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> .
+
+
+###  https://w3id.org/emmo/domain/neo#RBnZe6rQs3iQOzfyrY5AKRG
+<https://w3id.org/emmo/domain/neo#RBnZe6rQs3iQOzfyrY5AKRG> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RDuDSbKh236WI6rqMad7Ar4> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "dieselGeneratorActivation_Fukushima"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#affects> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> ,
+                                                                                                     <https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC> ,
+                                                                                                     <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> ,
+                                                                                                     <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R8SCvSsZInboPn0aMi5hJ2b> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#RB4janzOcDoxSfpU6974nab> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#RC2M3wEsCROuuDC6Bjz9TLz> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#RC6oDea7metjydM6Dr1mJsi> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R7xpEdKwbxANkjtrQrh0ep> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://w3id.org/emmo/domain/neo#RBnZe6rQs3iQOzfyrY5AKRG> ;
+   owl:annotatedProperty <https://w3id.org/emmo/emmo-lite#foregoes> ;
+   owl:annotatedTarget <https://w3id.org/emmo/domain/neo#R8SCvSsZInboPn0aMi5hJ2b> ;
+   <http://www.w3.org/2004/02/skos/core#comment> "Check this one"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo#RBrcoh6pN7tToFnM1m59yXl
+<https://w3id.org/emmo/domain/neo#RBrcoh6pN7tToFnM1m59yXl> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R9MK7U9YLf7RtEpfQTDDr1q> ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c> ;
+                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#R0ZnwwPdidaBfZOg6tgZJr>
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c> ;
+                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#RZtNAG3BL7lDm8L77EbEBd>
+                                                                    ] ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit3"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#RC2M3wEsCROuuDC6Bjz9TLz
+<https://w3id.org/emmo/domain/neo#RC2M3wEsCROuuDC6Bjz9TLz> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R7pKuzitkkIAgc5NxDlqfH4> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit1"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RCSOjPEJEBrRfStCCjfidCL> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> ;
+                                                           <https://w3id.org/emmo/emmo-lite#successorOf> <https://w3id.org/emmo/domain/neo#RCJ4sUQgpXReJhv2l3TNlPt> .
+
+
+###  https://w3id.org/emmo/domain/neo#RC6oDea7metjydM6Dr1mJsi
+<https://w3id.org/emmo/domain/neo#RC6oDea7metjydM6Dr1mJsi> rdf:type owl:NamedIndividual ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit3"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#affects> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RFvEhkHbiPwVuY8AasDXll> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#RCGLvp3oNj6WAo2tvVy7DeU
+<https://w3id.org/emmo/domain/neo#RCGLvp3oNj6WAo2tvVy7DeU> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R7twPwtQmmXFTKrDWM3POCD> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "ICSystem_unit1"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#RCGk9WIE1u7wKk5PswM0eOU
+<https://w3id.org/emmo/domain/neo#RCGk9WIE1u7wKk5PswM0eOU> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R0ZnwwPdidaBfZOg6tgZJr> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "reactorBuilding_unit3"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#RCIQAmGtY5oJHuuVHp7Y9OF
+<https://w3id.org/emmo/domain/neo#RCIQAmGtY5oJHuuVHp7Y9OF> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R8FmlobZiHsCZi4CHKxgtMg> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "SCVentilation_unit3"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#coexistsWith> <https://w3id.org/emmo/domain/neo#R71kogAKcOnrzKRRvJYzEnf> ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RBEpkkG2mXF3wnnZPT5lDoa> ,
+                                                                                                      <https://w3id.org/emmo/domain/neo#RCZSMiyXPZ1w9KtBMir31du> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#RCJ4sUQgpXReJhv2l3TNlPt
+<https://w3id.org/emmo/domain/neo#RCJ4sUQgpXReJhv2l3TNlPt> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R8bUZpp1yY81qmfgGNH0TyF> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit1"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RBnZe6rQs3iQOzfyrY5AKRG> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R8MEESkThrtwrxXoXG6Fhjm> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> .
+
+
+###  https://w3id.org/emmo/domain/neo#RCOfDWUyHIup4OUW4FsBUNW
+<https://w3id.org/emmo/domain/neo#RCOfDWUyHIup4OUW4FsBUNW> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RDM3Wmp5f6fMXTDpEK3Dmsx> ;
+                                                           <http://www.w3.org/2004/02/skos/core#altLabel> "SafetyReliefValve_unit3" ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "SRV_unit3"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#RCSOjPEJEBrRfStCCjfidCL
+<https://w3id.org/emmo/domain/neo#RCSOjPEJEBrRfStCCjfidCL> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RDuDSbKh236WI6rqMad7Ar4> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "ICActivation_unit1"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R8SCvSsZInboPn0aMi5hJ2b> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#RCGLvp3oNj6WAo2tvVy7DeU> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> ;
+                                                           <https://w3id.org/emmo/emmo-lite#successorOf> <https://w3id.org/emmo/domain/neo#RC2M3wEsCROuuDC6Bjz9TLz> .
+
+
+###  https://w3id.org/emmo/domain/neo#RCZSMiyXPZ1w9KtBMir31du
+<https://w3id.org/emmo/domain/neo#RCZSMiyXPZ1w9KtBMir31du> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RBq9x5WmblYOc4D7eFlfpdJ> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "explosionOfReactorBuilding_unit3"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#Rld8nnNRbLNp5DMRfVK1Hs> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#RCGk9WIE1u7wKk5PswM0eOU> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#RDAWOe94vcv6aVGTD0p8Rh6
+<https://w3id.org/emmo/domain/neo#RDAWOe94vcv6aVGTD0p8Rh6> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RRPYBSdeHQObrzQD5UT74I> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "irregularWaterInjection_unit2"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> .
+
+
+###  https://w3id.org/emmo/domain/neo#RDNEIxMazl0JpSeCgw0Nxqo
+<https://w3id.org/emmo/domain/neo#RDNEIxMazl0JpSeCgw0Nxqo> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RDpEA8qdRk99FAT0xSGZgGS> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperation_noFuel"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RBHjDlLwaPMxKKtjq16Lw1c> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC> .
+
+
+###  https://w3id.org/emmo/domain/neo#RDQ6WRHz0rKpRxnQ9WLdTh9
+<https://w3id.org/emmo/domain/neo#RDQ6WRHz0rKpRxnQ9WLdTh9> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#R0ZnwwPdidaBfZOg6tgZJr> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "reactorBuilding_unit4"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#RDmRDuXNQJPOriCxkLUlrUE
+<https://w3id.org/emmo/domain/neo#RDmRDuXNQJPOriCxkLUlrUE> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/emmo/domain/neo#RBwST6x27zdyWBgBunjc2Q9> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit3"@en ;
+                                                           <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R7RRzaczCz4wVsf2ZSE3cz5> ;
+                                                           <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#RFvEhkHbiPwVuY8AasDXll
+<https://w3id.org/emmo/domain/neo#RFvEhkHbiPwVuY8AasDXll> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#RlYMwSSvmqekLRLzmf5IzV> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "repeatedlyOpeningClosing_SRV_unit3"@en ;
+                                                          <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R9L3ykUI6w5qe20x5hVL2mK> ;
+                                                          <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#RCOfDWUyHIup4OUW4FsBUNW> .
+
+
+###  https://w3id.org/emmo/domain/neo#RMp5GbDdB45DJyWFDXk4qT
+<https://w3id.org/emmo/domain/neo#RMp5GbDdB45DJyWFDXk4qT> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#RB5vIXZFuMYcHWSzNAPjPtF> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit2"@en ;
+                                                          <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RVDTdBhCWWXCt9qvBB5o8o> ;
+                                                          <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> .
+
+
+###  https://w3id.org/emmo/domain/neo#RPcjVut6ArBpfKG9sYPMsM
+<https://w3id.org/emmo/domain/neo#RPcjVut6ArBpfKG9sYPMsM> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#RBq9x5WmblYOc4D7eFlfpdJ> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "explosionOfReactorBuilding_unit1"@en ;
+                                                          <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RXcgBdYtloBN8Exe0yyXMw> ;
+                                                          <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> ,
+                                                                                                          <https://w3id.org/emmo/domain/neo#RUsOGEERLNgPu3mgta5Sm1> .
+
+
+###  https://w3id.org/emmo/domain/neo#RPlulHioiJxZgZC1QMUgOL
+<https://w3id.org/emmo/domain/neo#RPlulHioiJxZgZC1QMUgOL> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#R9j7jE0NWQS6xBqDD8iJRbf> ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c> ;
+                                                                     owl:someValuesFrom <https://w3id.org/emmo/domain/neo#R0ZnwwPdidaBfZOg6tgZJr>
+                                                                   ] ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICSystem_unit3"@en ;
+                                                          <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R8SCvSsZInboPn0aMi5hJ2b> ;
+                                                          <https://w3id.org/emmo/emmo-lite#hasConstitutiveProcess> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#RTiXMunsU6yEXKeRVxMuQV
+<https://w3id.org/emmo/domain/neo#RTiXMunsU6yEXKeRVxMuQV> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#R9MK7U9YLf7RtEpfQTDDr1q> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit4"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://w3id.org/emmo/domain/neo#RTiXMunsU6yEXKeRVxMuQV> ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget <https://w3id.org/emmo/domain/neo#R9MK7U9YLf7RtEpfQTDDr1q> ;
+   <http://www.w3.org/2004/02/skos/core#comment> "add anay relations linke unit 2 and 3?"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo#RUsOGEERLNgPu3mgta5Sm1
+<https://w3id.org/emmo/domain/neo#RUsOGEERLNgPu3mgta5Sm1> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#R0ZnwwPdidaBfZOg6tgZJr> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "reactorBuilding_unit1"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#RVDTdBhCWWXCt9qvBB5o8o
+<https://w3id.org/emmo/domain/neo#RVDTdBhCWWXCt9qvBB5o8o> rdf:type owl:NamedIndividual ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit2"@en ;
+                                                          <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R9d1EKHudbhPmfvQxlND3Wr> ;
+                                                          <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> .
+
+
+###  https://w3id.org/emmo/domain/neo#RXcgBdYtloBN8Exe0yyXMw
+<https://w3id.org/emmo/domain/neo#RXcgBdYtloBN8Exe0yyXMw> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#RRPYBSdeHQObrzQD5UT74I> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "irregularWaterInjection_unit1"@en ;
+                                                          <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW> .
+
+
+###  https://w3id.org/emmo/domain/neo#RaHh8VTYDHA1krUVvo6jGG
+<https://w3id.org/emmo/domain/neo#RaHh8VTYDHA1krUVvo6jGG> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#RRKk7nTYd2pj3LFUG4j9yj> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit3" ;
+                                                          <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RBHjDlLwaPMxKKtjq16Lw1c> ;
+                                                          <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9
+<https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#RRKk7nTYd2pj3LFUG4j9yj> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "unit_3"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#Rld8nnNRbLNp5DMRfVK1Hs
+<https://w3id.org/emmo/domain/neo#Rld8nnNRbLNp5DMRfVK1Hs> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#RRPYBSdeHQObrzQD5UT74I> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "irregularWaterInjection_unit3"@en ;
+                                                          <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> .
+
+
+###  https://w3id.org/emmo/domain/neo#RsZEl0qfySUbopX7Z6mlXE
+<https://w3id.org/emmo/domain/neo#RsZEl0qfySUbopX7Z6mlXE> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/emmo/domain/neo#RB5vIXZFuMYcHWSzNAPjPtF> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit4"@en ;
+                                                          <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#R7MkAFLocpCOTpR1W4846Wv> ;
+                                                          <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC> .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

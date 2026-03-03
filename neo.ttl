@@ -4,12 +4,12 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix elite: <https://w3id.org/emmo/emmo-lite#> .
+@prefix elite: <https://w3id.org/emmo/0.0.7/elite#> .
 @base <https://w3id.org/emmo/domain/neo#> .
 
 <https://w3id.org/emmo/domain/neo/neo> rdf:type owl:Ontology ;
                                         owl:versionIRI <https://w3id.org/emmo/domain/neo/0.0.1/neo> ;
-                                        owl:imports <https://w3id.org/emmo/emmo-lite/0.0.3> ;
+                                        owl:imports <https://w3id.org/emmo/0.0.7/elite> ;
                                         <http://purl.org/dc/terms/contributor> "Anna Anchini"@en ,
                                                                                "Dario Rimondini"@it ,
                                                                                "Francesco Antonio Zaccarini"@it ,
@@ -82,6 +82,11 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                                                 rdfs:subPropertyOf rdfs:label .
 
 
+###  https://w3id.org/emmo/0.0.7/elite#isOutputOf
+elite:isOutputOf rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf elite:partakesIn .
+
+
 ###  https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV
 :R8xx0dhbEh1tjGMDwNZfckV rdf:type owl:AnnotationProperty ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "definition"@en ;
@@ -103,9 +108,78 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                         rdfs:subPropertyOf rdfs:comment .
 
 
+###  https://w3id.org/emmo/domain/neo/neo#referenceINIS
+:referenceINIS rdf:type owl:AnnotationProperty ;
+               rdfs:comment "Reference to the IAEA INIS Thesaurus term."@en ;
+               rdfs:subPropertyOf rdfs:seeAlso .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#referenceISO
+:referenceISO rdf:type owl:AnnotationProperty ;
+              rdfs:subPropertyOf rdfs:seeAlso ;
+              rdfs:range xsd:anyURI .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#referenceNRC
+:referenceNRC rdf:type owl:AnnotationProperty ;
+              rdfs:subPropertyOf rdfs:seeAlso ;
+              rdfs:range xsd:anyURI .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#referenceNSSG
+:referenceNSSG rdf:type owl:AnnotationProperty ;
+               rdfs:comment "Reference to IAEA Nuclear Safety and Security Glossary term IRI."@en ;
+               rdfs:subPropertyOf rdfs:seeAlso ;
+               rdfs:range xsd:anyURI .
+
+
 #################################################################
 #    Object Properties
 #################################################################
+
+###  https://w3id.org/emmo/0.0.7/elite#affects
+elite:affects rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#foregoes
+elite:foregoes rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#hasBehaviour
+elite:hasBehaviour rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#isBehaviourOf
+elite:isBehaviourOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#isConstituentOf
+elite:isConstituentOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#isConstitutiveProcessOf
+elite:isConstitutiveProcessOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#isInputOf
+elite:isInputOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#isParticipantOf
+elite:isParticipantOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#isStageOf
+elite:isStageOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#isSubProcessOf
+elite:isSubProcessOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#participatesTo
+elite:participatesTo rdf:type owl:ObjectProperty .
+
 
 ###  https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c
 :RB4rNlczhggIx7lqdEK2d9c rdf:type owl:ObjectProperty ;
@@ -123,13 +197,17 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "CanAccessIn"@en .
 
 
-###  https://w3id.org/emmo/emmo-lite#isOutputOf
-elite:isOutputOf rdfs:subPropertyOf elite:partakesIn .
-
-
 #################################################################
 #    Classes
 #################################################################
+
+###  https://w3id.org/emmo/0.0.7/elite#Substance
+elite:Substance rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#Whole
+elite:Whole rdf:type owl:Class .
+
 
 ###  https://w3id.org/emmo/domain/neo#ArtificialRadioactiveMaterial
 :ArtificialRadioactiveMaterial rdf:type owl:Class ;
@@ -168,7 +246,7 @@ elite:isOutputOf rdfs:subPropertyOf elite:partakesIn .
 
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
-                     rdfs:subClassOf elite:Object ;
+                     rdfs:subClassOf <https://w3id.org/emmo/hume#Object> ;
                      rdfs:comment "Nuclear energy is a form of heat energy that can be released via reactions involving nuclear fusion or fission taking place between neutrons and protons in the nucleus of an atom. Electricity can be produced when a large amount of heat energy released is applied to generate steam from turbines (Fig. 1.4). Uranium-235, an isotope of uranium, is the most commonly used element in industrial nuclear power generators." ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearDomainObject" ;
                      <http://www.w3.org/2004/02/skos/core#comment> "nuclear related energy object and people" ;
@@ -184,8 +262,8 @@ elite:isOutputOf rdfs:subPropertyOf elite:partakesIn .
 
 ###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
 :R0N27qMQzeRjM0vSOeAvUT rdf:type owl:Class ;
-                        rdfs:subClassOf :NuclearEnergyObject ,
-                                        elite:Whole ,
+                        rdfs:subClassOf elite:Whole ,
+                                        :NuclearEnergyObject ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:participatesTo ;
                                           owl:someValuesFrom :RyLZ508FsJKMTIHvSNuJZk
@@ -449,7 +527,7 @@ all offsite power.""" ;
 
 ###  https://w3id.org/emmo/domain/neo#R79WXwPF5ZWjRPArxbbVAgU
 :R79WXwPF5ZWjRPArxbbVAgU rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Process ;
+                         rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
                          rdfs:comment "Missed definition" ;
                          rdfs:seeAlso "EMMO" ;
                          <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
@@ -475,7 +553,7 @@ all offsite power.""" ;
 ###  https://w3id.org/emmo/domain/neo#R7Jf7CRh5B3US0yNBl08EK7
 :R7Jf7CRh5B3US0yNBl08EK7 rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         elite:Role ,
+                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :RRKk7nTYd2pj3LFUG4j9yj
@@ -498,10 +576,6 @@ all offsite power.""" ;
 :R7KAfaev0soZNlAXHICHSJd rdf:type owl:Class ;
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                           owl:someValuesFrom :RCRVu2hmIevYnx0eZzyJEPs
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R80L6MpJJVkL4hoNB7thCRV
                                          ] ,
@@ -512,6 +586,10 @@ all offsite power.""" ;
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :RBwST6x27zdyWBgBunjc2Q9
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
+                                           owl:someValuesFrom :RCRVu2hmIevYnx0eZzyJEPs
                                          ] ;
                          rdfs:comment "Check definition" ;
                          <http://www.w3.org/2004/02/skos/core#definition> """One or more rods that are inserted or withdrawn simultaneously 
@@ -661,12 +739,12 @@ Note 1 to entry: The absorption of the external colliding particle, usually a ne
                          rdfs:subClassOf :R7Ss5qBF98KBgXN3rhg0rEl ,
                                          :R7i2YiNCalwlsxcsL7AR3VF ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R8ym94st1azekRHdt3ayDq5
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
+                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
                          rdfs:comment """Meanwhile, an attempt to enter the Unit 1 RB to conduct radiation measurements at 03:45 on 12 March was abandoned, when the team encountered white fog-like steam upon opening the airlock
 door, although the measurements at the radiation monitoring post near the site’s main gate did not show any anomaly to indicate a release from RPV or PCV at 04:00."""@en ;
@@ -833,8 +911,8 @@ perform its intended safety functions.""" ;
 
 ###  https://w3id.org/emmo/domain/neo#R7pvNIWMyFBzmeL9EcH58g8
 :R7pvNIWMyFBzmeL9EcH58g8 rdf:type owl:Class ;
-                         rdfs:subClassOf :REnnyld9FmnAjLpeDyUsnv ,
-                                         elite:Whole ;
+                         rdfs:subClassOf elite:Whole ,
+                                         :REnnyld9FmnAjLpeDyUsnv ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "BWR"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> """nuclear reactor (3.1.22) with water as a coolant and as a moderator (3.1.23.1.2), boiling in the core 
 Note 1 to entry: In a boiling water reactor the generated heat is removed from the core by evaporation. """@en ;
@@ -873,16 +951,17 @@ ISO 12749-5:2018(en)"""
 
 ###  https://w3id.org/emmo/domain/neo#R7qv2nUGxSNZRvXyF3CXPTr
 :R7qv2nUGxSNZRvXyF3CXPTr rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Substance ;
+                         rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
                          rdfs:isDefinedBy <https://doi.org/10.1351/goldbook.C01022> ,
                                           <https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-2:ed-1:v1:en:term:3.1.21> ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "ChemicalElement"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "type of substance that cannot be divided or changed into different substances by ordinary chemical methods"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ChemicalElement"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Atom"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7s6BZ18NYlgydAQozd7POd
 :R7s6BZ18NYlgydAQozd7POd rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Process ,
+                         rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isSubProcessOf ;
                                            owl:someValuesFrom :RCP7vIugzt8V7rXL11buOZH
@@ -920,8 +999,8 @@ ISO 12749-5:2018(en)"""
 
 ###  https://w3id.org/emmo/domain/neo#R7tsY17A1s9DZ7gbZrjbVt6
 :R7tsY17A1s9DZ7gbZrjbVt6 rdf:type owl:Class ;
-                         rdfs:subClassOf :R9p0u8Gh9Tup5P416Wl32S7 ,
-                                         elite:Whole ,
+                         rdfs:subClassOf elite:Whole ,
+                                         :R9p0u8Gh9Tup5P416Wl32S7 ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isSubProcessOf ;
                                            owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
@@ -961,12 +1040,12 @@ The secondary side water volume of the isolation condenser (both trains together
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          :Rw4mCgviqd6HTitZEzST6w ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                           owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :RB5vIXZFuMYcHWSzNAPjPtF
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
+                                           owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorUltimateHeatSink"@en ,
                                                                         "UHS"@en ;
@@ -983,7 +1062,7 @@ The secondary side water volume of the isolation condenser (both trains together
 
 ###  https://w3id.org/emmo/domain/neo#R7unkqShg3WHoE9WWDhuPJE
 :R7unkqShg3WHoE9WWDhuPJE rdf:type owl:Class ;
-                         rdfs:subClassOf :R8KlSYQnSKI6PoJZNIdhwNI ,
+                         rdfs:subClassOf <https://w3id.org/emmo/hume#Fluid> ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:partakesIn ;
                                            owl:someValuesFrom :BoratedWaterInjectionSystem
@@ -1135,7 +1214,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R89Yy2V18LstH4xGXyNb9XN
 :R89Yy2V18LstH4xGXyNb9XN rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         elite:Role ;
+                                         :NuclearEnergyRole ;
                          <http://www.w3.org/2004/02/skos/core#definition> "elements contained in the turbine building" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "TurbineBuildingContents"@en .
 
@@ -1175,7 +1254,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#R8HV58d46m6thaiYmxePBRu
 :R8HV58d46m6thaiYmxePBRu rdf:type owl:Class ;
-                         rdfs:subClassOf :R8KlSYQnSKI6PoJZNIdhwNI ,
+                         rdfs:subClassOf <https://w3id.org/emmo/hume#Fluid> ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:partakesIn ;
                                            owl:someValuesFrom :RCfqimjBP1uypJVnd32xcTB
@@ -1186,7 +1265,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                          ] ;
                          rdfs:seeAlso "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull19-1/19105982126.pdf" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Seawater is water from a sea or ocean." ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectedSeaWater"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SeaWater"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R8HV58d46m6thaiYmxePBRu ;
@@ -1214,7 +1293,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R8KlSYQnSKI6PoJZNIdhwNI
 :R8KlSYQnSKI6PoJZNIdhwNI rdf:type owl:Class ;
                          rdfs:subClassOf :InjectedMaterial ,
-                                         elite:Fluid ,
+                                         <https://w3id.org/emmo/hume#Fluid> ,
+                                         <https://w3id.org/emmo/hume#Role> ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isParticipantOf ;
                                            owl:someValuesFrom :R8MPIXNWSb8RCelrAeGNxMc
@@ -1248,8 +1328,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#R8MPIXNWSb8RCelrAeGNxMc
 :R8MPIXNWSb8RCelrAeGNxMc rdf:type owl:Class ;
-                         rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ,
-                                         elite:Whole ,
+                         rdfs:subClassOf elite:Whole ,
+                                         :RDpEA8qdRk99FAT0xSGZgGS ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstitutiveProcessOf ;
                                            owl:someValuesFrom :RBzruvoEUI9hIHVtX34kGJu
@@ -1450,7 +1530,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
 
 ###  https://w3id.org/emmo/domain/neo#R8qKVAw3v5SZK2O6Y8cyDEr
 :R8qKVAw3v5SZK2O6Y8cyDEr rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Role ;
+                         rdfs:subClassOf :NuclearEnergyRole ;
                          rdfs:isDefinedBy "https://aris.iaea.org/sites/Glossary.html Glossary of Terms in ARIS Reports"@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Moderator" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A material that is used to decrease the speed of the fast neutron produced during a fission even and thus sustaining a chain reaction."@en ;
@@ -1641,11 +1721,14 @@ all offsite power."""@en ;
  The term is usually used to refer to the primordial radionuclides 40K, 235U, 238U,
 232Th and their radioactive decay products.
  Contrasted with radionuclides of artificial origin, anthropogenic radionuclides and human made radionuclides (which all mean the same), and also with artificialì radionuclides (which exclude radionuclides of artificial origin that are also naturally occurring). Radionuclides of artificial origin may include radionuclides that are also naturally occurring but may not include radionuclides of natural origin"""@en ;
-                         rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/radionuclide.html)> ;
-                         rdfs:seeAlso """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
-and Radiation Protection, 2018 Edition """ ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "Radioisotope"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "An unstable isotope of an element that decays or disintegrates spontaneously, thereby emitting radiation. Approximately 5,000 natural and artificial radioisotopes have been identified."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Radionuclide"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Radionuclide"@en ;
+                         :referenceINIS "RADIOISOTOPES" ;
+                         :referenceISO "https://www.iso.org/obp/ui/#iso:std:iso:20042:ed-1:v1:en:term:3.18"^^xsd:anyURI ;
+                         :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/glossary/radionuclide.html> ;
+                         :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/475"^^xsd:anyURI ,
+                                        "https://vocabulary.iaea.org/iaea-safety-glossary/554"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#R9DvBOiqnlOM3kdfemfLOhd
@@ -1765,7 +1848,7 @@ perform its intended safety functions."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#R9PjB5mvpVfreaI0pbTQFj6
 :R9PjB5mvpVfreaI0pbTQFj6 rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Material ;
+                         rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
                          rdfs:comment "Material designated in national law or by a regulatory body as being  subject to regulatory control because of its radioactivity."@en ,
                                       """This is the ‘regulatory’ meaning of radioactive (2), and should not be confused with
 the ‘scientific’ meaning of radioactive (1): ‘exhibiting radioactivity; emitting or
@@ -1791,7 +1874,7 @@ and Radiation Protection, 2018 Edition """ ;
 
 ###  https://w3id.org/emmo/domain/neo#R9TI5UbsBXnAYSIi17pJARr
 :R9TI5UbsBXnAYSIi17pJARr rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Role ;
+                         rdfs:subClassOf :NuclearEnergyRole ;
                          rdfs:seeAlso <http://www-ns.iaea.org/downloads/ni/training/specific_expert_knowledge/psa-level1/III1_1_A%20%20Initiating%20Event%20Analysis.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearPlantAccidentEvents"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "An event that creates disturbance in a Nuclear Reactor Plant Management and that leads to hazardous condition to the surrounding environment where it takes place"@en ;
@@ -1801,7 +1884,7 @@ and Radiation Protection, 2018 Edition """ ;
 ###  https://w3id.org/emmo/domain/neo#R9ZCvqvWWCWSwBxX7K82iwL
 :R9ZCvqvWWCWSwBxX7K82iwL rdf:type owl:Class ;
                          rdfs:subClassOf :R9p0u8Gh9Tup5P416Wl32S7 ,
-                                         elite:Process ,
+                                         :NuclearEnergyProcess ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstitutiveProcessOf ;
                                            owl:someValuesFrom :RCzybo2ACvDW8XnRRQcoQTg
@@ -1890,7 +1973,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
 
 ###  https://w3id.org/emmo/domain/neo#R9p0u8Gh9Tup5P416Wl32S7
 :R9p0u8Gh9Tup5P416Wl32S7 rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Process ;
+                         rdfs:subClassOf :NuclearEnergyProcess ;
                          <http://www.w3.org/2004/02/skos/core#definition> "In nuclear physics and nuclear chemistry, a nuclear reaction is a process in which two nuclei, or a nucleus and an external subatomic particle, collide to produce one or more new nuclides. Thus, a nuclear reaction must cause a transformation of at least one nuclide to another."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReaction"@en .
 
@@ -1905,7 +1988,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
 ###  https://w3id.org/emmo/domain/neo#R9s3bSmQntRAaUAzg5iKhyy
 :R9s3bSmQntRAaUAzg5iKhyy rdf:type owl:Class ;
                          rdfs:subClassOf :RBfqFRty5Hp4V4caVtEvWdD ,
-                                         elite:Role ,
+                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isInputOf ;
                                            owl:someValuesFrom :R81QzLfYKssKKQ25a1Ibyv7
@@ -2083,7 +2166,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
 
 ###  https://w3id.org/emmo/domain/neo#RBU28e2pgiTqsaTCPWnAJ6y
 :RBU28e2pgiTqsaTCPWnAJ6y rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Process ,
+                         rdfs:subClassOf :NuclearEnergyProcess ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty [ owl:inverseOf elite:isSubProcessOf
                                                           ] ;
@@ -2097,7 +2180,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
 ###  https://w3id.org/emmo/domain/neo#RBW32C4x3sn1YahVG7uYVun
 :RBW32C4x3sn1YahVG7uYVun rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         elite:Role ,
+                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -2118,12 +2201,12 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
                          rdfs:subClassOf :R7gZLWyPCimwGhHTueSRPhd ,
                                          :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                           owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isInputOf ;
                                            owl:someValuesFrom :RB5vIXZFuMYcHWSzNAPjPtF
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
+                                           owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "DecayHeatRemovalSystem"@en ,
                                                                         "RHR"@en ,
@@ -2167,7 +2250,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
 
 ###  https://w3id.org/emmo/domain/neo#RBfqFRty5Hp4V4caVtEvWdD
 :RBfqFRty5Hp4V4caVtEvWdD rdf:type owl:Class ;
-                         rdfs:subClassOf elite:PhysicalParticle ;
+                         rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:39794:-16:ed-1:v1:en:term:3.52> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """subatomic particles used for neutron imaging (3.41) (NI) purposes by the neutron attenuation process in a similar fashion to X-rays (3.76)
 Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abundance that can be correlated with the post-mortem (3.57) interval, i.e. the time that has elapsed since a person has died."""@en ;
@@ -2202,7 +2285,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#RBnyfPxRohc9STM4mfSMMFq
 :RBnyfPxRohc9STM4mfSMMFq rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         elite:Role ;
+                                         :NuclearEnergyRole ;
                          <http://www.w3.org/2004/02/skos/core#definition> "equipment and items of permanent, temporary and portable equipment playing an important role in safety systems/functions"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyCriticalEquipment"@en .
 
@@ -2381,7 +2464,7 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
 ###  https://w3id.org/emmo/domain/neo#RBzruvoEUI9hIHVtX34kGJu
 :RBzruvoEUI9hIHVtX34kGJu rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         elite:Role ,
+                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R8MPIXNWSb8RCelrAeGNxMc
@@ -2598,8 +2681,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RCP7vIugzt8V7rXL11buOZH
 :RCP7vIugzt8V7rXL11buOZH rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Process ,
-                                         elite:Whole ;
+                         rdfs:subClassOf elite:Whole ,
+                                         :NuclearEnergyProcess ;
                          rdfs:comment "Any accident involving facilities or activities from which a release of radioactive material occurs or is likely to occur and which has resulted or may result in an international significant transboundary release that could be of radiological safety significance for another State"@en ,
                                       "This is not explicitly stated to be a definition of nuclear accident, but it is derived from the statement of the scope of application in Article 1 of the Convention on Early Notification of a Nuclear Accident. However, this Convention has a limited scope of application, and it is unreasonable to consider a nuclear accident to be only an accident that results or may result in an international significant transboundary release"@en ;
                          rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
@@ -2894,7 +2977,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""
 ###  https://w3id.org/emmo/domain/neo#RDGsX7GTlCOL8Jlk3fXBK7U
 :RDGsX7GTlCOL8Jlk3fXBK7U rdf:type owl:Class ;
                          rdfs:subClassOf :R7qv2nUGxSNZRvXyF3CXPTr ,
-                                         elite:Role ,
+                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isOutputOf ;
                                            owl:someValuesFrom :R9ZCvqvWWCWSwBxX7K82iwL
@@ -2987,7 +3070,7 @@ ISO 21843:2023(en)"""
 
 ###  https://w3id.org/emmo/domain/neo#RDP6jdP3MdBK59hhoDGY0Vw
 :RDP6jdP3MdBK59hhoDGY0Vw rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Process ;
+                         rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
                          <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A thing that happens or takes place, with a well defined beginning and end, a clear specificity and relevance with respect to the surrounding environment."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en .
@@ -3003,7 +3086,7 @@ ISO 21843:2023(en)"""
 ###  https://w3id.org/emmo/domain/neo#RDS0g8UekSMDWjEgBp6z2sP
 :RDS0g8UekSMDWjEgBp6z2sP rdf:type owl:Class ;
                          rdfs:subClassOf :RBfqFRty5Hp4V4caVtEvWdD ,
-                                         elite:Role ,
+                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isOutputOf ;
                                            owl:someValuesFrom :R9ZCvqvWWCWSwBxX7K82iwL
@@ -3088,7 +3171,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 ###  https://w3id.org/emmo/domain/neo#RDZtzLsQmngV2BtJvmS5pbg
 :RDZtzLsQmngV2BtJvmS5pbg rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         elite:Role ,
+                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isParticipantOf ;
                                            owl:someValuesFrom :RBr5qtxSEMQ2oYZd1frAYZL
@@ -3149,14 +3232,14 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 ###  https://w3id.org/emmo/domain/neo#RDoeQzvUClmOY7fNhDvK0L1
 :RDoeQzvUClmOY7fNhDvK0L1 rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         elite:Role ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                           owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
-                                         ] ,
+                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R7pvNIWMyFBzmeL9EcH58g8
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
+                                           owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
                                          ] ;
                          rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:24679:-1:ed-1:v1:en:term:3.1> ;
                          <http://www.w3.org/2004/02/skos/core#comment> """They are distinguished from elements as integral part of a built environment
@@ -3437,7 +3520,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:24513:ed-1:v1:en"""
 
 ###  https://w3id.org/emmo/domain/neo#RJmt9cNm88D71RlMOkJ6WM
 :RJmt9cNm88D71RlMOkJ6WM rdf:type owl:Class ;
-                        rdfs:subClassOf elite:Role ;
+                        rdfs:subClassOf :NuclearEnergyRole ;
                         rdfs:isDefinedBy """https://aris.iaea.org/sites/Glossary.html 
 Glossary of Terms in ARIS Reports""" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "A substance that is used to remove or transfer heat from the reactor core. Common coolants include light water, heavy water, air, carbon dioxide, helium, liquid sodium, and a sodium-potassium alloy."@en ;
@@ -3868,7 +3951,7 @@ https://www.iso.org/obp/ui/#iso:std:iso:20043:-1:ed-1:v1:en"""
 ###  https://w3id.org/emmo/domain/neo#RiaJiI8PAvV7grwixkMCcr
 :RiaJiI8PAvV7grwixkMCcr rdf:type owl:Class ;
                         rdfs:subClassOf :NuclearEnergyObject ,
-                                        elite:Role ,
+                                        :NuclearEnergyRole ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -3981,7 +4064,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
 
 ###  https://w3id.org/emmo/domain/neo#RtX7ESf673Z9eYoseycPyl
 :RtX7ESf673Z9eYoseycPyl rdf:type owl:Class ;
-                        rdfs:subClassOf elite:Role ,
+                        rdfs:subClassOf :NuclearEnergyRole ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :RyMmVkVf9zClluOSgfr1Rh
@@ -4138,12 +4221,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RyMmVkVf9zClluOSgfr1Rh
 :RyMmVkVf9zClluOSgfr1Rh rdf:type owl:Class ;
-                        rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
-                                        elite:Whole ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                          owl:someValuesFrom :RCRVu2hmIevYnx0eZzyJEPs
-                                        ] ,
+                        rdfs:subClassOf elite:Whole ,
+                                        :RDoeQzvUClmOY7fNhDvK0L1 ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :RBW32C4x3sn1YahVG7uYVun
@@ -4151,6 +4230,10 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:participatesTo ;
                                           owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
+                                          owl:someValuesFrom :RCRVu2hmIevYnx0eZzyJEPs
                                         ] ;
                         <http://www.w3.org/2004/02/skos/core#definition> """part of a nuclear reactor (3.1.22), where the fissionable nuclides (3.1.2) sustaining the fission chain are located
 Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also included in the reactor core (3.1.23.1)."""@en ;
@@ -4179,589 +4262,14 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
  ] .
 
 
-#################################################################
-#    Individuals
-#################################################################
+###  https://w3id.org/emmo/domain/neo/neo#NuclearEnergyProcess
+:NuclearEnergyProcess rdf:type owl:Class ;
+                      rdfs:subClassOf <https://w3id.org/emmo/hume#Process> .
 
-###  https://w3id.org/emmo/domain/neo#R4UMKMNvIkmVZ4OSRIQ6Qv
-:R4UMKMNvIkmVZ4OSRIQ6Qv rdf:type owl:NamedIndividual ,
-                                 :RDuDSbKh236WI6rqMad7Ar4 ;
-                        elite:isBehaviourOf :R7MYrOmgGBYZ0JwNSP9CKGJ ;
-                        elite:isConstitutiveProcessOf :R7uvG224iPqEldlfFwndlKr ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICActivation_unit2"@en .
 
-
-###  https://w3id.org/emmo/domain/neo#R56puCaUpuR7eQFm7rEWOv
-:R56puCaUpuR7eQFm7rEWOv rdf:type owl:NamedIndividual ,
-                                 :RBwST6x27zdyWBgBunjc2Q9 ;
-                        elite:foregoes :R7RRzaczCz4wVsf2ZSE3cz5 ;
-                        elite:isConstitutiveProcessOf :R7uvG224iPqEldlfFwndlKr ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R5vADU834XOdmmbqErqMjD
-:R5vADU834XOdmmbqErqMjD rdf:type owl:NamedIndividual ,
-                                 :Rba6gbJ70iyZgFOVY5Z6Vo ;
-                        elite:foregoes :R8BzCYxsJkpBVMzHmrLDfBN ;
-                        elite:isBehaviourOf :R8nP70kb2tjsTW1qDOmrdbC ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit4"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R71kogAKcOnrzKRRvJYzEnf
-:R71kogAKcOnrzKRRvJYzEnf rdf:type owl:NamedIndividual ,
-                                  :RC5Uc3vBrAsYC8gCNkTsLH ;
-                         elite:coexistsWith :RCIQAmGtY5oJHuuVHp7Y9OF ;
-                         elite:foregoes :RCZSMiyXPZ1w9KtBMir31du ;
-                         elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "regularWaterInjection_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R7MYrOmgGBYZ0JwNSP9CKGJ
-:R7MYrOmgGBYZ0JwNSP9CKGJ rdf:type owl:NamedIndividual ,
-                                  :R9j7jE0NWQS6xBqDD8iJRbf ;
-                         elite:foregoes :R8SCvSsZInboPn0aMi5hJ2b ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICSystem_unit2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R7MkAFLocpCOTpR1W4846Wv
-:R7MkAFLocpCOTpR1W4846Wv rdf:type owl:NamedIndividual ,
-                                  :RDN44xs0tgwZS1p11BPMMKr ;
-                         elite:foregoes :R5vADU834XOdmmbqErqMjD ;
-                         elite:isBehaviourOf :R8nP70kb2tjsTW1qDOmrdbC ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit4"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R7OojlUGWcg81Y4DnKKUYtE
-:R7OojlUGWcg81Y4DnKKUYtE rdf:type owl:NamedIndividual ,
-                                  :R8bUZpp1yY81qmfgGNH0TyF ;
-                         elite:foregoes :RBnZe6rQs3iQOzfyrY5AKRG ;
-                         elite:isBehaviourOf :RTiXMunsU6yEXKeRVxMuQV ;
-                         elite:isConstitutiveProcessOf :R8nP70kb2tjsTW1qDOmrdbC ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit4"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R7RRzaczCz4wVsf2ZSE3cz5
-:R7RRzaczCz4wVsf2ZSE3cz5 rdf:type owl:NamedIndividual ;
-                         elite:affects :R7uvG224iPqEldlfFwndlKr ,
-                                       :R8nP70kb2tjsTW1qDOmrdbC ,
-                                       :R9icMA5hIFg4wyRyuVCUEYW ,
-                                       :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         elite:foregoes :R7OojlUGWcg81Y4DnKKUYtE ,
-                                        :RBc3mI1yVMSGjTWyWdVvMiP ,
-                                        :RBfahJ7XEvDRY0I74gA4EhW ,
-                                        :RCJ4sUQgpXReJhv2l3TNlPt ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfOffSitePower_Fukushima"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R7RYQTRTJpydcZySPvfj97U
-:R7RYQTRTJpydcZySPvfj97U rdf:type owl:NamedIndividual ,
-                                  :RBwST6x27zdyWBgBunjc2Q9 ;
-                         elite:follows :RBHjDlLwaPMxKKtjq16Lw1c ;
-                         elite:foregoes :R7RRzaczCz4wVsf2ZSE3cz5 ;
-                         elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R7TeIrUcoeFIohoZFYT6oHo
-:R7TeIrUcoeFIohoZFYT6oHo rdf:type owl:NamedIndividual ,
-                                  :R7t1vs1VKDAzHkcQsFbt9JC ;
-                         elite:foregoes :R71kogAKcOnrzKRRvJYzEnf ,
-                                        :RCIQAmGtY5oJHuuVHp7Y9OF ;
-                         elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "HPCIOperation_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R7UHidTtMLlwJsXw3LunBVr
-:R7UHidTtMLlwJsXw3LunBVr rdf:type owl:NamedIndividual ,
-                                  :Rba6gbJ70iyZgFOVY5Z6Vo ;
-                         elite:follows :R8SCvSsZInboPn0aMi5hJ2b ;
-                         elite:foregoes :R9ci3rSU9PmVM9hDoObI7GN ,
-                                        :R9t3qBNc7hgSJ9CltHNvCc4 ;
-                         elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R7c6WbN81RxcJpHXeGHXv8
-:R7c6WbN81RxcJpHXeGHXv8 rdf:type owl:NamedIndividual ,
-                                 :RB5vIXZFuMYcHWSzNAPjPtF ;
-                        elite:foregoes :RBKxneXt3UWJzKxOD5Inibz ;
-                        elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr
-:R7uvG224iPqEldlfFwndlKr rdf:type owl:NamedIndividual ,
-                                  :RRKk7nTYd2pj3LFUG4j9yj ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "unit_2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R7xpEdKwbxANkjtrQrh0ep
-:R7xpEdKwbxANkjtrQrh0ep rdf:type owl:NamedIndividual ,
-                                 :RCh38CRTgX4tnzCoB8auwPC ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "dieselGenerator_Fukushima"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R8BzCYxsJkpBVMzHmrLDfBN
-:R8BzCYxsJkpBVMzHmrLDfBN rdf:type owl:NamedIndividual ,
-                                  :RBq9x5WmblYOc4D7eFlfpdJ ;
-                         elite:isBehaviourOf :R8nP70kb2tjsTW1qDOmrdbC ,
-                                             :RDQ6WRHz0rKpRxnQ9WLdTh9 ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "explosionOfReactorBuilding_unit4"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R8MEESkThrtwrxXoXG6Fhjm
-:R8MEESkThrtwrxXoXG6Fhjm rdf:type owl:NamedIndividual ,
-                                  :R9MK7U9YLf7RtEpfQTDDr1q ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R8NisCJkeUXZCMxKr9tKNJq
-:R8NisCJkeUXZCMxKr9tKNJq rdf:type owl:NamedIndividual ,
-                                  :RCRVu2hmIevYnx0eZzyJEPs ;
-                         elite:isConstituentOf :R9icMA5hIFg4wyRyuVCUEYW ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "reactor_1_vessel"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R8SCvSsZInboPn0aMi5hJ2b
-:R8SCvSsZInboPn0aMi5hJ2b rdf:type owl:NamedIndividual ,
-                                  :RvstZtdRQckXTqUl1UK5Is ;
-                         elite:affects :R7uvG224iPqEldlfFwndlKr ,
-                                       :R8nP70kb2tjsTW1qDOmrdbC ,
-                                       :R9icMA5hIFg4wyRyuVCUEYW ,
-                                       :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         elite:foregoes :R7c6WbN81RxcJpHXeGHXv8 ,
-                                        :R9om4FPZlN1Gg2qFReIfI60 ,
-                                        :RMp5GbDdB45DJyWFDXk4qT ,
-                                        :RsZEl0qfySUbopX7Z6mlXE ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "tohokuTzunami"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R8Yr6YUUe0lh5UU0KHqF8Or
-:R8Yr6YUUe0lh5UU0KHqF8Or rdf:type owl:NamedIndividual ,
-                                  :RlYMwSSvmqekLRLzmf5IzV ;
-                         elite:foregoes :R4UMKMNvIkmVZ4OSRIQ6Qv ;
-                         elite:isBehaviourOf :R9ww5067sycKsLf6pU7vT06 ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "repeatedlyOpeningClosing_SRV_unit2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R8nP70kb2tjsTW1qDOmrdbC
-:R8nP70kb2tjsTW1qDOmrdbC rdf:type owl:NamedIndividual ,
-                                  :RRKk7nTYd2pj3LFUG4j9yj ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "unit_4"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R8wL8gWueAFQTEzJ4Rj2QKI
-:R8wL8gWueAFQTEzJ4Rj2QKI rdf:type owl:NamedIndividual ,
-                                  :R9MK7U9YLf7RtEpfQTDDr1q ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                    owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                    owl:someValuesFrom :RZtNAG3BL7lDm8L77EbEBd
-                                  ] ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R9Iwyc5qtHhh0QHOXsiris3
-:R9Iwyc5qtHhh0QHOXsiris3 rdf:type owl:NamedIndividual ,
-                                  :RDpEA8qdRk99FAT0xSGZgGS ;
-                         elite:foregoes :RBHjDlLwaPMxKKtjq16Lw1c ;
-                         elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R9L3ykUI6w5qe20x5hVL2mK
-:R9L3ykUI6w5qe20x5hVL2mK rdf:type owl:NamedIndividual ,
-                                  :RDuDSbKh236WI6rqMad7Ar4 ;
-                         elite:foregoes :R7TeIrUcoeFIohoZFYT6oHo ;
-                         elite:hasBehaviour :RPlulHioiJxZgZC1QMUgOL ;
-                         elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICActivation_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R9ci3rSU9PmVM9hDoObI7GN
-:R9ci3rSU9PmVM9hDoObI7GN rdf:type owl:NamedIndividual ,
-                                  :RC5Uc3vBrAsYC8gCNkTsLH ;
-                         elite:foregoes :RPcjVut6ArBpfKG9sYPMsM ;
-                         elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "regularWaterInjection_unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R9d1EKHudbhPmfvQxlND3Wr
-:R9d1EKHudbhPmfvQxlND3Wr rdf:type owl:NamedIndividual ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty elite:isBehaviourOf ;
-                                    owl:someValuesFrom :RRVTDj2E9x5cjit7EQ9Dkx
-                                  ] ;
-                         elite:foregoes :RDAWOe94vcv6aVGTD0p8Rh6 ;
-                         elite:isBehaviourOf :R7uvG224iPqEldlfFwndlKr ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R9icMA5hIFg4wyRyuVCUEYW
-:R9icMA5hIFg4wyRyuVCUEYW rdf:type owl:NamedIndividual ,
-                                  :RRKk7nTYd2pj3LFUG4j9yj ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "unit_1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R9lguEUksKNv9gLzWkqBDJ4
-:R9lguEUksKNv9gLzWkqBDJ4 rdf:type owl:NamedIndividual ,
-                                  :RDN44xs0tgwZS1p11BPMMKr ;
-                         elite:foregoes :R9L3ykUI6w5qe20x5hVL2mK ;
-                         elite:isBehaviourOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R9om4FPZlN1Gg2qFReIfI60
-:R9om4FPZlN1Gg2qFReIfI60 rdf:type owl:NamedIndividual ,
-                                  :RB5vIXZFuMYcHWSzNAPjPtF ;
-                         elite:foregoes :R9lguEUksKNv9gLzWkqBDJ4 ;
-                         elite:isBehaviourOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R9t3qBNc7hgSJ9CltHNvCc4
-:R9t3qBNc7hgSJ9CltHNvCc4 rdf:type owl:NamedIndividual ,
-                                  :R8FmlobZiHsCZi4CHKxgtMg ;
-                         elite:foregoes :RPcjVut6ArBpfKG9sYPMsM ;
-                         elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
-                         elite:successorOf :RC2M3wEsCROuuDC6Bjz9TLz ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SCVentilation_unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#R9ww5067sycKsLf6pU7vT06
-:R9ww5067sycKsLf6pU7vT06 rdf:type owl:NamedIndividual ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                    owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
-                                  ] ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SRV_unit2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RB4janzOcDoxSfpU6974nab
-:RB4janzOcDoxSfpU6974nab rdf:type owl:NamedIndividual ,
-                                  :R7pKuzitkkIAgc5NxDlqfH4 ;
-                         elite:foregoes :R8Yr6YUUe0lh5UU0KHqF8Or ;
-                         elite:isConstitutiveProcessOf :R7uvG224iPqEldlfFwndlKr ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RB9SU6UpAJ8MygM1uCXbEzt
-:RB9SU6UpAJ8MygM1uCXbEzt rdf:type owl:NamedIndividual ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty elite:isConstitutiveProcessOf ;
-                                    owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
-                                  ] ;
-                         elite:foregoes :RBHjDlLwaPMxKKtjq16Lw1c ;
-                         elite:isBehaviourOf :R7uvG224iPqEldlfFwndlKr ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RBEpkkG2mXF3wnnZPT5lDoa
-:RBEpkkG2mXF3wnnZPT5lDoa rdf:type owl:NamedIndividual ,
-                                  :RDGBzCkWozL4RpG1CuIzwPi ;
-                         elite:foregoes :R8BzCYxsJkpBVMzHmrLDfBN ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "HydrogenRelease_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RBHjDlLwaPMxKKtjq16Lw1c
-:RBHjDlLwaPMxKKtjq16Lw1c rdf:type owl:NamedIndividual ,
-                                  :RCcdLHL2BqdRJQkmiKL4MDW ;
-                         elite:affects :R7uvG224iPqEldlfFwndlKr ,
-                                       :R8nP70kb2tjsTW1qDOmrdbC ,
-                                       :R9icMA5hIFg4wyRyuVCUEYW ,
-                                       :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         elite:foregoes :R56puCaUpuR7eQFm7rEWOv ,
-                                        :R7RRzaczCz4wVsf2ZSE3cz5 ,
-                                        :R7RYQTRTJpydcZySPvfj97U ,
-                                        :RDmRDuXNQJPOriCxkLUlrUE ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "tohokuEarthquake"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RBKxneXt3UWJzKxOD5Inibz
-:RBKxneXt3UWJzKxOD5Inibz rdf:type owl:NamedIndividual ,
-                                  :RDN44xs0tgwZS1p11BPMMKr ;
-                         elite:follows :R8SCvSsZInboPn0aMi5hJ2b ;
-                         elite:foregoes :R7UHidTtMLlwJsXw3LunBVr ;
-                         elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RBc3mI1yVMSGjTWyWdVvMiP
-:RBc3mI1yVMSGjTWyWdVvMiP rdf:type owl:NamedIndividual ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty elite:isBehaviourOf ;
-                                    owl:someValuesFrom :RBsAUchYFBwAtcVUeFr8EFq
-                                  ] ;
-                         elite:foregoes :RBnZe6rQs3iQOzfyrY5AKRG ;
-                         elite:isBehaviourOf :RBrcoh6pN7tToFnM1m59yXl ;
-                         elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RBfahJ7XEvDRY0I74gA4EhW
-:RBfahJ7XEvDRY0I74gA4EhW rdf:type owl:NamedIndividual ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty elite:isBehaviourOf ;
-                                    owl:someValuesFrom :RBsAUchYFBwAtcVUeFr8EFq
-                                  ] ;
-                         elite:foregoes :RBnZe6rQs3iQOzfyrY5AKRG ;
-                         elite:isBehaviourOf :R8wL8gWueAFQTEzJ4Rj2QKI ;
-                         elite:isConstitutiveProcessOf :R7uvG224iPqEldlfFwndlKr ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RBnZe6rQs3iQOzfyrY5AKRG
-:RBnZe6rQs3iQOzfyrY5AKRG rdf:type owl:NamedIndividual ,
-                                  :RDuDSbKh236WI6rqMad7Ar4 ;
-                         elite:affects :R7uvG224iPqEldlfFwndlKr ,
-                                       :R8nP70kb2tjsTW1qDOmrdbC ,
-                                       :R9icMA5hIFg4wyRyuVCUEYW ,
-                                       :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         elite:foregoes :R8SCvSsZInboPn0aMi5hJ2b ,
-                                        :RB4janzOcDoxSfpU6974nab ,
-                                        :RC2M3wEsCROuuDC6Bjz9TLz ,
-                                        :RC6oDea7metjydM6Dr1mJsi ;
-                         elite:isBehaviourOf :R7xpEdKwbxANkjtrQrh0ep ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "dieselGeneratorActivation_Fukushima"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :RBnZe6rQs3iQOzfyrY5AKRG ;
-   owl:annotatedProperty elite:foregoes ;
-   owl:annotatedTarget :R8SCvSsZInboPn0aMi5hJ2b ;
-   <http://www.w3.org/2004/02/skos/core#comment> "Check this one"
- ] .
-
-
-###  https://w3id.org/emmo/domain/neo#RBrcoh6pN7tToFnM1m59yXl
-:RBrcoh6pN7tToFnM1m59yXl rdf:type owl:NamedIndividual ,
-                                  :R9MK7U9YLf7RtEpfQTDDr1q ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                    owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                    owl:someValuesFrom :RZtNAG3BL7lDm8L77EbEBd
-                                  ] ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RC2M3wEsCROuuDC6Bjz9TLz
-:RC2M3wEsCROuuDC6Bjz9TLz rdf:type owl:NamedIndividual ,
-                                  :R7pKuzitkkIAgc5NxDlqfH4 ;
-                         elite:foregoes :RCSOjPEJEBrRfStCCjfidCL ;
-                         elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
-                         elite:successorOf :RCJ4sUQgpXReJhv2l3TNlPt ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RC6oDea7metjydM6Dr1mJsi
-:RC6oDea7metjydM6Dr1mJsi rdf:type owl:NamedIndividual ;
-                         elite:affects :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         elite:foregoes :RFvEhkHbiPwVuY8AasDXll ;
-                         elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "pressureIncreasing_Unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RCGLvp3oNj6WAo2tvVy7DeU
-:RCGLvp3oNj6WAo2tvVy7DeU rdf:type owl:NamedIndividual ,
-                                  :R7twPwtQmmXFTKrDWM3POCD ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ICSystem_unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RCGk9WIE1u7wKk5PswM0eOU
-:RCGk9WIE1u7wKk5PswM0eOU rdf:type owl:NamedIndividual ,
-                                  :R0ZnwwPdidaBfZOg6tgZJr ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "reactorBuilding_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RCIQAmGtY5oJHuuVHp7Y9OF
-:RCIQAmGtY5oJHuuVHp7Y9OF rdf:type owl:NamedIndividual ,
-                                  :R8FmlobZiHsCZi4CHKxgtMg ;
-                         elite:coexistsWith :R71kogAKcOnrzKRRvJYzEnf ;
-                         elite:foregoes :RBEpkkG2mXF3wnnZPT5lDoa ,
-                                        :RCZSMiyXPZ1w9KtBMir31du ;
-                         elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SCVentilation_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RCJ4sUQgpXReJhv2l3TNlPt
-:RCJ4sUQgpXReJhv2l3TNlPt rdf:type owl:NamedIndividual ,
-                                  :R8bUZpp1yY81qmfgGNH0TyF ;
-                         elite:foregoes :RBnZe6rQs3iQOzfyrY5AKRG ;
-                         elite:isBehaviourOf :R8MEESkThrtwrxXoXG6Fhjm ;
-                         elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RCOfDWUyHIup4OUW4FsBUNW
-:RCOfDWUyHIup4OUW4FsBUNW rdf:type owl:NamedIndividual ,
-                                  :RDM3Wmp5f6fMXTDpEK3Dmsx ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "SafetyReliefValve_unit3" ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SRV_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RCSOjPEJEBrRfStCCjfidCL
-:RCSOjPEJEBrRfStCCjfidCL rdf:type owl:NamedIndividual ,
-                                  :RDuDSbKh236WI6rqMad7Ar4 ;
-                         elite:foregoes :R8SCvSsZInboPn0aMi5hJ2b ;
-                         elite:isBehaviourOf :RCGLvp3oNj6WAo2tvVy7DeU ;
-                         elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
-                         elite:successorOf :RC2M3wEsCROuuDC6Bjz9TLz ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ICActivation_unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RCZSMiyXPZ1w9KtBMir31du
-:RCZSMiyXPZ1w9KtBMir31du rdf:type owl:NamedIndividual ,
-                                  :RBq9x5WmblYOc4D7eFlfpdJ ;
-                         elite:foregoes :Rld8nnNRbLNp5DMRfVK1Hs ;
-                         elite:isBehaviourOf :RCGk9WIE1u7wKk5PswM0eOU ;
-                         elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "explosionOfReactorBuilding_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RDAWOe94vcv6aVGTD0p8Rh6
-:RDAWOe94vcv6aVGTD0p8Rh6 rdf:type owl:NamedIndividual ,
-                                  :RRPYBSdeHQObrzQD5UT74I ;
-                         elite:isConstitutiveProcessOf :R7uvG224iPqEldlfFwndlKr ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "irregularWaterInjection_unit2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RDNEIxMazl0JpSeCgw0Nxqo
-:RDNEIxMazl0JpSeCgw0Nxqo rdf:type owl:NamedIndividual ,
-                                  :RDpEA8qdRk99FAT0xSGZgGS ;
-                         elite:foregoes :RBHjDlLwaPMxKKtjq16Lw1c ;
-                         elite:isBehaviourOf :R8nP70kb2tjsTW1qDOmrdbC ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperation_noFuel"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RDQ6WRHz0rKpRxnQ9WLdTh9
-:RDQ6WRHz0rKpRxnQ9WLdTh9 rdf:type owl:NamedIndividual ,
-                                  :R0ZnwwPdidaBfZOg6tgZJr ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "reactorBuilding_unit4"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RDmRDuXNQJPOriCxkLUlrUE
-:RDmRDuXNQJPOriCxkLUlrUE rdf:type owl:NamedIndividual ,
-                                  :RBwST6x27zdyWBgBunjc2Q9 ;
-                         elite:foregoes :R7RRzaczCz4wVsf2ZSE3cz5 ;
-                         elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "CRInsertion_Unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RFvEhkHbiPwVuY8AasDXll
-:RFvEhkHbiPwVuY8AasDXll rdf:type owl:NamedIndividual ,
-                                 :RlYMwSSvmqekLRLzmf5IzV ;
-                        elite:foregoes :R9L3ykUI6w5qe20x5hVL2mK ;
-                        elite:isBehaviourOf :RCOfDWUyHIup4OUW4FsBUNW ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "repeatedlyOpeningClosing_SRV_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RMp5GbDdB45DJyWFDXk4qT
-:RMp5GbDdB45DJyWFDXk4qT rdf:type owl:NamedIndividual ,
-                                 :RB5vIXZFuMYcHWSzNAPjPtF ;
-                        elite:foregoes :RVDTdBhCWWXCt9qvBB5o8o ;
-                        elite:isBehaviourOf :R7uvG224iPqEldlfFwndlKr ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RPcjVut6ArBpfKG9sYPMsM
-:RPcjVut6ArBpfKG9sYPMsM rdf:type owl:NamedIndividual ,
-                                 :RBq9x5WmblYOc4D7eFlfpdJ ;
-                        elite:foregoes :RXcgBdYtloBN8Exe0yyXMw ;
-                        elite:isBehaviourOf :R9icMA5hIFg4wyRyuVCUEYW ,
-                                            :RUsOGEERLNgPu3mgta5Sm1 ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "explosionOfReactorBuilding_unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RPlulHioiJxZgZC1QMUgOL
-:RPlulHioiJxZgZC1QMUgOL rdf:type owl:NamedIndividual ,
-                                 :R9j7jE0NWQS6xBqDD8iJRbf ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                                   owl:someValuesFrom :R0ZnwwPdidaBfZOg6tgZJr
-                                 ] ;
-                        elite:foregoes :R8SCvSsZInboPn0aMi5hJ2b ;
-                        elite:hasConstitutiveProcess :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICSystem_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RTiXMunsU6yEXKeRVxMuQV
-:RTiXMunsU6yEXKeRVxMuQV rdf:type owl:NamedIndividual ,
-                                 :R9MK7U9YLf7RtEpfQTDDr1q ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit4"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :RTiXMunsU6yEXKeRVxMuQV ;
-   owl:annotatedProperty rdf:type ;
-   owl:annotatedTarget :R9MK7U9YLf7RtEpfQTDDr1q ;
-   <http://www.w3.org/2004/02/skos/core#comment> "add anay relations linke unit 2 and 3?"
- ] .
-
-
-###  https://w3id.org/emmo/domain/neo#RUsOGEERLNgPu3mgta5Sm1
-:RUsOGEERLNgPu3mgta5Sm1 rdf:type owl:NamedIndividual ,
-                                 :R0ZnwwPdidaBfZOg6tgZJr ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "reactorBuilding_unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RVDTdBhCWWXCt9qvBB5o8o
-:RVDTdBhCWWXCt9qvBB5o8o rdf:type owl:NamedIndividual ;
-                        elite:foregoes :R9d1EKHudbhPmfvQxlND3Wr ;
-                        elite:isBehaviourOf :R7uvG224iPqEldlfFwndlKr ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "ACPowerLoss_unit2"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RXcgBdYtloBN8Exe0yyXMw
-:RXcgBdYtloBN8Exe0yyXMw rdf:type owl:NamedIndividual ,
-                                 :RRPYBSdeHQObrzQD5UT74I ;
-                        elite:isConstitutiveProcessOf :R9icMA5hIFg4wyRyuVCUEYW ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "irregularWaterInjection_unit1"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RaHh8VTYDHA1krUVvo6jGG
-:RaHh8VTYDHA1krUVvo6jGG rdf:type owl:NamedIndividual ,
-                                 :RRKk7nTYd2pj3LFUG4j9yj ;
-                        elite:foregoes :RBHjDlLwaPMxKKtjq16Lw1c ;
-                        elite:isBehaviourOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit3" .
-
-
-###  https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9
-:Rb5hP2Q5XG2czxqOFu5nb9 rdf:type owl:NamedIndividual ,
-                                 :RRKk7nTYd2pj3LFUG4j9yj ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "unit_3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#Rld8nnNRbLNp5DMRfVK1Hs
-:Rld8nnNRbLNp5DMRfVK1Hs rdf:type owl:NamedIndividual ,
-                                 :RRPYBSdeHQObrzQD5UT74I ;
-                        elite:isConstitutiveProcessOf :Rb5hP2Q5XG2czxqOFu5nb9 ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "irregularWaterInjection_unit3"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#RsZEl0qfySUbopX7Z6mlXE
-:RsZEl0qfySUbopX7Z6mlXE rdf:type owl:NamedIndividual ,
-                                 :RB5vIXZFuMYcHWSzNAPjPtF ;
-                        elite:foregoes :R7MkAFLocpCOTpR1W4846Wv ;
-                        elite:isBehaviourOf :R8nP70kb2tjsTW1qDOmrdbC ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "lossOfUltimateHeatSink_unit4"@en .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :R8KlSYQnSKI6PoJZNIdhwNI
-                elite:Gas
-                elite:Liquid
-                elite:Plasma
-              )
-] .
+###  https://w3id.org/emmo/domain/neo/neo#NuclearEnergyRole
+:NuclearEnergyRole rdf:type owl:Class ;
+                   rdfs:subClassOf <https://w3id.org/emmo/hume#Role> .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
