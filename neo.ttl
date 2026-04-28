@@ -108,25 +108,25 @@ elite:isOutputOf rdf:type owl:AnnotationProperty ;
                         rdfs:subPropertyOf rdfs:comment .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#referenceINIS
+###  https://w3id.org/emmo/domain/neo#referenceINIS
 :referenceINIS rdf:type owl:AnnotationProperty ;
                rdfs:comment "Reference to the IAEA INIS Thesaurus term."@en ;
                rdfs:subPropertyOf rdfs:seeAlso .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#referenceISO
+###  https://w3id.org/emmo/domain/neo#referenceISO
 :referenceISO rdf:type owl:AnnotationProperty ;
               rdfs:subPropertyOf rdfs:seeAlso ;
               rdfs:range xsd:anyURI .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#referenceNRC
+###  https://w3id.org/emmo/domain/neo#referenceNRC
 :referenceNRC rdf:type owl:AnnotationProperty ;
               rdfs:subPropertyOf rdfs:seeAlso ;
               rdfs:range xsd:anyURI .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#referenceNSSG
+###  https://w3id.org/emmo/domain/neo#referenceNSSG
 :referenceNSSG rdf:type owl:AnnotationProperty ;
                rdfs:comment "Reference to IAEA Nuclear Safety and Security Glossary term IRI."@en ;
                rdfs:subPropertyOf rdfs:seeAlso ;
@@ -201,14 +201,6 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 #    Classes
 #################################################################
 
-###  https://w3id.org/emmo/0.0.7/elite#Substance
-elite:Substance rdf:type owl:Class .
-
-
-###  https://w3id.org/emmo/0.0.7/elite#Whole
-elite:Whole rdf:type owl:Class .
-
-
 ###  https://w3id.org/emmo/domain/neo#ArtificialRadioactiveMaterial
 :ArtificialRadioactiveMaterial rdf:type owl:Class ;
                                rdfs:subClassOf :RadiactiveMaterialByOccurence ;
@@ -260,10 +252,20 @@ elite:Whole rdf:type owl:Class .
  ] .
 
 
+###  https://w3id.org/emmo/domain/neo#NuclearEnergyProcess
+:NuclearEnergyProcess rdf:type owl:Class ;
+                      rdfs:subClassOf <https://w3id.org/emmo/hume#Process> .
+
+
+###  https://w3id.org/emmo/domain/neo#NuclearEnergyRole
+:NuclearEnergyRole rdf:type owl:Class ;
+                   rdfs:subClassOf <https://w3id.org/emmo/hume#Role> ;
+                   rdfs:label "NuclearEnergyRole"@en .
+
+
 ###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
 :R0N27qMQzeRjM0vSOeAvUT rdf:type owl:Class ;
-                        rdfs:subClassOf elite:Whole ,
-                                        :NuclearEnergyObject ,
+                        rdfs:subClassOf :NuclearEnergyObject ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:participatesTo ;
                                           owl:someValuesFrom :RyLZ508FsJKMTIHvSNuJZk
@@ -911,8 +913,7 @@ perform its intended safety functions.""" ;
 
 ###  https://w3id.org/emmo/domain/neo#R7pvNIWMyFBzmeL9EcH58g8
 :R7pvNIWMyFBzmeL9EcH58g8 rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Whole ,
-                                         :REnnyld9FmnAjLpeDyUsnv ;
+                         rdfs:subClassOf :REnnyld9FmnAjLpeDyUsnv ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "BWR"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> """nuclear reactor (3.1.22) with water as a coolant and as a moderator (3.1.23.1.2), boiling in the core 
 Note 1 to entry: In a boiling water reactor the generated heat is removed from the core by evaporation. """@en ;
@@ -999,8 +1000,7 @@ ISO 12749-5:2018(en)"""
 
 ###  https://w3id.org/emmo/domain/neo#R7tsY17A1s9DZ7gbZrjbVt6
 :R7tsY17A1s9DZ7gbZrjbVt6 rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Whole ,
-                                         :R9p0u8Gh9Tup5P416Wl32S7 ,
+                         rdfs:subClassOf :R9p0u8Gh9Tup5P416Wl32S7 ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isSubProcessOf ;
                                            owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
@@ -1213,8 +1213,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#R89Yy2V18LstH4xGXyNb9XN
 :R89Yy2V18LstH4xGXyNb9XN rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyObject ,
-                                         :NuclearEnergyRole ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          <http://www.w3.org/2004/02/skos/core#definition> "elements contained in the turbine building" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "TurbineBuildingContents"@en .
 
@@ -1328,8 +1327,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#R8MPIXNWSb8RCelrAeGNxMc
 :R8MPIXNWSb8RCelrAeGNxMc rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Whole ,
-                                         :RDpEA8qdRk99FAT0xSGZgGS ,
+                         rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstitutiveProcessOf ;
                                            owl:someValuesFrom :RBzruvoEUI9hIHVtX34kGJu
@@ -1531,10 +1529,9 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
 ###  https://w3id.org/emmo/domain/neo#R8qKVAw3v5SZK2O6Y8cyDEr
 :R8qKVAw3v5SZK2O6Y8cyDEr rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyRole ;
-                         rdfs:isDefinedBy "https://aris.iaea.org/sites/Glossary.html Glossary of Terms in ARIS Reports"@en ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "Moderator" ;
+                         rdfs:isDefinedBy <https://aris.iaea.org/Glossary/> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A material that is used to decrease the speed of the fast neutron produced during a fission even and thus sustaining a chain reaction."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorNuclearModerator"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Moderator"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8rcf1IQoRtZq8YkEpiByPn
@@ -1688,7 +1685,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en"""
 
 ###  https://w3id.org/emmo/domain/neo#R98XsS8Lh28DOd8LW80vc2w
 :R98XsS8Lh28DOd8LW80vc2w rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Whole ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          rdfs:isDefinedBy <https://www.nrc.gov/docs/ML0707/ML070710376.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """Conditions of normal operation that are expected to occur one or
 more times during the life of the nuclear power unit and include but
@@ -1874,7 +1871,7 @@ and Radiation Protection, 2018 Edition """ ;
 
 ###  https://w3id.org/emmo/domain/neo#R9TI5UbsBXnAYSIi17pJARr
 :R9TI5UbsBXnAYSIi17pJARr rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyRole ;
+                         rdfs:subClassOf :NuclearEnergyProcess ;
                          rdfs:seeAlso <http://www-ns.iaea.org/downloads/ni/training/specific_expert_knowledge/psa-level1/III1_1_A%20%20Initiating%20Event%20Analysis.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearPlantAccidentEvents"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "An event that creates disturbance in a Nuclear Reactor Plant Management and that leads to hazardous condition to the surrounding environment where it takes place"@en ;
@@ -1884,7 +1881,6 @@ and Radiation Protection, 2018 Edition """ ;
 ###  https://w3id.org/emmo/domain/neo#R9ZCvqvWWCWSwBxX7K82iwL
 :R9ZCvqvWWCWSwBxX7K82iwL rdf:type owl:Class ;
                          rdfs:subClassOf :R9p0u8Gh9Tup5P416Wl32S7 ,
-                                         :NuclearEnergyProcess ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstitutiveProcessOf ;
                                            owl:someValuesFrom :RCzybo2ACvDW8XnRRQcoQTg
@@ -1973,7 +1969,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
 
 ###  https://w3id.org/emmo/domain/neo#R9p0u8Gh9Tup5P416Wl32S7
 :R9p0u8Gh9Tup5P416Wl32S7 rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyProcess ;
+                         rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalPhenomenon> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "In nuclear physics and nuclear chemistry, a nuclear reaction is a process in which two nuclei, or a nucleus and an external subatomic particle, collide to produce one or more new nuclides. Thus, a nuclear reaction must cause a transformation of at least one nuclide to another."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReaction"@en .
 
@@ -1988,7 +1984,6 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
 ###  https://w3id.org/emmo/domain/neo#R9s3bSmQntRAaUAzg5iKhyy
 :R9s3bSmQntRAaUAzg5iKhyy rdf:type owl:Class ;
                          rdfs:subClassOf :RBfqFRty5Hp4V4caVtEvWdD ,
-                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isInputOf ;
                                            owl:someValuesFrom :R81QzLfYKssKKQ25a1Ibyv7
@@ -2180,7 +2175,6 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
 ###  https://w3id.org/emmo/domain/neo#RBW32C4x3sn1YahVG7uYVun
 :RBW32C4x3sn1YahVG7uYVun rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -2284,8 +2278,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RBnyfPxRohc9STM4mfSMMFq
 :RBnyfPxRohc9STM4mfSMMFq rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyObject ,
-                                         :NuclearEnergyRole ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          <http://www.w3.org/2004/02/skos/core#definition> "equipment and items of permanent, temporary and portable equipment playing an important role in safety systems/functions"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyCriticalEquipment"@en .
 
@@ -2464,7 +2457,6 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
 ###  https://w3id.org/emmo/domain/neo#RBzruvoEUI9hIHVtX34kGJu
 :RBzruvoEUI9hIHVtX34kGJu rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:participatesTo ;
                                            owl:someValuesFrom :R8MPIXNWSb8RCelrAeGNxMc
@@ -2681,8 +2673,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RCP7vIugzt8V7rXL11buOZH
 :RCP7vIugzt8V7rXL11buOZH rdf:type owl:Class ;
-                         rdfs:subClassOf elite:Whole ,
-                                         :NuclearEnergyProcess ;
+                         rdfs:subClassOf :NuclearEnergyProcess ;
                          rdfs:comment "Any accident involving facilities or activities from which a release of radioactive material occurs or is likely to occur and which has resulted or may result in an international significant transboundary release that could be of radiological safety significance for another State"@en ,
                                       "This is not explicitly stated to be a definition of nuclear accident, but it is derived from the statement of the scope of application in Article 1 of the Convention on Early Notification of a Nuclear Accident. However, this Convention has a limited scope of application, and it is unreasonable to consider a nuclear accident to be only an accident that results or may result in an international significant transboundary release"@en ;
                          rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
@@ -2977,7 +2968,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""
 ###  https://w3id.org/emmo/domain/neo#RDGsX7GTlCOL8Jlk3fXBK7U
 :RDGsX7GTlCOL8Jlk3fXBK7U rdf:type owl:Class ;
                          rdfs:subClassOf :R7qv2nUGxSNZRvXyF3CXPTr ,
-                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isOutputOf ;
                                            owl:someValuesFrom :R9ZCvqvWWCWSwBxX7K82iwL
@@ -3086,7 +3076,6 @@ ISO 21843:2023(en)"""
 ###  https://w3id.org/emmo/domain/neo#RDS0g8UekSMDWjEgBp6z2sP
 :RDS0g8UekSMDWjEgBp6z2sP rdf:type owl:Class ;
                          rdfs:subClassOf :RBfqFRty5Hp4V4caVtEvWdD ,
-                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isOutputOf ;
                                            owl:someValuesFrom :R9ZCvqvWWCWSwBxX7K82iwL
@@ -3232,7 +3221,6 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 ###  https://w3id.org/emmo/domain/neo#RDoeQzvUClmOY7fNhDvK0L1
 :RDoeQzvUClmOY7fNhDvK0L1 rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         :NuclearEnergyRole ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R7pvNIWMyFBzmeL9EcH58g8
@@ -3521,8 +3509,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:24513:ed-1:v1:en"""
 ###  https://w3id.org/emmo/domain/neo#RJmt9cNm88D71RlMOkJ6WM
 :RJmt9cNm88D71RlMOkJ6WM rdf:type owl:Class ;
                         rdfs:subClassOf :NuclearEnergyRole ;
-                        rdfs:isDefinedBy """https://aris.iaea.org/sites/Glossary.html 
-Glossary of Terms in ARIS Reports""" ;
+                        rdfs:isDefinedBy <https://aris.iaea.org/Glossary/> ;
                         <http://www.w3.org/2004/02/skos/core#definition> "A substance that is used to remove or transfer heat from the reactor core. Common coolants include light water, heavy water, air, carbon dioxide, helium, liquid sodium, and a sodium-potassium alloy."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoolant"@en .
 
@@ -3833,7 +3820,8 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
 ###  https://w3id.org/emmo/domain/neo#RadiactiveMaterialByOccurence
 :RadiactiveMaterialByOccurence rdf:type owl:Class ;
                                rdfs:subClassOf :R9PjB5mvpVfreaI0pbTQFj6 ;
-                               <http://www.w3.org/2004/02/skos/core#definition> "The superclass for categorisation of nuclear materials according to their occurence, natural or artificial"@en .
+                               <http://www.w3.org/2004/02/skos/core#definition> "The superclass for categorisation of nuclear materials according to their occurence, natural or artificial"@en ;
+                               <http://www.w3.org/2004/02/skos/core#prefLabel> "RadioactiveMaterialByOccurrence"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#RapiFOXlLXIKxdiWW4ljdc
@@ -3951,7 +3939,6 @@ https://www.iso.org/obp/ui/#iso:std:iso:20043:-1:ed-1:v1:en"""
 ###  https://w3id.org/emmo/domain/neo#RiaJiI8PAvV7grwixkMCcr
 :RiaJiI8PAvV7grwixkMCcr rdf:type owl:Class ;
                         rdfs:subClassOf :NuclearEnergyObject ,
-                                        :NuclearEnergyRole ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -4064,7 +4051,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
 
 ###  https://w3id.org/emmo/domain/neo#RtX7ESf673Z9eYoseycPyl
 :RtX7ESf673Z9eYoseycPyl rdf:type owl:Class ;
-                        rdfs:subClassOf :NuclearEnergyRole ,
+                        rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :RyMmVkVf9zClluOSgfr1Rh
@@ -4221,8 +4208,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#RyMmVkVf9zClluOSgfr1Rh
 :RyMmVkVf9zClluOSgfr1Rh rdf:type owl:Class ;
-                        rdfs:subClassOf elite:Whole ,
-                                        :RDoeQzvUClmOY7fNhDvK0L1 ,
+                        rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :RBW32C4x3sn1YahVG7uYVun
@@ -4260,16 +4246,6 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
    owl:annotatedTarget "Water from the filtrated water tanks and raw water underground tanks can be injected by the electric pumps, fire engines, or alternatively by concrete pumper." ;
    rdfs:seeAlso "https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"
  ] .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#NuclearEnergyProcess
-:NuclearEnergyProcess rdf:type owl:Class ;
-                      rdfs:subClassOf <https://w3id.org/emmo/hume#Process> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#NuclearEnergyRole
-:NuclearEnergyRole rdf:type owl:Class ;
-                   rdfs:subClassOf <https://w3id.org/emmo/hume#Role> .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
