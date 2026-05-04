@@ -516,8 +516,6 @@ pressure and two low pressure systems."""@en ;
                          rdfs:subClassOf :RBtkzbuLn6g0vdtDU3mijH0 ;
                          rdfs:seeAlso """Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)
 https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ,
-                                                                       "Missed definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulateMultipleFaiulureEvent"@en .
 
 
@@ -548,7 +546,6 @@ all offsite power.""" ;
                          rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
                          rdfs:comment "Missed definition" ;
                          rdfs:seeAlso "EMMO" ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "IntentionalProcess"@en .
 
 
@@ -681,7 +678,6 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
                                          ] ;
                          rdfs:comment "Fission products and actinides produced by neutron absorption of nuclear fuel itself are normally referred to by those specific names, and activation product reserved for products of neutron capture by other materials, such as structural components of the nuclear reactor or nuclear bomb, the reactor coolant, control rods or other neutron poisons, or materials in the environment. All of these, however, need to be handled as radioactive waste. Some nuclides originate in more than one way, as activation products or fission products."@en ;
                          rdfs:seeAlso <https://en.wikipedia.org/wiki/Activation_product> ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Controllare se va bene senza il define by" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPActivationProduct"@en .
 
 
@@ -878,9 +874,9 @@ among the preventive measures employed in reactor design""" ;
                                            owl:onProperty elite:isOutputOf ;
                                            owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
                                          ] ;
-                         rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Nuclear fuel removed from a reactor following irradiation that is no longer usable in its present form because of depletion of fissile material, poison buildup or radiation damage."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearSpentFuel"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearSpentFuel"@en ;
+                         :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/1230.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7oHlh8OgEkyG3XXGpiYlC5
@@ -903,7 +899,7 @@ perform its intended safety functions.""" ;
    owl:annotatedSource :R7oHlh8OgEkyG3XXGpiYlC5 ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Loss of the ability of a structure, system or component to function within acceptance criteria. The structure, system or component is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time. A failure may be the result of e.g. a hardware fault, a software fault, a system fault, an operator error or a maintenance error."@en ;
-   rdfs:isDefinedBy "https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf"
+   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/949.html"^^xsd:anyURI
  ] .
 
 
@@ -929,7 +925,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget """nuclear reactor (3.1.22) with water as a coolant and as a moderator (3.1.23.1.2), boiling in the core 
 Note 1 to entry: In a boiling water reactor the generated heat is removed from the core by evaporation. """@en ;
-   rdfs:seeAlso "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors "
+   :referenceISO "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors "^^xsd:anyURI
  ] .
 
 
@@ -1529,7 +1525,6 @@ be considered. The possible need to support mobile means might also be considere
 Note 1 to entry: See inelastic scattering (4.2).
 Note 2 to entry: In elastic scattering interactions, the moving particle can be deflected through angles of up to 180°."""@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "BinaryElasticScattering" ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "collision between a neutron and a nucleus in which the total kinetic energy (3.35) and the total momentum are conserved"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearElasticScattering"@en .
 
@@ -1726,7 +1721,6 @@ all offsite power."""@en ;
                                            owl:someValuesFrom :RDZtzLsQmngV2BtJvmS5pbg
                                          ] ;
                          rdfs:seeAlso "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull29-4/29405042730.pdf" ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPOperatorError"@en .
 
 
@@ -1814,7 +1808,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#R9LQGc8WSd4vzQtq1aNhNEq
 :R9LQGc8WSd4vzQtq1aNhNEq rdf:type owl:Class ;
                          rdfs:subClassOf :R7oHlh8OgEkyG3XXGpiYlC5 ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Loss of the ability of a structure to function within acceptance criteria. The structure is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "StructureFailure"@en .
 
@@ -1822,7 +1815,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :R9LQGc8WSd4vzQtq1aNhNEq ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Loss of the ability of a structure to function within acceptance criteria. The structure is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time."@en ;
-   rdfs:seeAlso "https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf"
+   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/949.html"^^xsd:anyURI
  ] .
 
 
@@ -1884,12 +1877,11 @@ relating to the emission of ionizing radiation or particles’."""@en ,
 concentration and the total activity in the consignment exceed the values specified
 in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ;
                          rdfs:isDefinedBy <https://www.undrr.org/understanding-disaster-risk/terminology/hips/tl0002> ;
-                         rdfs:seeAlso """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
-and Radiation Protection, 2018 Edition """ ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearMaterial" ,
                                                                         "NuclearReactorMaterial" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A radioactive material is a substance or a material emitting, or related to the emission of, ionising radiation (either in the form of electromagnetic waves or particle radiation) (IAEA, 2018)."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RadioactiveMaterial"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RadioactiveMaterial"@en ;
+                         :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/1192.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#R9Q7QurACY7OmMRPPPbDU7J
@@ -2514,7 +2506,6 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
 ###  https://w3id.org/emmo/domain/neo#RC5Uc3vBrAsYC8gCNkTsLH
 :RC5Uc3vBrAsYC8gCNkTsLH rdf:type owl:Class ;
                         rdfs:subClassOf :R8MPIXNWSb8RCelrAeGNxMc ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Material Injection following a well defined cycle without alterations."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "RegularInjection"@en .
 
@@ -2657,7 +2648,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#RCJyL3ZfDUXJeZ2m8EwYQO9
 :RCJyL3ZfDUXJeZ2m8EwYQO9 rdf:type owl:Class ;
                          rdfs:subClassOf :R7oHlh8OgEkyG3XXGpiYlC5 ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Loss of the ability of a system to function within acceptance criteria. The system is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemFailure"@en .
 
@@ -2665,7 +2655,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :RCJyL3ZfDUXJeZ2m8EwYQO9 ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Loss of the ability of a system to function within acceptance criteria. The system is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time."@en ;
-   rdfs:seeAlso "https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf"
+   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/949.html"^^xsd:anyURI
  ] .
 
 
@@ -2690,7 +2680,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          rdfs:comment "Any accident involving facilities or activities from which a release of radioactive material occurs or is likely to occur and which has resulted or may result in an international significant transboundary release that could be of radiological safety significance for another State"@en ,
                                       "This is not explicitly stated to be a definition of nuclear accident, but it is derived from the statement of the scope of application in Article 1 of the Convention on Early Notification of a Nuclear Accident. However, this Convention has a limited scope of application, and it is unreasonable to consider a nuclear accident to be only an accident that results or may result in an international significant transboundary release"@en ;
                          rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Nuclear Plant Accident are any accident involving nuclear plant causing a radioactivity release. Depending on the magnitude of radioactive release there are different type of Nuclear Accident." ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPlantAccident"@en .
 
@@ -2830,7 +2819,6 @@ in operation or in accidents."""@en ;
 :RCfqimjBP1uypJVnd32xcTB rdf:type owl:Class ;
                          rdfs:subClassOf :RLEjSGGgoWOVMGjQsskCsb ;
                          rdfs:comment "Seawater injection into Unit 1 was ready to be resumed upon the refilling of the backwash valve pit, but all activities, including the ongoing seawater injection into the Unit 3 reactor, had to stop because of an explosion in Unit 3 (Par. 1.1.3.21., pp 26-27)"@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfSeaWaterCooling"@en .
 
 [ rdf:type owl:Axiom ;
@@ -2903,8 +2891,7 @@ subsequently removed from a reactor core as a single unit."""@en ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget """A set of fuel elements and associated components which are loaded into and
 subsequently removed from a reactor core as a single unit."""@en ;
-   rdfs:isDefinedBy """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
-and Radiation Protection, 2018 Edition """
+   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/974.html"^^xsd:anyURI
  ] .
 
 
@@ -2984,9 +2971,9 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""^^xsd:anyURI
                                            owl:someValuesFrom :R9ZCvqvWWCWSwBxX7K82iwL
                                          ] ;
                          rdfs:comment "Used in contexts where the radiation emitted by the radionuclide is the potential hazard."@en ;
-                         rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition "@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A radionuclide produced by nuclear fission."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "FissionProduct"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "FissionProduct"@en ;
+                         :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/961.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDLYlpbjx3Rhwa0uGxFNWzC
@@ -3072,16 +3059,9 @@ ISO 21843:2023(en)"""^^xsd:anyURI
 ###  https://w3id.org/emmo/domain/neo#RDP6jdP3MdBK59hhoDGY0Vw
 :RDP6jdP3MdBK59hhoDGY0Vw rdf:type owl:Class ;
                          rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
+                         rdfs:seeAlso "See: https://en.wikipedia.org/wiki/Event" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A thing that happens or takes place, with a well defined beginning and end, a clear specificity and relevance with respect to the surrounding environment."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :RDP6jdP3MdBK59hhoDGY0Vw ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
-   owl:annotatedTarget "Missed DefinedBy" ;
-   <http://www.w3.org/2004/02/skos/core#comment> "See: https://en.wikipedia.org/wiki/Event"
- ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDS0g8UekSMDWjEgBp6z2sP
@@ -3184,7 +3164,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
    owl:annotatedSource :RDZtzLsQmngV2BtJvmS5pbg ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Any person who works, whether full time, part time or temporarily, for an employer and who has recognized rights and duties in relation to occupational radiation protection."@en ;
-   rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition"
+   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/236.html"^^xsd:anyURI
  ] .
 
 
@@ -3198,7 +3178,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
    owl:annotatedSource :RDdFdbRqtigD5ry1nrSpxkb ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Loss of the ability of a component to function within acceptance criteria. The component is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time."@en ;
-   rdfs:seeAlso "https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf"
+   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/949"^^xsd:anyURI
  ] .
 
 
@@ -3275,9 +3255,9 @@ undetected failures can be lower."""@en ,
    owl:annotatedSource :RDpEA8qdRk99FAT0xSGZgGS ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Operation within specified operational limits and conditions. This includes startup, power operation, shutting down, shutdown, maintenance, testing and refuelling"@en ;
-   rdfs:isDefinedBy "https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf" ;
    rdfs:seeAlso """Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)
-https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
+https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
+   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/597.html"^^xsd:anyURI
  ] .
 
 
@@ -3542,11 +3522,11 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:24513:ed-1:v1:en"""^^xsd:anyURI
 by the operator, including operating error, equipment failure or other mishap, and deliberate
 action on the part of others, the consequences or potential consequences of which are not
 negligible from the point of view of protection and safety"""@en ;
-                        rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                         <http://www.w3.org/2004/02/skos/core#definition> """Is any occurrence that can lead to potential consequences that are not
 negligible from the point of view of protection and safety of a Nuclear power plant"""@en ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPUnintendedEvent"@en .
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPUnintendedEvent"@en ;
+                        :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/923.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo#RMiSxLtLOMDcYH1jWDJO1b
@@ -3555,6 +3535,13 @@ negligible from the point of view of protection and safety of a Nuclear power pl
                         rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition﻿" ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "SpentFuelManagementFacility"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "CommonSpentFuelBuilding"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RMiSxLtLOMDcYH1jWDJO1b ;
+   owl:annotatedProperty rdfs:isDefinedBy ;
+   owl:annotatedTarget "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition﻿" ;
+   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/414.html"^^xsd:anyURI
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RNNqkJui2M9zYKvBkz3iQ
@@ -3577,8 +3564,7 @@ negligible from the point of view of protection and safety of a Nuclear power pl
    owl:annotatedSource :RNNqkJui2M9zYKvBkz3iQ ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A rod of nuclear fuel, its cladding and any associated components necessary to form a structural entity.﻿"@en ;
-   rdfs:isDefinedBy """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
-and Radiation Protection, 2018 Edition """
+   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/976.html"^^xsd:anyURI
  ] .
 
 
@@ -3586,11 +3572,10 @@ and Radiation Protection, 2018 Edition """
 :RPURhpVoxOOYoC2J28Rgfd rdf:type owl:Class ;
                         rdfs:subClassOf :R9PjB5mvpVfreaI0pbTQFj6 ,
                                         :RtX7ESf673Z9eYoseycPyl ;
-                        rdfs:isDefinedBy """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
-and Radiation Protection, 2018 Edition """ ;
                         <http://www.w3.org/2004/02/skos/core#definition> """Fissionable nuclear material in the form of fabricated elements for loading
 into the reactor core of a civil nuclear power plant or research reactor."""@en ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearFuel"@en .
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearFuel"@en ;
+                        :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/668.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#RRKk7nTYd2pj3LFUG4j9yj
@@ -3803,9 +3788,9 @@ https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""^^xsd:anyURI
                                           owl:onProperty elite:isInputOf ;
                                           owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
                                         ] ;
-                        rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "New fuel or unirradiated fuel, including fuel fabricated from fissionable material recovered by reprocessing previously irradiated fuel." ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear﻿FreshFuel"@en .
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear﻿FreshFuel"@en ;
+                        :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/669.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#RaEj4uH02jwi8e78Nr9PvH
@@ -3813,8 +3798,6 @@ https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""^^xsd:anyURI
                         rdfs:subClassOf :RBtkzbuLn6g0vdtDU3mijH0 ;
                         rdfs:seeAlso """Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)
 https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ,
-                                                                      "Missed definition" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulatedSingleEvent"@en .
 
 
@@ -3991,7 +3974,7 @@ constructed"""@en ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget """All activities performed to achieve the purpose for which an authorized facility was
 constructed"""@en ;
-   rdfs:isDefinedBy "https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf"
+   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/690.html"^^xsd:anyURI
  ] .
 
 
@@ -4108,9 +4091,7 @@ operational states and, for some barriers, in accident conditions"""@en ;
 of anticipated operational occurrences and to maintain the effectiveness of physical barriers placed between
 a radiation source or radioactive material and workers, members of the public or the environment, in
 operational states and, for some barriers, in accident conditions"""@en ;
-   rdfs:isDefinedBy """IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation
-Protection, 2018 Edition, IAEA, Vienna (in press).
-https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf"""
+   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/1069.html"^^xsd:anyURI
  ] .
 
 
