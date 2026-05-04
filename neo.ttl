@@ -342,6 +342,13 @@ further decays, the event is referred to as inelastic scattering."""@en ;
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R1bLylxOI5EPBIWCiqLVQv ;
+   owl:annotatedProperty rdfs:seeAlso ;
+   owl:annotatedTarget <https://www.iso.org/obp/ui/en/#iso:std:iso:15932:ed-1:v1:en:term:2.2.2> ;
+   :referenceISO <>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R1bLylxOI5EPBIWCiqLVQv ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget """When the compound nucleus formed by neutron capture decays by the emission of
 one neutron, leaving the nucleus in an excited state which subsequently undergoes
@@ -364,7 +371,7 @@ further decays, the event is referred to as inelastic scattering."""@en ;
    owl:annotatedSource :R1pzLL39gf2pPU0vtkTmnm ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Rapidly lower reactor pressure to allow low pressure injection sources to maintain reactor water level above the Top of Active Fuel."@en ;
-   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1125/ML11258A366.pdf"
+   :referenceNRC "https://www.nrc.gov/docs/ML1125/ML11258A366.pdf"^^xsd:anyURI
  ] .
 
 
@@ -402,7 +409,6 @@ separation of one electric circuit from another by means of:
 [SOURCE: IEC 61140:2016, 3.24]
 ISO 18246:2023(en), 3.4.12"""@en ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "MainLineSeparation" ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ProtectiveSeparation"@en .
 
 
@@ -429,9 +435,9 @@ Note 1 to entry: This use of the term protection refers to protection of the pla
 Note 2 to entry: The reactor protection system (RPS) provides protection against abnormal conditions such as reactor over-power, too fast neutron (3.1.5.1) flux increase, high reactor inlet temperature, primary heat transport system (3.7.2.5) over-pressure, etc. 
 
 Note 3 to entry: The reactor protection system (RPS) imposes actions on several systems, especially, the reactor regulation system (3.7.2.1.2) (RRS), the reactor shutdown system (3.8.16.1) (SDS) and the emergency core cooling system (3.8.16.2) (ECCS). ﻿"""@en ;
-   rdfs:isDefinedBy """https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en
+   :referenceISO """https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en
 Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors
-ISO 12749-5:2018(en)"""
+ISO 12749-5:2018(en)"""^^xsd:anyURI
  ] .
 
 
@@ -443,8 +449,7 @@ ISO 12749-5:2018(en)"""
                                                           ] ;
                                            owl:someValuesFrom :RDS0g8UekSMDWjEgBp6z2sP
                                          ] ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ,
-                                                                       "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.22.2485" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.22.2485" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FastInducedFission"@en .
 
 
@@ -466,7 +471,7 @@ pressure and two low pressure systems."""@en ;
    owl:annotatedTarget """Emergency cooling system Operation  (ECCS) provide core cooling under loss of coolant accident
 conditions to limit fuel cladding damage. The emergency core cooling systems consist of two high
 pressure and two low pressure systems."""@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/students/for-educators/03.pdf>
+   :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/students/for-educators/03.pdf>
  ] .
 
 
@@ -482,7 +487,7 @@ pressure and two low pressure systems."""@en ;
    owl:annotatedSource :R75fZKWD5XTzNF0Lht4vvWr ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Accident in which a breach in a reactor’s pressure boundary causes the coolant water to rush out of the reactor faster than makeup water can be added back in"@en ;
-   rdfs:isDefinedBy "https://www.nrc.gov/reading-rm/basic-ref/glossary/loss-of-coolant-accident-loca.htm"
+   :referenceNRC "https://www.nrc.gov/reading-rm/basic-ref/glossary/loss-of-coolant-accident-loca.htm"^^xsd:anyURI
  ] .
 
 
@@ -502,7 +507,7 @@ pressure and two low pressure systems."""@en ;
    owl:annotatedSource :R76QRzIQVjwDFrNAttIw9RF ;
    owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
    owl:annotatedTarget "The rapid insertion of a chemically soluble neutron poison (such as boric acid) into the reactor coolant system to ensure reactor shutdown."@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/safety-injection.html>
+   :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/glossary/safety-injection.html>
  ] .
 
 
@@ -534,7 +539,7 @@ more times during the life of the nuclear power unit and include but
 are not limited to loss of power to all recirculation pumps, tripping of
 the turbine generator set, isolation of the main condenser, and loss of
 all offsite power.""" ;
-   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"
+   :referenceNRC "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"^^xsd:anyURI
  ] .
 
 
@@ -742,7 +747,7 @@ Note 1 to entry: The absorption of the external colliding particle, usually a ne
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget """nuclear fission (3.1.1) initiated by a nucleus when an external colliding particle is absorbed
 Note 1 to entry: The absorption of the external colliding particle, usually a neutron, generates a strong increase in the compound nucleus internal energy and, hence, increases the compound nucleus instability, favouring a large energy release by means of a nucleus partition."""@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.1.1>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.1.1>
  ] .
 
 
@@ -811,7 +816,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
    owl:annotatedSource :R7fkBdyMeKQvQzm3yRgM2iz ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Plant procedures that direct operators' actions necessary to mitigate the consequences of transients and accidents that have caused plant parameters to exceed reactor protection system set points or engineered safety feature set points, or other established limits." ;
-   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1025/ML102560007.pdf"
+   :referenceNRC "https://www.nrc.gov/docs/ML1025/ML102560007.pdf"^^xsd:anyURI
  ] .
 
 
@@ -874,7 +879,6 @@ among the preventive measures employed in reactor design""" ;
                                            owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
                                          ] ;
                          rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition" ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link, ma direttamente il nome della risorsa" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Nuclear fuel removed from a reactor following irradiation that is no longer usable in its present form because of depletion of fissile material, poison buildup or radiation damage."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearSpentFuel"@en .
 
@@ -908,17 +912,8 @@ perform its intended safety functions.""" ;
                          rdfs:subClassOf :RDP6jdP3MdBK59hhoDGY0Vw ;
                          rdfs:comment "It is an event that can occur due to human error or the failure of artificial or industrial structures or phenomena."@en ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "UnexpectedEvent" ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "An unintended event is any casual occurrence, not controlled that can lead to hazardous condition to the surrounding environment where it takes place"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "UnintendedEvent"@en ;
-                         :RR3uD2d7YfhHohfv2Nm6sX "qualcosa che conduce ad una deviazione, a prescidere da chi lo ha fatto e perchè" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :R7pKuzitkkIAgc5NxDlqfH4 ;
-   owl:annotatedProperty :RR3uD2d7YfhHohfv2Nm6sX ;
-   owl:annotatedTarget "qualcosa che conduce ad una deviazione, a prescidere da chi lo ha fatto e perchè" ;
-   rdfs:comment "Check this comment"
- ] .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "UnintendedEvent"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7pvNIWMyFBzmeL9EcH58g8
@@ -963,11 +958,11 @@ ISO 12749-5:2018(en)"""^^xsd:anyURI
 ###  https://w3id.org/emmo/domain/neo#R7qv2nUGxSNZRvXyF3CXPTr
 :R7qv2nUGxSNZRvXyF3CXPTr rdf:type owl:Class ;
                          rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
-                         rdfs:isDefinedBy <https://doi.org/10.1351/goldbook.C01022> ,
-                                          <https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-2:ed-1:v1:en:term:3.1.21> ;
+                         rdfs:isDefinedBy <https://doi.org/10.1351/goldbook.C01022> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "ChemicalElement"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "type of substance that cannot be divided or changed into different substances by ordinary chemical methods"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Atom"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Atom"@en ;
+                         :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-2:ed-1:v1:en:term:3.1.21> .
 
 
 ###  https://w3id.org/emmo/domain/neo#R7s6BZ18NYlgydAQozd7POd
@@ -1004,7 +999,7 @@ ISO 12749-5:2018(en)"""^^xsd:anyURI
    owl:annotatedTarget """Maintain adequate reactor vessel inventory – For core cooling – On small break LOCAs On small break LOCAs
  Depressurize the reactor vessel – To allow low pressure ECCSs to inject – On intermediate break LOCAs
  Backup RCIC when reactor vessel isolated"""@en ;
-   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1125/ML11258A365.pdf"
+   :referenceNRC "https://www.nrc.gov/docs/ML1125/ML11258A365.pdf"^^xsd:anyURI
  ] .
 
 
@@ -1022,7 +1017,7 @@ ISO 12749-5:2018(en)"""^^xsd:anyURI
    owl:annotatedSource :R7tsY17A1s9DZ7gbZrjbVt6 ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "series of nuclear reactions in which one of the agents necessary to the series is itself produced by the same reactions"@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:1709:ed-3:v1:en:term:3.8>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:1709:ed-3:v1:en:term:3.8>
  ] .
 
 
@@ -1112,19 +1107,19 @@ The secondary side water volume of the isolation condenser (both trains together
    owl:annotatedSource :R80L6MpJJVkL4hoNB7thCRV ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "An increase in the rate of fission (and heat production) in a reactor (usually by the removal of control rods from the core)."@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/startup.html>
+   :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/glossary/startup.html>
  ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R80RaxHVqr4QPiv8ASxXxi3
 :R80RaxHVqr4QPiv8ASxXxi3 rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
-                         rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:11072:ed-1:v1:en:term:2.6.5> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Manipulation"@en ,
                                                                         "Monitoring"@en ;
                          <http://www.w3.org/2004/02/skos/core#comment> "A process which accesses and changes the contents of data elements."@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Having or attempting to exert control" ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Controlling"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Controlling"@en ;
+                         :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:11072:ed-1:v1:en:term:2.6.5> .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R80RaxHVqr4QPiv8ASxXxi3 ;
@@ -1142,7 +1137,6 @@ The secondary side water volume of the isolation condenser (both trains together
                                                           ] ;
                                            owl:someValuesFrom :R9s3bSmQntRAaUAzg5iKhyy
                                          ] ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ThermalInducedFission"@en .
 
 
@@ -1182,8 +1176,8 @@ important feature at this level."""@en ;
    owl:annotatedSource :R84TLuFmfSZMhgSh0uL0LXk ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "process to determine a value"@en ;
-   rdfs:isDefinedBy """ISO 44001:2017(en)
-Collaborative business relationship management systems — Requirements and framework"""
+   :referenceISO """ISO 44001:2017(en)
+Collaborative business relationship management systems — Requirements and framework"""^^xsd:anyURI
  ] .
 
 
@@ -1257,7 +1251,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :R8FmlobZiHsCZi4CHKxgtMg ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The purpose of the primary containment ventilation is to allow for influent air to be brought into the drywell and suppression chamber and for effluent atmosphere to be discharged from the drywell and suppression chamber."@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1215/ML12159A162.pdf>
+   :referenceNRC <https://www.nrc.gov/docs/ML1215/ML12159A162.pdf>
  ] .
 
 
@@ -1444,7 +1438,7 @@ be considered. The possible need to support mobile means might also be considere
    owl:annotatedSource :R8XKJXm7vS0D4Y1OEvOkXde ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "accident conditions against which a facility is designed according to established design criteria, and for which the damage to the fuel and the release of radioactive material are kept within authorized limits"@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.1>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.1>
  ] .
 
 
@@ -1477,7 +1471,7 @@ be considered. The possible need to support mobile means might also be considere
    owl:annotatedSource :R8baDZRwKkBRaeQKFoM4Z4N ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Natural event such as a flood, earthquake, or hurricane that causes great damage or loss of life"@en ;
-   rdfs:isDefinedBy "https://www.iso.org/obp/ui/en/#iso:std:iso:37100:ed-1:v1:en:term:3.1.14"
+   :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:37100:ed-1:v1:en:term:3.1.14"^^xsd:anyURI
  ] .
 
 
@@ -1568,7 +1562,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
    owl:annotatedSource :R8rcf1IQoRtZq8YkEpiByPn ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Process of the promulgation, monitoring, and enforcement of rules defined in 'regulation (document)', established by primary and/or delegated legislation"@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:17419:ed-1:v1:en:term:3.29>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:17419:ed-1:v1:en:term:3.29>
  ] .
 
 
@@ -1604,7 +1598,7 @@ system to perform its intended function."""@en ;
 coincidence of failure states of components in two or more separate
 channels of a redundancy system, leading to the failure of the defined
 system to perform its intended function."""@en ;
-   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"
+   :referenceNRC "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"^^xsd:anyURI
  ] .
 
 
@@ -1624,7 +1618,7 @@ system to perform its intended function."""@en ;
    owl:annotatedSource :R8yJFxRXki6jB3lgKxV6thW ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Measurement of dose or contamination for the purpose of the assessment or control of exposure to radiation or radioactive material, and the interpretation of the results." ;
-   rdfs:isDefinedBy "https://www.iso.org/obp/ui/en/#iso:std:iso:20553:ed-1:v1:en:term:3.15"
+   :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:20553:ed-1:v1:en:term:3.15"^^xsd:anyURI
  ] .
 
 
@@ -1654,9 +1648,9 @@ system to perform its intended function."""@en ;
    owl:annotatedSource :R8ym94st1azekRHdt3ayDq5 ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Radioactive substances on surfaces, or within solids, liquids, or gases (including the human body), where their presence is unintended or undesirable, or the process giving rise to their presence in such places."@en ;
-   rdfs:isDefinedBy """ISO 12749-1:2020(en)
+   :referenceISO """ISO 12749-1:2020(en)
 Nuclear energy — Vocabulary — Part 1: General terminology
-https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en"""
+https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en"""^^xsd:anyURI
  ] .
 
 
@@ -1682,10 +1676,9 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en"""
 :R94o7o1nZqxzHLLqTyhHY08 rdf:type owl:Class ;
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                          rdfs:comment "any periodic or unplanned support and verification operations designed to keep premises and equipment in proper working condition" ;
-                         rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:22716:ed-1:v2:en:term:2.19> ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "any periodic or unplanned support and verification operations designed to keep premises and equipment in proper working condition in a nuclear reactor" ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReactorMaintanance"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReactorMaintanance"@en ;
+                         :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:22716:ed-1:v2:en:term:2.19> .
 
 
 ###  https://w3id.org/emmo/domain/neo#R95M6reIX3ya776PtOPLGmY
@@ -1699,20 +1692,30 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en"""
    owl:annotatedSource :R95M6reIX3ya776PtOPLGmY ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "accident conditions more severe than a design basis accident"@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.2>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.2>
  ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R98XsS8Lh28DOd8LW80vc2w
 :R98XsS8Lh28DOd8LW80vc2w rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyProcess ;
-                         rdfs:seeAlso <https://www.nrc.gov/docs/ML0707/ML070710376.pdf> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """Conditions of normal operation that are expected to occur one or
 more times during the life of the nuclear power unit and include but
 are not limited to loss of power to all recirculation pumps, tripping of
 the turbine generator set, isolation of the main condenser, and loss of
 all offsite power."""@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPlantAOO"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R98XsS8Lh28DOd8LW80vc2w ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """Conditions of normal operation that are expected to occur one or
+more times during the life of the nuclear power unit and include but
+are not limited to loss of power to all recirculation pumps, tripping of
+the turbine generator set, isolation of the main condenser, and loss of
+all offsite power."""@en ;
+   :referenceNRC <>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R99rf4ECHdvdIhjRSeggwHm
@@ -1758,22 +1761,22 @@ all offsite power."""@en ;
    owl:annotatedSource :R9DvBOiqnlOM3kdfemfLOhd ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "limitation of any negative consequence (3.6) of a particular event"@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20>
  ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R9Hn7TrsF0nNCCTri5RWDXP
 :R9Hn7TrsF0nNCCTri5RWDXP rdf:type owl:Class ;
                          rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "To unobstruct an opening"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemOpening"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemOpening"@en ;
+                         :referenceISO "To unobstruct an opening"^^xsd:anyURI .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R9Hn7TrsF0nNCCTri5RWDXP ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "To unobstruct an opening"@en ;
-   rdfs:isDefinedBy """ISO 14313:2007(en)
-Petroleum and natural gas industries — Pipeline transportation systems — Pipeline valves"""
+   owl:annotatedProperty :referenceISO ;
+   owl:annotatedTarget "To unobstruct an opening"^^xsd:anyURI ;
+   :referenceISO """ISO 14313:2007(en)
+Petroleum and natural gas industries — Pipeline transportation systems — Pipeline valves"""^^xsd:anyURI
  ] .
 
 
@@ -1796,7 +1799,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :R9Iwkpvro1luxgrYOcKzuPX ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget <https://www.nra.go.jp/data/000292313.pdf> ;
-   rdfs:seeAlso <>
+   rdfs:seeAlso <https://w3id.org/emmo/domain/neo>
  ] .
 
 [ rdf:type owl:Axiom ;
@@ -1866,7 +1869,7 @@ perform its intended safety functions."""@en ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget """An occurrence that results in a component’s loss of capability to
 perform its intended safety functions."""@en ;
-   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"
+   :referenceNRC "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"^^xsd:anyURI
  ] .
 
 
@@ -1892,7 +1895,6 @@ and Radiation Protection, 2018 Edition """ ;
 ###  https://w3id.org/emmo/domain/neo#R9Q7QurACY7OmMRPPPbDU7J
 :R9Q7QurACY7OmMRPPPbDU7J rdf:type owl:Class ;
                          rdfs:subClassOf :RC5Uc3vBrAsYC8gCNkTsLH ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ContinuosInjection"@en .
 
 
@@ -1932,7 +1934,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
    owl:annotatedTarget """splitting of a nucleus into fission fragments, either spontaneously or as a result of the impact of a particle, usually with an associated release of energy
 Note 1 to entry: The nucleus usually has a high mass number, together with an intermediate or low average-binding-energy-per-nucleon; hence, an inherent instability exists, and the fission fragments are usually highly unstable.
 [SOURCE: ISO 12749‑5:2018, 3.1.1]"""@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en:term:3.2.2>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en:term:3.2.2>
  ] .
 
 
@@ -1955,7 +1957,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
    owl:annotatedSource :R9aF6fIPWPEzkHdmnDKNorP ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The sudden shutting down of a nuclear reactor, usually by rapid insertion of control rods, either automatically or manually by the reactor operator. Also known as a \"reactor trip\""@en ;
-   rdfs:comment <https://www.nrc.gov/reading-rm/basic-ref/glossary/scram.html>
+   :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/glossary/scram.html>
  ] .
 
 
@@ -1970,7 +1972,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
    owl:annotatedSource :R9fLBLIc534UvSEEJ2pDkuM ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "One or several barrier elements that are designed to prevent unintended flow of formation fluid﻿."@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:13628:-7:ed-1:v1:en:term:3.1.7>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:13628:-7:ed-1:v1:en:term:3.1.7>
  ] .
 
 
@@ -2019,9 +2021,9 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                                            owl:onProperty elite:isOutputOf ;
                                            owl:someValuesFrom :R7tsY17A1s9DZ7gbZrjbVt6
                                          ] ;
-                         rdfs:isDefinedBy "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Neutron that has, by collision with other particles, reached an energy state equal to that of its surroundings."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ThermalNeutron"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ThermalNeutron"@en ;
+                         :referenceISO "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#R9zZ4RQWyUSCDicHqv3X2B8
@@ -2039,7 +2041,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
    owl:annotatedSource :R9zZ4RQWyUSCDicHqv3X2B8 ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "equipment in a steam turbine BOP (3.4.1.3), aimed at receiving the exhausting low-pressure turbine steam, bringing this fluid into the liquid state by massive cooling "@en ;
-   rdfs:isDefinedBy "ISO 12749-5:2018(en)  Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors "
+   :referenceISO "ISO 12749-5:2018(en)  Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors "^^xsd:anyURI
  ] .
 
 
@@ -2048,7 +2050,6 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                          rdfs:subClassOf :RDpEA8qdRk99FAT0xSGZgGS ;
                          rdfs:comment """Residual heat transfer systems include systems designed to transfer heat from the residual heat removal systems to the ultimate heat sink.
  The capabilities to discharge residual heat to the ultimate heat sink are based on at least one heat sink and one heat transfer chain always being available for the different shutdown conditions."""@en ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "RHROperation"@en .
 
 
@@ -2068,7 +2069,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
    owl:annotatedSource :RB8FKmPNbcy1ViUT2RE8alB ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Device to direct a portion of the flow around a separation device due to pressure difference, usually venting downstream of the bypassed separation device."@en ;
-   rdfs:seeAlso "ISO 17536-1:2015(en) Road vehicles — Aerosol separator performance test for internal combustion engines — Part 1: General"
+   :referenceISO "ISO 17536-1:2015(en) Road vehicles — Aerosol separator performance test for internal combustion engines — Part 1: General"^^xsd:anyURI
  ] .
 
 
@@ -2158,7 +2159,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
    owl:annotatedSource :RBJevCDiVa5kURep7JQX4ti ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The process of making a radioisotope by bombarding a stable element with neutrons or protons."@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/activation.html>
+   :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/glossary/activation.html>
  ] .
 
 
@@ -2170,7 +2171,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
                          rdfs:comment "They flooded the primary and backup power systems and equipment, as well as the ultimate heat sink systems and structures, of all six units on the site"@en ;
-                         rdfs:isDefinedBy """https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf
+                         rdfs:seeAlso """https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf
 The Fukushima Daiichi Accident Technical Volume 1/5
 Pag 2""" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "EmergencyPowerSupply" ;
@@ -2194,7 +2195,6 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
                                                           ] ;
                                            owl:someValuesFrom :R7tsY17A1s9DZ7gbZrjbVt6
                                          ] ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The process for producing energy from nuclear sources, in a reactor core of a nuclear power plant."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoreEnergyProduction"@en .
 
@@ -2264,10 +2264,10 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
 ###  https://w3id.org/emmo/domain/neo#RBfqFRty5Hp4V4caVtEvWdD
 :RBfqFRty5Hp4V4caVtEvWdD rdf:type owl:Class ;
                          rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
-                         rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:39794:-16:ed-1:v1:en:term:3.52> ;
                          <http://www.w3.org/2004/02/skos/core#definition> """subatomic particles used for neutron imaging (3.41) (NI) purposes by the neutron attenuation process in a similar fashion to X-rays (3.76)
 Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abundance that can be correlated with the post-mortem (3.57) interval, i.e. the time that has elapsed since a person has died."""@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron"@en ;
+                         :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:39794:-16:ed-1:v1:en:term:3.52> .
 
 
 ###  https://w3id.org/emmo/domain/neo#RBimLTlArOY8mxOSFe6qiEZ
@@ -2291,7 +2291,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :RBimLTlArOY8mxOSFe6qiEZ ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The Standby Gas Treatment system processes exhaust air from the secondary containment under accident conditions to limit radiation dose rates to less than 10 CFR 100 limits. The Standby Gas Treatment system is also used to purge the primary containment and leak test the secondary containment." ;
-   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1215/ML12159A162.pdf"
+   :referenceNRC "https://www.nrc.gov/docs/ML1215/ML12159A162.pdf"^^xsd:anyURI
  ] .
 
 
@@ -2338,9 +2338,9 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :RBq5QrucFPH0MIg2wnaVaMD ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Adverse physical or chemical change in a substance"@en ;
-   rdfs:isDefinedBy """https://www.iso.org/obp/ui/#iso:std:iso:14624:-5:ed-2:v1:en
+   :referenceISO """https://www.iso.org/obp/ui/#iso:std:iso:14624:-5:ed-2:v1:en
 Space systems — Safety and compatibility of materials — Part 5: Determination of reactivity of system/component materials with aerospace propellants
-ISO 14624-5:2023(en)"""
+ISO 14624-5:2023(en)"""^^xsd:anyURI
  ] .
 
 
@@ -2469,7 +2469,6 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
                                            owl:onProperty elite:isStageOf ;
                                            owl:someValuesFrom :R9aF6fIPWPEzkHdmnDKNorP
                                          ] ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ControlRodInsertion"@en .
 
 
@@ -2508,7 +2507,7 @@ design that leads to Anticipated Operational Occurrences (AOOs)conditions."""@en
    owl:annotatedSource :RC1aeRG1szxYdt4kTKUUOvO ;
    owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
    owl:annotatedTarget "Activation of the Core Spray System in which coolant is sent through the discharge path to the core spray sparger using core spray pumps."@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1125/ML11258A368.pdf>
+   :referenceNRC <https://www.nrc.gov/docs/ML1125/ML11258A368.pdf>
  ] .
 
 
@@ -2542,9 +2541,6 @@ all offsite power."""@en ,
                                       """def ISO)      Operation of the appliance under the effect of internal failures or under the effect of foreseeable influences outside the specified operational conditions
 
 def IAEA)     A deviation of an operational process from normal operation that is expected to occur at least once during the operating lifetime of a facility but which, in view of appropriate design provisions, does not cause any significant damage to items important to safety or lead to accident conditions"""@en ;
-                         rdfs:isDefinedBy """ISO 23552-1:2007(en)
-Safety and control devices for gas and/or oil burners and gas and/or oil appliances — Particular requirements — Part 1: Fuel/air ratio controls, electronic type
-https://www.iso.org/obp/ui/en/#iso:std:iso:23552:-1:ed-1:v1:en""" ;
                          rdfs:seeAlso """Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)
 https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf""" ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "DiDLevel2"@en ;
@@ -2552,7 +2548,10 @@ https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-
 escalating to accident conditions. This can be provided both by electronic means and by operator intervention,
 if there is enough time and information for such actions to be credited. The algorithms used are different
 from control."""@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "AOOControl"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "AOOControl"@en ;
+                         :referenceISO """ISO 23552-1:2007(en)
+Safety and control devices for gas and/or oil burners and gas and/or oil appliances — Particular requirements — Part 1: Fuel/air ratio controls, electronic type
+https://www.iso.org/obp/ui/en/#iso:std:iso:23552:-1:ed-1:v1:en"""^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#RCAHezyl4VRbtyt3dbnxBUb
@@ -2612,7 +2611,7 @@ the condensate and feedwater system is not available."""@en ;
    owl:annotatedTarget """Provide makeup water to the reactor vessel for core cooling when:
 the main steam lines are isolated
 the condensate and feedwater system is not available."""@en ;
-   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1125/ML11258A312.pdf"
+   :referenceNRC "https://www.nrc.gov/docs/ML1125/ML11258A312.pdf"^^xsd:anyURI
  ] .
 
 
@@ -2651,7 +2650,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :RCJhKs4unBpoZD0uMgxsvJh ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "to use a switch to change a device from one state or type of operation to another"@en ;
-   rdfs:comment <https://dictionary.cambridge.org/it/dizionario/inglese/switching>
+   rdfs:seeAlso <https://dictionary.cambridge.org/it/dizionario/inglese/switching>
  ] .
 
 
@@ -2673,8 +2672,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#RCNShAJHX3mIvlEif02qYJZ
 :RCNShAJHX3mIvlEif02qYJZ rdf:type owl:Class ;
                          rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/emmo/domain/NPPDesmantling> ,
-                                                                        "NuclearReactorDecommissioning"@en ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearReactorDecommissioning"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "take an engineered system or component out of service, render it inoperative, dismantle and decontaminate it"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPDecommissioning" .
 
@@ -2682,7 +2680,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :RCNShAJHX3mIvlEif02qYJZ ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "take an engineered system or component out of service, render it inoperative, dismantle and decontaminate it"@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:tr:27923:ed-1:v1:en:term:3.22>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:tr:27923:ed-1:v1:en:term:3.22>
  ] .
 
 
@@ -2760,8 +2758,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#RCY8ddT8JW7G3WicejAxkmn
 :RCY8ddT8JW7G3WicejAxkmn rdf:type owl:Class ;
                          rdfs:subClassOf :RCJhKs4unBpoZD0uMgxsvJh ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ,
-                                                                       "from off to on" ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "from off to on" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SwitchingOn"@en .
 
 
@@ -2795,8 +2792,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :RCcdLHL2BqdRJQkmiKL4MDW ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Sudden and violent shaking of the ground, sometimes causing great destruction, as a result of movements within the earth’s crust or volcanic action."@en ;
-   rdfs:isDefinedBy """ISO 22328-3:2023(en)
-https://www.iso.org/obp/ui/en/#iso:std:iso:22328:-3:ed-1:v1:en:term:3.2"""
+   :referenceISO """ISO 22328-3:2023(en)
+https://www.iso.org/obp/ui/en/#iso:std:iso:22328:-3:ed-1:v1:en:term:3.2"""^^xsd:anyURI
  ] .
 
 
@@ -2883,7 +2880,6 @@ power for a nuclear plant in the event that all off-site power sources are lost.
 :RCuTNyDF6kWFazFqJVIvww9 rdf:type owl:Class ;
                          rdfs:subClassOf :RCJhKs4unBpoZD0uMgxsvJh ;
                          rdfs:comment "from on to off" ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SwitchingOff"@en .
 
 
@@ -2975,8 +2971,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :RDGBzCkWozL4RpG1CuIzwPi ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Escape of gas due to operating conditions, or to malfunctions that cannot be reasonably excluded"@en ;
-   rdfs:isDefinedBy """ISO 21009-2:2015(en), 3.7
-https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""
+   :referenceISO """ISO 21009-2:2015(en), 3.7
+https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""^^xsd:anyURI
  ] .
 
 
@@ -3050,7 +3046,7 @@ ISO 21843:2023(en)"""^^xsd:anyURI
    owl:annotatedSource :RDN44xs0tgwZS1p11BPMMKr ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Loss of the AC electricity supplied by the devices entered in functions after the LossOfOffsitePower"@en ;
-   rdfs:isDefinedBy "https://www.nrc.gov/reading-rm/doc-collections/cfr/part050/part050-0063.html"
+   :referenceNRC "https://www.nrc.gov/reading-rm/doc-collections/cfr/part050/part050-0063.html"^^xsd:anyURI
  ] .
 
 
@@ -3095,11 +3091,11 @@ ISO 21843:2023(en)"""^^xsd:anyURI
                                            owl:onProperty elite:isOutputOf ;
                                            owl:someValuesFrom :R9ZCvqvWWCWSwBxX7K82iwL
                                          ] ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.5.1> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A neutron with kinetic energy greater than its surroundings when released during fission."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "FastNeutron"@en ;
                          :RR3uD2d7YfhHohfv2Nm6sX """Fast neutrons are considered as such in the context of a fission nuclear reactor, where the average neutron energy emerging from fission is about 2 MeV, before being slowed down by collisions. 
-While in some textbooks you can find a defnition of fast neutron as a neutron with E > 50 keV, there is not a clear definition of the range within which a neutron can be considered \"fast\"."""@en .
+While in some textbooks you can find a defnition of fast neutron as a neutron with E > 50 keV, there is not a clear definition of the range within which a neutron can be considered \"fast\"."""@en ;
+                         :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.5.1> .
 
 
 ###  https://w3id.org/emmo/domain/neo#RDT2hV6YibqdGN2HMXay4hK
@@ -3112,7 +3108,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
    owl:annotatedSource :RDT2hV6YibqdGN2HMXay4hK ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "nuclear fission (3.1.1) produced in a nucleus, having an inherent instability, that develops itself in a purely stochastic way and without intervention of any external colliding particle"@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.1.2>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.1.2>
  ] .
 
 
@@ -3380,8 +3376,8 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
    owl:annotatedSource :RDuDSbKh236WI6rqMad7Ar4 ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Initiation of a selected function of an object"@en ;
-   rdfs:isDefinedBy """ISO/IEC TR 11580:2007(en)
-https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""
+   :referenceISO """ISO/IEC TR 11580:2007(en)
+https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^^xsd:anyURI
  ] .
 
 
@@ -3435,7 +3431,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""
    owl:annotatedSource :REwjatmwMA4xgNq0mpx6LO ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "In addition, an ordinary or emergency cooling facility in the nuclear power plant is constituted such that sea water in the cavity is supplied by a sea water pump." ;
-   rdfs:isDefinedBy "https://inis.iaea.org/records/k5ahh-5w896"
+   :referenceINIS "https://inis.iaea.org/records/k5ahh-5w896"
  ] .
 
 
@@ -3466,8 +3462,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :RG2TvkBghAiQkHQc4GNU8e ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
    owl:annotatedTarget "VentValve" ;
-   rdfs:isDefinedBy """device used to expel air from a compressed air system
-https://www.iso.org/obp/ui/#iso:std:iso:24478:ed-1:v2:en:term:3.10.8.2"""
+   :referenceISO """device used to expel air from a compressed air system
+https://www.iso.org/obp/ui/#iso:std:iso:24478:ed-1:v2:en:term:3.10.8.2"""^^xsd:anyURI
  ] .
 
 
@@ -3481,9 +3477,9 @@ https://www.iso.org/obp/ui/#iso:std:iso:24478:ed-1:v2:en:term:3.10.8.2"""
    owl:annotatedSource :RG42cv992jX3Deeh35WKwu ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Condition where water flows onto a surface or enters a structure or area where it is not intended."@en ;
-   rdfs:isDefinedBy """ISO 24513:2019(en)
+   :referenceISO """ISO 24513:2019(en)
 Service activities relating to drinking water supply, wastewater and stormwater systems — Vocabulary
-https://www.iso.org/obp/ui/en/#iso:std:iso:24513:ed-1:v1:en"""
+https://www.iso.org/obp/ui/en/#iso:std:iso:24513:ed-1:v1:en"""^^xsd:anyURI
  ] .
 
 
@@ -3592,7 +3588,6 @@ and Radiation Protection, 2018 Edition """
                                         :RtX7ESf673Z9eYoseycPyl ;
                         rdfs:isDefinedBy """IAEA Safety Glossary, Terminology Used in Nuclear Safety 
 and Radiation Protection, 2018 Edition """ ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                         <http://www.w3.org/2004/02/skos/core#definition> """Fissionable nuclear material in the form of fabricated elements for loading
 into the reactor core of a civil nuclear power plant or research reactor."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearFuel"@en .
@@ -3629,7 +3624,7 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en 
    owl:annotatedSource :RRPYBSdeHQObrzQD5UT74I ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "abnormal cyclic change of injection fuel flow during constant fuel operation"@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:7967:-11:ed-2:v1:en:term:3.3.69>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:7967:-11:ed-2:v1:en:term:3.3.69>
  ] .
 
 
@@ -3674,12 +3669,21 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en 
                                           owl:onProperty elite:foregoes ;
                                           owl:someValuesFrom :RC9Vnqc96TS4VVdygnxu8UP
                                         ] ;
-                        rdfs:isDefinedBy <https://www.nrc.gov/docs/ML2031/ML20318A171.pdf> ;
                         <http://www.w3.org/2004/02/skos/core#definition> """A PIE Is an event identified in the
 design that leads to Anticipated Operational Occurrences (AOOs) or accident conditions. Accident
 conditions include Design Basis Accidents (DBAs) and Beyond Design Basis Accidents (BDBAs). BDBAs
 include a subset of severe accidents."""@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulatedInitiatingEvent"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RRxSYO9r2FD1rHmRPugfob ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget """A PIE Is an event identified in the
+design that leads to Anticipated Operational Occurrences (AOOs) or accident conditions. Accident
+conditions include Design Basis Accidents (DBAs) and Beyond Design Basis Accidents (BDBAs). BDBAs
+include a subset of severe accidents."""@en ;
+   :referenceNRC <https://www.nrc.gov/docs/ML2031/ML20318A171.pdf>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RSvx83QCmkRfOzQUtOkIeS
@@ -3692,9 +3696,9 @@ include a subset of severe accidents."""@en ;
    owl:annotatedSource :RSvx83QCmkRfOzQUtOkIeS ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Action to move people to predetermined areas inside the building/site in order to protect them from external dangers during an incident."@en ;
-   rdfs:isDefinedBy """ISO/TS 22330:2018(en)
+   :referenceISO """ISO/TS 22330:2018(en)
 Security and resilience — Business continuity management systems — Guidelines for people aspects of business continuity
-https://www.iso.org/obp/ui/#iso:std:iso:ts:22330:ed-1:v1:en"""
+https://www.iso.org/obp/ui/#iso:std:iso:ts:22330:ed-1:v1:en"""^^xsd:anyURI
  ] .
 
 
@@ -3709,14 +3713,13 @@ https://www.iso.org/obp/ui/#iso:std:iso:ts:22330:ed-1:v1:en"""
                                           owl:onProperty elite:isSubProcessOf ;
                                           owl:someValuesFrom :R94o7o1nZqxzHLLqTyhHY08
                                         ] ;
-                        <http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/emmo/domain/Refueling> ;
-                        <http://www.w3.org/2004/02/skos/core#definition> "The process of removing older fuel and loading new fuel. These actions are all performed underwater to supply continuous cooling for the fuel and provide shielding from the radioactive spent fuel."@en ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPRefueling"@en .
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPRefueling"@en ;
+                        :referenceNRC "The process of removing older fuel and loading new fuel. These actions are all performed underwater to supply continuous cooling for the fuel and provide shielding from the radioactive spent fuel."^^xsd:anyURI .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :RTywWKZwkjxu5ChUU9jvyq ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "The process of removing older fuel and loading new fuel. These actions are all performed underwater to supply continuous cooling for the fuel and provide shielding from the radioactive spent fuel."@en ;
+   owl:annotatedProperty :referenceNRC ;
+   owl:annotatedTarget "The process of removing older fuel and loading new fuel. These actions are all performed underwater to supply continuous cooling for the fuel and provide shielding from the radioactive spent fuel."^^xsd:anyURI ;
    rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/refueling.html>
  ] .
 
@@ -3731,9 +3734,9 @@ https://www.iso.org/obp/ui/#iso:std:iso:ts:22330:ed-1:v1:en"""
    owl:annotatedSource :RUfmPQytgoT4sAaWFKoKAG ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Dispersal or removal of people from dangerous areas and their arrival at a place of relative safety."@en ;
-   rdfs:isDefinedBy """ISO/TR 24188:2022(en)
+   :referenceISO """ISO/TR 24188:2022(en)
 Large outdoor fires and the built environment — Global overview of different approaches to standardization
-https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""
+https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""^^xsd:anyURI
  ] .
 
 
@@ -3801,7 +3804,6 @@ https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""
                                           owl:someValuesFrom :RBU28e2pgiTqsaTCPWnAJ6y
                                         ] ;
                         rdfs:isDefinedBy "IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition"@en ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "New fuel or unirradiated fuel, including fuel fabricated from fissionable material recovered by reprocessing previously irradiated fuel." ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear﻿FreshFuel"@en .
 
@@ -3859,7 +3861,7 @@ Postulated accidents are also known as Condition IV events.""" ;
    owl:annotatedTarget """Unanticipated conditions of operation (i.e., not expected to occur
 during the life of the nuclear power unit).
 Postulated accidents are also known as Condition IV events.""" ;
-   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"
+   :referenceNRC "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"^^xsd:anyURI
  ] .
 
 
@@ -3904,8 +3906,8 @@ and Radiation Protection, 2018 Edition """ ;
    owl:annotatedSource :RdPoUW04SB1jvKPJcXoVCW ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "accident conditions more severe than a design basis accident and involving significant core degradation"@en ;
-   rdfs:isDefinedBy """ISO 26802:2010(en)
-Nuclear facilities — Criteria for the design and the operation of containment and ventilation systems for nuclear reactors"""
+   :referenceISO """ISO 26802:2010(en)
+Nuclear facilities — Criteria for the design and the operation of containment and ventilation systems for nuclear reactors"""^^xsd:anyURI
  ] .
 
 
@@ -3919,8 +3921,8 @@ Nuclear facilities — Criteria for the design and the operation of containment 
    owl:annotatedSource :ReAOaKplsxuu3rxqPb4Jz4 ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
    owl:annotatedTarget "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
-   rdfs:seeAlso """ISO 3977-9:1999(en)
-   Gas turbines — Procurement — Part 9: Reliability, availability, maintainability and safety"""
+   :referenceISO """ISO 3977-9:1999(en)
+   Gas turbines — Procurement — Part 9: Reliability, availability, maintainability and safety"""^^xsd:anyURI
  ] .
 
 
@@ -3951,9 +3953,9 @@ Nuclear facilities — Criteria for the design and the operation of containment 
    owl:annotatedSource :RgAy137nXA9FNxJLdXeh2G ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Radioactive substances arising from a source (3.22) within a practice (3.13) which are discharged as gases, aerosols, liquids or solids to the environment, generally with the purpose of dilution and dispersion or disposal."@en ;
-   rdfs:isDefinedBy """ISO 20043-1:2021(en)
+   :referenceISO """ISO 20043-1:2021(en)
 Measurement of radioactivity in the environment — Guidelines for effective dose assessment using environmental monitoring data — Part 1: Planned and existing exposure situation
-https://www.iso.org/obp/ui/#iso:std:iso:20043:-1:ed-1:v1:en"""
+https://www.iso.org/obp/ui/#iso:std:iso:20043:-1:ed-1:v1:en"""^^xsd:anyURI
  ] .
 
 
@@ -4032,7 +4034,6 @@ Fukushima Dai-ni,"""@en ;
                                           owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                           owl:someValuesFrom :R8CzBJHXymJx05c6sDhbspt
                                         ] ;
-                        rdfs:isDefinedBy <https://w3id.org/emmo/domain/neo> ;
                         <http://www.w3.org/2004/02/skos/core#altLabel> "NPPGenerator"@en ,
                                                                        "ElectricalGenerator" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "In electricity generation, a generator is a device that converts motion-based power (potential and kinetic energy) or fuel-based power (chemical energy) into electric power for use in an external circuit. "@en ;
@@ -4049,8 +4050,8 @@ Fukushima Dai-ni,"""@en ;
    owl:annotatedSource :RrfuHy45DxsWTOKgkP9TFG ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "irregular injection (3.3.69) with stoppage of fuel injection"@en ;
-   rdfs:isDefinedBy """ISO 7967-11:2022(en)
-Reciprocating internal combustion engines — Vocabulary of components and systems — Part 11: Liquid fuel systems"""
+   :referenceISO """ISO 7967-11:2022(en)
+Reciprocating internal combustion engines — Vocabulary of components and systems — Part 11: Liquid fuel systems"""^^xsd:anyURI
  ] .
 
 
@@ -4083,7 +4084,6 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :RyMmVkVf9zClluOSgfr1Rh
                                         ] ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Non è riportato il link della fonte" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Any material that takes a part of a nuclear Core"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoreMaterial"@en .
 
@@ -4183,7 +4183,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :RvstZtdRQckXTqUl1UK5Is ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Long waves with the period of several minutes to one hour and the height up to a few tens of meters, which are generated by the vertical movement of sea floor associated with a submarine earthquake, by plunging of large mass of earth into water by land slide or volcanic eruption, and other causes."@en ;
-   rdfs:isDefinedBy "https://www.iso.org/obp/ui/en/#iso:std:iso:21650:ed-1:v1:en:term:2.76"
+   :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:21650:ed-1:v1:en:term:2.76"^^xsd:anyURI
  ] .
 
 
@@ -4227,7 +4227,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 ###  https://w3id.org/emmo/domain/neo#RyLZ508FsJKMTIHvSNuJZk
 :RyLZ508FsJKMTIHvSNuJZk rdf:type owl:Class ;
                         rdfs:subClassOf :RlYMwSSvmqekLRLzmf5IzV ;
-                        <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "The global process of manage the operation of a nuclear power plant, considering the design procedures" ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPOperationManagement"@en .
 
