@@ -112,6 +112,11 @@ elite:isOutputOf rdf:type owl:AnnotationProperty ;
                         rdfs:subPropertyOf rdfs:comment .
 
 
+###  https://w3id.org/emmo/domain/neo#referenceARIS
+:referenceARIS rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf rdfs:seeAlso .
+
+
 ###  https://w3id.org/emmo/domain/neo#referenceINIS
 :referenceINIS rdf:type owl:AnnotationProperty ;
                rdfs:comment "Reference to the IAEA INIS Thesaurus term."@en ;
@@ -1533,9 +1538,17 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
 ###  https://w3id.org/emmo/domain/neo#R8qKVAw3v5SZK2O6Y8cyDEr
 :R8qKVAw3v5SZK2O6Y8cyDEr rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyRole ;
+                         rdfs:comment "A material that is used to decrease the speed of the fast neutron produced during a fission even and thus sustaining a chain reaction."@en ;
                          rdfs:isDefinedBy <https://aris.iaea.org/Glossary/> ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "A material that is used to decrease the speed of the fast neutron produced during a fission even and thus sustaining a chain reaction."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Moderator"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R8qKVAw3v5SZK2O6Y8cyDEr ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "A material that is used to decrease the speed of the fast neutron produced during a fission even and thus sustaining a chain reaction."@en ;
+   :referenceARIS <> ,
+                  <https://aris.iaea.org/Glossary/>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8rcf1IQoRtZq8YkEpiByPn
