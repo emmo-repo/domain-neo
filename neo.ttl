@@ -250,7 +250,8 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                      rdfs:subClassOf <https://w3id.org/emmo/hume#Object> ;
                      rdfs:comment "Nuclear energy is a form of heat energy that can be released via reactions involving nuclear fusion or fission taking place between neutrons and protons in the nucleus of an atom. Electricity can be produced when a large amount of heat energy released is applied to generate steam from turbines (Fig. 1.4). Uranium-235, an isotope of uranium, is the most commonly used element in industrial nuclear power generators." ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearDomainObject" ;
-                     <http://www.w3.org/2004/02/skos/core#comment> "nuclear related energy object and people" ;
+                     <http://www.w3.org/2004/02/skos/core#comment> "It misses the nuclear energy research" ,
+                                                                   "nuclear related energy object and people" ;
                      <http://www.w3.org/2004/02/skos/core#definition> "It is an object involved in the nuclear energy production, management and control." .
 
 [ rdf:type owl:Axiom ;
@@ -579,7 +580,7 @@ all offsite power.""" ;
    owl:annotatedSource :R7Jf7CRh5B3US0yNBl08EK7 ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "structure required for accommodating the instruments, devices and computers for monitoring and controlling all types of mechanical and electrical equipment for the whole plant"@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:iwa:33:-1:ed-1:v1:en:term:7.5.9>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:iwa:33:-1:ed-1:v1:en:term:7.5.9>
  ] .
 
 
@@ -1311,12 +1312,16 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                            owl:onProperty elite:partakesIn ;
                                            owl:someValuesFrom :WaterInjectionSystem
                                          ] ;
-                         rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40> ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "Fluid" ,
-                                                                        "SupplyFluid" ;
-                         <http://www.w3.org/2004/02/skos/core#comment> "Change definition" ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "water used for water supply"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectedFluid"@en .
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "SupplyFluid" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectedFluid"@en ;
+                         :R9Q7fCgWnAkzqnVMtRJ4WDv "water used for water supply"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R8KlSYQnSKI6PoJZNIdhwNI ;
+   owl:annotatedProperty :R9Q7fCgWnAkzqnVMtRJ4WDv ;
+   owl:annotatedTarget "water used for water supply"@en ;
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8MGsTLlqoWXKEU5FfQd71X
@@ -1538,16 +1543,14 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
 ###  https://w3id.org/emmo/domain/neo#R8qKVAw3v5SZK2O6Y8cyDEr
 :R8qKVAw3v5SZK2O6Y8cyDEr rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyRole ;
-                         rdfs:comment "A material that is used to decrease the speed of the fast neutron produced during a fission even and thus sustaining a chain reaction."@en ;
-                         rdfs:isDefinedBy <https://aris.iaea.org/Glossary/> ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Moderator"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Moderator"@en ;
+                         :R8xx0dhbEh1tjGMDwNZfckV "A material that is used to decrease the speed of the fast neutron produced during a fission even and thus sustaining a chain reaction."@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R8qKVAw3v5SZK2O6Y8cyDEr ;
-   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
    owl:annotatedTarget "A material that is used to decrease the speed of the fast neutron produced during a fission even and thus sustaining a chain reaction."@en ;
-   :referenceARIS <> ,
-                  <https://aris.iaea.org/Glossary/>
+   :referenceARIS <https://aris.iaea.org/Glossary/>
  ] .
 
 
@@ -3526,9 +3529,15 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:24513:ed-1:v1:en"""
 ###  https://w3id.org/emmo/domain/neo#RJmt9cNm88D71RlMOkJ6WM
 :RJmt9cNm88D71RlMOkJ6WM rdf:type owl:Class ;
                         rdfs:subClassOf :NuclearEnergyRole ;
-                        rdfs:isDefinedBy <https://aris.iaea.org/Glossary/> ;
-                        <http://www.w3.org/2004/02/skos/core#definition> "A substance that is used to remove or transfer heat from the reactor core. Common coolants include light water, heavy water, air, carbon dioxide, helium, liquid sodium, and a sodium-potassium alloy."@en ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoolant"@en .
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoolant"@en ;
+                        :R8xx0dhbEh1tjGMDwNZfckV "A substance that is used to remove or transfer heat from the reactor core. Common coolants include light water, heavy water, air, carbon dioxide, helium, liquid sodium, and a sodium-potassium alloy."@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RJmt9cNm88D71RlMOkJ6WM ;
+   owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
+   owl:annotatedTarget "A substance that is used to remove or transfer heat from the reactor core. Common coolants include light water, heavy water, air, carbon dioxide, helium, liquid sodium, and a sodium-potassium alloy."@en ;
+   :referenceARIS <https://aris.iaea.org/Glossary/>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RLEjSGGgoWOVMGjQsskCsb
