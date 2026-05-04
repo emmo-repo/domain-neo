@@ -385,7 +385,7 @@ further decays, the event is referred to as inelastic scattering."""@en ;
    owl:annotatedSource :R2eIY10Bw0mNaYfKDcCmDd ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The purpose of the reactor water cleanup system (RWCU) is to maintain a high reactor water quality by removing fission products, corrosion products, and other soluble and insoluble impurities. The reactor water cleanup pump takes water from the recirculation system and the vessel bottom head and pumps the water through heat exchangers to cool the flow. The water is then sent through filter/demineralizers for cleanup. After cleanup, the water is returned to the reactor vessel via the feedwater piping."@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
+   :referenceNRC <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
  ] .
 
 
@@ -620,7 +620,7 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
 Note 1 to entry: The term “all control rod groups” means all safety and regulating control rod groups. This term may also be shortened to simply “rod group.” 
 
 Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A control rod bank is the same as a control rod group."""@en ;
-   rdfs:isDefinedBy "ISO 18077:2022(en) Reload startup physics tests for pressurized water reactors."
+   :referenceISO "ISO 18077:2022(en) Reload startup physics tests for pressurized water reactors."^^xsd:anyURI
  ] .
 
 
@@ -701,7 +701,7 @@ Note 1 to entry: This location can either be an atmospheric outlet or the connec
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget """system including the safety devices and the interconnections between the equipment to be protected and any discharge connection to the nearest location of a safe disposal place
 Note 1 to entry: This location can either be an atmospheric outlet or the connection into a safe collecting system or flare."""@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:4126:-9:ed-1:v1:en:term:3.2>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:4126:-9:ed-1:v1:en:term:3.2>
  ] .
 
 
@@ -722,7 +722,7 @@ The low pressure coolant injection mode of the residual heat removal system prov
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget """The low pressure emergency core cooling systems consist of two separate and independent systems, the core spray system and the low pressure coolant injection (LPCI) mode of the residual heat removal system. The core spray system consists of two separate and independent pumping loops, each capable of pumping water from the suppression pool into the reactor vessel. Core cooling is accomplished by spraying water on top of the fuel assemblies.
 The low pressure coolant injection mode of the residual heat removal system provides makeup water to the reactor vessel for core cooling under loss of coolant accident conditions. The residual heat removal system is a multipurpose system with several operational modes, each utilizing the same major pieces of equipment. The low pressure coolant injection mode is the dominant mode and normal valve lineup configuration of the residual heat removal system. The low pressure coolant injection mode operates automatically to restore and, if necessary, maintain the reactor vessel coolant inventory to preclude fuel cladding temperatures in excess of 2200EF. During low pressure coolant injection operation, the residual heat removal pumps take water from the suppression pool and discharge to the reactor vessel."""@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
+   :referenceNRC <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
  ] .
 
 
@@ -785,8 +785,8 @@ Pag 29""" ;
    owl:annotatedSource :R7e7zmzKt5Jl3O9HFQImLAV ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Facepiece which covers the eyes, nose, mouth, and chin and provides adequate sealing on the face of the wearer of a respiratory protective device against the ambient atmosphere "@en ;
-   rdfs:isDefinedBy """ISO 11999-1:2015(en) 
-PPE for firefighters — Test methods and requirements for PPE used by firefighters who are at risk of exposure to high levels of heat and/or flame while fighting fires occurring in structures — Part 1: General """
+   :referenceISO """ISO 11999-1:2015(en) 
+PPE for firefighters — Test methods and requirements for PPE used by firefighters who are at risk of exposure to high levels of heat and/or flame while fighting fires occurring in structures — Part 1: General """^^xsd:anyURI
  ] .
 
 
@@ -954,9 +954,9 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
    owl:annotatedSource :R7qSTtjQZPRR80bVjivshI8 ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Plant system (3.7.2) designed to cool the main parts of the reactor shield in order to maintain reasonable values of temperature in all the main shield parts, especially under normal on-power conditions "@en ;
-   rdfs:isDefinedBy """https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en
+   :referenceISO """https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en
 Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors 
-ISO 12749-5:2018(en)"""
+ISO 12749-5:2018(en)"""^^xsd:anyURI
  ] .
 
 
@@ -1041,7 +1041,7 @@ The secondary side water volume of the isolation condenser (both trains together
    owl:annotatedSource :R7twPwtQmmXFTKrDWM3POCD ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The IC is used in older boiling water reactor designs. The IC system transfers residual and decay heat from the reactor coolant to the water in the shell side of the heat exchanger resulting in steam generation. The steam generated in the shell side of the heat exchanger is then vented to the outside atmosphere. The system employs natural circulation as the driving head from the reactor steam side, through the isolation condenser tubes, and back to the reactor."@en ;
-   rdfs:isDefinedBy "https://nrcoe.inl.gov/SysStudy/IC.aspx"
+   :referenceNRC "https://nrcoe.inl.gov/SysStudy/IC.aspx"^^xsd:anyURI
  ] .
 
 
@@ -1066,7 +1066,7 @@ The secondary side water volume of the isolation condenser (both trains together
    owl:annotatedSource :R7uMg3wtcrU3GAUhIRZUQ8m ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The UHS is the system of structures and components and associated assured water supply and atmospheric condition(s) credited for functioning as a heat sink to absorb reactor residual heat and essential station heat loads after a normal reactor shutdown or a shutdown following an accident or transient including a loss-of-coolant accident (LOCA). "@en ;
-   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1410/ML14107A411.pdf"
+   :referenceNRC "https://www.nrc.gov/docs/ML1410/ML14107A411.pdf"^^xsd:anyURI
  ] .
 
 
@@ -1794,6 +1794,13 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :R9Iwkpvro1luxgrYOcKzuPX ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget <https://www.nra.go.jp/data/000292313.pdf> ;
+   rdfs:seeAlso <>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :R9Iwkpvro1luxgrYOcKzuPX ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "the radiation monitoring equipment" ;
    rdfs:isDefinedBy """pag 28,The Fukushima Daiichi Accident Technical Volume 1/5 
@@ -1842,7 +1849,7 @@ The MSIVs are engineered safety features designed to limit the consequences of a
    owl:annotatedTarget """The MSIVs are engineered safety features designed to limit the release of radioactive materials to the environment and to minimize reactor vessel inventory loss during a Design Basis Accident Redundant valves are located on each main steam line: one inside the drywell and one in the steam tunnel in the auxiliary building. The MSIVs are air- and spring-operated valves — air to open, air and spring to close .... (BWR)
 
 The MSIVs are engineered safety features designed to limit the consequences of a steam line break. In the event of a steam line break inside containment, the MSIVs must close within 5 seconds to isolate the reverse steam flow from the intact SG to limit containment pressure below its design limits. The reverse steam flow is the result of the intact SG's feeding the steam line break through the pressure-equalizing header located in the turbine building. The containment is designed to accommodate only one SG blowdown... (PWR)"""@en ;
-   rdfs:seeAlso "https://inis.iaea.org/collection/NCLCollectionStore/_Public/27/051/27051618.pdf"
+   :referenceINIS "https://inis.iaea.org/collection/NCLCollectionStore/_Public/27/051/27051618.pdf"
  ] .
 
 
@@ -1983,7 +1990,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
    owl:annotatedSource :R9j7jE0NWQS6xBqDD8iJRbf ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The reactor core isolation cooling (RCIC) system provides makeup water to the reactor vessel for core cooling when the main steam lines are isolated and the normal supply of water to the reactor vessel is lost. The RCIC system consists of a turbine-driven pump, piping, and valves necessary to deliver water to the reactor vessel at operating conditions. "@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
+   :referenceNRC <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
  ] .
 
 
@@ -2084,7 +2091,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget """The standby liquid control system injects a neutron poison (boron) into the reactor vessel to shutdown the chain reaction, independent of the control rods, and maintains the reactor shutdown as the plant is cooled to maintenance temperatures.
 The standby liquid control system consists of a heated storage tank, two positive displacement pumps, two explosive valves, and the piping necessary to inject the neutron absorbing solution into the reactor vessel. The standby liquid control system is manually initiated and provides the operator with a relatively slow method of achieving reactor shutdown conditions."""@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
+   :referenceNRC <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
  ] .
 
 
@@ -2137,7 +2144,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
    owl:annotatedSource :RBHWfELWZVXyLNJa8MflI25 ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The high pressure coolant injection (HPCI) system is an independent emergency core cooling system requiring no auxiliary ac power, plant air systems, or external cooling water systems to perform its purpose of providing make up water to the reactor vessel for core cooling under small and intermediate size loss of coolant accidents. The high pressure coolant injection system can supply make up water to the reactor vessel from above rated reactor pressure to a reactor pressure below that at which the low pressure emergency core cooling systems can inject."@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/students/for-educators/03.pdf>
+   :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/students/for-educators/03.pdf>
  ] .
 
 
@@ -2225,7 +2232,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
    owl:annotatedSource :RBXC5sM9ZUESVnrsgaqxqxy ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Heat is removed during normal power operation by generating steam in the reactor vessel and then using that steam to generate electrical energy. When the reactor is shutdown, the core will still continue to generate decay heat. The heat is removed by bypassing the turbine and dumping the steam directly to the condenser. The shutdown cooling mode of the residual heat removal (RHR) system is used to complete the cooldown process when pressure decreases to approximately 50 psig. Water is pumped from the reactor recirculation loop through a heat exchanger and back to the reactor via the recirculation loop. The recirculation loop is used to limit the number of penetrations into the reactor vessel."@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
+   :referenceNRC <https://www.nrc.gov/docs/ML1209/ML120970422.pdf>
  ] .
 
 
@@ -2298,7 +2305,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :RBnyfPxRohc9STM4mfSMMFq ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "equipment and items of permanent, temporary and portable equipment playing an important role in safety systems/functions"@en ;
-   rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:14224:ed-3:v2:en:term:3.84>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:14224:ed-3:v2:en:term:3.84>
  ] .
 
 
@@ -2307,16 +2314,16 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                          rdfs:subClassOf :RDoeQzvUClmOY7fNhDvK0L1 ,
                                          :Rw4mCgviqd6HTitZEzST6w ,
                                          :WaterInjectionSystem ;
-                         rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20> ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "EmergencyCoreCoolingSystem" ;
                          <http://www.w3.org/2004/02/skos/core#comment> "devices that aim to the limitation of any negative consequence (3.6) of a particular event, injecting refrigerants with the aim of decrease the temperature of the core and the pressure inside the Vessel"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorMitigationCoolingSystem"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorMitigationCoolingSystem"@en ;
+                         :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20> .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :RBp2yVTrXRyb55JnYdvAGux ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
    owl:annotatedTarget "EmergencyCoreCoolingSystem" ;
-   rdfs:isDefinedBy """Pag 82,  The Fukushima Daiichi Accident Technical Volume 1/5 
+   rdfs:seeAlso """Pag 82,  The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""
  ] .
 
@@ -2563,7 +2570,7 @@ from control."""@en ;
    owl:annotatedSource :RCAHezyl4VRbtyt3dbnxBUb ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "protection afforded to the vessel to reduce the rate of heat transfer from the fire to the vessel, throughout the period of exposure to fire, including any protection materials together with any encasement (such as a jacket), and supporting system (such as mesh reinforcement or a framing system) and any specified primer and top coat if applicable."@en ;
-   rdfs:isDefinedBy "ISO 21843:2023(en) Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels"
+   :referenceISO "ISO 21843:2023(en) Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels"^^xsd:anyURI
  ] .
 
 
@@ -2580,18 +2587,14 @@ from control."""@en ;
                                            owl:someValuesFrom :RBwST6x27zdyWBgBunjc2Q9
                                          ] ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "CRD﻿"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "PURPOSES: To make changes in core reactivity by positioning control rods in response to the Reactor Manual Control System (RMCS) signals. To rapidly insert all control rods to shutdown the reactor in response to the Reactor Protection System (RPS) signals.  To provide cooling water for the reactor recirculation and reactor water cleanup pump seals."@en ,
-                                                                          """Purpuses:
-To make changes in core reactivity by positioning control rods in response to the Reactor Manual Control System (RMCS) signals. 
-To rapidly insert all control rods to shutdown the reactor in response to the Reactor Protection System (RPS) signals. 
-To provide cooling water for the reactor recirculation and reactor water cleanup pump seals."""@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "PURPOSES: To make changes in core reactivity by positioning control rods in response to the Reactor Manual Control System (RMCS) signals. To rapidly insert all control rods to shutdown the reactor in response to the Reactor Protection System (RPS) signals.  To provide cooling water for the reactor recirculation and reactor water cleanup pump seals."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ControlRodDriveSystem"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :RCDLrZ9KyXAspBK0GpRfHxG ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "PURPOSES: To make changes in core reactivity by positioning control rods in response to the Reactor Manual Control System (RMCS) signals. To rapidly insert all control rods to shutdown the reactor in response to the Reactor Protection System (RPS) signals.  To provide cooling water for the reactor recirculation and reactor water cleanup pump seals."@en ;
-   rdfs:isDefinedBy "https://www.nrc.gov/docs/ML1125/ML11258A305.pdf"
+   :referenceNRC "https://www.nrc.gov/docs/ML1125/ML11258A305.pdf"^^xsd:anyURI
  ] .
 
 
@@ -2709,7 +2712,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :RCPFRkyBbFadwcQUuWavdPl ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "System constituted by a coherent set of physical barriers and/or auxiliary dynamic systems intended to confine radioactive substances in order to ensure the safety of the workers and the public and the protection of the environment ."@en ;
-   rdfs:isDefinedBy "https://www.iso.org/obp/ui/#iso:std:iso:17873:ed-1:v1:en"
+   :referenceISO "https://www.iso.org/obp/ui/#iso:std:iso:17873:ed-1:v1:en"^^xsd:anyURI
  ] .
 
 
@@ -2743,7 +2746,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
     a) contains gas or liquid with high energy level;
     b) contains gas or liquid which will create a mishap (accident) if released;
     c) contains gas or liquid with high pressure level﻿"""@en ;
-   rdfs:isDefinedBy "﻿ISO 21347:2005(en)  Space systems — Fracture and damage control﻿"
+   :referenceISO "﻿ISO 21347:2005(en)  Space systems — Fracture and damage control﻿"^^xsd:anyURI
  ] .
 
 
@@ -2872,7 +2875,7 @@ power for a nuclear plant in the event that all off-site power sources are lost.
    owl:annotatedSource :RCsCw5Imj0XgbP0uOlzcQNe ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Gear for the prevention of accidents "@en ;
-   rdfs:isDefinedBy "ISO 11675:2005(en)  Textile machinery and accessories — Flatbed knitting machines — Vocabulary "
+   :referenceISO "ISO 11675:2005(en)  Textile machinery and accessories — Flatbed knitting machines — Vocabulary "^^xsd:anyURI
  ] .
 
 
@@ -3026,9 +3029,9 @@ Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget """Pressure-activated valve intended to limit pressure rise to a specified value
 Note 1 to entry: These valves have set opening and reclosing pressures"""@en ;
-   rdfs:seeAlso """https://www.iso.org/obp/ui/en/#iso:std:iso:21843:ed-2:v1:en 
+   :referenceISO """https://www.iso.org/obp/ui/en/#iso:std:iso:21843:ed-2:v1:en 
 Determination of the resistance to hydrocarbon pool fires of fire protection materials and systems for pressure vessels 
-ISO 21843:2023(en)"""
+ISO 21843:2023(en)"""^^xsd:anyURI
  ] .
 
 
@@ -3066,7 +3069,7 @@ ISO 21843:2023(en)"""
    owl:annotatedSource :RDNjoQuhLLxChWFzUtzeUrj ;
    owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
    owl:annotatedTarget "chamber, below ground level in a pumping installation that receives water to be pumped "@en ;
-   rdfs:isDefinedBy "ISO 6107:2021(en) Water quality — Vocabulary"
+   :referenceISO "ISO 6107:2021(en) Water quality — Vocabulary"^^xsd:anyURI
  ] .
 
 
@@ -3752,7 +3755,7 @@ https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""
    owl:annotatedSource :RY81DSQhpDKzGrzvuAjU5m ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The suppression chamber consists of a steel pressure vessel with a toroidal shape (sometimes referred to as torus) and a large body of water inside the suppression chamber (referred to as the suppression pool). The purposes of the suppression chamber are to condense steam released from a LOCA and to prevent radioactive materials from passing through this portion of the primary containment boundary.  ﻿"@en ;
-   rdfs:isDefinedBy <https://www.nrc.gov/docs/ML1215/ML12159A162.pdf>
+   :referenceNRC <https://www.nrc.gov/docs/ML1215/ML12159A162.pdf>
  ] .
 
 
@@ -3786,7 +3789,7 @@ https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""
    owl:annotatedSource :RZtNAG3BL7lDm8L77EbEBd ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Chamber, below ground level, that remains dry, and houses pumping apparatus with its associated pipework and equipment."@en ;
-   rdfs:isDefinedBy "ISO 6107:2021(en) Water quality — Vocabulary ﻿"
+   :referenceISO "ISO 6107:2021(en) Water quality — Vocabulary ﻿"^^xsd:anyURI
  ] .
 
 
@@ -3831,7 +3834,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
    owl:annotatedSource :RaKxhZBSqtO6ceVm10Ca6Y ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "system (3.5.2.17) that amplifies sound (3.5.2.22)"@en ;
-   rdfs:isDefinedBy "https://www.iso.org/obp/ui/#iso:std:iso:20539:ed-2:v1:en:term:3.2.2"
+   :referenceISO "https://www.iso.org/obp/ui/#iso:std:iso:20539:ed-2:v1:en:term:3.2.2"^^xsd:anyURI
  ] .
 
 
@@ -4199,7 +4202,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    owl:annotatedSource :Rw4mCgviqd6HTitZEzST6w ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "devices that aim to the limitation of any negative consequence (3.6) of a particular event"@en ;
-   rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20>
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20>
  ] .
 
 
@@ -4253,7 +4256,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget """part of a nuclear reactor (3.1.22), where the fissionable nuclides (3.1.2) sustaining the fission chain are located
 Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also included in the reactor core (3.1.23.1)."""@en ;
-   rdfs:isDefinedBy "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors"
+   :referenceISO "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors"^^xsd:anyURI
  ] .
 
 
