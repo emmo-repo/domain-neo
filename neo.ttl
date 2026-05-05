@@ -25,6 +25,8 @@
     - ISO 12749 - Nuclear energy, nuclear technologies, and radiological protection
     - \"Construction Technologies for Nuclear Power Plants\", IAEA Nuclear Energy Series, No. NP-T-2.5, IAEA, Vienna (AU), 2011
     - IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition.
+    - Nuclear Regulatory Commission reports and documents.
+    - Official U.S. federal regulations database, maintained by the National Archives.
 
 It includes the representation of the Fukushima Daichi accident, based on the official IAEA report: \"The Fukushima Daiichi accident - Technical Volume 1: Description and Context of the Accident\", IAEA, Vienna (AU), 2015, STI/PUB/1710, ISBN 978–92–0–107015–9
 
@@ -140,8 +142,9 @@ elite:isOutputOf rdf:type owl:AnnotationProperty ;
 
 ###  https://w3id.org/emmo/domain/neo#referenceNRC
 :referenceNRC rdf:type owl:AnnotationProperty ;
+              rdfs:comment "This is the direct reference to the Nuclear Regulatory Commission Glossary" ;
               rdfs:seeAlso <https://www.nrc.gov/reading-rm/basic-ref/glossary> ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "NRC Reference"@en ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "NRCG Reference"@en ;
               rdfs:subPropertyOf rdfs:seeAlso ;
               rdfs:range xsd:anyURI .
 
@@ -153,6 +156,21 @@ elite:isOutputOf rdf:type owl:AnnotationProperty ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "NSSG Reference"@en ;
                rdfs:subPropertyOf rdfs:seeAlso ;
                rdfs:range xsd:anyURI .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#NRC_Reference
+:NRC_Reference rdf:type owl:AnnotationProperty ;
+               rdfs:comment "This is the link to any Nuclear Regulatory Commission document/report."@en ;
+               rdfs:subPropertyOf rdfs:seeAlso ;
+               rdfs:range xsd:string .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#eCFR_Reference
+:eCFR_Reference rdf:type owl:AnnotationProperty ;
+                rdfs:comment "Official U.S. federal regulations database, maintained by the National Archives." ;
+                :eCFR_Reference ""^^xsd:anyURI ;
+                rdfs:subPropertyOf rdfs:seeAlso ;
+                rdfs:range xsd:anyURI .
 
 
 #################################################################
