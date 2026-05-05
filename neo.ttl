@@ -344,7 +344,7 @@ further decays, the event is referred to as inelastic scattering."""@en ;
    owl:annotatedSource :R1bLylxOI5EPBIWCiqLVQv ;
    owl:annotatedProperty rdfs:seeAlso ;
    owl:annotatedTarget <https://www.iso.org/obp/ui/en/#iso:std:iso:15932:ed-1:v1:en:term:2.2.2> ;
-   :referenceISO <>
+   :referenceISO <https://w3id.org/emmo/domain/neo>
  ] .
 
 [ rdf:type owl:Axiom ;
@@ -1709,7 +1709,7 @@ more times during the life of the nuclear power unit and include but
 are not limited to loss of power to all recirculation pumps, tripping of
 the turbine generator set, isolation of the main condenser, and loss of
 all offsite power."""@en ;
-   :referenceNRC <>
+   :referenceNRC <https://w3id.org/emmo/domain/neo>
  ] .
 
 
@@ -2198,8 +2198,15 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
                                          ] ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "The central part of the a nuclear power plant in which the nuclear core is located and the fission reaction takes place"@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReactor"@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReactor"@en ;
+                         :R8xx0dhbEh1tjGMDwNZfckV "special device having an inventory of nuclear fuel material containing fissionable nuclides (3.1.2) and often neutron moderating, neutron absorbing and cooling materials, all of them geometrically arranged in a particular neutron multiplicative configuration (3.1.10) designed and built for having the capability of initiating, maintaining and extinguishing a controlled, self-sustaining nuclear fission (3.1.1) chain reaction, under adequate safety conditions" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :RBW32C4x3sn1YahVG7uYVun ;
+   owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
+   owl:annotatedTarget "special device having an inventory of nuclear fuel material containing fissionable nuclides (3.1.2) and often neutron moderating, neutron absorbing and cooling materials, all of them geometrically arranged in a particular neutron multiplicative configuration (3.1.10) designed and built for having the capability of initiating, maintaining and extinguishing a controlled, self-sustaining nuclear fission (3.1.1) chain reaction, under adequate safety conditions" ;
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.22>
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#RBXC5sM9ZUESVnrsgaqxqxy
@@ -3383,7 +3390,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
 
 ###  https://w3id.org/emmo/domain/neo#REnnyld9FmnAjLpeDyUsnv
 :REnnyld9FmnAjLpeDyUsnv rdf:type owl:Class ;
-                        rdfs:subClassOf :RBW32C4x3sn1YahVG7uYVun ,
+                        rdfs:subClassOf :NuclearPowerReactor ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -4251,6 +4258,37 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
    owl:annotatedProperty :R9Q7fCgWnAkzqnVMtRJ4WDv ;
    owl:annotatedTarget "Water from the filtrated water tanks and raw water underground tanks can be injected by the electric pumps, fire engines, or alternatively by concrete pumper." ;
    rdfs:seeAlso "https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#NuclearPowerReactor
+:NuclearPowerReactor rdf:type owl:Class ;
+                     rdfs:subClassOf :RBW32C4x3sn1YahVG7uYVun ;
+                     :R8xx0dhbEh1tjGMDwNZfckV "nuclear reactor (3.1.22) conceived to produce electrical power" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :NuclearPowerReactor ;
+   owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
+   owl:annotatedTarget "nuclear reactor (3.1.22) conceived to produce electrical power" ;
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.1.1>
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#ResearchReactor
+:ResearchReactor rdf:type owl:Class ;
+                 rdfs:subClassOf :RBW32C4x3sn1YahVG7uYVun ;
+                 :R8xx0dhbEh1tjGMDwNZfckV """type of nuclear reactor (3.1.22) engineered to use its neutron flux and ionizing radiation for scientific research in different fields
+Note 1 to entry: The application fields can be medical, biological, electronic, engineering, industrial as well as related to specific reactor concepts or nuclear fuel cycle strategies services, technological developments and/or industrial production purposes. It includes the reactor core (3.1.23.1), the facilities/devices exposed to the neutron field within and around the core, and structures (3.7.1), systems and components (3.7.3) related to the safe operation (3.9.1) of the reactor.
+Note 2 to entry: For most of research reactors the heat production from fission power of the nuclear reaction is essentially useless, therefore the denomination “research reactor” becomes a complement regarding “power reactor” (3.2.1.1), for which heat is recovered for further use while the neutron flux and ionizing radiation are not.""" ;
+                 :referenceNSSG <> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :ResearchReactor ;
+   owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
+   owl:annotatedTarget """type of nuclear reactor (3.1.22) engineered to use its neutron flux and ionizing radiation for scientific research in different fields
+Note 1 to entry: The application fields can be medical, biological, electronic, engineering, industrial as well as related to specific reactor concepts or nuclear fuel cycle strategies services, technological developments and/or industrial production purposes. It includes the reactor core (3.1.23.1), the facilities/devices exposed to the neutron field within and around the core, and structures (3.7.1), systems and components (3.7.3) related to the safe operation (3.9.1) of the reactor.
+Note 2 to entry: For most of research reactors the heat production from fission power of the nuclear reaction is essentially useless, therefore the denomination “research reactor” becomes a complement regarding “power reactor” (3.2.1.1), for which heat is recovered for further use while the neutron flux and ionizing radiation are not.""" ;
+   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.5.1.2>
  ] .
 
 
