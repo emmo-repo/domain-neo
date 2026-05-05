@@ -655,7 +655,6 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 ###  https://w3id.org/emmo/domain/neo#R7NYEyrtAsNuF6n0QNOFmHm
 :R7NYEyrtAsNuF6n0QNOFmHm rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ;
-                         rdfs:comment "Change the taxonomy or change the label" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Term which when used alone refers to the turbine action only. It is that component of the gas turbine which produces power from expansion of the working fluid."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "PlantTurbine"@en .
 
@@ -2193,11 +2192,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1188_web.pdf"""
 
 ###  https://w3id.org/emmo/domain/neo#RBW32C4x3sn1YahVG7uYVun
 :RBW32C4x3sn1YahVG7uYVun rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyObject ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty elite:isConstituentOf ;
-                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
-                                         ] ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReactor"@en ;
                          :R8xx0dhbEh1tjGMDwNZfckV "special device having an inventory of nuclear fuel material containing fissionable nuclides (3.1.2) and often neutron moderating, neutron absorbing and cooling materials, all of them geometrically arranged in a particular neutron multiplicative configuration (3.1.10) designed and built for having the capability of initiating, maintaining and extinguishing a controlled, self-sustaining nuclear fission (3.1.1) chain reaction, under adequate safety conditions" .
 
@@ -3390,7 +3385,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
 
 ###  https://w3id.org/emmo/domain/neo#REnnyld9FmnAjLpeDyUsnv
 :REnnyld9FmnAjLpeDyUsnv rdf:type owl:Class ;
-                        rdfs:subClassOf :NuclearPowerReactor ,
+                        rdfs:subClassOf :RBW32C4x3sn1YahVG7uYVun ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty elite:isConstituentOf ;
                                           owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
@@ -4263,7 +4258,11 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 
 ###  https://w3id.org/emmo/domain/neo/neo#NuclearPowerReactor
 :NuclearPowerReactor rdf:type owl:Class ;
-                     rdfs:subClassOf :RBW32C4x3sn1YahVG7uYVun ;
+                     rdfs:subClassOf :RBW32C4x3sn1YahVG7uYVun ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty elite:isConstituentOf ;
+                                       owl:someValuesFrom :R0N27qMQzeRjM0vSOeAvUT
+                                     ] ;
                      :R8xx0dhbEh1tjGMDwNZfckV "nuclear reactor (3.1.22) conceived to produce electrical power" .
 
 [ rdf:type owl:Axiom ;
