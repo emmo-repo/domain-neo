@@ -22,12 +22,16 @@
                                                                                "Saverio Quaranta"@it ;
                                         <http://purl.org/dc/terms/creator> "Emanuele Ghedini"@it ;
                                         <http://purl.org/dc/terms/description> """The Nuclear Energy Ontology (NEO) is a domain ontology developed under the EMMO framework for the representation of concepts in the field of nuclear energy. It is based on commonly used standardization vocabularies, such as:
+    - ISO 1709:2018(en) Nuclear energy — Fissile materials — Principles of criticality safety in storing, handling and processing
     - ISO 12749 - Nuclear energy, nuclear technologies, and radiological protection.
     - ISO 17873:2004 - Nuclear facilities, Criteria for the design and operation of ventilation systems for nuclear installations other than nuclear reactors.
     - ISO/TS 16901:2022 - Guidance on performing risk assessment in the design of onshore LNG installations including the ship/shore interface.
-    - ISO 26802:2010 Nuclear facilities — Criteria for the design and the operation of containment and ventilation systems for nuclear reactors
-    - \"Construction Technologies for Nuclear Power Plants\", IAEA Nuclear Energy Series, No. NP-T-2.5, IAEA, Vienna (AU), 2011
+    - ISO 26802:2010 Nuclear facilities — Criteria for the design and the operation of containment and ventilation systems for nuclear reactors.
+    - ISO 20553:2006(en) Radiation protection — Monitoring of workers occupationally exposed to a risk of internal contamination with radioactive material
+    - \"Construction Technologies for Nuclear Power Plants\", IAEA Nuclear Energy Series, No. NP-T-2.5, IAEA, Vienna (AU), 2011-
+
     - IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition, and other technical reports.
+
     - Nuclear Regulatory Commission reports and documents.
     - Official U.S. federal regulations database, maintained by the National Archives.
 
@@ -287,18 +291,8 @@ more times during the life of the nuclear power unit and include but
 are not limited to loss of power to all recirculation pumps, tripping of
 the turbine generator set, isolation of the main condenser, and loss of
 all offsite power.""" ;
-                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "AnticipatedOperationalOccurrence"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :AnticipatedOperationalOccurrence ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """Conditions of normal operation that are expected to occur one or
-more times during the life of the nuclear power unit and include but
-are not limited to loss of power to all recirculation pumps, tripping of
-the turbine generator set, isolation of the main condenser, and loss of
-all offsite power.""" ;
-   :referenceNRC "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"^^xsd:anyURI
- ] .
+                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "AnticipatedOperationalOccurrence"@en ;
+                                  :NRC_Reference "https://www.nrc.gov/docs/ML0707/ML070710376.pdf" .
 
 
 ###  https://w3id.org/emmo/domain/neo#AnticipatedOperationalOccurrenceEvent
@@ -347,11 +341,11 @@ https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""^^xsd:anyURI
 
 ###  https://w3id.org/emmo/domain/neo#AutomaticMonitoring
 :AutomaticMonitoring rdf:type owl:Class ;
-                     rdfs:subClassOf :Controlling ;
+                     rdfs:subClassOf :Controlling ,
+                                     :NoNuclearISO ;
                      rdfs:comment "Automatic function which ensures that a protective measure (3.36) is initiated if the ability of the SRP/CS to perform a function is diminished, or if the process conditions are changed such that hazards are generated"@en ;
                      rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:25119:-1:ed-2:v1:en:term:3.33> ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "AutomaticManipulation"@en ;
-                     <http://www.w3.org/2004/02/skos/core#comment> "Missed DefinedBy and definition" ;
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "AutomaticMonitoring"@en .
 
 
@@ -613,14 +607,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                           ] ;
                           <http://www.w3.org/2004/02/skos/core#altLabel> "ContaminationMonitoring"@en ;
                           <http://www.w3.org/2004/02/skos/core#definition> "Measurement of dose or contamination for the purpose of the assessment or control of exposure to radiation or radioactive material, and the interpretation of the results." ;
-                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ContaminationMeasurement"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :ContaminationMeasurement ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Measurement of dose or contamination for the purpose of the assessment or control of exposure to radiation or radioactive material, and the interpretation of the results." ;
-   :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:20553:ed-1:v1:en:term:3.15"^^xsd:anyURI
- ] .
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "ContaminationMeasurement"@en ;
+                          :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:20553:ed-1:v1:en:term:3.15"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#ContinuosInjection
@@ -749,7 +737,8 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
 
 ###  https://w3id.org/emmo/domain/neo#Controlling
 :Controlling rdf:type owl:Class ;
-             rdfs:subClassOf :NPPNormalOperation ;
+             rdfs:subClassOf :NPPNormalOperation ,
+                             :NoNuclearISO ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Manipulation"@en ,
                                                             "Monitoring"@en ;
              <http://www.w3.org/2004/02/skos/core#comment> "A process which accesses and changes the contents of data elements."@en ;
@@ -1634,7 +1623,8 @@ The MSIVs are engineered safety features designed to limit the consequences of a
 
 ###  https://w3id.org/emmo/domain/neo#MaintenanceOutage
 :MaintenanceOutage rdf:type owl:Class ;
-                   rdfs:subClassOf :NPPNormalOperation ;
+                   rdfs:subClassOf :NPPNormalOperation ,
+                                   :NoNuclearISO ;
                    <http://www.w3.org/2004/02/skos/core#comment> "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "MaintenanceOutage"@en .
 
@@ -1664,7 +1654,8 @@ The MSIVs are engineered safety features designed to limit the consequences of a
 
 ###  https://w3id.org/emmo/domain/neo#ManualControlling
 :ManualControlling rdf:type owl:Class ;
-                   rdfs:subClassOf :Controlling ;
+                   rdfs:subClassOf :Controlling ,
+                                   :NoNuclearISO ;
                    <http://www.w3.org/2004/02/skos/core#altLabel> "ManualControl"@en ,
                                                                   "ManualManipulation"@en ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Control in which the system or main device, whether direct or power-aided in operation, is directly controlled by an operator"@en ;
@@ -1717,14 +1708,8 @@ Collaborative business relationship management systems — Requirements and fram
             rdfs:subClassOf :NoNuclearISO ,
                             :SevereAccidentManagement ;
             <http://www.w3.org/2004/02/skos/core#definition> "limitation of any negative consequence (3.6) of a particular event"@en ;
-            <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitigation"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :Mitigation ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "limitation of any negative consequence (3.6) of a particular event"@en ;
-   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20>
- ] .
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitigation"@en ;
+            :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:16901:ed-2:v1:en:term:3.20> .
 
 
 ###  https://w3id.org/emmo/domain/neo#MobileRadiationMonitor
@@ -1848,15 +1833,15 @@ undetected failures can be lower."""@en ,
                     <http://www.w3.org/2004/02/skos/core#altLabel> "NPPPreventiveOperation"@en ;
                     <http://www.w3.org/2004/02/skos/core#definition> "Operation within specified operational limits and conditions. This includes startup, power operation, shutting down, shutdown, maintenance, testing and refuelling"@en ;
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperation"@en ;
-                    :RR3uD2d7YfhHohfv2Nm6sX "No off-site radiological impact (bounded by regulatory operating limits for discharge)"@en .
+                    :RR3uD2d7YfhHohfv2Nm6sX "No off-site radiological impact (bounded by regulatory operating limits for discharge)"@en ;
+                    :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/597.html"^^xsd:anyURI .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :NPPNormalOperation ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Operation within specified operational limits and conditions. This includes startup, power operation, shutting down, shutdown, maintenance, testing and refuelling"@en ;
    rdfs:seeAlso """Approaches for Overall Instrumentation and Control Architectures of Nuclear Power Plants, IAEA Nuclear Energy Series No. NP-T-2.11, IAEA, Vienna (2018)
-https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
-   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/597.html"^^xsd:anyURI
+https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
  ] .
 
 
@@ -1929,15 +1914,9 @@ important feature at this level."""@en ;
                                 owl:onProperty elite:isSubProcessOf ;
                                 owl:someValuesFrom :Nuclear_ReactorMaintanance
                               ] ;
+              rdfs:comment "The process of removing older fuel and loading new fuel. These actions are all performed underwater to supply continuous cooling for the fuel and provide shielding from the radioactive spent fuel." ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPRefueling"@en ;
-              :referenceNRC "The process of removing older fuel and loading new fuel. These actions are all performed underwater to supply continuous cooling for the fuel and provide shielding from the radioactive spent fuel."^^xsd:anyURI .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NPPRefueling ;
-   owl:annotatedProperty :referenceNRC ;
-   owl:annotatedTarget "The process of removing older fuel and loading new fuel. These actions are all performed underwater to supply continuous cooling for the fuel and provide shielding from the radioactive spent fuel."^^xsd:anyURI ;
-   rdfs:isDefinedBy <https://www.nrc.gov/reading-rm/basic-ref/glossary/refueling.html>
- ] .
+              :referenceNRC <Refueling> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NPPShutdown
@@ -1959,7 +1938,6 @@ important feature at this level."""@en ;
                  rdfs:subClassOf :NPPNormalOperation ;
                  <http://www.w3.org/2004/02/skos/core#definition> "An increase in the rate of fission (and heat production) in a reactor (usually by the removal of control rods from the core)."@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPStartUpPhase"@en .
-               
 
 
 ###  https://w3id.org/emmo/domain/neo#NPPUnintendedEvent
@@ -2058,15 +2036,8 @@ Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abund
                                        ] ;
                        <http://www.w3.org/2004/02/skos/core#definition> """nuclear fission (3.1.1) initiated by a nucleus when an external colliding particle is absorbed
 Note 1 to entry: The absorption of the external colliding particle, usually a neutron, generates a strong increase in the compound nucleus internal energy and, hence, increases the compound nucleus instability, favouring a large energy release by means of a nucleus partition."""@en ;
-                       <http://www.w3.org/2004/02/skos/core#prefLabel> "NeutronInducedFission"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NeutronInducedFission ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """nuclear fission (3.1.1) initiated by a nucleus when an external colliding particle is absorbed
-Note 1 to entry: The absorption of the external colliding particle, usually a neutron, generates a strong increase in the compound nucleus internal energy and, hence, increases the compound nucleus instability, favouring a large energy release by means of a nucleus partition."""@en ;
-   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.1.1>
- ] .
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "NeutronInducedFission"@en ;
+                       :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.1.1> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NoNuclearISO
@@ -2139,14 +2110,8 @@ http://www-ns.iaea.org/downloads/ni/training/specific_expert_knowledge/psa-level
 :NuclearActivation rdf:type owl:Class ;
                    rdfs:subClassOf :NuclearReaction ;
                    <http://www.w3.org/2004/02/skos/core#definition> "The process of making a radioisotope by bombarding a stable element with neutrons or protons."@en ;
-                   <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearActivation"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NuclearActivation ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "The process of making a radioisotope by bombarding a stable element with neutrons or protons."@en ;
-   :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/glossary/activation.html>
- ] .
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearActivation"@en ;
+                   :referenceNRC <Activation> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearChainReaction
@@ -2157,14 +2122,8 @@ http://www-ns.iaea.org/downloads/ni/training/specific_expert_knowledge/psa-level
                                         owl:someValuesFrom :ReactorCoreEnergyProduction
                                       ] ;
                       <http://www.w3.org/2004/02/skos/core#definition> "series of nuclear reactions in which one of the agents necessary to the series is itself produced by the same reactions"@en ;
-                      <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearChainReaction"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NuclearChainReaction ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "series of nuclear reactions in which one of the agents necessary to the series is itself produced by the same reactions"@en ;
-   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:1709:ed-3:v1:en:term:3.8>
- ] .
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearChainReaction"@en ;
+                      :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:1709:ed-3:v1:en:term:3.8> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearElasticScattering
@@ -2229,16 +2188,8 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
                 <http://www.w3.org/2004/02/skos/core#definition> """splitting of a nucleus into fission fragments, either spontaneously or as a result of the impact of a particle, usually with an associated release of energy
 Note 1 to entry: The nucleus usually has a high mass number, together with an intermediate or low average-binding-energy-per-nucleon; hence, an inherent instability exists, and the fission fragments are usually highly unstable.
 [SOURCE: ISO 12749‑5:2018, 3.1.1]"""@en ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearFission"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NuclearFission ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """splitting of a nucleus into fission fragments, either spontaneously or as a result of the impact of a particle, usually with an associated release of energy
-Note 1 to entry: The nucleus usually has a high mass number, together with an intermediate or low average-binding-energy-per-nucleon; hence, an inherent instability exists, and the fission fragments are usually highly unstable.
-[SOURCE: ISO 12749‑5:2018, 3.1.1]"""@en ;
-   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en:term:3.2.2>
- ] .
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearFission"@en ;
+                :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en:term:3.2.2> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearFuel
@@ -2265,13 +2216,6 @@ Note 1 to entry: For inelastic scattering, the electron trajectory is modified b
 one neutron, leaving the nucleus in an excited state which subsequently undergoes
 further decays, the event is referred to as inelastic scattering."""@en ;
                             <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearInelasticScattering"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NuclearInelasticScattering ;
-   owl:annotatedProperty rdfs:seeAlso ;
-   owl:annotatedTarget <https://www.iso.org/obp/ui/en/#iso:std:iso:15932:ed-1:v1:en:term:2.2.2> ;
-   :referenceISO <https://w3id.org/emmo/domain/neo>
- ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :NuclearInelasticScattering ;
@@ -3168,7 +3112,8 @@ in operation or in accidents."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#RemoteControlling
 :RemoteControlling rdf:type owl:Class ;
-                   rdfs:subClassOf :Controlling ;
+                   rdfs:subClassOf :Controlling ,
+                                   :NoNuclearISO ;
                    <http://www.w3.org/2004/02/skos/core#altLabel> "RemoteControl"@en ,
                                                                   "RemoteManipulation"@en ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Initiation of control operations for a process or machine at a point remote from the motive power"@en ;
@@ -3294,8 +3239,7 @@ Note 2 to entry: For most of research reactors the heat production from fission 
                                  ] ;
                  <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearPoisonInjection"@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyInjection"@en ;
-                 :R8xx0dhbEh1tjGMDwNZfckV "The rapid insertion of a chemically soluble neutron poison (such as boric acid) into the reactor coolant system to ensure reactor shutdown."@en ;
-                 :referenceNRC <> .
+                 :R8xx0dhbEh1tjGMDwNZfckV "The rapid insertion of a chemically soluble neutron poison (such as boric acid) into the reactor coolant system to ensure reactor shutdown."@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#SafetySensors
@@ -3459,14 +3403,8 @@ perform its intended safety functions."""@en ;
 :SpontaneousNuclearFission rdf:type owl:Class ;
                            rdfs:subClassOf :NuclearFission ;
                            <http://www.w3.org/2004/02/skos/core#definition> "nuclear fission (3.1.1) produced in a nucleus, having an inherent instability, that develops itself in a purely stochastic way and without intervention of any external colliding particle"@en ;
-                           <http://www.w3.org/2004/02/skos/core#prefLabel> "SpontaneousNuclearFission"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :SpontaneousNuclearFission ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "nuclear fission (3.1.1) produced in a nucleus, having an inherent instability, that develops itself in a purely stochastic way and without intervention of any external colliding particle"@en ;
-   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.1.2>
- ] .
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "SpontaneousNuclearFission"@en ;
+                           :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.1.2> .
 
 
 ###  https://w3id.org/emmo/domain/neo#SprayInjection
@@ -3478,14 +3416,8 @@ perform its intended safety functions."""@en ;
                                 ] ;
                 <http://www.w3.org/2004/02/skos/core#altLabel> "CoreSpray"@en ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "SprayInjection"@en ;
+                :NRC_Reference <https://www.nrc.gov/docs/ML1125/ML11258A368.pdf> ;
                 :R8xx0dhbEh1tjGMDwNZfckV "Activation of the Core Spray System in which coolant is sent through the discharge path to the core spray sparger using core spray pumps."@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :SprayInjection ;
-   owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
-   owl:annotatedTarget "Activation of the Core Spray System in which coolant is sent through the discharge path to the core spray sparger using core spray pumps."@en ;
-   :referenceNRC <https://www.nrc.gov/docs/ML1125/ML11258A368.pdf>
- ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#StandbyGasTreatmentSystem
@@ -3763,6 +3695,11 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
  ] .
 
 
+###  https://w3id.org/emmo/domain/neo#ToCheckClass
+:ToCheckClass rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/emmo/hume#Object> .
+
+
 ###  https://w3id.org/emmo/domain/neo#TokyoElectricPowerCompany
 :TokyoElectricPowerCompany rdf:type owl:Class ;
                            rdfs:subClassOf :EnergyEfficiencyServiceCompany ;
@@ -3890,11 +3827,6 @@ Fukushima Dai-ni,"""@en ;
    owl:annotatedTarget "chamber, below ground level in a pumping installation that receives water to be pumped "@en ;
    :referenceISO "ISO 6107:2021(en) Water quality — Vocabulary"^^xsd:anyURI
  ] .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#ToCheckClass
-:ToCheckClass rdf:type owl:Class ;
-              rdfs:subClassOf <https://w3id.org/emmo/hume#Object> .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
