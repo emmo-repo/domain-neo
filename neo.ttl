@@ -25,6 +25,7 @@
     - ISO 12749 - Nuclear energy, nuclear technologies, and radiological protection.
     - ISO 17873:2004 - Nuclear facilities, Criteria for the design and operation of ventilation systems for nuclear installations other than nuclear reactors.
     - ISO/TS 16901:2022 - Guidance on performing risk assessment in the design of onshore LNG installations including the ship/shore interface.
+    - ISO 26802:2010 Nuclear facilities — Criteria for the design and the operation of containment and ventilation systems for nuclear reactors
     - \"Construction Technologies for Nuclear Power Plants\", IAEA Nuclear Energy Series, No. NP-T-2.5, IAEA, Vienna (AU), 2011
     - IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition, and other technical reports.
     - Nuclear Regulatory Commission reports and documents.
@@ -244,7 +245,8 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/emmo/domain/neo#AOOControl
 :AOOControl rdf:type owl:Class ;
-            rdfs:subClassOf :DefenceinDepthProcedures ;
+            rdfs:subClassOf :DefenceinDepthProcedures ,
+                            :NoNuclearISO ;
             rdfs:comment """Conditions of normal operation that are expected to occur one or
 more times during the life of the nuclear power unit and include but
 are not limited to loss of power to all recirculation pumps, tripping of
@@ -361,14 +363,8 @@ https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""^^xsd:anyURI
                                                     owl:someValuesFrom :LowPressureEmergencyCoreCoolingSystems
                                                   ] ;
                                   <http://www.w3.org/2004/02/skos/core#definition> "Rapidly lower reactor pressure to allow low pressure injection sources to maintain reactor water level above the Top of Active Fuel."@en ;
-                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "AutomaticReactorDepressurization"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :AutomaticReactorDepressurization ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Rapidly lower reactor pressure to allow low pressure injection sources to maintain reactor water level above the Top of Active Fuel."@en ;
-   :referenceNRC "https://www.nrc.gov/docs/ML1125/ML11258A366.pdf"^^xsd:anyURI
- ] .
+                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "AutomaticReactorDepressurization"@en ;
+                                  :NRC_Reference "https://www.nrc.gov/docs/ML1125/ML11258A366.pdf" .
 
 
 ###  https://w3id.org/emmo/domain/neo#BackupPowerSystem
@@ -424,14 +420,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                            rdfs:subClassOf :NuclearPlantAccident ;
                            <http://www.w3.org/2004/02/skos/core#altLabel> "BDBA"@en ;
                            <http://www.w3.org/2004/02/skos/core#definition> "accident conditions more severe than a design basis accident"@en ;
-                           <http://www.w3.org/2004/02/skos/core#prefLabel> "BeyondDesignBasisAccident"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :BeyondDesignBasisAccident ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "accident conditions more severe than a design basis accident"@en ;
-   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.2>
- ] .
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "BeyondDesignBasisAccident"@en ;
+                           :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.2> .
 
 
 ###  https://w3id.org/emmo/domain/neo#BoilingWaterReactor
@@ -514,7 +504,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
 
 ###  https://w3id.org/emmo/domain/neo#BypassValve
 :BypassValve rdf:type owl:Class ;
-             rdfs:subClassOf :NoNuclearISOObject ,
+             rdfs:subClassOf :NoNuclearISO ,
                              :PipePlantValve ,
                              :TurbineBuildingContents ,
                              [ rdf:type owl:Restriction ;
@@ -552,17 +542,8 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
 coincidence of failure states of components in two or more separate
 channels of a redundancy system, leading to the failure of the defined
 system to perform its intended function."""@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "CommonModeFailureEvents"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :CommonModeFailureEvents ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """The result of an event which, because of dependencies, causes a
-coincidence of failure states of components in two or more separate
-channels of a redundancy system, leading to the failure of the defined
-system to perform its intended function."""@en ;
-   :referenceNRC "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"^^xsd:anyURI
- ] .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "CommonModeFailureEvents"@en ;
+                         :NRC_Reference "https://www.nrc.gov/docs/ML0707/ML070710376.pdf" .
 
 
 ###  https://w3id.org/emmo/domain/neo#CommonSpentFuelBuilding
@@ -577,14 +558,8 @@ system to perform its intended function."""@en ;
 :ComponentFailure rdf:type owl:Class ;
                   rdfs:subClassOf :ObjectFailure ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Loss of the ability of a component to function within acceptance criteria. The component is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time."@en ;
-                  <http://www.w3.org/2004/02/skos/core#prefLabel> "ComponentFailure"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :ComponentFailure ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Loss of the ability of a component to function within acceptance criteria. The component is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time."@en ;
-   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/949"^^xsd:anyURI
- ] .
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "ComponentFailure"@en ;
+                  :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/949"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#ContainmentAtmosphericMonitoringSystem
@@ -855,22 +830,14 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
 of anticipated operational occurrences and to maintain the effectiveness of physical barriers placed between
 a radiation source or radioactive material and workers, members of the public or the environment, in
 operational states and, for some barriers, in accident conditions"""@en ;
-                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DefenceinDepthProcedures"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :DefenceinDepthProcedures ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """A hierarchical deployment of different levels of diverse equipment and procedures to prevent the escalation
-of anticipated operational occurrences and to maintain the effectiveness of physical barriers placed between
-a radiation source or radioactive material and workers, members of the public or the environment, in
-operational states and, for some barriers, in accident conditions"""@en ;
-   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/1069.html"^^xsd:anyURI
- ] .
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DefenceinDepthProcedures"@en ;
+                          :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/1069.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#Degradation
 :Degradation rdf:type owl:Class ;
-             rdfs:subClassOf :Damage ;
+             rdfs:subClassOf :Damage ,
+                             :NoNuclearISO ;
              <http://www.w3.org/2004/02/skos/core#definition> "Adverse physical or chemical change in a substance"@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Degradation"@en .
 
@@ -889,14 +856,8 @@ ISO 14624-5:2023(en)"""^^xsd:anyURI
                      rdfs:subClassOf :NuclearPlantAccident ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "DBA"@en ;
                      <http://www.w3.org/2004/02/skos/core#definition> "accident conditions against which a facility is designed according to established design criteria, and for which the damage to the fuel and the release of radioactive material are kept within authorized limits"@en ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "DesignBasisAccident"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :DesignBasisAccident ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "accident conditions against which a facility is designed according to established design criteria, and for which the damage to the fuel and the release of radioactive material are kept within authorized limits"@en ;
-   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.1>
- ] .
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "DesignBasisAccident"@en ;
+                     :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.1> .
 
 
 ###  https://w3id.org/emmo/domain/neo#Destruction
@@ -962,7 +923,7 @@ power for a nuclear plant in the event that all off-site power sources are lost.
 
 ###  https://w3id.org/emmo/domain/neo#DryWell
 :DryWell rdf:type owl:Class ;
-         rdfs:subClassOf :NoNuclearISOObject ,
+         rdfs:subClassOf :NoNuclearISO ,
                          :ReactorBuildingContents ,
                          :ToCheckClass ,
                          [ rdf:type owl:Restriction ;
@@ -991,21 +952,14 @@ power for a nuclear plant in the event that all off-site power sources are lost.
                <http://www.w3.org/2004/02/skos/core#definition> """Emergency cooling system Operation  (ECCS) provide core cooling under loss of coolant accident
 conditions to limit fuel cladding damage. The emergency core cooling systems consist of two high
 pressure and two low pressure systems."""@en ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "ECCSOperation"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :ECCSOperation ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """Emergency cooling system Operation  (ECCS) provide core cooling under loss of coolant accident
-conditions to limit fuel cladding damage. The emergency core cooling systems consist of two high
-pressure and two low pressure systems."""@en ;
-   :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/students/for-educators/03.pdf>
- ] .
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "ECCSOperation"@en ;
+               :NRC_Reference <https://www.nrc.gov/reading-rm/basic-ref/students/for-educators/03.pdf> .
 
 
 ###  https://w3id.org/emmo/domain/neo#Earthquake
 :Earthquake rdf:type owl:Class ;
-            rdfs:subClassOf :NaturalEvent ;
+            rdfs:subClassOf :NaturalEvent ,
+                            :NoNuclearISO ;
             <http://www.w3.org/2004/02/skos/core#definition> "Sudden and violent shaking of the ground, sometimes causing great destruction, as a result of movements within the earth’s crust or volcanic action."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Earthquake"@en .
 
@@ -1057,7 +1011,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
 
 ###  https://w3id.org/emmo/domain/neo#EmergencyManagementOrganization
 :EmergencyManagementOrganization rdf:type owl:Class ;
-                                 rdfs:subClassOf :NoNuclearISOObject ,
+                                 rdfs:subClassOf :NoNuclearISO ,
                                                  :NuclearEnergyObject ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty elite:isParticipantOf ;
@@ -1112,7 +1066,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 
 ###  https://w3id.org/emmo/domain/neo#EnergyEfficiencyServiceCompany
 :EnergyEfficiencyServiceCompany rdf:type owl:Class ;
-                                rdfs:subClassOf :NoNuclearISOObject ,
+                                rdfs:subClassOf :NoNuclearISO ,
                                                 :NuclearEnergyObject ;
                                 rdfs:comment "No iso Nuclear reference" ;
                                 <http://www.w3.org/2004/02/skos/core#definition> """organization that delivers energy efficiency services (3.4.5)
@@ -1201,7 +1155,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 
 ###  https://w3id.org/emmo/domain/neo#FireProtectionSystem
 :FireProtectionSystem rdf:type owl:Class ;
-                      rdfs:subClassOf :NoNuclearISOObject ,
+                      rdfs:subClassOf :NoNuclearISO ,
                                       :ReactorMitigationSystem ;
                       rdfs:comment """The fire protection system was designed primarily for fire suppression and flooding of the containment vessel, not for
 injection of water into the reactor."""@en ;
@@ -1310,6 +1264,7 @@ PPE for firefighters — Test methods and requirements for PPE used by firefight
 ###  https://w3id.org/emmo/domain/neo#GasRelease
 :GasRelease rdf:type owl:Class ;
             rdfs:subClassOf :NPPNormalOperation ,
+                            :NoNuclearISO ,
                             :UnintendedEvent ;
             <http://www.w3.org/2004/02/skos/core#definition> "Escape of gas due to operating conditions, or to malfunctions that cannot be reasonably excluded"@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "GasRelease"@en .
@@ -1342,16 +1297,8 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""^^xsd:anyURI
                <http://www.w3.org/2004/02/skos/core#definition> """Maintain adequate reactor vessel inventory – For core cooling – On small break LOCAs On small break LOCAs
  Depressurize the reactor vessel – To allow low pressure ECCSs to inject – On intermediate break LOCAs
  Backup RCIC when reactor vessel isolated"""@en ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "HPCIOperation"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :HPCIOperation ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """Maintain adequate reactor vessel inventory – For core cooling – On small break LOCAs On small break LOCAs
- Depressurize the reactor vessel – To allow low pressure ECCSs to inject – On intermediate break LOCAs
- Backup RCIC when reactor vessel isolated"""@en ;
-   :referenceNRC "https://www.nrc.gov/docs/ML1125/ML11258A365.pdf"^^xsd:anyURI
- ] .
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "HPCIOperation"@en ;
+               :NRC_Reference "https://www.nrc.gov/docs/ML1125/ML11258A365.pdf" .
 
 
 ###  https://w3id.org/emmo/domain/neo#HazardousNuclearEvent
@@ -1365,7 +1312,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""^^xsd:anyURI
 
 ###  https://w3id.org/emmo/domain/neo#HeadVentNozzle
 :HeadVentNozzle rdf:type owl:Class ;
-                rdfs:subClassOf :NoNuclearISOObject ,
+                rdfs:subClassOf :NoNuclearISO ,
                                 :PipePlantValve ,
                                 :ReactorBuildingContents ,
                                 :ReactorPreventiveSystems ,
@@ -1446,7 +1393,7 @@ https://www.iso.org/obp/ui/#iso:std:iso:24478:ed-1:v2:en:term:3.10.8.2"""^^xsd:a
 
 ###  https://w3id.org/emmo/domain/neo#InjectedMaterial
 :InjectedMaterial rdf:type owl:Class ;
-                  rdfs:subClassOf :NoNuclearISOObject ,
+                  rdfs:subClassOf :NoNuclearISO ,
                                   :NuclearEnergyObject ;
                   <http://www.w3.org/2004/02/skos/core#altLabel> "SuppliedMaterial" ;
                   <http://www.w3.org/2004/02/skos/core#comment> "ISO NO Nuclear" ;
@@ -1457,7 +1404,7 @@ https://www.iso.org/obp/ui/#iso:std:iso:24478:ed-1:v2:en:term:3.10.8.2"""^^xsd:a
 
 ###  https://w3id.org/emmo/domain/neo#InjectionSystem
 :InjectionSystem rdf:type owl:Class ;
-                 rdfs:subClassOf :NoNuclearISOObject ,
+                 rdfs:subClassOf :NoNuclearISO ,
                                  :NuclearEnergyObject ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty elite:participatesTo ;
@@ -1558,14 +1505,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                   ] ;
                   <http://www.w3.org/2004/02/skos/core#altLabel> "LossOfEmergencyACPower"@en ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Loss of the AC electricity supplied by the devices entered in functions after the LossOfOffsitePower"@en ;
-                  <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfAllACPower"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :LossOfAllACPower ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Loss of the AC electricity supplied by the devices entered in functions after the LossOfOffsitePower"@en ;
-   :referenceNRC "https://www.nrc.gov/reading-rm/doc-collections/cfr/part050/part050-0063.html"^^xsd:anyURI
- ] .
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfAllACPower"@en ;
+                  :NRC_Reference "https://www.nrc.gov/reading-rm/doc-collections/cfr/part050/part050-0063.html" .
 
 
 ###  https://w3id.org/emmo/domain/neo#LossOfCoolantAccident
@@ -1574,14 +1515,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                        <http://www.w3.org/2004/02/skos/core#altLabel> "LOCA"@en ,
                                                                       "LossOfReactorCoolingFunction"@en ;
                        <http://www.w3.org/2004/02/skos/core#definition> "Accident in which a breach in a reactor’s pressure boundary causes the coolant water to rush out of the reactor faster than makeup water can be added back in"@en ;
-                       <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfCoolantAccident"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :LossOfCoolantAccident ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Accident in which a breach in a reactor’s pressure boundary causes the coolant water to rush out of the reactor faster than makeup water can be added back in"@en ;
-   :referenceNRC "https://www.nrc.gov/reading-rm/basic-ref/glossary/loss-of-coolant-accident-loca.htm"^^xsd:anyURI
- ] .
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "LossOfCoolantAccident"@en ;
+                       :NRC_Reference "https://www.nrc.gov/reading-rm/basic-ref/glossary/loss-of-coolant-accident-loca.htm" .
 
 
 ###  https://w3id.org/emmo/domain/neo#LossOfDCPower
@@ -1659,7 +1594,7 @@ The low pressure coolant injection mode of the residual heat removal system prov
 
 ###  https://w3id.org/emmo/domain/neo#MainControlRoom
 :MainControlRoom rdf:type owl:Class ;
-                 rdfs:subClassOf :NoNuclearISOObject ,
+                 rdfs:subClassOf :NoNuclearISO ,
                                  :NuclearEnergyObject ,
                                  :NuclearEnergyRole ,
                                  [ rdf:type owl:Restriction ;
@@ -1779,7 +1714,8 @@ Collaborative business relationship management systems — Requirements and fram
 
 ###  https://w3id.org/emmo/domain/neo#Mitigation
 :Mitigation rdf:type owl:Class ;
-            rdfs:subClassOf :SevereAccidentManagement ;
+            rdfs:subClassOf :NoNuclearISO ,
+                            :SevereAccidentManagement ;
             <http://www.w3.org/2004/02/skos/core#definition> "limitation of any negative consequence (3.6) of a particular event"@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitigation"@en .
 
@@ -1861,7 +1797,7 @@ Pag 29""" ;
 
 ###  https://w3id.org/emmo/domain/neo#NPPBarrier
 :NPPBarrier rdf:type owl:Class ;
-            rdfs:subClassOf :NoNuclearISOObject ,
+            rdfs:subClassOf :NoNuclearISO ,
                             :ReactorPreventiveSystems ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "Barrier"@en ;
             <http://www.w3.org/2004/02/skos/core#definition> "One or several barrier elements that are designed to prevent unintended flow of formation fluid﻿."@en ;
@@ -1877,7 +1813,8 @@ Pag 29""" ;
 
 ###  https://w3id.org/emmo/domain/neo#NPPDecommissioning
 :NPPDecommissioning rdf:type owl:Class ;
-                    rdfs:subClassOf :Operation ;
+                    rdfs:subClassOf :NoNuclearISO ,
+                                    :Operation ;
                     <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearReactorDecommissioning"@en ;
                     <http://www.w3.org/2004/02/skos/core#definition> "take an engineered system or component out of service, render it inoperative, dismantle and decontaminate it"@en ;
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPDecommissioning" .
@@ -2022,13 +1959,7 @@ important feature at this level."""@en ;
                  rdfs:subClassOf :NPPNormalOperation ;
                  <http://www.w3.org/2004/02/skos/core#definition> "An increase in the rate of fission (and heat production) in a reactor (usually by the removal of control rods from the core)."@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPStartUpPhase"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NPPStartUpPhase ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "An increase in the rate of fission (and heat production) in a reactor (usually by the removal of control rods from the core)."@en ;
-   :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/glossary/startup.html>
- ] .
+               
 
 
 ###  https://w3id.org/emmo/domain/neo#NPPUnintendedEvent
@@ -2138,9 +2069,8 @@ Note 1 to entry: The absorption of the external colliding particle, usually a ne
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo#NoNuclearISOObject
-:NoNuclearISOObject rdf:type owl:Class ;
-                    rdfs:subClassOf <https://w3id.org/emmo/hume#Object> .
+###  https://w3id.org/emmo/domain/neo#NoNuclearISO
+:NoNuclearISO rdf:type owl:Class .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearAccidentFinalEvent
@@ -2376,17 +2306,6 @@ the turbine generator set, isolation of the main condenser, and loss of
 all offsite power."""@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPlantAOO"@en .
 
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NuclearPlantAOO ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """Conditions of normal operation that are expected to occur one or
-more times during the life of the nuclear power unit and include but
-are not limited to loss of power to all recirculation pumps, tripping of
-the turbine generator set, isolation of the main condenser, and loss of
-all offsite power."""@en ;
-   :referenceNRC <https://w3id.org/emmo/domain/neo>
- ] .
-
 
 ###  https://w3id.org/emmo/domain/neo#NuclearPlantAccident
 :NuclearPlantAccident rdf:type owl:Class ;
@@ -2493,15 +2412,8 @@ all offsite power."""@en ;
                        rdfs:subClassOf :BeyondDesignBasisAccident ;
                        <http://www.w3.org/2004/02/skos/core#altLabel> "SevereAccident"@en ;
                        <http://www.w3.org/2004/02/skos/core#definition> "accident conditions more severe than a design basis accident and involving significant core degradation"@en ;
-                       <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearSevereAccident"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NuclearSevereAccident ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "accident conditions more severe than a design basis accident and involving significant core degradation"@en ;
-   :referenceISO """ISO 26802:2010(en)
-Nuclear facilities — Criteria for the design and the operation of containment and ventilation systems for nuclear reactors"""^^xsd:anyURI
- ] .
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearSevereAccident"@en ;
+                       :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.2> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearSpentFuel
@@ -2527,7 +2439,8 @@ Nuclear facilities — Criteria for the design and the operation of containment 
 
 ###  https://w3id.org/emmo/domain/neo#Nuclear_ReactorMaintanance
 :Nuclear_ReactorMaintanance rdf:type owl:Class ;
-                            rdfs:subClassOf :NPPNormalOperation ;
+                            rdfs:subClassOf :NPPNormalOperation ,
+                                            :NoNuclearISO ;
                             rdfs:comment "any periodic or unplanned support and verification operations designed to keep premises and equipment in proper working condition" ;
                             <http://www.w3.org/2004/02/skos/core#definition> "any periodic or unplanned support and verification operations designed to keep premises and equipment in proper working condition in a nuclear reactor" ;
                             <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearReactorMaintanance"@en ;
@@ -2560,14 +2473,8 @@ perform its intended safety functions.""" ;
                <http://www.w3.org/2004/02/skos/core#altLabel> "Failure"@en ,
                                                               "SingleFailure" ;
                <http://www.w3.org/2004/02/skos/core#definition> "Loss of the ability of a structure, system or component to function within acceptance criteria. The structure, system or component is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time. A failure may be the result of e.g. a hardware fault, a software fault, a system fault, an operator error or a maintenance error."@en ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "ObjectFailure"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :ObjectFailure ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Loss of the ability of a structure, system or component to function within acceptance criteria. The structure, system or component is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time. A failure may be the result of e.g. a hardware fault, a software fault, a system fault, an operator error or a maintenance error."@en ;
-   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/949.html"^^xsd:anyURI
- ] .
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "ObjectFailure"@en ;
+               :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/949.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#Operation
@@ -2576,20 +2483,13 @@ perform its intended safety functions.""" ;
            <http://www.w3.org/2004/02/skos/core#altLabel> "FacilitiesOperation" ;
            <http://www.w3.org/2004/02/skos/core#definition> """All activities performed to achieve the purpose for which an authorized facility was
 constructed"""@en ;
-           <http://www.w3.org/2004/02/skos/core#prefLabel> "Operation"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :Operation ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """All activities performed to achieve the purpose for which an authorized facility was
-constructed"""@en ;
-   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/690.html"^^xsd:anyURI
- ] .
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Operation"@en ;
+           :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/690.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#PipePlantValve
 :PipePlantValve rdf:type owl:Class ;
-                rdfs:subClassOf :NoNuclearISOObject ,
+                rdfs:subClassOf :NoNuclearISO ,
                                 :NuclearEnergyObject ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty elite:hasBehaviour ;
@@ -2604,7 +2504,8 @@ Note 1 to entry: The actuation can be done by gas pressure, electrical, hydrauli
 
 ###  https://w3id.org/emmo/domain/neo#PlantFloodingAccident
 :PlantFloodingAccident rdf:type owl:Class ;
-                       rdfs:subClassOf :NPPUnintendedEvent ;
+                       rdfs:subClassOf :NPPUnintendedEvent ,
+                                       :NoNuclearISO ;
                        <http://www.w3.org/2004/02/skos/core#definition> "Condition where water flows onto a surface or enters a structure or area where it is not intended."@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "PlantFloodingAccident"@en .
 
@@ -2639,16 +2540,8 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
                     <http://www.w3.org/2004/02/skos/core#definition> """Unanticipated conditions of operation (i.e., not expected to occur
 during the life of the nuclear power unit).
 Postulated accidents are also known as Condition IV events.""" ;
-                    <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulatedAccident"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :PostulatedAccident ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """Unanticipated conditions of operation (i.e., not expected to occur
-during the life of the nuclear power unit).
-Postulated accidents are also known as Condition IV events.""" ;
-   :referenceNRC "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"^^xsd:anyURI
- ] .
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulatedAccident"@en ;
+                    :NRC_Reference "https://www.nrc.gov/docs/ML0707/ML070710376.pdf" .
 
 
 ###  https://w3id.org/emmo/domain/neo#PostulatedInitiatingEvent
@@ -2662,17 +2555,8 @@ Postulated accidents are also known as Condition IV events.""" ;
 design that leads to Anticipated Operational Occurrences (AOOs) or accident conditions. Accident
 conditions include Design Basis Accidents (DBAs) and Beyond Design Basis Accidents (BDBAs). BDBAs
 include a subset of severe accidents."""@en ;
-                           <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulatedInitiatingEvent"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :PostulatedInitiatingEvent ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """A PIE Is an event identified in the
-design that leads to Anticipated Operational Occurrences (AOOs) or accident conditions. Accident
-conditions include Design Basis Accidents (DBAs) and Beyond Design Basis Accidents (BDBAs). BDBAs
-include a subset of severe accidents."""@en ;
-   :referenceNRC <https://www.nrc.gov/docs/ML2031/ML20318A171.pdf>
- ] .
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "PostulatedInitiatingEvent"@en ;
+                           :NRC_Reference <https://www.nrc.gov/docs/ML2031/ML20318A171.pdf> .
 
 
 ###  https://w3id.org/emmo/domain/neo#PostulatedSingleEvent
@@ -2685,7 +2569,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
 
 ###  https://w3id.org/emmo/domain/neo#PowerSupplySystem
 :PowerSupplySystem rdf:type owl:Class ;
-                   rdfs:subClassOf :NoNuclearISOObject ,
+                   rdfs:subClassOf :NoNuclearISO ,
                                    :NuclearEnergyObject ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty elite:isConstituentOf ;
@@ -2699,7 +2583,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
 
 ###  https://w3id.org/emmo/domain/neo#PowerTurbine
 :PowerTurbine rdf:type owl:Class ;
-              rdfs:subClassOf :NoNuclearISOObject ,
+              rdfs:subClassOf :NoNuclearISO ,
                               :PlantTurbine ,
                               :TurbineBuildingContents ,
                               [ rdf:type owl:Restriction ;
@@ -2738,7 +2622,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
 
 ###  https://w3id.org/emmo/domain/neo#PressureReliefValve
 :PressureReliefValve rdf:type owl:Class ;
-                     rdfs:subClassOf :NoNuclearISOObject ,
+                     rdfs:subClassOf :NoNuclearISO ,
                                      :PipePlantValve ,
                                      :ReactorBuildingContents ,
                                      :ReactorPreventiveSystems ,
@@ -2778,14 +2662,8 @@ ISO 21843:2023(en)"""^^xsd:anyURI
                                                ] ;
                                <http://www.w3.org/2004/02/skos/core#altLabel> "PCV"@en ;
                                <http://www.w3.org/2004/02/skos/core#definition> "The purpose of the primary containment ventilation is to allow for influent air to be brought into the drywell and suppression chamber and for effluent atmosphere to be discharged from the drywell and suppression chamber."@en ;
-                               <http://www.w3.org/2004/02/skos/core#prefLabel> "PrimaryContainmentVentilation"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :PrimaryContainmentVentilation ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "The purpose of the primary containment ventilation is to allow for influent air to be brought into the drywell and suppression chamber and for effluent atmosphere to be discharged from the drywell and suppression chamber."@en ;
-   :referenceNRC <https://www.nrc.gov/docs/ML1215/ML12159A162.pdf>
- ] .
+                               <http://www.w3.org/2004/02/skos/core#prefLabel> "PrimaryContainmentVentilation"@en ;
+                               :NRC_Reference <https://www.nrc.gov/docs/ML1215/ML12159A162.pdf> .
 
 
 ###  https://w3id.org/emmo/domain/neo#PrimaryContainmentVessel
@@ -2825,8 +2703,7 @@ ISO 21843:2023(en)"""^^xsd:anyURI
 ###  https://w3id.org/emmo/domain/neo#ProtectiveSeparation
 :ProtectiveSeparation rdf:type owl:Class ;
                       rdfs:subClassOf :NPPProtection ;
-                      rdfs:comment """Se mettiamo un processo tipo separazione o scollegamento possiamo poi creare una relazione \"from\" turbine.
-Tipo protective  separation
+                      rdfs:comment """Tipo protective  separation
 electrically protective  separation
 separation of one electric circuit from another by means of:
 — double insulation  (3.4.8); or
@@ -2840,7 +2717,7 @@ ISO 18246:2023(en), 3.4.12"""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#PublicAddressSystem
 :PublicAddressSystem rdf:type owl:Class ;
-                     rdfs:subClassOf :NoNuclearISOObject ,
+                     rdfs:subClassOf :NoNuclearISO ,
                                      :SafetySystem ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty elite:isConstituentOf ;
@@ -2867,16 +2744,8 @@ ISO 18246:2023(en), 3.4.12"""@en ;
                <http://www.w3.org/2004/02/skos/core#definition> """Provide makeup water to the reactor vessel for core cooling when:
 the main steam lines are isolated
 the condensate and feedwater system is not available."""@en ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICOperation"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :RCICOperation ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """Provide makeup water to the reactor vessel for core cooling when:
-the main steam lines are isolated
-the condensate and feedwater system is not available."""@en ;
-   :referenceNRC "https://www.nrc.gov/docs/ML1125/ML11258A312.pdf"^^xsd:anyURI
- ] .
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "RCICOperation"@en ;
+               :NRC_Reference "https://www.nrc.gov/docs/ML1125/ML11258A312.pdf" .
 
 
 ###  https://w3id.org/emmo/domain/neo#RCICTurbine
@@ -3008,16 +2877,8 @@ in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ;
                                              owl:someValuesFrom :TurbineBuildingContents
                                            ] ;
                            <http://www.w3.org/2004/02/skos/core#definition> "Radioactive substances on surfaces, or within solids, liquids, or gases (including the human body), where their presence is unintended or undesirable, or the process giving rise to their presence in such places."@en ;
-                           <http://www.w3.org/2004/02/skos/core#prefLabel> "RadiologicalContamination"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :RadiologicalContamination ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Radioactive substances on surfaces, or within solids, liquids, or gases (including the human body), where their presence is unintended or undesirable, or the process giving rise to their presence in such places."@en ;
-   :referenceISO """ISO 12749-1:2020(en)
-Nuclear energy — Vocabulary — Part 1: General terminology
-https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en"""^^xsd:anyURI
- ] .
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "RadiologicalContamination"@en ;
+                           :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#Radionuclide
@@ -3142,7 +3003,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 
 ###  https://w3id.org/emmo/domain/neo#ReactorMitigationCoolingSystem
 :ReactorMitigationCoolingSystem rdf:type owl:Class ;
-                                rdfs:subClassOf :NoNuclearISOObject ,
+                                rdfs:subClassOf :NoNuclearISO ,
                                                 :ReactorBuildingContents ,
                                                 :ReactorMitigationSystem ,
                                                 :WaterInjectionSystem ;
@@ -3176,7 +3037,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#ReactorPressureVessel
 :ReactorPressureVessel rdf:type owl:Class ;
-                       rdfs:subClassOf :NoNuclearISOObject ,
+                       rdfs:subClassOf :NoNuclearISO ,
                                        :ReactorBuildingContents ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
@@ -3375,6 +3236,7 @@ Note 2 to entry: For most of research reactors the heat production from fission 
 ###  https://w3id.org/emmo/domain/neo#RuleRegulation
 :RuleRegulation rdf:type owl:Class ;
                 rdfs:subClassOf :NPPNormalOperation ,
+                                :NoNuclearISO ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty elite:affects ;
                                   owl:someValuesFrom :EmergencyManagementOrganization
@@ -3403,19 +3265,13 @@ Note 2 to entry: For most of research reactors the heat production from fission 
                        ] ;
        <http://www.w3.org/2004/02/skos/core#altLabel> "ReactorTrip"@en ;
        <http://www.w3.org/2004/02/skos/core#definition> "The sudden shutting down of a nuclear reactor, usually by rapid insertion of control rods, either automatically or manually by the reactor operator. Also known as a \"reactor trip\""@en ;
-       <http://www.w3.org/2004/02/skos/core#prefLabel> "SCRAM"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :SCRAM ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "The sudden shutting down of a nuclear reactor, usually by rapid insertion of control rods, either automatically or manually by the reactor operator. Also known as a \"reactor trip\""@en ;
-   :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/glossary/scram.html>
- ] .
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "SCRAM"@en ;
+       :NRC_Reference <https://www.nrc.gov/reading-rm/basic-ref/glossary/scram.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo#SafetyCriticalEquipment
 :SafetyCriticalEquipment rdf:type owl:Class ;
-                         rdfs:subClassOf :NoNuclearISOObject ,
+                         rdfs:subClassOf :NoNuclearISO ,
                                          :NuclearEnergyObject ;
                          <http://www.w3.org/2004/02/skos/core#definition> "equipment and items of permanent, temporary and portable equipment playing an important role in safety systems/functions"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyCriticalEquipment"@en .
@@ -3438,14 +3294,8 @@ Note 2 to entry: For most of research reactors the heat production from fission 
                                  ] ;
                  <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearPoisonInjection"@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "SafetyInjection"@en ;
-                 :R8xx0dhbEh1tjGMDwNZfckV "The rapid insertion of a chemically soluble neutron poison (such as boric acid) into the reactor coolant system to ensure reactor shutdown."@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :SafetyInjection ;
-   owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
-   owl:annotatedTarget "The rapid insertion of a chemically soluble neutron poison (such as boric acid) into the reactor coolant system to ensure reactor shutdown."@en ;
-   :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/glossary/safety-injection.html>
- ] .
+                 :R8xx0dhbEh1tjGMDwNZfckV "The rapid insertion of a chemically soluble neutron poison (such as boric acid) into the reactor coolant system to ensure reactor shutdown."@en ;
+                 :referenceNRC <> .
 
 
 ###  https://w3id.org/emmo/domain/neo#SafetySensors
@@ -3578,15 +3428,8 @@ https://www.iso.org/obp/ui/#iso:std:iso:ts:22330:ed-1:v1:en"""^^xsd:anyURI
                                     :PostulatedInitiatingEvent ;
                     <http://www.w3.org/2004/02/skos/core#definition> """An occurrence that results in a component’s loss of capability to
 perform its intended safety functions."""@en ;
-                    <http://www.w3.org/2004/02/skos/core#prefLabel> "SingleFailureEvent"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :SingleFailureEvent ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """An occurrence that results in a component’s loss of capability to
-perform its intended safety functions."""@en ;
-   :referenceNRC "https://www.nrc.gov/docs/ML0707/ML070710376.pdf"^^xsd:anyURI
- ] .
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "SingleFailureEvent"@en ;
+                    :NRC_Reference "https://www.nrc.gov/docs/ML0707/ML070710376.pdf" .
 
 
 ###  https://w3id.org/emmo/domain/neo#SingleUnitNuclearPowerPlant
@@ -3715,14 +3558,8 @@ The standby liquid control system consists of a heated storage tank, two positiv
 :StructureFailure rdf:type owl:Class ;
                   rdfs:subClassOf :ObjectFailure ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Loss of the ability of a structure to function within acceptance criteria. The structure is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time."@en ;
-                  <http://www.w3.org/2004/02/skos/core#prefLabel> "StructureFailure"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :StructureFailure ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Loss of the ability of a structure to function within acceptance criteria. The structure is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time."@en ;
-   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/949.html"^^xsd:anyURI
- ] .
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "StructureFailure"@en ;
+                  :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/949.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#SuppressionChamber
@@ -3772,7 +3609,8 @@ The standby liquid control system consists of a heated storage tank, two positiv
 
 ###  https://w3id.org/emmo/domain/neo#SystemClosing
 :SystemClosing rdf:type owl:Class ;
-               rdfs:subClassOf :Operation ,
+               rdfs:subClassOf :NoNuclearISO ,
+                               :Operation ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty elite:isBehaviourOf ;
                                  owl:someValuesFrom :PipePlantValve
@@ -3805,7 +3643,8 @@ The standby liquid control system consists of a heated storage tank, two positiv
 
 ###  https://w3id.org/emmo/domain/neo#SystemOpening
 :SystemOpening rdf:type owl:Class ;
-               rdfs:subClassOf :Operation ;
+               rdfs:subClassOf :NoNuclearISO ,
+                               :Operation ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "SystemOpening"@en ;
                :referenceISO "To unobstruct an opening"^^xsd:anyURI .
 
@@ -3820,7 +3659,8 @@ Petroleum and natural gas industries — Pipeline transportation systems — Pip
 
 ###  https://w3id.org/emmo/domain/neo#SystemStarting
 :SystemStarting rdf:type owl:Class ;
-                rdfs:subClassOf :Operation ,
+                rdfs:subClassOf :NoNuclearISO ,
+                                :Operation ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty elite:isBehaviourOf ;
                                   owl:someValuesFrom :ControlRodDriveSystem
@@ -3905,7 +3745,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
 
 ###  https://w3id.org/emmo/domain/neo#ThermalProtectionSystem
 :ThermalProtectionSystem rdf:type owl:Class ;
-                         rdfs:subClassOf :NoNuclearISOObject ,
+                         rdfs:subClassOf :NoNuclearISO ,
                                          :ReactorBuildingContents ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
@@ -3945,7 +3785,8 @@ Fukushima Dai-ni,"""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#Tsunami
 :Tsunami rdf:type owl:Class ;
-         rdfs:subClassOf :NaturalEvent ;
+         rdfs:subClassOf :NaturalEvent ,
+                         :NoNuclearISO ;
          <http://www.w3.org/2004/02/skos/core#definition> "Long waves with the period of several minutes to one hour and the height up to a few tens of meters, which are generated by the vertical movement of sea floor associated with a submarine earthquake, by plunging of large mass of earth into water by land slide or volcanic eruption, and other causes."@en ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Tsunami"@en .
 
@@ -4033,7 +3874,7 @@ Fukushima Dai-ni,"""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#WetWell
 :WetWell rdf:type owl:Class ;
-         rdfs:subClassOf :NoNuclearISOObject ,
+         rdfs:subClassOf :NoNuclearISO ,
                          :ReactorBuildingContents ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty elite:isConstituentOf ;
