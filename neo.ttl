@@ -1482,14 +1482,8 @@ https://www.iso.org/obp/ui/#iso:std:iso:24478:ed-1:v2:en:term:3.10.8.2"""^^xsd:a
                                ] ;
                <http://www.w3.org/2004/02/skos/core#altLabel> "SupplyFluid" ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "InjectedFluid"@en ;
-               :R9Q7fCgWnAkzqnVMtRJ4WDv "water used for water supply"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :InjectedFluid ;
-   owl:annotatedProperty :R9Q7fCgWnAkzqnVMtRJ4WDv ;
-   owl:annotatedTarget "water used for water supply"@en ;
-   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40>
- ] .
+               :R9Q7fCgWnAkzqnVMtRJ4WDv "water used for water supply"@en ;
+               :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40> .
 
 
 ###  https://w3id.org/emmo/domain/neo#InjectedMaterial
@@ -1743,15 +1737,10 @@ The low pressure coolant injection mode of the residual heat removal system prov
                  <http://www.w3.org/2004/02/skos/core#altLabel> "ControlRoom"@en ,
                                                                 "MCR"@en ,
                                                                 "MainReactorControlRoom"@en ;
+                 <http://www.w3.org/2004/02/skos/core#comment> "This is not the nuclear ISO" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "structure required for accommodating the instruments, devices and computers for monitoring and controlling all types of mechanical and electrical equipment for the whole plant"@en ;
-                 <http://www.w3.org/2004/02/skos/core#prefLabel> "MainControlRoom"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :MainControlRoom ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "structure required for accommodating the instruments, devices and computers for monitoring and controlling all types of mechanical and electrical equipment for the whole plant"@en ;
-   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:iwa:33:-1:ed-1:v1:en:term:7.5.9>
- ] .
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "MainControlRoom"@en ;
+                 :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:iwa:33:-1:ed-1:v1:en:term:7.5.9> .
 
 
 ###  https://w3id.org/emmo/domain/neo#MainSteamIsolationValve
@@ -2351,8 +2340,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
                      rdfs:subClassOf <https://w3id.org/emmo/hume#Object> ;
                      rdfs:comment "Nuclear energy is a form of heat energy that can be released via reactions involving nuclear fusion or fission taking place between neutrons and protons in the nucleus of an atom. Electricity can be produced when a large amount of heat energy released is applied to generate steam from turbines (Fig. 1.4). Uranium-235, an isotope of uranium, is the most commonly used element in industrial nuclear power generators." ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "NuclearDomainObject" ;
-                     <http://www.w3.org/2004/02/skos/core#comment> "It misses the nuclear energy research" ,
-                                                                   "nuclear related energy object and people" ;
+                     <http://www.w3.org/2004/02/skos/core#comment> "nuclear related energy object and people" ;
                      <http://www.w3.org/2004/02/skos/core#definition> "It is an object involved in the nuclear energy production, management and control." ;
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearEnergyObject"@en .
 
@@ -2509,14 +2497,8 @@ all offsite power."""@en ;
                                     ] ;
                     <http://www.w3.org/2004/02/skos/core#altLabel> "NppEmployes"@en ;
                     <http://www.w3.org/2004/02/skos/core#definition> "Any person who works, whether full time, part time or temporarily, for an employer and who has recognized rights and duties in relation to occupational radiation protection."@en ;
-                    <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPlantWorker"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NuclearPlantWorker ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Any person who works, whether full time, part time or temporarily, for an employer and who has recognized rights and duties in relation to occupational radiation protection."@en ;
-   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/236.html"^^xsd:anyURI
- ] .
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "NuclearPlantWorker"@en ;
+                    :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/236.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearPowerPlant
@@ -3234,14 +3216,8 @@ Note 1 to entry: This includes floors, walls, beams, columns, doors, and penetra
 :ReactorCoolant rdf:type owl:Class ;
                 rdfs:subClassOf :NuclearEnergyRole ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "ReactorCoolant"@en ;
-                :R8xx0dhbEh1tjGMDwNZfckV "A substance that is used to remove or transfer heat from the reactor core. Common coolants include light water, heavy water, air, carbon dioxide, helium, liquid sodium, and a sodium-potassium alloy."@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :ReactorCoolant ;
-   owl:annotatedProperty :R8xx0dhbEh1tjGMDwNZfckV ;
-   owl:annotatedTarget "A substance that is used to remove or transfer heat from the reactor core. Common coolants include light water, heavy water, air, carbon dioxide, helium, liquid sodium, and a sodium-potassium alloy."@en ;
-   :referenceARIS <https://aris.iaea.org/Glossary/>
- ] .
+                :R8xx0dhbEh1tjGMDwNZfckV "A substance that is used to remove or transfer heat from the reactor core. Common coolants include light water, heavy water, air, carbon dioxide, helium, liquid sodium, and a sodium-potassium alloy."@en ;
+                :referenceARIS <https://aris.iaea.org/Glossary/> .
 
 
 ###  https://w3id.org/emmo/domain/neo#ReactorCore
