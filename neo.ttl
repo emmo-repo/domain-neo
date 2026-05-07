@@ -178,6 +178,12 @@ elite:isOutputOf rdf:type owl:AnnotationProperty ;
                rdfs:range xsd:anyURI .
 
 
+###  https://w3id.org/emmo/domain/neo/neo#IAEA_Reference
+:IAEA_Reference rdf:type owl:AnnotationProperty ;
+                rdfs:comment ""@en ;
+                rdfs:subPropertyOf rdfs:seeAlso .
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -2372,7 +2378,7 @@ all offsite power."""@en ;
 ###  https://w3id.org/emmo/domain/neo#NuclearSpentFuel
 :NuclearSpentFuel rdf:type owl:Class ;
                   rdfs:subClassOf :NPPActivationProduct ,
-                                  :NuclearFuel ,
+                                  :Irradiated_Fuel ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty elite:isOutputOf ;
                                     owl:someValuesFrom :ReactorCoreEnergyProduction
@@ -3838,18 +3844,18 @@ Fukushima Dai-ni,"""@en ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#DepletedUranium
-:DepletedUranium rdf:type owl:Class ;
-                 rdfs:subClassOf :Uranium_Material ;
-                 <http://www.w3.org/2004/02/skos/core#comment> "Uranium in which the percentage of U-235 is less than that of natural uranium (< 0.711%). A by-product of the enrichment process." ;
-                 :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/285.html> .
+###  https://w3id.org/emmo/domain/neo/neo#Depleted_Uranium
+:Depleted_Uranium rdf:type owl:Class ;
+                  rdfs:subClassOf :Uranium_Material ;
+                  <http://www.w3.org/2004/02/skos/core#comment> "Uranium in which the percentage of U-235 is less than that of natural uranium (< 0.711%). A by-product of the enrichment process." ;
+                  :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/285.html> .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#EnrichedUranium
-:EnrichedUranium rdf:type owl:Class ;
-                 rdfs:subClassOf :Uranium_Material ;
-                 <http://www.w3.org/2004/02/skos/core#comment> "rdfs:comment \"Uranium in which the proportion of U-235 has been increased above that of natural uranium." ;
-                 :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/286.html> .
+###  https://w3id.org/emmo/domain/neo/neo#Enriched_Uranium
+:Enriched_Uranium rdf:type owl:Class ;
+                  rdfs:subClassOf :Uranium_Material ;
+                  <http://www.w3.org/2004/02/skos/core#comment> "rdfs:comment \"Uranium in which the proportion of U-235 has been increased above that of natural uranium." ;
+                  :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/286.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo#Fertile_Nuclide
@@ -3894,6 +3900,11 @@ Fukushima Dai-ni,"""@en ;
  ] .
 
 
+###  https://w3id.org/emmo/domain/neo/neo#Irradiated_Fuel
+:Irradiated_Fuel rdf:type owl:Class ;
+                 rdfs:subClassOf :NuclearFuel .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo#IsotopicComposition
 :IsotopicComposition rdf:type owl:Class ;
                      rdfs:subClassOf <https://w3id.org/emmo/hume#Property> .
@@ -3905,16 +3916,20 @@ Fukushima Dai-ni,"""@en ;
                 <http://www.w3.org/2004/02/skos/core#comment> "Transuranic elements produced in a reactor other than plutonium; principally neptunium, americium, and curium." .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#NaturalUranium
-:NaturalUranium rdf:type owl:Class ;
-                rdfs:subClassOf :Uranium_Material ;
-                <http://www.w3.org/2004/02/skos/core#comment> "Uranium with its naturally occurring isotopic composition (approx. 0.711% U-235)." ;
-                :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/289.html> .
+###  https://w3id.org/emmo/domain/neo/neo#Natural_Uranium
+:Natural_Uranium rdf:type owl:Class ;
+                 rdfs:subClassOf :Uranium_Material ;
+                 <http://www.w3.org/2004/02/skos/core#comment> "Uranium with its naturally occurring isotopic composition (approx. 0.711% U-235)." ;
+                 :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/289.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo#Nuclear_Material
 :Nuclear_Material rdf:type owl:Class ;
-                  rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
+                  rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <https://w3id.org/emmo/hume#hasProperty> ;
+                                    owl:someValuesFrom :IsotopicComposition
+                                  ] ;
                   <http://www.w3.org/2004/02/skos/core#altLabel> <Nuclear Fission Material> ;
                   :R8xx0dhbEh1tjGMDwNZfckV "material containing one or more of the following: plutonium except that with isotopic concentration exceeding 80 % in 238Pu; uranium enriched in the isotope 235 or 233; uranium containing the mixture of isotopes as occurring in nature other than in the form of ore or ore residue" ;
                   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.1> ;
@@ -3948,7 +3963,9 @@ Fukushima Dai-ni,"""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo#PlutoniumMaterial
 :PlutoniumMaterial rdf:type owl:Class ;
-                   rdfs:subClassOf :Nuclear_Material .
+                   rdfs:subClassOf :Nuclear_Material ;
+                   <http://www.w3.org/2004/02/skos/core#comment> "All plutonium except that with isotopic concentration exceeding 80% in plutonium-238" ;
+                   :IAEA_Reference <https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1481_web.pdf sec 4> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo#SourceMaterial
@@ -3960,7 +3977,6 @@ Fukushima Dai-ni,"""@en ;
 ###  https://w3id.org/emmo/domain/neo/neo#Uranium_Material
 :Uranium_Material rdf:type owl:Class ;
                   rdfs:subClassOf :Nuclear_Material ;
-                  <http://www.w3.org/2004/02/skos/core#comment> "This term encompasses sub-terms such as depleted uranium, enriched uranium, high enriched uranium, low enriched uranium and natural uranium" ;
                   :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/284.html> .
 
 
@@ -3969,9 +3985,9 @@ Fukushima Dai-ni,"""@en ;
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :DepletedUranium
-                :EnrichedUranium
-                :NaturalUranium
+  owl:members ( :Depleted_Uranium
+                :Enriched_Uranium
+                :Natural_Uranium
               )
 ] .
 
