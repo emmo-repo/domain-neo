@@ -3939,7 +3939,7 @@ Fukushima Dai-ni,"""@en ;
                                    owl:onProperty <https://w3id.org/emmo/hume#hasProperty> ;
                                    owl:someValuesFrom :IsotopicComposition
                                  ] ;
-                 <http://www.w3.org/2004/02/skos/core#altLabel> <Nuclear Fission Material> ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Fission Material"@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material"@en ;
                  :R8xx0dhbEh1tjGMDwNZfckV "material containing one or more of the following: plutonium except that with isotopic concentration exceeding 80 % in 238Pu; uranium enriched in the isotope 235 or 233; uranium containing the mixture of isotopes as occurring in nature other than in the form of ore or ore residue" ;
                  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.1> ;
@@ -3978,7 +3978,7 @@ Fukushima Dai-ni,"""@en ;
 :PlutoniumMaterial rdf:type owl:Class ;
                    rdfs:subClassOf :NuclearMaterial ;
                    <http://www.w3.org/2004/02/skos/core#comment> "All plutonium except that with isotopic concentration exceeding 80% in plutonium-238" ;
-                   :IAEA_Reference <https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1481_web.pdf sec 4> .
+                   :IAEA_Reference "https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1481_web.pdf sec 4" .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo#SourceMaterial
