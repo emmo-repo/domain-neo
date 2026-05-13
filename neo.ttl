@@ -105,6 +105,14 @@ elite:isOutputOf rdf:type owl:AnnotationProperty ;
                 rdfs:subPropertyOf rdfs:seeAlso .
 
 
+###  https://w3id.org/emmo/domain/neo#NCTG_Reference
+:NCTG_Reference rdf:type owl:AnnotationProperty ;
+                rdfs:comment """Glossary of Nuclear Criticality Terms. Los Alamos National
+Laboratory, 1989""" ;
+                rdfs:seeAlso "https://ncsp.llnl.gov/sites/ncsp/files/2021-05/la11627.pdf" ;
+                rdfs:subPropertyOf rdfs:seeAlso .
+
+
 ###  https://w3id.org/emmo/domain/neo#NRC_Reference
 :NRC_Reference rdf:type owl:AnnotationProperty ;
                rdfs:comment "This is the link to any Nuclear Regulatory Commission document/report."@en ;
@@ -185,14 +193,6 @@ elite:isOutputOf rdf:type owl:AnnotationProperty ;
                rdfs:range xsd:anyURI .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#NCTG_Reference
-:NCTG_Reference rdf:type owl:AnnotationProperty ;
-                rdfs:comment """Glossary of Nuclear Criticality Terms. Los Alamos National
-Laboratory, 1989""" ;
-                rdfs:seeAlso "https://ncsp.llnl.gov/sites/ncsp/files/2021-05/la11627.pdf" ;
-                rdfs:subPropertyOf rdfs:seeAlso .
-
-
 #################################################################
 #    Object Properties
 #################################################################
@@ -256,7 +256,7 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Can Access In"@en .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#has_Isotopic_Component
+###  https://w3id.org/emmo/domain/neo#has_Isotopic_Component
 :has_Isotopic_Component rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf owl:topObjectProperty .
 
@@ -535,6 +535,11 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
    owl:annotatedTarget "Device to direct a portion of the flow around a separation device due to pressure difference, usually venting downstream of the bypassed separation device."@en ;
    :referenceISO "ISO 17536-1:2015(en) Road vehicles — Aerosol separator performance test for internal combustion engines — Part 1: General"^^xsd:anyURI
  ] .
+
+
+###  https://w3id.org/emmo/domain/neo#Cilindrical_Fuel_Pellet
+:Cilindrical_Fuel_Pellet rdf:type owl:Class ;
+                         rdfs:subClassOf :Fuel_Pellet .
 
 
 ###  https://w3id.org/emmo/domain/neo#CirculatingWaterPump
@@ -1242,8 +1247,8 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 provided the effective neutron production cross section, exceeds
 the effective absorption cross section. The common fissile nuclei
 are 235U,239P~, and233U.1""" ;
-                 :referenceNRC "Fissile Material"^^xsd:anyURI ;
-                 :NCTG_Reference "Fissile nucleus" .
+                 :NCTG_Reference "Fissile nucleus" ;
+                 :referenceNRC "Fissile Material"^^xsd:anyURI .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :Fissile_Nuclide ;
@@ -1269,14 +1274,14 @@ are 235U,239P~, and233U.1""" ;
 ###  https://w3id.org/emmo/domain/neo#Fissionable_Nuclide
 :Fissionable_Nuclide rdf:type owl:Class ;
                      rdfs:subClassOf :Nuclide ;
+                     :NCTG_Reference "Fissionable Nucleus" ;
                      :R8xx0dhbEh1tjGMDwNZfckV """A nucleus capable of fission by neutrons of some
 energy. Fissionable nuclei include 238U, 240Pu, and others with
 neutron-energy fission thresholds, in addition to those that are fissile.
 See fissile nucleus.""" ;
                      :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.7> ;
                      :referenceNRC "Fissionable Material"^^xsd:anyURI ;
-                     :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/963.html> ;
-                     :NCTG_Reference "Fissionable Nucleus" .
+                     :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/963.html> .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :Fissionable_Nuclide ;
@@ -1319,6 +1324,25 @@ subsequently removed from a reactor core as a single unit."""@en ;
              <http://www.w3.org/2004/02/skos/core#definition> "A rod of nuclear fuel, its cladding and any associated components necessary to form a structural entity.﻿"@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Fuel Element"@en ;
              :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/976.html"^^xsd:anyURI .
+
+
+###  https://w3id.org/emmo/domain/neo#Fuel_Pellet
+:Fuel_Pellet rdf:type owl:Class ;
+             rdfs:subClassOf :NuclearFuel ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <https://w3id.org/emmo/hume#hasProperty> ;
+                               owl:someValuesFrom :Geometrical_Property
+                             ] ;
+             <http://www.w3.org/2004/02/skos/core#comment> "nuclear fuel (3.2.1) in ceramic form and with a cylindrical shape" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "nuclear fuel with a geometrical shape, and a chemical composition that is fabricated for nuclear civil reactor and research reactors."@en ;
+             :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.2.3"^^xsd:anyURI .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Fuel_Pellet ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
+   owl:annotatedTarget "nuclear fuel (3.2.1) in ceramic form and with a cylindrical shape" ;
+   rdfs:comment "the definition does not include types of pellet for fast reactor with other fors of other material matrix"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#FullFaceMask
@@ -1365,6 +1389,11 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""^^xsd:anyURI
                                                           "ElectricalGenerator" ;
            <http://www.w3.org/2004/02/skos/core#definition> "In electricity generation, a generator is a device that converts motion-based power (potential and kinetic energy) or fuel-based power (chemical energy) into electric power for use in an external circuit. "@en ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "Generator"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#Geometrical_Property
+:Geometrical_Property rdf:type owl:Class ;
+                      rdfs:subClassOf <https://w3id.org/emmo/hume#Property> .
 
 
 ###  https://w3id.org/emmo/domain/neo#HPCIOperation
@@ -1418,6 +1447,11 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
    :referenceISO """device used to expel air from a compressed air system
 https://www.iso.org/obp/ui/#iso:std:iso:24478:ed-1:v2:en:term:3.10.8.2"""^^xsd:anyURI
  ] .
+
+
+###  https://w3id.org/emmo/domain/neo#Height
+:Height rdf:type owl:Class ;
+        rdfs:subClassOf :Geometrical_Property .
 
 
 ###  https://w3id.org/emmo/domain/neo#HighPressureCoolantInjectionSystem
@@ -1492,6 +1526,11 @@ https://www.iso.org/obp/ui/#iso:std:iso:24478:ed-1:v2:en:term:3.10.8.2"""^^xsd:a
                                                                "ISO NO Nuclear" ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Injection System"@en ;
                  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:6877:ed-3:v1:en:term:3.11> .
+
+
+###  https://w3id.org/emmo/domain/neo#Inner_Radius
+:Inner_Radius rdf:type owl:Class ;
+              rdfs:subClassOf :Geometrical_Property .
 
 
 ###  https://w3id.org/emmo/domain/neo#IntentionalProcess
@@ -1854,7 +1893,8 @@ Pag 29""" ;
 
 ###  https://w3id.org/emmo/domain/neo#NPPActivationProduct
 :NPPActivationProduct rdf:type owl:Class ;
-                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      rdfs:subClassOf :FissionProduct ,
+                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty elite:isConstituentOf ;
                                         owl:someValuesFrom :ReactorCore
                                       ] ,
@@ -2509,7 +2549,6 @@ all offsite power."""@en ;
 ###  https://w3id.org/emmo/domain/neo#NuclearSpentFuel
 :NuclearSpentFuel rdf:type owl:Class ;
                   rdfs:subClassOf :IrradiatedFuel ,
-                                  :NPPActivationProduct ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty elite:isOutputOf ;
                                     owl:someValuesFrom :ReactorCoreEnergyProduction
@@ -2555,8 +2594,8 @@ all offsite power."""@en ;
          <http://www.w3.org/2004/02/skos/core#comment> "A general term referring to all known isotopes, both stable (279) and unstable (about 2,700), of the chemical elements." ;
          <http://www.w3.org/2004/02/skos/core#definition> """A species of atom characterized by its mass number, atomic
 number, and a possible elevated nuclear energy state if prolonged.'""" ;
-         :referenceNRC "Nuclide"^^xsd:anyURI ;
-         :NCTG_Reference "Nuclide" .
+         :NCTG_Reference "Nuclide" ;
+         :referenceNRC "Nuclide"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#ObjectFailure
@@ -2585,6 +2624,11 @@ perform its intended safety functions.""" ;
 constructed"""@en ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "Operation"@en ;
            :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/690.html"^^xsd:anyURI .
+
+
+###  https://w3id.org/emmo/domain/neo#Outer_Radius
+:Outer_Radius rdf:type owl:Class ;
+              rdfs:subClassOf :Geometrical_Property .
 
 
 ###  https://w3id.org/emmo/domain/neo#PipePlantValve
@@ -4007,60 +4051,6 @@ Fukushima Dai-ni,"""@en ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Anular_Shape
-:Anular_Shape rdf:type owl:Class ;
-              rdfs:subClassOf :Cilindrical_Shape ;
-              owl:disjointWith :Inner_Radius .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#Cilindrical_Fuel_Pellet
-:Cilindrical_Fuel_Pellet rdf:type owl:Class ;
-                         rdfs:subClassOf :Fuel_Pellet .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#Cilindrical_Shape
-:Cilindrical_Shape rdf:type owl:Class .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#Fuel_Pellet
-:Fuel_Pellet rdf:type owl:Class ;
-             rdfs:subClassOf :NuclearFuel ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty <https://w3id.org/emmo/hume#hasProperty> ;
-                               owl:someValuesFrom :Geometrical_Property
-                             ] ;
-             <http://www.w3.org/2004/02/skos/core#comment> "nuclear fuel (3.2.1) in ceramic form and with a cylindrical shape" ;
-             <http://www.w3.org/2004/02/skos/core#definition> "nuclear fuel with a geometrical shape, and a chemical composition that is fabricated for nuclear civil reactor and research reactors."@en ;
-             :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.2.3"^^xsd:anyURI .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fuel_Pellet ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
-   owl:annotatedTarget "nuclear fuel (3.2.1) in ceramic form and with a cylindrical shape" ;
-   rdfs:comment "the definition does not include types of pellet for fast reactor with other fors of other material matrix"
- ] .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#Geometrical_Property
-:Geometrical_Property rdf:type owl:Class ;
-                      rdfs:subClassOf <https://w3id.org/emmo/hume#Property> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#Height
-:Height rdf:type owl:Class ;
-        rdfs:subClassOf :Geometrical_Property .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#Inner_Radius
-:Inner_Radius rdf:type owl:Class ;
-              rdfs:subClassOf :Geometrical_Property .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#Outer_Radius
-:Outer_Radius rdf:type owl:Class ;
-              rdfs:subClassOf :Geometrical_Property .
-
-
 #################################################################
 #    General axioms
 #################################################################
@@ -4074,9 +4064,9 @@ Fukushima Dai-ni,"""@en ;
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :IrradiatedFuel
+  owl:members ( :Fuel_Pellet
+                :IrradiatedFuel
                 :Nuclear﻿_Fresh_Fuel
-                :Fuel_Pellet
               )
 ] .
 
