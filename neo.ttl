@@ -256,9 +256,8 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Can Access In"@en .
 
 
-###  https://w3id.org/emmo/domain/neo#has_Isotopic_Component
-:has_Isotopic_Component rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf owl:topObjectProperty .
+###  https://w3id.org/emmo/domain/neo/neo#has_Constituent
+:has_Constituent rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -1332,7 +1331,12 @@ subsequently removed from a reactor core as a single unit."""@en ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty <https://w3id.org/emmo/hume#hasProperty> ;
                                owl:someValuesFrom :Geometrical_Property
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <https://w3id.org/emmo/hume#hasProperty> ;
+                               owl:someValuesFrom :Isotopic_Vector
                              ] ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Fuel Pellet" ;
              <http://www.w3.org/2004/02/skos/core#comment> "nuclear fuel (3.2.1) in ceramic form and with a cylindrical shape" ;
              <http://www.w3.org/2004/02/skos/core#definition> "nuclear fuel with a geometrical shape, and a chemical composition that is fabricated for nuclear civil reactor and research reactors."@en ;
              :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.2.3"^^xsd:anyURI .
@@ -2590,7 +2594,7 @@ all offsite power."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#Nuclide
 :Nuclide rdf:type owl:Class ;
-         rdfs:subClassOf :Atom ;
+         rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
          <http://www.w3.org/2004/02/skos/core#comment> "A general term referring to all known isotopes, both stable (279) and unstable (about 2,700), of the chemical elements." ;
          <http://www.w3.org/2004/02/skos/core#definition> """A species of atom characterized by its mass number, atomic
 number, and a possible elevated nuclear energy state if prolonged.'""" ;
@@ -4049,6 +4053,13 @@ Fukushima Dai-ni,"""@en ;
    owl:annotatedTarget "chamber, below ground level in a pumping installation that receives water to be pumped "@en ;
    :referenceISO "ISO 6107:2021(en) Water quality — Vocabulary"^^xsd:anyURI
  ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#Isotopic_Vector
+:Isotopic_Vector rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "Isotopic Composition" ;
+                 :R8xx0dhbEh1tjGMDwNZfckV "An isotopic vector describes the composition of a material in terms of the relative quantities of its constituent nuclides." .
 
 
 #################################################################
