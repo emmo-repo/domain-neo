@@ -260,6 +260,10 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 :has_Constituent rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/emmo/domain/neo/neo#is_made_up_of
+:is_made_up_of rdf:type owl:ObjectProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -538,7 +542,8 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
 
 ###  https://w3id.org/emmo/domain/neo#Cilindrical_Fuel_Pellet
 :Cilindrical_Fuel_Pellet rdf:type owl:Class ;
-                         rdfs:subClassOf :Fuel_Pellet .
+                         rdfs:subClassOf :Fuel_Pellet ;
+                         <http://www.w3.org/2004/02/skos/core#comment> "It is a pellet that has a cilindrical shape"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#CirculatingWaterPump
@@ -1273,6 +1278,7 @@ are 235U,239P~, and233U.1""" ;
 ###  https://w3id.org/emmo/domain/neo#Fissionable_Nuclide
 :Fissionable_Nuclide rdf:type owl:Class ;
                      rdfs:subClassOf :Nuclide ;
+                     <http://www.w3.org/2004/02/skos/core#comment> "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it ;
                      :NCTG_Reference "Fissionable Nucleus" ;
                      :R8xx0dhbEh1tjGMDwNZfckV """A nucleus capable of fission by neutrons of some
 energy. Fissionable nuclei include 238U, 240Pu, and others with
@@ -1281,6 +1287,13 @@ See fissile nucleus.""" ;
                      :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.7> ;
                      :referenceNRC "Fissionable Material"^^xsd:anyURI ;
                      :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/963.html> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Fissionable_Nuclide ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
+   owl:annotatedTarget "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it ;
+   rdfs:seeAlso "Montagnini"
+ ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :Fissionable_Nuclide ;
@@ -4053,6 +4066,37 @@ Fukushima Dai-ni,"""@en ;
    owl:annotatedTarget "chamber, below ground level in a pumping installation that receives water to be pumped "@en ;
    :referenceISO "ISO 6107:2021(en) Water quality — Vocabulary"^^xsd:anyURI
  ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#Fresh_Pellet
+:Fresh_Pellet rdf:type owl:Class ;
+              rdfs:subClassOf :Fuel_Pellet ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty elite:isInputOf ;
+                                owl:someValuesFrom :Irradiation
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :is_made_up_of ;
+                                owl:someValuesFrom :Nuclear﻿_Fresh_Fuel
+                              ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#Irradiated_Pellet
+:Irradiated_Pellet rdf:type owl:Class ;
+                   rdfs:subClassOf :Fuel_Pellet ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty elite:isOutputOf ;
+                                     owl:someValuesFrom :Irradiation
+                                   ] .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#Irradiation
+:Irradiation rdf:type owl:Class ;
+             rdfs:subClassOf :NuclearEnergyProcess ;
+             <http://www.w3.org/2004/02/skos/core#comment> "" ;
+             :NCTG_Reference "Irradiation" ;
+             :RR3uD2d7YfhHohfv2Nm6sX """Exposure to ionizing radiation.' See exposure
+(alternative definition).""" .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo#Isotopic_Vector
