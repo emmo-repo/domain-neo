@@ -23,7 +23,7 @@
                                         <http://purl.org/dc/terms/creator> "Emanuele Ghedini"@it ;
                                         <http://purl.org/dc/terms/description> """The Nuclear Energy Ontology (NEO) is a domain ontology developed under the EMMO framework for the representation of concepts in the field of nuclear energy. It is based on commonly used standardization vocabularies, such as:
     - ISO 1709:2018(en) Nuclear energy — Fissile materials — Principles of criticality safety in storing, handling and processing
-    - ISO 12749 - Nuclear energy, nuclear technologies, and radiological protection.
+    - ISO 12749-3:2024 - Nuclear energy, nuclear technologies, and radiological protection.
     - ISO 17873:2004 - Nuclear facilities, Criteria for the design and operation of ventilation systems for nuclear installations other than nuclear reactors.
     - ISO/TS 16901:2022 - Guidance on performing risk assessment in the design of onshore LNG installations including the ship/shore interface.
     - ISO 26802:2010 Nuclear facilities — Criteria for the design and the operation of containment and ventilation systems for nuclear reactors.
@@ -32,6 +32,7 @@
     - IAEA Safety Glossary, Terminology Used in Nuclear Safety and Radiation Protection, 2018 Edition, and other technical reports.
     - Nuclear Regulatory Commission reports and documents and Glossary.
     - Official U.S. federal regulations database, maintained by the National Archives.
+    - Glossary of Criticality terms, Los Alamos Laboratory(1989)
 
 It includes the representation of the Fukushima Daichi accident, based on the official IAEA report: \"The Fukushima Daiichi accident - Technical Volume 1: Description and Context of the Accident\", IAEA, Vienna (AU), 2015, STI/PUB/1710, ISBN 978–92–0–107015–9
 
@@ -96,6 +97,12 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/emmo/0.0.7/elite#isOutputOf
 elite:isOutputOf rdf:type owl:AnnotationProperty ;
                  rdfs:subPropertyOf elite:partakesIn .
+
+
+###  https://w3id.org/emmo/domain/neo#IAEA_Reference
+:IAEA_Reference rdf:type owl:AnnotationProperty ;
+                rdfs:comment ""@en ;
+                rdfs:subPropertyOf rdfs:seeAlso .
 
 
 ###  https://w3id.org/emmo/domain/neo#NRC_Reference
@@ -178,9 +185,11 @@ elite:isOutputOf rdf:type owl:AnnotationProperty ;
                rdfs:range xsd:anyURI .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#IAEA_Reference
-:IAEA_Reference rdf:type owl:AnnotationProperty ;
-                rdfs:comment ""@en ;
+###  https://w3id.org/emmo/domain/neo/neo#NCTG_Reference
+:NCTG_Reference rdf:type owl:AnnotationProperty ;
+                rdfs:comment """Glossary of Nuclear Criticality Terms. Los Alamos National
+Laboratory, 1989""" ;
+                rdfs:seeAlso "https://ncsp.llnl.gov/sites/ncsp/files/2021-05/la11627.pdf" ;
                 rdfs:subPropertyOf rdfs:seeAlso .
 
 
@@ -245,6 +254,11 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                          rdfs:subPropertyOf owl:topObjectProperty ;
                          <http://www.w3.org/2004/02/skos/core#definition> "It relates the Nuclear Power Plant Workers to the place where they can enter, following safety requirements"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Can Access In"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#has_Isotopic_Component
+:has_Isotopic_Component rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty .
 
 
 #################################################################
@@ -846,6 +860,13 @@ ISO 14624-5:2023(en)"""^^xsd:anyURI
  ] .
 
 
+###  https://w3id.org/emmo/domain/neo#Depleted_Uranium
+:Depleted_Uranium rdf:type owl:Class ;
+                  rdfs:subClassOf :UraniumMaterial ;
+                  <http://www.w3.org/2004/02/skos/core#comment> "Uranium in which the percentage of U-235 is less than that of natural uranium (< 0.711%). A by-product of the enrichment process." ;
+                  :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/285.html> .
+
+
 ###  https://w3id.org/emmo/domain/neo#DesignBasisAccident
 :DesignBasisAccident rdf:type owl:Class ;
                      rdfs:subClassOf :NuclearPlantAccident ;
@@ -1070,6 +1091,13 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
                                 :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:13273:-1:ed-1:v1:en:term:3.4.8> .
 
 
+###  https://w3id.org/emmo/domain/neo#Enriched_Uranium
+:Enriched_Uranium rdf:type owl:Class ;
+                  rdfs:subClassOf :UraniumMaterial ;
+                  <http://www.w3.org/2004/02/skos/core#comment> "rdfs:comment \"Uranium in which the proportion of U-235 has been increased above that of natural uranium." ;
+                  :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/286.html> .
+
+
 ###  https://w3id.org/emmo/domain/neo#Event
 :Event rdf:type owl:Class ;
        rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
@@ -1129,6 +1157,20 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                <http://www.w3.org/2004/02/skos/core#altLabel> "NPP Feedwater Pump"@en ;
                <http://www.w3.org/2004/02/skos/core#definition> "FWP" ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Feedwater Pump"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#Fertile_Nuclide
+:Fertile_Nuclide rdf:type owl:Class ;
+                 rdfs:subClassOf :Nuclide ;
+                 <http://www.w3.org/2004/02/skos/core#comment> "A nuclide, which is not itself fissile (fissionable by thermal neutrons), that can be converted into a fissile nuclide by irradiation in a reactor. There are two basic fertile materials: uranium-238 and thorium-232. When these fertile materials capture neutrons, they are converted into fissile plutonium-239 and uranium-233, respectively." ;
+                 :referenceNRC "Fertile Material"^^xsd:anyURI .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Fertile_Nuclide ;
+   owl:annotatedProperty :referenceNRC ;
+   owl:annotatedTarget "Fertile Material"^^xsd:anyURI ;
+   rdfs:comment "Misleading Label and definition"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#FireEngine
@@ -1192,6 +1234,25 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
  ] .
 
 
+###  https://w3id.org/emmo/domain/neo#Fissile_Nuclide
+:Fissile_Nuclide rdf:type owl:Class ;
+                 rdfs:subClassOf :Nuclide ;
+                 <http://www.w3.org/2004/02/skos/core#comment> "A nuclide that is capable of undergoing fission after capturing low-energy thermal (slow) neutrons." ;
+                 <http://www.w3.org/2004/02/skos/core#definition> """A nucleus capable of fission by thermal neutrons,
+provided the effective neutron production cross section, exceeds
+the effective absorption cross section. The common fissile nuclei
+are 235U,239P~, and233U.1""" ;
+                 :referenceNRC "Fissile Material"^^xsd:anyURI ;
+                 :NCTG_Reference "Fissile nucleus" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Fissile_Nuclide ;
+   owl:annotatedProperty :referenceNRC ;
+   owl:annotatedTarget "Fissile Material"^^xsd:anyURI ;
+   rdfs:comment "this label can generate misunderstanding"
+ ] .
+
+
 ###  https://w3id.org/emmo/domain/neo#FissionProduct
 :FissionProduct rdf:type owl:Class ;
                 rdfs:subClassOf :Atom ,
@@ -1203,6 +1264,26 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                 <http://www.w3.org/2004/02/skos/core#definition> "A radionuclide produced by nuclear fission."@en ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Fission Product"@en ;
                 :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/961.html"^^xsd:anyURI .
+
+
+###  https://w3id.org/emmo/domain/neo#Fissionable_Nuclide
+:Fissionable_Nuclide rdf:type owl:Class ;
+                     rdfs:subClassOf :Nuclide ;
+                     :R8xx0dhbEh1tjGMDwNZfckV """A nucleus capable of fission by neutrons of some
+energy. Fissionable nuclei include 238U, 240Pu, and others with
+neutron-energy fission thresholds, in addition to those that are fissile.
+See fissile nucleus.""" ;
+                     :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.7> ;
+                     :referenceNRC "Fissionable Material"^^xsd:anyURI ;
+                     :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/963.html> ;
+                     :NCTG_Reference "Fissionable Nucleus" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Fissionable_Nuclide ;
+   owl:annotatedProperty :referenceNRC ;
+   owl:annotatedTarget "Fissionable Material"^^xsd:anyURI ;
+   rdfs:comment "Misleading"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#FuelAssembly
@@ -1434,6 +1515,12 @@ https://www.iso.org/obp/ui/#iso:std:iso:24478:ed-1:v2:en:term:3.10.8.2"""^^xsd:a
    :referenceISO """ISO 7967-11:2022(en)
 Reciprocating internal combustion engines — Vocabulary of components and systems — Part 11: Liquid fuel systems"""^^xsd:anyURI
  ] .
+
+
+###  https://w3id.org/emmo/domain/neo#IrradiatedFuel
+:IrradiatedFuel rdf:type owl:Class ;
+                rdfs:subClassOf :NuclearFuel ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Irradiated Fuel" .
 
 
 ###  https://w3id.org/emmo/domain/neo#IrregularInjection
@@ -1767,8 +1854,7 @@ Pag 29""" ;
 
 ###  https://w3id.org/emmo/domain/neo#NPPActivationProduct
 :NPPActivationProduct rdf:type owl:Class ;
-                      rdfs:subClassOf :ReactorCoreMaterial ,
-                                      [ rdf:type owl:Restriction ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                         owl:onProperty elite:isConstituentOf ;
                                         owl:someValuesFrom :ReactorCore
                                       ] ,
@@ -2000,6 +2086,13 @@ negligible from the point of view of protection and safety of a Nuclear power pl
  ] .
 
 
+###  https://w3id.org/emmo/domain/neo#Natural_Uranium
+:Natural_Uranium rdf:type owl:Class ;
+                 rdfs:subClassOf :UraniumMaterial ;
+                 <http://www.w3.org/2004/02/skos/core#comment> "Uranium with its naturally occurring isotopic composition (approx. 0.711% U-235)." ;
+                 :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/289.html> .
+
+
 ###  https://w3id.org/emmo/domain/neo#NaturallyRadioactiveMaterial
 :NaturallyRadioactiveMaterial rdf:type owl:Class ;
                               rdfs:subClassOf :RadioactiveMaterialByOccurrence ;
@@ -2208,7 +2301,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
 ###  https://w3id.org/emmo/domain/neo#NuclearFuel
 :NuclearFuel rdf:type owl:Class ;
              rdfs:subClassOf :NuclearEnergyRole ,
-                             :ReactorCoreMaterial ;
+                             :NuclearMaterial ;
              <http://www.w3.org/2004/02/skos/core#comment> """Fissionable nuclear material in the form of fabricated elements for loading
 into the reactor core of a civil nuclear power plant or research reactor."""@en ,
                                                            "Here we have to put something that is related to the scope of the nuclear material otherwise there is no difference between nuclear material and fuel" ;
@@ -2260,6 +2353,37 @@ further decays, the event is referred to as inelastic scattering."""@en ;
                <http://www.w3.org/2004/02/skos/core#definition> "A part of the nuclear power plant that consists of the containment, auxiliary and fuel building."@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Island"@en ;
                :referenceISO <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.23> .
+
+
+###  https://w3id.org/emmo/domain/neo#NuclearMaterial
+:NuclearMaterial rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Fission Material"@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material"@en ;
+                 :R8xx0dhbEh1tjGMDwNZfckV "material containing one or more of the following: plutonium except that with isotopic concentration exceeding 80 % in 238Pu; uranium enriched in the isotope 235 or 233; uranium containing the mixture of isotopes as occurring in nature other than in the form of ore or ore residue" ;
+                 :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.1> ;
+                 :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1355.html> .
+
+
+###  https://w3id.org/emmo/domain/neo#NuclearMaterialCategoryI
+:NuclearMaterialCategoryI rdf:type owl:Class ;
+                          rdfs:subClassOf :NuclearMaterial ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material Category I" ;
+                          :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1356.html> .
+
+
+###  https://w3id.org/emmo/domain/neo#NuclearMaterialCategoryII
+:NuclearMaterialCategoryII rdf:type owl:Class ;
+                           rdfs:subClassOf :NuclearMaterial ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Nucler Material Category II" ;
+                           :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1357.html> .
+
+
+###  https://w3id.org/emmo/domain/neo#NuclearMaterialCategoryIII
+:NuclearMaterialCategoryIII rdf:type owl:Class ;
+                            rdfs:subClassOf :NuclearMaterial ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material category III" ;
+                            :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1358.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearPlantAOO
@@ -2384,8 +2508,8 @@ all offsite power."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearSpentFuel
 :NuclearSpentFuel rdf:type owl:Class ;
-                  rdfs:subClassOf :NPPActivationProduct ,
-                                  :IrradiatedFuel ,
+                  rdfs:subClassOf :IrradiatedFuel ,
+                                  :NPPActivationProduct ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty elite:isOutputOf ;
                                     owl:someValuesFrom :ReactorCoreEnergyProduction
@@ -2423,6 +2547,16 @@ all offsite power."""@en ;
                      <http://www.w3.org/2004/02/skos/core#definition> "New fuel or unirradiated fuel, including fuel fabricated from fissionable material recovered by reprocessing previously irradiated fuel." ;
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear﻿ Fresh Fuel"@en ;
                      :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/669.html"^^xsd:anyURI .
+
+
+###  https://w3id.org/emmo/domain/neo#Nuclide
+:Nuclide rdf:type owl:Class ;
+         rdfs:subClassOf :Atom ;
+         <http://www.w3.org/2004/02/skos/core#comment> "A general term referring to all known isotopes, both stable (279) and unstable (about 2,700), of the chemical elements." ;
+         <http://www.w3.org/2004/02/skos/core#definition> """A species of atom characterized by its mass number, atomic
+number, and a possible elevated nuclear energy state if prolonged.'""" ;
+         :referenceNRC "Nuclide"^^xsd:anyURI ;
+         :NCTG_Reference "Nuclide" .
 
 
 ###  https://w3id.org/emmo/domain/neo#ObjectFailure
@@ -2490,6 +2624,13 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:24513:ed-1:v1:en"""^^xsd:anyURI
               rdfs:subClassOf :NuclearEnergyObject ;
               <http://www.w3.org/2004/02/skos/core#definition> "Term which when used alone refers to the turbine action only. It is that component of the gas turbine which produces power from expansion of the working fluid."@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Plant Turbine"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#PlutoniumMaterial
+:PlutoniumMaterial rdf:type owl:Class ;
+                   rdfs:subClassOf :NuclearMaterial ;
+                   <http://www.w3.org/2004/02/skos/core#comment> "All plutonium except that with isotopic concentration exceeding 80% in plutonium-238" ;
+                   :IAEA_Reference "https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1481_web.pdf sec 4" .
 
 
 ###  https://w3id.org/emmo/domain/neo#PostulateMultipleFaiulureEvent
@@ -2956,7 +3097,8 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 
 ###  https://w3id.org/emmo/domain/neo#ReactorCoreMaterial
 :ReactorCoreMaterial rdf:type owl:Class ;
-                     rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ,
+                     rdfs:subClassOf :ToCheckClass ,
+                                     <https://w3id.org/emmo/hume#Material> ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty elite:isConstituentOf ;
                                        owl:someValuesFrom :ReactorCore
@@ -3407,6 +3549,13 @@ perform its intended safety functions."""@en ;
                              :referenceISO <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.1.1> .
 
 
+###  https://w3id.org/emmo/domain/neo#SourceMaterial
+:SourceMaterial rdf:type owl:Class ;
+                rdfs:subClassOf :NuclearMaterial ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Source Material" ;
+                :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/402.html> .
+
+
 ###  https://w3id.org/emmo/domain/neo#SpentFuelPool
 :SpentFuelPool rdf:type owl:Class ;
                rdfs:subClassOf :ReactorBuildingContents ,
@@ -3817,6 +3966,13 @@ Fukushima Dai-ni,"""@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Unintended Event"@en .
 
 
+###  https://w3id.org/emmo/domain/neo#UraniumMaterial
+:UraniumMaterial rdf:type owl:Class ;
+                 rdfs:subClassOf :NuclearMaterial ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Uranium Material" ;
+                 :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/284.html> .
+
+
 ###  https://w3id.org/emmo/domain/neo#WaterInjectionSystem
 :WaterInjectionSystem rdf:type owl:Class ;
                       rdfs:subClassOf :InjectionSystem ;
@@ -3851,148 +4007,58 @@ Fukushima Dai-ni,"""@en ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Depleted_Uranium
-:Depleted_Uranium rdf:type owl:Class ;
-                  rdfs:subClassOf :UraniumMaterial ;
-                  <http://www.w3.org/2004/02/skos/core#comment> "Uranium in which the percentage of U-235 is less than that of natural uranium (< 0.711%). A by-product of the enrichment process." ;
-                  :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/285.html> .
+###  https://w3id.org/emmo/domain/neo/neo#Anular_Shape
+:Anular_Shape rdf:type owl:Class ;
+              rdfs:subClassOf :Cilindrical_Shape ;
+              owl:disjointWith :Inner_Radius .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Enriched_Uranium
-:Enriched_Uranium rdf:type owl:Class ;
-                  rdfs:subClassOf :UraniumMaterial ;
-                  <http://www.w3.org/2004/02/skos/core#comment> "rdfs:comment \"Uranium in which the proportion of U-235 has been increased above that of natural uranium." ;
-                  :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/286.html> .
+###  https://w3id.org/emmo/domain/neo/neo#Cilindrical_Fuel_Pellet
+:Cilindrical_Fuel_Pellet rdf:type owl:Class ;
+                         rdfs:subClassOf :Fuel_Pellet .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Fertile_Nuclide
-:Fertile_Nuclide rdf:type owl:Class ;
-                 rdfs:subClassOf :Nuclide ;
-                 <http://www.w3.org/2004/02/skos/core#comment> "A nuclide, which is not itself fissile (fissionable by thermal neutrons), that can be converted into a fissile nuclide by irradiation in a reactor. There are two basic fertile materials: uranium-238 and thorium-232. When these fertile materials capture neutrons, they are converted into fissile plutonium-239 and uranium-233, respectively." ;
-                 :referenceNRC "Fertile Material"^^xsd:anyURI .
+###  https://w3id.org/emmo/domain/neo/neo#Cilindrical_Shape
+:Cilindrical_Shape rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#Fuel_Pellet
+:Fuel_Pellet rdf:type owl:Class ;
+             rdfs:subClassOf :NuclearFuel ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <https://w3id.org/emmo/hume#hasProperty> ;
+                               owl:someValuesFrom :Geometrical_Property
+                             ] ;
+             <http://www.w3.org/2004/02/skos/core#comment> "nuclear fuel (3.2.1) in ceramic form and with a cylindrical shape" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "nuclear fuel with a geometrical shape, and a chemical composition that is fabricated for nuclear civil reactor and research reactors."@en ;
+             :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.2.3"^^xsd:anyURI .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fertile_Nuclide ;
-   owl:annotatedProperty :referenceNRC ;
-   owl:annotatedTarget "Fertile Material"^^xsd:anyURI ;
-   rdfs:comment "Misleading Label and definition"
+   owl:annotatedSource :Fuel_Pellet ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
+   owl:annotatedTarget "nuclear fuel (3.2.1) in ceramic form and with a cylindrical shape" ;
+   rdfs:comment "the definition does not include types of pellet for fast reactor with other fors of other material matrix"
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Fissile_Nuclide
-:Fissile_Nuclide rdf:type owl:Class ;
-                 rdfs:subClassOf :Nuclide ;
-                 <http://www.w3.org/2004/02/skos/core#comment> "A nuclide that is capable of undergoing fission after capturing low-energy thermal (slow) neutrons." ;
-                 :referenceNRC "Fissile Material"^^xsd:anyURI .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fissile_Nuclide ;
-   owl:annotatedProperty :referenceNRC ;
-   owl:annotatedTarget "Fissile Material"^^xsd:anyURI ;
-   rdfs:comment "this label can generate misunderstanding"
- ] .
+###  https://w3id.org/emmo/domain/neo/neo#Geometrical_Property
+:Geometrical_Property rdf:type owl:Class ;
+                      rdfs:subClassOf <https://w3id.org/emmo/hume#Property> .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Fissionable_Nuclide
-:Fissionable_Nuclide rdf:type owl:Class ;
-                     rdfs:subClassOf :Nuclide ;
-                     :referenceNRC "Fissionable Material"^^xsd:anyURI ;
-                     :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/963.html> .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fissionable_Nuclide ;
-   owl:annotatedProperty :referenceNRC ;
-   owl:annotatedTarget "Fissionable Material"^^xsd:anyURI ;
-   rdfs:comment "Misleading"
- ] .
+###  https://w3id.org/emmo/domain/neo/neo#Height
+:Height rdf:type owl:Class ;
+        rdfs:subClassOf :Geometrical_Property .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#IrradiatedFuel
-:IrradiatedFuel rdf:type owl:Class ;
-                rdfs:subClassOf :NuclearFuel ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "Irradiated Fuel" .
+###  https://w3id.org/emmo/domain/neo/neo#Inner_Radius
+:Inner_Radius rdf:type owl:Class ;
+              rdfs:subClassOf :Geometrical_Property .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#IsotopicComposition
-:IsotopicComposition rdf:type owl:Class ;
-                     rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
-                     <http://www.w3.org/2004/02/skos/core#altLabel> "Isotopic Vector" .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#Minor_Actinide
-:Minor_Actinide rdf:type owl:Class ;
-                rdfs:subClassOf :Nuclide ;
-                <http://www.w3.org/2004/02/skos/core#comment> "Transuranic elements produced in a reactor other than plutonium; principally neptunium, americium, and curium." .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#Natural_Uranium
-:Natural_Uranium rdf:type owl:Class ;
-                 rdfs:subClassOf :UraniumMaterial ;
-                 <http://www.w3.org/2004/02/skos/core#comment> "Uranium with its naturally occurring isotopic composition (approx. 0.711% U-235)." ;
-                 :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/289.html> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#NuclearMaterial
-:NuclearMaterial rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty <https://w3id.org/emmo/hume#hasProperty> ;
-                                   owl:someValuesFrom :IsotopicComposition
-                                 ] ;
-                 <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Fission Material"@en ;
-                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material"@en ;
-                 :R8xx0dhbEh1tjGMDwNZfckV "material containing one or more of the following: plutonium except that with isotopic concentration exceeding 80 % in 238Pu; uranium enriched in the isotope 235 or 233; uranium containing the mixture of isotopes as occurring in nature other than in the form of ore or ore residue" ;
-                 :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.1> ;
-                 :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1355.html> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#NuclearMaterialCategoryI
-:NuclearMaterialCategoryI rdf:type owl:Class ;
-                          rdfs:subClassOf :NuclearMaterial ;
-                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material Category I" ;
-                          :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1356.html> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#NuclearMaterialCategoryII
-:NuclearMaterialCategoryII rdf:type owl:Class ;
-                           rdfs:subClassOf :NuclearMaterial ;
-                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Nucler Material Category II" ;
-                           :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1357.html> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#NuclearMaterialCategoryIII
-:NuclearMaterialCategoryIII rdf:type owl:Class ;
-                            rdfs:subClassOf :NuclearMaterial ;
-                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material category III" ;
-                            :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1358.html> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#Nuclide
-:Nuclide rdf:type owl:Class ;
-         rdfs:subClassOf :Atom ;
-         <http://www.w3.org/2004/02/skos/core#comment> "A general term referring to all known isotopes, both stable (279) and unstable (about 2,700), of the chemical elements." ;
-         :referenceNRC "Nuclide"^^xsd:anyURI .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#PlutoniumMaterial
-:PlutoniumMaterial rdf:type owl:Class ;
-                   rdfs:subClassOf :NuclearMaterial ;
-                   <http://www.w3.org/2004/02/skos/core#comment> "All plutonium except that with isotopic concentration exceeding 80% in plutonium-238" ;
-                   :IAEA_Reference "https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1481_web.pdf sec 4" .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#SourceMaterial
-:SourceMaterial rdf:type owl:Class ;
-                rdfs:subClassOf :NuclearMaterial ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "Source Material" ;
-                :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/402.html> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#UraniumMaterial
-:UraniumMaterial rdf:type owl:Class ;
-                 rdfs:subClassOf :NuclearMaterial ;
-                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Uranium Material" ;
-                 :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/284.html> .
+###  https://w3id.org/emmo/domain/neo/neo#Outer_Radius
+:Outer_Radius rdf:type owl:Class ;
+              rdfs:subClassOf :Geometrical_Property .
 
 
 #################################################################
@@ -4003,6 +4069,14 @@ Fukushima Dai-ni,"""@en ;
   owl:members ( :Depleted_Uranium
                 :Enriched_Uranium
                 :Natural_Uranium
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :IrradiatedFuel
+                :Nuclear﻿_Fresh_Fuel
+                :Fuel_Pellet
               )
 ] .
 
