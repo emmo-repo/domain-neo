@@ -256,11 +256,11 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Can Access In"@en .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#has_Constituent
+###  https://w3id.org/emmo/domain/neo#has_Constituent
 :has_Constituent rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#is_made_up_of
+###  https://w3id.org/emmo/domain/neo#is_made_up_of
 :is_made_up_of rdf:type owl:ObjectProperty .
 
 
@@ -1303,6 +1303,19 @@ See fissile nucleus.""" ;
  ] .
 
 
+###  https://w3id.org/emmo/domain/neo#Fresh_Pellet
+:Fresh_Pellet rdf:type owl:Class ;
+              rdfs:subClassOf :Fuel_Pellet ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty elite:isInputOf ;
+                                owl:someValuesFrom :Irradiation
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :is_made_up_of ;
+                                owl:someValuesFrom :Nuclear﻿_Fresh_Fuel
+                              ] .
+
+
 ###  https://w3id.org/emmo/domain/neo#FuelAssembly
 :FuelAssembly rdf:type owl:Class ;
               rdfs:subClassOf :ReactorBuildingContents ,
@@ -1579,6 +1592,24 @@ Reciprocating internal combustion engines — Vocabulary of components and syste
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Irradiated Fuel" .
 
 
+###  https://w3id.org/emmo/domain/neo#Irradiated_Pellet
+:Irradiated_Pellet rdf:type owl:Class ;
+                   rdfs:subClassOf :Fuel_Pellet ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty elite:isOutputOf ;
+                                     owl:someValuesFrom :Irradiation
+                                   ] .
+
+
+###  https://w3id.org/emmo/domain/neo#Irradiation
+:Irradiation rdf:type owl:Class ;
+             rdfs:subClassOf :NuclearEnergyProcess ;
+             <http://www.w3.org/2004/02/skos/core#comment> "" ;
+             :NCTG_Reference "Irradiation" ;
+             :RR3uD2d7YfhHohfv2Nm6sX """Exposure to ionizing radiation.' See exposure
+(alternative definition).""" .
+
+
 ###  https://w3id.org/emmo/domain/neo#IrregularInjection
 :IrregularInjection rdf:type owl:Class ;
                     rdfs:subClassOf :MaterialInjection ;
@@ -1619,6 +1650,13 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                         <http://www.w3.org/2004/02/skos/core#altLabel> "Isolatio Condenser Pool"@en ,
                                                                        "ReactorIsolationCondenserTank"@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Isolation Condenser Tank"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#Isotopic_Vector
+:Isotopic_Vector rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "Isotopic Composition" ;
+                 :R8xx0dhbEh1tjGMDwNZfckV "An isotopic vector describes the composition of a material in terms of the relative quantities of its constituent nuclides." .
 
 
 ###  https://w3id.org/emmo/domain/neo#Light_Water_Reactor
@@ -2359,6 +2397,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
 :NuclearFuel rdf:type owl:Class ;
              rdfs:subClassOf :NuclearEnergyRole ,
                              :NuclearMaterial ;
+             rdfs:comment "Since there are not only fissionable niclides but also fissile nuclide the definition of the IAEA does not seem correct" ;
              <http://www.w3.org/2004/02/skos/core#comment> """Fissionable nuclear material in the form of fabricated elements for loading
 into the reactor core of a civil nuclear power plant or research reactor."""@en ,
                                                            "Here we have to put something that is related to the scope of the nuclear material otherwise there is no difference between nuclear material and fuel" ;
@@ -4068,42 +4107,24 @@ Fukushima Dai-ni,"""@en ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Fresh_Pellet
-:Fresh_Pellet rdf:type owl:Class ;
-              rdfs:subClassOf :Fuel_Pellet ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty elite:isInputOf ;
-                                owl:someValuesFrom :Irradiation
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :is_made_up_of ;
-                                owl:someValuesFrom :Nuclear﻿_Fresh_Fuel
-                              ] .
+###  https://w3id.org/emmo/domain/neo/neo#Ceramic_Material
+:Ceramic_Material rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
+                  <http://www.w3.org/2004/02/skos/core#comment> """essentially inorganic and non-metallic material (3.1.12)
+Note 1 to entry: The concept “ceramic” comprises products based on clay as raw material and also materials which are typically based on oxides, nitrides, carbides, silicides, borides, carbon etc.""" ;
+                  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:23020:ed-1:v1:en:term:3.1.4> .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Irradiated_Pellet
-:Irradiated_Pellet rdf:type owl:Class ;
-                   rdfs:subClassOf :Fuel_Pellet ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty elite:isOutputOf ;
-                                     owl:someValuesFrom :Irradiation
-                                   ] .
+###  https://w3id.org/emmo/domain/neo/neo#Cermet
+:Cermet rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
+        rdfs:comment "sintered material (3.5.10) containing at least one metallic phase and at least one non-metallic phase which is generally of a ceramic nature and the main constituent being titanium carbide, titanium nitride and titanium" ;
+        :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:3252:ed-6:v1:en:term:3.5.1> .
 
 
-###  https://w3id.org/emmo/domain/neo/neo#Irradiation
-:Irradiation rdf:type owl:Class ;
-             rdfs:subClassOf :NuclearEnergyProcess ;
-             <http://www.w3.org/2004/02/skos/core#comment> "" ;
-             :NCTG_Reference "Irradiation" ;
-             :RR3uD2d7YfhHohfv2Nm6sX """Exposure to ionizing radiation.' See exposure
-(alternative definition).""" .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#Isotopic_Vector
-:Isotopic_Vector rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
-                 <http://www.w3.org/2004/02/skos/core#altLabel> "Isotopic Composition" ;
-                 :R8xx0dhbEh1tjGMDwNZfckV "An isotopic vector describes the composition of a material in terms of the relative quantities of its constituent nuclides." .
+###  https://w3id.org/emmo/domain/neo/neo#Cilinder_Height
+:Cilinder_Height rdf:type owl:Class ;
+                 rdfs:subClassOf :Height .
 
 
 #################################################################
