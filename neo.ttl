@@ -542,7 +542,11 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
 
 ###  https://w3id.org/emmo/domain/neo#Cilindrical_Fuel_Pellet
 :Cilindrical_Fuel_Pellet rdf:type owl:Class ;
-                         rdfs:subClassOf :Fuel_Pellet ;
+                         rdfs:subClassOf :Fuel_Pellet ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <https://w3id.org/emmo/hume#hasProperty> ;
+                                           owl:someValuesFrom :Geometrical_Property
+                                         ] ;
                          <http://www.w3.org/2004/02/skos/core#comment> "It is a pellet that has a cilindrical shape"@en .
 
 
@@ -1356,10 +1360,6 @@ subsequently removed from a reactor core as a single unit."""@en ;
              rdfs:subClassOf :NuclearFuel ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty <https://w3id.org/emmo/hume#hasProperty> ;
-                               owl:someValuesFrom :Geometrical_Property
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty <https://w3id.org/emmo/hume#hasProperty> ;
                                owl:someValuesFrom :Isotopic_Vector
                              ] ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Fuel Pellet" ;
@@ -1556,11 +1556,6 @@ https://www.iso.org/obp/ui/#iso:std:iso:24478:ed-1:v2:en:term:3.10.8.2"""^^xsd:a
                                                                "ISO NO Nuclear" ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Injection System"@en ;
                  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:6877:ed-3:v1:en:term:3.11> .
-
-
-###  https://w3id.org/emmo/domain/neo#Inner_Radius
-:Inner_Radius rdf:type owl:Class ;
-              rdfs:subClassOf :Geometrical_Property .
 
 
 ###  https://w3id.org/emmo/domain/neo#IntentionalProcess
@@ -2680,11 +2675,6 @@ perform its intended safety functions.""" ;
 constructed"""@en ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "Operation"@en ;
            :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/690.html"^^xsd:anyURI .
-
-
-###  https://w3id.org/emmo/domain/neo#Outer_Radius
-:Outer_Radius rdf:type owl:Class ;
-              rdfs:subClassOf :Geometrical_Property .
 
 
 ###  https://w3id.org/emmo/domain/neo#PipePlantValve
