@@ -600,7 +600,7 @@ Reference ISO 80000""" .
 
 ###  https://w3id.org/emmo/domain/neo#Irradiation
 :Irradiation rdf:type owl:Class ;
-             rdfs:subClassOf :NuclearEnergyProcess ;
+             rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
              :NCTG_Reference "Irradiation" ;
              :RR3uD2d7YfhHohfv2Nm6sX """Exposure to ionizing radiation.' See exposure
 (alternative definition).""" .
@@ -688,11 +688,6 @@ Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abund
    owl:annotatedTarget "Nuclear energy is a form of heat energy that can be released via reactions involving nuclear fusion or fission taking place between neutrons and protons in the nucleus of an atom. Electricity can be produced when a large amount of heat energy released is applied to generate steam from turbines (Fig. 1.4). Uranium-235, an isotope of uranium, is the most commonly used element in industrial nuclear power generators." ;
    rdfs:seeAlso "https://www.sciencedirect.com/topics/engineering/nuclear-energy"
  ] .
-
-
-###  https://w3id.org/emmo/domain/neo#NuclearEnergyProcess
-:NuclearEnergyProcess rdf:type owl:Class ;
-                      rdfs:subClassOf <https://w3id.org/emmo/hume#Process> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearFuel
@@ -898,16 +893,6 @@ Note 1 to entry: The application fields can be medical, biological, electronic, 
 Note 2 to entry: For most of research reactors the heat production from fission power of the nuclear reaction is essentially useless, therefore the denomination “research reactor” becomes a complement regarding “power reactor” (3.2.1.1), for which heat is recovered for further use while the neutron flux and ionizing radiation are not.""" ;
                  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.5.1.2> ;
                  :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/511.html> .
-
-
-###  https://w3id.org/emmo/domain/neo#Rod_Segment
-:Rod_Segment rdf:type owl:Class ;
-             rdfs:subClassOf :NuclearEnergyObject ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty <https://w3id.org/emmo/hume#hasPart> ;
-                               owl:someValuesFrom :Fuel_Pellet_Column
-                             ] ;
-             :R8xx0dhbEh1tjGMDwNZfckV "a fuel rod can be subdivided axially into multiple segments. in our definition we assume that each such segment is dedicated to a specific function with a corresponding filling or object. The list of fillings/objects includes: a spring, a metallic spacer/reflector, a stack/column of fuel pellets as isolator/blanket/fuel, a gas plenum, etc." .
 
 
 ###  https://w3id.org/emmo/domain/neo#SeaWater
