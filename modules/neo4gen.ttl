@@ -569,25 +569,10 @@ Reference ISO 80000""" .
 
 ###  https://w3id.org/emmo/domain/neo#Hydrogen
 :Hydrogen rdf:type owl:Class ;
-          rdfs:subClassOf :Atom ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty elite:isConstituentOf ;
-                            owl:someValuesFrom :InjectedFluid
-                          ] ;
+          rdfs:subClassOf :Atom ;
           rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Hydrogen> ;
           <http://www.w3.org/2004/02/skos/core#definition> "Itis a chemical element; it has symbol H and atomic number 1. It is the lightest element and, at standard conditions, is a gas of diatomic molecules with the formula H2. It is colorless, odorless, tasteless, non-toxic, and highly combustible. Hydrogen is the most abundant chemical substance in the universe, constituting roughly 75% of all normal matter."@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Hydrogen"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#InjectedFluid
-:InjectedFluid rdf:type owl:Class ;
-               rdfs:subClassOf <https://w3id.org/emmo/hume#Fluid> ,
-                               <https://w3id.org/emmo/hume#Role> ;
-               <http://www.w3.org/2004/02/skos/core#altLabel> "Supply Fluid" ;
-               <http://www.w3.org/2004/02/skos/core#comment> "ISO NO Nuclear" ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "Injected Fluid"@en ;
-               :R9Q7fCgWnAkzqnVMtRJ4WDv "water used for water supply"@en ;
-               :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40> .
 
 
 ###  https://w3id.org/emmo/domain/neo#Inner_Radius
@@ -679,6 +664,13 @@ and Radiation Protection, 2018 Edition """ ;
 Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abundance that can be correlated with the post-mortem (3.57) interval, i.e. the time that has elapsed since a person has died."""@en ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron"@en ;
          :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:39794:-16:ed-1:v1:en:term:3.52> .
+
+
+###  https://w3id.org/emmo/domain/neo#Neutron_Irradiation
+:Neutron_Irradiation rdf:type owl:Class ;
+                     rdfs:subClassOf :Irradiation ;
+                     :R8xx0dhbEh1tjGMDwNZfckV "An interaction process where incident neutrons induce atomic displacements, nuclear transmutations, and fission reactions in the target material. Unlike simple 'exposure', this process fundamentally alters the isotopic composition, microstructure, and thermophysical properties of nuclear fuel pellets." ;
+                     :RR3uD2d7YfhHohfv2Nm6sX "Add reference" .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
@@ -959,13 +951,6 @@ Note 2 to entry: For most of research reactors the heat production from fission 
                  rdfs:subClassOf :NuclearMaterial ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Uranium Material" ;
                  :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/284.html> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo4gen#Neutron_Irradiation
-:Neutron_Irradiation rdf:type owl:Class ;
-                     rdfs:subClassOf :Irradiation ;
-                     :R8xx0dhbEh1tjGMDwNZfckV "An interaction process where incident neutrons induce atomic displacements, nuclear transmutations, and fission reactions in the target material. Unlike simple 'exposure', this process fundamentally alters the isotopic composition, microstructure, and thermophysical properties of nuclear fuel pellets." ;
-                     :RR3uD2d7YfhHohfv2Nm6sX "Add reference" .
 
 
 ###  https://w3id.org/emmo/hume#Fluid
