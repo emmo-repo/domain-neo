@@ -285,6 +285,12 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                    :RR3uD2d7YfhHohfv2Nm6sX "Fission products and actinides produced by neutron absorption of nuclear fuel itself are normally referred to by those specific names, and activation product reserved for products of neutron capture by other materials, such as structural components of the nuclear reactor or nuclear bomb, the reactor coolant, control rods or other neutron poisons, or materials in the environment. All of these, however, need to be handled as radioactive waste. Some nuclides originate in more than one way, as activation products or fission products."@en .
 
 
+###  https://w3id.org/emmo/domain/neo#ArtificialRadioactiveMaterial
+:ArtificialRadioactiveMaterial rdf:type owl:Class ;
+                               rdfs:subClassOf :RadioactiveMaterialByOccurrence ;
+                               owl:disjointWith :NaturallyRadioactiveMaterial .
+
+
 ###  https://w3id.org/emmo/domain/neo#Atom
 :Atom rdf:type owl:Class ;
       rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
