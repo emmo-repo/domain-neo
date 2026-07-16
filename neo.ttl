@@ -1550,7 +1550,6 @@ Reciprocating internal combustion engines — Vocabulary of components and syste
 ###  https://w3id.org/emmo/domain/neo#Irradiation
 :Irradiation rdf:type owl:Class ;
              rdfs:subClassOf :NuclearEnergyProcess ;
-             <http://www.w3.org/2004/02/skos/core#comment> "" ;
              :NCTG_Reference "Irradiation" ;
              :RR3uD2d7YfhHohfv2Nm6sX """Exposure to ionizing radiation.' See exposure
 (alternative definition).""" .
