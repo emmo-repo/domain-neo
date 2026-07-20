@@ -1563,20 +1563,6 @@ Reciprocating internal combustion engines — Vocabulary of components and syste
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo#IrradiatedFuel
-:IrradiatedFuel rdf:type owl:Class ;
-                rdfs:subClassOf :NuclearFuel ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "Irradiated Fuel" .
-
-
-###  https://w3id.org/emmo/domain/neo#Irradiation
-:Irradiation rdf:type owl:Class ;
-             rdfs:subClassOf :Nuclear_Energy_Process ;
-             :NCTG_Reference "Irradiation" ;
-             :RR3uD2d7YfhHohfv2Nm6sX """Exposure to ionizing radiation.' See exposure
-(alternative definition).""" .
-
-
 ###  https://w3id.org/emmo/domain/neo#IrregularInjection
 :IrregularInjection rdf:type owl:Class ;
                     rdfs:subClassOf :MaterialInjection ;
@@ -1897,14 +1883,6 @@ Pag 29""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo#Moderator
-:Moderator rdf:type owl:Class ;
-           rdfs:subClassOf :Nuclear_Reactor_Role ;
-           <http://www.w3.org/2004/02/skos/core#prefLabel> "Moderator"@en ;
-           :R8xx0dhbEh1tjGMDwNZfckV "A material that is used to decrease the speed of the fast neutron produced during a fission even and thus sustaining a chain reaction."@en ;
-           :referenceARIS "Moderator"@en .
-
-
 ###  https://w3id.org/emmo/domain/neo#MultipleUnitNuclearPowerPlant
 :MultipleUnitNuclearPowerPlant rdf:type owl:Class ;
                                rdfs:subClassOf :NuclearPowerPlant ;
@@ -2071,10 +2049,6 @@ important feature at this level."""@en ;
 ###  https://w3id.org/emmo/domain/neo#NPPRefueling
 :NPPRefueling rdf:type owl:Class ;
               rdfs:subClassOf :NPPNormalOperation ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty elite:isBehaviourOf ;
-                                owl:someValuesFrom :NuclearFuel
-                              ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty elite:isSubProcessOf ;
                                 owl:someValuesFrom :Nuclear_ReactorMaintanance
@@ -2355,26 +2329,6 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
                 :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en:term:3.2.2> .
 
 
-###  https://w3id.org/emmo/domain/neo#NuclearFuel
-:NuclearFuel rdf:type owl:Class ;
-             rdfs:subClassOf :NuclearMaterial ,
-                             :Nuclear_Reactor_Role ;
-             rdfs:comment "Since there are not only fissionable niclides but also fissile nuclide the definition of the IAEA does not seem correct" ;
-             <http://www.w3.org/2004/02/skos/core#comment> """Fissionable nuclear material in the form of fabricated elements for loading
-into the reactor core of a civil nuclear power plant or research reactor."""@en ,
-                                                           "Here we have to put something that is related to the scope of the nuclear material otherwise there is no difference between nuclear material and fuel" ;
-             <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Fuel"@en ;
-             :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/668.html"^^xsd:anyURI .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NuclearFuel ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
-   owl:annotatedTarget """Fissionable nuclear material in the form of fabricated elements for loading
-into the reactor core of a civil nuclear power plant or research reactor."""@en ;
-   rdfs:comment "This is uncomplete/ not true"
- ] .
-
-
 ###  https://w3id.org/emmo/domain/neo#NuclearInelasticScattering
 :NuclearInelasticScattering rdf:type owl:Class ;
                             rdfs:subClassOf :NuclearReaction ,
@@ -2447,9 +2401,9 @@ further decays, the event is referred to as inelastic scattering."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearPlantAOO
 :NuclearPlantAOO rdf:type owl:Class ;
-                 rdfs:subClassOf :Nuclear_Energy_Process ,
-                                 :Nuclear_Accident_Concepts ,
-                                 :Nuclear_Plant_Concepts ;
+                 rdfs:subClassOf :Nuclear_Accident_Concepts ,
+                                 :Nuclear_Plant_Concepts ,
+                                 <https://w3id.org/emmo/hume#Process> ;
                  <http://www.w3.org/2004/02/skos/core#definition> """Conditions of normal operation that are expected to occur one or
 more times during the life of the nuclear power unit and include but
 are not limited to loss of power to all recirculation pumps, tripping of
@@ -2570,23 +2524,6 @@ all offsite power."""@en ;
                        :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.2> .
 
 
-###  https://w3id.org/emmo/domain/neo#NuclearSpentFuel
-:NuclearSpentFuel rdf:type owl:Class ;
-                  rdfs:subClassOf :IrradiatedFuel ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty elite:isOutputOf ;
-                                    owl:someValuesFrom :ReactorCoreEnergyProduction
-                                  ] ;
-                  <http://www.w3.org/2004/02/skos/core#definition> "Nuclear fuel removed from a reactor following irradiation that is no longer usable in its present form because of depletion of fissile material, poison buildup or radiation damage."@en ;
-                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Spent Fuel"@en ;
-                  :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/1230.html"^^xsd:anyURI .
-
-
-###  https://w3id.org/emmo/domain/neo#Nuclear_Energy_Process
-:Nuclear_Energy_Process rdf:type owl:Class ;
-                        rdfs:subClassOf <https://w3id.org/emmo/hume#Process> .
-
-
 ###  https://w3id.org/emmo/domain/neo#Nuclear_Reactor
 :Nuclear_Reactor rdf:type owl:Class ;
                  rdfs:subClassOf :NuclearEnergyObject ,
@@ -2605,24 +2542,6 @@ all offsite power."""@en ;
                             <http://www.w3.org/2004/02/skos/core#definition> "any periodic or unplanned support and verification operations designed to keep premises and equipment in proper working condition in a nuclear reactor" ;
                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Reactor Maintanance"@en ;
                             :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:22716:ed-1:v2:en:term:2.19> .
-
-
-###  https://w3id.org/emmo/domain/neo#Nuclear_Reactor_Role
-:Nuclear_Reactor_Role rdf:type owl:Class ;
-                      rdfs:subClassOf <https://w3id.org/emmo/hume#Role> ;
-                      rdfs:label "Nuclear Energy Role"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#Nuclear﻿_Fresh_Fuel
-:Nuclear﻿_Fresh_Fuel rdf:type owl:Class ;
-                     rdfs:subClassOf :NuclearFuel ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty elite:isInputOf ;
-                                       owl:someValuesFrom :ReactorCoreEnergyProduction
-                                     ] ;
-                     <http://www.w3.org/2004/02/skos/core#definition> "New fuel or unirradiated fuel, including fuel fabricated from fissionable material recovered by reprocessing previously irradiated fuel." ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear﻿ Fresh Fuel"@en ;
-                     :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/669.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#Nuclide
@@ -3124,14 +3043,6 @@ Note 1 to entry: This includes floors, walls, beams, columns, doors, and penetra
                           :referenceISO "https://www.iso.org/obp/ui/#iso:std:iso:17873:ed-1:v1:en"^^xsd:anyURI .
 
 
-###  https://w3id.org/emmo/domain/neo#ReactorCoolant
-:ReactorCoolant rdf:type owl:Class ;
-                rdfs:subClassOf :Nuclear_Reactor_Role ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Coolant"@en ;
-                :R8xx0dhbEh1tjGMDwNZfckV "A substance that is used to remove or transfer heat from the reactor core. Common coolants include light water, heavy water, air, carbon dioxide, helium, liquid sodium, and a sodium-potassium alloy."@en ;
-                :referenceARIS <https://aris.iaea.org/Glossary/> .
-
-
 ###  https://w3id.org/emmo/domain/neo#ReactorCore
 :ReactorCore rdf:type owl:Class ;
              rdfs:subClassOf :ReactorBuildingContents ,
@@ -3155,7 +3066,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 
 ###  https://w3id.org/emmo/domain/neo#ReactorCoreEnergyProduction
 :ReactorCoreEnergyProduction rdf:type owl:Class ;
-                             rdfs:subClassOf :Nuclear_Energy_Process ,
+                             rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty [ owl:inverseOf elite:isSubProcessOf
                                                               ] ;
