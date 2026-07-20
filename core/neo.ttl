@@ -1526,7 +1526,7 @@ https://www.iso.org/obp/ui/#iso:std:iso:24478:ed-1:v2:en:term:3.10.8.2"""^^xsd:a
 
 ###  https://w3id.org/emmo/domain/neo#InjectionSystem
 :InjectionSystem rdf:type owl:Class ;
-                 rdfs:subClassOf :MainControlRoom ,
+                 rdfs:subClassOf :NoNuclearISO ,
                                  :NuclearEnergyObject ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty elite:participatesTo ;
