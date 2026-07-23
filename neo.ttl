@@ -2519,8 +2519,7 @@ all offsite power."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#Nuclear_Reactor
 :Nuclear_Reactor rdf:type owl:Class ;
-                 rdfs:subClassOf :NuclearEnergyObject ,
-                                 :Nuclear_Plant_Concepts ;
+                 rdfs:subClassOf :Nuclear_Plant_Concepts ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Reactor"@en ;
                  :R8xx0dhbEh1tjGMDwNZfckV "special device having an inventory of nuclear fuel material containing fissionable nuclides (3.1.2) and often neutron moderating, neutron absorbing and cooling materials, all of them geometrically arranged in a particular neutron multiplicative configuration (3.1.10) designed and built for having the capability of initiating, maintaining and extinguishing a controlled, self-sustaining nuclear fission (3.1.1) chain reaction, under adequate safety conditions" ;
                  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.22> .

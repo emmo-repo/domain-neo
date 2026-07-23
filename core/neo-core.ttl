@@ -9,7 +9,7 @@
 
 <https://w3id.org/emmo/domain/neo/neo-core> rdf:type owl:Ontology ;
                                              owl:versionIRI <https://w3id.org/emmo/domain/neo/0.0.1/neo-core> ;
-                                             owl:imports <https://w3id.org/emmo/0.0.7/elite> ,
+                                             owl:imports <https://w3id.org/emmo/0.0.7/elite> ;
                                              <http://purl.org/dc/terms/contributor> "Ilaria Maria Paponetti"@it ,
                                                                                     "Emanuele Ghedini" ,
                                                                                     "Karl Sturm" ;
@@ -277,7 +277,6 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/emmo/domain/neo#Atom
 :Atom rdf:type owl:Class ;
-      rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
       rdfs:isDefinedBy <https://doi.org/10.1351/goldbook.C01022> ;
       <http://www.w3.org/2004/02/skos/core#altLabel> "Chemical Element"@en ;
       <http://www.w3.org/2004/02/skos/core#definition> "type of substance that cannot be divided or changed into different substances by ordinary chemical methods"@en ;
@@ -327,7 +326,6 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
 
 ###  https://w3id.org/emmo/domain/neo#FastNeutron
 :FastNeutron rdf:type owl:Class ;
-             rdfs:subClassOf :Neutron ;
              <http://www.w3.org/2004/02/skos/core#definition> "A neutron with kinetic energy greater than its surroundings when released during fission."@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Fast Neutron"@en ;
              :RR3uD2d7YfhHohfv2Nm6sX """Fast neutrons are considered as such in the context of a fission nuclear reactor, where the average neutron energy emerging from fission is about 2 MeV, before being slowed down by collisions. 
@@ -370,7 +368,6 @@ are 235U,239P~, and233U.1""" ;
 
 ###  https://w3id.org/emmo/domain/neo#FissionProduct
 :FissionProduct rdf:type owl:Class ;
-                rdfs:subClassOf :Atom ;
                 rdfs:comment "Used in contexts where the radiation emitted by the radionuclide is the potential hazard."@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A radionuclide produced by nuclear fission."@en ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Fission Product"@en ;
@@ -473,7 +470,6 @@ subsequently removed from a reactor core as a single unit."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#Hydrogen
 :Hydrogen rdf:type owl:Class ;
-          rdfs:subClassOf :Atom ;
           rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Hydrogen> ;
           <http://www.w3.org/2004/02/skos/core#definition> "Itis a chemical element; it has symbol H and atomic number 1. It is the lightest element and, at standard conditions, is a gas of diatomic molecules with the formula H2. It is colorless, odorless, tasteless, non-toxic, and highly combustible. Hydrogen is the most abundant chemical substance in the universe, constituting roughly 75% of all normal matter."@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Hydrogen"@en .
@@ -508,7 +504,6 @@ subsequently removed from a reactor core as a single unit."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NPPActivationProduct
 :NPPActivationProduct rdf:type owl:Class ;
-                      rdfs:subClassOf :FissionProduct ;
                       rdfs:comment "Fission products and actinides produced by neutron absorption of nuclear fuel itself are normally referred to by those specific names, and activation product reserved for products of neutron capture by other materials, such as structural components of the nuclear reactor or nuclear bomb, the reactor coolant, control rods or other neutron poisons, or materials in the environment. All of these, however, need to be handled as radioactive waste. Some nuclides originate in more than one way, as activation products or fission products."@en ;
                       rdfs:seeAlso <https://en.wikipedia.org/wiki/Activation_product> ;
                       <http://www.w3.org/2004/02/skos/core#prefLabel> "NPP Activation Product"@en .
@@ -523,7 +518,6 @@ subsequently removed from a reactor core as a single unit."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#Neutron
 :Neutron rdf:type owl:Class ;
-         rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
          <http://www.w3.org/2004/02/skos/core#definition> """subatomic particles used for neutron imaging (3.41) (NI) purposes by the neutron attenuation process in a similar fashion to X-rays (3.76)
 Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abundance that can be correlated with the post-mortem (3.57) interval, i.e. the time that has elapsed since a person has died."""@en ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron"@en ;
@@ -738,7 +732,6 @@ Note 2 to entry: For most of research reactors the heat production from fission 
 
 ###  https://w3id.org/emmo/domain/neo#ThermalNeutron
 :ThermalNeutron rdf:type owl:Class ;
-                rdfs:subClassOf :Neutron ;
                 <http://www.w3.org/2004/02/skos/core#altLabel> "Neutron that has, by collision with other particles, reached an energy state equal to that of its surroundings."@en ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Thermal Neutron"@en ;
                 :referenceISO "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors"^^xsd:anyURI .
