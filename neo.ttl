@@ -102,23 +102,19 @@ elite:isOutputOf rdf:type owl:AnnotationProperty ;
 
 ###  https://w3id.org/emmo/domain/neo#IAEA_Reference
 :IAEA_Reference rdf:type owl:AnnotationProperty ;
-                rdfs:comment ""@en ;
-                rdfs:subPropertyOf rdfs:seeAlso .
+                rdfs:comment ""@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#NCTG_Reference
 :NCTG_Reference rdf:type owl:AnnotationProperty ;
                 rdfs:comment """Glossary of Nuclear Criticality Terms. Los Alamos National
 Laboratory, 1989""" ;
-                rdfs:seeAlso "https://ncsp.llnl.gov/sites/ncsp/files/2021-05/la11627.pdf" ;
-                rdfs:subPropertyOf rdfs:seeAlso .
+                rdfs:seeAlso "https://ncsp.llnl.gov/sites/ncsp/files/2021-05/la11627.pdf" .
 
 
 ###  https://w3id.org/emmo/domain/neo#NRC_Reference
 :NRC_Reference rdf:type owl:AnnotationProperty ;
-               rdfs:comment "This is the link to any Nuclear Regulatory Commission document/report."@en ;
-               rdfs:subPropertyOf rdfs:seeAlso ;
-               rdfs:range xsd:string .
+               rdfs:comment "This is the link to any Nuclear Regulatory Commission document/report."@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV
@@ -145,53 +141,41 @@ Laboratory, 1989""" ;
 ###  https://w3id.org/emmo/domain/neo#eCFR_Reference
 :eCFR_Reference rdf:type owl:AnnotationProperty ;
                 rdfs:comment "Official U.S. federal regulations database, maintained by the National Archives." ;
-                :eCFR_Reference ""^^xsd:anyURI ;
-                rdfs:subPropertyOf rdfs:seeAlso ;
-                rdfs:range xsd:anyURI .
+                :eCFR_Reference ""^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#referenceARIS
 :referenceARIS rdf:type owl:AnnotationProperty ;
                rdfs:comment "Reference to the IAEA Advanced Reactor Information System Glossary."@en ;
                rdfs:seeAlso <https://aris.iaea.org/Glossary/> ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "ARIS Reference"@en ;
-               rdfs:subPropertyOf rdfs:seeAlso ;
-               rdfs:range xsd:string .
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "ARIS Reference"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#referenceINIS
 :referenceINIS rdf:type owl:AnnotationProperty ;
                rdfs:comment "Reference to the IAEA INIS Thesaurus term."@en ;
                rdfs:seeAlso <https://www.iaea.org/resources/databases/inis/thesaurus> ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "INIS Reference"@en ;
-               rdfs:subPropertyOf rdfs:seeAlso ;
-               rdfs:range xsd:string .
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "INIS Reference"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#referenceISO
 :referenceISO rdf:type owl:AnnotationProperty ;
               rdfs:seeAlso <https://www.iso.org/obp/ui/#home> ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "ISO Reference"@en ;
-              rdfs:subPropertyOf rdfs:seeAlso ;
-              rdfs:range xsd:anyURI .
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "ISO Reference"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#referenceNRC
 :referenceNRC rdf:type owl:AnnotationProperty ;
               rdfs:comment "This is the direct reference to the Nuclear Regulatory Commission Glossary" ;
               rdfs:seeAlso <https://www.nrc.gov/reading-rm/basic-ref/glossary> ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "NRCG Reference"@en ;
-              rdfs:subPropertyOf rdfs:seeAlso ;
-              rdfs:range xsd:anyURI .
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "NRCG Reference"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#referenceNSSG
 :referenceNSSG rdf:type owl:AnnotationProperty ;
                rdfs:comment "Reference to IAEA Nuclear Safety and Security Glossary term IRI."@en ;
                rdfs:seeAlso <https://vocabulary.iaea.org/iaea-safety-glossary.html> ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "NSSG Reference"@en ;
-               rdfs:subPropertyOf rdfs:seeAlso ;
-               rdfs:range xsd:anyURI .
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "NSSG Reference"@en .
 
 
 #################################################################
@@ -244,7 +228,6 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c
 :RB4rNlczhggIx7lqdEK2d9c rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf elite:isConstituentOf ;
                          rdfs:comment "Defines the position of an object in a Nuclear Power Plant."@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The spatial relation  between an entity and another the entity that contains it."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "isContainedBy"@en .
@@ -300,7 +283,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:23552:-1:ed-1:v1:en"""^^xsd:anyURI ;
 
 ###  https://w3id.org/emmo/domain/neo#ActivatedMaterial
 :ActivatedMaterial rdf:type owl:Class ;
-                   rdfs:subClassOf :NuclearMaterial ;
                    rdfs:comment "the definition is not correct: Mix between nuclide and material" ;
                    rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Activation_product> ;
                    <http://www.w3.org/2004/02/skos/core#definition> "An activation product is a material that has been made radioactive by the process of neutron activation."@en ;
@@ -1167,7 +1149,6 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 
 ###  https://w3id.org/emmo/domain/neo#Fertile_Nuclide
 :Fertile_Nuclide rdf:type owl:Class ;
-                 rdfs:subClassOf :Nuclide ;
                  <http://www.w3.org/2004/02/skos/core#comment> "A nuclide, which is not itself fissile (fissionable by thermal neutrons), that can be converted into a fissile nuclide by irradiation in a reactor. There are two basic fertile materials: uranium-238 and thorium-232. When these fertile materials capture neutrons, they are converted into fissile plutonium-239 and uranium-233, respectively." ;
                  :referenceNRC "Fertile Material"^^xsd:anyURI .
 
@@ -1244,7 +1225,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#Fissile_Nuclide
 :Fissile_Nuclide rdf:type owl:Class ;
-                 rdfs:subClassOf :Nuclide ;
                  <http://www.w3.org/2004/02/skos/core#comment> "A nuclide that is capable of undergoing fission after capturing low-energy thermal (slow) neutrons." ;
                  <http://www.w3.org/2004/02/skos/core#definition> """A nucleus capable of fission by thermal neutrons,
 provided the effective neutron production cross section, exceeds
@@ -1276,7 +1256,6 @@ are 235U,239P~, and233U.1""" ;
 
 ###  https://w3id.org/emmo/domain/neo#Fissionable_Nuclide
 :Fissionable_Nuclide rdf:type owl:Class ;
-                     rdfs:subClassOf :Nuclide ;
                      <http://www.w3.org/2004/02/skos/core#comment> "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it ;
                      :NCTG_Reference "Fissionable Nucleus" ;
                      :R8xx0dhbEh1tjGMDwNZfckV """A nucleus capable of fission by neutrons of some
@@ -1598,8 +1577,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#Light_Water_Reactor
 :Light_Water_Reactor rdf:type owl:Class ;
-                     rdfs:subClassOf :Nuclear_Reactor ,
-                                     [ rdf:type owl:Restriction ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty elite:isConstituentOf ;
                                        owl:someValuesFrom :NuclearPowerPlant
                                      ] ;
@@ -2274,8 +2252,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
-                     rdfs:subClassOf :Nuclear_Plant_Concepts ,
-                                     <https://w3id.org/emmo/hume#Object> ;
+                     rdfs:subClassOf :Nuclear_Plant_Concepts ;
                      rdfs:comment "Nuclear energy is a form of heat energy that can be released via reactions involving nuclear fusion or fission taking place between neutrons and protons in the nucleus of an atom. Electricity can be produced when a large amount of heat energy released is applied to generate steam from turbines (Fig. 1.4). Uranium-235, an isotope of uranium, is the most commonly used element in industrial nuclear power generators." ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Domain Object" ;
                      <http://www.w3.org/2004/02/skos/core#comment> "nuclear related energy object and people" ;
@@ -2364,21 +2341,18 @@ further decays, the event is referred to as inelastic scattering."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearMaterialCategoryI
 :NuclearMaterialCategoryI rdf:type owl:Class ;
-                          rdfs:subClassOf :NuclearMaterial ;
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material Category I" ;
                           :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1356.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearMaterialCategoryII
 :NuclearMaterialCategoryII rdf:type owl:Class ;
-                           rdfs:subClassOf :NuclearMaterial ;
                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Nucler Material Category II" ;
                            :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1357.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearMaterialCategoryIII
 :NuclearMaterialCategoryIII rdf:type owl:Class ;
-                            rdfs:subClassOf :NuclearMaterial ;
                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material category III" ;
                             :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1358.html> .
 
@@ -2475,8 +2449,7 @@ all offsite power."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearPowerReactor
 :NuclearPowerReactor rdf:type owl:Class ;
-                     rdfs:subClassOf :Nuclear_Reactor ,
-                                     [ rdf:type owl:Restriction ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty elite:isConstituentOf ;
                                        owl:someValuesFrom :NuclearPowerPlant
                                      ] ;
@@ -2538,7 +2511,6 @@ all offsite power."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#Nuclide
 :Nuclide rdf:type owl:Class ;
-         rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
          <http://www.w3.org/2004/02/skos/core#comment> "A general term referring to all known isotopes, both stable (279) and unstable (about 2,700), of the chemical elements." ;
          <http://www.w3.org/2004/02/skos/core#definition> """A species of atom characterized by its mass number, atomic
 number, and a possible elevated nuclear energy state if prolonged.'""" ;
@@ -2920,7 +2892,6 @@ https://www.iso.org/obp/ui/#iso:std:iso:20043:-1:ed-1:v1:en"""^^xsd:anyURI
 
 ###  https://w3id.org/emmo/domain/neo#RadioactiveMaterial
 :RadioactiveMaterial rdf:type owl:Class ;
-                     rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
                      rdfs:comment "Material designated in national law or by a regulatory body as being  subject to regulatory control because of its radioactivity."@en ,
                                   """This is the ‘regulatory’ meaning of radioactive (2), and should not be confused with
 the ‘scientific’ meaning of radioactive (1): ‘exhibiting radioactivity; emitting or
@@ -2982,8 +2953,7 @@ in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ;
 
 ###  https://w3id.org/emmo/domain/neo#Radionuclide
 :Radionuclide rdf:type owl:Class ;
-              rdfs:subClassOf :Nuclide ,
-                              [ rdf:type owl:Restriction ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty elite:isParticipantOf ;
                                 owl:someValuesFrom :RadioactiveDischarging
                               ] ;
@@ -3291,7 +3261,6 @@ in operation or in accidents."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#ResearchReactor
 :ResearchReactor rdf:type owl:Class ;
-                 rdfs:subClassOf :Nuclear_Reactor ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Research Reactor"@en ;
                  :R8xx0dhbEh1tjGMDwNZfckV """type of nuclear reactor (3.1.22) engineered to use its neutron flux and ionizing radiation for scientific research in different fields
 Note 1 to entry: The application fields can be medical, biological, electronic, engineering, industrial as well as related to specific reactor concepts or nuclear fuel cycle strategies services, technological developments and/or industrial production purposes. It includes the reactor core (3.1.23.1), the facilities/devices exposed to the neutron field within and around the core, and structures (3.7.1), systems and components (3.7.3) related to the safe operation (3.9.1) of the reactor.
@@ -3533,7 +3502,6 @@ perform its intended safety functions."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#SourceMaterial
 :SourceMaterial rdf:type owl:Class ;
-                rdfs:subClassOf :NuclearMaterial ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Source Material" ;
                 :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/402.html> .
 
@@ -3929,7 +3897,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
 
 ###  https://w3id.org/emmo/domain/neo#UraniumMaterial
 :UraniumMaterial rdf:type owl:Class ;
-                 rdfs:subClassOf :NuclearMaterial ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Uranium Material" ;
                  :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/284.html> .
 
@@ -3969,14 +3936,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
   owl:members ( :Depleted_Uranium
                 :Enriched_Uranium
                 :Natural_Uranium
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :NuclearMaterialCategoryI
-                :NuclearMaterialCategoryII
-                :NuclearMaterialCategoryIII
               )
 ] .
 
