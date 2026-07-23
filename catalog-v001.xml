@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://w3id.org/emmo/domain/neo/0.0.1/neo4gen" uri="modules/neo4gen.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/emmo/elite/elite/0.0.7" uri="https://w3id.org/emmo/0.0.7/elite"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/emmo/domain/neo/fukushima" uri="modules/fukushima.ttl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/emmo/domain/neo/0.0.1/neo-core" uri="core/neo-core.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public"/>
 </catalog>

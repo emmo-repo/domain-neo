@@ -9,7 +9,6 @@
 
 <https://w3id.org/emmo/domain/neo/neo-core> rdf:type owl:Ontology ;
                                              owl:versionIRI <https://w3id.org/emmo/domain/neo/0.0.1/neo-core> ;
-                                             owl:imports <https://w3id.org/emmo/0.0.7/elite> ;
                                              <http://purl.org/dc/terms/contributor> "Ilaria Maria Paponetti"@it ,
                                                                                     "Emanuele Ghedini" ,
                                                                                     "Karl Sturm" ;
@@ -255,6 +254,10 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/emmo/domain/neo#is_made_up_of
 :is_made_up_of rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/hume#hasPart
+<https://w3id.org/emmo/hume#hasPart> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/emmo/hume#hasProperty
@@ -770,6 +773,10 @@ Note 2 to entry: For most of research reactors the heat production from fission 
 
 ###  https://w3id.org/emmo/hume#Role
 <https://w3id.org/emmo/hume#Role> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/hume#Whole
+<https://w3id.org/emmo/hume#Whole> rdf:type owl:Class .
 
 
 #################################################################
