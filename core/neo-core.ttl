@@ -9,7 +9,6 @@
 
 <https://w3id.org/emmo/domain/neo/neo-core> rdf:type owl:Ontology ;
                                              owl:versionIRI <https://w3id.org/emmo/domain/neo/0.0.1/neo-core> ;
-                                             owl:imports <https://w3id.org/emmo/0.0.7/elite> ;
                                              <http://purl.org/dc/terms/contributor> "Ilaria Maria Paponetti"@it ,
                                                                                     "Emanuele Ghedini" ,
                                                                                     "Karl Sturm" ;
