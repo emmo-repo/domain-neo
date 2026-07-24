@@ -9,8 +9,6 @@
 
 <https://w3id.org/emmo/domain/neo/neo4gen> rdf:type owl:Ontology ;
                                             owl:versionIRI <https://w3id.org/emmo/domain/neo/0.0.1/neo4gen> ;
-                                            owl:imports <https://w3id.org/emmo/0.0.7/elite> ,
-                                                        <https://w3id.org/emmo/domain/neo/0.0.1/neo-core> ;
                                             <http://purl.org/dc/terms/contributor> "Ilaria Maria Paponetti"@it ,
                                                                                    "Karl Sturm" ;
                                             <http://purl.org/dc/terms/description> """The Nuclear Energy Ontology  for the 4 generation reactors is a domain ontology developed under the EMMO framework for the representation of concepts in the field of nuclear energy for four generation reactors.. It is based on commonly used standardization vocabularies, such as:
@@ -83,7 +81,8 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/emmo/0.0.7/elite#isOutputOf
-elite:isOutputOf rdf:type owl:AnnotationProperty .
+elite:isOutputOf rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf elite:partakesIn .
 
 
 ###  https://w3id.org/emmo/0.0.7/elite#partakesIn
@@ -217,8 +216,7 @@ elite:isInputOf rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/emmo/0.0.7/elite#isOutputOf
-elite:isOutputOf rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf elite:partakesIn .
+elite:isOutputOf rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/emmo/0.0.7/elite#isParticipantOf
