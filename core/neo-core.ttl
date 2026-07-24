@@ -70,15 +70,6 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                                                 rdfs:subPropertyOf rdfs:label .
 
 
-###  https://w3id.org/emmo/0.0.7/elite#isOutputOf
-elite:isOutputOf rdf:type owl:AnnotationProperty ;
-                 rdfs:subPropertyOf elite:partakesIn .
-
-
-###  https://w3id.org/emmo/0.0.7/elite#partakesIn
-elite:partakesIn rdf:type owl:AnnotationProperty .
-
-
 ###  https://w3id.org/emmo/domain/neo#IAEA_Reference
 :IAEA_Reference rdf:type owl:AnnotationProperty ;
                 rdfs:comment ""@en ;
@@ -203,6 +194,10 @@ elite:isConstitutiveProcessOf rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/emmo/0.0.7/elite#isInputOf
 elite:isInputOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#isOutputOf
+elite:isOutputOf rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/emmo/0.0.7/elite#isParticipantOf

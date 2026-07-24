@@ -10,6 +10,7 @@
 <https://w3id.org/emmo/domain/neo/neo> rdf:type owl:Ontology ;
                                         owl:versionIRI <https://w3id.org/emmo/domain/neo/0.0.1/neo> ;
                                         owl:imports <https://w3id.org/emmo/domain/neo/0.0.1/neo-core> ,
+                                                    <https://w3id.org/emmo/domain/neo/0.0.1/neo4gen> ,
                                                     <https://w3id.org/emmo/elite/elite/0.0.7> ;
                                         <http://purl.org/dc/terms/contributor> "Anna Anchini"@it ,
                                                                                "Cristiana Tropeano"@it ,
@@ -93,11 +94,6 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 <http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty ;
                                                 rdfs:subPropertyOf rdfs:label .
-
-
-###  https://w3id.org/emmo/0.0.7/elite#isOutputOf
-elite:isOutputOf rdf:type owl:AnnotationProperty ;
-                 rdfs:subPropertyOf elite:partakesIn .
 
 
 ###  https://w3id.org/emmo/domain/neo#IAEA_Reference
@@ -210,6 +206,10 @@ elite:isConstitutiveProcessOf rdf:type owl:ObjectProperty .
 elite:isInputOf rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/emmo/0.0.7/elite#isOutputOf
+elite:isOutputOf rdfs:subPropertyOf elite:partakesIn .
+
+
 ###  https://w3id.org/emmo/0.0.7/elite#isParticipantOf
 elite:isParticipantOf rdf:type owl:ObjectProperty .
 
@@ -220,6 +220,10 @@ elite:isStageOf rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/emmo/0.0.7/elite#isSubProcessOf
 elite:isSubProcessOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#partakesIn
+elite:partakesIn rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/emmo/0.0.7/elite#participatesTo
