@@ -434,25 +434,9 @@ elite:participatesTo a owl:ObjectProperty .
   :RR3uD2d7YfhHohfv2Nm6sX "Fission products and actinides produced by neutron absorption of nuclear fuel itself are normally referred to by those specific names, and activation product reserved for products of neutron capture by other materials, such as structural components of the nuclear reactor or nuclear bomb, the reactor coolant, control rods or other neutron poisons, or materials in the environment. All of these, however, need to be handled as radioactive waste. Some nuclides originate in more than one way, as activation products or fission products."@en .
 
 :Atom a owl:Class;
-  rdfs:subClassOf <../hume#PhysicalParticle>;
-  rdfs:isDefinedBy <https://doi.org/10.1351/goldbook.C01022>;
-  <http://www.w3.org/2004/02/skos/core#altLabel> "Chemical Element"@en;
-  <http://www.w3.org/2004/02/skos/core#definition> "type of substance that cannot be divided or changed into different substances by ordinary chemical methods"@en;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Atom"@en;
-  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-2:ed-1:v1:en:term:3.1.21> .
+  rdfs:subClassOf <../hume#PhysicalParticle> .
 
-:BoilingWaterReactor a owl:Class;
-  <http://www.w3.org/2004/02/skos/core#altLabel> "BWR"@en;
-  <http://www.w3.org/2004/02/skos/core#definition> """nuclear reactor (3.1.22) with water as a coolant and as a moderator (3.1.23.1.2), boiling in the core 
-Note 1 to entry: In a boiling water reactor the generated heat is removed from the core by evaporation. """@en;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Boiling Water Reactor"@en .
-
-_:genid1 a owl:Axiom;
-  owl:annotatedSource :BoilingWaterReactor;
-  owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition>;
-  owl:annotatedTarget """nuclear reactor (3.1.22) with water as a coolant and as a moderator (3.1.23.1.2), boiling in the core 
-Note 1 to entry: In a boiling water reactor the generated heat is removed from the core by evaporation. """@en;
-  :referenceISO "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors "^^xsd:anyURI .
+:BoilingWaterReactor a owl:Class .
 
 :BoratedWater a owl:Class;
   rdfs:subClassOf <../hume#Fluid>;
@@ -461,7 +445,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
   <http://www.w3.org/2004/02/skos/core#definition> "Boron, often in the form of boric acid or sodium borate, is combined with water where it acts as a coolant to remove heat from the reactor core and transfers the heat to a secondary circuit.";
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Borated Water"@en .
 
-_:genid2 a owl:Axiom;
+_:genid1 a owl:Axiom;
   owl:annotatedSource :BoratedWater;
   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition>;
   owl:annotatedTarget "Boron, often in the form of boric acid or sodium borate, is combined with water where it acts as a coolant to remove heat from the reactor core and transfers the heat to a secondary circuit.";
@@ -497,37 +481,11 @@ Note 1 to entry: The concept “ceramic” comprises products based on clay as r
   :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/286.html> .
 
 :FastNeutron a owl:Class;
-  rdfs:subClassOf :Neutron;
-  <http://www.w3.org/2004/02/skos/core#definition> "A neutron with kinetic energy greater than its surroundings when released during fission."@en;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Fast Neutron"@en;
-  :RR3uD2d7YfhHohfv2Nm6sX """Fast neutrons are considered as such in the context of a fission nuclear reactor, where the average neutron energy emerging from fission is about 2 MeV, before being slowed down by collisions. 
-While in some textbooks you can find a defnition of fast neutron as a neutron with E > 50 keV, there is not a clear definition of the range within which a neutron can be considered \"fast\"."""@en;
-  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.5.1> .
+  rdfs:subClassOf :Neutron .
 
-:Fertile_Nuclide a owl:Class;
-  <http://www.w3.org/2004/02/skos/core#comment> "A nuclide, which is not itself fissile (fissionable by thermal neutrons), that can be converted into a fissile nuclide by irradiation in a reactor. There are two basic fertile materials: uranium-238 and thorium-232. When these fertile materials capture neutrons, they are converted into fissile plutonium-239 and uranium-233, respectively.";
-  :referenceNRC "Fertile Material"^^xsd:anyURI .
+:Fertile_Nuclide a owl:Class .
 
-_:genid3 a owl:Axiom;
-  owl:annotatedSource :Fertile_Nuclide;
-  owl:annotatedProperty :referenceNRC;
-  owl:annotatedTarget "Fertile Material"^^xsd:anyURI;
-  rdfs:comment "Misleading Label and definition" .
-
-:Fissile_Nuclide a owl:Class;
-  <http://www.w3.org/2004/02/skos/core#comment> "A nuclide that is capable of undergoing fission after capturing low-energy thermal (slow) neutrons.";
-  <http://www.w3.org/2004/02/skos/core#definition> """A nucleus capable of fission by thermal neutrons,
-provided the effective neutron production cross section, exceeds
-the effective absorption cross section. The common fissile nuclei
-are 235U,239P~, and233U.1""";
-  :NCTG_Reference "Fissile nucleus";
-  :referenceNRC "Fissile Material"^^xsd:anyURI .
-
-_:genid4 a owl:Axiom;
-  owl:annotatedSource :Fissile_Nuclide;
-  owl:annotatedProperty :referenceNRC;
-  owl:annotatedTarget "Fissile Material"^^xsd:anyURI;
-  rdfs:comment "this label can generate misunderstanding" .
+:Fissile_Nuclide a owl:Class .
 
 :FissionProduct a owl:Class;
   rdfs:subClassOf :Atom;
@@ -537,27 +495,7 @@ _:genid4 a owl:Axiom;
   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/961.html"^^xsd:anyURI .
 
 :Fissionable_Nuclide a owl:Class;
-  <http://www.w3.org/2004/02/skos/core#comment> "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it;
-  :NCTG_Reference "Fissionable Nucleus";
-  :R8xx0dhbEh1tjGMDwNZfckV """A nucleus capable of fission by neutrons of some
-energy. Fissionable nuclei include 238U, 240Pu, and others with
-neutron-energy fission thresholds, in addition to those that are fissile.
-See fissile nucleus.""";
-  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.7>;
-  :referenceNRC "Fissionable Material"^^xsd:anyURI;
   :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/963.html> .
-
-_:genid5 a owl:Axiom;
-  owl:annotatedSource :Fissionable_Nuclide;
-  owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment>;
-  owl:annotatedTarget "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it;
-  rdfs:seeAlso "Montagnini" .
-
-_:genid6 a owl:Axiom;
-  owl:annotatedSource :Fissionable_Nuclide;
-  owl:annotatedProperty :referenceNRC;
-  owl:annotatedTarget "Fissionable Material"^^xsd:anyURI;
-  rdfs:comment "Misleading" .
 
 :Fresh_Pellet a owl:Class;
   :R8xx0dhbEh1tjGMDwNZfckV "A fuel pellet that has not yet been subjected to an irradiation process within a nuclear reactor." .
@@ -576,22 +514,22 @@ subsequently removed from a reactor core as a single unit."""@en;
   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/976.html"^^xsd:anyURI .
 
 :Fuel_Pellet a owl:Class;
-  rdfs:subClassOf _:genid7, _:genid8;
+  rdfs:subClassOf _:genid2, _:genid3;
   <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Fuel Pellet";
   <http://www.w3.org/2004/02/skos/core#comment> "nuclear fuel (3.2.1) in ceramic form and with a cylindrical shape";
   <http://www.w3.org/2004/02/skos/core#definition> "nuclear fuel with a geometrical shape, and a chemical composition that is fabricated for nuclear civil reactor and research reactors."@en;
   :R8xx0dhbEh1tjGMDwNZfckV "A discrete unit of nuclear fuel material, characterized by a specific ceramic form and cylindrical geometry, fabricated to serve as the structural basis for fuel rod integration. Its identity as a pellet is defined by its physical properties (shape, material matrix, dimensions) rather than its functional state within a reactor.";
   :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.2.3"^^xsd:anyURI .
 
-_:genid7 a owl:Restriction;
+_:genid2 a owl:Restriction;
   owl:someValuesFrom :Isotopic_Vector;
   owl:onProperty <../hume#hasProperty> .
 
-_:genid8 a owl:Restriction;
+_:genid3 a owl:Restriction;
   owl:someValuesFrom :Shape;
   owl:onProperty <../hume#hasProperty> .
 
-_:genid9 a owl:Axiom;
+_:genid4 a owl:Axiom;
   owl:annotatedSource :Fuel_Pellet;
   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment>;
   owl:annotatedTarget "nuclear fuel (3.2.1) in ceramic form and with a cylindrical shape";
@@ -642,11 +580,7 @@ Reference ISO 80000""" .
   :R8xx0dhbEh1tjGMDwNZfckV "list of weight-percentage of isotopes in heavy metal of the fuel matrix";
   :RR3uD2d7YfhHohfv2Nm6sX "An isotopic vector describes the composition of a material in terms of the relative quantities of its constituent nuclides." .
 
-:Light_Water_Reactor a owl:Class;
-  <http://www.w3.org/2004/02/skos/core#altLabel> "LWR";
-  <http://www.w3.org/2004/02/skos/core#definition> "thermal nuclear reactor (3.1.22) cooled and moderated by light water";
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Light Water Reactor"@en;
-  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.4.2> .
+:Light_Water_Reactor a owl:Class .
 
 :NPPActivationProduct a owl:Class;
   rdfs:subClassOf :FissionProduct;
@@ -654,7 +588,7 @@ Reference ISO 80000""" .
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Activation_product>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "NPP Activation Product"@en .
 
-_:genid10 a owl:Axiom;
+_:genid5 a owl:Axiom;
   owl:annotatedSource :NPPActivationProduct;
   owl:annotatedProperty rdfs:comment;
   owl:annotatedTarget "Fission products and actinides produced by neutron absorption of nuclear fuel itself are normally referred to by those specific names, and activation product reserved for products of neutron capture by other materials, such as structural components of the nuclear reactor or nuclear bomb, the reactor coolant, control rods or other neutron poisons, or materials in the environment. All of these, however, need to be handled as radioactive waste. Some nuclides originate in more than one way, as activation products or fission products."@en;
@@ -676,11 +610,7 @@ and Radiation Protection, 2018 Edition """;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Naturally Radioactive Material"@en .
 
 :Neutron a owl:Class;
-  rdfs:subClassOf <../hume#PhysicalParticle>;
-  <http://www.w3.org/2004/02/skos/core#definition> """subatomic particles used for neutron imaging (3.41) (NI) purposes by the neutron attenuation process in a similar fashion to X-rays (3.76)
-Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abundance that can be correlated with the post-mortem (3.57) interval, i.e. the time that has elapsed since a person has died."""@en;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron"@en;
-  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso-iec:39794:-16:ed-1:v1:en:term:3.52> .
+  rdfs:subClassOf <../hume#PhysicalParticle> .
 
 :Neutron_Irradiation a owl:Class;
   :R8xx0dhbEh1tjGMDwNZfckV "An interaction process where incident neutrons induce atomic displacements, nuclear transmutations, and fission reactions in the target material. Unlike simple 'exposure', this process fundamentally alters the isotopic composition, microstructure, and thermophysical properties of nuclear fuel pellets.";
@@ -693,7 +623,7 @@ Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abund
   <http://www.w3.org/2004/02/skos/core#definition> "It is an object involved in the nuclear energy production, management and control.";
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Energy Object"@en .
 
-_:genid11 a owl:Axiom;
+_:genid6 a owl:Axiom;
   owl:annotatedSource :NuclearEnergyObject;
   owl:annotatedProperty rdfs:comment;
   owl:annotatedTarget "Nuclear energy is a form of heat energy that can be released via reactions involving nuclear fusion or fission taking place between neutrons and protons in the nucleus of an atom. Electricity can be produced when a large amount of heat energy released is applied to generate steam from turbines (Fig. 1.4). Uranium-235, an isotope of uranium, is the most commonly used element in industrial nuclear power generators.";
@@ -708,7 +638,7 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en,
   :R8xx0dhbEh1tjGMDwNZfckV "Nuclear material characterized by its functional role as a neutron source within a nuclear reactor core, enabling a sustained or controlled chain reaction. Unlike generic nuclear material, which is defined by its isotopic or chemical composition, Nuclear Fuel is an entity defined by its intended use as a component within a functional whole (the Reactor Core)";
   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/668.html"^^xsd:anyURI .
 
-_:genid12 a owl:Axiom;
+_:genid7 a owl:Axiom;
   owl:annotatedSource :NuclearFuel;
   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment>;
   owl:annotatedTarget """Fissionable nuclear material in the form of fabricated elements for loading
@@ -738,10 +668,7 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material category III";
   :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1358.html> .
 
-:NuclearPowerReactor a owl:Class;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Power Reactor"@en;
-  :R8xx0dhbEh1tjGMDwNZfckV "nuclear reactor (3.1.22) conceived to produce electrical power";
-  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.1.1> .
+:NuclearPowerReactor a owl:Class .
 
 :NuclearSpentFuel a owl:Class;
   rdfs:subClassOf :NuclearMaterial;
@@ -760,12 +687,7 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear﻿ Fresh Fuel"@en;
   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/669.html"^^xsd:anyURI .
 
-:Nuclide a owl:Class;
-  <http://www.w3.org/2004/02/skos/core#comment> "A general term referring to all known isotopes, both stable (279) and unstable (about 2,700), of the chemical elements.";
-  <http://www.w3.org/2004/02/skos/core#definition> """A species of atom characterized by its mass number, atomic
-number, and a possible elevated nuclear energy state if prolonged.'""";
-  :NCTG_Reference "Nuclide";
-  :referenceNRC "Nuclide"^^xsd:anyURI .
+:Nuclide a owl:Class .
 
 :Outer_Radius a owl:Class;
   rdfs:subClassOf :Radius;
@@ -795,19 +717,7 @@ in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""";
   <http://www.w3.org/2004/02/skos/core#definition> "The superclass for categorisation of nuclear materials according to their occurence, natural or artificial"@en;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Radioactive Material By Occurrence"@en .
 
-:Radionuclide a owl:Class;
-  rdfs:comment """Radionuclides that occur naturally on Earth in significant quantities.
- The term is usually used to refer to the primordial radionuclides 40K, 235U, 238U,
-232Th and their radioactive decay products.
- Contrasted with radionuclides of artificial origin, anthropogenic radionuclides and human made radionuclides (which all mean the same), and also with artificialì radionuclides (which exclude radionuclides of artificial origin that are also naturally occurring). Radionuclides of artificial origin may include radionuclides that are also naturally occurring but may not include radionuclides of natural origin"""@en;
-  <http://www.w3.org/2004/02/skos/core#altLabel> "Radioisotope"@en;
-  <http://www.w3.org/2004/02/skos/core#definition> "An unstable isotope of an element that decays or disintegrates spontaneously, thereby emitting radiation. Approximately 5,000 natural and artificial radioisotopes have been identified."@en;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Radionuclide"@en;
-  :referenceINIS "RADIOISOTOPES";
-  :referenceISO "https://www.iso.org/obp/ui/#iso:std:iso:20042:ed-1:v1:en:term:3.18"^^xsd:anyURI;
-  :referenceNRC "Radionuclide"^^xsd:anyURI;
-  :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/475"^^xsd:anyURI,
-    "https://vocabulary.iaea.org/iaea-safety-glossary/554"^^xsd:anyURI .
+:Radionuclide a owl:Class .
 
 :Radius a owl:Class;
   rdfs:subClassOf :Geometrical_Property .
@@ -830,13 +740,7 @@ in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""";
   :R8xx0dhbEh1tjGMDwNZfckV "A material that is used to decrease the speed of the fast neutron produced during a fission even and thus sustaining a chain reaction."@en;
   :referenceARIS "Moderator"@en .
 
-:ResearchReactor a owl:Class;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Research Reactor"@en;
-  :R8xx0dhbEh1tjGMDwNZfckV """type of nuclear reactor (3.1.22) engineered to use its neutron flux and ionizing radiation for scientific research in different fields
-Note 1 to entry: The application fields can be medical, biological, electronic, engineering, industrial as well as related to specific reactor concepts or nuclear fuel cycle strategies services, technological developments and/or industrial production purposes. It includes the reactor core (3.1.23.1), the facilities/devices exposed to the neutron field within and around the core, and structures (3.7.1), systems and components (3.7.3) related to the safe operation (3.9.1) of the reactor.
-Note 2 to entry: For most of research reactors the heat production from fission power of the nuclear reaction is essentially useless, therefore the denomination “research reactor” becomes a complement regarding “power reactor” (3.2.1.1), for which heat is recovered for further use while the neutron flux and ionizing radiation are not.""";
-  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.5.1.2>;
-  :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/511.html> .
+:ResearchReactor a owl:Class .
 
 :SeaWater a owl:Class;
   rdfs:subClassOf <../hume#Fluid>;
@@ -844,7 +748,7 @@ Note 2 to entry: For most of research reactors the heat production from fission 
   <http://www.w3.org/2004/02/skos/core#definition> "Seawater is water from a sea or ocean.";
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Sea Water"@en .
 
-_:genid13 a owl:Axiom;
+_:genid8 a owl:Axiom;
   owl:annotatedSource :SeaWater;
   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition>;
   owl:annotatedTarget "Seawater is water from a sea or ocean.";
@@ -860,10 +764,7 @@ _:genid13 a owl:Axiom;
   :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/402.html> .
 
 :ThermalNeutron a owl:Class;
-  rdfs:subClassOf :Neutron;
-  <http://www.w3.org/2004/02/skos/core#altLabel> "Neutron that has, by collision with other particles, reached an energy state equal to that of its surroundings."@en;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Thermal Neutron"@en;
-  :referenceISO "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors"^^xsd:anyURI .
+  rdfs:subClassOf :Neutron .
 
 :UraniumMaterial a owl:Class;
   rdfs:subClassOf :NuclearMaterial;
@@ -884,32 +785,32 @@ _:genid13 a owl:Axiom;
 
 <../hume#Role> a owl:Class .
 
-_:genid14 a owl:AllDisjointClasses;
-  owl:members _:genid17 .
+_:genid9 a owl:AllDisjointClasses;
+  owl:members _:genid12 .
 
-_:genid17 a rdf:List;
+_:genid12 a rdf:List;
   rdf:first :Depleted_Uranium;
-  rdf:rest _:genid16 .
+  rdf:rest _:genid11 .
 
-_:genid16 a rdf:List;
+_:genid11 a rdf:List;
   rdf:first :Enriched_Uranium;
-  rdf:rest _:genid15 .
+  rdf:rest _:genid10 .
 
-_:genid15 a rdf:List;
+_:genid10 a rdf:List;
   rdf:first :Natural_Uranium;
   rdf:rest rdf:nil .
 
-_:genid18 a owl:AllDisjointClasses;
-  owl:members _:genid21 .
+_:genid13 a owl:AllDisjointClasses;
+  owl:members _:genid16 .
 
-_:genid21 a rdf:List;
+_:genid16 a rdf:List;
   rdf:first :NuclearMaterialCategoryI;
-  rdf:rest _:genid20 .
+  rdf:rest _:genid15 .
 
-_:genid20 a rdf:List;
+_:genid15 a rdf:List;
   rdf:first :NuclearMaterialCategoryII;
-  rdf:rest _:genid19 .
+  rdf:rest _:genid14 .
 
-_:genid19 a rdf:List;
+_:genid14 a rdf:List;
   rdf:first :NuclearMaterialCategoryIII;
   rdf:rest rdf:nil .
