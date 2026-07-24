@@ -552,10 +552,7 @@ ElucidationMinimum length of a straight line segment between a point and a refer
 Reference ISO 80000""" .
 
 :Hydrogen a owl:Class;
-  rdfs:subClassOf :Atom;
-  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Hydrogen>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Itis a chemical element; it has symbol H and atomic number 1. It is the lightest element and, at standard conditions, is a gas of diatomic molecules with the formula H2. It is colorless, odorless, tasteless, non-toxic, and highly combustible. Hydrogen is the most abundant chemical substance in the universe, constituting roughly 75% of all normal matter."@en;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "Hydrogen"@en .
+  rdfs:subClassOf :Atom .
 
 :Inner_Radius a owl:Class;
   rdfs:subClassOf :Radius;
@@ -583,16 +580,7 @@ Reference ISO 80000""" .
 :Light_Water_Reactor a owl:Class .
 
 :NPPActivationProduct a owl:Class;
-  rdfs:subClassOf :FissionProduct;
-  rdfs:comment "Fission products and actinides produced by neutron absorption of nuclear fuel itself are normally referred to by those specific names, and activation product reserved for products of neutron capture by other materials, such as structural components of the nuclear reactor or nuclear bomb, the reactor coolant, control rods or other neutron poisons, or materials in the environment. All of these, however, need to be handled as radioactive waste. Some nuclides originate in more than one way, as activation products or fission products."@en;
-  rdfs:seeAlso <https://en.wikipedia.org/wiki/Activation_product>;
-  <http://www.w3.org/2004/02/skos/core#prefLabel> "NPP Activation Product"@en .
-
-_:genid5 a owl:Axiom;
-  owl:annotatedSource :NPPActivationProduct;
-  owl:annotatedProperty rdfs:comment;
-  owl:annotatedTarget "Fission products and actinides produced by neutron absorption of nuclear fuel itself are normally referred to by those specific names, and activation product reserved for products of neutron capture by other materials, such as structural components of the nuclear reactor or nuclear bomb, the reactor coolant, control rods or other neutron poisons, or materials in the environment. All of these, however, need to be handled as radioactive waste. Some nuclides originate in more than one way, as activation products or fission products."@en;
-  rdfs:comment "If thi is a material this is not good" .
+  rdfs:subClassOf :FissionProduct .
 
 :Natural_Uranium a owl:Class;
   rdfs:subClassOf :UraniumMaterial;
@@ -623,7 +611,7 @@ and Radiation Protection, 2018 Edition """;
   <http://www.w3.org/2004/02/skos/core#definition> "It is an object involved in the nuclear energy production, management and control.";
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Energy Object"@en .
 
-_:genid6 a owl:Axiom;
+_:genid5 a owl:Axiom;
   owl:annotatedSource :NuclearEnergyObject;
   owl:annotatedProperty rdfs:comment;
   owl:annotatedTarget "Nuclear energy is a form of heat energy that can be released via reactions involving nuclear fusion or fission taking place between neutrons and protons in the nucleus of an atom. Electricity can be produced when a large amount of heat energy released is applied to generate steam from turbines (Fig. 1.4). Uranium-235, an isotope of uranium, is the most commonly used element in industrial nuclear power generators.";
@@ -638,7 +626,7 @@ into the reactor core of a civil nuclear power plant or research reactor."""@en,
   :R8xx0dhbEh1tjGMDwNZfckV "Nuclear material characterized by its functional role as a neutron source within a nuclear reactor core, enabling a sustained or controlled chain reaction. Unlike generic nuclear material, which is defined by its isotopic or chemical composition, Nuclear Fuel is an entity defined by its intended use as a component within a functional whole (the Reactor Core)";
   :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/668.html"^^xsd:anyURI .
 
-_:genid7 a owl:Axiom;
+_:genid6 a owl:Axiom;
   owl:annotatedSource :NuclearFuel;
   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment>;
   owl:annotatedTarget """Fissionable nuclear material in the form of fabricated elements for loading
@@ -748,7 +736,7 @@ in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""";
   <http://www.w3.org/2004/02/skos/core#definition> "Seawater is water from a sea or ocean.";
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Sea Water"@en .
 
-_:genid8 a owl:Axiom;
+_:genid7 a owl:Axiom;
   owl:annotatedSource :SeaWater;
   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition>;
   owl:annotatedTarget "Seawater is water from a sea or ocean.";
@@ -785,32 +773,32 @@ _:genid8 a owl:Axiom;
 
 <../hume#Role> a owl:Class .
 
-_:genid9 a owl:AllDisjointClasses;
-  owl:members _:genid12 .
-
-_:genid12 a rdf:List;
-  rdf:first :Depleted_Uranium;
-  rdf:rest _:genid11 .
+_:genid8 a owl:AllDisjointClasses;
+  owl:members _:genid11 .
 
 _:genid11 a rdf:List;
-  rdf:first :Enriched_Uranium;
+  rdf:first :Depleted_Uranium;
   rdf:rest _:genid10 .
 
 _:genid10 a rdf:List;
+  rdf:first :Enriched_Uranium;
+  rdf:rest _:genid9 .
+
+_:genid9 a rdf:List;
   rdf:first :Natural_Uranium;
   rdf:rest rdf:nil .
 
-_:genid13 a owl:AllDisjointClasses;
-  owl:members _:genid16 .
-
-_:genid16 a rdf:List;
-  rdf:first :NuclearMaterialCategoryI;
-  rdf:rest _:genid15 .
+_:genid12 a owl:AllDisjointClasses;
+  owl:members _:genid15 .
 
 _:genid15 a rdf:List;
-  rdf:first :NuclearMaterialCategoryII;
+  rdf:first :NuclearMaterialCategoryI;
   rdf:rest _:genid14 .
 
 _:genid14 a rdf:List;
+  rdf:first :NuclearMaterialCategoryII;
+  rdf:rest _:genid13 .
+
+_:genid13 a rdf:List;
   rdf:first :NuclearMaterialCategoryIII;
   rdf:rest rdf:nil .
