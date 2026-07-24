@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/losalamos/ontologies/2026/6/untitled-ontology-210" uri="modules/nuclearfuel.ttl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/emmo/domain/neo/0.0.1/neo4gen" uri="modules/neo4gen.ttl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/emmo/elite/elite/0.0.7" uri="https://w3id.org/emmo/0.0.7/elite"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/emmo/domain/neo/fukushima" uri="modules/fukushima.ttl"/>

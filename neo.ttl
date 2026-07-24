@@ -252,6 +252,16 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 :is_made_up_of rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/emmo/domain/neo/neo#hasInnerRadius
+:hasInnerRadius rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://w3id.org/emmo/domain/neo/neo#hasOuterRadius
+:hasOuterRadius rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -1127,8 +1137,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 
 ###  https://w3id.org/emmo/domain/neo#FastNeutron
 :FastNeutron rdf:type owl:Class ;
-             rdfs:subClassOf :Neutron ,
-                             [ rdf:type owl:Restriction ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty elite:isOutputOf ;
                                owl:someValuesFrom :NuclearFission
                              ] ;
@@ -1153,6 +1162,7 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 
 ###  https://w3id.org/emmo/domain/neo#Fertile_Nuclide
 :Fertile_Nuclide rdf:type owl:Class ;
+                 rdfs:subClassOf :Nuclide ;
                  <http://www.w3.org/2004/02/skos/core#comment> "A nuclide, which is not itself fissile (fissionable by thermal neutrons), that can be converted into a fissile nuclide by irradiation in a reactor. There are two basic fertile materials: uranium-238 and thorium-232. When these fertile materials capture neutrons, they are converted into fissile plutonium-239 and uranium-233, respectively." ;
                  :referenceNRC "Fertile Material"^^xsd:anyURI .
 
@@ -1229,6 +1239,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#Fissile_Nuclide
 :Fissile_Nuclide rdf:type owl:Class ;
+                 rdfs:subClassOf :Nuclide ;
                  <http://www.w3.org/2004/02/skos/core#comment> "A nuclide that is capable of undergoing fission after capturing low-energy thermal (slow) neutrons." ;
                  <http://www.w3.org/2004/02/skos/core#definition> """A nucleus capable of fission by thermal neutrons,
 provided the effective neutron production cross section, exceeds
@@ -1260,6 +1271,7 @@ are 235U,239P~, and233U.1""" ;
 
 ###  https://w3id.org/emmo/domain/neo#Fissionable_Nuclide
 :Fissionable_Nuclide rdf:type owl:Class ;
+                     rdfs:subClassOf :Nuclide ;
                      <http://www.w3.org/2004/02/skos/core#comment> "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it ;
                      :NCTG_Reference "Fissionable Nucleus" ;
                      :R8xx0dhbEh1tjGMDwNZfckV """A nucleus capable of fission by neutrons of some
@@ -2515,6 +2527,7 @@ all offsite power."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#Nuclide
 :Nuclide rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
          <http://www.w3.org/2004/02/skos/core#comment> "A general term referring to all known isotopes, both stable (279) and unstable (about 2,700), of the chemical elements." ;
          <http://www.w3.org/2004/02/skos/core#definition> """A species of atom characterized by its mass number, atomic
 number, and a possible elevated nuclear energy state if prolonged.'""" ;
@@ -2957,7 +2970,8 @@ in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ;
 
 ###  https://w3id.org/emmo/domain/neo#Radionuclide
 :Radionuclide rdf:type owl:Class ;
-              rdfs:subClassOf [ rdf:type owl:Restriction ;
+              rdfs:subClassOf :Nuclide ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty elite:isParticipantOf ;
                                 owl:someValuesFrom :RadioactiveDischarging
                               ] ;
