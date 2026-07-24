@@ -244,22 +244,22 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Can Access In"@en .
 
 
+###  https://w3id.org/emmo/domain/neo#hasInnerRadius
+:hasInnerRadius rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://w3id.org/emmo/domain/neo#hasOuterRadius
+:hasOuterRadius rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
 ###  https://w3id.org/emmo/domain/neo#has_Constituent
 :has_Constituent rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/emmo/domain/neo#is_made_up_of
 :is_made_up_of rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#hasInnerRadius
-:hasInnerRadius rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  https://w3id.org/emmo/domain/neo/neo#hasOuterRadius
-:hasOuterRadius rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf owl:topObjectProperty .
 
 
 #################################################################
@@ -3944,6 +3944,31 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
          <http://www.w3.org/2004/02/skos/core#altLabel> "Reactor Wet Well"@en ;
          <http://www.w3.org/2004/02/skos/core#comment> "compartment of the primary containment system that contains the suppression pool and receives steam discharged from the drywell for pressure suppression and condensation." ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Wet Well"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Cladding rdfs:comment "The thin-walled metal tube that forms the outer jacket of a nuclear fuel rod. It prevents corrosion of the fuel by the coolant and the release of fission products into the coolant. Aluminum, stainless steel, and zirconium alloys are common cladding materials." ;
+          :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/glossary/cladding> .
+
+
+:Fresh_Pellet <http://www.w3.org/2004/02/skos/core#definition> "A fuel pellet that has not yet been subjected to an irradiation process within a nuclear reactor." .
+
+
+:Fuel_Pellet_Column :R8xx0dhbEh1tjGMDwNZfckV "multiple pellets stacked on top of each other in axial direction within a fuel rod. also called FUEL COLUMN" .
+
+
+:Irradiated_Pellet :R8xx0dhbEh1tjGMDwNZfckV "A fuel pellet that has served as input for at least one irradiation process in a nuclear reactor" .
+
+
+:Irradiation <http://www.w3.org/2004/02/skos/core#comment> """Exposure to ionizing radiation.' See exposure
+(alternative definition).""" ;
+             :NCTG_Reference "Irradiation" .
+
+
+:Neutron_Irradiation <http://www.w3.org/2004/02/skos/core#definition> "An interaction process where incident neutrons induce atomic displacements, nuclear transmutations, and fission reactions in the target material. Unlike simple 'exposure', this process fundamentally alters the isotopic composition, microstructure, and thermophysical properties of nuclear fuel pellets." .
 
 
 #################################################################
