@@ -1215,6 +1215,7 @@ injection of water into the reactor."""@en ;
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ,
                                    "fire protection material together with any supporting system including mesh reinforcement as tested" ;
                       <http://www.w3.org/2004/02/skos/core#altLabel> "NPP Fire Protection System"@en ;
+                      <http://www.w3.org/2004/02/skos/core#comment> "SF" ;
                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Fire Protection System"@en .
 
 [ rdf:type owl:Axiom ;
@@ -1515,7 +1516,6 @@ Reference ISO 80000""" .
                                   :NuclearEnergyObject ,
                                   :Nuclear_Plant_Concepts ;
                   <http://www.w3.org/2004/02/skos/core#altLabel> "Supplied Material" ;
-                  <http://www.w3.org/2004/02/skos/core#comment> "ISO NO Nuclear" ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Material used for material supplying" ;
                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Injected Material"@en ;
                   :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:14452:ed-1:v1:en:term:2.40"^^xsd:anyURI .
@@ -2299,18 +2299,9 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
                      rdfs:subClassOf :Nuclear_Plant_Concepts ;
-                     rdfs:comment "Nuclear energy is a form of heat energy that can be released via reactions involving nuclear fusion or fission taking place between neutrons and protons in the nucleus of an atom. Electricity can be produced when a large amount of heat energy released is applied to generate steam from turbines (Fig. 1.4). Uranium-235, an isotope of uranium, is the most commonly used element in industrial nuclear power generators." ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Domain Object" ;
-                     <http://www.w3.org/2004/02/skos/core#comment> "nuclear related energy object and people" ;
-                     <http://www.w3.org/2004/02/skos/core#definition> "It is an object involved in the nuclear energy production, management and control." ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Energy Object"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NuclearEnergyObject ;
-   owl:annotatedProperty rdfs:comment ;
-   owl:annotatedTarget "Nuclear energy is a form of heat energy that can be released via reactions involving nuclear fusion or fission taking place between neutrons and protons in the nucleus of an atom. Electricity can be produced when a large amount of heat energy released is applied to generate steam from turbines (Fig. 1.4). Uranium-235, an isotope of uranium, is the most commonly used element in industrial nuclear power generators." ;
-   rdfs:seeAlso "https://www.sciencedirect.com/topics/engineering/nuclear-energy"
- ] .
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "NEO object"@en ;
+                     :R8xx0dhbEh1tjGMDwNZfckV "An endurant entity that belongs to the Nuclear Energy Ontology (NEO), encompassing any physical, material, or conceptual object, component, or system related to nuclear science and technology, without being restricted to energy generation" .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearFission
