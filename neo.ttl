@@ -9,7 +9,9 @@
 
 <https://w3id.org/emmo/domain/neo/neo> rdf:type owl:Ontology ;
                                         owl:versionIRI <https://w3id.org/emmo/domain/neo/0.0.1/neo> ;
-                                        owl:imports <https://w3id.org/emmo/0.0.7/elite> ;
+                                        owl:imports <https://w3id.org/emmo/domain/neo/0.0.1/neo-core> ,
+                                                    <https://w3id.org/emmo/domain/neo/0.0.1/neo4gen> ,
+                                                    <https://w3id.org/emmo/elite/elite/0.0.7> ;
                                         <http://purl.org/dc/terms/contributor> "Anna Anchini"@it ,
                                                                                "Cristiana Tropeano"@it ,
                                                                                "Dario Rimondini"@it ,
@@ -94,30 +96,21 @@ rdfs:comment rdf:type owl:AnnotationProperty .
                                                 rdfs:subPropertyOf rdfs:label .
 
 
-###  https://w3id.org/emmo/0.0.7/elite#isOutputOf
-elite:isOutputOf rdf:type owl:AnnotationProperty ;
-                 rdfs:subPropertyOf elite:partakesIn .
-
-
 ###  https://w3id.org/emmo/domain/neo#IAEA_Reference
 :IAEA_Reference rdf:type owl:AnnotationProperty ;
-                rdfs:comment ""@en ;
-                rdfs:subPropertyOf rdfs:seeAlso .
+                rdfs:comment ""@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#NCTG_Reference
 :NCTG_Reference rdf:type owl:AnnotationProperty ;
                 rdfs:comment """Glossary of Nuclear Criticality Terms. Los Alamos National
 Laboratory, 1989""" ;
-                rdfs:seeAlso "https://ncsp.llnl.gov/sites/ncsp/files/2021-05/la11627.pdf" ;
-                rdfs:subPropertyOf rdfs:seeAlso .
+                rdfs:seeAlso "https://ncsp.llnl.gov/sites/ncsp/files/2021-05/la11627.pdf" .
 
 
 ###  https://w3id.org/emmo/domain/neo#NRC_Reference
 :NRC_Reference rdf:type owl:AnnotationProperty ;
-               rdfs:comment "This is the link to any Nuclear Regulatory Commission document/report."@en ;
-               rdfs:subPropertyOf rdfs:seeAlso ;
-               rdfs:range xsd:string .
+               rdfs:comment "This is the link to any Nuclear Regulatory Commission document/report."@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#R8xx0dhbEh1tjGMDwNZfckV
@@ -144,53 +137,41 @@ Laboratory, 1989""" ;
 ###  https://w3id.org/emmo/domain/neo#eCFR_Reference
 :eCFR_Reference rdf:type owl:AnnotationProperty ;
                 rdfs:comment "Official U.S. federal regulations database, maintained by the National Archives." ;
-                :eCFR_Reference ""^^xsd:anyURI ;
-                rdfs:subPropertyOf rdfs:seeAlso ;
-                rdfs:range xsd:anyURI .
+                :eCFR_Reference ""^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#referenceARIS
 :referenceARIS rdf:type owl:AnnotationProperty ;
                rdfs:comment "Reference to the IAEA Advanced Reactor Information System Glossary."@en ;
                rdfs:seeAlso <https://aris.iaea.org/Glossary/> ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "ARIS Reference"@en ;
-               rdfs:subPropertyOf rdfs:seeAlso ;
-               rdfs:range xsd:string .
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "ARIS Reference"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#referenceINIS
 :referenceINIS rdf:type owl:AnnotationProperty ;
                rdfs:comment "Reference to the IAEA INIS Thesaurus term."@en ;
                rdfs:seeAlso <https://www.iaea.org/resources/databases/inis/thesaurus> ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "INIS Reference"@en ;
-               rdfs:subPropertyOf rdfs:seeAlso ;
-               rdfs:range xsd:string .
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "INIS Reference"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#referenceISO
 :referenceISO rdf:type owl:AnnotationProperty ;
               rdfs:seeAlso <https://www.iso.org/obp/ui/#home> ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "ISO Reference"@en ;
-              rdfs:subPropertyOf rdfs:seeAlso ;
-              rdfs:range xsd:anyURI .
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "ISO Reference"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#referenceNRC
 :referenceNRC rdf:type owl:AnnotationProperty ;
               rdfs:comment "This is the direct reference to the Nuclear Regulatory Commission Glossary" ;
               rdfs:seeAlso <https://www.nrc.gov/reading-rm/basic-ref/glossary> ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "NRCG Reference"@en ;
-              rdfs:subPropertyOf rdfs:seeAlso ;
-              rdfs:range xsd:anyURI .
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "NRCG Reference"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#referenceNSSG
 :referenceNSSG rdf:type owl:AnnotationProperty ;
                rdfs:comment "Reference to IAEA Nuclear Safety and Security Glossary term IRI."@en ;
                rdfs:seeAlso <https://vocabulary.iaea.org/iaea-safety-glossary.html> ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "NSSG Reference"@en ;
-               rdfs:subPropertyOf rdfs:seeAlso ;
-               rdfs:range xsd:anyURI .
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "NSSG Reference"@en .
 
 
 #################################################################
@@ -225,6 +206,10 @@ elite:isConstitutiveProcessOf rdf:type owl:ObjectProperty .
 elite:isInputOf rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/emmo/0.0.7/elite#isOutputOf
+elite:isOutputOf rdfs:subPropertyOf elite:partakesIn .
+
+
 ###  https://w3id.org/emmo/0.0.7/elite#isParticipantOf
 elite:isParticipantOf rdf:type owl:ObjectProperty .
 
@@ -237,13 +222,16 @@ elite:isStageOf rdf:type owl:ObjectProperty .
 elite:isSubProcessOf rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/emmo/0.0.7/elite#partakesIn
+elite:partakesIn rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/emmo/0.0.7/elite#participatesTo
 elite:participatesTo rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c
 :RB4rNlczhggIx7lqdEK2d9c rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf elite:isConstituentOf ;
                          rdfs:comment "Defines the position of an object in a Nuclear Power Plant."@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The spatial relation  between an entity and another the entity that contains it."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "isContainedBy"@en .
@@ -254,6 +242,16 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                          rdfs:subPropertyOf owl:topObjectProperty ;
                          <http://www.w3.org/2004/02/skos/core#definition> "It relates the Nuclear Power Plant Workers to the place where they can enter, following safety requirements"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Can Access In"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#hasInnerRadius
+:hasInnerRadius rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://w3id.org/emmo/domain/neo#hasOuterRadius
+:hasOuterRadius rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  https://w3id.org/emmo/domain/neo#has_Constituent
@@ -299,7 +297,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:23552:-1:ed-1:v1:en"""^^xsd:anyURI ;
 
 ###  https://w3id.org/emmo/domain/neo#ActivatedMaterial
 :ActivatedMaterial rdf:type owl:Class ;
-                   rdfs:subClassOf :NuclearMaterial ;
                    rdfs:comment "the definition is not correct: Mix between nuclide and material" ;
                    rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Activation_product> ;
                    <http://www.w3.org/2004/02/skos/core#definition> "An activation product is a material that has been made radioactive by the process of neutron activation."@en ;
@@ -1140,8 +1137,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 
 ###  https://w3id.org/emmo/domain/neo#FastNeutron
 :FastNeutron rdf:type owl:Class ;
-             rdfs:subClassOf :Neutron ,
-                             [ rdf:type owl:Restriction ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty elite:isOutputOf ;
                                owl:someValuesFrom :NuclearFission
                              ] ;
@@ -1385,9 +1381,62 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""^^xsd:anyURI
 
 ###  https://w3id.org/emmo/domain/neo#Geometrical_Property
 :Geometrical_Property rdf:type owl:Class ;
-                      rdfs:subClassOf <https://w3id.org/emmo/hume#Property> .
+                      rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                      :R8xx0dhbEh1tjGMDwNZfckV "A physical property that characterizes the spatial extent, shape, or dimensions of an entity (such as a fuel pellet) within a three-dimensional Euclidean space." .
 
 
+###  https://w3id.org/emmo/domain/neo#Height
+:Height rdf:type owl:Class ;
+        rdfs:subClassOf :Geometrical_Property ;
+        rdfs:seeAlso "add link Batt info" ;
+        :R8xx0dhbEh1tjGMDwNZfckV """Height
+https://w3id.org/emmo#EMMO_08bcf1d6_e719_46c8_bb21_24bc9bf34dba
+ElucidationMinimum length of a straight line segment between a point and a reference line or reference surface.IEC Referencehttps://www.electropedia.org/iev/iev.nsf/display?openform&ievref=113-01-21Wikipedia Referencehttps://en.wikipedia.org/wiki/HeightWikidata Referencehttps://www.wikidata.org/wiki/Q208826
+
+Reference ISO 80000""" .
+###  https://w3id.org/emmo/domain/neo#Cilinder_Height
+:Cilinder_Height rdf:type owl:Class ;
+                 rdfs:subClassOf :Height ;
+                 :RR3uD2d7YfhHohfv2Nm6sX "The height is the minimum length of a straight line segment between the two parallel planes containing the bases of the cylinder. In relation to the longitudinal axis (the derived feature passing through the centers of the bases), the height is defined as the orthogonal projection of the axis length onto the normal to the base planes" .
+
+
+
+###  https://w3id.org/emmo/domain/neo#Nuclear_Reactor
+:Nuclear_Reactor rdf:type owl:Class ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Reactor"@en ;
+                 :R8xx0dhbEh1tjGMDwNZfckV "special device having an inventory of nuclear fuel material containing fissionable nuclides (3.1.2) and often neutron moderating, neutron absorbing and cooling materials, all of them geometrically arranged in a particular neutron multiplicative configuration (3.1.10) designed and built for having the capability of initiating, maintaining and extinguishing a controlled, self-sustaining nuclear fission (3.1.1) chain reaction, under adequate safety conditions" ;
+                 :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.22> .
+
+
+###  https://w3id.org/emmo/domain/neo#Outer_Radius
+:Outer_Radius rdf:type owl:Class ;
+              rdfs:subClassOf :Radius ;
+              :R8xx0dhbEh1tjGMDwNZfckV "the geometric distance between the longitudinal axis of symmetry of the entity and its external cylindrical surface." .
+
+
+###  https://w3id.org/emmo/domain/neo#Radius
+:Radius rdf:type owl:Class ;
+        rdfs:subClassOf :Geometrical_Property .
+
+
+###  https://w3id.org/emmo/domain/neo#Shape
+:Shape rdf:type owl:Class ;
+       rdfs:subClassOf :Geometrical_Property ;
+       :R8xx0dhbEh1tjGMDwNZfckV "A qualitative geometrical property that describes the spatial configuration or morphological arrangement of an entity, distinguishing it from dimensional metrics (such as length or radius)" .
+
+###  https://w3id.org/emmo/domain/neo#Inner_Radius
+:Inner_Radius rdf:type owl:Class ;
+              rdfs:subClassOf :Radius ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "Fuel Inner Radius" ;
+              :R8xx0dhbEh1tjGMDwNZfckV "the geometric distance between the longitudinal axis of symmetry of the entity and the internal cylindrical surface that bounds the central axial cavity" .
+
+
+###  https://w3id.org/emmo/domain/neo#Isotopic_Vector
+:Isotopic_Vector rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "Isotopic Composition" ;
+                 :R8xx0dhbEh1tjGMDwNZfckV "list of weight-percentage of isotopes in heavy metal of the fuel matrix" ;
+                 :RR3uD2d7YfhHohfv2Nm6sX "An isotopic vector describes the composition of a material in terms of the relative quantities of its constituent nuclides." .
 ###  https://w3id.org/emmo/domain/neo#HPCIOperation
 :HPCIOperation rdf:type owl:Class ;
                rdfs:subClassOf :AOOControl ;
@@ -1597,8 +1646,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#Light_Water_Reactor
 :Light_Water_Reactor rdf:type owl:Class ;
-                     rdfs:subClassOf :Nuclear_Reactor ,
-                                     [ rdf:type owl:Restriction ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty elite:isConstituentOf ;
                                        owl:someValuesFrom :NuclearPowerPlant
                                      ] ;
@@ -2273,8 +2321,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
-                     rdfs:subClassOf :Nuclear_Plant_Concepts ,
-                                     <https://w3id.org/emmo/hume#Object> ;
+                     rdfs:subClassOf :Nuclear_Plant_Concepts ;
                      rdfs:comment "Nuclear energy is a form of heat energy that can be released via reactions involving nuclear fusion or fission taking place between neutrons and protons in the nucleus of an atom. Electricity can be produced when a large amount of heat energy released is applied to generate steam from turbines (Fig. 1.4). Uranium-235, an isotope of uranium, is the most commonly used element in industrial nuclear power generators." ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Domain Object" ;
                      <http://www.w3.org/2004/02/skos/core#comment> "nuclear related energy object and people" ;
@@ -2363,21 +2410,18 @@ further decays, the event is referred to as inelastic scattering."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearMaterialCategoryI
 :NuclearMaterialCategoryI rdf:type owl:Class ;
-                          rdfs:subClassOf :NuclearMaterial ;
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material Category I" ;
                           :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1356.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearMaterialCategoryII
 :NuclearMaterialCategoryII rdf:type owl:Class ;
-                           rdfs:subClassOf :NuclearMaterial ;
                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Nucler Material Category II" ;
                            :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1357.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearMaterialCategoryIII
 :NuclearMaterialCategoryIII rdf:type owl:Class ;
-                            rdfs:subClassOf :NuclearMaterial ;
                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material category III" ;
                             :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1358.html> .
 
@@ -2474,8 +2518,7 @@ all offsite power."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearPowerReactor
 :NuclearPowerReactor rdf:type owl:Class ;
-                     rdfs:subClassOf :Nuclear_Reactor ,
-                                     [ rdf:type owl:Restriction ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty elite:isConstituentOf ;
                                        owl:someValuesFrom :NuclearPowerPlant
                                      ] ;
@@ -2518,8 +2561,7 @@ all offsite power."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#Nuclear_Reactor
 :Nuclear_Reactor rdf:type owl:Class ;
-                 rdfs:subClassOf :NuclearEnergyObject ,
-                                 :Nuclear_Plant_Concepts ;
+                 rdfs:subClassOf :Nuclear_Plant_Concepts ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Reactor"@en ;
                  :R8xx0dhbEh1tjGMDwNZfckV "special device having an inventory of nuclear fuel material containing fissionable nuclides (3.1.2) and often neutron moderating, neutron absorbing and cooling materials, all of them geometrically arranged in a particular neutron multiplicative configuration (3.1.10) designed and built for having the capability of initiating, maintaining and extinguishing a controlled, self-sustaining nuclear fission (3.1.1) chain reaction, under adequate safety conditions" ;
                  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.22> .
@@ -2765,6 +2807,14 @@ ISO 21843:2023(en)"""^^xsd:anyURI
                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Primary Containment Ventilation"@en ;
                                :NRC_Reference <https://www.nrc.gov/docs/ML1215/ML12159A162.pdf> .
 
+###  https://w3id.org/emmo/domain/neo#Nuclear﻿_Fresh_Fuel
+:Nuclear﻿_Fresh_Fuel rdf:type owl:Class ;
+                     rdfs:subClassOf :NuclearFuel ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "New fuel or unirradiated fuel, including fuel fabricated from fissionable material recovered by reprocessing previously irradiated fuel." ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear﻿ Fresh Fuel"@en ;
+                     :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/669.html"^^xsd:anyURI .
+
+
 
 ###  https://w3id.org/emmo/domain/neo#PrimaryContainmentVessel
 :PrimaryContainmentVessel rdf:type owl:Class ;
@@ -2784,6 +2834,42 @@ ISO 21843:2023(en)"""^^xsd:anyURI
    rdfs:isDefinedBy <https://www.tepco.co.jp/en/decommision/planaction/images/140127_01.pdf>
  ] .
 
+###  https://w3id.org/emmo/domain/neo#NuclearFuel
+:NuclearFuel rdf:type owl:Class ;
+             rdfs:comment "Since there are not only fissionable nuclides but also fissile nuclide the definition of the IAEA does not seem correct" ;
+             <http://www.w3.org/2004/02/skos/core#comment> """Fissionable nuclear material in the form of fabricated elements for loading
+into the reactor core of a civil nuclear power plant or research reactor."""@en ,
+                                                           "Here we have to put something that is related to the scope of the nuclear material otherwise there is no difference between nuclear material and fuel" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Fuel"@en ;
+             :R8xx0dhbEh1tjGMDwNZfckV "Nuclear material characterized by its functional role as a neutron source within a nuclear reactor core, enabling a sustained or controlled chain reaction. Unlike generic nuclear material, which is defined by its isotopic or chemical composition, Nuclear Fuel is an entity defined by its intended use as a component within a functional whole (the Reactor Core)" ;
+             :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/668.html"^^xsd:anyURI .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :NuclearFuel ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
+   owl:annotatedTarget """Fissionable nuclear material in the form of fabricated elements for loading
+into the reactor core of a civil nuclear power plant or research reactor."""@en ;
+   rdfs:comment "This is uncomplete/ not true"
+ ] .
+ 
+###  https://w3id.org/emmo/domain/neo#ReactorCoolant
+:ReactorCoolant rdf:type owl:Class ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Coolant"@en ;
+                :R8xx0dhbEh1tjGMDwNZfckV "A substance that is used to remove or transfer heat from the reactor core. Common coolants include light water, heavy water, air, carbon dioxide, helium, liquid sodium, and a sodium-potassium alloy."@en ;
+                :referenceARIS <https://aris.iaea.org/Glossary/> .
+
+
+###  https://w3id.org/emmo/domain/neo#Reactor_Core_Role
+:Reactor_Core_Role rdf:type owl:Class ;
+                   rdfs:label "Reactor Core Role"@en ;
+                   :R8xx0dhbEh1tjGMDwNZfckV "A ReactorComponentRole is a role entity defined by its functional relationship with the ReactorCore (the 'Whole'). It does not exist as an isolated entity, but emerges the moment a physical object is integrated into the system, becoming an essential part of the reactor configuration. The existence of the ReactorCore system is ontologically dependent upon the presence of these role entities which, together, enable the controlled fission process." .
+
+
+###  https://w3id.org/emmo/domain/neo#Reactor_Moderator
+:Reactor_Moderator rdf:type owl:Class ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Moderator"@en ;
+                   :R8xx0dhbEh1tjGMDwNZfckV "A material that is used to decrease the speed of the fast neutron produced during a fission even and thus sustaining a chain reaction."@en ;
+                   :referenceARIS "Moderator"@en .
 
 ###  https://w3id.org/emmo/domain/neo#ProtectiveGear
 :ProtectiveGear rdf:type owl:Class ;
@@ -2920,7 +3006,6 @@ https://www.iso.org/obp/ui/#iso:std:iso:20043:-1:ed-1:v1:en"""^^xsd:anyURI
 
 ###  https://w3id.org/emmo/domain/neo#RadioactiveMaterial
 :RadioactiveMaterial rdf:type owl:Class ;
-                     rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
                      rdfs:comment "Material designated in national law or by a regulatory body as being  subject to regulatory control because of its radioactivity."@en ,
                                   """This is the ‘regulatory’ meaning of radioactive (2), and should not be confused with
 the ‘scientific’ meaning of radioactive (1): ‘exhibiting radioactivity; emitting or
@@ -3201,6 +3286,14 @@ Note 3 to entry: The reactor protection system (RPS) imposes actions on several 
                             :referenceISO <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en> .
 
 
+###  https://w3id.org/emmo/domain/neo#Reactor_Core
+:Reactor_Core rdfs:subClassOf <https://w3id.org/emmo/hume#Whole> .
+
+
+###  https://w3id.org/emmo/domain/neo#Reactor_Core_Role
+:Reactor_Core_Role rdfs:subClassOf <https://w3id.org/emmo/hume#Role> .
+
+
 ###  https://w3id.org/emmo/domain/neo#RecirculationPumps
 :RecirculationPumps rdf:type owl:Class ;
                     rdfs:subClassOf :ReactorBuildingContents ,
@@ -3291,7 +3384,6 @@ in operation or in accidents."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#ResearchReactor
 :ResearchReactor rdf:type owl:Class ;
-                 rdfs:subClassOf :Nuclear_Reactor ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Research Reactor"@en ;
                  :R8xx0dhbEh1tjGMDwNZfckV """type of nuclear reactor (3.1.22) engineered to use its neutron flux and ionizing radiation for scientific research in different fields
 Note 1 to entry: The application fields can be medical, biological, electronic, engineering, industrial as well as related to specific reactor concepts or nuclear fuel cycle strategies services, technological developments and/or industrial production purposes. It includes the reactor core (3.1.23.1), the facilities/devices exposed to the neutron field within and around the core, and structures (3.7.1), systems and components (3.7.3) related to the safe operation (3.9.1) of the reactor.
@@ -3533,7 +3625,6 @@ perform its intended safety functions."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#SourceMaterial
 :SourceMaterial rdf:type owl:Class ;
-                rdfs:subClassOf :NuclearMaterial ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Source Material" ;
                 :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/402.html> .
 
@@ -3929,7 +4020,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
 
 ###  https://w3id.org/emmo/domain/neo#UraniumMaterial
 :UraniumMaterial rdf:type owl:Class ;
-                 rdfs:subClassOf :NuclearMaterial ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Uranium Material" ;
                  :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/284.html> .
 
@@ -3962,6 +4052,39 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
 
 
 #################################################################
+#    Annotations
+#################################################################
+
+:Cladding rdfs:comment "The thin-walled metal tube that forms the outer jacket of a nuclear fuel rod. It prevents corrosion of the fuel by the coolant and the release of fission products into the coolant. Aluminum, stainless steel, and zirconium alloys are common cladding materials." ;
+          :referenceNRC <https://www.nrc.gov/reading-rm/basic-ref/glossary/cladding> .
+
+
+:Fresh_Pellet <http://www.w3.org/2004/02/skos/core#definition> "A fuel pellet that has not yet been subjected to an irradiation process within a nuclear reactor." .
+
+
+:Fuel_Pellet_Column :R8xx0dhbEh1tjGMDwNZfckV "multiple pellets stacked on top of each other in axial direction within a fuel rod. also called FUEL COLUMN" .
+
+
+:IrradiatedFuel <http://www.w3.org/2004/02/skos/core#prefLabel> "Irradiated Fuel" .
+
+
+:Irradiated_Pellet :R8xx0dhbEh1tjGMDwNZfckV "A fuel pellet that has served as input for at least one irradiation process in a nuclear reactor" .
+
+
+:Irradiation <http://www.w3.org/2004/02/skos/core#comment> """Exposure to ionizing radiation.' See exposure
+(alternative definition).""" ;
+             :NCTG_Reference "Irradiation" .
+
+
+:Neutron_Irradiation <http://www.w3.org/2004/02/skos/core#definition> "An interaction process where incident neutrons induce atomic displacements, nuclear transmutations, and fission reactions in the target material. Unlike simple 'exposure', this process fundamentally alters the isotopic composition, microstructure, and thermophysical properties of nuclear fuel pellets." .
+
+
+:NuclearSpentFuel <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Spent Fuel" ;
+                  :R8xx0dhbEh1tjGMDwNZfckV "Nuclear fuel removed from a reactor following irradiation that is no longer usable in its present form because of depletion of fissile material, poison buildup or radiation damage." ;
+                  :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1230.html> .
+
+
+#################################################################
 #    General axioms
 #################################################################
 
@@ -3969,14 +4092,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
   owl:members ( :Depleted_Uranium
                 :Enriched_Uranium
                 :Natural_Uranium
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :NuclearMaterialCategoryI
-                :NuclearMaterialCategoryII
-                :NuclearMaterialCategoryIII
               )
 ] .
 
