@@ -290,9 +290,6 @@ escalating to accident conditions. This can be provided both by electronic means
 if there is enough time and information for such actions to be credited. The algorithms used are different
 from control."""@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "AOO Control"@en ;
-            :referenceISO """ISO 23552-1:2007(en)
-Safety and control devices for gas and/or oil burners and gas and/or oil appliances — Particular requirements — Part 1: Fuel/air ratio controls, electronic type
-https://www.iso.org/obp/ui/en/#iso:std:iso:23552:-1:ed-1:v1:en"""^^xsd:anyURI ;
             :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/146.html"^^xsd:anyURI .
 
 
@@ -367,9 +364,9 @@ https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""^^xsd:anyURI
                                      :NoNuclearISO ,
                                      :Nuclear_Plant_Concepts ;
                      rdfs:comment "Automatic function which ensures that a protective measure (3.36) is initiated if the ability of the SRP/CS to perform a function is diminished, or if the process conditions are changed such that hazards are generated"@en ;
-                     rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:25119:-1:ed-2:v1:en:term:3.33> ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "Automatic Manipulation"@en ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Automatic Monitoring"@en .
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Automatic Monitoring"@en ;
+                     :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:25119:-1:ed-2:v1:en:term:3.33> .
 
 
 ###  https://w3id.org/emmo/domain/neo#AutomaticReactorDepressurization
@@ -530,6 +527,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
                                owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                owl:someValuesFrom :TurbineBuilding
                              ] ;
+             rdfs:comment "SF" ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Bypass Valve﻿"@en ;
              <http://www.w3.org/2004/02/skos/core#definition> "Device to direct a portion of the flow around a separation device due to pressure difference, usually venting downstream of the bypassed separation device."@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Bypass Valve"@en .
@@ -538,7 +536,7 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
    owl:annotatedSource :BypassValve ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Device to direct a portion of the flow around a separation device due to pressure difference, usually venting downstream of the bypassed separation device."@en ;
-   :referenceISO "ISO 17536-1:2015(en) Road vehicles — Aerosol separator performance test for internal combustion engines — Part 1: General"^^xsd:anyURI
+   rdfs:seeAlso "ISO 17536-1:2015(en) Road vehicles — Aerosol separator performance test for internal combustion engines — Part 1: General"
  ] .
 
 
@@ -1795,7 +1793,7 @@ The MSIVs are engineered safety features designed to limit the consequences of a
                                    :NoNuclearISO ,
                                    :Nuclear_Plant_Concepts ;
                    <http://www.w3.org/2004/02/skos/core#altLabel> "Manual Control"@en ,
-                                                                  "ManualManipulation"@en ;
+                                                                  "Manual Manipulation"@en ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Control in which the system or main device, whether direct or power-aided in operation, is directly controlled by an operator"@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Manual Controlling"@en .
 
@@ -3327,7 +3325,7 @@ in operation or in accidents."""@en ;
                                    :NoNuclearISO ,
                                    :Nuclear_Plant_Concepts ;
                    <http://www.w3.org/2004/02/skos/core#altLabel> "Remote Control"@en ,
-                                                                  "RemoteManipulation"@en ;
+                                                                  "Remote Manipulation"@en ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Initiation of control operations for a process or machine at a point remote from the motive power"@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Remote Controlling"@en .
 
