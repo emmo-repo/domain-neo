@@ -277,7 +277,6 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/emmo/domain/neo#AOOControl
 :AOOControl rdf:type owl:Class ;
-            
             rdfs:subClassOf :DefenceinDepthProcedures ,
                             :Nuclear_Accident_Concepts ,
                             :Nuclear_Plant_Concepts ;
@@ -363,6 +362,7 @@ https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""^^xsd:anyURI
       rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
       rdfs:isDefinedBy <https://doi.org/10.1351/goldbook.C01022> ;
       <http://www.w3.org/2004/02/skos/core#altLabel> "Chemical Element"@en ;
+      <http://www.w3.org/2004/02/skos/core#comment> "NEOCORECANDIATE" ;
       <http://www.w3.org/2004/02/skos/core#definition> "type of substance that cannot be divided or changed into different substances by ordinary chemical methods"@en ;
       <http://www.w3.org/2004/02/skos/core#prefLabel> "Atom"@en ;
       :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-2:ed-1:v1:en:term:3.1.21> .
@@ -666,12 +666,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                           :referenceISO "https://www.iso.org/obp/ui/en/#iso:std:iso:20553:ed-1:v1:en:term:3.15"^^xsd:anyURI .
 
 
-###  https://w3id.org/emmo/domain/neo#ContinuosInjection
-:ContinuosInjection rdf:type owl:Class ;
-                    rdfs:subClassOf :RegularInjection ;
-                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Continuos Injection"@en .
-
-
 ###  https://w3id.org/emmo/domain/neo#ControlOfDeviations
 :ControlOfDeviations rdf:type owl:Class ;
                      rdfs:subClassOf :Controlling ;
@@ -785,8 +779,7 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
 
 ###  https://w3id.org/emmo/domain/neo#Controlling
 :Controlling rdf:type owl:Class ;
-             rdfs:subClassOf :NPPNormalOperation ,
-                             :NoNuclearISO ,
+             rdfs:subClassOf :NoNuclearISO ,
                              :Nuclear_Plant_Concepts ;
              rdfs:comment "SF" ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Manipulation"@en ,
@@ -846,7 +839,7 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
                           owl:someValuesFrom :NuclearPlantAccident
                         ] ;
         <http://www.w3.org/2004/02/skos/core#altLabel> "Object Damage"@en ,
-                                                       "PhysicalObjectDamage"@en ;
+                                                       "Physical Object Damage"@en ;
         <http://www.w3.org/2004/02/skos/core#definition> "Harm caused to something in such a way as to reduce or destroy its value, usefulness, or normal function."@en ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "Damage"@en .
 
@@ -866,11 +859,12 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
                                             owl:onProperty elite:isSubProcessOf ;
                                             owl:someValuesFrom :NPPOperationManagement
                                           ] ;
+                          rdfs:comment "SF" ;
                           <http://www.w3.org/2004/02/skos/core#definition> """A hierarchical deployment of different levels of diverse equipment and procedures to prevent the escalation
 of anticipated operational occurrences and to maintain the effectiveness of physical barriers placed between
 a radiation source or radioactive material and workers, members of the public or the environment, in
 operational states and, for some barriers, in accident conditions"""@en ;
-                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Defencein Depth Procedures"@en ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Defence In Depth Procedures"@en ;
                           :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/1069.html"^^xsd:anyURI .
 
 
@@ -1004,6 +998,7 @@ pressure and two low pressure systems."""@en ;
                             :NoNuclearISO ,
                             :Nuclear_Accident_Concepts ;
             rdfs:comment "FK" ;
+            <http://www.w3.org/2004/02/skos/core#comment> "NA" ;
             <http://www.w3.org/2004/02/skos/core#definition> "Sudden and violent shaking of the ground, sometimes causing great destruction, as a result of movements within the earth’s crust or volcanic action."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Earthquake"@en .
 
@@ -1095,7 +1090,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
                                             owl:someValuesFrom :SeismicallyIsolatedBuilding
                                           ] ;
                           <http://www.w3.org/2004/02/skos/core#altLabel> "ER Cs"@en ,
-                                                                         "NppEmergencyResponseCentres"@en ;
+                                                                         "Npp Emergency Response Centres"@en ;
                           <http://www.w3.org/2004/02/skos/core#definition> "The Emergency Response Centre (ERC) is the operational heart of the EU Civil Protection Mechanism. It enables the European Union to respond to overwhelming natural and man-made disasters quickly and efficiently, both inside and outside Europe. "@en ;
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Emergency Response Centres"@en .
 
@@ -1118,6 +1113,7 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 :Event rdf:type owl:Class ;
        rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
        rdfs:seeAlso "See: https://en.wikipedia.org/wiki/Event" ;
+       <http://www.w3.org/2004/02/skos/core#comment> "NEO candidate" ;
        <http://www.w3.org/2004/02/skos/core#definition> "A thing that happens or takes place, with a well defined beginning and end, a clear specificity and relevance with respect to the surrounding environment."@en ;
        <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en .
 
@@ -1403,6 +1399,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""^^xsd:anyURI
 
 ###  https://w3id.org/emmo/domain/neo#HPCIOperation
 :HPCIOperation rdf:type owl:Class ;
+               rdfs:subClassOf :AOOControl ;
                <http://www.w3.org/2004/02/skos/core#definition> """Maintain adequate reactor vessel inventory – For core cooling – On small break LOCAs On small break LOCAs
  Depressurize the reactor vessel – To allow low pressure ECCSs to inject – On intermediate break LOCAs
  Backup RCIC when reactor vessel isolated"""@en ;
@@ -1415,6 +1412,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""^^xsd:anyURI
                        rdfs:subClassOf :Nuclear_Accident_Concepts ;
                        rdfs:seeAlso <http://www-ns.iaea.org/downloads/ni/training/specific_expert_knowledge/psa-level1/III1_1_A%20%20Initiating%20Event%20Analysis.pdf> ;
                        <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Plant Accident Events"@en ;
+                       <http://www.w3.org/2004/02/skos/core#comment> "NA" ;
                        <http://www.w3.org/2004/02/skos/core#definition> "An event that creates disturbance in a Nuclear Reactor Plant Management and that leads to hazardous condition to the surrounding environment where it takes place"@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Hazardous Nuclear Event"@en .
 
@@ -1650,7 +1648,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 :LossOfCoolantAccident rdf:type owl:Class ;
                        rdfs:subClassOf :PostulatedAccident ;
                        <http://www.w3.org/2004/02/skos/core#altLabel> "LOCA"@en ,
-                                                                      "LossOfReactorCoolingFunction"@en ;
+                                                                      "Loss Of Reactor Cooling Function"@en ;
                        <http://www.w3.org/2004/02/skos/core#definition> "Accident in which a breach in a reactor’s pressure boundary causes the coolant water to rush out of the reactor faster than makeup water can be added back in"@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Loss Of Coolant Accident"@en ;
                        :NRC_Reference "https://www.nrc.gov/reading-rm/basic-ref/glossary/loss-of-coolant-accident-loca.htm" .
@@ -1840,17 +1838,11 @@ The MSIVs are engineered safety features designed to limit the consequences of a
 
 ###  https://w3id.org/emmo/domain/neo#Measurement
 :Measurement rdf:type owl:Class ;
-             rdfs:subClassOf :NPPNormalOperation ;
-             <http://www.w3.org/2004/02/skos/core#definition> "process to determine a value"@en ;
-             <http://www.w3.org/2004/02/skos/core#prefLabel> "Measurement"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :Measurement ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "process to determine a value"@en ;
-   :referenceISO """ISO 44001:2017(en)
-Collaborative business relationship management systems — Requirements and framework"""^^xsd:anyURI
- ] .
+             rdfs:subClassOf <https://w3id.org/emmo/hume#Measurement> ;
+             <http://www.w3.org/2004/02/skos/core#comment> "Candidate NEOcore" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "set of operations having the object of determining a value of a quantity"@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Measurement"@en ;
+             :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:3951:-5:ed-1:v1:en:term:3.18> .
 
 
 ###  https://w3id.org/emmo/domain/neo#Mitigation
@@ -2036,7 +2028,7 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
                rdfs:comment "No off-site radiological impact or only minor radiological impact"@en ,
                             "have the objective of Control of accidents with core melt to limit off-site releases"@en ;
                <http://www.w3.org/2004/02/skos/core#altLabel> "Level3Di D"@en ,
-                                                              "NuclearReactorProtection"@en ;
+                                                              "Nuclear Reactor Protection"@en ;
                <http://www.w3.org/2004/02/skos/core#definition> """Protection (i.e. reactor trip and actuation of engineered safety features) to control and/or limit the
 consequences of accident conditions. This is based on demand and works very differently from control: real
 demands occur rarely, so there is little opportunity to detect hidden failures or to experience conditions that
@@ -2127,6 +2119,8 @@ negligible from the point of view of protection and safety of a Nuclear power pl
 :NaturalEvent rdf:type owl:Class ;
               rdfs:subClassOf :Event ;
               rdfs:comment "It is not controlled and created by natural phenomena" ;
+              <http://www.w3.org/2004/02/skos/core#comment> "FK" ,
+                                                            "NA" ;
               <http://www.w3.org/2004/02/skos/core#definition> "Phenomenon found in or created by naturally occuring conditions."@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Natural Event"@en .
 
@@ -2161,6 +2155,7 @@ and Radiation Protection, 2018 Edition """ ;
 ###  https://w3id.org/emmo/domain/neo#Neutron
 :Neutron rdf:type owl:Class ;
          rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
+         <http://www.w3.org/2004/02/skos/core#comment> "NEOCORECANDIDATE" ;
          <http://www.w3.org/2004/02/skos/core#definition> """subatomic particles used for neutron imaging (3.41) (NI) purposes by the neutron attenuation process in a similar fashion to X-rays (3.76)
 Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abundance that can be correlated with the post-mortem (3.57) interval, i.e. the time that has elapsed since a person has died."""@en ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron"@en ;
@@ -2337,6 +2332,7 @@ Note 1 to entry: The nucleus usually has a high mass number, together with an in
              rdfs:comment "Since there are not only fissionable nuclides but also fissile nuclide the definition of the IAEA does not seem correct" ;
              <http://www.w3.org/2004/02/skos/core#comment> """Fissionable nuclear material in the form of fabricated elements for loading
 into the reactor core of a civil nuclear power plant or research reactor."""@en ,
+                                                           "CANDIDATE NEOCORE" ,
                                                            "Here we have to put something that is related to the scope of the nuclear material otherwise there is no difference between nuclear material and fuel" ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Fuel"@en ;
              :R8xx0dhbEh1tjGMDwNZfckV "Nuclear material characterized by its functional role as a neutron source within a nuclear reactor core, enabling a sustained or controlled chain reaction. Unlike generic nuclear material, which is defined by its isotopic or chemical composition, Nuclear Fuel is an entity defined by its intended use as a component within a functional whole (the Reactor Core)" ;
@@ -2394,6 +2390,7 @@ further decays, the event is referred to as inelastic scattering."""@en ;
 :NuclearMaterial rdf:type owl:Class ;
                  rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
                  <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Fission Material"@en ;
+                 <http://www.w3.org/2004/02/skos/core#comment> "CANDIDATE NEOCORE" ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Material"@en ;
                  :R8xx0dhbEh1tjGMDwNZfckV "material containing one or more of the following: plutonium except that with isotopic concentration exceeding 80 % in 238Pu; uranium enriched in the isotope 235 or 233; uranium containing the mixture of isotopes as occurring in nature other than in the form of ore or ore residue" ;
                  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.1> ;
@@ -2522,6 +2519,7 @@ all offsite power."""@en ;
 ###  https://w3id.org/emmo/domain/neo#NuclearReaction
 :NuclearReaction rdf:type owl:Class ;
                  rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalPhenomenon> ;
+                 <http://www.w3.org/2004/02/skos/core#comment> "CANDIDATENEOCORE" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "In nuclear physics and nuclear chemistry, a nuclear reaction is a process in which two nuclei, or a nucleus and an external subatomic particle, collide to produce one or more new nuclides. Thus, a nuclear reaction must cause a transformation of at least one nuclide to another."@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Reaction"@en .
 
@@ -2580,7 +2578,8 @@ all offsite power."""@en ;
 ###  https://w3id.org/emmo/domain/neo#Nuclide
 :Nuclide rdf:type owl:Class ;
          rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> ;
-         <http://www.w3.org/2004/02/skos/core#comment> "A general term referring to all known isotopes, both stable (279) and unstable (about 2,700), of the chemical elements." ;
+         <http://www.w3.org/2004/02/skos/core#comment> "A general term referring to all known isotopes, both stable (279) and unstable (about 2,700), of the chemical elements." ,
+                                                       "NEOCORE Candidate" ;
          <http://www.w3.org/2004/02/skos/core#definition> """A species of atom characterized by its mass number, atomic
 number, and a possible elevated nuclear energy state if prolonged.'""" ;
          :NCTG_Reference "Nuclide" ;
@@ -2599,7 +2598,7 @@ number, and a possible elevated nuclear energy state if prolonged.'""" ;
 perform its intended safety functions.""" ;
                rdfs:seeAlso <https://www.nrc.gov/docs/ML0707/ML070710376.pdf> ;
                <http://www.w3.org/2004/02/skos/core#altLabel> "Failure"@en ,
-                                                              "SingleFailure" ;
+                                                              "Single Failure" ;
                <http://www.w3.org/2004/02/skos/core#definition> "Loss of the ability of a structure, system or component to function within acceptance criteria. The structure, system or component is considered to fail when it becomes incapable of functioning, whether or not this is needed at that time. A failure may be the result of e.g. a hardware fault, a software fault, a system fault, an operator error or a maintenance error."@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Object Failure"@en ;
                :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/949.html"^^xsd:anyURI .
@@ -2996,7 +2995,6 @@ in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ;
 ###  https://w3id.org/emmo/domain/neo#RadioactivityAssessment
 :RadioactivityAssessment rdf:type owl:Class ;
                          rdfs:subClassOf :EmergencyManagement ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "Assessment"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "The process, and the result, of analysing systematically and evaluating the hazards associated with sources and practices, and associated protection and safety measures."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Radioactivity Assessment"@en .
 
@@ -3049,8 +3047,7 @@ in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ;
               :referenceINIS "RADIOISOTOPES" ;
               :referenceISO "https://www.iso.org/obp/ui/#iso:std:iso:20042:ed-1:v1:en:term:3.18"^^xsd:anyURI ;
               :referenceNRC "Radionuclide"^^xsd:anyURI ;
-              :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/475"^^xsd:anyURI ,
-                             "https://vocabulary.iaea.org/iaea-safety-glossary/554"^^xsd:anyURI .
+              :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/554"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#Radius
