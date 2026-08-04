@@ -277,6 +277,7 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/emmo/domain/neo#AOOControl
 :AOOControl rdf:type owl:Class ;
+            owl:equivalentClass :HPCIOperation ;
             rdfs:subClassOf :DefenceinDepthProcedures ,
                             :Nuclear_Accident_Concepts ,
                             :Nuclear_Plant_Concepts ;
@@ -1402,7 +1403,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""^^xsd:anyURI
 
 ###  https://w3id.org/emmo/domain/neo#HPCIOperation
 :HPCIOperation rdf:type owl:Class ;
-               rdfs:subClassOf :AOOControl ;
                <http://www.w3.org/2004/02/skos/core#definition> """Maintain adequate reactor vessel inventory – For core cooling – On small break LOCAs On small break LOCAs
  Depressurize the reactor vessel – To allow low pressure ECCSs to inject – On intermediate break LOCAs
  Backup RCIC when reactor vessel isolated"""@en ;
