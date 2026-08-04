@@ -504,10 +504,6 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty elite:partakesIn ;
                                                owl:someValuesFrom :ReactorMitigationCoolingSystem
-                                             ] ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty elite:participatesTo ;
-                                               owl:someValuesFrom :SafetySystem
                                              ] ;
                              rdfs:label "BoratedWaterInjectionSystem" ;
                              <http://www.w3.org/2004/02/skos/core#comment> "Borated water injection system is a system which injects borated water to cool down the reactor core" .
@@ -799,11 +795,7 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
 
 ###  https://w3id.org/emmo/domain/neo#CoreMeltdown
 :CoreMeltdown rdf:type owl:Class ;
-              rdfs:subClassOf :NuclearSevereAccident ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty elite:isSubProcessOf ;
-                                owl:someValuesFrom :CoreMeltdown
-                              ] ;
+              rdfs:subClassOf :NuclearSevereAccident ;
               rdfs:isDefinedBy <https://www.eionet.europa.eu/gemet/en/concept/1799> ;
               <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Meltdown"@en ,
                                                              "PartialCoreMeltdown"@en ;
@@ -2284,11 +2276,7 @@ http://www-ns.iaea.org/downloads/ni/training/specific_expert_knowledge/psa-level
 
 ###  https://w3id.org/emmo/domain/neo#NuclearElasticScattering
 :NuclearElasticScattering rdf:type owl:Class ;
-                          rdfs:subClassOf :NuclearReaction ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty elite:isSubProcessOf ;
-                                            owl:someValuesFrom :ReactorCoreEnergyProduction
-                                          ] ;
+                          rdfs:subClassOf :NuclearReaction ;
                           rdfs:comment """collision between a moving particle and a second particle in which the total kinetic energy (3.35) and the total momentum are conserved
 Note 1 to entry: See inelastic scattering (4.2).
 Note 2 to entry: In elastic scattering interactions, the moving particle can be deflected through angles of up to 180°."""@en ;
@@ -2695,11 +2683,7 @@ Postulated accidents are also known as Condition IV events.""" ;
 
 ###  https://w3id.org/emmo/domain/neo#PostulatedInitiatingEvent
 :PostulatedInitiatingEvent rdf:type owl:Class ;
-                           rdfs:subClassOf :HazardousNuclearEvent ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty elite:foregoes ;
-                                             owl:someValuesFrom :AOOControl
-                                           ] ;
+                           rdfs:subClassOf :HazardousNuclearEvent ;
                            <http://www.w3.org/2004/02/skos/core#definition> """A PIE Is an event identified in the
 design that leads to Anticipated Operational Occurrences (AOOs) or accident conditions. Accident
 conditions include Design Basis Accidents (DBAs) and Beyond Design Basis Accidents (BDBAs). BDBAs
@@ -3015,10 +2999,6 @@ in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ;
                            rdfs:subClassOf :UnintendedEvent ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty elite:affects ;
-                                             owl:someValuesFrom :NuclearPlantWorker
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty elite:affects ;
                                              owl:someValuesFrom :PrimaryContainmentVessel
                                            ] ,
                                            [ rdf:type owl:Restriction ;
@@ -3125,12 +3105,7 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 
 ###  https://w3id.org/emmo/domain/neo#ReactorCoreEnergyProduction
 :ReactorCoreEnergyProduction rdf:type owl:Class ;
-                             rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty [ owl:inverseOf elite:isSubProcessOf
-                                                              ] ;
-                                               owl:someValuesFrom :NuclearChainReaction
-                                             ] ;
+                             rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
                              <http://www.w3.org/2004/02/skos/core#definition> "The process for producing energy from nuclear sources, in a reactor core of a nuclear power plant."@en ;
                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Core Energy Production"@en .
 
