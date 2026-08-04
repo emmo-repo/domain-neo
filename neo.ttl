@@ -277,7 +277,7 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/emmo/domain/neo#AOOControl
 :AOOControl rdf:type owl:Class ;
-            owl:equivalentClass :HPCIOperation ;
+            
             rdfs:subClassOf :DefenceinDepthProcedures ,
                             :Nuclear_Accident_Concepts ,
                             :Nuclear_Plant_Concepts ;
