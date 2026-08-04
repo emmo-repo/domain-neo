@@ -1113,7 +1113,8 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 :Event rdf:type owl:Class ;
        rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
        rdfs:seeAlso "See: https://en.wikipedia.org/wiki/Event" ;
-       <http://www.w3.org/2004/02/skos/core#comment> "NEO candidate" ;
+       <http://www.w3.org/2004/02/skos/core#comment> "NEO CORE Candidate" ,
+                                                     "NEO candidate" ;
        <http://www.w3.org/2004/02/skos/core#definition> "A thing that happens or takes place, with a well defined beginning and end, a clear specificity and relevance with respect to the surrounding environment."@en ;
        <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en .
 
@@ -2195,7 +2196,8 @@ Note 1 to entry: The absorption of the external colliding particle, usually a ne
 
 ###  https://w3id.org/emmo/domain/neo#NoNuclearISO
 :NoNuclearISO rdf:type owl:Class ;
-              <http://www.w3.org/2004/02/skos/core#comment> "This is a class that I have creted to group together all of that classes that have been documented using an ISO that does not belong to Nuclear Field" .
+              <http://www.w3.org/2004/02/skos/core#comment> "I will not put all of them in NEO Core" ,
+                                                            "This is a class that I have creted to group together all of that classes that have been documented using an ISO that does not belong to Nuclear Field" .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearAccidentFinalEvent
@@ -2299,6 +2301,7 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
 :NuclearEnergyObject rdf:type owl:Class ;
                      rdfs:subClassOf :Nuclear_Plant_Concepts ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Domain Object" ;
+                     <http://www.w3.org/2004/02/skos/core#comment> "NEOCORE CANDIDATE" ;
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "NEO object"@en ;
                      :R8xx0dhbEh1tjGMDwNZfckV "An endurant entity that belongs to the Nuclear Energy Ontology (NEO), encompassing any physical, material, or conceptual object, component, or system related to nuclear science and technology, without being restricted to energy generation" .
 
@@ -2552,6 +2555,7 @@ all offsite power."""@en ;
 ###  https://w3id.org/emmo/domain/neo#Nuclear_Reactor
 :Nuclear_Reactor rdf:type owl:Class ;
                  rdfs:subClassOf :Nuclear_Plant_Concepts ;
+                 <http://www.w3.org/2004/02/skos/core#comment> "NEOCORE Candidate" ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Reactor"@en ;
                  :R8xx0dhbEh1tjGMDwNZfckV "special device having an inventory of nuclear fuel material containing fissionable nuclides (3.1.2) and often neutron moderating, neutron absorbing and cooling materials, all of them geometrically arranged in a particular neutron multiplicative configuration (3.1.10) designed and built for having the capability of initiating, maintaining and extinguishing a controlled, self-sustaining nuclear fission (3.1.1) chain reaction, under adequate safety conditions" ;
                  :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.22> .
@@ -3253,13 +3257,15 @@ Note 3 to entry: The reactor protection system (RPS) imposes actions on several 
 
 ###  https://w3id.org/emmo/domain/neo#Reactor_Core
 :Reactor_Core rdf:type owl:Class ;
-              rdfs:subClassOf <https://w3id.org/emmo/hume#Whole> .
+              rdfs:subClassOf <https://w3id.org/emmo/hume#Whole> ;
+              <http://www.w3.org/2004/02/skos/core#comment> "NEOCORE CANDIDATE" .
 
 
 ###  https://w3id.org/emmo/domain/neo#Reactor_Core_Role
 :Reactor_Core_Role rdf:type owl:Class ;
                    rdfs:subClassOf <https://w3id.org/emmo/hume#Role> ;
                    rdfs:label "Reactor Core Role"@en ;
+                   <http://www.w3.org/2004/02/skos/core#comment> "NEOCORE CANDIDATE" ;
                    :R8xx0dhbEh1tjGMDwNZfckV "A ReactorComponentRole is a role entity defined by its functional relationship with the ReactorCore (the 'Whole'). It does not exist as an isolated entity, but emerges the moment a physical object is integrated into the system, becoming an essential part of the reactor configuration. The existence of the ReactorCore system is ontologically dependent upon the presence of these role entities which, together, enable the controlled fission process." .
 
 
@@ -4004,7 +4010,8 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
 
 ###  https://w3id.org/emmo/domain/neo#UnintendedEvent
 :UnintendedEvent rdf:type owl:Class ;
-                 rdfs:subClassOf :Nuclear_Accident_Concepts ;
+                 rdfs:subClassOf :Event ,
+                                 :Nuclear_Accident_Concepts ;
                  rdfs:comment "It is an event that can occur due to human error or the failure of artificial or industrial structures or phenomena."@en ;
                  <http://www.w3.org/2004/02/skos/core#altLabel> "Unexpected Event" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "An unintended event is any casual occurrence, not controlled that can lead to hazardous condition to the surrounding environment where it takes place"@en ;
