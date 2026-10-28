@@ -28,8 +28,8 @@
 <http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
 
 
-###  https://w3id.org/emmo/domain/neo#NRC_Reference
-<https://w3id.org/emmo/domain/neo#NRC_Reference> rdf:type owl:AnnotationProperty .
+###  https://w3id.org/emmo/domain/neo#referenceNRCG
+<https://w3id.org/emmo/domain/neo#referenceNRCG> rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/emmo/emmo-lite#affects
@@ -135,7 +135,7 @@
  Depressurize the reactor vessel – To allow low pressure ECCSs to inject – On intermediate break LOCAs
  Backup RCIC when reactor vessel isolated"""@en ;
                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "HPCI Operation"@en ;
-                                                 <https://w3id.org/emmo/domain/neo#NRC_Reference> "https://www.nrc.gov/docs/ML1125/ML11258A365.pdf" .
+                                                 <https://w3id.org/emmo/domain/neo#referenceNRCG> "https://www.nrc.gov/docs/ML1125/ML11258A365.pdf" .
 
 
 ###  https://w3id.org/emmo/domain/neo#IntermittentInjection
@@ -158,7 +158,7 @@
                                                     <http://www.w3.org/2004/02/skos/core#altLabel> "Loss Of Emergency AC Power"@en ;
                                                     <http://www.w3.org/2004/02/skos/core#definition> "Loss of the AC electricity supplied by the devices entered in functions after the LossOfOffsitePower"@en ;
                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Loss Of All AC Power"@en ;
-                                                    <https://w3id.org/emmo/domain/neo#NRC_Reference> "https://www.nrc.gov/reading-rm/doc-collections/cfr/part050/part050-0063.html" .
+                                                    <https://w3id.org/emmo/domain/neo#referenceNRCG> "https://www.nrc.gov/reading-rm/doc-collections/cfr/part050/part050-0063.html" .
 
 
 ###  https://w3id.org/emmo/domain/neo#LossOfDCPower
