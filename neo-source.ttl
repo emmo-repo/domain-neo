@@ -180,8 +180,7 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 ###  https://w3id.org/emmo/domain/neo#AOOControl
 :AOOControl rdf:type owl:Class ;
             rdfs:subClassOf :DefenceinDepthProcedures ,
-                            :Nuclear_Accident_Concepts ,
-                            :Nuclear_Plant_Concepts ;
+                            :Nuclear_Accident_Concepts ;
             rdfs:comment """Conditions of normal operation that are expected to occur one or
 more times during the life of the nuclear power unit and include but
 are not limited to loss of power to all recirculation pumps, tripping of
@@ -273,7 +272,6 @@ https://www.iso.org/obp/ui/#iso:std:iso:tr:24188:ed-1:v1:en"""^^xsd:anyURI
 ###  https://w3id.org/emmo/domain/neo#AutomaticMonitoring
 :AutomaticMonitoring rdf:type owl:Class ;
                      rdfs:subClassOf :Controlling ,
-                                     :Nuclear_Plant_Concepts ,
                                      :Operational_Activity ;
                      rdfs:comment "Automatic function which ensures that a protective measure (3.36) is initiated if the ability of the SRP/CS to perform a function is diminished, or if the process conditions are changed such that hazards are generated"@en ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "Automatic Manipulation"@en ;
@@ -428,7 +426,6 @@ Note 1 to entry: In a boiling water reactor the generated heat is removed from t
 ###  https://w3id.org/emmo/domain/neo#BypassValve
 :BypassValve rdf:type owl:Class ;
              rdfs:subClassOf :Equipment ,
-                             :Nuclear_Plant_Concepts ,
                              :PipePlantValve ,
                              :TurbineBuildingContents ,
                              [ rdf:type owl:Restriction ;
@@ -494,8 +491,7 @@ system to perform its intended function."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#CommonSpentFuelBuilding
 :CommonSpentFuelBuilding rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyObject ,
-                                         :Nuclear_Plant_Concepts ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Any facility or installation the primary purpose of which is spent fuel management. (See Joint Convention on the Safety of Spent Fuel Management and on the Safety of Radioactive Waste Management, INFCIRC/546, IAEA, Vienna (1997).)" ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Spent Fuel Management Facility"@en ;
                          :referenceNRCG "https://vocabulary.iaea.org/iaea-safety-glossary/414.html"^^xsd:anyURI .
@@ -637,7 +633,6 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf"""
 ###  https://w3id.org/emmo/domain/neo#ControlRodGroup
 :ControlRodGroup rdf:type owl:Class ;
                  rdfs:subClassOf :NuclearEnergyObject ,
-                                 :Nuclear_Plant_Concepts ,
                                  :ReactorBuildingContents ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty elite:participatesTo ;
@@ -677,8 +672,7 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
 
 ###  https://w3id.org/emmo/domain/neo#Controlling
 :Controlling rdf:type owl:Class ;
-             rdfs:subClassOf :NoNuclearISO ,
-                             :Nuclear_Plant_Concepts ;
+             rdfs:subClassOf :NoNuclearISO ;
              rdfs:comment "SF" ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Manipulation"@en ,
                                                             "Monitoring"@en ;
@@ -860,7 +854,6 @@ power for a nuclear plant in the event that all off-site power sources are lost.
 ###  https://w3id.org/emmo/domain/neo#DryWell
 :DryWell rdf:type owl:Class ;
          rdfs:subClassOf :NuclearEnergyObject ,
-                         :Nuclear_Plant_Concepts ,
                          :ReactorBuildingContents ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty elite:isConstituentOf ;
@@ -1104,7 +1097,6 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 ###  https://w3id.org/emmo/domain/neo#FireProtectionSystem
 :FireProtectionSystem rdf:type owl:Class ;
                       rdfs:subClassOf :Nuclear_Accident_Concepts ,
-                                      :Nuclear_Plant_Concepts ,
                                       :Plant_System ,
                                       :ReactorMitigationSystem ;
                       rdfs:comment """The fire protection system was designed primarily for fire suppression and flooding of the containment vessel, not for
@@ -1325,7 +1317,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:21009:-2:ed-2:v1:en"""^^xsd:anyURI
 ###  https://w3id.org/emmo/domain/neo#HeadVentNozzle
 :HeadVentNozzle rdf:type owl:Class ;
                 rdfs:subClassOf :NuclearEnergyObject ,
-                                :Nuclear_Plant_Concepts ,
                                 :PipePlantValve ,
                                 :ReactorBuildingContents ,
                                 :ReactorPreventiveSystems ,
@@ -1398,7 +1389,6 @@ Reference ISO 80000""" .
 :InjectedFluid rdf:type owl:Class ;
                rdfs:subClassOf :InjectedMaterial ,
                                :NoNuclearISO ,
-                               :Nuclear_Plant_Concepts ,
                                <https://w3id.org/emmo/hume#Fluid> ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty elite:isParticipantOf ;
@@ -1417,8 +1407,7 @@ Reference ISO 80000""" .
 ###  https://w3id.org/emmo/domain/neo#InjectedMaterial
 :InjectedMaterial rdf:type owl:Class ;
                   rdfs:subClassOf :NoNuclearISO ,
-                                  :NuclearEnergyObject ,
-                                  :Nuclear_Plant_Concepts ;
+                                  :NuclearEnergyObject ;
                   <http://www.w3.org/2004/02/skos/core#altLabel> "Supplied Material" ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Material used for material supplying" ;
                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Injected Material"@en ;
@@ -1636,7 +1625,6 @@ The low pressure coolant injection mode of the residual heat removal system prov
 :MainControlRoom rdf:type owl:Class ;
                  rdfs:subClassOf :NoNuclearISO ,
                                  :NuclearEnergyObject ,
-                                 :Nuclear_Plant_Concepts ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                    owl:someValuesFrom :NuclearPowerPlantUnit
@@ -1675,8 +1663,7 @@ The MSIVs are engineered safety features designed to limit the consequences of a
 ###  https://w3id.org/emmo/domain/neo#MaintenanceOutage
 :MaintenanceOutage rdf:type owl:Class ;
                    rdfs:subClassOf :NPPNormalOperation ,
-                                   :NoNuclearISO ,
-                                   :Nuclear_Plant_Concepts ;
+                                   :NoNuclearISO ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Removal of a unit from service to perform work on specific components that can be deferred beyond the end of the next weekend, but requires the unit be removed from service before the next planned outage."@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Maintenance Outage"@en .
 
@@ -1707,7 +1694,6 @@ The MSIVs are engineered safety features designed to limit the consequences of a
 ###  https://w3id.org/emmo/domain/neo#ManualControlling
 :ManualControlling rdf:type owl:Class ;
                    rdfs:subClassOf :Controlling ,
-                                   :Nuclear_Plant_Concepts ,
                                    :Operational_Activity ;
                    <http://www.w3.org/2004/02/skos/core#altLabel> "Manual Control"@en ,
                                                                   "Manual Manipulation"@en ;
@@ -1829,8 +1815,7 @@ Pag 29""" ;
 
 ###  https://w3id.org/emmo/domain/neo#NPPBarrier
 :NPPBarrier rdf:type owl:Class ;
-            rdfs:subClassOf :Nuclear_Plant_Concepts ,
-                            :ReactorPreventiveSystems ,
+            rdfs:subClassOf :ReactorPreventiveSystems ,
                             :Safety_Concept ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "Barrier"@en ;
             <http://www.w3.org/2004/02/skos/core#comment> "One or several barrier elements that are designed to prevent unintended flow of formation fluid﻿."@en ;
@@ -1847,8 +1832,7 @@ Pag 29""" ;
 
 ###  https://w3id.org/emmo/domain/neo#NPPDecommissioning
 :NPPDecommissioning rdf:type owl:Class ;
-                    rdfs:subClassOf :Nuclear_Plant_Concepts ,
-                                    :Operation ;
+                    rdfs:subClassOf :Operation ;
                     <http://www.w3.org/2004/02/skos/core#definition> "administrative and technical actions taken to allow the removal of some or all of the regulatory controls from a facility"@en ;
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Facility Decommissioning" ;
                     :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1059.html> ,
@@ -2199,7 +2183,6 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
-                     rdfs:subClassOf :Nuclear_Plant_Concepts ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Domain Object" ;
                      <http://www.w3.org/2004/02/skos/core#comment> "NEOCORE CANDIDATE" ;
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "NEO object"@en ;
@@ -2278,7 +2261,6 @@ further decays, the event is referred to as inelastic scattering."""@en ;
 ###  https://w3id.org/emmo/domain/neo#NuclearIsland
 :NuclearIsland rdf:type owl:Class ;
                rdfs:subClassOf :NuclearEnergyObject ,
-                               :Nuclear_Plant_Concepts ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty elite:isConstituentOf ;
                                  owl:someValuesFrom :NuclearPowerPlant
@@ -2324,7 +2306,6 @@ further decays, the event is referred to as inelastic scattering."""@en ;
 ###  https://w3id.org/emmo/domain/neo#NuclearPlantAOO
 :NuclearPlantAOO rdf:type owl:Class ;
                  rdfs:subClassOf :Nuclear_Accident_Concepts ,
-                                 :Nuclear_Plant_Concepts ,
                                  <https://w3id.org/emmo/hume#Process> ;
                  <http://www.w3.org/2004/02/skos/core#definition> """Conditions of normal operation that are expected to occur one or
 more times during the life of the nuclear power unit and include but
@@ -2347,7 +2328,6 @@ all offsite power."""@en ;
 ###  https://w3id.org/emmo/domain/neo#NuclearPlantWorker
 :NuclearPlantWorker rdf:type owl:Class ;
                     rdfs:subClassOf :NuclearEnergyObject ,
-                                    :Nuclear_Plant_Concepts ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty elite:isParticipantOf ;
                                       owl:someValuesFrom :ManualControlling
@@ -2361,7 +2341,6 @@ all offsite power."""@en ;
 ###  https://w3id.org/emmo/domain/neo#NuclearPowerPlant
 :NuclearPowerPlant rdf:type owl:Class ;
                    rdfs:subClassOf :NuclearEnergyObject ,
-                                   :Nuclear_Plant_Concepts ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty elite:participatesTo ;
                                      owl:someValuesFrom :NPPOperationManagement
@@ -2375,7 +2354,6 @@ all offsite power."""@en ;
 ###  https://w3id.org/emmo/domain/neo#NuclearPowerPlantBuilding
 :NuclearPowerPlantBuilding rdf:type owl:Class ;
                            rdfs:subClassOf :NuclearEnergyObject ,
-                                           :Nuclear_Plant_Concepts ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty elite:isConstituentOf ;
                                              owl:someValuesFrom :NuclearPowerPlant
@@ -2395,7 +2373,6 @@ all offsite power."""@en ;
 ###  https://w3id.org/emmo/domain/neo#NuclearPowerPlantUnit
 :NuclearPowerPlantUnit rdf:type owl:Class ;
                        rdfs:subClassOf :NuclearEnergyObject ,
-                                       :Nuclear_Plant_Concepts ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty elite:isConstituentOf ;
                                          owl:someValuesFrom :NuclearPowerPlant
@@ -2434,16 +2411,6 @@ all offsite power."""@en ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo#NuclearReactor
-:NuclearReactor rdf:type owl:Class ;
-                rdfs:subClassOf :Nuclear_Plant_Concepts ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Reactor"@en ;
-                :referenceINIS "HYBRID REACTORS" ,
-                               "REACTORS" ,
-                               "THERMONUCLEAR REACTORS" ;
-                <https://w3id.org/emmo/domain/neo/neo#isoDefinition> <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.22> .
-
-
 ###  https://w3id.org/emmo/domain/neo#NuclearSevereAccident
 :NuclearSevereAccident rdf:type owl:Class ;
                        rdfs:subClassOf :BeyondDesignBasisAccident ;
@@ -2458,14 +2425,9 @@ all offsite power."""@en ;
                            rdfs:subClassOf <https://w3id.org/emmo/hume#Process> .
 
 
-###  https://w3id.org/emmo/domain/neo#Nuclear_Plant_Concepts
-:Nuclear_Plant_Concepts rdf:type owl:Class .
-
-
 ###  https://w3id.org/emmo/domain/neo#Nuclear_ReactorMaintanance
 :Nuclear_ReactorMaintanance rdf:type owl:Class ;
-                            rdfs:subClassOf :NPPNormalOperation ,
-                                            :Nuclear_Plant_Concepts ;
+                            rdfs:subClassOf :NPPNormalOperation ;
                             rdfs:comment "The organized activity, both administrative and technical, of keeping structures, systems and components in good operating condition, including both preventive and corrective (or repair) aspects." ;
                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Reactor Maintanance"@en ;
                             :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:22716:ed-1:v2:en:term:2.19> ;
@@ -2539,7 +2501,6 @@ constructed"""@en ;
 :PipePlantValve rdf:type owl:Class ;
                 rdfs:subClassOf :Equipment ,
                                 :NuclearEnergyObject ,
-                                :Nuclear_Plant_Concepts ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty elite:hasBehaviour ;
                                   owl:someValuesFrom :Switching
@@ -2573,8 +2534,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:24513:ed-1:v1:en"""^^xsd:anyURI
 
 ###  https://w3id.org/emmo/domain/neo#PlantTurbine
 :PlantTurbine rdf:type owl:Class ;
-              rdfs:subClassOf :NuclearEnergyObject ,
-                              :Nuclear_Plant_Concepts ;
+              rdfs:subClassOf :NuclearEnergyObject ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Plant Turbine"@en ;
               :definition "Term which when used alone refers to the turbine action only. It is that component of the gas turbine which produces power from expansion of the working fluid."@en .
 
@@ -2631,7 +2591,6 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
 ###  https://w3id.org/emmo/domain/neo#PowerSupplySystem
 :PowerSupplySystem rdf:type owl:Class ;
                    rdfs:subClassOf :NuclearEnergyObject ,
-                                   :Nuclear_Plant_Concepts ,
                                    :Plant_System ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty elite:isConstituentOf ;
@@ -2647,7 +2606,6 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
 ###  https://w3id.org/emmo/domain/neo#PowerTurbine
 :PowerTurbine rdf:type owl:Class ;
               rdfs:subClassOf :Equipment ,
-                              :Nuclear_Plant_Concepts ,
                               :PlantTurbine ,
                               :TurbineBuildingContents ,
                               [ rdf:type owl:Restriction ;
@@ -2687,7 +2645,6 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
 ###  https://w3id.org/emmo/domain/neo#PressureReliefValve
 :PressureReliefValve rdf:type owl:Class ;
                      rdfs:subClassOf :NuclearEnergyObject ,
-                                     :Nuclear_Plant_Concepts ,
                                      :PipePlantValve ,
                                      :ReactorBuildingContents ,
                                      :ReactorPreventiveSystems ,
@@ -2782,8 +2739,7 @@ ISO 18246:2023(en), 3.4.12"""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#PublicAddressSystem
 :PublicAddressSystem rdf:type owl:Class ;
-                     rdfs:subClassOf :Nuclear_Plant_Concepts ,
-                                     :SafetySystem ,
+                     rdfs:subClassOf :SafetySystem ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty elite:isConstituentOf ;
                                        owl:someValuesFrom :NuclearPowerPlant
@@ -2968,7 +2924,6 @@ in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ;
 ###  https://w3id.org/emmo/domain/neo#ReactorBuildingContents
 :ReactorBuildingContents rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         :Nuclear_Plant_Concepts ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty elite:isConstituentOf ;
                                            owl:someValuesFrom :BoilingWaterReactor
@@ -3054,7 +3009,6 @@ Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also incl
 ###  https://w3id.org/emmo/domain/neo#ReactorMitigationCoolingSystem
 :ReactorMitigationCoolingSystem rdf:type owl:Class ;
                                 rdfs:subClassOf :Nuclear_Accident_Concepts ,
-                                                :Nuclear_Plant_Concepts ,
                                                 :ReactorBuildingContents ,
                                                 :ReactorMitigationSystem ,
                                                 :WaterInjectionSystem ;
@@ -3087,8 +3041,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
 
 ###  https://w3id.org/emmo/domain/neo#ReactorPressureVessel
 :ReactorPressureVessel rdf:type owl:Class ;
-                       rdfs:subClassOf :Nuclear_Plant_Concepts ,
-                                       :ReactorBuildingContents ,
+                       rdfs:subClassOf :ReactorBuildingContents ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                          owl:someValuesFrom :PrimaryContainmentVessel
@@ -3231,7 +3184,6 @@ in operation or in accidents."""@en ;
 ###  https://w3id.org/emmo/domain/neo#RemoteControlling
 :RemoteControlling rdf:type owl:Class ;
                    rdfs:subClassOf :Controlling ,
-                                   :Nuclear_Plant_Concepts ,
                                    :Operational_Activity ;
                    <http://www.w3.org/2004/02/skos/core#altLabel> "Remote Control"@en ,
                                                                   "Remote Manipulation"@en ;
@@ -3301,7 +3253,6 @@ Note 2 to entry: For most of research reactors the heat production from fission 
 ###  https://w3id.org/emmo/domain/neo#RuleRegulation
 :RuleRegulation rdf:type owl:Class ;
                 rdfs:subClassOf :NPPNormalOperation ,
-                                :Nuclear_Plant_Concepts ,
                                 :Safety_Concept ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty elite:affects ;
@@ -3338,7 +3289,6 @@ Note 2 to entry: For most of research reactors the heat production from fission 
 ###  https://w3id.org/emmo/domain/neo#SafetyCriticalEquipment
 :SafetyCriticalEquipment rdf:type owl:Class ;
                          rdfs:subClassOf :NuclearEnergyObject ,
-                                         :Nuclear_Plant_Concepts ,
                                          :Safety_Concept ;
                          <http://www.w3.org/2004/02/skos/core#comment> "SF" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "equipment and items of permanent, temporary and portable equipment playing an important role in safety systems/functions"@en ;
@@ -3375,7 +3325,6 @@ Note 2 to entry: For most of research reactors the heat production from fission 
 ###  https://w3id.org/emmo/domain/neo#SafetySystem
 :SafetySystem rdf:type owl:Class ;
               rdfs:subClassOf :NuclearEnergyObject ,
-                              :Nuclear_Plant_Concepts ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty elite:isConstituentOf ;
                                 owl:someValuesFrom :NuclearPowerPlant
@@ -3685,8 +3634,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
 
 ###  https://w3id.org/emmo/domain/neo#SystemClosing
 :SystemClosing rdf:type owl:Class ;
-               rdfs:subClassOf :Nuclear_Plant_Concepts ,
-                               :Operation ,
+               rdfs:subClassOf :Operation ,
                                :Operational_Activity ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty elite:isBehaviourOf ;
@@ -3721,8 +3669,7 @@ The standby liquid control system consists of a heated storage tank, two positiv
 
 ###  https://w3id.org/emmo/domain/neo#SystemOpening
 :SystemOpening rdf:type owl:Class ;
-               rdfs:subClassOf :Nuclear_Plant_Concepts ,
-                               :Operation ,
+               rdfs:subClassOf :Operation ,
                                :Operational_Activity ;
                <http://www.w3.org/2004/02/skos/core#comment> "To unobstruct an opening" ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "System Opening"@en .
@@ -3824,8 +3771,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
 
 ###  https://w3id.org/emmo/domain/neo#ThermalProtectionSystem
 :ThermalProtectionSystem rdf:type owl:Class ;
-                         rdfs:subClassOf :Nuclear_Plant_Concepts ,
-                                         :Plant_System ,
+                         rdfs:subClassOf :Plant_System ,
                                          :ReactorBuildingContents ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
@@ -3948,8 +3894,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
 
 ###  https://w3id.org/emmo/domain/neo#WetWell
 :WetWell rdf:type owl:Class ;
-         rdfs:subClassOf :Nuclear_Plant_Concepts ,
-                         :ReactorBuildingContents ,
+         rdfs:subClassOf :ReactorBuildingContents ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty elite:isConstituentOf ;
                            owl:someValuesFrom :PrimaryContainmentVessel
@@ -3957,6 +3902,13 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
          <http://www.w3.org/2004/02/skos/core#altLabel> "Reactor Wet Well"@en ;
          <http://www.w3.org/2004/02/skos/core#comment> "compartment of the primary containment system that contains the suppression pool and receives steam discharged from the drywell for pressure suppression and condensation." ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Wet Well"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#NuclearInstallation
+:NuclearInstallation rdf:type owl:Class ;
+                     rdfs:subClassOf :NuclearEnergyObject ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Installation" ;
+                     :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.1> .
 
 
 #################################################################
