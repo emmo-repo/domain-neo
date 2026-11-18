@@ -3224,17 +3224,6 @@ in operation or in accidents."""@en ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo#ResearchReactor
-:ResearchReactor rdf:type owl:Class ;
-                 rdfs:subClassOf :NuclearReactor ;
-                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Research Reactor"@en ;
-                 :definition """type of nuclear reactor (3.1.22) engineered to use its neutron flux and ionizing radiation for scientific research in different fields
-Note 1 to entry: The application fields can be medical, biological, electronic, engineering, industrial as well as related to specific reactor concepts or nuclear fuel cycle strategies services, technological developments and/or industrial production purposes. It includes the reactor core (3.1.23.1), the facilities/devices exposed to the neutron field within and around the core, and structures (3.7.1), systems and components (3.7.3) related to the safe operation (3.9.1) of the reactor.
-Note 2 to entry: For most of research reactors the heat production from fission power of the nuclear reaction is essentially useless, therefore the denomination “research reactor” becomes a complement regarding “power reactor” (3.2.1.1), for which heat is recovered for further use while the neutron flux and ionizing radiation are not.""" ;
-                 :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.5.1.2> ;
-                 :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/511.html> .
-
-
 ###  https://w3id.org/emmo/domain/neo#ResidualHeatRemovalSystem
 :ResidualHeatRemovalSystem rdf:type owl:Class ;
                            rdfs:subClassOf :ReactorBuildingContents ,

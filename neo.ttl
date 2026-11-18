@@ -162,6 +162,14 @@
                 :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.22> .
 
 
+###  https://w3id.org/emmo/domain/neo#ResearchReactor
+:ResearchReactor rdf:type owl:Class ;
+                 rdfs:subClassOf :NuclearReactor ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Research Reactor"@en ;
+                 :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.5.1.2> ;
+                 <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://vocabulary.iaea.org/iaea-safety-glossary/511.html> .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#NuclearInstallation
 <https://w3id.org/emmo/domain/neo/neo-source#NuclearInstallation> rdf:type owl:Class ;
                                                                   rdfs:subClassOf :NuclearEnergyObject ;
