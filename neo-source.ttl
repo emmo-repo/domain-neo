@@ -2264,19 +2264,6 @@ further decays, the event is referred to as inelastic scattering."""@en ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo#NuclearIsland
-:NuclearIsland rdf:type owl:Class ;
-               rdfs:subClassOf :NuclearEnergyObject ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty elite:isConstituentOf ;
-                                 owl:someValuesFrom :NuclearPowerPlant
-                               ] ;
-               rdfs:seeAlso <https://www-pub.iaea.org/MTCD/Publications/PDF/P1526_Web.pdf> ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Island"@en ;
-               :definition "A part of the nuclear power plant that consists of the containment, auxiliary and fuel building."@en ;
-               :referenceISO <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.23> .
-
-
 ###  https://w3id.org/emmo/domain/neo#NuclearMaterial
 :NuclearMaterial rdf:type owl:Class ;
                  rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
@@ -2342,18 +2329,6 @@ all offsite power."""@en ;
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Plant Worker"@en ;
                     :definition "Any person who works, whether full time, part time or temporarily, for an employer and who has recognized rights and duties in relation to occupational radiation protection."@en ;
                     :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/236.html> .
-
-
-###  https://w3id.org/emmo/domain/neo#NuclearPowerPlant
-:NuclearPowerPlant rdf:type owl:Class ;
-                   rdfs:subClassOf :NuclearEnergyObject ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty elite:participatesTo ;
-                                     owl:someValuesFrom :NPPOperationManagement
-                                   ] ;
-                   <http://www.w3.org/2004/02/skos/core#altLabel> "NPP"@en ;
-                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Power Plant"@en ;
-                   :isoDefinition <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.5> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearPowerPlantBuilding
@@ -2967,28 +2942,6 @@ Note 1 to entry: This includes floors, walls, beams, columns, doors, and penetra
                 :referenceARIS <https://aris.iaea.org/Glossary/> .
 
 
-###  https://w3id.org/emmo/domain/neo#ReactorCore
-:ReactorCore rdf:type owl:Class ;
-             rdfs:subClassOf :ReactorBuildingContents ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty elite:isConstituentOf ;
-                               owl:someValuesFrom :NuclearReactor
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty elite:participatesTo ;
-                               owl:someValuesFrom :ReactorCoreEnergyProduction
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
-                               owl:someValuesFrom :ReactorPressureVessel
-                             ] ;
-             rdfs:comment "holistic?" ;
-             <http://www.w3.org/2004/02/skos/core#definition> """part of a nuclear reactor (3.1.22), where the fissionable nuclides (3.1.2) sustaining the fission chain are located
-Note 1 to entry: In most cases, moderator (3.1.23.1.2) and coolant are also included in the reactor core (3.1.23.1)."""@en ;
-             <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Core"@en ;
-             :referenceISO "https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.23.1"^^xsd:anyURI .
-
-
 ###  https://w3id.org/emmo/domain/neo#ReactorCoreEnergyProduction
 :ReactorCoreEnergyProduction rdf:type owl:Class ;
                              rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
@@ -3112,12 +3065,6 @@ Note 3 to entry: The reactor protection system (RPS) imposes actions on several 
                             <http://www.w3.org/2004/02/skos/core#definition> "Plant system (3.7.2) designed to cool the main parts of the reactor shield in order to maintain reasonable values of temperature in all the main shield parts, especially under normal on-power conditions "@en ;
                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Shield Cooling System"@en ;
                             :referenceISO <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en> .
-
-
-###  https://w3id.org/emmo/domain/neo#Reactor_Core
-:Reactor_Core rdf:type owl:Class ;
-              rdfs:subClassOf <https://w3id.org/emmo/hume#Whole> ;
-              <http://www.w3.org/2004/02/skos/core#comment> "NEOCORE CANDIDATE" .
 
 
 ###  https://w3id.org/emmo/domain/neo#Reactor_Core_Role

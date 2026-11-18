@@ -146,11 +146,55 @@
 
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/emmo/0.0.7/elite#isConstituentOf
+elite:isConstituentOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#participatesTo
+elite:participatesTo rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c
+:RB4rNlczhggIx7lqdEK2d9c rdf:type owl:ObjectProperty .
+
+
+#################################################################
 #    Classes
 #################################################################
 
+###  https://w3id.org/emmo/domain/neo#NPPOperationManagement
+:NPPOperationManagement rdf:type owl:Class .
+
+
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#NuclearIsland
+:NuclearIsland rdf:type owl:Class ;
+               rdfs:subClassOf :NuclearEnergyObject ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty elite:isConstituentOf ;
+                                 owl:someValuesFrom :NuclearPowerPlant
+                               ] ;
+               rdfs:seeAlso <https://www-pub.iaea.org/MTCD/Publications/PDF/P1526_Web.pdf> ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Island"@en ;
+               :isoDefinition <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.23> .
+
+
+###  https://w3id.org/emmo/domain/neo#NuclearPowerPlant
+:NuclearPowerPlant rdf:type owl:Class ;
+                   rdfs:subClassOf :NuclearEnergyObject ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty elite:participatesTo ;
+                                     owl:someValuesFrom :NPPOperationManagement
+                                   ] ;
+                   <http://www.w3.org/2004/02/skos/core#altLabel> "NPP"@en ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Power Plant"@en ;
+                   :isoDefinition <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.5> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearReactor
@@ -162,12 +206,58 @@
                 :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.22> .
 
 
+###  https://w3id.org/emmo/domain/neo#ReactorBuildingContents
+:ReactorBuildingContents rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#ReactorCore
+:ReactorCore rdf:type owl:Class ;
+             rdfs:subClassOf :ReactorBuildingContents ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty elite:isConstituentOf ;
+                               owl:someValuesFrom :NuclearReactor
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty elite:participatesTo ;
+                               owl:someValuesFrom :ReactorCoreEnergyProduction
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
+                               owl:someValuesFrom :ReactorPressureVessel
+                             ] ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Core"@en ;
+             :isoDefinition "https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.23.1" ;
+             :referenceINIS "Reactor Cores"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#ReactorCoreEnergyProduction
+:ReactorCoreEnergyProduction rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#ReactorPressureVessel
+:ReactorPressureVessel rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#Reactor_Core
+:Reactor_Core rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/emmo/hume#Whole> ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Core"@en ;
+              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.1> .
+
+
 ###  https://w3id.org/emmo/domain/neo#ResearchReactor
 :ResearchReactor rdf:type owl:Class ;
                  rdfs:subClassOf :NuclearReactor ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Research Reactor"@en ;
                  :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.5.1.2> ;
                  <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://vocabulary.iaea.org/iaea-safety-glossary/511.html> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#CoreReflector
+<https://w3id.org/emmo/domain/neo/neo-source#CoreReflector> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
+                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Core Reflector" ;
+                                                            :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.1.1> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#NuclearInstallation
