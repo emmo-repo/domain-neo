@@ -2353,8 +2353,7 @@ all offsite power."""@en ;
                                    ] ;
                    <http://www.w3.org/2004/02/skos/core#altLabel> "NPP"@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Power Plant"@en ;
-                   :definition "Nuclear power plant is a nuclear reactor or reactors together with all structures, systems and components necessary for safety and for the production of power, i.e. heat or electricity"@en ;
-                   :referenceISO <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.5> .
+                   :isoDefinition <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.5> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearPowerPlantBuilding
