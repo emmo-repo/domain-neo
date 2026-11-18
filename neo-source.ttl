@@ -3910,14 +3910,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Wet Well"@en .
 
 
-###  https://w3id.org/emmo/domain/neo/neo-source#NuclearInstallation
-:NuclearInstallation rdf:type owl:Class ;
-                     rdfs:subClassOf :NuclearEnergyObject ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Installation" ;
-                     :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.1> ;
-                     :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/674> .
-
-
 #################################################################
 #    Annotations
 #################################################################
