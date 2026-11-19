@@ -1044,20 +1044,6 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Fast Induced Fission"@en .
 
 
-###  https://w3id.org/emmo/domain/neo#FastNeutron
-:FastNeutron rdf:type owl:Class ;
-             rdfs:subClassOf :Neutron ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty elite:isOutputOf ;
-                               owl:someValuesFrom :NuclearFission
-                             ] ;
-             <http://www.w3.org/2004/02/skos/core#definition> "A neutron with kinetic energy greater than its surroundings when released during fission."@en ;
-             <http://www.w3.org/2004/02/skos/core#prefLabel> "Fast Neutron"@en ;
-             :comment """Fast neutrons are considered as such in the context of a fission nuclear reactor, where the average neutron energy emerging from fission is about 2 MeV, before being slowed down by collisions. 
-While in some textbooks you can find a defnition of fast neutron as a neutron with E > 50 keV, there is not a clear definition of the range within which a neutron can be considered \"fast\"."""@en ;
-             :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.5.1> .
-
-
 ###  https://w3id.org/emmo/domain/neo#FeedwaterPump
 :FeedwaterPump rdf:type owl:Class ;
                rdfs:subClassOf :TurbineBuildingContents ,
@@ -1067,20 +1053,6 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                                ] ;
                <http://www.w3.org/2004/02/skos/core#altLabel> "NPP Feedwater Pump"@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Feedwater Pump"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#Fertile_Nuclide
-:Fertile_Nuclide rdf:type owl:Class ;
-                 rdfs:subClassOf :Nuclide ;
-                 <http://www.w3.org/2004/02/skos/core#comment> "A nuclide, which is not itself fissile (fissionable by thermal neutrons), that can be converted into a fissile nuclide by irradiation in a reactor. There are two basic fertile materials: uranium-238 and thorium-232. When these fertile materials capture neutrons, they are converted into fissile plutonium-239 and uranium-233, respectively." ;
-                 :referenceNRCG "Fertile Material"^^xsd:anyURI .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fertile_Nuclide ;
-   owl:annotatedProperty :referenceNRCG ;
-   owl:annotatedTarget "Fertile Material"^^xsd:anyURI ;
-   rdfs:comment "Misleading Label and definition"
- ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#FireEngine
@@ -1143,66 +1115,6 @@ port outside the TB, which had been installed in the previous year as a fire pro
 port outside the TB, which had been installed in the previous year as a fire protection measure based on the experience of the Niigata-Chuetsu-Oki earthquake, was put into action."""@en ;
    rdfs:seeAlso """Pag 19,  The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""
- ] .
-
-
-###  https://w3id.org/emmo/domain/neo#Fissile_Nuclide
-:Fissile_Nuclide rdf:type owl:Class ;
-                 rdfs:subClassOf :Nuclide ;
-                 <http://www.w3.org/2004/02/skos/core#comment> "A nuclide that is capable of undergoing fission after capturing low-energy thermal (slow) neutrons." ;
-                 <http://www.w3.org/2004/02/skos/core#definition> """A nucleus capable of fission by thermal neutrons,
-provided the effective neutron production cross section, exceeds
-the effective absorption cross section. The common fissile nuclei
-are 235U,239P~, and233U.1""" ;
-                 :referenceNCTG "Fissile nucleus" ;
-                 :referenceNRCG "Fissile Material"^^xsd:anyURI .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fissile_Nuclide ;
-   owl:annotatedProperty :referenceNRCG ;
-   owl:annotatedTarget "Fissile Material"^^xsd:anyURI ;
-   rdfs:comment "this label can generate misunderstanding"
- ] .
-
-
-###  https://w3id.org/emmo/domain/neo#FissionProduct
-:FissionProduct rdf:type owl:Class ;
-                rdfs:subClassOf :Atom ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty elite:isOutputOf ;
-                                  owl:someValuesFrom :NuclearFission
-                                ] ;
-                rdfs:comment "Used in contexts where the radiation emitted by the radionuclide is the potential hazard."@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "A radionuclide produced by nuclear fission."@en ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "Fission Product"@en ;
-                :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/961.html"^^xsd:anyURI .
-
-
-###  https://w3id.org/emmo/domain/neo#Fissionable_Nuclide
-:Fissionable_Nuclide rdf:type owl:Class ;
-                     rdfs:subClassOf :Nuclide ;
-                     <http://www.w3.org/2004/02/skos/core#comment> "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it ;
-                     :definition """A nucleus capable of fission by neutrons of some
-energy. Fissionable nuclei include 238U, 240Pu, and others with
-neutron-energy fission thresholds, in addition to those that are fissile.
-See fissile nucleus.""" ;
-                     :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.7> ;
-                     :referenceNCTG "Fissionable Nucleus" ;
-                     :referenceNRCG "Fissionable Material"^^xsd:anyURI ;
-                     :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/963.html> .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fissionable_Nuclide ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
-   owl:annotatedTarget "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it ;
-   rdfs:seeAlso "Montagnini"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fissionable_Nuclide ;
-   owl:annotatedProperty :referenceNRCG ;
-   owl:annotatedTarget "Fissionable Material"^^xsd:anyURI ;
-   rdfs:comment "Misleading"
  ] .
 
 
@@ -2158,9 +2070,8 @@ http://www-ns.iaea.org/downloads/ni/training/specific_expert_knowledge/psa-level
                                         owl:onProperty elite:isSubProcessOf ;
                                         owl:someValuesFrom :ReactorCoreEnergyProduction
                                       ] ;
-                      <http://www.w3.org/2004/02/skos/core#definition> "series of nuclear reactions in which one of the agents necessary to the series is itself produced by the same reactions"@en ;
                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Chain Reaction"@en ;
-                      :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:1709:ed-3:v1:en:term:3.8> .
+                      :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:1709:ed-3:v1:en:term:3.8> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearElasticScattering
@@ -3396,14 +3307,6 @@ perform its intended safety functions."""@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Spent Fuel Pool"@en .
 
 
-###  https://w3id.org/emmo/domain/neo#SpontaneousNuclearFission
-:SpontaneousNuclearFission rdf:type owl:Class ;
-                           rdfs:subClassOf :NuclearFission ;
-                           <http://www.w3.org/2004/02/skos/core#definition> "nuclear fission (3.1.1) produced in a nucleus, having an inherent instability, that develops itself in a purely stochastic way and without intervention of any external colliding particle"@en ;
-                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Spontaneous Nuclear Fission"@en ;
-                           :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.1.2> .
-
-
 ###  https://w3id.org/emmo/domain/neo#SprayInjection
 :SprayInjection rdf:type owl:Class ;
                 rdfs:subClassOf :MaterialInjection ,
@@ -3656,22 +3559,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
                                          owl:someValuesFrom :ThermalNeutron
                                        ] ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Thermal Induced Fission"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#ThermalNeutron
-:ThermalNeutron rdf:type owl:Class ;
-                rdfs:subClassOf :Neutron ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty elite:isInputOf ;
-                                  owl:someValuesFrom :ThermalInducedFission
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty elite:isOutputOf ;
-                                  owl:someValuesFrom :NuclearChainReaction
-                                ] ;
-                <http://www.w3.org/2004/02/skos/core#altLabel> "Neutron that has, by collision with other particles, reached an energy state equal to that of its surroundings."@en ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "Thermal Neutron"@en ;
-                :referenceISO "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#ThermalProtectionSystem

@@ -35,6 +35,14 @@
                                                rdfs:subPropertyOf rdfs:label .
 
 
+###  http://www.w3.org/2004/02/skos/core#comment
+<http://www.w3.org/2004/02/skos/core#comment> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 <http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty ;
                                                 rdfs:subPropertyOf rdfs:label .
@@ -157,6 +165,10 @@ elite:isConstituentOf rdf:type owl:ObjectProperty .
 elite:isConstitutiveProcessOf rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/emmo/0.0.7/elite#isInputOf
+elite:isInputOf rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/emmo/0.0.7/elite#isOutputOf
 elite:isOutputOf rdf:type owl:ObjectProperty .
 
@@ -177,8 +189,93 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 #    Classes
 #################################################################
 
+###  https://w3id.org/emmo/domain/neo#Atom
+:Atom rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#FastNeutron
+:FastNeutron rdf:type owl:Class ;
+             rdfs:subClassOf :Neutron ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty elite:isOutputOf ;
+                               owl:someValuesFrom :NuclearFission
+                             ] ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Fast Neutron"@en ;
+             :comment """Fast neutrons are considered as such in the context of a fission nuclear reactor, where the average neutron energy emerging from fission is about 2 MeV, before being slowed down by collisions. 
+While in some textbooks you can find a defnition of fast neutron as a neutron with E > 50 keV, there is not a clear definition of the range within which a neutron can be considered \"fast\"."""@en ;
+             :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.19> .
+
+
+###  https://w3id.org/emmo/domain/neo#Fertile_Nuclide
+:Fertile_Nuclide rdf:type owl:Class ;
+                 rdfs:subClassOf :Nuclide ;
+                 <http://www.w3.org/2004/02/skos/core#comment> "A nuclide, which is not itself fissile (fissionable by thermal neutrons), that can be converted into a fissile nuclide by irradiation in a reactor. There are two basic fertile materials: uranium-238 and thorium-232. When these fertile materials capture neutrons, they are converted into fissile plutonium-239 and uranium-233, respectively." ;
+                 :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.5> ;
+                 :referenceNRCG "Fertile Material"^^xsd:anyURI .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Fertile_Nuclide ;
+   owl:annotatedProperty :referenceNRCG ;
+   owl:annotatedTarget "Fertile Material"^^xsd:anyURI ;
+   rdfs:comment "Misleading Label and definition"
+ ] .
+
+
+###  https://w3id.org/emmo/domain/neo#Fissile_Nuclide
+:Fissile_Nuclide rdf:type owl:Class ;
+                 rdfs:subClassOf :Nuclide ;
+                 <http://www.w3.org/2004/02/skos/core#comment> "A nuclide that is capable of undergoing fission after capturing low-energy thermal (slow) neutrons." ;
+                 :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.4> ;
+                 :referenceNCTG "Fissile nucleus" ;
+                 :referenceNRCG "Fissile Material"^^xsd:anyURI .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Fissile_Nuclide ;
+   owl:annotatedProperty :referenceNRCG ;
+   owl:annotatedTarget "Fissile Material"^^xsd:anyURI ;
+   rdfs:comment "this label can generate misunderstanding"
+ ] .
+
+
 ###  https://w3id.org/emmo/domain/neo#FissionProduct
-:FissionProduct rdf:type owl:Class .
+:FissionProduct rdf:type owl:Class ;
+                rdfs:subClassOf :Atom ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty elite:isOutputOf ;
+                                  owl:someValuesFrom :NuclearFission
+                                ] ;
+                rdfs:comment "Used in contexts where the radiation emitted by the radionuclide is the potential hazard."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Fission Product"@en ;
+                :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.6> ;
+                <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> "https://vocabulary.iaea.org/iaea-safety-glossary/961.html"^^xsd:anyURI .
+
+
+###  https://w3id.org/emmo/domain/neo#Fissionable_Nuclide
+:Fissionable_Nuclide rdf:type owl:Class ;
+                     rdfs:subClassOf :Nuclide ;
+                     <http://www.w3.org/2004/02/skos/core#comment> "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it ;
+                     <http://www.w3.org/2004/02/skos/core#definition> """A nucleus capable of fission by neutrons of some
+energy. Fissionable nuclei include 238U, 240Pu, and others with
+neutron-energy fission thresholds, in addition to those that are fissile.
+See fissile nucleus."""@en ;
+                     :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.7> ;
+                     :referenceNCTG "Fissionable Nucleus" ;
+                     :referenceNRCG "Fissionable Material"^^xsd:anyURI ;
+                     :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/963.html> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Fissionable_Nuclide ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
+   owl:annotatedTarget "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it ;
+   rdfs:seeAlso "Montagnini"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Fissionable_Nuclide ;
+   owl:annotatedProperty :referenceNRCG ;
+   owl:annotatedTarget "Fissionable Material"^^xsd:anyURI ;
+   rdfs:comment "Misleading"
+ ] .
 
 
 ###  https://w3id.org/emmo/domain/neo#FuelAssembly
@@ -191,6 +288,10 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/emmo/domain/neo#NPPOperationManagement
 :NPPOperationManagement rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#Neutron
+:Neutron rdf:type owl:Class .
 
 
 ###  https://w3id.org/emmo/domain/neo#NeutronInducedFission
@@ -270,6 +371,10 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                 :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.22> .
 
 
+###  https://w3id.org/emmo/domain/neo#Nuclide
+:Nuclide rdf:type owl:Class .
+
+
 ###  https://w3id.org/emmo/domain/neo#ReactorBuildingContents
 :ReactorBuildingContents rdf:type owl:Class .
 
@@ -317,6 +422,32 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                  <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://vocabulary.iaea.org/iaea-safety-glossary/511.html> .
 
 
+###  https://w3id.org/emmo/domain/neo#SpontaneousNuclearFission
+:SpontaneousNuclearFission rdf:type owl:Class ;
+                           rdfs:subClassOf :NuclearFission ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Spontaneous Nuclear Fission"@en ;
+                           :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.3> .
+
+
+###  https://w3id.org/emmo/domain/neo#ThermalInducedFission
+:ThermalInducedFission rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#ThermalNeutron
+:ThermalNeutron rdf:type owl:Class ;
+                rdfs:subClassOf :Neutron ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty elite:isInputOf ;
+                                  owl:someValuesFrom :ThermalInducedFission
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty elite:isOutputOf ;
+                                  owl:someValuesFrom :NuclearChainReaction
+                                ] ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Thermal Neutron"@en ;
+                :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.18> .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#CoreReflector
 <https://w3id.org/emmo/domain/neo/neo-source#CoreReflector> rdf:type owl:Class ;
                                                             rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
@@ -324,11 +455,52 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                                                             :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.1.1> .
 
 
+###  https://w3id.org/emmo/domain/neo/neo-source#Criticality
+<https://w3id.org/emmo/domain/neo/neo-source#Criticality> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Criticality"@en ;
+                                                          <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.15> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#DelayedFissionNeutron
+<https://w3id.org/emmo/domain/neo/neo-source#DelayedFissionNeutron> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf :Neutron ;
+                                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Delayed Fission Neutron"@en ;
+                                                                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.9> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#DelayedFissionRadiation
+<https://w3id.org/emmo/domain/neo/neo-source#DelayedFissionRadiation> rdf:type owl:Class ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Delayed Fission Radiation"@en ;
+                                                                      :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.8> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#EffectiveNuclearMultiplicationFactor
+<https://w3id.org/emmo/domain/neo/neo-source#EffectiveNuclearMultiplicationFactor> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                                                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Effective Nuclear Multiplication Factor"@en ;
+                                                                                   :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.10> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#FissionEnergy
+<https://w3id.org/emmo/domain/neo/neo-source#FissionEnergy> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Fission Energy"@en ;
+                                                            :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.6> .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#Moderator
 <https://w3id.org/emmo/domain/neo/neo-source#Moderator> rdf:type owl:Class ;
                                                         rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Moderator"@en ;
                                                         :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.1.2> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#NeutronMultiplicativeConfiguration
+<https://w3id.org/emmo/domain/neo/neo-source#NeutronMultiplicativeConfiguration> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron Multiplicative Configuration"@en ;
+                                                                                 :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.10> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#NuclearInstallation
@@ -340,11 +512,32 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                                                                   <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://vocabulary.iaea.org/iaea-safety-glossary/674> .
 
 
+###  https://w3id.org/emmo/domain/neo/neo-source#Poison
+<https://w3id.org/emmo/domain/neo/neo-source#Poison> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
+                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Poison"@en ;
+                                                     <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://vocabulary.iaea.org/iaea-safety-glossary/601.html> .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#PrimaryCoolant
 <https://w3id.org/emmo/domain/neo/neo-source#PrimaryCoolant> rdf:type owl:Class ;
                                                              rdfs:subClassOf <https://w3id.org/emmo/hume#Fluid> ;
                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Primary Coolant"@en ;
                                                              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.4> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#PromptFissionNeutron
+<https://w3id.org/emmo/domain/neo/neo-source#PromptFissionNeutron> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf :Neutron ;
+                                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Prompt Fission Neutron"@en ;
+                                                                   :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.17> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#Reactivity
+<https://w3id.org/emmo/domain/neo/neo-source#Reactivity> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactivity"@en ;
+                                                         <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://vocabulary.iaea.org/iaea-safety-glossary/479.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#ReactorInternals
