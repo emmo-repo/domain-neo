@@ -153,6 +153,18 @@
 elite:isConstituentOf rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/emmo/0.0.7/elite#isConstitutiveProcessOf
+elite:isConstitutiveProcessOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#isOutputOf
+elite:isOutputOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/emmo/0.0.7/elite#isStageOf
+elite:isStageOf rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/emmo/0.0.7/elite#participatesTo
 elite:participatesTo rdf:type owl:ObjectProperty .
 
@@ -165,12 +177,60 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 #    Classes
 #################################################################
 
+###  https://w3id.org/emmo/domain/neo#FissionProduct
+:FissionProduct rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#FuelAssembly
+:FuelAssembly rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#FuelElement
+:FuelElement rdf:type owl:Class .
+
+
 ###  https://w3id.org/emmo/domain/neo#NPPOperationManagement
 :NPPOperationManagement rdf:type owl:Class .
 
 
+###  https://w3id.org/emmo/domain/neo#NeutronInducedFission
+:NeutronInducedFission rdf:type owl:Class ;
+                       rdfs:subClassOf :NuclearFission ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty elite:isStageOf ;
+                                         owl:someValuesFrom :NuclearChainReaction
+                                       ] ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron Induced Fission"@en ;
+                       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.2> .
+
+
+###  https://w3id.org/emmo/domain/neo#NuclearChainReaction
+:NuclearChainReaction rdf:type owl:Class .
+
+
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#NuclearFission
+:NuclearFission rdf:type owl:Class ;
+                rdfs:subClassOf :NuclearReaction ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty elite:isConstitutiveProcessOf ;
+                                  owl:someValuesFrom :FuelAssembly
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty elite:isConstitutiveProcessOf ;
+                                  owl:someValuesFrom :FuelElement
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty [ owl:inverseOf elite:isOutputOf
+                                                 ] ;
+                                  owl:someValuesFrom :FissionProduct
+                                ] ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Fission"@en ;
+                :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en:term:3.2.2> ;
+                :referenceINIS "FISSION"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearIsland
@@ -195,6 +255,10 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                    <http://www.w3.org/2004/02/skos/core#altLabel> "NPP"@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Power Plant"@en ;
                    :isoDefinition <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.5> .
+
+
+###  https://w3id.org/emmo/domain/neo#NuclearReaction
+:NuclearReaction rdf:type owl:Class .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearReactor

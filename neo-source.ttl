@@ -2075,19 +2075,6 @@ Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abund
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo#NeutronInducedFission
-:NeutronInducedFission rdf:type owl:Class ;
-                       rdfs:subClassOf :NuclearFission ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty elite:isStageOf ;
-                                         owl:someValuesFrom :NuclearChainReaction
-                                       ] ;
-                       <http://www.w3.org/2004/02/skos/core#definition> """nuclear fission (3.1.1) initiated by a nucleus when an external colliding particle is absorbed
-Note 1 to entry: The absorption of the external colliding particle, usually a neutron, generates a strong increase in the compound nucleus internal energy and, hence, increases the compound nucleus instability, favouring a large energy release by means of a nucleus partition."""@en ;
-                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron Induced Fission"@en ;
-                       :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.1.1> .
-
-
 ###  https://w3id.org/emmo/domain/neo#NoNuclearISO
 :NoNuclearISO rdf:type owl:Class ;
               <http://www.w3.org/2004/02/skos/core#comment> "I will not put all of them in NEO Core" ,
@@ -2193,29 +2180,6 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
                      <http://www.w3.org/2004/02/skos/core#comment> "NEOCORE CANDIDATE" ;
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "NEO object"@en ;
                      :definition "An endurant entity that belongs to the Nuclear Energy Ontology (NEO), encompassing any physical, material, or conceptual object, component, or system related to nuclear science and technology, without being restricted to energy generation" .
-
-
-###  https://w3id.org/emmo/domain/neo#NuclearFission
-:NuclearFission rdf:type owl:Class ;
-                rdfs:subClassOf :NuclearReaction ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty elite:isConstitutiveProcessOf ;
-                                  owl:someValuesFrom :FuelAssembly
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty elite:isConstitutiveProcessOf ;
-                                  owl:someValuesFrom :FuelElement
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty [ owl:inverseOf elite:isOutputOf
-                                                 ] ;
-                                  owl:someValuesFrom :FissionProduct
-                                ] ;
-                <http://www.w3.org/2004/02/skos/core#definition> """splitting of a nucleus into fission fragments, either spontaneously or as a result of the impact of a particle, usually with an associated release of energy
-Note 1 to entry: The nucleus usually has a high mass number, together with an intermediate or low average-binding-energy-per-nucleon; hence, an inherent instability exists, and the fission fragments are usually highly unstable.
-[SOURCE: ISO 12749‑5:2018, 3.1.1]"""@en ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Fission"@en ;
-                :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-1:ed-1:v1:en:term:3.2.2> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearFuel
