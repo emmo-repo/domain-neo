@@ -355,23 +355,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                            :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.2> .
 
 
-###  https://w3id.org/emmo/domain/neo#BoilingWaterReactor
-:BoilingWaterReactor rdf:type owl:Class ;
-                     rdfs:subClassOf :Light_Water_Reactor ;
-                     <http://www.w3.org/2004/02/skos/core#altLabel> "BWR"@en ;
-                     <http://www.w3.org/2004/02/skos/core#definition> """nuclear reactor (3.1.22) with water as a coolant and as a moderator (3.1.23.1.2), boiling in the core 
-Note 1 to entry: In a boiling water reactor the generated heat is removed from the core by evaporation. """@en ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Boiling Water Reactor"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :BoilingWaterReactor ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """nuclear reactor (3.1.22) with water as a coolant and as a moderator (3.1.23.1.2), boiling in the core 
-Note 1 to entry: In a boiling water reactor the generated heat is removed from the core by evaporation. """@en ;
-   :referenceISO "ISO 12749-5:2018(en) Nuclear energy, nuclear technologies, and radiological protection — Vocabulary — Part 5: Nuclear reactors "^^xsd:anyURI
- ] .
-
-
 ###  https://w3id.org/emmo/domain/neo#BoratedWater
 :BoratedWater rdf:type owl:Class ;
               rdfs:subClassOf <https://w3id.org/emmo/hume#Fluid> ,
@@ -1430,19 +1413,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                              "list of weight-percentage of isotopes in heavy metal of the fuel matrix" .
 
 
-###  https://w3id.org/emmo/domain/neo#Light_Water_Reactor
-:Light_Water_Reactor rdf:type owl:Class ;
-                     rdfs:subClassOf :NuclearReactor ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty elite:isConstituentOf ;
-                                       owl:someValuesFrom :NuclearPowerPlant
-                                     ] ;
-                     <http://www.w3.org/2004/02/skos/core#altLabel> "LWR" ;
-                     <http://www.w3.org/2004/02/skos/core#definition> "thermal nuclear reactor (3.1.22) cooled and moderated by light water" ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Light Water Reactor"@en ;
-                     :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.4.2> .
-
-
 ###  https://w3id.org/emmo/domain/neo#LossOfAllACPower
 :LossOfAllACPower rdf:type owl:Class ;
                   rdfs:subClassOf :NPPPowerLoss ,
@@ -2237,18 +2207,6 @@ all offsite power."""@en ;
                        :definition "part of the NPP implementing NPP´s functions with the scope specified in the NPP´s design basis"@en ;
                        :example "The NPP unit includes the nuclear reactor plus all its associated systems and buildings not shared by other nuclear reactors (ISO 12749-5:2018)"@en ;
                        :referenceISO <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.3> .
-
-
-###  https://w3id.org/emmo/domain/neo#NuclearPowerReactor
-:NuclearPowerReactor rdf:type owl:Class ;
-                     rdfs:subClassOf :NuclearReactor ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty elite:isConstituentOf ;
-                                       owl:someValuesFrom :NuclearPowerPlant
-                                     ] ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Power Reactor"@en ;
-                     :definition "nuclear reactor (3.1.22) conceived to produce electrical power" ;
-                     :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.2.1.1> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearReaction
