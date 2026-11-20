@@ -38,7 +38,8 @@ It includes the representation of the Fukushima Daichi accident, based on the of
 
 The ontology is still in development phase and provides a partial cover of the nuclear engineering domain and Fukushima Daichi accident report."""@en ;
                                                <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/legalcode"^^xsd:anyURI ;
-                                               <http://purl.org/dc/terms/title> "Nuclear Energy Ontology"@en .
+                                               <http://purl.org/dc/terms/title> "Nuclear Energy Ontology"@en ;
+                                               rdfs:isDefinedBy <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en> .
 
 #################################################################
 #    Annotation properties
