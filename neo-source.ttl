@@ -84,6 +84,14 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
 
 
+###  https://w3id.org/emmo/domain/neo/neo-source#IAEAPRISReference
+:IAEAPRISReference rdf:type owl:AnnotationProperty ;
+                   rdfs:seeAlso "https://pris-stats.iaea.org/glossary" ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "IAEA PRIS Reference"@en ;
+                   :comment "Reference to the IAEA Power Reactor Information System Glossary  that might provide additional information about the subject resource."@en ;
+                   rdfs:subPropertyOf rdfs:seeAlso .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition
 :NSSG_Definition rdf:type owl:AnnotationProperty ;
                  rdfs:subPropertyOf rdfs:isDefinedBy ;
@@ -1663,17 +1671,6 @@ Pag 29""" ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo#MultipleUnitNuclearPowerPlant
-:MultipleUnitNuclearPowerPlant rdf:type owl:Class ;
-                               rdfs:subClassOf :NuclearPowerPlant ;
-                               rdfs:comment "The nuclear reactors and the electric production lines can be either almost identical or different between them, though usually sharing various support or auxiliary installations, systems and/or supplies"@en ;
-                               <http://www.w3.org/2004/02/skos/core#altLabel> "Multiple Unit NPP"@en ;
-                               <http://www.w3.org/2004/02/skos/core#example> "Tennessee Valley Authority Browns Ferry Nuclear Plant (Athens, Alabama, United States)"@en ;
-                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Multiple Unit Nuclear Power Plant"@en ;
-                               :definition "Nuclear power plant  having on a common site, two or more electric production lines"@en ;
-                               :referenceISO <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.1.2> .
-
-
 ###  https://w3id.org/emmo/domain/neo#NPPActivationProduct
 :NPPActivationProduct rdf:type owl:Class ;
                       rdfs:subClassOf :FissionProduct ,
@@ -2058,7 +2055,6 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Domain Object" ;
-                     <http://www.w3.org/2004/02/skos/core#comment> "NEOCORE CANDIDATE" ;
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "NEO object"@en ;
                      :definition "An endurant entity that belongs to the Nuclear Energy Ontology (NEO), encompassing any physical, material, or conceptual object, component, or system related to nuclear science and technology, without being restricted to energy generation" .
 
@@ -2193,20 +2189,6 @@ all offsite power."""@en ;
    owl:annotatedTarget "structure that has a roof and walls, with the similar function as a container (3.14)" ;
    rdfs:seeAlso <https://www.iso.org/obp/ui/en/#iso:std:iso:ts:19883:ed-1:v1:en:term:3.15>
  ] .
-
-
-###  https://w3id.org/emmo/domain/neo#NuclearPowerPlantUnit
-:NuclearPowerPlantUnit rdf:type owl:Class ;
-                       rdfs:subClassOf :NuclearEnergyObject ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty elite:isConstituentOf ;
-                                         owl:someValuesFrom :NuclearPowerPlant
-                                       ] ;
-                       <http://www.w3.org/2004/02/skos/core#altLabel> "NPP Unit"@en ;
-                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Power Plant Unit"@en ;
-                       :definition "part of the NPP implementing NPP´s functions with the scope specified in the NPP´s design basis"@en ;
-                       :example "The NPP unit includes the nuclear reactor plus all its associated systems and buildings not shared by other nuclear reactors (ISO 12749-5:2018)"@en ;
-                       :referenceISO <https://www.iso.org/obp/ui/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.3> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearReaction
@@ -3235,16 +3217,6 @@ perform its intended safety functions."""@en ;
                     :referenceNRCG "https://www.nrc.gov/docs/ML0707/ML070710376.pdf" .
 
 
-###  https://w3id.org/emmo/domain/neo#SingleUnitNuclearPowerPlant
-:SingleUnitNuclearPowerPlant rdf:type owl:Class ;
-                             rdfs:subClassOf :NuclearPowerPlant ;
-                             <http://www.w3.org/2004/02/skos/core#altLabel> "Single Unit NPP"@en ;
-                             <http://www.w3.org/2004/02/skos/core#example> "Emsland Nuclear Power Plant (Lingen, Germany)"@en ;
-                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Single Unit Nuclear Power Plant"@en ;
-                             :definition "Nuclear power plant having a single electric production line"@en ;
-                             :referenceISO <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.4.1.1> .
-
-
 ###  https://w3id.org/emmo/domain/neo#SourceMaterial
 :SourceMaterial rdf:type owl:Class ;
                 rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
@@ -3652,6 +3624,20 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
          <http://www.w3.org/2004/02/skos/core#altLabel> "Reactor Wet Well"@en ;
          <http://www.w3.org/2004/02/skos/core#comment> "compartment of the primary containment system that contains the suppression pool and receives steam discharged from the drywell for pressure suppression and condensation." ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Wet Well"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#EnergyAvailabilityFactor
+:EnergyAvailabilityFactor rdf:type owl:Class ;
+                          rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Energy Availability Factor"@en ;
+                          :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.3> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#ReferenceUnitPower
+:ReferenceUnitPower rdf:type owl:Class ;
+                    rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Reference Unit Power"@en ;
+                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.2> .
 
 
 #################################################################
