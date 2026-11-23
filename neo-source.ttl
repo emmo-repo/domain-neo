@@ -1067,7 +1067,6 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 ###  https://w3id.org/emmo/domain/neo#FireProtectionSystem
 :FireProtectionSystem rdf:type owl:Class ;
                       rdfs:subClassOf :Nuclear_Accident_Concepts ,
-                                      :Plant_System ,
                                       :ReactorMitigationSystem ;
                       rdfs:comment """The fire protection system was designed primarily for fire suppression and flooding of the containment vessel, not for
 injection of water into the reactor."""@en ;
@@ -1327,7 +1326,6 @@ Reference ISO 80000""" .
 ###  https://w3id.org/emmo/domain/neo#InjectionSystem
 :InjectionSystem rdf:type owl:Class ;
                  rdfs:subClassOf :NuclearEnergyObject ,
-                                 :Plant_System ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty elite:participatesTo ;
                                    owl:someValuesFrom :MaterialInjection
@@ -1636,7 +1634,6 @@ The MSIVs are engineered safety features designed to limit the consequences of a
 ###  https://w3id.org/emmo/domain/neo#Mitigation
 :Mitigation rdf:type owl:Class ;
             rdfs:subClassOf :Nuclear_Accident_Concepts ,
-                            :Safety_Concept ,
                             :SevereAccidentManagement ;
             <http://www.w3.org/2004/02/skos/core#definition> "limitation of any negative consequence (3.6) of a particular event"@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitigation"@en ;
@@ -1701,8 +1698,7 @@ Pag 29""" ;
 
 ###  https://w3id.org/emmo/domain/neo#NPPBarrier
 :NPPBarrier rdf:type owl:Class ;
-            rdfs:subClassOf :ReactorPreventiveSystems ,
-                            :Safety_Concept ;
+            rdfs:subClassOf :ReactorPreventiveSystems ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "Barrier"@en ;
             <http://www.w3.org/2004/02/skos/core#comment> "One or several barrier elements that are designed to prevent unintended flow of formation fluid﻿."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "NPP Barrier"@en ;
@@ -2335,11 +2331,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso:24513:ed-1:v1:en"""^^xsd:anyURI
               :definition "Term which when used alone refers to the turbine action only. It is that component of the gas turbine which produces power from expansion of the working fluid."@en .
 
 
-###  https://w3id.org/emmo/domain/neo#Plant_System
-:Plant_System rdf:type owl:Class ;
-              rdfs:subClassOf :NoNuclearISO .
-
-
 ###  https://w3id.org/emmo/domain/neo#PlutoniumMaterial
 :PlutoniumMaterial rdf:type owl:Class ;
                    rdfs:subClassOf :NuclearMaterial ;
@@ -2387,7 +2378,6 @@ https://www-pub.iaea.org/MTCD/Publications/PDF/PUB1821_web.pdf""" ;
 ###  https://w3id.org/emmo/domain/neo#PowerSupplySystem
 :PowerSupplySystem rdf:type owl:Class ;
                    rdfs:subClassOf :NuclearEnergyObject ,
-                                   :Plant_System ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty elite:isConstituentOf ;
                                      owl:someValuesFrom :NuclearPowerPlant
@@ -3010,7 +3000,6 @@ in operation or in accidents."""@en ;
 ###  https://w3id.org/emmo/domain/neo#RuleRegulation
 :RuleRegulation rdf:type owl:Class ;
                 rdfs:subClassOf :NPPNormalOperation ,
-                                :Safety_Concept ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty elite:affects ;
                                   owl:someValuesFrom :EmergencyManagementOrganization
@@ -3045,8 +3034,7 @@ in operation or in accidents."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#SafetyCriticalEquipment
 :SafetyCriticalEquipment rdf:type owl:Class ;
-                         rdfs:subClassOf :NuclearEnergyObject ,
-                                         :Safety_Concept ;
+                         rdfs:subClassOf :NuclearEnergyObject ;
                          <http://www.w3.org/2004/02/skos/core#comment> "SF" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "equipment and items of permanent, temporary and portable equipment playing an important role in safety systems/functions"@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Safety Critical Equipment"@en .
@@ -3077,36 +3065,6 @@ in operation or in accidents."""@en ;
                rdfs:subClassOf :SafetySystem ;
                rdfs:comment "This term refers all the devices used to measure parameters and properties about system."@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Safety Sensors"@en .
-
-
-###  https://w3id.org/emmo/domain/neo#SafetySystem
-:SafetySystem rdf:type owl:Class ;
-              rdfs:subClassOf :NuclearEnergyObject ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty elite:isConstituentOf ;
-                                owl:someValuesFrom :NuclearPowerPlant
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty elite:participatesTo ;
-                                owl:someValuesFrom :NPPProtection
-                              ] ;
-              <http://www.w3.org/2004/02/skos/core#altLabel> "Safety Elements"@en ;
-              <http://www.w3.org/2004/02/skos/core#definition> """system including the safety devices and the interconnections between the equipment to be protected and any discharge connection to the nearest location of a safe disposal place
-Note 1 to entry: This location can either be an atmospheric outlet or the connection into a safe collecting system or flare."""@en ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "Safety System"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :SafetySystem ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget """system including the safety devices and the interconnections between the equipment to be protected and any discharge connection to the nearest location of a safe disposal place
-Note 1 to entry: This location can either be an atmospheric outlet or the connection into a safe collecting system or flare."""@en ;
-   :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:4126:-9:ed-1:v1:en:term:3.2>
- ] .
-
-
-###  https://w3id.org/emmo/domain/neo#Safety_Concept
-:Safety_Concept rdf:type owl:Class ;
-                rdfs:subClassOf :NoNuclearISO .
 
 
 ###  https://w3id.org/emmo/domain/neo#SeaWater
@@ -3494,8 +3452,7 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
 
 ###  https://w3id.org/emmo/domain/neo#ThermalProtectionSystem
 :ThermalProtectionSystem rdf:type owl:Class ;
-                         rdfs:subClassOf :Plant_System ,
-                                         :ReactorBuildingContents ,
+                         rdfs:subClassOf :ReactorBuildingContents ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :ContainmentBuilding

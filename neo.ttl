@@ -356,6 +356,10 @@ See fissile nucleus."""@en ;
 :NPPOperationManagement rdf:type owl:Class .
 
 
+###  https://w3id.org/emmo/domain/neo#NPPProtection
+:NPPProtection rdf:type owl:Class .
+
+
 ###  https://w3id.org/emmo/domain/neo#Neutron
 :Neutron rdf:type owl:Class .
 
@@ -578,7 +582,19 @@ See fissile nucleus."""@en ;
 
 
 ###  https://w3id.org/emmo/domain/neo#SafetySystem
-:SafetySystem rdf:type owl:Class .
+:SafetySystem rdf:type owl:Class ;
+              rdfs:subClassOf :NuclearEnergyObject ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty elite:isConstituentOf ;
+                                owl:someValuesFrom :NuclearPowerPlant
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty elite:participatesTo ;
+                                owl:someValuesFrom :NPPProtection
+                              ] ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "Safety Elements"@en ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Safety System"@en ;
+              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.4> .
 
 
 ###  https://w3id.org/emmo/domain/neo#SingleUnitNuclearPowerPlant
@@ -645,6 +661,31 @@ See fissile nucleus."""@en ;
                                                              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.3.1.4> .
 
 
+###  https://w3id.org/emmo/domain/neo/neo-source#CogenerationReactor
+<https://w3id.org/emmo/domain/neo/neo-source#CogenerationReactor> rdf:type owl:Class ;
+                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Cogeneration Reactor"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#Containment
+<https://w3id.org/emmo/domain/neo/neo-source#Containment> rdf:type owl:Class ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Containment"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#Contractor
+<https://w3id.org/emmo/domain/neo/neo-source#Contractor> rdf:type owl:Class ;
+                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Contractor"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#ControlledArea
+<https://w3id.org/emmo/domain/neo/neo-source#ControlledArea> rdf:type owl:Class ;
+                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Controlled Area"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#ConventionalInstrumentation
+<https://w3id.org/emmo/domain/neo/neo-source#ConventionalInstrumentation> rdf:type owl:Class ;
+                                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Conventional Instrumentation"@en .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#ConverterReactor
 <https://w3id.org/emmo/domain/neo/neo-source#ConverterReactor> rdf:type owl:Class ;
                                                                rdfs:subClassOf :NuclearReactor ;
@@ -679,6 +720,26 @@ See fissile nucleus."""@en ;
                                                                       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.8> .
 
 
+###  https://w3id.org/emmo/domain/neo/neo-source#DemonstratorReactor
+<https://w3id.org/emmo/domain/neo/neo-source#DemonstratorReactor> rdf:type owl:Class ;
+                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Demonstration Reactor"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#DesalinationReactor
+<https://w3id.org/emmo/domain/neo/neo-source#DesalinationReactor> rdf:type owl:Class ;
+                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Desalination Reactor"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#DesignBasis
+<https://w3id.org/emmo/domain/neo/neo-source#DesignBasis> rdf:type owl:Class ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Basis"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#DesignLife
+<https://w3id.org/emmo/domain/neo/neo-source#DesignLife> rdf:type owl:Class ;
+                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Life"@en .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#EffectiveNuclearMultiplicationFactor
 <https://w3id.org/emmo/domain/neo/neo-source#EffectiveNuclearMultiplicationFactor> rdf:type owl:Class ;
                                                                                    rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
@@ -686,11 +747,31 @@ See fissile nucleus."""@en ;
                                                                                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.10> .
 
 
+###  https://w3id.org/emmo/domain/neo/neo-source#EngineeringStage
+<https://w3id.org/emmo/domain/neo/neo-source#EngineeringStage> rdf:type owl:Class ;
+                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Engineering Stage"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#EquipmentSpecification
+<https://w3id.org/emmo/domain/neo/neo-source#EquipmentSpecification> rdf:type owl:Class ;
+                                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Equipmennt Specification"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#ExCoreInstrumentation
+<https://w3id.org/emmo/domain/neo/neo-source#ExCoreInstrumentation> rdf:type owl:Class ;
+                                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Ex Core Instrumentation"@en .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#FastReactor
 <https://w3id.org/emmo/domain/neo/neo-source#FastReactor> rdf:type owl:Class ;
                                                           rdfs:subClassOf :NuclearReactor ;
                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Fast Reactor"@en ;
                                                           :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.3.1.7> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#FirstOfAKindReactor
+<https://w3id.org/emmo/domain/neo/neo-source#FirstOfAKindReactor> rdf:type owl:Class ;
+                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "First Of A Kind Reactor"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#FissionEnergy
@@ -735,11 +816,44 @@ See fissile nucleus."""@en ;
                                                                 :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.3.1.11> .
 
 
+###  https://w3id.org/emmo/domain/neo/neo-source#InCoreInstrumentation
+<https://w3id.org/emmo/domain/neo/neo-source#InCoreInstrumentation> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#InspectionBody
+<https://w3id.org/emmo/domain/neo/neo-source#InspectionBody> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#InstrumantationAndControlSystem
+<https://w3id.org/emmo/domain/neo/neo-source#InstrumantationAndControlSystem> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#License
+<https://w3id.org/emmo/domain/neo/neo-source#License> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#LicensingBasis
+<https://w3id.org/emmo/domain/neo/neo-source#LicensingBasis> rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#Lincensee
+<https://w3id.org/emmo/domain/neo/neo-source#Lincensee> rdf:type owl:Class .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#LiquidMetalReactor
 <https://w3id.org/emmo/domain/neo/neo-source#LiquidMetalReactor> rdf:type owl:Class ;
                                                                  rdfs:subClassOf :NuclearReactor ;
                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Liquid Metal Reactor"@en ;
                                                                  :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.3.1.12> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#MandatoryDocumentation
+<https://w3id.org/emmo/domain/neo/neo-source#MandatoryDocumentation> rdf:type owl:Class ;
+                                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Mandatory Documentation"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#Manufacturer
+<https://w3id.org/emmo/domain/neo/neo-source#Manufacturer> rdf:type owl:Class .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#MaterialTestingReactor
@@ -801,12 +915,32 @@ See fissile nucleus."""@en ;
                                                                   <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://vocabulary.iaea.org/iaea-safety-glossary/674> .
 
 
+###  https://w3id.org/emmo/domain/neo/neo-source#NuclearInstrumentation
+<https://w3id.org/emmo/domain/neo/neo-source#NuclearInstrumentation> rdf:type owl:Class ;
+                                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Instrumentation"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#NuclearProject
+<https://w3id.org/emmo/domain/neo/neo-source#NuclearProject> rdf:type owl:Class ;
+                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Project"@en .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#NuclearSteamSupplySystem
 <https://w3id.org/emmo/domain/neo/neo-source#NuclearSteamSupplySystem> rdf:type owl:Class ;
                                                                        rdfs:subClassOf :NuclearEnergyObject ;
                                                                        <http://www.w3.org/2004/02/skos/core#altLabel> "NSSS"@en ;
                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Steam Supply System"@en ;
                                                                        :isoDefinition "https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.9" .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#PlantInstrumentation
+<https://w3id.org/emmo/domain/neo/neo-source#PlantInstrumentation> rdf:type owl:Class ;
+                                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Plant Instrumentation"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#PlantSystem
+<https://w3id.org/emmo/domain/neo/neo-source#PlantSystem> rdf:type owl:Class ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Plant System"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#Poison
@@ -837,6 +971,21 @@ See fissile nucleus."""@en ;
                                                              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.4> .
 
 
+###  https://w3id.org/emmo/domain/neo/neo-source#PrimeContractor
+<https://w3id.org/emmo/domain/neo/neo-source#PrimeContractor> rdf:type owl:Class ;
+                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Prime Contractor"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#ProjectManagementArea
+<https://w3id.org/emmo/domain/neo/neo-source#ProjectManagementArea> rdf:type owl:Class ;
+                                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Project Management Area"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#ProjectStage
+<https://w3id.org/emmo/domain/neo/neo-source#ProjectStage> rdf:type owl:Class ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Project Stage"@en .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#PromptFissionNeutron
 <https://w3id.org/emmo/domain/neo/neo-source#PromptFissionNeutron> rdf:type owl:Class ;
                                                                    rdfs:subClassOf :Neutron ;
@@ -848,6 +997,21 @@ See fissile nucleus."""@en ;
 <https://w3id.org/emmo/domain/neo/neo-source#PromptGammaRayNeutronActivationAnalysis> rdf:type owl:Class ;
                                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Prompt Gamma Ray Neutron Activation Analysis"@en ;
                                                                                       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.5.5.1> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#PrototypeReactor
+<https://w3id.org/emmo/domain/neo/neo-source#PrototypeReactor> rdf:type owl:Class ;
+                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Prototype Reactor"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#RadiationMonitoring
+<https://w3id.org/emmo/domain/neo/neo-source#RadiationMonitoring> rdf:type owl:Class ;
+                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Radiation Monitoring"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#RadiationShielding
+<https://w3id.org/emmo/domain/neo/neo-source#RadiationShielding> rdf:type owl:Class ;
+                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Radiation Shielding"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#RadioIsotopeProduction
@@ -876,11 +1040,41 @@ See fissile nucleus."""@en ;
                                                                :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.2> .
 
 
+###  https://w3id.org/emmo/domain/neo/neo-source#ReactorProtectionSystem
+<https://w3id.org/emmo/domain/neo/neo-source#ReactorProtectionSystem> rdf:type owl:Class ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Protection System"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#ReactorRegulationSystem
+<https://w3id.org/emmo/domain/neo/neo-source#ReactorRegulationSystem> rdf:type owl:Class ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Regulation System"@en .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#ReactorVessel
 <https://w3id.org/emmo/domain/neo/neo-source#ReactorVessel> rdf:type owl:Class ;
                                                             rdfs:subClassOf :ReactorBuildingContents ;
                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Vessel"@en ;
                                                             :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.3> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#Redunancy
+<https://w3id.org/emmo/domain/neo/neo-source#Redunancy> rdf:type owl:Class ;
+                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Redundancy"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#RegulatoryBody
+<https://w3id.org/emmo/domain/neo/neo-source#RegulatoryBody> rdf:type owl:Class ;
+                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Regulatory Body"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#ResponsibleEntity
+<https://w3id.org/emmo/domain/neo/neo-source#ResponsibleEntity> rdf:type owl:Class ;
+                                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Responsible Entity"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#SInglePurposeReactor
+<https://w3id.org/emmo/domain/neo/neo-source#SInglePurposeReactor> rdf:type owl:Class ;
+                                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Single Purpose Reactor"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#SpecialPurposeReactor
@@ -909,6 +1103,21 @@ See fissile nucleus."""@en ;
                                                                    rdfs:subClassOf :NuclearEnergyObject ;
                                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Steam Turbin Generator"@en ;
                                                                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.10> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#Structure
+<https://w3id.org/emmo/domain/neo/neo-source#Structure> rdf:type owl:Class ;
+                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Structure"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#SubContractor
+<https://w3id.org/emmo/domain/neo/neo-source#SubContractor> rdf:type owl:Class ;
+                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Sub Structure"@en .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#SupportSystem
+<https://w3id.org/emmo/domain/neo/neo-source#SupportSystem> rdf:type owl:Class ;
+                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Support Systen"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#ThermalReactor
@@ -945,9 +1154,156 @@ See fissile nucleus."""@en ;
                                                              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.6> .
 
 
+###  https://w3id.org/emmo/domain/neo/neo-source#ZeroPowerReactor
+<https://w3id.org/emmo/domain/neo/neo-source#ZeroPowerReactor> rdf:type owl:Class ;
+                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Zero Power Reactor"@en .
+
+
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/emmo/domain/fukushima#lossOfUltimateHeatSink>
+                :DC_Operational_Power_Source
+                :NoNuclearISO
+                :NuclearEnergyObject
+                :NuclearReactor
+                :PreassureIncreasing
+                :PressureRelieveValve
+                :R0N27qMQzeRjM0vSOeAvUT
+                :RBsAUchYFBwAtcVUeFr8EFq
+                :RRVTDj2E9x5cjit7EQ9Dkx
+                :RZtNAG3BL7lDm8L77EbEBd
+                :ReactorBuilding
+                :SCVentilation
+                <https://w3id.org/emmo/domain/neo/neo-source#BoronNeutronCaptureTherapy>
+                <https://w3id.org/emmo/domain/neo/neo-source#CogenerationReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#Containment>
+                <https://w3id.org/emmo/domain/neo/neo-source#Contractor>
+                <https://w3id.org/emmo/domain/neo/neo-source#ControlledArea>
+                <https://w3id.org/emmo/domain/neo/neo-source#ConventionalInstrumentation>
+                <https://w3id.org/emmo/domain/neo/neo-source#DelayedFissionRadiation>
+                <https://w3id.org/emmo/domain/neo/neo-source#DemonstratorReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#DesalinationReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#DesignBasis>
+                <https://w3id.org/emmo/domain/neo/neo-source#DesignLife>
+                <https://w3id.org/emmo/domain/neo/neo-source#EngineeringStage>
+                <https://w3id.org/emmo/domain/neo/neo-source#EquipmentSpecification>
+                <https://w3id.org/emmo/domain/neo/neo-source#ExCoreInstrumentation>
+                <https://w3id.org/emmo/domain/neo/neo-source#FirstOfAKindReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#InCoreInstrumentation>
+                <https://w3id.org/emmo/domain/neo/neo-source#InspectionBody>
+                <https://w3id.org/emmo/domain/neo/neo-source#InstrumantationAndControlSystem>
+                <https://w3id.org/emmo/domain/neo/neo-source#License>
+                <https://w3id.org/emmo/domain/neo/neo-source#LicensingBasis>
+                <https://w3id.org/emmo/domain/neo/neo-source#Lincensee>
+                <https://w3id.org/emmo/domain/neo/neo-source#MandatoryDocumentation>
+                <https://w3id.org/emmo/domain/neo/neo-source#Manufacturer>
+                <https://w3id.org/emmo/domain/neo/neo-source#MaterialTestingReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#MultiplePurposeReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#NetronActivationAnalysis>
+                <https://w3id.org/emmo/domain/neo/neo-source#NeutronDiffractionTechnique>
+                <https://w3id.org/emmo/domain/neo/neo-source#NeutronTransumationDoping>
+                <https://w3id.org/emmo/domain/neo/neo-source#NuclearInstrumentation>
+                <https://w3id.org/emmo/domain/neo/neo-source#NuclearProject>
+                <https://w3id.org/emmo/domain/neo/neo-source#PlantInstrumentation>
+                <https://w3id.org/emmo/domain/neo/neo-source#PlantSystem>
+                <https://w3id.org/emmo/domain/neo/neo-source#PrimeContractor>
+                <https://w3id.org/emmo/domain/neo/neo-source#ProjectManagementArea>
+                <https://w3id.org/emmo/domain/neo/neo-source#ProjectStage>
+                <https://w3id.org/emmo/domain/neo/neo-source#PromptGammaRayNeutronActivationAnalysis>
+                <https://w3id.org/emmo/domain/neo/neo-source#PrototypeReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#RadiationMonitoring>
+                <https://w3id.org/emmo/domain/neo/neo-source#RadiationShielding>
+                <https://w3id.org/emmo/domain/neo/neo-source#RadioIsotopeProduction>
+                <https://w3id.org/emmo/domain/neo/neo-source#RadioIsotopeProductionReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#ReactorProtectionSystem>
+                <https://w3id.org/emmo/domain/neo/neo-source#ReactorRegulationSystem>
+                <https://w3id.org/emmo/domain/neo/neo-source#Redunancy>
+                <https://w3id.org/emmo/domain/neo/neo-source#RegulatoryBody>
+                <https://w3id.org/emmo/domain/neo/neo-source#ResponsibleEntity>
+                <https://w3id.org/emmo/domain/neo/neo-source#SInglePurposeReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#Structure>
+                <https://w3id.org/emmo/domain/neo/neo-source#SubContractor>
+                <https://w3id.org/emmo/domain/neo/neo-source#SupportSystem>
+                <https://w3id.org/emmo/domain/neo/neo-source#TrainingAndEducationReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#ZeroPowerReactor>
+                <https://w3id.org/emmo/hume#Data>
+                <https://w3id.org/emmo/hume#Holistic>
+                <https://w3id.org/emmo/hume#Persistence>
+                <https://w3id.org/emmo/hume#PhysicalEntity>
+                <https://w3id.org/emmo/hume#Semiotics>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/emmo/domain/fukushima#lossOfUltimateHeatSink>
+                :DC_Operational_Power_Source
+                :NoNuclearISO
+                :NuclearEnergyObject
+                :NuclearReactor
+                :PreassureIncreasing
+                :PressureRelieveValve
+                :R0N27qMQzeRjM0vSOeAvUT
+                :RBsAUchYFBwAtcVUeFr8EFq
+                :RRVTDj2E9x5cjit7EQ9Dkx
+                :RZtNAG3BL7lDm8L77EbEBd
+                :ReactorBuilding
+                :SCVentilation
+                <https://w3id.org/emmo/domain/neo/neo-source#BoronNeutronCaptureTherapy>
+                <https://w3id.org/emmo/domain/neo/neo-source#CogenerationReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#Containment>
+                <https://w3id.org/emmo/domain/neo/neo-source#Contractor>
+                <https://w3id.org/emmo/domain/neo/neo-source#ControlledArea>
+                <https://w3id.org/emmo/domain/neo/neo-source#DelayedFissionRadiation>
+                <https://w3id.org/emmo/domain/neo/neo-source#DemonstratorReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#DesalinationReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#DesignBasis>
+                <https://w3id.org/emmo/domain/neo/neo-source#DesignLife>
+                <https://w3id.org/emmo/domain/neo/neo-source#EngineeringStage>
+                <https://w3id.org/emmo/domain/neo/neo-source#EquipmentSpecification>
+                <https://w3id.org/emmo/domain/neo/neo-source#FirstOfAKindReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#InspectionBody>
+                <https://w3id.org/emmo/domain/neo/neo-source#InstrumantationAndControlSystem>
+                <https://w3id.org/emmo/domain/neo/neo-source#License>
+                <https://w3id.org/emmo/domain/neo/neo-source#LicensingBasis>
+                <https://w3id.org/emmo/domain/neo/neo-source#Lincensee>
+                <https://w3id.org/emmo/domain/neo/neo-source#MandatoryDocumentation>
+                <https://w3id.org/emmo/domain/neo/neo-source#Manufacturer>
+                <https://w3id.org/emmo/domain/neo/neo-source#MaterialTestingReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#MultiplePurposeReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#NetronActivationAnalysis>
+                <https://w3id.org/emmo/domain/neo/neo-source#NeutronDiffractionTechnique>
+                <https://w3id.org/emmo/domain/neo/neo-source#NeutronTransumationDoping>
+                <https://w3id.org/emmo/domain/neo/neo-source#NuclearProject>
+                <https://w3id.org/emmo/domain/neo/neo-source#PlantSystem>
+                <https://w3id.org/emmo/domain/neo/neo-source#PrimeContractor>
+                <https://w3id.org/emmo/domain/neo/neo-source#ProjectManagementArea>
+                <https://w3id.org/emmo/domain/neo/neo-source#ProjectStage>
+                <https://w3id.org/emmo/domain/neo/neo-source#PromptGammaRayNeutronActivationAnalysis>
+                <https://w3id.org/emmo/domain/neo/neo-source#PrototypeReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#RadiationMonitoring>
+                <https://w3id.org/emmo/domain/neo/neo-source#RadiationShielding>
+                <https://w3id.org/emmo/domain/neo/neo-source#RadioIsotopeProduction>
+                <https://w3id.org/emmo/domain/neo/neo-source#RadioIsotopeProductionReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#Redunancy>
+                <https://w3id.org/emmo/domain/neo/neo-source#RegulatoryBody>
+                <https://w3id.org/emmo/domain/neo/neo-source#ResponsibleEntity>
+                <https://w3id.org/emmo/domain/neo/neo-source#SInglePurposeReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#Structure>
+                <https://w3id.org/emmo/domain/neo/neo-source#SubContractor>
+                <https://w3id.org/emmo/domain/neo/neo-source#TrainingAndEducationReactor>
+                <https://w3id.org/emmo/domain/neo/neo-source#ZeroPowerReactor>
+                <https://w3id.org/emmo/hume#Data>
+                <https://w3id.org/emmo/hume#Holistic>
+                <https://w3id.org/emmo/hume#Persistence>
+                <https://w3id.org/emmo/hume#PhysicalEntity>
+                <https://w3id.org/emmo/hume#Semiotics>
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( <https://w3id.org/emmo/domain/fukushima#lossOfUltimateHeatSink>
