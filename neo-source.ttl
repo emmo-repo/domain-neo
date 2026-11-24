@@ -2259,14 +2259,6 @@ perform its intended safety functions.""" ;
                :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/949.html"^^xsd:anyURI .
 
 
-###  https://w3id.org/emmo/domain/neo#Operation
-:Operation rdf:type owl:Class ;
-           rdfs:subClassOf :IntentionalProcess ;
-           <http://www.w3.org/2004/02/skos/core#altLabel> "Facilities Operation" ;
-           <http://www.w3.org/2004/02/skos/core#prefLabel> "Operation"@en ;
-           :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/690.html"^^xsd:anyURI .
-
-
 ###  https://w3id.org/emmo/domain/neo#Operational_Activity
 :Operational_Activity rdf:type owl:Class ;
                       rdfs:subClassOf :NoNuclearISO .
@@ -3578,24 +3570,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Wet Well"@en .
 
 
-###  https://w3id.org/emmo/domain/neo/neo-source#ActiveComponent
-:ActiveComponent rdf:type owl:Class ;
-                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Active Component"@en ;
-                 :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/104> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#Component
-:Component rdf:type owl:Class ;
-           <http://www.w3.org/2004/02/skos/core#prefLabel> "Component"@en ;
-           :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.13> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#ElectricalSystem
-:ElectricalSystem rdf:type owl:Class ;
-                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Electrical System"@en ;
-                  :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.10> .
-
-
 ###  https://w3id.org/emmo/domain/neo/neo-source#EnergyAvailabilityFactor
 :EnergyAvailabilityFactor rdf:type owl:Class ;
                           rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
@@ -3603,68 +3577,16 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
                           :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.3> .
 
 
-###  https://w3id.org/emmo/domain/neo/neo-source#FullPowerOperation
-:FullPowerOperation rdf:type owl:Class ;
-                    rdfs:subClassOf :Operation ;
-                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Full Power Operation"@en ;
-                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.2.2> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#LowPowerOperation
-:LowPowerOperation rdf:type owl:Class ;
-                   rdfs:subClassOf :Operation ;
-                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Low Power Operation"@en ;
-                   :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.2.4> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#MechanicalSystem
-:MechanicalSystem rdf:type owl:Class ;
-                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Mechanical System"@en ;
-                  :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.12> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#OperationalStates
-:OperationalStates rdf:type owl:Class ;
-                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Operational States"@en ;
-                   :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/598.html> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#PartialLoadOperation
-:PartialLoadOperation rdf:type owl:Class ;
-                      rdfs:subClassOf :Operation ;
-                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Partial Load Operation"@en ;
-                      :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.2.3> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#PassiveComponent
-:PassiveComponent rdf:type owl:Class ;
-                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Passive Component"@en ;
-                  :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/570.html> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#PrimaryHeatTransportSystem
-:PrimaryHeatTransportSystem rdf:type owl:Class ;
-                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Primary Heat Transport System"@en ;
-                            :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.9> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#ProcessSystem
-:ProcessSystem rdf:type owl:Class ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "Process System"@en ;
-               :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.10> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#ReactorShieldCoolingSystem
-:ReactorShieldCoolingSystem rdf:type owl:Class ;
-                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Shield Cooling System"@en ;
-                            :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.8> .
-
-
 ###  https://w3id.org/emmo/domain/neo/neo-source#ReferenceUnitPower
 :ReferenceUnitPower rdf:type owl:Class ;
                     rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Reference Unit Power"@en ;
                     :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.2> .
+
+
+###  https://w3id.org/emmo/domain/neo/neo-source#ShutdownState
+:ShutdownState rdf:type owl:Class ;
+               rdfs:subClassOf :IntentionalProcess .
 
 
 #################################################################
@@ -3698,26 +3620,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
 :NuclearSpentFuel <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Spent Fuel" ;
                   :definition "Nuclear fuel removed from a reactor following irradiation that is no longer usable in its present form because of depletion of fissile material, poison buildup or radiation damage." ;
                   :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/1230.html> .
-
-
-:ConventionalInstrumentation :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.5.2> .
-
-
-:ExCoreInstrumentation :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.5.1.2> .
-
-
-:InCoreInstrumentation <http://www.w3.org/2004/02/skos/core#prefLabel> "In Core Instrumentation"@en ;
-                       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.4.1.1> .
-
-
-:MandatoryDocumentation :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.7.13> .
-
-
-:Manufacturer <http://www.w3.org/2004/02/skos/core#prefLabel> "Manufacturer"@en ;
-              :isoDefinition "https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.7.21" .
-
-
-:SupportSystem :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.6> .
 
 
 #################################################################
