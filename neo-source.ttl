@@ -2685,8 +2685,6 @@ in [section IV of the Transport Regulations [2]]. (See SSR-6 (Rev. 1) [2].)""" ;
                                            owl:onProperty :RB4rNlczhggIx7lqdEK2d9c ;
                                            owl:someValuesFrom :ContainmentBuilding
                                          ] ;
-                         rdfs:comment "no ISO nuclear" ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "building Element" ;
                          <http://www.w3.org/2004/02/skos/core#comment> "Elements that are contained in a Reactor Building"@en ,
                                                                        """They are distinguished from elements as integral part of a built environment
 Note 1 to entry: This includes floors, walls, beams, columns, doors, and penetrations, but does not include contents."""@en ;
@@ -3556,6 +3554,14 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
          <http://www.w3.org/2004/02/skos/core#altLabel> "Reactor Wet Well"@en ;
          <http://www.w3.org/2004/02/skos/core#comment> "compartment of the primary containment system that contains the suppression pool and receives steam discharged from the drywell for pressure suppression and condensation." ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Wet Well"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/emmo/domain/neo#RBfahJ7XEvDRY0I74gA4EhW
+:RBfahJ7XEvDRY0I74gA4EhW rdf:type :SystemClosing .
 
 
 #################################################################

@@ -207,22 +207,6 @@
                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Pressure Relieve Valve" .
 
 
-###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
-<https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT> rdf:type owl:Class .
-
-
-###  https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq
-<https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq> rdf:type owl:Class .
-
-
-###  https://w3id.org/emmo/domain/neo#RRVTDj2E9x5cjit7EQ9Dkx
-<https://w3id.org/emmo/domain/neo#RRVTDj2E9x5cjit7EQ9Dkx> rdf:type owl:Class .
-
-
-###  https://w3id.org/emmo/domain/neo#RZtNAG3BL7lDm8L77EbEBd
-<https://w3id.org/emmo/domain/neo#RZtNAG3BL7lDm8L77EbEBd> rdf:type owl:Class .
-
-
 ###  https://w3id.org/emmo/domain/neo#ReactorBuilding
 <https://w3id.org/emmo/domain/neo#ReactorBuilding> rdf:type owl:Class ;
                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Building" .
@@ -442,10 +426,6 @@
                                                                     <https://w3id.org/emmo/domain/neo#MainSteamIsolationValve> ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c> ;
-                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#RZtNAG3BL7lDm8L77EbEBd>
-                                                                    ] ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c> ;
                                                                       owl:someValuesFrom <https://w3id.org/emmo/domain/neo#ReactorBuilding>
                                                                     ] ;
                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "MSIV_Unit2"@en .
@@ -477,11 +457,7 @@
 
 
 ###  https://w3id.org/emmo/domain/neo#R9d1EKHudbhPmfvQxlND3Wr
-<https://w3id.org/emmo/domain/neo#R9d1EKHudbhPmfvQxlND3Wr> rdf:type owl:NamedIndividual ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <https://w3id.org/emmo/emmo-lite#isBehaviourOf> ;
-                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#RRVTDj2E9x5cjit7EQ9Dkx>
-                                                                    ] ;
+<https://w3id.org/emmo/domain/neo#R9d1EKHudbhPmfvQxlND3Wr> rdf:type owl:NamedIndividual ;
                                                            <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> ;
                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "DCPowerLoss_unit2"@en ;
                                                            <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RDAWOe94vcv6aVGTD0p8Rh6> .
@@ -536,11 +512,7 @@
 
 
 ###  https://w3id.org/emmo/domain/neo#RB9SU6UpAJ8MygM1uCXbEzt
-<https://w3id.org/emmo/domain/neo#RB9SU6UpAJ8MygM1uCXbEzt> rdf:type owl:NamedIndividual ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> ;
-                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT>
-                                                                    ] ;
+<https://w3id.org/emmo/domain/neo#RB9SU6UpAJ8MygM1uCXbEzt> rdf:type owl:NamedIndividual ;
                                                            <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> ;
                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "NPPNormalOperationRatedPower_Unit2"@en ;
                                                            <https://w3id.org/emmo/emmo-lite#foregoes> <https://w3id.org/emmo/domain/neo#RBHjDlLwaPMxKKtjq16Lw1c> .
@@ -577,11 +549,7 @@
 
 
 ###  https://w3id.org/emmo/domain/neo#RBc3mI1yVMSGjTWyWdVvMiP
-<https://w3id.org/emmo/domain/neo#RBc3mI1yVMSGjTWyWdVvMiP> rdf:type owl:NamedIndividual ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <https://w3id.org/emmo/emmo-lite#isBehaviourOf> ;
-                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq>
-                                                                    ] ;
+<https://w3id.org/emmo/domain/neo#RBc3mI1yVMSGjTWyWdVvMiP> rdf:type owl:NamedIndividual ;
                                                            <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#RBrcoh6pN7tToFnM1m59yXl> ;
                                                            <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#Rb5hP2Q5XG2czxqOFu5nb9> ;
                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit3"@en ;
@@ -589,11 +557,7 @@
 
 
 ###  https://w3id.org/emmo/domain/neo#RBfahJ7XEvDRY0I74gA4EhW
-<https://w3id.org/emmo/domain/neo#RBfahJ7XEvDRY0I74gA4EhW> rdf:type owl:NamedIndividual ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <https://w3id.org/emmo/emmo-lite#isBehaviourOf> ;
-                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq>
-                                                                    ] ;
+<https://w3id.org/emmo/domain/neo#RBfahJ7XEvDRY0I74gA4EhW> rdf:type owl:NamedIndividual ;
                                                            <https://w3id.org/emmo/emmo-lite#isBehaviourOf> <https://w3id.org/emmo/domain/neo#R8wL8gWueAFQTEzJ4Rj2QKI> ;
                                                            <https://w3id.org/emmo/emmo-lite#isConstitutiveProcessOf> <https://w3id.org/emmo/domain/neo#R7uvG224iPqEldlfFwndlKr> ;
                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "closingMSIV_Unit2"@en ;
@@ -625,10 +589,6 @@
 ###  https://w3id.org/emmo/domain/neo#RBrcoh6pN7tToFnM1m59yXl
 <https://w3id.org/emmo/domain/neo#RBrcoh6pN7tToFnM1m59yXl> rdf:type owl:NamedIndividual ,
                                                                     <https://w3id.org/emmo/domain/neo#MainSteamIsolationValve> ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c> ;
-                                                                      owl:someValuesFrom <https://w3id.org/emmo/domain/neo#RZtNAG3BL7lDm8L77EbEBd>
-                                                                    ] ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <https://w3id.org/emmo/domain/neo#RB4rNlczhggIx7lqdEK2d9c> ;
                                                                       owl:someValuesFrom <https://w3id.org/emmo/domain/neo#ReactorBuilding>
