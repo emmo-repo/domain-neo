@@ -177,6 +177,10 @@ elite:isOutputOf rdf:type owl:ObjectProperty .
 elite:isStageOf rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/emmo/0.0.7/elite#isSubProcessOf
+elite:isSubProcessOf rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/emmo/0.0.7/elite#participatesTo
 elite:participatesTo rdf:type owl:ObjectProperty .
 
@@ -205,6 +209,10 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 :Atom rdf:type owl:Class .
 
 
+###  https://w3id.org/emmo/domain/neo#BeyondDesignBasisAccident
+:BeyondDesignBasisAccident rdf:type owl:Class .
+
+
 ###  https://w3id.org/emmo/domain/neo#BoilingWaterReactor
 :BoilingWaterReactor rdf:type owl:Class ;
                      rdfs:subClassOf :Light_Water_Reactor ;
@@ -225,8 +233,35 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 :DC_Operational_Power_Source rdf:type owl:Class .
 
 
+###  https://w3id.org/emmo/domain/neo#DefenceinDepthProcedures
+:DefenceinDepthProcedures rdf:type owl:Class ;
+                          rdfs:subClassOf :Nuclear_Accident_Concepts ,
+                                          :Operation ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty elite:isSubProcessOf ;
+                                            owl:someValuesFrom :NPPOperationManagement
+                                          ] ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Defence In Depth Procedures"@en ;
+                          :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/1069.html"^^xsd:anyURI .
+
+
+###  https://w3id.org/emmo/domain/neo#DesignBasisAccident
+:DesignBasisAccident rdf:type owl:Class ;
+                     rdfs:subClassOf :NuclearPlantAccident ;
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "DBA"@en ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Basis Accident"@en ;
+                     :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/96> .
+
+
 ###  https://w3id.org/emmo/domain/neo#DryWell
 :DryWell rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en ;
+       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.2> .
 
 
 ###  https://w3id.org/emmo/domain/neo#FastNeutron
@@ -315,11 +350,34 @@ See fissile nucleus."""@en ;
 
 
 ###  https://w3id.org/emmo/domain/neo#FuelAssembly
-:FuelAssembly rdf:type owl:Class .
+:FuelAssembly rdf:type owl:Class ;
+              rdfs:subClassOf :ReactorBuildingContents ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty elite:isConstituentOf ;
+                                owl:someValuesFrom :ReactorCore
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty elite:participatesTo ;
+                                owl:someValuesFrom :NPPRefueling
+                              ] ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Fuel Assembly"@en ;
+              :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/974.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#FuelElement
-:FuelElement rdf:type owl:Class .
+:FuelElement rdf:type owl:Class ;
+             rdfs:subClassOf :ReactorBuildingContents ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty elite:isConstituentOf ;
+                               owl:someValuesFrom :FuelAssembly
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty elite:participatesTo ;
+                               owl:someValuesFrom :NPPRefueling
+                             ] ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Fuel Element"@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Fuel Rod"@en ;
+             :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/976.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#HeadVentNozzle
@@ -376,6 +434,24 @@ See fissile nucleus."""@en ;
 :NPPProtection rdf:type owl:Class .
 
 
+###  https://w3id.org/emmo/domain/neo#NPPRefueling
+:NPPRefueling rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#NPPShutdown
+:NPPShutdown rdf:type owl:Class ;
+             rdfs:subClassOf :NPPNormalOperation ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Shutdown is the state of a nuclear reactor when the fission reaction is slowed significantly or halted completely"@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "NPP Shutdown"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :NPPShutdown ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Shutdown is the state of a nuclear reactor when the fission reaction is slowed significantly or halted completely"@en ;
+   rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Shutdown>
+ ] .
+
+
 ###  https://w3id.org/emmo/domain/neo#Neutron
 :Neutron rdf:type owl:Class .
 
@@ -400,7 +476,10 @@ See fissile nucleus."""@en ;
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
-:NuclearEnergyObject rdf:type owl:Class .
+:NuclearEnergyObject rdf:type owl:Class ;
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Domain Object" ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "NEO object"@en ;
+                     :definition "An endurant entity that belongs to the Nuclear Energy Ontology (NEO), encompassing any physical, material, or conceptual object, component, or system related to nuclear science and technology, without being restricted to energy generation" .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearFission
@@ -434,6 +513,10 @@ See fissile nucleus."""@en ;
                rdfs:seeAlso <https://www-pub.iaea.org/MTCD/Publications/PDF/P1526_Web.pdf> ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Island"@en ;
                :isoDefinition <https://www.iso.org/obp/ui#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.23> .
+
+
+###  https://w3id.org/emmo/domain/neo#NuclearPlantAccident
+:NuclearPlantAccident rdf:type owl:Class .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearPlantWorker
@@ -494,6 +577,25 @@ See fissile nucleus."""@en ;
                                "THERMONUCLEAR REACTORS" .
 
 
+###  https://w3id.org/emmo/domain/neo#NuclearSevereAccident
+:NuclearSevereAccident rdf:type owl:Class ;
+                       rdfs:subClassOf :BeyondDesignBasisAccident ;
+                       <http://www.w3.org/2004/02/skos/core#altLabel> "Severe Accident"@en ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Severe Accident"@en ;
+                       :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/98> .
+
+
+###  https://w3id.org/emmo/domain/neo#Nuclear_Accident_Concepts
+:Nuclear_Accident_Concepts rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#Nuclear_ReactorMaintanance
+:Nuclear_ReactorMaintanance rdf:type owl:Class ;
+                            rdfs:subClassOf :NPPNormalOperation ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Maintanance"@en ;
+                            :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/705.html> .
+
+
 ###  https://w3id.org/emmo/domain/neo#Nuclide
 :Nuclide rdf:type owl:Class .
 
@@ -528,22 +630,6 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#PressureRelieveValve
 :PressureRelieveValve rdf:type owl:Class .
-
-
-###  https://w3id.org/emmo/domain/neo#R0N27qMQzeRjM0vSOeAvUT
-:R0N27qMQzeRjM0vSOeAvUT rdf:type owl:Class .
-
-
-###  https://w3id.org/emmo/domain/neo#RBsAUchYFBwAtcVUeFr8EFq
-:RBsAUchYFBwAtcVUeFr8EFq rdf:type owl:Class .
-
-
-###  https://w3id.org/emmo/domain/neo#RRVTDj2E9x5cjit7EQ9Dkx
-:RRVTDj2E9x5cjit7EQ9Dkx rdf:type owl:Class .
-
-
-###  https://w3id.org/emmo/domain/neo#RZtNAG3BL7lDm8L77EbEBd
-:RZtNAG3BL7lDm8L77EbEBd rdf:type owl:Class .
 
 
 ###  https://w3id.org/emmo/domain/neo#ReactorBuilding
@@ -1352,79 +1438,6 @@ See fissile nucleus."""@en ;
 #################################################################
 #    General axioms
 #################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <https://w3id.org/emmo/domain/fukushima#lossOfUltimateHeatSink>
-                :DC_Operational_Power_Source
-                :NoNuclearISO
-                :NuclearEnergyObject
-                :NuclearReactor
-                :PreassureIncreasing
-                :PressureRelieveValve
-                :R0N27qMQzeRjM0vSOeAvUT
-                :RBsAUchYFBwAtcVUeFr8EFq
-                :RRVTDj2E9x5cjit7EQ9Dkx
-                :RZtNAG3BL7lDm8L77EbEBd
-                :ReactorBuilding
-                :SCVentilation
-                <https://w3id.org/emmo/domain/neo/neo-source#BoronNeutronCaptureTherapy>
-                <https://w3id.org/emmo/domain/neo/neo-source#DelayedFissionRadiation>
-                <https://w3id.org/emmo/domain/neo/neo-source#MaterialTestingReactor>
-                <https://w3id.org/emmo/domain/neo/neo-source#MultiplePurposeReactor>
-                <https://w3id.org/emmo/domain/neo/neo-source#NetronActivationAnalysis>
-                <https://w3id.org/emmo/domain/neo/neo-source#NeutronDiffractionTechnique>
-                <https://w3id.org/emmo/domain/neo/neo-source#NeutronTransumationDoping>
-                <https://w3id.org/emmo/domain/neo/neo-source#PromptGammaRayNeutronActivationAnalysis>
-                <https://w3id.org/emmo/domain/neo/neo-source#RadioIsotopeProduction>
-                <https://w3id.org/emmo/domain/neo/neo-source#RadioIsotopeProductionReactor>
-                <https://w3id.org/emmo/domain/neo/neo-source#TrainingAndEducationReactor>
-                <https://w3id.org/emmo/hume#Data>
-                <https://w3id.org/emmo/hume#Holistic>
-                <https://w3id.org/emmo/hume#Persistence>
-                <https://w3id.org/emmo/hume#PhysicalEntity>
-                <https://w3id.org/emmo/hume#Semiotics>
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :CommonSpentFuelBuilding
-                :ControlRodGroup
-                :DryWell
-                :HeadVentNozzle
-                :InjectedMaterial
-                :InjectionSystem
-                :MainControlRoom
-                :NuclearIsland
-                :NuclearPlantWorker
-                :NuclearPowerPlant
-                :NuclearPowerPlantBuilding
-                :NuclearPowerPlantUnit
-                :PipePlantValve
-                :PlantTurbine
-                :PowerSupplySystem
-                :PressureReliefValve
-                :ReactorBuildingContents
-                :SafetyCriticalEquipment
-                :SafetySystem
-                :TurbineBuildingContents
-                :WaterInjectionSystem
-                <https://w3id.org/emmo/domain/neo/neo-source#BalanceOfPlant>
-                <https://w3id.org/emmo/domain/neo/neo-source#GasCooler>
-                <https://w3id.org/emmo/domain/neo/neo-source#GasTurbinBalanceOfPlant>
-                <https://w3id.org/emmo/domain/neo/neo-source#GasTurbineGenerator>
-                <https://w3id.org/emmo/domain/neo/neo-source#NuclearHighTmeperatureGasSupplySystem>
-                <https://w3id.org/emmo/domain/neo/neo-source#NuclearInstallation>
-                <https://w3id.org/emmo/domain/neo/neo-source#NuclearSteamSupplySystem>
-                <https://w3id.org/emmo/domain/neo/neo-source#ReactorInternals>
-                <https://w3id.org/emmo/domain/neo/neo-source#SteamCondenser>
-                <https://w3id.org/emmo/domain/neo/neo-source#SteamTurbinBalanceOfPlant>
-                <https://w3id.org/emmo/domain/neo/neo-source#SteamTurbinGenerator>
-                <https://w3id.org/emmo/domain/neo/neo-source#TurbinGenerator>
-                <https://w3id.org/emmo/domain/neo/neo-source#TuribineIsland>
-              )
-] .
-
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Light_Water_Reactor

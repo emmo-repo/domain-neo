@@ -724,18 +724,6 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo#DefenceinDepthProcedures
-:DefenceinDepthProcedures rdf:type owl:Class ;
-                          rdfs:subClassOf :Nuclear_Accident_Concepts ,
-                                          :Operation ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty elite:isSubProcessOf ;
-                                            owl:someValuesFrom :NPPOperationManagement
-                                          ] ;
-                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Defence In Depth Procedures"@en ;
-                          :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/1069.html"^^xsd:anyURI .
-
-
 ###  https://w3id.org/emmo/domain/neo#Degradation
 :Degradation rdf:type owl:Class ;
              rdfs:subClassOf :Damage ,
@@ -759,14 +747,6 @@ ISO 14624-5:2023(en)"""^^xsd:anyURI
                   rdfs:subClassOf :UraniumMaterial ;
                   <http://www.w3.org/2004/02/skos/core#comment> "Uranium in which the percentage of U-235 is less than that of natural uranium (< 0.711%). A by-product of the enrichment process." ;
                   :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/285.html> .
-
-
-###  https://w3id.org/emmo/domain/neo#DesignBasisAccident
-:DesignBasisAccident rdf:type owl:Class ;
-                     rdfs:subClassOf :NuclearPlantAccident ;
-                     <http://www.w3.org/2004/02/skos/core#altLabel> "DBA"@en ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Basis Accident"@en ;
-                     :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/96> .
 
 
 ###  https://w3id.org/emmo/domain/neo#Destruction
@@ -987,13 +967,6 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
            rdfs:subClassOf :NoNuclearISO .
 
 
-###  https://w3id.org/emmo/domain/neo#Event
-:Event rdf:type owl:Class ;
-       rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
-       <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en ;
-       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.2> .
-
-
 ###  https://w3id.org/emmo/domain/neo#Explosion
 :Explosion rdf:type owl:Class ;
            rdfs:subClassOf :UnintendedEvent ;
@@ -1092,37 +1065,6 @@ port outside the TB, which had been installed in the previous year as a fire pro
    rdfs:seeAlso """Pag 19,  The Fukushima Daiichi Accident Technical Volume 1/5 
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""
  ] .
-
-
-###  https://w3id.org/emmo/domain/neo#FuelAssembly
-:FuelAssembly rdf:type owl:Class ;
-              rdfs:subClassOf :ReactorBuildingContents ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty elite:isConstituentOf ;
-                                owl:someValuesFrom :ReactorCore
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty elite:participatesTo ;
-                                owl:someValuesFrom :NPPRefueling
-                              ] ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "Fuel Assembly"@en ;
-              :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/974.html"^^xsd:anyURI .
-
-
-###  https://w3id.org/emmo/domain/neo#FuelElement
-:FuelElement rdf:type owl:Class ;
-             rdfs:subClassOf :ReactorBuildingContents ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty elite:isConstituentOf ;
-                               owl:someValuesFrom :FuelAssembly
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty elite:participatesTo ;
-                               owl:someValuesFrom :NPPRefueling
-                             ] ;
-             <http://www.w3.org/2004/02/skos/core#altLabel> "Fuel Element"@en ;
-             <http://www.w3.org/2004/02/skos/core#prefLabel> "Fuel Rod"@en ;
-             :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/976.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#FullFaceMask
@@ -1810,20 +1752,6 @@ important feature at this level."""@en ;
               :referenceNRCG <https://w3id.org/emmo/domain/Refueling> .
 
 
-###  https://w3id.org/emmo/domain/neo#NPPShutdown
-:NPPShutdown rdf:type owl:Class ;
-             rdfs:subClassOf :NPPNormalOperation ;
-             <http://www.w3.org/2004/02/skos/core#definition> "Shutdown is the state of a nuclear reactor when the fission reaction is slowed significantly or halted completely"@en ;
-             <http://www.w3.org/2004/02/skos/core#prefLabel> "NPP Shutdown"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :NPPShutdown ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Shutdown is the state of a nuclear reactor when the fission reaction is slowed significantly or halted completely"@en ;
-   rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Shutdown>
- ] .
-
-
 ###  https://w3id.org/emmo/domain/neo#NPPStartUpPhase
 :NPPStartUpPhase rdf:type owl:Class ;
                  rdfs:subClassOf :NPPNormalOperation ;
@@ -2028,13 +1956,6 @@ Note 2 to entry: In elastic scattering interactions, the moving particle can be 
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Elastic Scattering"@en .
 
 
-###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
-:NuclearEnergyObject rdf:type owl:Class ;
-                     <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Domain Object" ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "NEO object"@en ;
-                     :definition "An endurant entity that belongs to the Nuclear Energy Ontology (NEO), encompassing any physical, material, or conceptual object, component, or system related to nuclear science and technology, without being restricted to energy generation" .
-
-
 ###  https://w3id.org/emmo/domain/neo#NuclearFuel
 :NuclearFuel rdf:type owl:Class ;
              rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
@@ -2183,24 +2104,9 @@ all offsite power."""@en ;
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo#NuclearSevereAccident
-:NuclearSevereAccident rdf:type owl:Class ;
-                       rdfs:subClassOf :BeyondDesignBasisAccident ;
-                       <http://www.w3.org/2004/02/skos/core#altLabel> "Severe Accident"@en ;
-                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Severe Accident"@en ;
-                       :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/98> .
-
-
 ###  https://w3id.org/emmo/domain/neo#Nuclear_Accident_Concepts
 :Nuclear_Accident_Concepts rdf:type owl:Class ;
                            rdfs:subClassOf <https://w3id.org/emmo/hume#Process> .
-
-
-###  https://w3id.org/emmo/domain/neo#Nuclear_ReactorMaintanance
-:Nuclear_ReactorMaintanance rdf:type owl:Class ;
-                            rdfs:subClassOf :NPPNormalOperation ;
-                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Maintanance"@en ;
-                            :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/705.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo#Nuclear﻿_Fresh_Fuel
