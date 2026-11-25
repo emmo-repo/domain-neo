@@ -85,14 +85,14 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
 
 
-###  https://w3id.org/emmo/domain/neo/neo-source#IAEAPRISReference
+###  https://w3id.org/emmo/domain/neo#IAEAPRISReference
 :IAEAPRISReference rdf:type owl:AnnotationProperty ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Protection System"@en ;
                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.4.1.1> ;
                    rdfs:subPropertyOf rdfs:seeAlso .
 
 
-###  https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition
+###  https://w3id.org/emmo/domain/neo#NSSG_Definition
 :NSSG_Definition rdf:type owl:AnnotationProperty ;
                  rdfs:subPropertyOf rdfs:isDefinedBy ;
                  rdfs:range xsd:anyURI .
@@ -224,18 +224,6 @@ from control."""@en ;
                    <http://www.w3.org/2004/02/skos/core#definition> "An activation product is a material that has been made radioactive by the process of neutron activation."@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Activated Material"@en ;
                    :comment "Fission products and actinides produced by neutron absorption of nuclear fuel itself are normally referred to by those specific names, and activation product reserved for products of neutron capture by other materials, such as structural components of the nuclear reactor or nuclear bomb, the reactor coolant, control rods or other neutron poisons, or materials in the environment. All of these, however, need to be handled as radioactive waste. Some nuclides originate in more than one way, as activation products or fission products."@en .
-
-
-###  https://w3id.org/emmo/domain/neo#AnticipatedOperationalOccurrence
-:AnticipatedOperationalOccurrence rdf:type owl:Class ;
-                                  rdfs:subClassOf :NPPNormalOperation ;
-                                  <http://www.w3.org/2004/02/skos/core#definition> """Conditions of normal operation that are expected to occur one or
-more times during the life of the nuclear power unit and include but
-are not limited to loss of power to all recirculation pumps, tripping of
-the turbine generator set, isolation of the main condenser, and loss of
-all offsite power.""" ;
-                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Anticipated Operational Occurrence"@en ;
-                                  :referenceNRCG "https://www.nrc.gov/docs/ML0707/ML070710376.pdf" .
 
 
 ###  https://w3id.org/emmo/domain/neo#AnticipatedOperationalOccurrenceEvent
@@ -744,13 +732,8 @@ Note 2 to entry: Some utilities use the term \"bank\" instead of \"group\". A co
                                             owl:onProperty elite:isSubProcessOf ;
                                             owl:someValuesFrom :NPPOperationManagement
                                           ] ;
-                          rdfs:comment "SF" ;
-                          <http://www.w3.org/2004/02/skos/core#definition> """A hierarchical deployment of different levels of diverse equipment and procedures to prevent the escalation
-of anticipated operational occurrences and to maintain the effectiveness of physical barriers placed between
-a radiation source or radioactive material and workers, members of the public or the environment, in
-operational states and, for some barriers, in accident conditions"""@en ;
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Defence In Depth Procedures"@en ;
-                          :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/1069.html"^^xsd:anyURI .
+                          :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/1069.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#Degradation
@@ -782,9 +765,8 @@ ISO 14624-5:2023(en)"""^^xsd:anyURI
 :DesignBasisAccident rdf:type owl:Class ;
                      rdfs:subClassOf :NuclearPlantAccident ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "DBA"@en ;
-                     <http://www.w3.org/2004/02/skos/core#definition> "accident conditions against which a facility is designed according to established design criteria, and for which the damage to the fuel and the release of radioactive material are kept within authorized limits"@en ;
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Basis Accident"@en ;
-                     :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.1> .
+                     :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/96> .
 
 
 ###  https://w3id.org/emmo/domain/neo#Destruction
@@ -986,6 +968,13 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
  ] .
 
 
+###  https://w3id.org/emmo/domain/neo#EnergyAvailabilityFactor
+:EnergyAvailabilityFactor rdf:type owl:Class ;
+                          rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Energy Availability Factor"@en ;
+                          :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.3> .
+
+
 ###  https://w3id.org/emmo/domain/neo#Enriched_Uranium
 :Enriched_Uranium rdf:type owl:Class ;
                   rdfs:subClassOf :UraniumMaterial ;
@@ -1001,11 +990,8 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
 ###  https://w3id.org/emmo/domain/neo#Event
 :Event rdf:type owl:Class ;
        rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
-       rdfs:seeAlso "See: https://en.wikipedia.org/wiki/Event" ;
-       <http://www.w3.org/2004/02/skos/core#comment> "NEO CORE Candidate" ,
-                                                     "NEO candidate" ;
-       <http://www.w3.org/2004/02/skos/core#definition> "A thing that happens or takes place, with a well defined beginning and end, a clear specificity and relevance with respect to the surrounding environment."@en ;
-       <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en .
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en ;
+       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.2> .
 
 
 ###  https://w3id.org/emmo/domain/neo#Explosion
@@ -1120,9 +1106,7 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                                 owl:someValuesFrom :NPPRefueling
                               ] ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Fuel Assembly"@en ;
-              :definition """A set of fuel elements and associated components which are loaded into and
-subsequently removed from a reactor core as a single unit."""@en ;
-              :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/974.html"^^xsd:anyURI .
+              :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/974.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#FuelElement
@@ -1138,8 +1122,7 @@ subsequently removed from a reactor core as a single unit."""@en ;
                              ] ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Fuel Element"@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Fuel Rod"@en ;
-             :definition "A rod of nuclear fuel, its cladding and any associated components necessary to form a structural entity.﻿"@en ;
-             :referenceNSSG "https://vocabulary.iaea.org/iaea-safety-glossary/976.html"^^xsd:anyURI .
+             :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/976.html"^^xsd:anyURI .
 
 
 ###  https://w3id.org/emmo/domain/neo#FullFaceMask
@@ -1745,8 +1728,8 @@ Pag 29""" ;
                                                                    "NPP Preventive Operation"@en ;
                     <http://www.w3.org/2004/02/skos/core#definition> "Operation within specified operational limits and conditions. This includes startup, power operation, shutting down, shutdown, maintenance, testing and refuelling"@en ;
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Normal Operation"@en ;
-                    :comment "No off-site radiological impact (bounded by regulatory operating limits for discharge)"@en ;
-                    :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/597.html> .
+                    :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/597.html> ;
+                    :comment "No off-site radiological impact (bounded by regulatory operating limits for discharge)"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :NPPNormalOperation ;
@@ -2149,7 +2132,8 @@ all offsite power."""@en ;
                                    "This is not explicitly stated to be a definition of nuclear accident, but it is derived from the statement of the scope of application in Article 1 of the Convention on Early Notification of a Nuclear Accident. However, this Convention has a limited scope of application, and it is unreasonable to consider a nuclear accident to be only an accident that results or may result in an international significant transboundary release"@en ;
                       rdfs:seeAlso <https://www-ns.iaea.org/downloads/standards/glossary/iaea-safety-glossary-draft-2016.pdf> ;
                       <http://www.w3.org/2004/02/skos/core#definition> "Nuclear Plant Accident are any accident involving nuclear plant causing a radioactivity release. Depending on the magnitude of radioactive release there are different type of Nuclear Accident." ;
-                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Plant Accident"@en .
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Plant Accident"@en ;
+                      :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.2.2> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NuclearPlantWorker
@@ -2203,9 +2187,8 @@ all offsite power."""@en ;
 :NuclearSevereAccident rdf:type owl:Class ;
                        rdfs:subClassOf :BeyondDesignBasisAccident ;
                        <http://www.w3.org/2004/02/skos/core#altLabel> "Severe Accident"@en ;
-                       <http://www.w3.org/2004/02/skos/core#definition> "accident conditions more severe than a design basis accident and involving significant core degradation"@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Severe Accident"@en ;
-                       :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:26802:ed-1:v1:en:term:3.1.2> .
+                       :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/98> .
 
 
 ###  https://w3id.org/emmo/domain/neo#Nuclear_Accident_Concepts
@@ -2216,10 +2199,8 @@ all offsite power."""@en ;
 ###  https://w3id.org/emmo/domain/neo#Nuclear_ReactorMaintanance
 :Nuclear_ReactorMaintanance rdf:type owl:Class ;
                             rdfs:subClassOf :NPPNormalOperation ;
-                            rdfs:comment "The organized activity, both administrative and technical, of keeping structures, systems and components in good operating condition, including both preventive and corrective (or repair) aspects." ;
-                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Reactor Maintanance"@en ;
-                            :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:22716:ed-1:v2:en:term:2.19> ;
-                            :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/705.html> .
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Maintanance"@en ;
+                            :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/705.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo#Nuclear﻿_Fresh_Fuel
@@ -2887,6 +2868,13 @@ The Fukushima Daiichi Accident Technical Volume 1/5
 link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub1710-TV1-Web.pdf"""@en ;
                     <http://www.w3.org/2004/02/skos/core#altLabel> "Core Recirculation Pumps"@en ;
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Recirculation Pumps"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#ReferenceUnitPower
+:ReferenceUnitPower rdf:type owl:Class ;
+                    rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Reference Unit Power"@en ;
+                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.2> .
 
 
 ###  https://w3id.org/emmo/domain/neo#RegularInjection
@@ -3568,25 +3556,6 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
          <http://www.w3.org/2004/02/skos/core#altLabel> "Reactor Wet Well"@en ;
          <http://www.w3.org/2004/02/skos/core#comment> "compartment of the primary containment system that contains the suppression pool and receives steam discharged from the drywell for pressure suppression and condensation." ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Wet Well"@en .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#EnergyAvailabilityFactor
-:EnergyAvailabilityFactor rdf:type owl:Class ;
-                          rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
-                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Energy Availability Factor"@en ;
-                          :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.3> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#ReferenceUnitPower
-:ReferenceUnitPower rdf:type owl:Class ;
-                    rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
-                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Reference Unit Power"@en ;
-                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.2> .
-
-
-###  https://w3id.org/emmo/domain/neo/neo-source#ShutdownState
-:ShutdownState rdf:type owl:Class ;
-               rdfs:subClassOf :IntentionalProcess .
 
 
 #################################################################
