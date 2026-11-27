@@ -8,8 +8,7 @@
 @base <https://w3id.org/emmo/domain/neo#> .
 
 <https://w3id.org/emmo/domain/neo/neo-source> rdf:type owl:Ontology ;
-                                               owl:imports <https://w3id.org/emmo/domain/neo/fukushima> ,
-                                                           <https://w3id.org/emmo/domain/neo/0.0.3/neo> ;
+                                               owl:imports <https://w3id.org/emmo/domain/neo/0.0.3/neo> ;
                                                <http://purl.org/dc/terms/contributor> "Anna Anchini"@it ,
                                                                                       "Cristiana Tropeano"@it ,
                                                                                       "Dario Rimondini"@it ,
@@ -948,13 +947,6 @@ Note 1 to entry: In general, emergency management utilizes a risk management app
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo#EnergyAvailabilityFactor
-:EnergyAvailabilityFactor rdf:type owl:Class ;
-                          rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
-                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Energy Availability Factor"@en ;
-                          :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.3> .
-
-
 ###  https://w3id.org/emmo/domain/neo#Enriched_Uranium
 :Enriched_Uranium rdf:type owl:Class ;
                   rdfs:subClassOf :UraniumMaterial ;
@@ -1856,6 +1848,10 @@ Note 1 to entry: Neutron imaging can be used to detect changes in hydrogen abund
    owl:annotatedTarget "Effective detection of neutrons entering a well-positioned detector"@en ;
    rdfs:isDefinedBy <https://www.chemeurope.com/en/encyclopedia/Neutron_detection.html>
  ] .
+
+
+###  https://w3id.org/emmo/domain/neo#NeutronInducedFission
+:NeutronInducedFission rdf:type owl:Class .
 
 
 ###  https://w3id.org/emmo/domain/neo#NoNuclearISO
@@ -2774,13 +2770,6 @@ link: https://www-pub.iaea.org/MTCD/Publications/PDF/AdditionalVolumes/P1710/Pub
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Recirculation Pumps"@en .
 
 
-###  https://w3id.org/emmo/domain/neo#ReferenceUnitPower
-:ReferenceUnitPower rdf:type owl:Class ;
-                    rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
-                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Reference Unit Power"@en ;
-                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.2> .
-
-
 ###  https://w3id.org/emmo/domain/neo#RegularInjection
 :RegularInjection rdf:type owl:Class ;
                   rdfs:subClassOf :MaterialInjection ;
@@ -3467,7 +3456,8 @@ https://www.iso.org/obp/ui/en/#iso:std:iso-iec:tr:11580:ed-1:v1:en:term:2.12"""^
 #################################################################
 
 ###  https://w3id.org/emmo/domain/neo#RBfahJ7XEvDRY0I74gA4EhW
-:RBfahJ7XEvDRY0I74gA4EhW rdf:type :SystemClosing .
+:RBfahJ7XEvDRY0I74gA4EhW rdf:type owl:NamedIndividual ,
+                                  :SystemClosing .
 
 
 #################################################################

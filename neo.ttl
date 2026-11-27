@@ -10,17 +10,9 @@
 <https://w3id.org/emmo/domain/neo/neo> rdf:type owl:Ontology ;
                                         owl:versionIRI <https://w3id.org/emmo/domain/neo/0.0.3/neo> ;
                                         owl:imports <https://w3id.org/emmo/elite/elite/0.0.7> ;
-                                        <http://purl.org/dc/terms/contributor> "Anna Anchini"@it ,
-                                                                               "Cristiana Tropeano"@it ,
-                                                                               "Dario Rimondini"@it ,
-                                                                               "Francesca Venturi"@it ,
-                                                                               "Francesco Antonio Zaccarini"@it ,
-                                                                               "Giovanna Casula"@it ,
-                                                                               "Ilaria Maria Paponetti"@it ,
-                                                                               "Nicola Ferro"@it ,
-                                                                               "Samuele Baldini"@it ,
-                                                                               "Saverio Quaranta"@it ;
-                                        <http://purl.org/dc/terms/creator> "Emanuele Ghedini"@it .
+                                        <http://purl.org/dc/terms/abstract> "The ontology represents all concepts defined in the vocabulary of ISO 12749-5:2026. Subclass relationships are asserted only where one concept is unambiguously a specialization of another. Where the standard draws on the IAEA Nuclear Safety and Security Glossary, the ontology links each relevant concept to its corresponding glossary entry."@en ;
+                                        <http://purl.org/dc/terms/creator> "Emanuele Ghedini"@it ,
+                                                                           "Ilaria Maria Paponetti" .
 
 #################################################################
 #    Annotation properties
@@ -29,54 +21,28 @@
 ###  http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
 
-###  https://w3id.org/emmo/domain/neo#ServiceLife
-<https://w3id.org/emmo/domain/neo#ServiceLife> a owl:Class ;
-    skos:prefLabel "Service Life" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.9> .
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty ;
                                                rdfs:subPropertyOf rdfs:label .
 
-###  https://w3id.org/emmo/domain/neo#AgeingManagement
-<https://w3id.org/emmo/domain/neo#AgeingManagement> a owl:Class ;
-    skos:prefLabel "Ageing Management" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.11> .
 
 ###  http://www.w3.org/2004/02/skos/core#comment
 <http://www.w3.org/2004/02/skos/core#comment> rdf:type owl:AnnotationProperty .
 
-###  https://w3id.org/emmo/domain/neo#LifeCycleManagement
-<https://w3id.org/emmo/domain/neo#LifeCycleManagement> a owl:Class ;
-    skos:prefLabel "Life Cycle Management" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.13> .
 
 ###  http://www.w3.org/2004/02/skos/core#definition
 <http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
 
-###  https://w3id.org/emmo/domain/neo#PlannedMaintenance
-<https://w3id.org/emmo/domain/neo#PlannedMaintenance> a owl:Class ;
-    skos:prefLabel "Planned Maintenance" ;
-    skos:altLabel "﻿" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.14.1> .
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 <http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty ;
                                                 rdfs:subPropertyOf rdfs:label .
 
-###  https://w3id.org/emmo/domain/neo#PredictiveMaintenance
-<https://w3id.org/emmo/domain/neo#PredictiveMaintenance> a owl:Class ;
-    skos:prefLabel "Predictive Maintenance" ;
-    skos:altLabel "condition based maintenance" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.14.3> .
 
 ###  https://w3id.org/emmo/domain/neo#NSSG_Definition
 :NSSG_Definition rdf:type owl:AnnotationProperty .
 
-###  https://w3id.org/emmo/domain/neo#MaintenanceBypass
-<https://w3id.org/emmo/domain/neo#MaintenanceBypass> a owl:Class ;
-    skos:prefLabel "Maintenance Bypass" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.15> .
 
 ###  https://w3id.org/emmo/domain/neo#comment
 :comment rdf:type owl:AnnotationProperty ;
@@ -84,10 +50,6 @@
          :definition "Additional text aimed to explain the conceptual choices of the authors."@en ;
          rdfs:subPropertyOf rdfs:comment .
 
-###  https://w3id.org/emmo/domain/neo#Incident
-<https://w3id.org/emmo/domain/neo#Incident> a owl:Class ;
-    skos:prefLabel "Incident" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.2.1> .
 
 ###  https://w3id.org/emmo/domain/neo#definition
 :definition rdf:type owl:AnnotationProperty ;
@@ -227,9 +189,22 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 <https://w3id.org/emmo/domain/fukushima#lossOfUltimateHeatSink> rdf:type owl:Class .
 
 
+###  https://w3id.org/emmo/domain/neo#AccidentManagement
+:AccidentManagement rdf:type owl:Class ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Accident Management" ;
+                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.3> .
+
+
+###  https://w3id.org/emmo/domain/neo#AgeingManagement
+:AgeingManagement rdf:type owl:Class ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Ageing Management" ;
+                  :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.11> .
+
+
 ###  https://w3id.org/emmo/domain/neo#AnticipatedOperationalOccurrence
 :AnticipatedOperationalOccurrence rdf:type owl:Class ;
-                                  rdfs:subClassOf :NPPNormalOperation ;
+                                  rdfs:subClassOf :NPPNormalOperation ,
+                                                  <https://w3id.org/emmo/hume#Process> ;
                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Anticipated Operational Occurrence"@en ;
                                   :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/146> ;
                                   :referenceNRCG "https://www.nrc.gov/docs/ML0707/ML070710376.pdf" .
@@ -242,10 +217,6 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 ###  https://w3id.org/emmo/domain/neo#BeyondDesignBasisAccident
 :BeyondDesignBasisAccident rdf:type owl:Class .
 
-###  https://w3id.org/emmo/domain/neo#AccidentManagement
-<https://w3id.org/emmo/domain/neo#AccidentManagement> a owl:Class ;
-    skos:prefLabel "Accident Management" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.3> .
 
 ###  https://w3id.org/emmo/domain/neo#BoilingWaterReactor
 :BoilingWaterReactor rdf:type owl:Class ;
@@ -254,28 +225,31 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Boiling Water Reactor"@en ;
                      :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.3.1.13> .
 
+
 ###  https://w3id.org/emmo/domain/neo#CommonCauseFailure
-<https://w3id.org/emmo/domain/neo#CommonCauseFailure> a owl:Class ;
-    skos:prefLabel "Common Cause Failure" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.5> .
+:CommonCauseFailure rdf:type owl:Class ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Common Cause Failure" ;
+                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.5> .
+
 
 ###  https://w3id.org/emmo/domain/neo#CommonSpentFuelBuilding
 :CommonSpentFuelBuilding rdf:type owl:Class .
 
-###  https://w3id.org/emmo/domain/neo#ReactorShutdownSystem
-<https://w3id.org/emmo/domain/neo#ReactorShutdownSystem> a owl:Class ;
-    skos:prefLabel "Reactor Shutdown System" ;
-    skos:altLabel "reactor SDS" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.7.1> .
+
+###  https://w3id.org/emmo/domain/neo#ConceptsRelatedToNuclearFission
+:ConceptsRelatedToNuclearFission rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/emmo/hume#Process> ;
+                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Concepts Related To Nuclear Fission"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#ConceptsRelatedToNuclearPowerPlant
+:ConceptsRelatedToNuclearPowerPlant rdf:type owl:Class ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Concepts Related To Nuclear Power Plant"@en .
+
 
 ###  https://w3id.org/emmo/domain/neo#ControlRodGroup
 :ControlRodGroup rdf:type owl:Class .
 
-###  https://w3id.org/emmo/domain/neo#ShutdownCoolingSystem
-<https://w3id.org/emmo/domain/neo#ShutdownCoolingSystem> a owl:Class ;
-    skos:prefLabel "Shutdown Cooling System" ;
-    skos:altLabel "SDCS" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.7.3> .
 
 ###  https://w3id.org/emmo/domain/neo#DefenceinDepthProcedures
 :DefenceinDepthProcedures rdf:type owl:Class ;
@@ -288,10 +262,6 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Defence In Depth Procedures"@en ;
                           :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/1069.html"^^xsd:anyURI .
 
-###  https://w3id.org/emmo/domain/neo#Scram
-<https://w3id.org/emmo/domain/neo#Scram> a owl:Class ;
-    skos:prefLabel "Scram" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.8> .
 
 ###  https://w3id.org/emmo/domain/neo#DesignBasisAccident
 :DesignBasisAccident rdf:type owl:Class ;
@@ -300,18 +270,18 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Basis Accident"@en ;
                      :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/96> .
 
-###  https://w3id.org/emmo/domain/neo#SafetyAnalysis
-<https://w3id.org/emmo/domain/neo#SafetyAnalysis> a owl:Class ;
-    skos:prefLabel "Safety Analysis" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.10> .
 
 ###  https://w3id.org/emmo/domain/neo#DryWell
 :DryWell rdf:type owl:Class .
 
-###  https://w3id.org/emmo/domain/neo#SafetyLimits
-<https://w3id.org/emmo/domain/neo#SafetyLimits> a owl:Class ;
-    skos:prefLabel "Safety Limits" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.12> .
+
+###  https://w3id.org/emmo/domain/neo#EnergyAvailabilityFactor
+:EnergyAvailabilityFactor rdf:type owl:Class ;
+                          rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                          <https://w3id.org/emmo/hume#Property> ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Energy Availability Factor"@en ;
+                          :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.3> .
+
 
 ###  https://w3id.org/emmo/domain/neo#Event
 :Event rdf:type owl:Class ;
@@ -319,10 +289,6 @@ elite:participatesTo rdf:type owl:ObjectProperty .
        <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en ;
        :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.2> .
 
-###  https://w3id.org/emmo/domain/neo#SafetyFunction
-<https://w3id.org/emmo/domain/neo#SafetyFunction> a owl:Class ;
-    skos:prefLabel "Safety Function" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.14> .
 
 ###  https://w3id.org/emmo/domain/neo#FastNeutron
 :FastNeutron rdf:type owl:Class ;
@@ -336,36 +302,34 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 While in some textbooks you can find a defnition of fast neutron as a neutron with E > 50 keV, there is not a clear definition of the range within which a neutron can be considered \"fast\"."""@en ;
              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.19> .
 
-###  https://w3id.org/emmo/domain/neo#SafetySystemSupportFeature
-<https://w3id.org/emmo/domain/neo#SafetySystemSupportFeature> a owl:Class ;
-    skos:prefLabel "Safety System Support Feature" ;
-    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.16> .
 
-###  https://w3id.org/emmo/domain/neo#Fertile_Nuclide
-:Fertile_Nuclide rdf:type owl:Class ;
-                 rdfs:subClassOf :Nuclide ;
-                 <http://www.w3.org/2004/02/skos/core#comment> "A nuclide, which is not itself fissile (fissionable by thermal neutrons), that can be converted into a fissile nuclide by irradiation in a reactor. There are two basic fertile materials: uranium-238 and thorium-232. When these fertile materials capture neutrons, they are converted into fissile plutonium-239 and uranium-233, respectively." ;
-                 :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.5> ;
-                 :referenceNRCG "Fertile Material"^^xsd:anyURI .
+###  https://w3id.org/emmo/domain/neo#FertileNuclide
+:FertileNuclide rdf:type owl:Class ;
+                rdfs:subClassOf :ConceptsRelatedToNuclearFission ,
+                                :Nuclide ;
+                <http://www.w3.org/2004/02/skos/core#comment> "A nuclide, which is not itself fissile (fissionable by thermal neutrons), that can be converted into a fissile nuclide by irradiation in a reactor. There are two basic fertile materials: uranium-238 and thorium-232. When these fertile materials capture neutrons, they are converted into fissile plutonium-239 and uranium-233, respectively." ;
+                :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.5> ;
+                :referenceNRCG "Fertile Material"^^xsd:anyURI .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fertile_Nuclide ;
+   owl:annotatedSource :FertileNuclide ;
    owl:annotatedProperty :referenceNRCG ;
    owl:annotatedTarget "Fertile Material"^^xsd:anyURI ;
    rdfs:comment "Misleading Label and definition"
  ] .
 
 
-###  https://w3id.org/emmo/domain/neo#Fissile_Nuclide
-:Fissile_Nuclide rdf:type owl:Class ;
-                 rdfs:subClassOf :Nuclide ;
-                 <http://www.w3.org/2004/02/skos/core#comment> "A nuclide that is capable of undergoing fission after capturing low-energy thermal (slow) neutrons." ;
-                 :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.4> ;
-                 :referenceNCTG "Fissile nucleus" ;
-                 :referenceNRCG "Fissile Material"^^xsd:anyURI .
+###  https://w3id.org/emmo/domain/neo#FissileNuclide
+:FissileNuclide rdf:type owl:Class ;
+                rdfs:subClassOf :ConceptsRelatedToNuclearFission ,
+                                :Nuclide ;
+                <http://www.w3.org/2004/02/skos/core#comment> "A nuclide that is capable of undergoing fission after capturing low-energy thermal (slow) neutrons." ;
+                :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.4> ;
+                :referenceNCTG "Fissile nucleus" ;
+                :referenceNRCG "Fissile Material"^^xsd:anyURI .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fissile_Nuclide ;
+   owl:annotatedSource :FissileNuclide ;
    owl:annotatedProperty :referenceNRCG ;
    owl:annotatedTarget "Fissile Material"^^xsd:anyURI ;
    rdfs:comment "this label can generate misunderstanding"
@@ -375,6 +339,8 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
 ###  https://w3id.org/emmo/domain/neo#FissionProduct
 :FissionProduct rdf:type owl:Class ;
                 rdfs:subClassOf :Atom ,
+                                :ConceptsRelatedToNuclearFission ,
+                                <https://w3id.org/emmo/hume#PhysicalParticle> ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty elite:isOutputOf ;
                                   owl:someValuesFrom :NuclearFission
@@ -385,28 +351,29 @@ While in some textbooks you can find a defnition of fast neutron as a neutron wi
                 <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> "https://vocabulary.iaea.org/iaea-safety-glossary/961.html"^^xsd:anyURI .
 
 
-###  https://w3id.org/emmo/domain/neo#Fissionable_Nuclide
-:Fissionable_Nuclide rdf:type owl:Class ;
-                     rdfs:subClassOf :Nuclide ;
-                     <http://www.w3.org/2004/02/skos/core#comment> "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it ;
-                     <http://www.w3.org/2004/02/skos/core#definition> """A nucleus capable of fission by neutrons of some
+###  https://w3id.org/emmo/domain/neo#FissionableNuclide
+:FissionableNuclide rdf:type owl:Class ;
+                    rdfs:subClassOf :ConceptsRelatedToNuclearFission ,
+                                    :Nuclide ;
+                    <http://www.w3.org/2004/02/skos/core#comment> "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it ;
+                    <http://www.w3.org/2004/02/skos/core#definition> """A nucleus capable of fission by neutrons of some
 energy. Fissionable nuclei include 238U, 240Pu, and others with
 neutron-energy fission thresholds, in addition to those that are fissile.
 See fissile nucleus."""@en ;
-                     :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.7> ;
-                     :referenceNCTG "Fissionable Nucleus" ;
-                     :referenceNRCG "Fissionable Material"^^xsd:anyURI ;
-                     :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/963.html> .
+                    :referenceISO <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-3:ed-2:v1:en:term:3.1.7> ;
+                    :referenceNCTG "Fissionable Nucleus" ;
+                    :referenceNRCG "Fissionable Material"^^xsd:anyURI ;
+                    :referenceNSSG <https://vocabulary.iaea.org/iaea-safety-glossary/963.html> .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fissionable_Nuclide ;
+   owl:annotatedSource :FissionableNuclide ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#comment> ;
    owl:annotatedTarget "Si dirà che U235 è fissile, mentre U238 che richiede energia non trascurabile per scindersi è fissionabile"@it ;
    rdfs:seeAlso "Montagnini"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fissionable_Nuclide ;
+   owl:annotatedSource :FissionableNuclide ;
    owl:annotatedProperty :referenceNRCG ;
    owl:annotatedTarget "Fissionable Material"^^xsd:anyURI ;
    rdfs:comment "Misleading"
@@ -416,6 +383,7 @@ See fissile nucleus."""@en ;
 ###  https://w3id.org/emmo/domain/neo#FuelAssembly
 :FuelAssembly rdf:type owl:Class ;
               rdfs:subClassOf :ReactorBuildingContents ,
+                              :ConceptsRelatedToResearchReactor ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty elite:isConstituentOf ;
                                 owl:someValuesFrom :ReactorCore
@@ -431,6 +399,7 @@ See fissile nucleus."""@en ;
 ###  https://w3id.org/emmo/domain/neo#FuelElement
 :FuelElement rdf:type owl:Class ;
              rdfs:subClassOf :ReactorBuildingContents ,
+                             :ConceptsRelatedToResearchReactor ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty elite:isConstituentOf ;
                                owl:someValuesFrom :FuelAssembly
@@ -444,8 +413,35 @@ See fissile nucleus."""@en ;
              :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/976.html"^^xsd:anyURI .
 
 
+###  https://w3id.org/emmo/domain/neo#GeneralConceptsRelatedToNuclearReactor
+:GeneralConceptsRelatedToNuclearReactor rdf:type owl:Class ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "General Concepts Related to Nuclear Reactor"@en .
+
+
+###  https://w3id.org/emmo/domain/neo#GeneralConceptsRelatedToNuclearReactorTypes
+:GeneralConceptsRelatedToNuclearReactorTypes rdf:type owl:Class ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "General Concepts Related To Nuclear Reactor Types"@en .
+
+
 ###  https://w3id.org/emmo/domain/neo#HeadVentNozzle
 :HeadVentNozzle rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#Incident
+:Incident rdf:type owl:Class ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Incident" ;
+          :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.2.1> .
+
+
+###  https://w3id.org/emmo/domain/neo#InducedNuclearFission
+:InducedNuclearFission rdf:type owl:Class ;
+                       rdfs:subClassOf :NuclearFission ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty elite:isStageOf ;
+                                         owl:someValuesFrom :NuclearChainReaction
+                                       ] ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Induced Nuclear Fission"@en ;
+                       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.2> .
 
 
 ###  https://w3id.org/emmo/domain/neo#InjectedMaterial
@@ -458,6 +454,12 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#IntentionalProcess
 :IntentionalProcess rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#LifeCycleManagement
+:LifeCycleManagement rdf:type owl:Class ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Life Cycle Management" ;
+                     :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.13> .
 
 
 ###  https://w3id.org/emmo/domain/neo#Light_Water_Reactor
@@ -474,6 +476,12 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#MainControlRoom
 :MainControlRoom rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#MaintenanceBypass
+:MaintenanceBypass rdf:type owl:Class ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Maintenance Bypass" ;
+                   :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.15> .
 
 
 ###  https://w3id.org/emmo/domain/neo#MultipleUnitNuclearPowerPlant
@@ -504,7 +512,8 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NPPShutdown
 :NPPShutdown rdf:type owl:Class ;
-             rdfs:subClassOf :NPPNormalOperation ;
+             rdfs:subClassOf :NPPNormalOperation ,
+                             <https://w3id.org/emmo/hume#Process> ;
              <http://www.w3.org/2004/02/skos/core#definition> "Shutdown is the state of a nuclear reactor when the fission reaction is slowed significantly or halted completely"@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "NPP Shutdown"@en .
 
@@ -517,18 +526,8 @@ See fissile nucleus."""@en ;
 
 
 ###  https://w3id.org/emmo/domain/neo#Neutron
-:Neutron rdf:type owl:Class .
-
-
-###  https://w3id.org/emmo/domain/neo#NeutronInducedFission
-:NeutronInducedFission rdf:type owl:Class ;
-                       rdfs:subClassOf :NuclearFission ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty elite:isStageOf ;
-                                         owl:someValuesFrom :NuclearChainReaction
-                                       ] ;
-                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron Induced Fission"@en ;
-                       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.2> .
+:Neutron rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/emmo/hume#PhysicalParticle> .
 
 
 ###  https://w3id.org/emmo/domain/neo#NoNuclearISO
@@ -541,6 +540,7 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearEnergyObject
 :NuclearEnergyObject rdf:type owl:Class ;
+                     rdfs:subClassOf <https://w3id.org/emmo/hume#Object> ;
                      <http://www.w3.org/2004/02/skos/core#altLabel> "Nuclear Domain Object" ;
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "NEO object"@en ;
                      :definition "An endurant entity that belongs to the Nuclear Energy Ontology (NEO), encompassing any physical, material, or conceptual object, component, or system related to nuclear science and technology, without being restricted to energy generation" .
@@ -548,7 +548,8 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearFission
 :NuclearFission rdf:type owl:Class ;
-                rdfs:subClassOf :NuclearReaction ,
+                rdfs:subClassOf :ConceptsRelatedToNuclearFission ,
+                                :NuclearReaction ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty elite:isConstitutiveProcessOf ;
                                   owl:someValuesFrom :FuelAssembly
@@ -569,7 +570,9 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearIsland
 :NuclearIsland rdf:type owl:Class ;
-               rdfs:subClassOf :NuclearEnergyObject ,
+               rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                               :GeneralConceptsRelatedToNuclearReactor ,
+                               :NuclearEnergyObject ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty elite:isConstituentOf ;
                                  owl:someValuesFrom :NuclearPowerPlant
@@ -589,7 +592,9 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearPowerPlant
 :NuclearPowerPlant rdf:type owl:Class ;
-                   rdfs:subClassOf :NuclearEnergyObject ,
+                   rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                   :GeneralConceptsRelatedToNuclearReactor ,
+                                   :NuclearEnergyObject ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty elite:participatesTo ;
                                      owl:someValuesFrom :NPPOperationManagement
@@ -605,7 +610,8 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearPowerPlantUnit
 :NuclearPowerPlantUnit rdf:type owl:Class ;
-                       rdfs:subClassOf :NuclearEnergyObject ,
+                       rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                       :NuclearEnergyObject ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty elite:isConstituentOf ;
                                          owl:someValuesFrom :NuclearPowerPlant
@@ -634,6 +640,9 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearReactor
 :NuclearReactor rdf:type owl:Class ;
+                rdfs:subClassOf :GeneralConceptsRelatedToNuclearReactor ,
+                                :GeneralConceptsRelatedToNuclearReactorTypes ,
+                                :NuclearEnergyObject ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Reactor"@en ;
                 :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.1.22> ;
                 :referenceINIS "HYBRID REACTORS" ,
@@ -643,7 +652,8 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#NuclearSevereAccident
 :NuclearSevereAccident rdf:type owl:Class ;
-                       rdfs:subClassOf :BeyondDesignBasisAccident ;
+                       rdfs:subClassOf :BeyondDesignBasisAccident ,
+                                       <https://w3id.org/emmo/hume#Process> ;
                        <http://www.w3.org/2004/02/skos/core#altLabel> "Severe Accident"@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Severe Accident"@en ;
                        :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/98> .
@@ -655,7 +665,8 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#Nuclear_ReactorMaintanance
 :Nuclear_ReactorMaintanance rdf:type owl:Class ;
-                            rdfs:subClassOf :NPPNormalOperation ;
+                            rdfs:subClassOf :NPPNormalOperation ,
+                                            <https://w3id.org/emmo/hume#Process> ;
                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Maintanance"@en ;
                             :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/705.html> .
 
@@ -676,6 +687,13 @@ See fissile nucleus."""@en ;
 :PipePlantValve rdf:type owl:Class .
 
 
+###  https://w3id.org/emmo/domain/neo#PlannedMaintenance
+:PlannedMaintenance rdf:type owl:Class ;
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "﻿" ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Planned Maintenance" ;
+                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.14.1> .
+
+
 ###  https://w3id.org/emmo/domain/neo#PlantTurbine
 :PlantTurbine rdf:type owl:Class .
 
@@ -686,6 +704,13 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#PreassureIncreasing
 :PreassureIncreasing rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#PredictiveMaintenance
+:PredictiveMaintenance rdf:type owl:Class ;
+                       <http://www.w3.org/2004/02/skos/core#altLabel> "condition based maintenance" ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Predictive Maintenance" ;
+                       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.14.3> .
 
 
 ###  https://w3id.org/emmo/domain/neo#PressureReliefValve
@@ -706,7 +731,8 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#ReactorCore
 :ReactorCore rdf:type owl:Class ;
-             rdfs:subClassOf :ReactorBuildingContents ,
+             rdfs:subClassOf :GeneralConceptsRelatedToNuclearReactor ,
+                             :ReactorBuildingContents ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty elite:isConstituentOf ;
                                owl:someValuesFrom :NuclearReactor
@@ -732,6 +758,13 @@ See fissile nucleus."""@en ;
 :ReactorPressureVessel rdf:type owl:Class .
 
 
+###  https://w3id.org/emmo/domain/neo#ReactorShutdownSystem
+:ReactorShutdownSystem rdf:type owl:Class ;
+                       <http://www.w3.org/2004/02/skos/core#altLabel> "reactor SDS" ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Shutdown System" ;
+                       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.7.1> .
+
+
 ###  https://w3id.org/emmo/domain/neo#Reactor_Core
 :Reactor_Core rdf:type owl:Class ;
               rdfs:subClassOf <https://w3id.org/emmo/hume#Whole> ;
@@ -739,9 +772,20 @@ See fissile nucleus."""@en ;
               :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.1> .
 
 
+###  https://w3id.org/emmo/domain/neo#ReferenceUnitPower
+:ReferenceUnitPower rdf:type owl:Class ;
+                    rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                    <https://w3id.org/emmo/hume#Property> ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Reference Unit Power"@en ;
+                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.2> .
+
+
 ###  https://w3id.org/emmo/domain/neo#ResearchReactor
 :ResearchReactor rdf:type owl:Class ;
-                 rdfs:subClassOf :NuclearReactor ;
+                 rdfs:subClassOf :GeneralConceptsRelatedToNuclearReactor ,
+                                 :GeneralConceptsRelatedToNuclearReactorTypes ,
+                                 :NuclearReactor ,
+                                 :ConceptsRelatedToResearchReactor ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Research Reactor"@en ;
                  :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-1:v1:en:term:3.5.1.2> ;
                  <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://vocabulary.iaea.org/iaea-safety-glossary/511.html> .
@@ -751,8 +795,26 @@ See fissile nucleus."""@en ;
 :SCVentilation rdf:type owl:Class .
 
 
+###  https://w3id.org/emmo/domain/neo#SafetyAnalysis
+:SafetyAnalysis rdf:type owl:Class ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Safety Analysis" ;
+                :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.10> .
+
+
 ###  https://w3id.org/emmo/domain/neo#SafetyCriticalEquipment
 :SafetyCriticalEquipment rdf:type owl:Class .
+
+
+###  https://w3id.org/emmo/domain/neo#SafetyFunction
+:SafetyFunction rdf:type owl:Class ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Safety Function" ;
+                :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.14> .
+
+
+###  https://w3id.org/emmo/domain/neo#SafetyLimits
+:SafetyLimits rdf:type owl:Class ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Safety Limits" ;
+              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.12> .
 
 
 ###  https://w3id.org/emmo/domain/neo#SafetySystem
@@ -769,6 +831,31 @@ See fissile nucleus."""@en ;
               <http://www.w3.org/2004/02/skos/core#altLabel> "Safety Elements"@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Safety System"@en ;
               :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.8.4> .
+
+
+###  https://w3id.org/emmo/domain/neo#SafetySystemSupportFeature
+:SafetySystemSupportFeature rdf:type owl:Class ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Safety System Support Feature" ;
+                            :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.16> .
+
+
+###  https://w3id.org/emmo/domain/neo#Scram
+:Scram rdf:type owl:Class ;
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "Scram" ;
+       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.8> .
+
+
+###  https://w3id.org/emmo/domain/neo#ServiceLife
+:ServiceLife rdf:type owl:Class ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Service Life" ;
+             :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.9> .
+
+
+###  https://w3id.org/emmo/domain/neo#ShutdownCoolingSystem
+:ShutdownCoolingSystem rdf:type owl:Class ;
+                       <http://www.w3.org/2004/02/skos/core#altLabel> "SDCS" ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Shutdown Cooling System" ;
+                       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.7.3> .
 
 
 ###  https://w3id.org/emmo/domain/neo#SingleUnitNuclearPowerPlant
@@ -793,7 +880,8 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo#ThermalNeutron
 :ThermalNeutron rdf:type owl:Class ;
-                rdfs:subClassOf :Neutron ,
+                rdfs:subClassOf :ConceptsRelatedToNuclearFission ,
+                                :Neutron ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty elite:isInputOf ;
                                   owl:someValuesFrom :ThermalInducedFission
@@ -814,15 +902,22 @@ See fissile nucleus."""@en ;
 :WaterInjectionSystem rdf:type owl:Class .
 
 
+###  https://w3id.org/emmo/domain/neo/neo#ConceptsRelatedToResearchReactor
+:ConceptsRelatedToResearchReactor rdf:type owl:Class ;
+                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Concepts Related To Research Reactors"@en .
+
+
 ###  https://w3id.org/emmo/domain/neo/neo-source#ActiveComponent
 <https://w3id.org/emmo/domain/neo/neo-source#ActiveComponent> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://w3id.org/emmo/domain/neo/neo-source#Component> ;
                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Active Component"@en ;
                                                               <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://vocabulary.iaea.org/iaea-safety-glossary/104> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#BalanceOfPlant
 <https://w3id.org/emmo/domain/neo/neo-source#BalanceOfPlant> rdf:type owl:Class ;
-                                                             rdfs:subClassOf :NuclearEnergyObject ;
+                                                             rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                                                             :NuclearEnergyObject ;
                                                              <http://www.w3.org/2004/02/skos/core#altLabel> "BOP"@en ;
                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Balance Of Plant"@en ;
                                                              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.5> .
@@ -830,6 +925,7 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#BoronNeutronCaptureTherapy
 <https://w3id.org/emmo/domain/neo/neo-source#BoronNeutronCaptureTherapy> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :ConceptsRelatedToResearchReactor ;
                                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Boron Neutron Capture Therapy"@en ;
                                                                          :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.5.4> .
 
@@ -886,27 +982,31 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#CoreReflector
 <https://w3id.org/emmo/domain/neo/neo-source#CoreReflector> rdf:type owl:Class ;
-                                                            rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
+                                                            rdfs:subClassOf :GeneralConceptsRelatedToNuclearReactor ,
+                                                                            <https://w3id.org/emmo/hume#Material> ;
                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Core Reflector" ;
                                                             :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.1.1> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#Criticality
 <https://w3id.org/emmo/domain/neo/neo-source#Criticality> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                                                          rdfs:subClassOf :ConceptsRelatedToNuclearFission ,
+                                                                          <https://w3id.org/emmo/hume#Property> ;
                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Criticality"@en ;
                                                           <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.15> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#DelayedFissionNeutron
 <https://w3id.org/emmo/domain/neo/neo-source#DelayedFissionNeutron> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf :Neutron ;
+                                                                    rdfs:subClassOf :ConceptsRelatedToNuclearFission ,
+                                                                                    :Neutron ;
                                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Delayed Fission Neutron"@en ;
                                                                     :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.9> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#DelayedFissionRadiation
 <https://w3id.org/emmo/domain/neo/neo-source#DelayedFissionRadiation> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf :ConceptsRelatedToNuclearFission ;
                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Delayed Fission Radiation"@en ;
                                                                       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.8> .
 
@@ -937,7 +1037,8 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#EffectiveNuclearMultiplicationFactor
 <https://w3id.org/emmo/domain/neo/neo-source#EffectiveNuclearMultiplicationFactor> rdf:type owl:Class ;
-                                                                                   rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                                                                                   rdfs:subClassOf :ConceptsRelatedToNuclearFission ,
+                                                                                                   <https://w3id.org/emmo/hume#Property> ;
                                                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Effective Nuclear Multiplication Factor"@en ;
                                                                                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.10> .
 
@@ -1002,21 +1103,24 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#GasCooler
 <https://w3id.org/emmo/domain/neo/neo-source#GasCooler> rdf:type owl:Class ;
-                                                        rdfs:subClassOf :NuclearEnergyObject ;
+                                                        rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                                                        :NuclearEnergyObject ;
                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Gas Cooler"@en ;
                                                         :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.15> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#GasTurbinBalanceOfPlant
 <https://w3id.org/emmo/domain/neo/neo-source#GasTurbinBalanceOfPlant> rdf:type owl:Class ;
-                                                                      rdfs:subClassOf :NuclearEnergyObject ;
+                                                                      rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                                                                      :NuclearEnergyObject ;
                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Gas Turbin Balance Of Plant"@en ;
                                                                       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.3> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#GasTurbineGenerator
 <https://w3id.org/emmo/domain/neo/neo-source#GasTurbineGenerator> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf :NuclearEnergyObject ;
+                                                                  rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                                                                  :NuclearEnergyObject ;
                                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Gas Turbine Generator"@en ;
                                                                   :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.14> .
 
@@ -1097,6 +1201,7 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#MaterialTestingReactor
 <https://w3id.org/emmo/domain/neo/neo-source#MaterialTestingReactor> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf :ConceptsRelatedToResearchReactor ;
                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Material Testing Reactor"@en ;
                                                                      :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.5.1.4> .
 
@@ -1109,51 +1214,59 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#Moderator
 <https://w3id.org/emmo/domain/neo/neo-source#Moderator> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
+                                                        rdfs:subClassOf :GeneralConceptsRelatedToNuclearReactor ,
+                                                                        <https://w3id.org/emmo/hume#Material> ;
                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Moderator"@en ;
                                                         :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.1.2> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#MultiplePurposeReactor
 <https://w3id.org/emmo/domain/neo/neo-source#MultiplePurposeReactor> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf :ConceptsRelatedToResearchReactor ;
                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Multiple Purpose Reactor"@en ;
                                                                      :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.5.1.2> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#NetronActivationAnalysis
 <https://w3id.org/emmo/domain/neo/neo-source#NetronActivationAnalysis> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf :ConceptsRelatedToResearchReactor ;
                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron Activation Analysis"@en ;
                                                                        :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.5.5> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#NeutronDiffractionTechnique
 <https://w3id.org/emmo/domain/neo/neo-source#NeutronDiffractionTechnique> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf :ConceptsRelatedToResearchReactor ;
                                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron Diffraction Technique"@en ;
                                                                           :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.5.6> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#NeutronMultiplicativeConfiguration
 <https://w3id.org/emmo/domain/neo/neo-source#NeutronMultiplicativeConfiguration> rdf:type owl:Class ;
-                                                                                 rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                                                                                 rdfs:subClassOf :ConceptsRelatedToNuclearFission ,
+                                                                                                 <https://w3id.org/emmo/hume#Property> ;
                                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron Multiplicative Configuration"@en ;
                                                                                  :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.10> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#NeutronTransumationDoping
 <https://w3id.org/emmo/domain/neo/neo-source#NeutronTransumationDoping> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf :ConceptsRelatedToResearchReactor ;
                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutron Transmutation Doping"@en .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#NuclearHighTmeperatureGasSupplySystem
 <https://w3id.org/emmo/domain/neo/neo-source#NuclearHighTmeperatureGasSupplySystem> rdf:type owl:Class ;
-                                                                                    rdfs:subClassOf :NuclearEnergyObject ;
+                                                                                    rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                                                                                    :NuclearEnergyObject ;
                                                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear High Temperature Gas Supply System"@en ;
                                                                                     :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.13> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#NuclearInstallation
 <https://w3id.org/emmo/domain/neo/neo-source#NuclearInstallation> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf :NuclearEnergyObject ;
+                                                                  rdfs:subClassOf :GeneralConceptsRelatedToNuclearReactor ,
+                                                                                  :NuclearEnergyObject ;
                                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Installation" ;
                                                                   :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.1> ;
                                                                   :referenceINIS "INSTALLATION"@en ;
@@ -1173,7 +1286,8 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#NuclearSteamSupplySystem
 <https://w3id.org/emmo/domain/neo/neo-source#NuclearSteamSupplySystem> rdf:type owl:Class ;
-                                                                       rdfs:subClassOf :NuclearEnergyObject ;
+                                                                       rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                                                                       :NuclearEnergyObject ;
                                                                        <http://www.w3.org/2004/02/skos/core#altLabel> "NSSS"@en ;
                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Nuclear Steam Supply System"@en ;
                                                                        :isoDefinition "https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.9" .
@@ -1212,6 +1326,7 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#PassiveComponent
 <https://w3id.org/emmo/domain/neo/neo-source#PassiveComponent> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <https://w3id.org/emmo/domain/neo/neo-source#Component> ;
                                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Passive Component"@en ;
                                                                <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://vocabulary.iaea.org/iaea-safety-glossary/570.html> .
 
@@ -1230,7 +1345,8 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#Poison
 <https://w3id.org/emmo/domain/neo/neo-source#Poison> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <https://w3id.org/emmo/hume#Material> ;
+                                                     rdfs:subClassOf :ConceptsRelatedToNuclearFission ,
+                                                                     <https://w3id.org/emmo/hume#Material> ;
                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Poison"@en ;
                                                      <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://vocabulary.iaea.org/iaea-safety-glossary/601.html> .
 
@@ -1251,7 +1367,8 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#PrimaryCoolant
 <https://w3id.org/emmo/domain/neo/neo-source#PrimaryCoolant> rdf:type owl:Class ;
-                                                             rdfs:subClassOf <https://w3id.org/emmo/hume#Fluid> ;
+                                                             rdfs:subClassOf :GeneralConceptsRelatedToNuclearReactor ,
+                                                                             <https://w3id.org/emmo/hume#Fluid> ;
                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Primary Coolant"@en ;
                                                              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.4> .
 
@@ -1306,13 +1423,15 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#PromptFissionNeutron
 <https://w3id.org/emmo/domain/neo/neo-source#PromptFissionNeutron> rdf:type owl:Class ;
-                                                                   rdfs:subClassOf :Neutron ;
+                                                                   rdfs:subClassOf :ConceptsRelatedToNuclearFission ,
+                                                                                   :Neutron ;
                                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Prompt Fission Neutron"@en ;
                                                                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.17> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#PromptGammaRayNeutronActivationAnalysis
 <https://w3id.org/emmo/domain/neo/neo-source#PromptGammaRayNeutronActivationAnalysis> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf :ConceptsRelatedToResearchReactor ;
                                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Prompt Gamma Ray Neutron Activation Analysis"@en ;
                                                                                       :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.5.5.1> .
 
@@ -1337,26 +1456,30 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#RadioIsotopeProduction
 <https://w3id.org/emmo/domain/neo/neo-source#RadioIsotopeProduction> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf :ConceptsRelatedToResearchReactor ;
                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Radioisotope Production"@en ;
                                                                      :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.5.1.3> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#RadioIsotopeProductionReactor
 <https://w3id.org/emmo/domain/neo/neo-source#RadioIsotopeProductionReactor> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf :ConceptsRelatedToResearchReactor ;
                                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Radioisotope Production Reactor"@en ;
                                                                             :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.5.1.3> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#Reactivity
 <https://w3id.org/emmo/domain/neo/neo-source#Reactivity> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <https://w3id.org/emmo/hume#Property> ;
+                                                         rdfs:subClassOf :ConceptsRelatedToNuclearFission ,
+                                                                         <https://w3id.org/emmo/hume#Property> ;
                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactivity"@en ;
                                                          <https://w3id.org/emmo/domain/neo/neo-source#NSSG_Definition> <https://vocabulary.iaea.org/iaea-safety-glossary/479.html> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#ReactorInternals
 <https://w3id.org/emmo/domain/neo/neo-source#ReactorInternals> rdf:type owl:Class ;
-                                                               rdfs:subClassOf :NuclearEnergyObject ;
+                                                               rdfs:subClassOf :GeneralConceptsRelatedToNuclearReactor ,
+                                                                               :NuclearEnergyObject ;
                                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Internals"@en ;
                                                                :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.2> .
 
@@ -1380,7 +1503,8 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#ReactorVessel
 <https://w3id.org/emmo/domain/neo/neo-source#ReactorVessel> rdf:type owl:Class ;
-                                                            rdfs:subClassOf :ReactorBuildingContents ;
+                                                            rdfs:subClassOf :GeneralConceptsRelatedToNuclearReactor ,
+                                                                            :ReactorBuildingContents ;
                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Reactor Vessel"@en ;
                                                             :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.1.5.3> .
 
@@ -1423,21 +1547,24 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#SteamCondenser
 <https://w3id.org/emmo/domain/neo/neo-source#SteamCondenser> rdf:type owl:Class ;
-                                                             rdfs:subClassOf :NuclearEnergyObject ;
+                                                             rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                                                             :NuclearEnergyObject ;
                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Steam Condenser"@en ;
                                                              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.11> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#SteamTurbinBalanceOfPlant
 <https://w3id.org/emmo/domain/neo/neo-source#SteamTurbinBalanceOfPlant> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf :NuclearEnergyObject ;
+                                                                        rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                                                                        :NuclearEnergyObject ;
                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Steam Turbine Balance Of Plant"@en ;
                                                                         :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.8> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#SteamTurbinGenerator
 <https://w3id.org/emmo/domain/neo/neo-source#SteamTurbinGenerator> rdf:type owl:Class ;
-                                                                   rdfs:subClassOf :NuclearEnergyObject ;
+                                                                   rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                                                                   :NuclearEnergyObject ;
                                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Steam Turbin Generator"@en ;
                                                                    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.10> .
 
@@ -1468,6 +1595,7 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#TrainingAndEducationReactor
 <https://w3id.org/emmo/domain/neo/neo-source#TrainingAndEducationReactor> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf :ConceptsRelatedToResearchReactor ;
                                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Training and Education Reactor"@en ;
                                                                           :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.5.1.1> .
 
@@ -1481,14 +1609,16 @@ See fissile nucleus."""@en ;
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#TurbinGenerator
 <https://w3id.org/emmo/domain/neo/neo-source#TurbinGenerator> rdf:type owl:Class ;
-                                                              rdfs:subClassOf :NuclearEnergyObject ;
+                                                              rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                                                              :NuclearEnergyObject ;
                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Turbin Generator"@en ;
                                                               :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.3> .
 
 
 ###  https://w3id.org/emmo/domain/neo/neo-source#TuribineIsland
 <https://w3id.org/emmo/domain/neo/neo-source#TuribineIsland> rdf:type owl:Class ;
-                                                             rdfs:subClassOf :NuclearEnergyObject ;
+                                                             rdfs:subClassOf :ConceptsRelatedToNuclearPowerPlant ,
+                                                                             :NuclearEnergyObject ;
                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Turbin Island"@en ;
                                                              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.4.6> .
 
