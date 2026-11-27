@@ -29,28 +29,54 @@
 ###  http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
 
+###  https://w3id.org/emmo/domain/neo#ServiceLife
+<https://w3id.org/emmo/domain/neo#ServiceLife> a owl:Class ;
+    skos:prefLabel "Service Life" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.9> .
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty ;
                                                rdfs:subPropertyOf rdfs:label .
 
+###  https://w3id.org/emmo/domain/neo#AgeingManagement
+<https://w3id.org/emmo/domain/neo#AgeingManagement> a owl:Class ;
+    skos:prefLabel "Ageing Management" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.11> .
 
 ###  http://www.w3.org/2004/02/skos/core#comment
 <http://www.w3.org/2004/02/skos/core#comment> rdf:type owl:AnnotationProperty .
 
+###  https://w3id.org/emmo/domain/neo#LifeCycleManagement
+<https://w3id.org/emmo/domain/neo#LifeCycleManagement> a owl:Class ;
+    skos:prefLabel "Life Cycle Management" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.13> .
 
 ###  http://www.w3.org/2004/02/skos/core#definition
 <http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
 
+###  https://w3id.org/emmo/domain/neo#PlannedMaintenance
+<https://w3id.org/emmo/domain/neo#PlannedMaintenance> a owl:Class ;
+    skos:prefLabel "Planned Maintenance" ;
+    skos:altLabel "﻿" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.14.1> .
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 <http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty ;
                                                 rdfs:subPropertyOf rdfs:label .
 
+###  https://w3id.org/emmo/domain/neo#PredictiveMaintenance
+<https://w3id.org/emmo/domain/neo#PredictiveMaintenance> a owl:Class ;
+    skos:prefLabel "Predictive Maintenance" ;
+    skos:altLabel "condition based maintenance" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.14.3> .
 
 ###  https://w3id.org/emmo/domain/neo#NSSG_Definition
 :NSSG_Definition rdf:type owl:AnnotationProperty .
 
+###  https://w3id.org/emmo/domain/neo#MaintenanceBypass
+<https://w3id.org/emmo/domain/neo#MaintenanceBypass> a owl:Class ;
+    skos:prefLabel "Maintenance Bypass" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.9.15> .
 
 ###  https://w3id.org/emmo/domain/neo#comment
 :comment rdf:type owl:AnnotationProperty ;
@@ -58,6 +84,10 @@
          :definition "Additional text aimed to explain the conceptual choices of the authors."@en ;
          rdfs:subPropertyOf rdfs:comment .
 
+###  https://w3id.org/emmo/domain/neo#Incident
+<https://w3id.org/emmo/domain/neo#Incident> a owl:Class ;
+    skos:prefLabel "Incident" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.2.1> .
 
 ###  https://w3id.org/emmo/domain/neo#definition
 :definition rdf:type owl:AnnotationProperty ;
@@ -212,6 +242,10 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 ###  https://w3id.org/emmo/domain/neo#BeyondDesignBasisAccident
 :BeyondDesignBasisAccident rdf:type owl:Class .
 
+###  https://w3id.org/emmo/domain/neo#AccidentManagement
+<https://w3id.org/emmo/domain/neo#AccidentManagement> a owl:Class ;
+    skos:prefLabel "Accident Management" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.3> .
 
 ###  https://w3id.org/emmo/domain/neo#BoilingWaterReactor
 :BoilingWaterReactor rdf:type owl:Class ;
@@ -220,18 +254,28 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Boiling Water Reactor"@en ;
                      :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.3.1.13> .
 
+###  https://w3id.org/emmo/domain/neo#CommonCauseFailure
+<https://w3id.org/emmo/domain/neo#CommonCauseFailure> a owl:Class ;
+    skos:prefLabel "Common Cause Failure" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.5> .
 
 ###  https://w3id.org/emmo/domain/neo#CommonSpentFuelBuilding
 :CommonSpentFuelBuilding rdf:type owl:Class .
 
+###  https://w3id.org/emmo/domain/neo#ReactorShutdownSystem
+<https://w3id.org/emmo/domain/neo#ReactorShutdownSystem> a owl:Class ;
+    skos:prefLabel "Reactor Shutdown System" ;
+    skos:altLabel "reactor SDS" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.7.1> .
 
 ###  https://w3id.org/emmo/domain/neo#ControlRodGroup
 :ControlRodGroup rdf:type owl:Class .
 
-
-###  https://w3id.org/emmo/domain/neo#DC_Operational_Power_Source
-:DC_Operational_Power_Source rdf:type owl:Class .
-
+###  https://w3id.org/emmo/domain/neo#ShutdownCoolingSystem
+<https://w3id.org/emmo/domain/neo#ShutdownCoolingSystem> a owl:Class ;
+    skos:prefLabel "Shutdown Cooling System" ;
+    skos:altLabel "SDCS" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.7.3> .
 
 ###  https://w3id.org/emmo/domain/neo#DefenceinDepthProcedures
 :DefenceinDepthProcedures rdf:type owl:Class ;
@@ -244,6 +288,10 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Defence In Depth Procedures"@en ;
                           :NSSG_Definition "https://vocabulary.iaea.org/iaea-safety-glossary/1069.html"^^xsd:anyURI .
 
+###  https://w3id.org/emmo/domain/neo#Scram
+<https://w3id.org/emmo/domain/neo#Scram> a owl:Class ;
+    skos:prefLabel "Scram" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.8> .
 
 ###  https://w3id.org/emmo/domain/neo#DesignBasisAccident
 :DesignBasisAccident rdf:type owl:Class ;
@@ -252,10 +300,18 @@ elite:participatesTo rdf:type owl:ObjectProperty .
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Basis Accident"@en ;
                      :NSSG_Definition <https://vocabulary.iaea.org/iaea-safety-glossary/96> .
 
+###  https://w3id.org/emmo/domain/neo#SafetyAnalysis
+<https://w3id.org/emmo/domain/neo#SafetyAnalysis> a owl:Class ;
+    skos:prefLabel "Safety Analysis" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.10> .
 
 ###  https://w3id.org/emmo/domain/neo#DryWell
 :DryWell rdf:type owl:Class .
 
+###  https://w3id.org/emmo/domain/neo#SafetyLimits
+<https://w3id.org/emmo/domain/neo#SafetyLimits> a owl:Class ;
+    skos:prefLabel "Safety Limits" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.12> .
 
 ###  https://w3id.org/emmo/domain/neo#Event
 :Event rdf:type owl:Class ;
@@ -263,6 +319,10 @@ elite:participatesTo rdf:type owl:ObjectProperty .
        <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en ;
        :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.2> .
 
+###  https://w3id.org/emmo/domain/neo#SafetyFunction
+<https://w3id.org/emmo/domain/neo#SafetyFunction> a owl:Class ;
+    skos:prefLabel "Safety Function" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.14> .
 
 ###  https://w3id.org/emmo/domain/neo#FastNeutron
 :FastNeutron rdf:type owl:Class ;
@@ -276,6 +336,10 @@ elite:participatesTo rdf:type owl:ObjectProperty .
 While in some textbooks you can find a defnition of fast neutron as a neutron with E > 50 keV, there is not a clear definition of the range within which a neutron can be considered \"fast\"."""@en ;
              :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.2.19> .
 
+###  https://w3id.org/emmo/domain/neo#SafetySystemSupportFeature
+<https://w3id.org/emmo/domain/neo#SafetySystemSupportFeature> a owl:Class ;
+    skos:prefLabel "Safety System Support Feature" ;
+    :isoDefinition <https://www.iso.org/obp/ui/en/#iso:std:iso:12749:-5:ed-2:v1:en:term:3.10.16> .
 
 ###  https://w3id.org/emmo/domain/neo#Fertile_Nuclide
 :Fertile_Nuclide rdf:type owl:Class ;

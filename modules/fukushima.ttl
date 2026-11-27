@@ -106,10 +106,6 @@
                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Control Rod Insertion" .
 
 
-###  https://w3id.org/emmo/domain/neo#DC_Operational_Power_Source
-<https://w3id.org/emmo/domain/neo#DC_Operational_Power_Source> rdf:type owl:Class .
-
-
 ###  https://w3id.org/emmo/domain/neo#DieselGenerator
 <https://w3id.org/emmo/domain/neo#DieselGenerator> rdf:type owl:Class ;
                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Diesel Generator" .
@@ -163,11 +159,7 @@
 
 ###  https://w3id.org/emmo/domain/neo#LossOfDCPower
 <https://w3id.org/emmo/domain/neo#LossOfDCPower> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/emmo/domain/neo#NPPPowerLoss> ,
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <https://w3id.org/emmo/0.0.7/elite#isBehaviourOf> ;
-                                                                   owl:someValuesFrom <https://w3id.org/emmo/domain/neo#DC_Operational_Power_Source>
-                                                                 ] ;
+                                                 rdfs:subClassOf <https://w3id.org/emmo/domain/neo#NPPPowerLoss> ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "Loss of those devices like batteries and solar panel that during SBO conditions are required to power a minimum set of critical equipment important to safety, as well as critical instrumentation for monitoring of plant parameters, and emergency lighting"@en ;
                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Loss Of DC Power"@en .
 
